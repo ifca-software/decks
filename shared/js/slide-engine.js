@@ -188,12 +188,6 @@
     var menu = document.createElement('nav');
     menu.className = 'slide-menu';
 
-    var homeLink = document.createElement('a');
-    homeLink.href = getBasePath();
-    homeLink.className = 'menu-home';
-    homeLink.innerHTML = '&larr; All Decks';
-    menu.appendChild(homeLink);
-
     var list = document.createElement('ol');
     list.className = 'menu-slides';
     for (var i = 0; i < slides.length; i++) {
@@ -232,6 +226,12 @@
       }
       menu.appendChild(ul);
     }
+
+    var homeLink = document.createElement('a');
+    homeLink.href = getBasePath();
+    homeLink.className = 'menu-home';
+    homeLink.innerHTML = '&larr; All Decks';
+    menu.appendChild(homeLink);
 
     var backdrop = document.createElement('div');
     backdrop.className = 'menu-backdrop';
