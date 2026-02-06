@@ -58,6 +58,10 @@
   color: var(--orange);
 }
 
+.jargon-tooltip .tooltip-body {
+  display: block;
+}
+
 /* "Learn more" external link */
 .jargon-tooltip .tooltip-link {
   display: inline-block;
