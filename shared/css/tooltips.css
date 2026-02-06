@@ -2,11 +2,16 @@
 .jargon {
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-underline-offset: 3px;
-  text-decoration-color: currentColor;
-  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(232,119,46,0.45);
+  text-decoration-thickness: 1.5px;
+  text-decoration-skip-ink: auto;
   cursor: help;
-  opacity: 1;
+}
+/* Lighter underline on light backgrounds */
+.bg-white .jargon,
+.bg-gray .jargon {
+  text-decoration-color: rgba(232,119,46,0.35);
 }
 
 .jargon-tooltip {
