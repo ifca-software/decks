@@ -36,6 +36,8 @@
   .gap-80 { gap: 40px; }
   .card { padding: 20px 24px; }
   .card-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+  .metric-strip { grid-template-columns: repeat(2, 1fr); }
+  .logo-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   table { font-size: 14px; }
   .bg-navy table th, .bg-white table th, .bg-gray table th { padding: 10px 14px; font-size: 11px; }
   .bg-navy table td, .bg-white table td, .bg-gray table td { padding: 10px 14px; }
@@ -56,6 +58,8 @@
   .gap-80 { gap: 24px; }
   .card-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .card-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+  .metric-strip { grid-template-columns: repeat(2, 1fr); }
+  .logo-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mt-32 { margin-top: 20px; }
   .mt-40 { margin-top: 24px; }
   .divider { margin: 14px 0; }
@@ -80,6 +84,8 @@
   .card-grid { grid-template-columns: 1fr; gap: 12px; }
   .card-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
   .card-grid.cols-3 { grid-template-columns: 1fr; }
+  .metric-strip { grid-template-columns: 1fr; }
+  .logo-strip { grid-template-columns: 1fr; }
   .row { flex-direction: column; gap: 16px; }
   .mt-32 { margin-top: 16px; }
   .mt-40 { margin-top: 20px; }

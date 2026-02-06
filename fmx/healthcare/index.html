@@ -11,21 +11,9 @@
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../corporate-offices/" data-label="FMX — Corporate Offices">
 
-<link rel="stylesheet" href="../../shared/css/reset.css">
-<link rel="stylesheet" href="../../shared/css/tokens.css">
-<link rel="stylesheet" href="../../shared/css/slide-system.css">
-<link rel="stylesheet" href="../../shared/css/typography.css">
-<link rel="stylesheet" href="../../shared/css/layout.css">
-<link rel="stylesheet" href="../../shared/css/components.css">
-<link rel="stylesheet" href="../../shared/css/animations.css">
-<link rel="stylesheet" href="../../shared/css/tooltips.css">
-<link rel="stylesheet" href="../../shared/css/responsive.css">
-<link rel="stylesheet" href="../../shared/css/print.css">
+<link rel="stylesheet" href="../../shared/css/deck.css">
 </head>
 <body>
-
-<div class="progress" id="progress"></div>
-<div class="slide-counter" id="counter"></div>
 
 <!-- ===== 1. TITLE ===== -->
 <div class="slide bg-gradient active" data-title="FMX for Hospitals" data-slug="title">
@@ -266,21 +254,18 @@
   </div>
 </div>
 
-<script src="../../shared/js/glossary.js"></script>
-<script src="../../shared/js/animations.js"></script>
-<script src="../../shared/js/tooltips.js"></script>
-<script src="../../shared/js/slide-engine.js"></script>
-<script src="../../shared/js/features.js"></script>
+<script src="../../shared/js/deck-init.js"></script>
 <script>
-  DeckGlossary.addTerms({
-    'AELB': { def: 'Atomic Energy Licensing Board — regulates radioactive materials in hospitals (X-ray, CT, nuclear medicine).', url: 'https://www.aelb.gov.my' },
-    'JCI': { def: 'Joint Commission International — the gold standard accreditation for hospitals worldwide.', url: 'https://www.jointcommissioninternational.org' },
-    'MDA': { def: 'Medical Device Authority — regulates medical devices in Malaysia.', url: 'https://www.mda.gov.my' },
-    'OT': { def: 'Operating Theatre — the sterile room where surgeries are performed.', url: 'https://en.wikipedia.org/wiki/Operating_theater' },
-    'SAP': { def: 'SAP SE — German enterprise software company. Their facility management module is expensive and complex.', url: 'https://en.wikipedia.org/wiki/SAP' },
-    'Maximo': { def: 'IBM Maximo — enterprise asset management platform. Powerful but costly and slow to deploy.', url: 'https://en.wikipedia.org/wiki/IBM_Maximo' },
+  DeckInit({
+    glossary: {
+      'AELB': { def: 'Atomic Energy Licensing Board — regulates radioactive materials in hospitals (X-ray, CT, nuclear medicine).', url: 'https://www.aelb.gov.my' },
+      'JCI': { def: 'Joint Commission International — the gold standard accreditation for hospitals worldwide.', url: 'https://www.jointcommissioninternational.org' },
+      'MDA': { def: 'Medical Device Authority — regulates medical devices in Malaysia.', url: 'https://www.mda.gov.my' },
+      'OT': { def: 'Operating Theatre — the sterile room where surgeries are performed.', url: 'https://en.wikipedia.org/wiki/Operating_theater' },
+      'SAP': { def: 'SAP SE — German enterprise software company. Their facility management module is expensive and complex.', url: 'https://en.wikipedia.org/wiki/SAP' },
+      'Maximo': { def: 'IBM Maximo — enterprise asset management platform. Powerful but costly and slow to deploy.', url: 'https://en.wikipedia.org/wiki/IBM_Maximo' },
+    }
   });
-  DeckGlossary.bind();
 </script>
 </body>
 </html>
