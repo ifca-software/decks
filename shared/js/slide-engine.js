@@ -191,7 +191,7 @@
     var homeLink = document.createElement('a');
     homeLink.href = getBasePath();
     homeLink.className = 'menu-home';
-    homeLink.textContent = 'All Decks';
+    homeLink.innerHTML = '&larr; All Decks';
     menu.appendChild(homeLink);
 
     var list = document.createElement('ol');
