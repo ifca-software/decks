@@ -182,6 +182,90 @@
   color: var(--text-on-dark);
 }
 
+/* === COPY LINK BUTTON === */
+.copy-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 80px;
+  z-index: 100;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-on-dark-dim);
+  padding: 6px;
+  border-radius: 6px;
+  transition: color 0.15s, opacity 0.15s;
+  opacity: 0.4;
+  line-height: 1;
+}
+.copy-btn:hover { opacity: 1; color: var(--orange); }
+.copy-btn.copied { color: var(--green); opacity: 1; }
+.copy-btn.copied::after {
+  content: 'Copied!';
+  position: absolute;
+  bottom: calc(100% + 4px);
+  right: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--green);
+  white-space: nowrap;
+}
+.bg-white .copy-btn, .bg-gray .copy-btn { color: var(--gray-400); }
+
+/* === KEYBOARD HINT === */
+.deck-hint {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.75);
+  color: rgba(255,255,255,0.85);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 8px;
+  z-index: 150;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.deck-hint.visible { opacity: 1; }
+
+/* === PRESENTER BAR === */
+.presenter-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: rgba(0,0,0,0.9);
+  color: rgba(255,255,255,0.8);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  gap: 12px;
+  font-size: 13px;
+  z-index: 250;
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+  font-variant-numeric: tabular-nums;
+}
+.presenter-bar.visible { transform: translateY(0); }
+.presenter-timer { font-weight: 700; color: var(--orange); min-width: 48px; }
+.presenter-divider { opacity: 0.3; }
+.presenter-current { font-weight: 500; }
+.presenter-next { opacity: 0.5; margin-left: auto; font-style: italic; }
+
+/* === EMBED MODE === */
+.embed .menu-btn,
+.embed .slide-counter,
+.embed .progress,
+.embed .slide-menu,
+.embed .menu-backdrop,
+.embed .copy-btn,
+.embed .deck-hint { display: none !important; }
+
 /* === BACKGROUNDS === */
 .bg-navy { background: var(--navy); color: var(--text-on-dark); }
 .bg-white { background: var(--white); color: var(--gray-800); }

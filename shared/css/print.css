@@ -1,0 +1,66 @@
+@media print {
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+
+  html, body {
+    height: auto;
+    overflow: visible;
+    background: white;
+  }
+
+  .slide {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    position: relative !important;
+    opacity: 1 !important;
+    page-break-after: always;
+    page-break-inside: avoid;
+    break-after: page;
+    break-inside: avoid;
+    width: 100%;
+    height: 100vh;
+    animation: none !important;
+  }
+
+  .slide:last-child {
+    page-break-after: auto;
+  }
+
+  .slide.fade-out, .slide.fade-in {
+    animation: none !important;
+  }
+
+  /* Hide UI chrome */
+  .progress, .slide-counter, .menu-btn,
+  .slide-menu, .menu-backdrop,
+  .deck-hint, .copy-btn, .presenter-bar {
+    display: none !important;
+  }
+
+  /* Preserve dark backgrounds when printing */
+  .bg-navy, .bg-gradient, .bg-gray, .bg-white {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Ensure cards and tables print well */
+  .card, .table-wrap, table {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Disable animations */
+  [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /* Jargon terms: remove dotted underline for print clarity */
+  .jargon {
+    text-decoration: none;
+  }
+}
