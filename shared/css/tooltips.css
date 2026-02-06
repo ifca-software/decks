@@ -3,7 +3,7 @@
   text-decoration: underline;
   text-decoration-style: dotted;
   text-underline-offset: 2px;
-  text-decoration-color: rgba(232,119,46,0.45);
+  text-decoration-color: rgba(251,142,40,0.45);
   text-decoration-thickness: 1.5px;
   text-decoration-skip-ink: auto;
   cursor: help;
@@ -11,7 +11,7 @@
 /* Lighter underline on light backgrounds */
 .bg-white .jargon,
 .bg-gray .jargon {
-  text-decoration-color: rgba(232,119,46,0.35);
+  text-decoration-color: rgba(251,142,40,0.35);
 }
 
 .jargon-tooltip {
@@ -36,7 +36,7 @@
 .jargon-tooltip.tooltip-dark {
   background: var(--navy-light);
   color: var(--text-on-dark);
-  border: 1px solid rgba(226,224,218,0.15);
+  border: 1px solid rgba(232,236,240,0.15);
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 

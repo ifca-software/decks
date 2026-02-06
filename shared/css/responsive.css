@@ -80,7 +80,7 @@
   .text-md { font-size: 14px; }
   .text-sm { font-size: 12px; }
   .quote { font-size: 17px; padding-left: 16px; }
-  .card { padding: 16px 18px; border-radius: 10px; }
+  .card { padding: 16px 18px; border-radius: 8px; }
   .card-grid { grid-template-columns: 1fr; gap: 12px; }
   .card-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
   .card-grid.cols-3 { grid-template-columns: 1fr; }
@@ -92,7 +92,7 @@
   .divider { margin: 10px 0; width: 40px; }
 
   /* Table scrollable */
-  .table-wrap { overflow-x: auto; border-radius: 8px; margin: 0 -24px; padding: 0 24px; }
+  .table-wrap { overflow-x: auto; border-radius: 6px; margin: 0 -24px; padding: 0 24px; }
   table { font-size: 13px; min-width: 460px; }
   .bg-navy table th, .bg-white table th, .bg-gray table th { padding: 8px 10px; font-size: 10px; }
   .bg-navy table td, .bg-white table td, .bg-gray table td { padding: 8px 10px; }

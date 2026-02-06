@@ -1,34 +1,34 @@
 /* === DESIGN TOKENS === */
 :root {
-  /* Typography */
-  --font-display: 'Fraunces', 'Garamond', 'Times New Roman', serif;
-  --font-body: 'Source Sans 3', 'Helvetica Neue', Helvetica, sans-serif;
+  /* Typography — clean sans-serif to match ifca.asia */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  /* Dark palette — refined warm navy */
-  --navy: #1b2230;
-  --navy-light: #2a3343;
-  /* Accent — warm gold-orange */
-  --orange: #d67a2f;
-  --blue: #4d7ec6;
-  --green: #4aa382;
-  /* Light palette — warm off-whites, never pure white */
-  --white: #f7f4ee;
-  --gray-50: #f1eee7;
-  --gray-100: #e7e3db;
-  --gray-200: #d6d1c6;
-  --gray-300: #c3beb2;
-  --gray-400: #9b9589;
-  --gray-500: #7b7468;
-  --gray-600: #5a5348;
-  --gray-700: #3f3a32;
-  --gray-800: #2a2620;
-  /* Text on dark — soft warm white, no glare */
-  --text-on-dark: #e6e1d7;
-  --text-on-dark-dim: rgba(230,225,215,0.55);
+  /* Dark palette — cool corporate navy */
+  --navy: #1a2038;
+  --navy-light: #252d42;
+  /* Accent — IFCA brand orange */
+  --orange: #fb8e28;
+  --blue: #427fed;
+  --green: #34a853;
+  /* Light palette — clean whites and neutral grays */
+  --white: #ffffff;
+  --gray-50: #f4f4f4;
+  --gray-100: #e8e8e8;
+  --gray-200: #d4d4d4;
+  --gray-300: #b8b8b8;
+  --gray-400: #8c8c8c;
+  --gray-500: #6b6b6b;
+  --gray-600: #4a4a4a;
+  --gray-700: #333333;
+  --gray-800: #222222;
+  /* Text on dark — clean cool white */
+  --text-on-dark: #e8ecf0;
+  --text-on-dark-dim: rgba(232,236,240,0.55);
 
   /* Background treatments */
-  --gradient-hero: linear-gradient(135deg, #1a2231 0%, #27324a 55%, #2f3b52 100%);
-  --gradient-soft: linear-gradient(135deg, rgba(214,122,47,0.08) 0%, rgba(30,38,52,0.0) 55%);
+  --gradient-hero: linear-gradient(135deg, #1a2038 0%, #232b45 55%, #2a3350 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(251,142,40,0.06) 0%, rgba(26,32,56,0.0) 55%);
 }
 
 html, body {

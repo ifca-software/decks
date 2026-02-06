@@ -1,17 +1,17 @@
 /* === CARDS === */
 .card {
-  background: rgba(230,225,215,0.06);
-  border: 1px solid rgba(230,225,215,0.12);
-  border-radius: 12px;
+  background: rgba(232,236,240,0.06);
+  border: 1px solid rgba(232,236,240,0.12);
+  border-radius: 8px;
   padding: 28px 32px;
 }
 .card.soft {
-  background: rgba(230,225,215,0.04);
-  border-color: rgba(230,225,215,0.08);
+  background: rgba(232,236,240,0.04);
+  border-color: rgba(232,236,240,0.08);
 }
 .card.emphasis {
-  border-color: rgba(214,122,47,0.45);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+  border-color: rgba(251,142,40,0.5);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.2);
 }
 .card.metric {
   text-align: left;
@@ -27,9 +27,9 @@
 }
 .card.metric.light .value { color: var(--navy); }
 .bg-white .card, .bg-gray .card {
-  background: var(--white);
-  border: 1px solid var(--gray-300);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  background: #ffffff;
+  border: 1px solid var(--gray-200);
+  box-shadow: 0 0 2px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.06);
 }
 .card-grid {
   display: grid;
@@ -47,9 +47,9 @@
   gap: 16px;
 }
 .metric-strip .metric {
-  background: rgba(230,225,215,0.06);
-  border: 1px solid rgba(230,225,215,0.12);
-  border-radius: 12px;
+  background: rgba(232,236,240,0.06);
+  border: 1px solid rgba(232,236,240,0.12);
+  border-radius: 8px;
   padding: 18px 20px;
 }
 .metric-strip .metric .label { margin-bottom: 6px; }
@@ -60,8 +60,9 @@
 }
 .bg-white .metric-strip .metric,
 .bg-gray .metric-strip .metric {
-  background: var(--white);
+  background: #ffffff;
   border-color: var(--gray-200);
+  box-shadow: 0 0 2px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.06);
 }
 
 /* === VALUE LIST === */
@@ -75,14 +76,15 @@
   justify-content: space-between;
   gap: 20px;
   padding: 14px 18px;
-  border-radius: 10px;
-  background: rgba(230,225,215,0.04);
-  border: 1px solid rgba(230,225,215,0.08);
+  border-radius: 8px;
+  background: rgba(232,236,240,0.04);
+  border: 1px solid rgba(232,236,240,0.08);
 }
 .bg-white .value-item,
 .bg-gray .value-item {
-  background: var(--white);
+  background: #ffffff;
   border-color: var(--gray-200);
+  box-shadow: 0 0 2px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.06);
 }
 .value-item .item-title {
   font-weight: 600;
@@ -97,8 +99,8 @@
   font-variant-numeric: tabular-nums;
 }
 .value-item.total {
-  background: rgba(214,122,47,0.12);
-  border-color: rgba(214,122,47,0.35);
+  background: rgba(251,142,40,0.12);
+  border-color: rgba(251,142,40,0.35);
 }
 .value-item.total .item-value { font-size: 20px; color: var(--orange); }
 
@@ -112,15 +114,15 @@
   text-align: center;
   padding: 10px 12px;
   border-radius: 999px;
-  background: rgba(230,225,215,0.08);
-  border: 1px solid rgba(230,225,215,0.12);
+  background: rgba(232,236,240,0.08);
+  border: 1px solid rgba(232,236,240,0.12);
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.02em;
 }
 .bg-white .logo-pill,
 .bg-gray .logo-pill {
-  background: var(--white);
+  background: #ffffff;
   border-color: var(--gray-200);
   color: var(--navy);
 }
@@ -144,7 +146,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(214,122,47,0.18);
+  background: rgba(251,142,40,0.15);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -155,14 +157,14 @@
 .testimonial .role { font-size: 13px; color: var(--gray-500); }
 
 /* === TABLE === */
-.table-wrap { width: 100%; overflow: hidden; border-radius: 10px; }
+.table-wrap { width: 100%; overflow: hidden; border-radius: 8px; }
 table {
   width: 100%;
   border-collapse: collapse;
   font-size: 16px;
 }
 .bg-navy table th {
-  background: rgba(226,224,218,0.08);
+  background: rgba(232,236,240,0.08);
   color: var(--gray-400);
   font-weight: 600;
   font-size: 12px;
@@ -170,18 +172,18 @@ table {
   letter-spacing: 0.08em;
   padding: 12px 20px;
   text-align: left;
-  border-bottom: 1px solid rgba(226,224,218,0.1);
+  border-bottom: 1px solid rgba(232,236,240,0.1);
 }
 .bg-navy table td {
   padding: 14px 20px;
-  border-bottom: 1px solid rgba(226,224,218,0.06);
-  color: rgba(226,224,218,0.8);
+  border-bottom: 1px solid rgba(232,236,240,0.06);
+  color: rgba(232,236,240,0.8);
 }
 .bg-navy table td:first-child { color: var(--text-on-dark); font-weight: 500; }
 .bg-navy table td strong { color: var(--orange); font-weight: 700; }
 
 .bg-white table th, .bg-gray table th {
-  background: var(--gray-100);
+  background: var(--gray-50);
   color: var(--gray-500);
   font-weight: 600;
   font-size: 12px;
@@ -189,7 +191,7 @@ table {
   letter-spacing: 0.08em;
   padding: 12px 20px;
   text-align: left;
-  border-bottom: 1px solid var(--gray-300);
+  border-bottom: 1px solid var(--gray-200);
 }
 .bg-white table td, .bg-gray table td {
   padding: 14px 20px;
@@ -235,12 +237,13 @@ table td.num {
   letter-spacing: 0.1em;
   padding: 6px 14px;
   border-radius: 100px;
-  background: rgba(214,122,47,0.2);
-  color: var(--orange);
+  background: var(--orange);
+  color: #ffffff;
   margin-bottom: 16px;
 }
 .bg-white .pill, .bg-gray .pill {
-  background: rgba(214,122,47,0.12);
+  background: var(--orange);
+  color: #ffffff;
 }
 
 /* === PROGRESS BAR === */
@@ -259,12 +262,12 @@ table td.num {
   bottom: 24px;
   right: 40px;
   font-size: 12px;
-  color: rgba(226,224,218,0.25);
+  color: rgba(232,236,240,0.25);
   letter-spacing: 0.05em;
   z-index: 100;
   pointer-events: none;
 }
-.bg-white .nav-hint, .bg-gray .nav-hint { color: rgba(46,44,40,0.2); }
+.bg-white .nav-hint, .bg-gray .nav-hint { color: rgba(34,34,34,0.2); }
 
 .slide-counter {
   position: fixed;
@@ -281,7 +284,7 @@ table td.num {
 ul.clean { list-style: none; padding: 0; }
 ul.clean li {
   padding: 10px 0;
-  border-bottom: 1px solid rgba(230,225,215,0.08);
+  border-bottom: 1px solid rgba(232,236,240,0.08);
   font-size: 17px;
   display: flex;
   align-items: baseline;
