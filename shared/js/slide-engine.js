@@ -1,22 +1,69 @@
 /**
  * Slide engine — navigation, progress bar, counter, slide-out menu.
- * Expects: .slide elements, #progress, #counter in DOM.
+ * Expects: .slide elements with data-slug, #progress, #counter in DOM.
  * Integrates with DeckAnimations (animations.js) and DeckGlossary (glossary.js).
+ *
+ * Hash routing: each slide has a data-slug (e.g. "roi", "proof").
+ * URL updates on navigation: /fmx/healthcare/#roi
+ * Browser back/forward supported via popstate.
+ * Deep-linking: opening a URL with a hash jumps to that slide.
  */
 (function() {
   var slides, total, current;
+  var slugMap = {};   // slug → index
+  var indexMap = {};   // index → slug
   var menuOpen = false;
+  var suppressHashUpdate = false;
 
   function init() {
     slides = document.querySelectorAll('.slide');
     total = slides.length;
     current = 0;
 
+    // Build slug maps
+    for (var i = 0; i < slides.length; i++) {
+      var slug = slides[i].getAttribute('data-slug');
+      if (slug) {
+        slugMap[slug] = i;
+        indexMap[i] = slug;
+      }
+    }
+
     buildMenu();
-    showSlide(0, true);
     bindKeys();
     bindClick();
     bindTouch();
+    bindPopstate();
+
+    // Deep-link: check hash on load
+    var startSlide = getSlideFromHash();
+    showSlide(startSlide, true);
+
+    // Replace initial history entry with the correct hash
+    if (indexMap[startSlide]) {
+      history.replaceState({ slide: startSlide }, '', '#' + indexMap[startSlide]);
+    }
+  }
+
+  function getSlideFromHash() {
+    var hash = location.hash.replace('#', '');
+    if (!hash) return 0;
+    if (slugMap.hasOwnProperty(hash)) return slugMap[hash];
+    // Fallback: try numeric
+    var n = parseInt(hash);
+    if (!isNaN(n) && n >= 0 && n < total) return n;
+    return 0;
+  }
+
+  function updateHash(index) {
+    if (suppressHashUpdate) return;
+    var slug = indexMap[index];
+    if (slug && slug !== 'title') {
+      history.pushState({ slide: index }, '', '#' + slug);
+    } else {
+      // Title slide: clean URL (no hash)
+      history.pushState({ slide: index }, '', location.pathname);
+    }
   }
 
   function showSlide(n, instant) {
@@ -54,6 +101,11 @@
 
     current = n;
 
+    // Update URL hash (skip on initial load since we use replaceState)
+    if (!instant) {
+      updateHash(n);
+    }
+
     // Progress bar
     var progress = document.getElementById('progress');
     if (progress) progress.style.width = ((current / (total - 1)) * 100) + '%';
@@ -79,6 +131,19 @@
 
     // Scroll to top if slide has overflow
     next.scrollTop = 0;
+  }
+
+  // === BROWSER HISTORY ===
+  function bindPopstate() {
+    window.addEventListener('popstate', function(e) {
+      suppressHashUpdate = true;
+      if (e.state && typeof e.state.slide === 'number') {
+        showSlide(e.state.slide);
+      } else {
+        showSlide(getSlideFromHash());
+      }
+      suppressHashUpdate = false;
+    });
   }
 
   // === KEYBOARD ===
@@ -187,7 +252,8 @@
     for (var i = 0; i < slides.length; i++) {
       var li = document.createElement('li');
       var a = document.createElement('a');
-      a.href = '#';
+      var slug = slides[i].getAttribute('data-slug');
+      a.href = slug && slug !== 'title' ? '#' + slug : '#';
       a.textContent = slides[i].getAttribute('data-title') || ('Slide ' + (i + 1));
       a.setAttribute('data-slide', i);
       a.addEventListener('click', function(e) {
@@ -263,7 +329,8 @@
   window.DeckEngine = {
     showSlide: showSlide,
     getCurrentSlide: function() { return current; },
-    getTotal: function() { return total; }
+    getTotal: function() { return total; },
+    getSlug: function(index) { return indexMap[index] || null; }
   };
 
   // Boot
