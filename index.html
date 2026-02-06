@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IFCA Sales Decks</title>
+<link rel="stylesheet" href="shared/css/reset.css">
+<link rel="stylesheet" href="shared/css/tokens.css">
+<style>
+  html, body {
+    height: auto;
+    overflow: auto;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--navy);
+    color: var(--text-on-dark);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 40px 60px;
+  }
+
+  .page-pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 5px 12px;
+    border-radius: 100px;
+    background: rgba(249,115,22,0.15);
+    color: var(--orange);
+    margin-bottom: 20px;
+  }
+
+  .page h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .page .subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.55;
+    max-width: 500px;
+    margin-bottom: 48px;
+  }
+
+  .product-group {
+    margin-bottom: 48px;
+  }
+
+  .product-group h2 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-400);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(226,224,218,0.08);
+  }
+
+  .deck-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .deck-card {
+    display: block;
+    background: rgba(226,224,218,0.05);
+    border: 1px solid rgba(226,224,218,0.1);
+    border-radius: 12px;
+    padding: 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .deck-card:hover {
+    border-color: var(--orange);
+    transform: translateY(-2px);
+  }
+
+  .deck-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-on-dark);
+  }
+
+  .deck-card p {
+    font-size: 13px;
+    color: rgba(226,224,218,0.5);
+    line-height: 1.5;
+  }
+
+  .deck-card.coming-soon {
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  .deck-card.coming-soon h3::after {
+    content: ' — soon';
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 0.6;
+  }
+
+  .footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(226,224,218,0.08);
+    font-size: 12px;
+    color: rgba(226,224,218,0.25);
+  }
+
+  @media (max-width: 520px) {
+    .page { padding: 48px 24px 40px; }
+    .page h1 { font-size: 32px; }
+    .deck-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="page-pill">IFCA Software</div>
+  <h1>Sales Decks</h1>
+  <p class="subtitle">Interactive slide decks for IFCA's product portfolio. Pick a segment to present.</p>
+
+  <!-- FMX -->
+  <div class="product-group">
+    <h2>FMX — Facility Management</h2>
+    <div class="deck-grid">
+      <a href="fmx/healthcare/" class="deck-card">
+        <h3>Healthcare</h3>
+        <p>Hospitals, specialist centres, dialysis chains. EBITDA per bed story.</p>
+      </a>
+      <a href="fmx/corporate-offices/" class="deck-card">
+        <h3>Corporate Offices</h3>
+        <p>Grade A towers, REITs, developers. OpEx per sqft story.</p>
+      </a>
+      <div class="deck-card coming-soon">
+        <h3>Industrial</h3>
+        <p>Factories, warehouses, logistics hubs. 1,152% ROI story.</p>
+      </div>
+      <div class="deck-card coming-soon">
+        <h3>Data Centres</h3>
+        <p>Uptime SLA, PUE optimization, redundancy compliance.</p>
+      </div>
+      <div class="deck-card coming-soon">
+        <h3>Retail Malls</h3>
+        <p>Tenant experience, CAM optimization, foot traffic impact.</p>
+      </div>
+      <div class="deck-card coming-soon">
+        <h3>Hospitality</h3>
+        <p>Hotels, resorts, serviced apartments. RevPAR protection.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HRX -->
+  <div class="product-group">
+    <h2>HRX — Human Resources</h2>
+    <div class="deck-grid">
+      <div class="deck-card coming-soon">
+        <h3>Overview</h3>
+        <p>End-to-end HR platform for ASEAN enterprises.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Other Products -->
+  <div class="product-group">
+    <h2>RentX · ContractX · AuditX</h2>
+    <div class="deck-grid">
+      <div class="deck-card coming-soon">
+        <h3>RentX</h3>
+        <p>Lease management and tenant billing.</p>
+      </div>
+      <div class="deck-card coming-soon">
+        <h3>ContractX</h3>
+        <p>Contract lifecycle management.</p>
+      </div>
+      <div class="deck-card coming-soon">
+        <h3>AuditX</h3>
+        <p>Internal audit and compliance automation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    IFCA MSC Berhad · Kuala Lumpur · ifca.asia
+  </div>
+</div>
+
+</body>
+</html>

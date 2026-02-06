@@ -1,0 +1,31 @@
+/* === DESIGN TOKENS === */
+:root {
+  /* Dark palette — warm navy, not cold */
+  --navy: #1e2530;
+  --navy-light: #283347;
+  /* Accent — slightly muted orange, easier on eyes */
+  --orange: #e8772e;
+  --blue: #5b8fd9;
+  --green: #4dab8a;
+  /* Light palette — warm off-whites, never pure white */
+  --white: #f5f4f0;
+  --gray-50: #eeeee8;
+  --gray-100: #e6e5e0;
+  --gray-300: #c8c6be;
+  --gray-400: #9e9c95;
+  --gray-500: #7a7870;
+  --gray-600: #55534c;
+  --gray-800: #2e2c28;
+  /* Text on dark — soft warm white, no glare */
+  --text-on-dark: #e2e0da;
+  --text-on-dark-dim: rgba(226,224,218,0.55);
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--navy);
+  color: var(--text-on-dark);
+  -webkit-font-smoothing: antialiased;
+}

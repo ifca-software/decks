@@ -1,0 +1,53 @@
+/* === JARGON TOOLTIPS === */
+.jargon {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  cursor: help;
+  opacity: 1;
+}
+
+.jargon-tooltip {
+  position: fixed;
+  max-width: 280px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.jargon-tooltip.visible {
+  opacity: 1;
+}
+
+/* Dark background slides — light tooltip */
+.jargon-tooltip.tooltip-dark {
+  background: var(--navy-light);
+  color: var(--text-on-dark);
+  border: 1px solid rgba(226,224,218,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Light background slides — white tooltip */
+.jargon-tooltip.tooltip-light {
+  background: var(--white);
+  color: var(--gray-800);
+  border: 1px solid var(--gray-300);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.jargon-tooltip .tooltip-term {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--orange);
+}

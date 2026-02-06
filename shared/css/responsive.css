@@ -1,0 +1,117 @@
+/* ==========================================
+   RESPONSIVE BREAKPOINTS
+   - Mobile:           up to 480px
+   - Huawei fold shut: ~480-520px
+   - Huawei fold open: ~720-860px
+   - iPad portrait:    768-834px
+   - iPad landscape:   1024-1194px
+   - Desktop:          1200px+
+   ========================================== */
+
+/* === SCROLLABLE ON SMALL SCREENS === */
+@media (max-width: 1024px) {
+  html, body { overflow: hidden; }
+  .slide {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .slide.active {
+    justify-content: flex-start;
+  }
+}
+
+/* === TABLET — iPad portrait / Huawei fold open === */
+@media (max-width: 1024px) {
+  .slide { padding: 40px 48px; }
+  .slide h1 { font-size: 42px; }
+  .slide h2 { font-size: 32px; }
+  .slide h3 { font-size: 20px; }
+  .subtitle { font-size: 18px; }
+  .big-number { font-size: 56px; }
+  .text-lg { font-size: 18px; }
+  .text-md { font-size: 15px; }
+  .quote { font-size: 22px; padding-left: 20px; }
+  .row { gap: 24px; }
+  .gap-60 { gap: 32px; }
+  .gap-80 { gap: 40px; }
+  .card { padding: 20px 24px; }
+  .card-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+  table { font-size: 14px; }
+  .bg-navy table th, .bg-white table th, .bg-gray table th { padding: 10px 14px; font-size: 11px; }
+  .bg-navy table td, .bg-white table td, .bg-gray table td { padding: 10px 14px; }
+  .slide-counter { left: 24px; bottom: 16px; font-size: 12px; }
+
+  /* Menu adjustments */
+  .slide-menu { width: 280px; }
+}
+
+/* === SMALL TABLET / HUAWEI FOLD OPEN (~720-860px) === */
+@media (max-width: 860px) {
+  .slide { padding: 32px 36px; }
+  .slide h1 { font-size: 36px; margin-bottom: 14px; }
+  .slide h2 { font-size: 28px; margin-bottom: 16px; }
+  .big-number { font-size: 48px; }
+  .row { flex-direction: column; gap: 20px; }
+  .gap-60 { gap: 20px; }
+  .gap-80 { gap: 24px; }
+  .card-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .card-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+  .mt-32 { margin-top: 20px; }
+  .mt-40 { margin-top: 24px; }
+  .divider { margin: 14px 0; }
+  .quote { font-size: 20px; }
+}
+
+/* === PHONE / HUAWEI FOLD SHUT (up to 520px) === */
+@media (max-width: 520px) {
+  .slide { padding: 24px 24px 60px 24px; }
+  .slide h1 { font-size: 30px; margin-bottom: 12px; }
+  .slide h2 { font-size: 22px; margin-bottom: 12px; }
+  .slide h3 { font-size: 17px; }
+  .subtitle { font-size: 15px; }
+  .big-number { font-size: 36px; }
+  .pill { font-size: 10px; padding: 4px 10px; margin-bottom: 12px; }
+  .label { font-size: 11px; }
+  .text-lg { font-size: 16px; }
+  .text-md { font-size: 14px; }
+  .text-sm { font-size: 12px; }
+  .quote { font-size: 17px; padding-left: 16px; }
+  .card { padding: 16px 18px; border-radius: 10px; }
+  .card-grid { grid-template-columns: 1fr; gap: 12px; }
+  .card-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .card-grid.cols-3 { grid-template-columns: 1fr; }
+  .row { flex-direction: column; gap: 16px; }
+  .mt-32 { margin-top: 16px; }
+  .mt-40 { margin-top: 20px; }
+  .divider { margin: 10px 0; width: 40px; }
+
+  /* Table scrollable */
+  .table-wrap { overflow-x: auto; border-radius: 8px; margin: 0 -24px; padding: 0 24px; }
+  table { font-size: 13px; min-width: 460px; }
+  .bg-navy table th, .bg-white table th, .bg-gray table th { padding: 8px 10px; font-size: 10px; }
+  .bg-navy table td, .bg-white table td, .bg-gray table td { padding: 8px 10px; }
+
+  /* Stats row — keep horizontal but smaller */
+  .stats-row { flex-direction: row !important; gap: 12px !important; }
+  .stat .big-number { font-size: 28px; }
+
+  .slide-counter { left: 16px; bottom: 12px; font-size: 11px; }
+
+  /* Clean list */
+  ul.clean li { font-size: 14px; padding: 8px 0; gap: 10px; }
+  ul.clean .bullet { width: 5px; height: 5px; margin-top: 6px; }
+
+  /* Menu */
+  .slide-menu { width: 100%; right: -100%; }
+  .slide-menu.open { right: 0; }
+}
+
+/* === TINY PHONE (under 380px — older/small devices) === */
+@media (max-width: 380px) {
+  .slide { padding: 20px 18px 56px 18px; }
+  .slide h1 { font-size: 26px; }
+  .slide h2 { font-size: 20px; }
+  .big-number { font-size: 30px; }
+  .card-grid.cols-2 { grid-template-columns: 1fr; }
+  .quote { font-size: 15px; }
+}

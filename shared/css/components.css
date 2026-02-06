@@ -1,0 +1,176 @@
+/* === CARDS === */
+.card {
+  background: rgba(226,224,218,0.05);
+  border: 1px solid rgba(226,224,218,0.1);
+  border-radius: 12px;
+  padding: 28px 32px;
+}
+.bg-white .card, .bg-gray .card {
+  background: var(--white);
+  border: 1px solid var(--gray-300);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.card-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* === TABLE === */
+.table-wrap { width: 100%; overflow: hidden; border-radius: 10px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+.bg-navy table th {
+  background: rgba(226,224,218,0.08);
+  color: var(--gray-400);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid rgba(226,224,218,0.1);
+}
+.bg-navy table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(226,224,218,0.06);
+  color: rgba(226,224,218,0.8);
+}
+.bg-navy table td:first-child { color: var(--text-on-dark); font-weight: 500; }
+.bg-navy table td strong { color: var(--orange); font-weight: 700; }
+
+.bg-white table th, .bg-gray table th {
+  background: var(--gray-100);
+  color: var(--gray-500);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-300);
+}
+.bg-white table td, .bg-gray table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--gray-100);
+  color: var(--gray-600);
+}
+.bg-white table td:first-child, .bg-gray table td:first-child {
+  color: var(--gray-800);
+  font-weight: 500;
+}
+.bg-white table td strong, .bg-gray table td strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+table td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* === STAT ROW === */
+.stat { text-align: center; }
+.stat .big-number { margin-bottom: 8px; }
+.stat .label { margin-bottom: 0; }
+
+/* === DIVIDER === */
+.divider {
+  width: 60px;
+  height: 3px;
+  background: var(--orange);
+  border-radius: 2px;
+  margin: 20px 0;
+}
+.bg-white .divider, .bg-gray .divider {
+  background: var(--orange);
+}
+
+/* === PILL === */
+.pill {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: rgba(249,115,22,0.15);
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+.bg-white .pill, .bg-gray .pill {
+  background: rgba(249,115,22,0.1);
+}
+
+/* === PROGRESS BAR === */
+.progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  background: var(--orange);
+  transition: width 0.3s ease;
+  z-index: 100;
+}
+
+/* === NAV HINT === */
+.nav-hint {
+  position: fixed;
+  bottom: 24px;
+  right: 40px;
+  font-size: 12px;
+  color: rgba(226,224,218,0.25);
+  letter-spacing: 0.05em;
+  z-index: 100;
+  pointer-events: none;
+}
+.bg-white .nav-hint, .bg-gray .nav-hint { color: rgba(46,44,40,0.2); }
+
+.slide-counter {
+  position: fixed;
+  bottom: 24px;
+  left: 40px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-on-dark-dim);
+  font-variant-numeric: tabular-nums;
+  z-index: 100;
+}
+
+/* === LIST === */
+ul.clean { list-style: none; padding: 0; }
+ul.clean li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(226,224,218,0.08);
+  font-size: 17px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.bg-white ul.clean li, .bg-gray ul.clean li {
+  border-bottom: 1px solid var(--gray-100);
+}
+ul.clean li:last-child { border-bottom: none; }
+ul.clean .bullet {
+  width: 6px;
+  height: 6px;
+  background: var(--orange);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+/* === QUOTE === */
+.quote {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  border-left: 3px solid var(--orange);
+  padding-left: 28px;
+  max-width: 750px;
+}
