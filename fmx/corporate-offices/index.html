@@ -114,7 +114,7 @@
     <p class="subline text-gray-600">Churn costs 6–12 months of rent. Keeping tenants happy is the cheapest revenue strategy.</p>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
-  <div class="card-grid cols-3 mt-32">
+  <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
     <div class="card">
       <h3 class="text-navy">Complaint resolution</h3>
       <p class="text-md text-gray-600">4–6 hours → under 1 hour. Tenants see real-time status updates.</p>
@@ -174,34 +174,36 @@
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
   <div class="pill" data-animate data-delay="0">The Investment</div>
-  <h2 data-animate data-delay="1">228% <span class="jargon" data-term="ROI">ROI</span>. Pays for itself in 4 months.</h2>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>228% <span class="jargon" data-term="ROI">ROI</span>. Pays for itself in 4 months.</h2>
+  </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32">
-    <div class="card" style="text-align:center" data-animate data-delay="3">
+    <div class="card metric" data-animate data-delay="3">
       <p class="label">You invest</p>
-      <p class="big-number" style="font-size:36px">RM 180K</p>
-      <p class="text-sm dim">per tower / year</p>
+      <p class="value">RM 180K</p>
+      <p class="text-sm text-dim">per tower / year</p>
     </div>
-    <div class="card" style="text-align:center" data-animate data-delay="3">
+    <div class="card metric" data-animate data-delay="3">
       <p class="label">You save</p>
-      <p class="big-number accent" style="font-size:36px">RM 590K</p>
-      <p class="text-sm dim">per tower / year</p>
+      <p class="value accent">RM 590K</p>
+      <p class="text-sm text-dim">per tower / year</p>
     </div>
-    <div class="card" style="text-align:center;border-color:var(--orange)" data-animate data-delay="3">
-      <p class="label" style="color:var(--orange)">You keep</p>
-      <p class="big-number accent" style="font-size:36px">RM 410K</p>
-      <p class="text-sm dim">per tower / year</p>
+    <div class="card metric emphasis" data-animate data-delay="3">
+      <p class="label">You keep</p>
+      <p class="value accent">RM 410K</p>
+      <p class="text-sm text-dim">per tower / year</p>
     </div>
   </div>
-  <div class="row mt-24" style="gap:20px">
-    <div class="card" style="flex:1;text-align:center;border-color:var(--orange)" data-animate data-delay="4">
-      <p class="big-number accent" style="font-size:56px">228%</p>
-      <p class="text-md" style="opacity:0.65">return on investment</p>
+  <div class="row mt-24 gap-60">
+    <div class="card emphasis col text-center" data-animate data-delay="4">
+      <p class="big-number accent">228%</p>
+      <p class="text-md text-dim">return on investment</p>
     </div>
-    <div class="card" style="flex:1;text-align:center" data-animate data-delay="4">
+    <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 5-tower <span class="jargon" data-term="REIT">REIT</span></p>
-      <p class="big-number" style="font-size:36px">RM 2.05M</p>
-      <p class="text-md" style="opacity:0.65">net gain per year</p>
+      <p class="big-number">RM 2.05M</p>
+      <p class="text-md text-dim">net gain per year</p>
     </div>
   </div>
 </div>
@@ -209,21 +211,23 @@
 <!-- ===== 8. HOW IT WORKS ===== -->
 <div class="slide bg-gray" data-title="How It Works" data-slug="how-it-works">
   <div class="pill" data-animate data-delay="0">The Product</div>
-  <h2 style="color:var(--navy)" data-animate data-delay="1">One platform. Maintain. Respond. Optimize.</h2>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">One platform. Maintain. Respond. Optimize.</h2>
+    <p class="subline text-gray-600"><span class="jargon" data-term="FMX">FMX</span> replaces spreadsheets, disconnected vendors, and siloed building systems with a single mobile-first platform.</p>
+  </div>
   <div class="divider" data-animate data-delay="2"></div>
-  <p class="text-md" style="color:var(--gray-600);max-width:600px" data-animate data-delay="2"><span class="jargon" data-term="FMX">FMX</span> replaces spreadsheets, disconnected vendors, and siloed building systems with a single mobile-first platform.</p>
   <div class="card-grid cols-3 mt-32">
     <div class="card" data-animate data-delay="3">
-      <p class="big-number" style="font-size:28px;color:var(--navy);margin-bottom:12px">Maintain</p>
-      <p class="text-md" style="color:var(--gray-600)">Preventive schedules for HVAC, lifts, fire systems. <span class="jargon" data-term="BMS">BMS</span> integration tracks what matters.</p>
+      <p class="big-number sm text-navy mb-12">Maintain</p>
+      <p class="text-md text-gray-600">Preventive schedules for HVAC, lifts, fire systems. <span class="jargon" data-term="BMS">BMS</span> integration tracks what matters.</p>
     </div>
     <div class="card" data-animate data-delay="4">
-      <p class="big-number" style="font-size:28px;color:var(--navy);margin-bottom:12px">Respond</p>
-      <p class="text-md" style="color:var(--gray-600)">Tenant portal + mobile work orders. Complaints resolved in under 1 hour, with proof.</p>
+      <p class="big-number sm text-navy mb-12">Respond</p>
+      <p class="text-md text-gray-600">Tenant portal + mobile work orders. Complaints resolved in under 1 hour, with proof.</p>
     </div>
     <div class="card" data-animate data-delay="5">
-      <p class="big-number" style="font-size:28px;color:var(--navy);margin-bottom:12px">Optimize</p>
-      <p class="text-md" style="color:var(--gray-600)">Energy dashboards, vendor scorecards, portfolio-wide analytics. Every building in one view.</p>
+      <p class="big-number sm text-navy mb-12">Optimize</p>
+      <p class="text-md text-gray-600">Energy dashboards, vendor scorecards, portfolio-wide analytics. Every building in one view.</p>
     </div>
   </div>
 </div>
@@ -231,38 +235,40 @@
 <!-- ===== 9. WHY IFCA ===== -->
 <div class="slide bg-navy" data-title="Why IFCA FMX" data-slug="why-ifca">
   <div class="pill" data-animate data-delay="0">Why IFCA</div>
-  <h2 data-animate data-delay="1">Built for ASEAN property</h2>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Built for ASEAN property</h2>
+  </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-2 mt-32" style="max-width:700px">
     <div class="card" data-animate data-delay="3">
-      <p class="big-number accent" style="font-size:36px">8 weeks</p>
-      <p class="text-md mt-8" style="opacity:0.65">Go-live — not 12 months like Archibus or Tririga</p>
+      <p class="big-number sm accent">8 weeks</p>
+      <p class="text-md text-dim mt-8">Go-live — not 12 months like Archibus or Tririga</p>
     </div>
     <div class="card" data-animate data-delay="3">
-      <p class="big-number accent" style="font-size:36px">⅓ the cost</p>
-      <p class="text-md mt-8" style="opacity:0.65">Of enterprise <span class="jargon" data-term="CAFM">CAFM</span> platforms, with faster time to value</p>
+      <p class="big-number sm accent">⅓ the cost</p>
+      <p class="text-md text-dim mt-8">Of enterprise <span class="jargon" data-term="CAFM">CAFM</span> platforms, with faster time to value</p>
     </div>
     <div class="card" data-animate data-delay="4">
-      <p class="big-number accent" style="font-size:36px">90%+ adoption</p>
-      <p class="text-md mt-8" style="opacity:0.65">Staff using the system within 30 days — mobile-first design</p>
+      <p class="big-number sm accent">90%+ adoption</p>
+      <p class="text-md text-dim mt-8">Staff using the system within 30 days — mobile-first design</p>
     </div>
     <div class="card" data-animate data-delay="4">
-      <p class="big-number accent" style="font-size:36px">ASEAN ready</p>
-      <p class="text-md mt-8" style="opacity:0.65"><span class="jargon" data-term="BOMBA">BOMBA</span>, <span class="jargon" data-term="JKKP">JKKP</span>, <span class="jargon" data-term="DOSH">DOSH</span>, <span class="jargon" data-term="ESG">ESG</span>, <span class="jargon" data-term="GBI">GBI</span> compliance built in</p>
+      <p class="big-number sm accent">ASEAN ready</p>
+      <p class="text-md text-dim mt-8"><span class="jargon" data-term="BOMBA">BOMBA</span>, <span class="jargon" data-term="JKKP">JKKP</span>, <span class="jargon" data-term="DOSH">DOSH</span>, <span class="jargon" data-term="ESG">ESG</span>, <span class="jargon" data-term="GBI">GBI</span> compliance built in</p>
     </div>
   </div>
 </div>
 
 <!-- ===== 10. NEXT STEP ===== -->
 <div class="slide bg-gradient" data-title="Next Step" data-slug="next-step">
-  <div style="max-width:700px">
+  <div class="max-w">
     <div class="pill" data-animate data-delay="0">Next Step</div>
     <h2 data-animate data-delay="1">Start with one building.<br>Prove the savings.<br>Roll out portfolio-wide.</h2>
     <div class="divider" data-animate data-delay="2"></div>
     <div class="quote mt-40" data-animate data-delay="3">
       "FMX typically reduces office <span class="jargon" data-term="OPEX">OpEx</span> by 15–20% and pays for itself in 4 months."
     </div>
-    <p class="text-sm dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad · Kuala Lumpur · ifca.asia</p>
+    <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad · Kuala Lumpur · ifca.asia</p>
   </div>
 </div>
 

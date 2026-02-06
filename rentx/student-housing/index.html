@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RentX — Student Housing — IFCA</title>
+<meta property="og:title" content="RentX — Student Housing — IFCA">
+<meta property="og:description" content="Handle seasonal renewals and collections at scale with an automated cadence.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ifca-software.github.io/decks/rentx/student-housing/">
+<meta name="deck-base" content="../../">
+<meta name="deck-sibling" data-href="../mall/" data-label="RentX — Retail Malls">
+<meta name="deck-sibling" data-href="../residential/" data-label="RentX — Residential">
+<meta name="deck-sibling" data-href="../industrial/" data-label="RentX — Industrial">
+<meta name="deck-sibling" data-href="../commercial-office/" data-label="RentX — Commercial Office">
+<meta name="deck-sibling" data-href="../co-working/" data-label="RentX — Co-Working">
+
+<link rel="stylesheet" href="../../shared/css/deck.css">
+</head>
+<body>
+
+<!-- ===== 1. TITLE ===== -->
+<div class="slide bg-gradient active" data-title="RentX for Student Housing" data-slug="title">
+  <div class="pill" data-animate data-delay="0">IFCA RentX</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h1>RentX for<br>Student Housing</h1>
+    <p class="subtitle text-dim">Handle seasonal renewals and collections at scale with an automated cadence</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad · February 2026 · Confidential</p>
+</div>
+
+<!-- ===== 2. THE REALITY ===== -->
+<div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <div class="pill" data-animate data-delay="0">The Reality</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>2,000 beds. Seasonal churn. Many small payments.<br>Renewals and reminders still run manually.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-32">
+    <div class="col">
+      <ul class="clean">
+        <li data-animate data-delay="3"><span class="bullet"></span><span>Seasonal intake creates a renewal wave — hundreds of leases expire in the same month</span></li>
+        <li data-animate data-delay="4"><span class="bullet"></span><span>Payment reminders sent manually — <strong class="accent">6 minutes per bed per month</strong> in admin time</span></li>
+        <li data-animate data-delay="5"><span class="bullet"></span><span>Arrears at 6.5% means <strong class="accent">RM 42 per bed per month</strong> sits uncollected</span></li>
+        <li data-animate data-delay="6"><span class="bullet"></span><span>Deposits and refunds tracked in spreadsheets — disputes at move-out are common</span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="card" data-animate data-delay="7">
+        <p class="label">The gap</p>
+        <p class="text-lg text-dim">Students expect digital payments.<br>Operations is <strong class="accent">still manual.</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3. BASELINE ECONOMICS ===== -->
+<div class="slide bg-white" data-title="Baseline Economics" data-slug="cost">
+  <div class="pill" data-animate data-delay="0">Baseline Economics</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">RM 46 per bed leaks out every month</h2>
+    <p class="subline text-gray-600">A 2,000-bed student housing facility at RM 650/month — here is the per-bed cost of manual operations:</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Leakage source</th><th>What drives it</th><th style="text-align:right">RM / bed / month</th></tr></thead>
+      <tbody>
+        <tr><td>Tenant arrears</td><td>No automated reminders, limited payment channels</td><td class="num"><strong>RM 42.25</strong></td></tr>
+        <tr><td>Admin overhead</td><td>Manual ledger updates, reminder calls (6 min/bed)</td><td class="num"><strong>RM 4.00</strong></td></tr>
+        <tr><td style="font-weight:700;color:var(--navy)">Total per bed / month</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 46.25</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 4. VALUE CREATION ===== -->
+<div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <div class="pill" data-animate data-delay="0">The Payoff</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Small per-bed savings scale fast across 2,000 beds</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-80 mt-40">
+    <div class="col" data-animate data-delay="3">
+      <div class="card-grid cols-2 tight">
+        <div class="card metric">
+          <p class="label">Before RentX</p>
+          <p class="value">RM 46</p>
+          <p class="text-sm text-dim">leakage / bed / month</p>
+        </div>
+        <div class="card metric emphasis">
+          <p class="label">With RentX</p>
+          <p class="value accent">RM 28</p>
+          <p class="text-sm text-dim">leakage / bed / month</p>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-animate data-delay="4">
+      <div class="card emphasis">
+        <p class="label">2,000-bed facility</p>
+        <p class="big-number accent">RM 432K</p>
+        <p class="text-md text-dim mt-8">recovered per year</p>
+        <p class="text-sm text-dim mt-16">Based on 40% arrears reduction + 30% admin time savings across 2,000 beds.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 5. MODELED IMPACT ===== -->
+<div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <div class="pill" data-animate data-delay="0">Beyond Collections</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">RentX doesn't just collect — it handles the seasonal wave</h2>
+    <p class="subline text-gray-600">When renewals are automated and payments are digital, the intake cycle runs smoothly.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
+    <div class="card">
+      <h3 class="text-navy">Renewal pipeline</h3>
+      <p class="text-md text-gray-600">90-day visibility on every expiring lease — manage seasonal waves without chaos</p>
+    </div>
+    <div class="card">
+      <h3 class="text-navy">Payment channels</h3>
+      <p class="text-md text-gray-600"><span class="jargon" data-term="FPX">FPX</span>, online banking, and auto-debit — students pay how they prefer</p>
+    </div>
+    <div class="card">
+      <h3 class="text-navy">Deposit tracking</h3>
+      <p class="text-md text-gray-600">Deposits, deductions, and refunds tracked per bed — fewer move-out disputes</p>
+    </div>
+  </div>
+  <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
+    <p class="text-md text-cream text-center">Arrears down 40% + admin time down 30% = <span class="accent bold">~RM 18</span> saved per bed per month</p>
+  </div>
+</div>
+
+<!-- ===== 6. HOW IT WORKS ===== -->
+<div class="slide bg-gray" data-title="How It Works" data-slug="how-it-works">
+  <div class="pill" data-animate data-delay="0">The Product</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">One platform. Lease. Bill. Serve.</h2>
+    <p class="subline text-gray-600"><span class="jargon" data-term="RentX">RentX</span> replaces spreadsheets, manual reminders, and paper deposit logs with a single tenant operations platform.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm text-navy mb-12">Lease</p>
+      <p class="text-md text-gray-600">Digital lease templates and renewal workflows. Seasonal intake managed with batch processing.</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm text-navy mb-12">Bill</p>
+      <p class="text-md text-gray-600">Automated invoices, payment tracking, and reminder cadence. Arrears aging by building and block.</p>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="big-number sm text-navy mb-12">Serve</p>
+      <p class="text-md text-gray-600">Tenant portal for payments, statements, and maintenance requests. Deposit tracking and refund workflows.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7. INVESTMENT & ROI ===== -->
+<div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <div class="pill" data-animate data-delay="0">The Investment</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Small per-bed cost, big portfolio payback</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card metric" data-animate data-delay="3">
+      <p class="label">You invest</p>
+      <p class="value">RM 90</p>
+      <p class="text-sm text-dim">per bed / year</p>
+    </div>
+    <div class="card metric" data-animate data-delay="3">
+      <p class="label">You save</p>
+      <p class="value accent">RM 216</p>
+      <p class="text-sm text-dim">per bed / year</p>
+    </div>
+    <div class="card metric emphasis" data-animate data-delay="3">
+      <p class="label">You keep</p>
+      <p class="value accent">RM 126</p>
+      <p class="text-sm text-dim">per bed / year</p>
+    </div>
+  </div>
+  <div class="row mt-24 gap-60">
+    <div class="card emphasis col text-center" data-animate data-delay="4">
+      <p class="big-number accent">2.4x</p>
+      <p class="text-md text-dim">return on investment</p>
+    </div>
+    <div class="card col text-center" data-animate data-delay="4">
+      <p class="label">Scale it — 2,000-bed facility</p>
+      <p class="big-number">RM 252K</p>
+      <p class="text-md text-dim">net gain per year</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 8. PROOF ===== -->
+<div class="slide bg-gray" data-title="Proof" data-slug="proof">
+  <div class="pill" data-animate data-delay="0">Proof</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">What changes when student housing runs on a system</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3">
+      <p class="label text-gray-500">Before</p>
+      <p class="big-number sm text-gray-500" style="margin:8px 0">6.5%</p>
+      <p class="text-sm text-gray-500">arrears rate</p>
+      <div style="height:1px;background:var(--gray-300);margin:16px 0"></div>
+      <p class="label accent">After RentX</p>
+      <p class="big-number sm text-navy" style="margin:8px 0">3.9%</p>
+      <p class="text-sm text-gray-500">automated reminders + digital payment channels</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="label text-gray-500">Before</p>
+      <p class="big-number sm text-gray-500" style="margin:8px 0">6 min</p>
+      <p class="text-sm text-gray-500">admin per bed per month</p>
+      <div style="height:1px;background:var(--gray-300);margin:16px 0"></div>
+      <p class="label accent">After RentX</p>
+      <p class="big-number sm text-navy" style="margin:8px 0">2 min</p>
+      <p class="text-sm text-gray-500">automated invoicing + tenant self-service</p>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="label text-gray-500">Before</p>
+      <p class="big-number sm text-gray-500" style="margin:8px 0">0%</p>
+      <p class="text-sm text-gray-500">renewal pipeline visibility</p>
+      <div style="height:1px;background:var(--gray-300);margin:16px 0"></div>
+      <p class="label accent">After RentX</p>
+      <p class="big-number sm text-navy" style="margin:8px 0">100%</p>
+      <p class="text-sm text-gray-500">90-day renewal visibility across all blocks</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. WHY IFCA ===== -->
+<div class="slide bg-navy" data-title="Why IFCA RentX" data-slug="why-ifca">
+  <div class="pill" data-animate data-delay="0">Why IFCA</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Built for ASEAN property operators</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32" style="max-width:700px">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent">4 weeks</p>
+      <p class="text-md text-dim mt-8">Go-live for one block — not 6 months</p>
+    </div>
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent">1/3 the cost</p>
+      <p class="text-md text-dim mt-8">Of enterprise leasing platforms, with faster time to value</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent">90%+ adoption</p>
+      <p class="text-md text-dim mt-8">Staff using the system within 30 days — mobile-first design</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent">ASEAN ready</p>
+      <p class="text-md text-dim mt-8">Local billing rules, <span class="jargon" data-term="SST">SST</span> compliance, integrates with <span class="jargon" data-term="IFCAx">IFCAx</span> accounting</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 10. NEXT STEP ===== -->
+<div class="slide bg-gradient" data-title="Next Step" data-slug="next-step">
+  <div class="max-w">
+    <div class="pill" data-animate data-delay="0">Next Step</div>
+    <h2 data-animate data-delay="1">Pilot one block.<br>500 beds. 60 days.<br>Measure arrears and renewals.</h2>
+    <div class="divider" data-animate data-delay="2"></div>
+    <div class="quote mt-40" data-animate data-delay="3">
+      "Seasonal intake should be a workflow — not a scramble."
+    </div>
+    <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad · Kuala Lumpur · ifca.asia</p>
+  </div>
+</div>
+
+<script src="../../shared/js/deck-init.js"></script>
+<script>
+  DeckInit({
+    glossary: {
+      'DSO': { def: 'Days Sales Outstanding — average number of days to collect payment after invoicing.', url: 'https://en.wikipedia.org/wiki/Days_sales_outstanding' },
+      'AR': { def: 'Accounts Receivable — money owed to the landlord by tenants for rent and charges.', url: 'https://en.wikipedia.org/wiki/Accounts_receivable' },
+      'FPX': { def: 'Financial Process Exchange — Malaysia\'s real-time online banking payment gateway.', url: 'https://www.paynet.my/fpx.html' },
+      'SST': { def: 'Sales and Services Tax — Malaysia\'s consumption tax replacing GST since September 2018.', url: 'https://www.customs.gov.my' },
+      'IFCAx': 'IFCA\'s cloud ERP platform for property developers and operators.',
+      'RentX': 'IFCA\'s lease and rental operations module — billing, collections, and tenant management.'
+    }
+  });
+</script>
+</body>
+</html>
