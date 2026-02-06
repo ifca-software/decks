@@ -1,19 +1,29 @@
 /**
  * Tooltip system for jargon terms.
- * Desktop: hover after 200ms shows tooltip.
+ * Desktop: hover after 200ms shows tooltip. Tooltip stays if user mouses over it.
  * Mobile: long-press (500ms) shows tooltip without triggering navigation.
+ * External links: if a term has a URL, a "Learn more" link opens in a new tab.
  */
 (function() {
   var tooltip = null;
   var hoverTimer = null;
+  var hideTimer = null;
   var longPressTimer = null;
   var activeTarget = null;
 
   function createTooltip() {
     tooltip = document.createElement('div');
     tooltip.className = 'jargon-tooltip';
-    tooltip.innerHTML = '<span class="tooltip-term"></span><span class="tooltip-body"></span>';
+    tooltip.innerHTML = '<span class="tooltip-term"></span><span class="tooltip-body"></span><a class="tooltip-link" target="_blank" rel="noopener">Learn more &#8599;</a>';
     document.body.appendChild(tooltip);
+
+    // Keep tooltip visible when user hovers over it (to click the link)
+    tooltip.addEventListener('mouseenter', function() {
+      clearTimeout(hideTimer);
+    });
+    tooltip.addEventListener('mouseleave', function() {
+      scheduleHide();
+    });
   }
 
   function getSlideTheme(el) {
@@ -25,15 +35,24 @@
 
   function show(target) {
     if (!tooltip) createTooltip();
+    clearTimeout(hideTimer);
 
     var term = target.getAttribute('data-term') || target.textContent.trim();
-    var def = DeckGlossary.getDefinition(term);
-    if (!def) return;
+    var entry = DeckGlossary.getTerm(term);
+    if (!entry) return;
 
     var theme = getSlideTheme(target);
     tooltip.className = 'jargon-tooltip tooltip-' + theme;
     tooltip.querySelector('.tooltip-term').textContent = term;
-    tooltip.querySelector('.tooltip-body').textContent = def;
+    tooltip.querySelector('.tooltip-body').textContent = entry.def;
+
+    var link = tooltip.querySelector('.tooltip-link');
+    if (entry.url) {
+      link.href = entry.url;
+      link.style.display = '';
+    } else {
+      link.style.display = 'none';
+    }
 
     // Position near the target
     var rect = target.getBoundingClientRect();
@@ -65,7 +84,13 @@
     if (tooltip) tooltip.classList.remove('visible');
     activeTarget = null;
     clearTimeout(hoverTimer);
+    clearTimeout(hideTimer);
     clearTimeout(longPressTimer);
+  }
+
+  function scheduleHide() {
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(hide, 300);
   }
 
   // Desktop: hover
@@ -73,6 +98,7 @@
     var target = e.target.closest('.jargon');
     if (!target) return;
     clearTimeout(hoverTimer);
+    clearTimeout(hideTimer);
     hoverTimer = setTimeout(function() { show(target); }, 200);
   });
 
@@ -80,7 +106,7 @@
     var target = e.target.closest('.jargon');
     if (!target) return;
     clearTimeout(hoverTimer);
-    hide();
+    scheduleHide();
   });
 
   // Mobile: long-press
@@ -110,9 +136,9 @@
     clearTimeout(longPressTimer);
   });
 
-  // Tap anywhere to dismiss on mobile
+  // Tap anywhere to dismiss on mobile (but not on the tooltip link)
   document.addEventListener('click', function(e) {
-    if (activeTarget && !e.target.closest('.jargon')) {
+    if (activeTarget && !e.target.closest('.jargon') && !e.target.closest('.jargon-tooltip')) {
       hide();
     }
   });

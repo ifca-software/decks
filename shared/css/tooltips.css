@@ -24,6 +24,7 @@
 }
 .jargon-tooltip.visible {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* Dark background slides — light tooltip */
@@ -49,5 +50,27 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  color: var(--orange);
+}
+
+/* "Learn more" external link */
+.jargon-tooltip .tooltip-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--orange);
+  opacity: 0.8;
+  transition: opacity 0.15s ease;
+}
+.jargon-tooltip .tooltip-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.tooltip-dark .tooltip-link {
+  color: var(--orange);
+}
+.tooltip-light .tooltip-link {
   color: var(--orange);
 }
