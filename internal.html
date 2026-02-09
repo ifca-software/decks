@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IFCA Sales Decks — Internal View</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232d4a6f'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='18' fill='%23a78bfa'>G</text></svg>">
+<link rel="stylesheet" href="shared/css/reset.css">
+<link rel="stylesheet" href="shared/css/tokens.css">
+<style>
+  html, body {
+    height: auto;
+    overflow: auto;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--navy);
+    color: var(--text-on-dark);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 40px 60px;
+  }
+
+  .page-pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 5px 12px;
+    border-radius: 100px;
+    background: rgba(249,115,22,0.15);
+    color: var(--orange);
+    margin-bottom: 20px;
+  }
+
+  .page h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .page .subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.55;
+    max-width: 560px;
+    margin-bottom: 32px;
+  }
+
+  /* ── toolbar ── */
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 36px;
+  }
+
+  .search-box {
+    flex: 1 1 220px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(226,224,218,0.15);
+    background: rgba(226,224,218,0.06);
+    color: var(--text-on-dark);
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-box::placeholder { color: rgba(226,224,218,0.3); }
+  .search-box:focus { border-color: var(--orange); }
+
+  .filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .chip {
+    padding: 6px 12px;
+    border-radius: 100px;
+    border: 1px solid rgba(226,224,218,0.15);
+    background: transparent;
+    color: rgba(226,224,218,0.5);
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .chip:hover { color: var(--text-on-dark); border-color: rgba(226,224,218,0.3); }
+  .chip.active {
+    background: rgba(249,115,22,0.15);
+    color: var(--orange);
+    border-color: rgba(249,115,22,0.3);
+  }
+
+  .chip-divider {
+    width: 1px;
+    height: 24px;
+    background: rgba(226,224,218,0.1);
+    align-self: center;
+  }
+
+  /* ── cards ── */
+  .product-group { margin-bottom: 48px; }
+  .product-group.hidden { display: none; }
+
+  .product-group h2 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-400);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(226,224,218,0.08);
+  }
+  .product-group h2 .count {
+    font-weight: 400;
+    opacity: 0.5;
+    margin-left: 6px;
+  }
+
+  .deck-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .deck-card {
+    display: block;
+    background: rgba(226,224,218,0.05);
+    border: 1px solid rgba(226,224,218,0.1);
+    border-radius: 12px;
+    padding: 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, transform 0.2s, opacity 0.2s;
+    position: relative;
+  }
+  .deck-card:hover {
+    border-color: var(--orange);
+    transform: translateY(-2px);
+  }
+  .deck-card.hidden { display: none; }
+
+  .deck-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-on-dark);
+  }
+
+  .deck-card p {
+    font-size: 13px;
+    color: rgba(226,224,218,0.5);
+    line-height: 1.5;
+  }
+
+  .deck-card.coming-soon {
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  .deck-card.coming-soon h3::after {
+    content: ' — soon';
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 0.6;
+  }
+
+  /* ── badges ── */
+  .badges { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px 8px;
+    border-radius: 100px;
+  }
+  .badge.vincent {
+    background: rgba(139,92,246,0.15);
+    color: #a78bfa;
+  }
+  .badge.vincent-merged {
+    background: rgba(139,92,246,0.15);
+    color: #a78bfa;
+  }
+  .badge.enterprise { background: rgba(59,130,246,0.12); color: #93c5fd; }
+  .badge.sme { background: rgba(34,197,94,0.12); color: #86efac; }
+  .badge.new-segment { background: rgba(249,115,22,0.12); color: var(--orange); }
+
+  /* ── no results ── */
+  .no-results {
+    text-align: center;
+    padding: 48px 24px;
+    color: rgba(226,224,218,0.3);
+    font-size: 15px;
+    display: none;
+  }
+
+  /* ── footer ── */
+  .footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(226,224,218,0.08);
+    font-size: 12px;
+    color: rgba(226,224,218,0.25);
+  }
+  .footer a {
+    color: var(--orange);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    margin-right: 16px;
+  }
+  .footer a:hover { opacity: 1; }
+
+  @media (max-width: 520px) {
+    .page { padding: 48px 24px 40px; }
+    .page h1 { font-size: 32px; }
+    .deck-grid { grid-template-columns: 1fr; }
+    .toolbar { flex-direction: column; }
+    .search-box { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="page-pill">IFCA Software &middot; Internal</div>
+  <h1>Sales Decks</h1>
+  <p class="subtitle">All segments across all products. <span style="color:#a78bfa;">Purple badges</span> mark Vincent's target list and groupings.</p>
+
+  <!-- toolbar -->
+  <div class="toolbar">
+    <input type="text" class="search-box" id="search" placeholder="Search segments..." autocomplete="off">
+    <div class="filter-chips" id="filters">
+      <button class="chip active" data-filter="all">All</button>
+      <div class="chip-divider"></div>
+      <button class="chip" data-filter="product:fmx">FMX</button>
+      <button class="chip" data-filter="product:hotelx">HotelX</button>
+      <button class="chip" data-filter="product:propertyx">PropertyX</button>
+      <button class="chip" data-filter="product:rentx">RentX</button>
+      <button class="chip" data-filter="product:contractx">ContractX</button>
+      <button class="chip" data-filter="product:auditx">AuditX</button>
+      <button class="chip" data-filter="product:hrx">HRX</button>
+      <button class="chip" data-filter="product:ifcax">IFCAx</button>
+      <div class="chip-divider"></div>
+      <button class="chip" data-filter="vincent">Vincent's targets</button>
+      <button class="chip" data-filter="has-deck">Has deck</button>
+      <button class="chip" data-filter="coming-soon">Coming soon</button>
+    </div>
+  </div>
+
+  <div id="deck-container"></div>
+  <div class="no-results" id="no-results">No segments match your search.</div>
+
+  <div class="footer">
+    <a href="index.html">&larr; Public view</a>
+    <a href="sales.html">Sales team view &rarr;</a>
+    <div style="margin-top:8px;">IFCA MSC Berhad &middot; Kuala Lumpur &middot; ifca.asia</div>
+  </div>
+</div>
+
+<script>
+const DECKS = [
+  // ── FMX Enterprise ──
+  { product: 'fmx', tier: 'enterprise', name: 'Healthcare', desc: 'Hospitals, specialist centres, dialysis chains. EBITDA per bed story.', href: 'fmx/healthcare/', vincent: true, vincentNote: 'Vincent grouped as "Healthcare & Hospitals" with Clinics' },
+  { product: 'fmx', tier: 'enterprise', name: 'Corporate Offices', desc: 'Grade A towers, REITs, developers. OpEx per sqft story.', href: 'fmx/corporate-offices/', vincent: true, vincentNote: 'Vincent renamed to "Commercial Real Estate & Smart Cities"' },
+  { product: 'fmx', tier: 'enterprise', name: 'Industrial', desc: 'Factories, warehouses, logistics hubs. Uptime and compliance.', href: null, vincent: true, vincentNote: 'Vincent renamed to "Manufacturing & Industrial Plants"' },
+  { product: 'fmx', tier: 'enterprise', name: 'Data Centres', desc: 'Uptime SLA, PUE optimization, redundancy compliance.', href: null, vincent: true, vincentNote: 'Vincent renamed to "Data Centers & IT Infrastructure"' },
+  { product: 'fmx', tier: 'enterprise', name: 'Retail Malls', desc: 'Tenant experience, CAM optimization, foot traffic impact.', href: null, vincent: false },
+  { product: 'fmx', tier: 'enterprise', name: 'Hospitality', desc: 'Hotels, resorts, serviced apartments. RevPAR protection.', href: null, vincent: false },
+
+  // ── FMX SME ──
+  { product: 'fmx', tier: 'sme', name: 'Clinics', desc: 'Critical asset uptime, compliance checks, PM schedules.', href: 'fmx/clinics/', vincent: true, vincentNote: 'Vincent grouped under "Healthcare & Hospitals"' },
+  { product: 'fmx', tier: 'sme', name: 'F&B Outlets', desc: 'Refrigeration safety, emergency call-outs, vendor dispatch.', href: 'fmx/fnb/', vincent: false },
+  { product: 'fmx', tier: 'sme', name: 'Warehouses', desc: 'Forklifts, dock equipment, downtime tracking, vendor scorecards.', href: 'fmx/warehouses/', vincent: true, vincentNote: 'Vincent grouped as "Retail Chains & Warehouses"' },
+  { product: 'fmx', tier: 'sme', name: 'Schools & Education', desc: 'Campus assets, safety compliance, scheduled maintenance.', href: 'fmx/schools/', vincent: true, vincentNote: 'Vincent grouped as "Education & Government"' },
+  { product: 'fmx', tier: 'sme', name: 'Gyms & Clubs', desc: 'Equipment uptime, member experience, vendor management.', href: 'fmx/gyms/', vincent: false },
+  { product: 'fmx', tier: 'sme', name: 'Retail Chains', desc: 'Multi-outlet maintenance, response time, cost control.', href: 'fmx/retail/', vincent: true, vincentNote: 'Vincent grouped as "Retail Chains & Warehouses"' },
+
+  // ── FMX — Vincent's new segments (no deck yet) ──
+  { product: 'fmx', tier: 'vincent-new', name: 'Energy & Utilities', desc: 'Power plants, oil & gas, pipelines. Safety and regulatory compliance.', href: null, vincent: true, vincentNote: 'New segment from Vincent' },
+  { product: 'fmx', tier: 'vincent-new', name: 'Financial Services & Banking', desc: 'Data centers, ATMs, branch offices. Security and uninterrupted operations.', href: null, vincent: true, vincentNote: 'New segment from Vincent' },
+  { product: 'fmx', tier: 'vincent-new', name: 'Transportation & Logistics', desc: 'Airports, ports, rail. Safety scheduling, regulatory compliance.', href: null, vincent: true, vincentNote: 'New segment from Vincent' },
+  { product: 'fmx', tier: 'vincent-new', name: 'Pharmaceutical & Biotechnology', desc: 'Labs, clean rooms, environmental controls. FDA compliance and traceability.', href: null, vincent: true, vincentNote: 'New segment from Vincent' },
+  { product: 'fmx', tier: 'vincent-new', name: 'Government', desc: 'Public buildings, agencies, heritage infrastructure. Public accountability and audit trails.', href: null, vincent: true, vincentNote: 'Vincent grouped with Education as "Education & Government" — shown separately here' },
+
+  // ── HotelX ──
+  { product: 'hotelx', name: 'Overview', desc: 'Mid-market hotels, chains, resorts. EBITDA per room story.', href: 'hotelx/overview/' },
+
+  // ── PropertyX ──
+  { product: 'propertyx', name: 'REIT Portfolios', desc: 'OpEx per sqft, NOI delta, owner reporting and KPI governance.', href: 'propertyx/reit/' },
+  { product: 'propertyx', name: 'Mixed-Use Developers', desc: 'Reporting cycle time, cost control, consolidation across assets.', href: 'propertyx/mixed-use/' },
+  { product: 'propertyx', name: 'Corporate Real Estate', desc: 'Service levels, spend control, vendor performance and budgets.', href: 'propertyx/corporate/' },
+  { product: 'propertyx', name: 'Industrial Parks', desc: 'Vendor OpEx recovery, multi-tenant visibility, compliance packs.', href: 'propertyx/industrial/' },
+  { product: 'propertyx', name: 'Education Campuses', desc: 'Facility reporting, OpEx visibility, compliance and safety.', href: 'propertyx/education/' },
+  { product: 'propertyx', name: 'Data Centres', desc: 'Vendor OpEx recovery, SLA tracking, infrastructure reporting.', href: 'propertyx/data-centers/' },
+
+  // ── RentX ──
+  { product: 'rentx', name: 'Retail Malls', desc: 'Arrears recovery, tenant billing, turnover rent automation.', href: 'rentx/mall/' },
+  { product: 'rentx', name: 'Residential', desc: 'Unit-level arrears, auto-billing, collection workflows.', href: 'rentx/residential/' },
+  { product: 'rentx', name: 'Industrial', desc: 'Escalation tracking, multi-site billing, vendor cost control.', href: 'rentx/industrial/' },
+  { product: 'rentx', name: 'Commercial Office', desc: 'Missed escalations, tenant lifecycle, billing accuracy.', href: 'rentx/commercial-office/' },
+  { product: 'rentx', name: 'Student Housing', desc: 'Bed-level billing, intake cycles, collection automation.', href: 'rentx/student-housing/' },
+  { product: 'rentx', name: 'Co-Working', desc: 'Flexible billing, adjustments, admin hours reduction.', href: 'rentx/co-working/' },
+
+  // ── ContractX ──
+  { product: 'contractx', name: 'REITs & Property', desc: 'Vendor spend leakage, obligation tracking, renewal automation.', href: 'contractx/reit/' },
+  { product: 'contractx', name: 'Healthcare', desc: 'OEM overlaps, SLA tier waste, asset-to-contract linkage.', href: 'contractx/healthcare/' },
+  { product: 'contractx', name: 'IT Managed Services', desc: 'Redline tracking, template standardization, SLA enforcement.', href: 'contractx/it-managed-services/' },
+  { product: 'contractx', name: 'Manufacturing', desc: 'Supplier spend fragmentation, plant-level inconsistencies.', href: 'contractx/manufacturing/' },
+  { product: 'contractx', name: 'Energy & Utilities', desc: 'Obligation tracking, SLA enforcement, compliance traceability.', href: 'contractx/energy/' },
+  { product: 'contractx', name: 'Telecom Enterprise', desc: 'Cycle time reduction, deal velocity, SLA penalty consistency.', href: 'contractx/telecom/' },
+
+  // ── AuditX ──
+  { product: 'auditx', name: 'Banking', desc: 'BNM compliance, audit cycle time, finding closure rates.', href: 'auditx/banking/' },
+  { product: 'auditx', name: 'Manufacturing', desc: 'DOSH compliance, audit coverage, safety and quality audits.', href: 'auditx/manufacturing/' },
+  { product: 'auditx', name: 'Retail & Multi-Site', desc: 'Store audits, compliance consistency, shrinkage control.', href: 'auditx/retail/' },
+  { product: 'auditx', name: 'Healthcare', desc: 'MSQH/JCI readiness, clinical compliance, audit trail.', href: 'auditx/healthcare/' },
+  { product: 'auditx', name: 'Public Sector & GLCs', desc: 'MCCG compliance, Auditor General readiness, governance.', href: 'auditx/public-sector/' },
+  { product: 'auditx', name: 'Logistics & Warehousing', desc: 'ISO compliance, safety audits, multi-site coverage.', href: 'auditx/logistics/' },
+
+  // ── HRX ──
+  { product: 'hrx', name: 'Manufacturing', desc: 'Shift work, overtime leakage, payroll exceptions, attendance.', href: 'hrx/manufacturing/' },
+  { product: 'hrx', name: 'Retail & Multi-Site', desc: 'High turnover, multi-location payroll, statutory compliance.', href: 'hrx/retail/' },
+  { product: 'hrx', name: 'Professional Services', desc: 'Leave/claims workflows, approval transparency, audit logs.', href: 'hrx/professional-services/' },
+  { product: 'hrx', name: 'Hospitality', desc: 'Hotels and F&B, shift exceptions, service charge distribution.', href: 'hrx/hospitality/' },
+  { product: 'hrx', name: 'Construction', desc: 'Project-based payroll, multi-site attendance, foreign worker compliance.', href: 'hrx/construction/' },
+  { product: 'hrx', name: 'BPO & Call Centres', desc: 'High-volume payroll, attrition tracking, admin hour reduction.', href: 'hrx/bpo/' },
+
+  // ── IFCAx ──
+  { product: 'ifcax', name: 'Trading & Distribution', desc: 'PO cycle cost, inventory accuracy, aging and approvals.', href: 'ifcax/trading/' },
+  { product: 'ifcax', name: 'Manufacturing', desc: 'Days to close, BOM costing, reconciliation accuracy.', href: 'ifcax/manufacturing/' },
+  { product: 'ifcax', name: 'Multi-Entity Groups', desc: 'Consolidation, segregation of duties, inter-company controls.', href: 'ifcax/multi-entity/' },
+  { product: 'ifcax', name: 'Construction Projects', desc: 'Project cost visibility, VO tracking, budget vs actual.', href: 'ifcax/construction/' },
+  { product: 'ifcax', name: 'Hospitality Groups', desc: 'Multi-property spend, F&B procurement, PMS integration.', href: 'ifcax/hospitality/' },
+  { product: 'ifcax', name: 'Professional Services', desc: 'AR visibility, WIP tracking, engagement profitability.', href: 'ifcax/professional-services/' },
+];
+
+const PRODUCT_LABELS = {
+  fmx: 'FMX — Facility Management',
+  hotelx: 'HotelX — Hotel Management',
+  propertyx: 'PropertyX — Property Management',
+  rentx: 'RentX — Lease & Tenant Billing',
+  contractx: 'ContractX — Contract Lifecycle Management',
+  auditx: 'AuditX — Internal Audit & Compliance',
+  hrx: 'HRX — Human Resources & Payroll',
+  ifcax: 'IFCAx — Core ERP',
+};
+
+const container = document.getElementById('deck-container');
+const searchInput = document.getElementById('search');
+const filtersEl = document.getElementById('filters');
+const noResults = document.getElementById('no-results');
+let activeFilter = 'all';
+
+function buildBadges(d) {
+  let html = '';
+  if (d.product === 'fmx' && d.tier === 'enterprise') html += '<span class="badge enterprise">Enterprise</span>';
+  if (d.product === 'fmx' && d.tier === 'sme') html += '<span class="badge sme">SME</span>';
+  if (d.product === 'fmx' && d.tier === 'vincent-new') html += '<span class="badge new-segment">New segment</span>';
+  if (d.vincent) html += '<span class="badge vincent" title="' + (d.vincentNote || 'Vincent\'s target') + '">Vincent</span>';
+  if (d.vincentNote && d.vincentNote.includes('grouped')) html += '<span class="badge vincent-merged" title="' + d.vincentNote + '">Merged</span>';
+  if (d.vincentNote && d.vincentNote.includes('renamed')) html += '<span class="badge vincent-merged" title="' + d.vincentNote + '">Renamed</span>';
+  return html ? '<div class="badges">' + html + '</div>' : '';
+}
+
+function render() {
+  const q = searchInput.value.toLowerCase().trim();
+  const groups = {};
+
+  DECKS.forEach((d, i) => {
+    // search filter
+    const haystack = (d.name + ' ' + d.desc + ' ' + d.product + ' ' + (d.vincentNote || '')).toLowerCase();
+    if (q && !haystack.includes(q)) { d._visible = false; return; }
+
+    // chip filter
+    if (activeFilter === 'vincent' && !d.vincent) { d._visible = false; return; }
+    if (activeFilter === 'has-deck' && !d.href) { d._visible = false; return; }
+    if (activeFilter === 'coming-soon' && d.href) { d._visible = false; return; }
+    if (activeFilter.startsWith('product:') && d.product !== activeFilter.split(':')[1]) { d._visible = false; return; }
+
+    d._visible = true;
+    if (!groups[d.product]) groups[d.product] = [];
+    groups[d.product].push(d);
+  });
+
+  let html = '';
+  const productOrder = ['fmx','hotelx','propertyx','rentx','contractx','auditx','hrx','ifcax'];
+
+  productOrder.forEach(p => {
+    const items = groups[p];
+    if (!items || items.length === 0) return;
+
+    html += '<div class="product-group">';
+    html += '<h2>' + PRODUCT_LABELS[p] + '<span class="count">(' + items.length + ')</span></h2>';
+    html += '<div class="deck-grid">';
+
+    items.forEach(d => {
+      const isComingSoon = !d.href;
+      const tag = isComingSoon ? 'div' : 'a';
+      const hrefAttr = d.href ? ' href="' + d.href + '"' : '';
+      const cls = 'deck-card' + (isComingSoon ? ' coming-soon' : '');
+
+      html += '<' + tag + hrefAttr + ' class="' + cls + '">';
+      html += '<h3>' + d.name + '</h3>';
+      html += '<p>' + d.desc + '</p>';
+      if (d.vincentNote) html += '<p style="font-size:11px;color:#a78bfa;margin-top:6px;line-height:1.4;font-style:italic;">' + d.vincentNote + '</p>';
+      html += buildBadges(d);
+      html += '</' + tag + '>';
+    });
+
+    html += '</div></div>';
+  });
+
+  container.innerHTML = html;
+  const totalVisible = DECKS.filter(d => d._visible).length;
+  noResults.style.display = totalVisible === 0 ? 'block' : 'none';
+}
+
+// search
+searchInput.addEventListener('input', render);
+
+// chips
+filtersEl.addEventListener('click', e => {
+  const chip = e.target.closest('.chip');
+  if (!chip) return;
+  filtersEl.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  chip.classList.add('active');
+  activeFilter = chip.dataset.filter;
+  render();
+});
+
+render();
+</script>
+
+</body>
+</html>
