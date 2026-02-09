@@ -117,6 +117,47 @@
     opacity: 0.6;
   }
 
+  /* ── toolbar ── */
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 36px;
+  }
+  .search-box {
+    flex: 1 1 220px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(226,224,218,0.15);
+    background: rgba(226,224,218,0.06);
+    color: var(--text-on-dark);
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-box::placeholder { color: rgba(226,224,218,0.3); }
+  .search-box:focus { border-color: var(--orange); }
+  .filter-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    padding: 6px 12px;
+    border-radius: 100px;
+    border: 1px solid rgba(226,224,218,0.15);
+    background: transparent;
+    color: rgba(226,224,218,0.5);
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .chip:hover { color: var(--text-on-dark); border-color: rgba(226,224,218,0.3); }
+  .chip.active { background: rgba(249,115,22,0.15); color: var(--orange); border-color: rgba(249,115,22,0.3); }
+  .chip-divider { width: 1px; height: 24px; background: rgba(226,224,218,0.1); align-self: center; }
+  .no-results { text-align: center; padding: 48px 24px; color: rgba(226,224,218,0.3); font-size: 15px; display: none; }
+
   .footer {
     margin-top: 60px;
     padding-top: 24px;
@@ -129,6 +170,8 @@
     .page { padding: 48px 24px 40px; }
     .page h1 { font-size: 32px; }
     .deck-grid { grid-template-columns: 1fr; }
+    .toolbar { flex-direction: column; }
+    .search-box { width: 100%; }
   }
 </style>
 </head>
@@ -139,8 +182,26 @@
   <h1>Sales Decks</h1>
   <p class="subtitle">Interactive slide decks for IFCA's product portfolio. Pick a segment to present.</p>
 
+  <div class="toolbar">
+    <input type="text" class="search-box" id="search" placeholder="Search segments..." autocomplete="off">
+    <div class="filter-chips" id="filters">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="product:fmx">FMX</button>
+      <button class="chip" data-filter="product:hotelx">HotelX</button>
+      <button class="chip" data-filter="product:propertyx">PropertyX</button>
+      <button class="chip" data-filter="product:rentx">RentX</button>
+      <button class="chip" data-filter="product:contractx">ContractX</button>
+      <button class="chip" data-filter="product:auditx">AuditX</button>
+      <button class="chip" data-filter="product:hrx">HRX</button>
+      <button class="chip" data-filter="product:ifcax">IFCAx</button>
+      <div class="chip-divider"></div>
+      <button class="chip" data-filter="has-deck">Has deck</button>
+      <button class="chip" data-filter="coming-soon">Coming soon</button>
+    </div>
+  </div>
+
   <!-- FMX -->
-  <div class="product-group">
+  <div class="product-group" data-product="fmx">
     <h2>FMX — Facility Management</h2>
     <div class="deck-grid">
       <a href="fmx/healthcare/" class="deck-card">
@@ -170,8 +231,8 @@
     </div>
   </div>
 
-  <!-- FMX -->
-  <div class="product-group">
+  <!-- FMX SME -->
+  <div class="product-group" data-product="fmx">
     <h2>FMX — Facility Management for SMEs</h2>
     <div class="deck-grid">
       <a href="fmx/clinics/" class="deck-card">
@@ -202,7 +263,7 @@
   </div>
 
   <!-- HotelX -->
-  <div class="product-group">
+  <div class="product-group" data-product="hotelx">
     <h2>HotelX — Hotel Management</h2>
     <div class="deck-grid">
       <a href="hotelx/overview/" class="deck-card">
@@ -213,7 +274,7 @@
   </div>
 
   <!-- PropertyX -->
-  <div class="product-group">
+  <div class="product-group" data-product="propertyx">
     <h2>PropertyX — Property Management</h2>
     <div class="deck-grid">
       <a href="propertyx/reit/" class="deck-card">
@@ -244,7 +305,7 @@
   </div>
 
   <!-- RentX -->
-  <div class="product-group">
+  <div class="product-group" data-product="rentx">
     <h2>RentX — Lease & Tenant Billing</h2>
     <div class="deck-grid">
       <a href="rentx/mall/" class="deck-card">
@@ -275,7 +336,7 @@
   </div>
 
   <!-- ContractX -->
-  <div class="product-group">
+  <div class="product-group" data-product="contractx">
     <h2>ContractX — Contract Lifecycle Management</h2>
     <div class="deck-grid">
       <a href="contractx/reit/" class="deck-card">
@@ -306,7 +367,7 @@
   </div>
 
   <!-- AuditX -->
-  <div class="product-group">
+  <div class="product-group" data-product="auditx">
     <h2>AuditX — Internal Audit & Compliance</h2>
     <div class="deck-grid">
       <a href="auditx/banking/" class="deck-card">
@@ -337,7 +398,7 @@
   </div>
 
   <!-- HRX -->
-  <div class="product-group">
+  <div class="product-group" data-product="hrx">
     <h2>HRX — Human Resources & Payroll</h2>
     <div class="deck-grid">
       <a href="hrx/manufacturing/" class="deck-card">
@@ -368,7 +429,7 @@
   </div>
 
   <!-- IFCAx -->
-  <div class="product-group">
+  <div class="product-group" data-product="ifcax">
     <h2>IFCAx — Core ERP</h2>
     <div class="deck-grid">
       <a href="ifcax/trading/" class="deck-card">
@@ -398,6 +459,8 @@
     </div>
   </div>
 
+  <div class="no-results" id="no-results">No segments match your search.</div>
+
   <div class="footer">
     <a href="sales.html" style="color:var(--orange);text-decoration:none;opacity:0.7;transition:opacity 0.2s;margin-right:16px;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">Sales Team View &rarr;</a>
     <a href="internal.html" style="color:var(--orange);text-decoration:none;opacity:0.7;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">Internal View &rarr;</a>
@@ -405,5 +468,54 @@
   </div>
 </div>
 
+<script>
+(function() {
+  var search = document.getElementById('search');
+  var filters = document.getElementById('filters');
+  var noResults = document.getElementById('no-results');
+  var groups = document.querySelectorAll('.product-group');
+  var activeFilter = 'all';
+
+  function apply() {
+    var q = search.value.toLowerCase().trim();
+    var totalVisible = 0;
+
+    groups.forEach(function(group) {
+      var product = group.dataset.product;
+      var cards = group.querySelectorAll('.deck-card');
+      var groupVisible = 0;
+
+      cards.forEach(function(card) {
+        var text = card.textContent.toLowerCase();
+        var isComingSoon = card.classList.contains('coming-soon');
+        var show = true;
+
+        if (q && text.indexOf(q) === -1) show = false;
+        if (activeFilter.indexOf('product:') === 0 && product !== activeFilter.split(':')[1]) show = false;
+        if (activeFilter === 'has-deck' && isComingSoon) show = false;
+        if (activeFilter === 'coming-soon' && !isComingSoon) show = false;
+
+        card.style.display = show ? '' : 'none';
+        if (show) groupVisible++;
+      });
+
+      group.style.display = groupVisible > 0 ? '' : 'none';
+      totalVisible += groupVisible;
+    });
+
+    noResults.style.display = totalVisible === 0 ? 'block' : 'none';
+  }
+
+  search.addEventListener('input', apply);
+  filters.addEventListener('click', function(e) {
+    var chip = e.target.closest('.chip');
+    if (!chip) return;
+    filters.querySelectorAll('.chip').forEach(function(c) { c.classList.remove('active'); });
+    chip.classList.add('active');
+    activeFilter = chip.dataset.filter;
+    apply();
+  });
+})();
+</script>
 </body>
 </html>
