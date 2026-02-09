@@ -1,10 +1,10 @@
-# FMX-SME Segment Deck Plan
+# FMX Segment Deck Plan
 
-Use: `_jobs/ifca/_deliverables/_decks/fmx-sme/outline.md`
+Use: `_jobs/ifca/_deliverables/_decks/fmx/outline.md`
 
 ## Objective
 
-Sell FMX-SME as fast-to-value maintenance discipline:
+Sell FMX as fast-to-value maintenance discipline:
 
 - downtime down
 - emergency call-outs down
@@ -26,12 +26,12 @@ Anchor unit heuristic:
 
 Segment specs:
 
-- `_jobs/ifca/_deliverables/_decks/fmx-sme/segments/clinics.md`
-- `_jobs/ifca/_deliverables/_decks/fmx-sme/segments/fnb-outlets.md`
-- `_jobs/ifca/_deliverables/_decks/fmx-sme/segments/warehouses.md`
-- `_jobs/ifca/_deliverables/_decks/fmx-sme/segments/schools-education.md`
-- `_jobs/ifca/_deliverables/_decks/fmx-sme/segments/gyms-clubs.md`
-- `_jobs/ifca/_deliverables/_decks/fmx-sme/segments/retail-chain-outlets.md`
+- `_jobs/ifca/_deliverables/_decks/fmx/segments/clinics.md`
+- `_jobs/ifca/_deliverables/_decks/fmx/segments/fnb-outlets.md`
+- `_jobs/ifca/_deliverables/_decks/fmx/segments/warehouses.md`
+- `_jobs/ifca/_deliverables/_decks/fmx/segments/schools-education.md`
+- `_jobs/ifca/_deliverables/_decks/fmx/segments/gyms-clubs.md`
+- `_jobs/ifca/_deliverables/_decks/fmx/segments/retail-chain-outlets.md`
 
 ## What changes by segment
 

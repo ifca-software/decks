@@ -1,13 +1,13 @@
-# FMX-SME - Slide Outline (Draft Copy)
+# FMX - Slide Outline (Draft Copy)
 
 ## Deck plan (how to use this outline)
 - Build 1 core deck first, then clone into 2-3 segment variants.
 - Default structure: 10 slides, plus optional Assumptions, Implementation, Pilot.
-- Variants should live as separate decks (for later): `fmx-sme/<segment>/index.html` (e.g. `fmx-sme/clinics/`, `fmx-sme/fnb/`).
+- Variants should live as separate decks (for later): `fmx/<segment>/index.html` (e.g. `fmx/clinics/`, `fmx/fnb/`).
 - What changes by segment: Slides 2-8 (Problem, Baseline, Value, Impact, Proof, Assumptions). Slides 1, 9, 10 stay mostly stable.
 - Keep ROI defensible: anchor on downtime hours avoided and emergency call-out reduction.
 
-See also: `_jobs/ifca/_deliverables/_decks/fmx-sme/plan.md`
+See also: `_jobs/ifca/_deliverables/_decks/fmx/plan.md`
 
 ## Target segments (recommended)
 | Segment | Anchor metric | Tailor the story | Proof to show |
@@ -17,7 +17,7 @@ See also: `_jobs/ifca/_deliverables/_decks/fmx-sme/plan.md`
 | Warehouses | uptime + cost control | forklifts, dock equipment | downtime tracking + vendor scorecards |
 
 ## 1. Title
-- FMX-SME for Small and Mid-Size Facilities
+- FMX for Small and Mid-Size Facilities
 - Simple setup, fast value, lower cost
 - IFCA MSC Berhad · [Month Year] · Confidential
 
@@ -44,7 +44,7 @@ See also: `_jobs/ifca/_deliverables/_decks/fmx-sme/plan.md`
 - Best for: SMEs running maintenance on WhatsApp, no PM schedule, and frequent emergency call-outs
 - Not for: sites with mature CMMS, PM compliance above 90%, and stable vendor contracts
 
-## 4. Where FMX-SME Creates Value
+## 4. Where FMX Creates Value
 - Fast setup with prebuilt workflows
 - Mobile work orders and vendor tracking
 - Preventive schedules that reduce downtime

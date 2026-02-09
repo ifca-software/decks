@@ -70,12 +70,12 @@ Playbook:
 - Hospitality groups: `_jobs/ifca/_deliverables/_decks/ifcax/segments/hospitality-groups.md`
 - Professional services: `_jobs/ifca/_deliverables/_decks/ifcax/segments/professional-services.md`
 
-## FMX-SME
+## FMX
 
-- `_jobs/ifca/_deliverables/_decks/fmx-sme/plan.md`
-- Clinics: `_jobs/ifca/_deliverables/_decks/fmx-sme/segments/clinics.md`
-- F&B outlets: `_jobs/ifca/_deliverables/_decks/fmx-sme/segments/fnb-outlets.md`
-- Warehouses: `_jobs/ifca/_deliverables/_decks/fmx-sme/segments/warehouses.md`
-- Schools / education: `_jobs/ifca/_deliverables/_decks/fmx-sme/segments/schools-education.md`
-- Gyms / clubs: `_jobs/ifca/_deliverables/_decks/fmx-sme/segments/gyms-clubs.md`
-- Retail chain outlets: `_jobs/ifca/_deliverables/_decks/fmx-sme/segments/retail-chain-outlets.md`
+- `_jobs/ifca/_deliverables/_decks/fmx/plan.md`
+- Clinics: `_jobs/ifca/_deliverables/_decks/fmx/segments/clinics.md`
+- F&B outlets: `_jobs/ifca/_deliverables/_decks/fmx/segments/fnb-outlets.md`
+- Warehouses: `_jobs/ifca/_deliverables/_decks/fmx/segments/warehouses.md`
+- Schools / education: `_jobs/ifca/_deliverables/_decks/fmx/segments/schools-education.md`
+- Gyms / clubs: `_jobs/ifca/_deliverables/_decks/fmx/segments/gyms-clubs.md`
+- Retail chain outlets: `_jobs/ifca/_deliverables/_decks/fmx/segments/retail-chain-outlets.md`

@@ -1,8 +1,8 @@
-# FMX-SME - F&B Outlets (Segment Spec)
+# FMX - F&B Outlets (Segment Spec)
 
 ## Segment
 
-- Product: FMX-SME
+- Product: FMX
 - Segment: F&B outlets
 - Primary buyer: Operations
 - Secondary buyers: Outlet managers

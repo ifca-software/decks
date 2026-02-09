@@ -1,8 +1,8 @@
-# FMX-SME - Gyms / Clubs (Segment Spec)
+# FMX - Gyms / Clubs (Segment Spec)
 
 ## Segment
 
-- Product: FMX-SME
+- Product: FMX
 - Segment: Gyms / clubs
 - Primary buyer: Operations
 - Secondary buyers: Owners

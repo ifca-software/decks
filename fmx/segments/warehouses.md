@@ -1,8 +1,8 @@
-# FMX-SME - Warehouses (Segment Spec)
+# FMX - Warehouses (Segment Spec)
 
 ## Segment
 
-- Product: FMX-SME
+- Product: FMX
 - Segment: Warehouses
 - Primary buyer: Warehouse ops
 - Secondary buyers: Finance

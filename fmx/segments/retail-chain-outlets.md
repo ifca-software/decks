@@ -1,8 +1,8 @@
-# FMX-SME - Retail Chain Outlets (Segment Spec)
+# FMX - Retail Chain Outlets (Segment Spec)
 
 ## Segment
 
-- Product: FMX-SME
+- Product: FMX
 - Segment: Retail chain outlets (SME multi-site)
 - Primary buyer: Operations
 - Secondary buyers: Finance

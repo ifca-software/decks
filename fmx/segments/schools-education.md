@@ -1,8 +1,8 @@
-# FMX-SME - Schools / Education (Segment Spec)
+# FMX - Schools / Education (Segment Spec)
 
 ## Segment
 
-- Product: FMX-SME
+- Product: FMX
 - Segment: Schools / education
 - Primary buyer: Facilities manager / operations
 - Secondary buyers: Finance, administrators

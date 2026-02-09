@@ -1,8 +1,8 @@
-# FMX-SME - Clinics (Segment Spec)
+# FMX - Clinics (Segment Spec)
 
 ## Segment
 
-- Product: FMX-SME
+- Product: FMX
 - Segment: Clinics
 - Primary buyer: Clinic operations
 - Secondary buyers: Owners, compliance lead
