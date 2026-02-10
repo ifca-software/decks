@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRX PMF Discovery — IFCA</title>
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="HRX PMF Discovery — IFCA">
+<meta property="og:description" content="Product-Market Fit discovery framework for HRX — Malaysian HRMS platform.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ifca-software.github.io/decks/hrx/pmf-discovery/">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EHRX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EPMF Discovery%3C/text%3E%3C/svg%3E">
+<meta name="deck-base" content="../../">
+<meta name="deck-sibling" data-href="../../fmx/pmf-discovery/" data-label="FMX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../hotelx/pmf-discovery/" data-label="HotelX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../rentx/pmf-discovery/" data-label="RentX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../propertyx/pmf-discovery/" data-label="PropertyX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../contractx/pmf-discovery/" data-label="ContractX — PMF Discovery">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23f97316'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='18' fill='white'>H</text></svg>">
+<link rel="stylesheet" href="../../shared/css/deck.css">
+<script src="../../shared/js/auth-gate.js"></script>
+</head>
+<body>
+
+<!-- ===== 1. TITLE ===== -->
+<div class="slide bg-gradient active" data-title="HRX PMF Discovery" data-slug="title">
+  <div class="pill" data-animate data-delay="0">IFCA HRX</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h1>PMF Discovery</h1>
+    <p class="subtitle text-dim">Product-Market Fit Validation Framework</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div style="display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:5px 14px;border-radius:100px;background:rgba(239,68,68,0.2);color:#f87171;margin-top:16px" data-animate data-delay="3">INTERNAL ONLY</div>
+  <div class="card mt-24" style="max-width:640px" data-animate data-delay="4">
+    <p class="text-md"><em>Mid-market employers in Malaysia need a mobile-first, fully-compliant <span class="jargon" data-term="HRMS">HRMS</span> that integrates with their industry-specific business systems (property, hospitality, construction).</em></p>
+  </div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="5">George Yong &middot; January 2026</p>
+</div>
+
+<!-- ===== 2. THE OPPORTUNITY ===== -->
+<div class="slide bg-navy" data-title="The Opportunity" data-slug="opportunity">
+  <template data-sales-notes>
+    <h4>Priority Verticals</h4>
+    <table><thead><tr><th>Priority</th><th>Segment</th><th>24mo SOM</th><th>Motion</th></tr></thead><tbody>
+    <tr><td>#1</td><td>Property Management</td><td>RM 4.8M</td><td>PropertyX/RentX cross-sell</td></tr>
+    <tr><td>#2</td><td>Hospitality</td><td>RM 3.2M</td><td>HotelX cross-sell</td></tr>
+    <tr><td>#3</td><td>Construction</td><td>RM 2.4M</td><td>ContractX cross-sell</td></tr>
+    <tr><td>#4</td><td>Manufacturing</td><td>RM 1.6M</td><td>Direct — compliance-driven</td></tr>
+    </tbody></table>
+    <h4>Strategic Highlights</h4>
+    <ul>
+    <li><strong>Cross-sell is the unfair advantage</strong> — 50%+ of ARR from existing X-Series customers. Lower CAC, 40% win rate vs 20% for new logos.</li>
+    <li><strong>Compliance is the beachhead</strong> — LHDN, EPF, SOCSO, EIS = mandatory. "100% compliance" testimonial is proof point.</li>
+    <li><strong>Property/hospitality are natural fits</strong> — Distributed workforces, shift workers, mobile-first need. Already trust IFCA.</li>
+    </ul>
+  </template>
+  <div class="pill" data-animate data-delay="0">Executive Summary</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>The Opportunity</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-4 mt-24" data-animate data-delay="3">
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="TAM">TAM</span></p>
+      <p class="big-number sm accent">USD 267M</p>
+      <p class="text-sm text-dim mt-4">RM 1.2B &middot; Malaysia Cloud HRMS</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SAM">SAM</span></p>
+      <p class="big-number sm accent">USD 156–189M</p>
+      <p class="text-sm text-dim mt-4">RM 700M–850M &middot; SME + Mid-Market</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SOM">SOM</span></p>
+      <p class="big-number sm accent">USD 1.8–4.4M</p>
+      <p class="text-sm text-dim mt-4">RM 8–20M ARR &middot; 24 months</p>
+    </div>
+    <div class="card">
+      <p class="label">Target Deals</p>
+      <p class="big-number sm accent">80–120</p>
+      <p class="text-sm text-dim mt-4">Customers in 24 months</p>
+    </div>
+  </div>
+  <div class="card-grid cols-2 mt-24" data-animate data-delay="4">
+    <div class="card" data-detail="IFCA's existing X-Series customers (PropertyX, HotelX, ContractX) — 50%+ of SOM from cross-sell. Lower CAC and 40% win rate vs 20% for new logos.">
+      <p class="label accent">1,300+ warm leads</p>
+      <p class="text-sm text-dim mt-4">X-Series customers &mdash; 50%+ of SOM from cross-sell</p>
+    </div>
+    <div class="card" data-detail="Only HRMS connected to property management (PropertyX), hotel operations (HotelX), and construction projects (ContractX). Standalone HRMS vendors cannot match this.">
+      <p class="label accent">Industry integration moat</p>
+      <p class="text-sm text-dim mt-4">Only HRMS connected to property, hospitality, and construction ERPs</p>
+    </div>
+    <div class="card" data-detail="Built-in LHDN, EPF, SOCSO, EIS compliance. Vacuumschmelze (M) testimonial: '100% compliance with LHDN, EPF, SOCSO, EIS.'">
+      <p class="label accent">100% Malaysian compliance</p>
+      <p class="text-sm text-dim mt-4">Built-in statutory compliance with proven testimonial</p>
+    </div>
+    <div class="card" data-detail="Deep property/hospitality/construction knowledge since 1991; not generic HRMS. Understands distributed workforces, shift scheduling, and industry-specific pain points.">
+      <p class="label accent">36 years domain expertise</p>
+      <p class="text-sm text-dim mt-4">Property &amp; hospitality knowledge since 1991</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3. PLATFORM ADVANTAGE ===== -->
+<div class="slide bg-white" data-title="Platform Advantage" data-slug="platform">
+  <div class="pill" data-animate data-delay="0">IFCA Ecosystem</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Platform Advantage</h2>
+    <p class="subline text-gray-600">HRX is part of IFCA's X-Series — distribution and integration advantages that standalone HRMS vendors cannot match.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="3">
+    <div class="card">
+      <p class="label">Founded</p>
+      <p class="big-number sm" style="color:var(--navy)">1991</p>
+      <p class="text-sm text-gray-600 mt-4">36+ years in property &amp; construction</p>
+    </div>
+    <div class="card">
+      <p class="label">Customers</p>
+      <p class="big-number sm" style="color:var(--navy)">1,300+</p>
+      <p class="text-sm text-gray-600 mt-4">Across X-Series products in ASEAN</p>
+    </div>
+    <div class="card">
+      <p class="label">Listed</p>
+      <p class="big-number sm" style="color:var(--navy)">Bursa</p>
+      <p class="text-sm text-gray-600 mt-4">MESDAQ since 2003</p>
+    </div>
+  </div>
+  <div class="table-wrap mt-24" data-animate data-delay="4">
+    <table>
+      <thead><tr><th>X-Series Product</th><th>HRX Cross-Sell Opportunity</th></tr></thead>
+      <tbody>
+        <tr data-detail="Primary cross-sell — HR for property staff, distributed workforce. Property managers, REITs, and developers need mobile HR for staff across multiple sites."><td><strong>PropertyX</strong> <span class="text-sm text-gray-400">(Developers, Property Managers)</span></td><td>Primary — HR for property staff; distributed workforce</td></tr>
+        <tr data-detail="Primary cross-sell — Mall staff, security, cleaning crews. Shopping malls and commercial buildings have distributed workforces requiring mobile attendance and shift management."><td><strong>RentX</strong> <span class="text-sm text-gray-400">(Malls, Commercial)</span></td><td>Primary — Mall staff, security, cleaning crews</td></tr>
+        <tr data-detail="Primary cross-sell — Shift scheduling, multi-department staff. Hotels (Swiss Garden, Hotel Maya, Holiday Villa, Avillion) need HR for F&O, F&B, housekeeping, and engineering teams."><td><strong>HotelX</strong> <span class="text-sm text-gray-400">(Hotels, Resorts)</span></td><td>Primary — Shift scheduling, multi-department staff</td></tr>
+        <tr data-detail="Primary cross-sell — Project-based workforce, site attendance. Construction contractors need HR for project-based workers with geo-tagged site attendance."><td><strong>ContractX</strong> <span class="text-sm text-gray-400">(Construction)</span></td><td>Primary — Project-based workforce; site attendance</td></tr>
+        <tr data-detail="Adjacent — Payroll-to-GL integration. AccountX handles finance, HRX handles payroll. Natural integration for payroll journal entries flowing to general ledger."><td><strong>AccountX</strong> <span class="text-sm text-gray-400">(Finance)</span></td><td>Adjacent — Payroll-to-GL integration</td></tr>
+        <tr data-detail="Adjacent — Technician workforce management. FMX manages facility operations, HRX manages technician attendance, leave, and payroll."><td><strong>FMX</strong> <span class="text-sm text-gray-400">(Facility Management)</span></td><td>Adjacent — Technician workforce management</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 4. MARKET SIZING ===== -->
+<div class="slide bg-navy" data-title="Market Sizing" data-slug="market">
+  <template data-sales-notes>
+    <h4>Calculation Methodology</h4>
+    <p><strong>TAM:</strong> 10M addressable employees × RM 10 PEPM × 12 months = RM 1.2B. Addressable = formal sector, 20+ company size. Sources: DOSM Labour Force Statistics, SOCSO contributors.</p>
+    <p><strong>SAM:</strong> SME (20–199 employees): 50,000 companies × 50 avg employees × RM 10 PEPM = RM 300M. Mid-market (200–1,999): 5,000 companies × 500 employees × RM 15 PEPM = RM 450M. Total SAM = RM 750M midpoint.</p>
+    <p><strong>SOM:</strong> 3–4 AEs × 10–15 deals/year × RM 120K avg deal. X-Series cross-sell (40% win) + new logos (20% win) = 98 deals = RM 12M base case.</p>
+    <h4>Cross-Sell Breakdown</h4>
+    <p>PropertyX/RentX: 80 leads × 40% win = 32 deals = RM 3.84M. HotelX: 50 leads × 40% = 20 deals = RM 2.40M. ContractX: 40 leads × 40% = 16 deals = RM 1.92M. Direct: 90 leads × 20–30% = 18 deals = RM 2.80M.</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">TAM / SAM / SOM</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Market Sizing</h2>
+    <p class="subline text-dim">Malaysia cloud HRMS software — employee-based model</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="3">
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="TAM">TAM</span></p>
+      <p class="big-number accent">USD 267M</p>
+      <p class="text-sm text-dim mt-4">RM 1.2B &middot; Malaysia Cloud HRMS</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SAM">SAM</span></p>
+      <p class="big-number accent">USD 156–189M</p>
+      <p class="text-sm text-dim mt-4">RM 700M–850M &middot; SME + Mid-Market</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SOM">SOM</span></p>
+      <p class="big-number accent">USD 1.8–4.4M</p>
+      <p class="text-sm text-dim mt-4">RM 8–20M ARR &middot; 24 months</p>
+    </div>
+  </div>
+  <div class="table-wrap mt-24" data-animate data-delay="4">
+    <table>
+      <thead><tr><th>Scenario</th><th>ARR</th><th>Deals</th><th>Assumptions</th></tr></thead>
+      <tbody>
+        <tr><td>Conservative</td><td class="num">RM 8M</td><td class="num">65</td><td>Slower ramp</td></tr>
+        <tr><td><strong>Base</strong></td><td class="num"><strong>RM 12M</strong></td><td class="num"><strong>98</strong></td><td><strong>As projected</strong></td></tr>
+        <tr><td>Stretch</td><td class="num">RM 20M</td><td class="num">150</td><td>Faster hiring + PLG</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 5. TARGET SEGMENTS ===== -->
+<div class="slide bg-white" data-title="Target Segments" data-slug="segments">
+  <div class="pill" data-animate data-delay="0">Priority Verticals</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Target Segments</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Priority</th><th>Segment</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr data-detail="50–500 employees. PropertyX/RentX cross-sell; distributed workforce; already trust IFCA. Property managers, REITs, developers with staff across multiple sites."><td><strong>#1</strong></td><td><strong>Property Management</strong></td><td>PropertyX/RentX cross-sell; distributed workforce; trust established</td></tr>
+        <tr data-detail="100–1,000 employees. HotelX cross-sell; shift scheduling; multi-department complexity. Existing customers: Swiss Garden, Hotel Maya, Holiday Villa, Avillion."><td><strong>#2</strong></td><td><strong>Hospitality</strong></td><td>HotelX cross-sell; shift scheduling is pain point</td></tr>
+        <tr data-detail="200–2,000 employees. ContractX cross-sell; project-based workforce; site attendance. Tier 1/2 contractors, property developers in construction phase."><td><strong>#3</strong></td><td><strong>Construction</strong></td><td>ContractX cross-sell; project-based workers; geo-attendance</td></tr>
+        <tr data-detail="200–5,000 employees. Compliance-critical; shift work; high volume payroll. Electronics, automotive, F&B production, pharma in Penang, Johor, Selangor."><td>#4</td><td>Manufacturing</td><td>Compliance-critical; shift work; high-volume payroll</td></tr>
+        <tr data-detail="100–1,000 employees. Distributed locations; shift workers; part-time staff. Retail chains, franchises. Opportunistic cross-sell to RentX (mall tenants)."><td>#5</td><td>Retail</td><td>Distributed locations; shift workers; RentX opportunity</td></tr>
+        <tr data-detail="20–200 employees. SME sweet spot; mobile workforce. Consulting, agencies, professional services firms. Inbound/marketing channel."><td>#6</td><td>Professional Services</td><td>SME sweet spot; mobile workforce; inbound channel</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 6. JOBS-TO-BE-DONE ===== -->
+<div class="slide bg-navy" data-title="Jobs-to-be-Done" data-slug="jtbd">
+  <template data-sales-notes>
+    <h4>Interview Questions</h4>
+    <ul>
+    <li><strong>Current state:</strong> Walk me through how you process payroll today. What tools do you use?</li>
+    <li><strong>Pain points:</strong> What's the most frustrating part? When was the last time a payroll error caused a problem?</li>
+    <li><strong>Desired state:</strong> If you had a magic wand, what would your HR operations look like?</li>
+    <li><strong>Decision process:</strong> Who would be involved in buying HR software? What would make your boss say yes?</li>
+    </ul>
+  </template>
+  <div class="pill" data-animate data-delay="0"><span class="jargon" data-term="JTBD">JTBD</span> Framework</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Jobs-to-be-Done</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Functional Job</th><th>Pain Level</th><th>HRX Solution</th></tr></thead>
+      <tbody>
+        <tr data-detail="Current: Spreadsheets, legacy software. HRX: Payroll with statutory auto-calculation — EPF, SOCSO, EIS, LHDN automatically computed with zero errors."><td>Process payroll accurately</td><td class="num">Very High</td><td>Payroll with statutory auto-calculation</td></tr>
+        <tr data-detail="Current: Manual SOCSO/EPF portals. HRX: Auto-submit to EPF, SOCSO, EIS, LHDN — API integration for statutory submissions with compliance tracking."><td>Submit statutory contributions</td><td class="num">High</td><td>Auto-submit to EPF, SOCSO, EIS, LHDN</td></tr>
+        <tr data-detail="Current: Paper, WhatsApp, fragmented apps. HRX: Bluetooth, QR, geo-tagged attendance — flexible clock-in methods for distributed workforces."><td>Track attendance across sites</td><td class="num">High</td><td>Bluetooth, QR, geo-tagged attendance</td></tr>
+        <tr data-detail="Current: Email, paper forms. HRX: Self-service leave portal — employees request, managers approve on mobile. Real-time balance visibility."><td>Manage leave requests</td><td class="num">Medium</td><td>Self-service leave portal</td></tr>
+        <tr data-detail="Current: Manual forms, receipts. HRX: Mobile claims workflow — snap photo, submit claim, track status. Auto-approval rules for managers."><td>Handle expense claims</td><td class="num">Medium</td><td>Mobile claims workflow</td></tr>
+        <tr data-detail="Current: Paper forms, Excel. HRX: Digital onboarding workflows — new hires complete forms on mobile before day one. Auto-provisioning."><td>Onboard new employees</td><td class="num">Medium</td><td>Digital onboarding workflows</td></tr>
+        <tr data-detail="Current: Manual Excel. HRX: Real-time analytics dashboard — headcount, turnover, payroll cost, leave balance. Drill-down by department, location, project."><td>Generate HR reports</td><td class="num">High</td><td>Real-time analytics dashboard</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="4">
+    <div class="card"><p class="label accent">Compliant</p><p class="text-sm text-dim mt-4">No penalties, no LHDN/EPF issues</p></div>
+    <div class="card"><p class="label accent">In control</p><p class="text-sm text-dim mt-4">Know status of all HR matters</p></div>
+    <div class="card"><p class="label accent">Efficient</p><p class="text-sm text-dim mt-4">Less time on admin, more on people</p></div>
+  </div>
+</div>
+
+<!-- ===== 7. KEY HYPOTHESES ===== -->
+<div class="slide bg-white" data-title="Key Hypotheses" data-slug="hypotheses">
+  <template data-sales-notes>
+    <h4>Full Hypothesis Table</h4>
+    <p><strong>Problem:</strong> P1 statutory compliance struggle, P2 solutions too complex/basic, P3 mobile tools gap, P4 manual payroll errors, P5 integration gap.</p>
+    <p><strong>Solution:</strong> S1 auto-compliance reduces errors to near-zero, S2 X-Series integration differentiates, S3 mobile self-service reduces admin time 50%+, S4 AI improves engagement, S5 SSO increases adoption.</p>
+    <p><strong>Business Model:</strong> B1 PEPM pricing acceptable, B2 RM 10–20/employee/month, B3 cross-sell cuts CAC 50%, B4 <8 week implementation, B5 110%+ NRR via module upsell.</p>
+    <h4>Pricing Benchmarks</h4>
+    <table><thead><tr><th>Competitor</th><th>Model</th><th>Cost</th></tr></thead><tbody>
+    <tr><td>BOSS HR Solutions</td><td>Per employee/mo</td><td>RM 15–30</td></tr>
+    <tr><td>Kakitangan.com</td><td>Per employee/mo</td><td>RM 8–20</td></tr>
+    <tr><td>BambooHR</td><td>Per employee/mo</td><td>USD 8–15</td></tr>
+    <tr><td>SAP SuccessFactors</td><td>Enterprise</td><td>RM 500K+</td></tr>
+    </tbody></table>
+    <p><strong>HRX hypothesis:</strong> RM 80K–200K ARR per mid-market customer.</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">Hypotheses</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Key Hypotheses to Validate</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="3">
+    <div class="card" data-detail="P1: SME/mid-market employers struggle with statutory compliance. P2: Solutions too complex (enterprise) or too basic (spreadsheets). P3: Distributed workforces lack mobile HR tools. P4: Manual payroll causes errors and penalties. P5: Integration with industry ERP is a gap.">
+      <p class="label" style="color:#f87171">Problem</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Statutory compliance is painful</span></li>
+        <li><span class="bullet"></span><span>Solutions too expensive or too basic</span></li>
+        <li><span class="bullet"></span><span>Distributed workforces lack mobile tools</span></li>
+      </ul>
+    </div>
+    <div class="card" data-detail="S1: Auto-compliance reduces statutory errors to near-zero. S2: X-Series integration is a key differentiator. S3: Mobile self-service reduces HR admin time by 50%+. S4: AI features improve user engagement. S5: Single sign-on across X-Series increases adoption.">
+      <p class="label" style="color:#34a853">Solution</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Auto-compliance reduces errors to zero</span></li>
+        <li><span class="bullet"></span><span>X-Series integration differentiates</span></li>
+        <li><span class="bullet"></span><span>Mobile self-service cuts admin time 50%</span></li>
+      </ul>
+    </div>
+    <div class="card" data-detail="B1: Per-employee pricing (PEPM) is acceptable. B2: RM 10–20/employee/month. B3: X-Series cross-sell reduces CAC by 50%+. B4: <8 weeks for mid-market. B5: 110%+ NRR via module upsell.">
+      <p class="label" style="color:var(--navy)">Business Model</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>RM 80K–200K ARR per customer</span></li>
+        <li><span class="bullet"></span><span>Cross-sell cuts CAC by 50%+</span></li>
+        <li><span class="bullet"></span><span>&lt;8 week implementation</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 8. COMPETITIVE LANDSCAPE ===== -->
+<div class="slide bg-navy" data-title="Competitive Landscape" data-slug="competitive">
+  <div class="pill" data-animate data-delay="0">Competition</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Competitive Landscape</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Category</th><th>Examples</th><th>HRX Win Theme</th></tr></thead>
+      <tbody>
+        <tr data-detail="SAP SuccessFactors, Workday, Oracle HCM. Feature-rich and proven at scale, but RM 500K+ TCO, 12-24 month implementation, overkill for mid-market. HRX is same capability, 70% lower TCO, 3x faster."><td><strong>Global Enterprise HCM</strong></td><td>SAP, Workday, Oracle</td><td>Same capability, 70% lower TCO, 3x faster</td></tr>
+        <tr data-detail="BOSS HR, Kakitangan, Swingvy. Local compliance and Malaysia-focused, but limited industry integration, point solution. HRX integrates with PropertyX, HotelX, ContractX, AccountX."><td><strong>Regional HR SaaS</strong></td><td>BOSS, Kakitangan, Swingvy</td><td>Integrated with property/hotel/construction ERP — not a silo</td></tr>
+        <tr data-detail="BambooHR, Deel, Remote. Modern UX and global payroll, but weak Malaysian statutory compliance, USD pricing. HRX offers 100% Malaysian compliance with local support."><td><strong>International HR SaaS</strong></td><td>BambooHR, Deel, Remote</td><td>100% Malaysian statutory compliance, local support</td></tr>
+        <tr data-detail="PayrollPanda, SQL Payroll. Strong payroll and affordable, but limited HR beyond payroll. HRX offers complete HR lifecycle — attendance, leave, performance, onboarding, analytics."><td><strong>Payroll Specialists</strong></td><td>PayrollPanda, SQL Payroll</td><td>Complete HR lifecycle, not just payroll</td></tr>
+        <tr data-detail="Excel, WhatsApp, paper forms. Free and familiar, but no automation, error-prone, audit nightmare. HRX provides auto-compliance, mobile self-service, real-time dashboard."><td><strong>Spreadsheets/Manual</strong></td><td>Excel, WhatsApp</td><td>Stop the payroll fire drills. Automate everything.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="4">
+    <div class="card">
+      <p class="label accent">vs Global Enterprise</p>
+      <p class="text-sm text-dim mt-4">Right-sized for Malaysia; faster, cheaper, local</p>
+    </div>
+    <div class="card">
+      <p class="label accent">vs Regional SaaS</p>
+      <p class="text-sm text-dim mt-4">Integrated with property, hotel, construction</p>
+    </div>
+    <div class="card">
+      <p class="label accent">vs Manual</p>
+      <p class="text-sm text-dim mt-4">Compliance and automation; pays for itself</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. FEATURE PARITY ===== -->
+<div class="slide bg-white" data-title="Feature Parity" data-slug="features">
+  <div class="pill" data-animate data-delay="0">Head-to-Head</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Feature Parity Analysis</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Feature</th><th>HRX</th><th>SAP</th><th>BOSS</th><th>Kakitangan</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr data-detail="Table stakes for any HRMS. All competitors offer core HR for employee lifecycle management."><td>Core HR (employee lifecycle)</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td>Table stakes</td></tr>
+        <tr data-detail="Core functionality. All competitors offer payroll with Malaysian statutory compliance."><td>Payroll with MY statutory</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td>Table stakes</td></tr>
+        <tr data-detail="All major competitors offer leave management. Basic functionality in all HRMS."><td>Leave management</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td>Table stakes</td></tr>
+        <tr data-detail="HRX offers Bluetooth, QR, geo-tagged attendance — flexible methods for distributed workforces. Kakitangan has limited multi-method support."><td>Attendance (multi-method)</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">~</td><td>Differentiator</td></tr>
+        <tr data-detail="All major competitors offer mobile self-service. Table stakes for modern HRMS."><td>Mobile self-service</td><td class="num">&check;</td><td class="num">~</td><td class="num">&check;</td><td class="num">&check;</td><td>Table stakes</td></tr>
+        <tr data-detail="HRX offers performance management including KPIs, reviews, goals. Kakitangan has limited performance features."><td>Performance management</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">~</td><td>Differentiator</td></tr>
+        <tr data-detail="HRX connects to PropertyX, HotelX, ContractX for industry-specific integration. No competitor offers native property/hotel/construction ERP integration."><td>Property/Hotel/Construction ERP integration</td><td class="num">&check;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="HRX supports biometric device integration for attendance. SAP and BOSS have support; Kakitangan has limited support."><td>Biometric device integration</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">~</td><td>Differentiator</td></tr>
+        <tr data-detail="HRX has AI-powered HR companion with smart reminders and personalized info. SAP has AI capabilities; regional SaaS vendors have minimal AI."><td>AI-powered features</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td>Emerging differentiator</td></tr>
+        <tr data-detail="HRX roadmap item. SAP has multi-country payroll. BOSS has limited multi-country support."><td>Multi-country payroll</td><td class="num">~</td><td class="num">&check;</td><td class="num">~</td><td class="num">&mdash;</td><td>Roadmap</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 10. PMF METRICS ===== -->
+<div class="slide bg-navy" data-title="PMF Metrics" data-slug="metrics">
+  <template data-sales-notes>
+    <h4>Anti-Signals</h4>
+    <table><thead><tr><th>Anti-Signal</th><th>Action</th></tr></thead><tbody>
+    <tr><td>High churn after payroll migration</td><td>Re-evaluate onboarding, data migration</td></tr>
+    <tr><td>Compliance issues reported</td><td>Immediate fix + root cause analysis</td></tr>
+    <tr><td>Heavy discounting to win</td><td>Re-evaluate pricing or value prop</td></tr>
+    <tr><td>Long sales cycles (&gt;120 days)</td><td>Re-evaluate ICP or sales motion</td></tr>
+    <tr><td>Low mobile adoption</td><td>Re-evaluate UX, training, change mgmt</td></tr>
+    </tbody></table>
+  </template>
+  <div class="pill" data-animate data-delay="0">Metrics Dashboard</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>PMF Metrics</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-40 mt-24">
+    <div class="col" data-animate data-delay="3">
+      <div class="card">
+        <p class="label accent">Leading Indicators (Pre-PMF)</p>
+        <ul class="clean mt-8">
+          <li><span class="bullet"></span><span>Inbound interest: <strong>15+ leads/month</strong></span></li>
+          <li><span class="bullet"></span><span>Demo-to-trial: <strong>&gt;35%</strong></span></li>
+          <li><span class="bullet"></span><span>Time to first payroll: <strong>&lt;30 days</strong></span></li>
+          <li><span class="bullet"></span><span>Feature adoption: <strong>&gt;60% using 3+ modules</strong></span></li>
+          <li><span class="bullet"></span><span>User engagement: <strong>&gt;50%</strong> DAU/MAU ratio</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col" data-animate data-delay="4">
+      <div class="card">
+        <p class="label accent">Lagging Indicators (PMF Achieved)</p>
+        <ul class="clean mt-8">
+          <li><span class="bullet"></span><span>Sean Ellis score: <strong>&gt;40%</strong> "very disappointed"</span></li>
+          <li><span class="bullet"></span><span><span class="jargon" data-term="NPS">NPS</span>: <strong>&gt;50</strong></span></li>
+          <li><span class="bullet"></span><span>Logo retention: <strong>&gt;95%</strong></span></li>
+          <li><span class="bullet"></span><span><span class="jargon" data-term="NRR">NRR</span>: <strong>&gt;110%</strong></span></li>
+          <li><span class="bullet"></span><span>Organic referrals: <strong>&gt;25%</strong></span></li>
+          <li><span class="bullet"></span><span>Sales cycle: <strong>&lt;60 days</strong></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 11. EXPERIMENTS & PILOTS ===== -->
+<div class="slide bg-white" data-title="Experiments & Pilots" data-slug="experiments">
+  <div class="pill" data-animate data-delay="0">Validation</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Experiments &amp; Pilots</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>ID</th><th>Experiment</th><th>Success Metric</th><th>Duration</th></tr></thead>
+      <tbody>
+        <tr data-detail="Hypothesis: Cross-sell is fastest path to HRX ARR. Run campaign targeting PropertyX/RentX customers (property managers, malls, commercial buildings) to attach HRX."><td><strong>E1</strong></td><td>PropertyX attach campaign</td><td>5 attached deals in 60 days</td><td>60 days</td></tr>
+        <tr data-detail="Hypothesis: Hotel HR is underserved; HotelX relationship lowers CAC. Target hotels 100+ rooms with shift scheduling pain points."><td><strong>E2</strong></td><td>HotelX attach campaign</td><td>3 hotel pilots in 60 days</td><td>60 days</td></tr>
+        <tr data-detail="Hypothesis: Construction workforce management is pain point. Target tier 1/2 contractors with project-based workforce needs."><td><strong>E3</strong></td><td>ContractX attach campaign</td><td>3 contractor pilots in 60 days</td><td>60 days</td></tr>
+        <tr data-detail="Hypothesis: Manufacturing has highest compliance pain. Identify 5 target factories in Penang/Johor/Selangor (electronics, automotive, F&B, pharma)."><td><strong>E4</strong></td><td>Manufacturing vertical focus</td><td>2 factory pilots</td><td>90 days</td></tr>
+        <tr data-detail="Hypothesis: '100% compliance' message resonates universally. Lead with compliance positioning in messaging and test impact on conversion."><td><strong>E5</strong></td><td>Compliance-first positioning</td><td>Higher demo-to-trial rate</td><td>60 days</td></tr>
+        <tr data-detail="Hypothesis: Current pricing (RM 10–20 PEPM) is acceptable. Test at RM 15 PEPM average with no change in win rate."><td><strong>E6</strong></td><td>Price sensitivity test</td><td>Stable win rate at RM 15 PEPM</td><td>60 days</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="4">
+    <div class="card"><p class="label" style="color:var(--navy)">Go-live</p><p class="text-sm text-gray-600 mt-4">Week 6–8</p></div>
+    <div class="card"><p class="label" style="color:var(--navy)">First Value</p><p class="text-sm text-gray-600 mt-4">First payroll cycle completed</p></div>
+    <div class="card"><p class="label" style="color:var(--navy)">Adoption</p><p class="text-sm text-gray-600 mt-4">80%+ target users active on mobile</p></div>
+  </div>
+</div>
+
+<!-- ===== 12. 90-DAY ACTION PLAN ===== -->
+<div class="slide bg-navy" data-title="90-Day Action Plan" data-slug="action-plan">
+  <div class="pill" data-animate data-delay="0">Execution</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>90-Day Action Plan</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24">
+    <div class="card" data-animate data-delay="3" data-detail="Identify 20 interview contacts (Week 1). Develop interview guide (Week 1). Conduct 10 discovery interviews (Week 2–4). Sean Ellis survey (Week 2). Analyse PropertyX/HotelX customer base for cross-sell (Week 2). Competitor analysis (Week 2).">
+      <p class="label accent">Days 1–30</p>
+      <p class="text-md mt-8">Customer Discovery</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>10 customer interviews</span></li>
+        <li><span class="bullet"></span><span>Sean Ellis survey</span></li>
+        <li><span class="bullet"></span><span>PropertyX/HotelX cross-sell analysis</span></li>
+        <li><span class="bullet"></span><span>Competitor pricing research</span></li>
+      </ul>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail="Complete 20+ interviews (Week 6). Synthesise insights (Week 7). Validate/refine hypotheses (Week 7). Launch 3 pilot experiments (Week 8). Identify 5 pilot customer candidates (Week 8).">
+      <p class="label accent">Days 30–60</p>
+      <p class="text-md mt-8">Hypothesis Validation</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>20+ interviews completed</span></li>
+        <li><span class="bullet"></span><span>Insight synthesis</span></li>
+        <li><span class="bullet"></span><span>3 pilot experiments launched</span></li>
+        <li><span class="bullet"></span><span>5 pilot candidates identified</span></li>
+      </ul>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail="Onboard pilot customers (Week 10–12). Collect pilot feedback (Week 12). Measure PMF leading indicators (Week 12). Iterate product based on feedback (Week 12+). Document case study (Week 12+).">
+      <p class="label accent">Days 60–90</p>
+      <p class="text-md mt-8">Pilot Execution</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Pilot customers onboarded</span></li>
+        <li><span class="bullet"></span><span>Feedback collected</span></li>
+        <li><span class="bullet"></span><span>Leading indicators measured</span></li>
+        <li><span class="bullet"></span><span>Product iterated</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 13. SEGMENT DEEP DIVES ===== -->
+<div class="slide bg-white" data-title="Segment Deep Dives" data-slug="deep-dives">
+  <div class="pill" data-animate data-delay="0">PMF by Segment</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Segment Deep Dives</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Segment</th><th>Severity</th><th>WTP</th><th>Competition</th><th>HRX Fit</th></tr></thead>
+      <tbody>
+        <tr data-detail="PropertyX/RentX integration is killer feature. Distributed workforce, multiple sites, shift workers, high turnover. 28.3% office vacancy means property companies compete on service quality. Target: malls (100+ tenants), commercial (500+ units), mixed-use, REITs."><td><strong>Property Management (PropertyX/RentX)</strong></td><td class="num">High</td><td class="num">Med-High</td><td class="num">Medium</td><td class="num"><strong>Very High</strong></td></tr>
+        <tr data-detail="HotelX integration is unique differentiator. Shift scheduling, multi-department (F&O, F&B, HK), high turnover. No competitor offers PMS + HRMS integration. Target: hotels 100+ rooms, resorts, chains. Existing HotelX customers: Swiss Garden, Hotel Maya, Holiday Villa, Avillion."><td><strong>Hospitality (HotelX)</strong></td><td class="num">High</td><td class="num">Med-High</td><td class="num">Low-Med</td><td class="num"><strong>Very High</strong></td></tr>
+        <tr data-detail="ContractX integration + construction-specific needs. Project-based workforce, site attendance, foreign workers, CIDB compliance. High WTP — large contractors have budget. Target: Tier 1/2 contractors, property developers (construction phase), infrastructure projects."><td><strong>Construction (ContractX)</strong></td><td class="num">Very High</td><td class="num">High</td><td class="num">Low</td><td class="num"><strong>High</strong></td></tr>
+        <tr data-detail="High-volume payroll, shift scheduling, overtime tracking, compliance. ~2.5M manufacturing workers in Malaysia. Target: Electronics, automotive, F&B production, pharma in Penang, Johor, Selangor. Competition from SQL Payroll, legacy systems."><td><strong>Manufacturing</strong></td><td class="num">Very High</td><td class="num">High</td><td class="num">Medium</td><td class="num">High</td></tr>
+        <tr data-detail="Distributed locations, part-time staff, high turnover. Retail is margin-constrained. Opportunistic cross-sell to RentX (mall tenants)."><td><strong>Retail</strong></td><td class="num">Medium-High</td><td class="num">Medium</td><td class="num">Medium</td><td class="num">Medium-High</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 14. DECISION FRAMEWORK ===== -->
+<div class="slide bg-gradient" data-title="Decision Framework" data-slug="decision">
+  <div class="pill" data-animate data-delay="0">PMF Decision</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Decision Framework</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-24" style="max-width:800px">
+    <div class="card" data-animate data-delay="3" data-detail="Quantitative: Sean Ellis >40%, logo retention >95%, NRR >110%, sales cycle <60 days, CAC payback <12 months. Qualitative: unprompted referrals, leads increasing MoM, feature requests cluster around extensions not gaps, competitors mention us. Team: repeatable sales motion, predictable implementation, decreasing support load per customer.">
+      <p class="label accent">Declare PMF when&hellip;</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Sean Ellis &gt;40% "very disappointed"</span></li>
+        <li><span class="bullet"></span><span>Logo retention &gt;95%</span></li>
+        <li><span class="bullet"></span><span>NRR &gt;100%</span></li>
+        <li><span class="bullet"></span><span>Sales cycle &lt;60 days</span></li>
+        <li><span class="bullet"></span><span>Unprompted referrals</span></li>
+        <li><span class="bullet"></span><span>Repeatable sales motion</span></li>
+      </ul>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail="Wrong market: pivot to different segment. Product gaps: prioritise based on interview feedback. Pricing mismatch: adjust model or packaging. GTM issue: change sales motion, messaging, or channel. Compliance issues: immediate fix — non-negotiable.">
+      <p class="label" style="color:#f87171">If PMF not achieved&hellip;</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Wrong market &rarr; pivot segment</span></li>
+        <li><span class="bullet"></span><span>Product gaps &rarr; prioritise features</span></li>
+        <li><span class="bullet"></span><span>Pricing mismatch &rarr; adjust model</span></li>
+        <li><span class="bullet"></span><span>GTM issue &rarr; change sales motion</span></li>
+        <li><span class="bullet"></span><span>Compliance issue &rarr; immediate fix</span></li>
+      </ul>
+    </div>
+  </div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="5">IFCA MSC Berhad &middot; Kuala Lumpur &middot; ifca.asia</p>
+</div>
+
+<script src="../../shared/js/deck-init.js"></script>
+<script>
+  DeckInit({
+    glossary: {
+      'HRMS': { def: 'Human Resource Management System — software for managing HR functions.' },
+      'HCM': { def: 'Human Capital Management — enterprise HR software category.' },
+      'PEPM': { def: 'Per Employee Per Month — common HRMS pricing model.' },
+      'EIS': { def: 'Employment Insurance System — Malaysian unemployment insurance scheme.' },
+      'EPF': { def: 'Employees Provident Fund — Malaysian retirement savings scheme (also KWSP).' },
+      'SOCSO': { def: 'Social Security Organization — Malaysian employee injury/disability insurance (also PERKESO).' },
+      'LHDN': { def: 'Lembaga Hasil Dalam Negeri — Malaysian Inland Revenue Board.' },
+      'TAM': { def: 'Total Addressable Market — total market demand if we had 100% share.' },
+      'SAM': { def: 'Serviceable Addressable Market — portion of TAM we can realistically serve.' },
+      'SOM': { def: 'Serviceable Obtainable Market — portion of SAM we can capture.' },
+      'JTBD': { def: 'Jobs-to-be-Done — framework for understanding customer needs.' },
+      'NPS': { def: 'Net Promoter Score — customer loyalty metric (-100 to +100).' },
+      'NRR': { def: 'Net Revenue Retention — revenue kept from existing customers (>100% = growth).' },
+      'ARR': { def: 'Annual Recurring Revenue — yearly subscription revenue from customers.' },
+      'ACV': { def: 'Annual Contract Value — total yearly value of a customer contract.' },
+      'AE': { def: 'Account Executive — sales role responsible for closing deals.' },
+      'CAC': { def: 'Customer Acquisition Cost — total cost to acquire one customer.' },
+      'ICP': { def: 'Ideal Customer Profile — characteristics of best-fit customers.' },
+      'PLG': { def: 'Product-Led Growth — growth strategy where product drives acquisition.' },
+      'PMF': { def: 'Product-Market Fit — when product satisfies strong market demand.' },
+      'SaaS': { def: 'Software as a Service — cloud-based subscription software model.' },
+      'TCO': { def: 'Total Cost of Ownership — full cost including implementation, training, support.' },
+      'WTP': { def: 'Willingness To Pay — maximum price a customer would accept.' },
+    }
+  });
+</script>
+</body>
+</html>

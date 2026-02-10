@@ -106,16 +106,6 @@
     line-height: 1.5;
   }
 
-  .deck-card.coming-soon {
-    opacity: 0.35;
-    pointer-events: none;
-  }
-  .deck-card.coming-soon h3::after {
-    content: ' — soon';
-    font-weight: 400;
-    font-size: 12px;
-    opacity: 0.6;
-  }
 
   /* ── toolbar ── */
   .toolbar {
@@ -187,8 +177,6 @@
     <input type="text" class="search-box" id="search" placeholder="Search segments..." autocomplete="off">
     <div class="filter-chips" id="filters">
       <button class="chip active" data-filter="all">All</button>
-      <button class="chip" data-filter="has-deck">Has deck</button>
-      <button class="chip" data-filter="coming-soon">Coming soon</button>
     </div>
   </div>
 
@@ -200,34 +188,34 @@
         <h3>Healthcare & Hospitals</h3>
         <p>Hospitals, specialist centres, clinics, dialysis chains. EBITDA per bed story.</p>
       </a>
-      <div class="deck-card coming-soon">
+      <a href="fmx/data-centers/" class="deck-card">
         <h3>Data Centers & IT Infrastructure</h3>
         <p>Uptime SLA, PUE optimization, redundancy compliance.</p>
-      </div>
-      <div class="deck-card coming-soon">
+      </a>
+      <a href="fmx/manufacturing/" class="deck-card">
         <h3>Manufacturing & Industrial Plants</h3>
         <p>Factories, production lines, safety systems. Uptime and compliance.</p>
-      </div>
-      <div class="deck-card coming-soon">
+      </a>
+      <a href="fmx/energy-utilities/" class="deck-card">
         <h3>Energy & Utilities</h3>
         <p>Power plants, oil & gas, pipelines. Safety and regulatory compliance.</p>
-      </div>
-      <div class="deck-card coming-soon">
+      </a>
+      <a href="fmx/financial-services/" class="deck-card">
         <h3>Financial Services & Banking</h3>
         <p>Data centers, ATMs, branch offices. Security and uninterrupted operations.</p>
-      </div>
-      <div class="deck-card coming-soon">
+      </a>
+      <a href="fmx/transportation-logistics/" class="deck-card">
         <h3>Transportation & Logistics</h3>
         <p>Airports, ports, rail. Safety scheduling, regulatory compliance.</p>
-      </div>
+      </a>
       <a href="fmx/commercial-real-estate/" class="deck-card">
         <h3>Commercial Real Estate & Smart Cities</h3>
         <p>Grade A towers, REITs, malls, campuses. OpEx per sqft story.</p>
       </a>
-      <div class="deck-card coming-soon">
+      <a href="fmx/pharma-biotech/" class="deck-card">
         <h3>Pharmaceutical & Biotechnology</h3>
         <p>Labs, clean rooms, environmental controls. FDA compliance and traceability.</p>
-      </div>
+      </a>
       <a href="fmx/retail-warehouses/" class="deck-card">
         <h3>Retail Chains & Warehouses</h3>
         <p>Multi-outlet maintenance, warehousing, downtime tracking, cost control.</p>
@@ -265,12 +253,9 @@
 
       cards.forEach(function(card) {
         var text = card.textContent.toLowerCase();
-        var isComingSoon = card.classList.contains('coming-soon');
         var show = true;
 
         if (q && text.indexOf(q) === -1) show = false;
-        if (activeFilter === 'has-deck' && isComingSoon) show = false;
-        if (activeFilter === 'coming-soon' && !isComingSoon) show = false;
 
         card.style.display = show ? '' : 'none';
         if (show) groupVisible++;

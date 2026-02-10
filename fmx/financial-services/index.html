@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FMX for Financial Services & Banking — IFCA</title>
+<meta property="og:title" content="FMX for Financial Services & Banking — IFCA">
+<meta property="og:description" content="Maintain branch uptime, enforce vendor SLAs, and pass audits across HQ, branches, ATMs, and data centers.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EFMX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EBanking%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
+<meta property="og:url" content="https://ifca-software.github.io/decks/fmx/financial-services/">
+<meta name="deck-base" content="../../">
+<meta name="deck-sibling" data-href="../healthcare-hospitals/" data-label="FMX — Healthcare &amp; Hospitals">
+<meta name="deck-sibling" data-href="../corporate-offices/" data-label="FMX — Corporate Offices">
+<meta name="deck-sibling" data-href="../clinics/" data-label="FMX — Clinics">
+<meta name="deck-sibling" data-href="../fnb/" data-label="FMX — F&amp;B Outlets">
+<meta name="deck-sibling" data-href="../warehouses/" data-label="FMX — Warehouses">
+<meta name="deck-sibling" data-href="../schools/" data-label="FMX — Schools &amp; Education">
+<meta name="deck-sibling" data-href="../gyms/" data-label="FMX — Gyms &amp; Clubs">
+<meta name="deck-sibling" data-href="../retail/" data-label="FMX — Retail Chains">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232d4a6f'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='18' fill='%23f97316'>F</text></svg>">
+<link rel="stylesheet" href="../../shared/css/deck.css">
+<meta name="robots" content="noindex, nofollow">
+<script src="../../shared/js/auth-gate.js"></script>
+</head>
+<body>
+
+<!-- ===== 1. TITLE ===== -->
+<div class="slide bg-gradient active" data-title="FMX for Financial Services & Banking" data-slug="title">
+  <div class="pill" data-animate data-delay="0">IFCA FMX</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h1>FMX for<br>Financial Services &amp; Banking</h1>
+    <p class="subtitle text-dim">Maintain branch uptime, enforce vendor <span class="jargon" data-term="SLA">SLAs</span>, and pass every audit — across headquarters, branches, <span class="jargon" data-term="ATM">ATMs</span>, and data centers</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad · February 2026 · Confidential</p>
+</div>
+
+<!-- ===== 2. THE REALITY ===== -->
+<div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <div class="pill" data-animate data-delay="0">The Reality</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Banks digitize everything from core banking to mobile wallets.<br>Branch and <span class="jargon" data-term="ATM">ATM</span> maintenance still runs on spreadsheets.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-32">
+    <div class="col">
+      <ul class="clean">
+        <li data-animate data-delay="3"><span class="bullet"></span><span>Highly regulated, security-sensitive, <strong class="accent">always-on</strong> environments — <span class="jargon" data-term="BNM">BNM</span>, <span class="jargon" data-term="PCI-DSS">PCI-DSS</span>, and <span class="jargon" data-term="SOC">SOC</span> 2 demand documented proof</span></li>
+        <li data-animate data-delay="4"><span class="bullet"></span><span>Any facility failure — power outage, <span class="jargon" data-term="HVAC">HVAC</span> breakdown, or security breach — disrupts customer service and <strong class="accent">damages trust</strong></span></li>
+        <li data-animate data-delay="5"><span class="bullet"></span><span>Multi-site complexity: HQ + regional offices + 50–200 branches + thousands of <span class="jargon" data-term="ATM">ATMs</span> + data centers</span></li>
+        <li data-animate data-delay="6"><span class="bullet"></span><span>Vendors manage cleaning, security, <span class="jargon" data-term="HVAC">HVAC</span>, and power systems — but <span class="jargon" data-term="SLA">SLAs</span> are <strong class="accent">unenforced</strong></span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="card" data-animate data-delay="7">
+        <p class="label">The gap</p>
+        <p class="text-lg text-dim">Core banking is world-class.<br>Facility management across branches and data centers is <strong class="accent">still manual</strong> — from flagship headquarters to rural ATM kiosks.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3. THE HIDDEN COST ===== -->
+<div class="slide bg-white" data-title="The Hidden Cost" data-slug="cost">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the RM 95,000/branch number — it's the anchor. Walk through all 4 line items if they push back. Each one is defensible independently.</p>
+    <h4>Objection handling</h4>
+    <p>"Our maintenance costs aren't that high" — Ask them to pull last year's emergency repair invoices across all branches. Most banks don't track this centrally, so the number always surprises.</p>
+    <p>"We already have a ticketing system" — Most banks have basic IT helpdesk tickets, not a preventive facility maintenance platform. Ask: "Can you show me your branch HVAC compliance rate right now?"</p>
+    <h4>Mental model</h4>
+    <p>Every branch is a revenue node generating RM 3–8M/year in transactions and fee income. RM 95K leaking per branch is a rounding error individually — but across 50 branches, it's RM 4.75M/year in recoverable waste.</p>
+    <h4>Data center prospects</h4>
+    <p>For banks with in-house data centers: reframe around uptime cost. A Tier III data center outage costs RM 50,000–200,000 per hour. Same platform, higher stakes.</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">The Hidden Cost</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">RM 95,000 per branch leaks out every year</h2>
+    <p class="subline text-gray-600">Branch managers, regional heads, and CFOs think in <strong>cost per branch</strong>. Data centers face the same waste — at RM 50,000–200,000 per hour during outages.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Where it leaks</th><th>What fixes it</th><th style="text-align:right">Cost / branch / year</th></tr></thead>
+      <tbody>
+        <tr data-detail><td>Branch downtime</td><td>Preventive <span class="jargon" data-term="HVAC">HVAC</span>/<span class="jargon" data-term="UPS">UPS</span>/generator scheduling, critical alerts</td><td class="num"><strong>RM 30,000</strong></td>
+          <template data-detail-content>
+            <h3>Branch Downtime — RM 30,000/branch/year</h3>
+            <p>Based on 2–4% unplanned facility downtime across Malaysian bank branches, including HVAC failures, power disruptions, and access control malfunctions.</p>
+            <ul>
+              <li><strong>Critical systems:</strong> UPS units, backup generators, HVAC, fire suppression, access control</li>
+              <li><strong>Downtime cost:</strong> Each hour of branch closure = RM 3,000–8,000 in lost transaction revenue</li>
+              <li><strong>FMX impact:</strong> Preventive scheduling cuts unplanned downtime by 40–60%</li>
+            </ul>
+            <p>Source: industry benchmarks from Malaysian commercial banking operations.</p>
+          </template>
+        </tr>
+        <tr data-detail><td><span class="jargon" data-term="ATM">ATM</span> / system outages</td><td>Proactive maintenance, real-time facility alerts</td><td class="num"><strong>RM 25,000</strong></td>
+          <template data-detail-content>
+            <h3>ATM / System Outages — RM 25,000/branch/year</h3>
+            <p>ATM downtime from environmental causes (heat, humidity, power fluctuations) accounts for 15–25% of all ATM outages — distinct from software or network failures.</p>
+            <ul>
+              <li><strong>Environmental failures:</strong> Overheating ATM enclosures, power surges, water ingress</li>
+              <li><strong>Revenue impact:</strong> Each offline ATM = RM 500–1,200/day in lost interchange fees</li>
+              <li><strong>FMX feature:</strong> Facility condition tracking linked to ATM site profiles</li>
+            </ul>
+            <p>Calculation: 5–8 ATMs per branch zone, average 12 facility-related outage hours/month at RM 170/hour.</p>
+          </template>
+        </tr>
+        <tr data-detail><td>Compliance gaps</td><td>Automated inspection checklists, audit trails</td><td class="num"><strong>RM 22,000</strong></td>
+          <template data-detail-content>
+            <h3>Compliance Gaps — RM 22,000/branch/year</h3>
+            <p>Non-compliance with BNM operational risk guidelines, fire safety (BOMBA), and building regulations triggers remediation costs, fines, and audit findings.</p>
+            <ul>
+              <li><strong>Regulatory scope:</strong> BNM RMiT, BOMBA fire certification, local authority building permits</li>
+              <li><strong>Audit trail:</strong> Regulators require documented proof of every inspection and maintenance action</li>
+              <li><strong>Risk cost:</strong> A single BNM finding can trigger 3–6 month remediation costing RM 200K+</li>
+            </ul>
+            <p>RM 22,000 represents annualised risk-adjusted cost of compliance gaps per branch.</p>
+          </template>
+        </tr>
+        <tr data-detail><td>Vendor waste</td><td>Centralized contracts, <span class="jargon" data-term="SLA">SLA</span> tracking, overlap elimination</td><td class="num"><strong>RM 18,000</strong></td>
+          <template data-detail-content>
+            <h3>Vendor Waste — RM 18,000/branch/year</h3>
+            <p>Banks typically engage 8–15 facility vendors per branch (cleaning, security, HVAC, electrical, lift, pest control). Without centralized tracking, overlap and SLA underperformance go undetected.</p>
+            <ul>
+              <li><strong>Overlap:</strong> Multiple vendors covering the same scope across different contract periods</li>
+              <li><strong>SLA gaps:</strong> Vendors billing for premium response times but delivering standard service</li>
+              <li><strong>FMX feature:</strong> Contract dashboard flags overlap, tracks actual vs. contracted response times</li>
+            </ul>
+          </template>
+        </tr>
+        <tr><td style="font-weight:700;color:var(--navy)">Total recoverable</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 95,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 4. THE PAYOFF ===== -->
+<div class="slide bg-navy" data-title="The Payoff" data-slug="payoff">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>This slide is the "aha moment." The RM 4.75M number for a 50-branch network lands hard — especially with banking groups where operational resilience and cost discipline define competitive advantage.</p>
+    <h4>Who cares most</h4>
+    <p>COO and CFO. Facility managers care about operational efficiency; the C-suite cares about branch availability, regulatory standing, and cost per branch. Frame FMX as an operational risk reduction tool.</p>
+    <h4>Key insight</h4>
+    <p>Banks spend heavily on cybersecurity and IT resilience but neglect physical infrastructure resilience. A generator that fails during a power cut brings down the branch just as effectively as a DDoS attack.</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">The Payoff</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Recover that — and every branch runs tighter</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-80 mt-40">
+    <div class="col" data-animate data-delay="3">
+      <div class="card-grid cols-2 tight">
+        <div class="card metric">
+          <p class="label">Before <span class="jargon" data-term="FMX">FMX</span></p>
+          <p class="value">96.5%</p>
+          <p class="text-sm text-dim">branch uptime</p>
+        </div>
+        <div class="card metric emphasis">
+          <p class="label">With FMX</p>
+          <p class="value accent">99.5%</p>
+          <p class="text-sm text-dim">branch uptime</p>
+        </div>
+      </div>
+      <div class="card-grid cols-2 tight mt-16">
+        <div class="card metric">
+          <p class="label">Before FMX</p>
+          <p class="value">12 findings</p>
+          <p class="text-sm text-dim">per audit cycle</p>
+        </div>
+        <div class="card metric emphasis">
+          <p class="label">With FMX</p>
+          <p class="value accent">2 findings</p>
+          <p class="text-sm text-dim">per audit cycle</p>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-animate data-delay="4">
+      <div class="card emphasis">
+        <p class="label">50-branch banking network</p>
+        <p class="big-number accent">RM 4.75M</p>
+        <p class="text-md text-dim mt-8">recoverable waste per year</p>
+        <p class="text-sm text-dim mt-16">That's 50 branches x RM 95,000 in hidden costs — most of it invisible until you measure.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 5. HOW FMX SOLVES IT — PLAN & MONITOR ===== -->
+<div class="slide bg-gray" data-title="Plan & Monitor" data-slug="plan-monitor">
+  <div class="pill" data-animate data-delay="0">How FMX Solves It</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Plan &amp; Monitor</h2>
+    <p class="subline text-gray-600">Centralize facility data, get real-time visibility, schedule maintenance around business hours, and prove compliance.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32">
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">Facility Profile</h3>
+      <p class="text-md text-gray-600">Single source of truth for every branch, <span class="jargon" data-term="ATM">ATM</span> site, data center, and HQ — including <span class="jargon" data-term="UPS">UPS</span>, generators, cooling, and risk classification</p>
+      <template data-detail-content>
+        <h3>Facility Profile</h3>
+        <p>Facility data for branches, offices, data centers, and ATMs is typically fragmented across property management, IT, and operations teams.</p>
+        <ul>
+          <li><strong>What it centralizes:</strong> Branch, office, ATM, and data center details</li>
+          <li><strong>Critical infrastructure:</strong> UPS, generators, precision cooling units</li>
+          <li><strong>Classification:</strong> Location tier, risk level, regulatory jurisdiction</li>
+        </ul>
+        <p>A single, accurate view of all banking facilities supports faster response and better planning.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">Facility Dashboard</h3>
+      <p class="text-md text-gray-600">Live status of maintenance, incidents, <span class="jargon" data-term="SLA">SLA</span> compliance, and critical alerts for power, <span class="jargon" data-term="HVAC">HVAC</span>, and security across all sites</p>
+      <template data-detail-content>
+        <h3>Facility Dashboard</h3>
+        <p>Management lacks real-time visibility into facility health and operational risks across dozens or hundreds of sites.</p>
+        <ul>
+          <li><strong>Live status:</strong> Maintenance progress and incident tracking</li>
+          <li><strong>SLA indicators:</strong> Vendor response time vs. contracted targets</li>
+          <li><strong>Critical alerts:</strong> Power failures, HVAC anomalies, security breaches</li>
+        </ul>
+        <p>Early detection prevents service disruption and customer impact.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">Work Order Calendar</h3>
+      <p class="text-md text-gray-600">Schedule maintenance during off-hours — coordinate across branches so customer service is never interrupted</p>
+      <template data-detail-content>
+        <h3>Work Order Calendar</h3>
+        <p>Maintenance activities that disrupt business hours directly impact customer experience and transaction volumes.</p>
+        <ul>
+          <li><strong>Off-hours scheduling:</strong> Plan generator tests, HVAC servicing, and deep cleaning outside banking hours</li>
+          <li><strong>Cross-branch coordination:</strong> Avoid scheduling conflicts when vendors serve multiple branches</li>
+        </ul>
+        <p>Minimizes customer disruption while maintaining facility reliability.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">Inspection</h3>
+      <p class="text-md text-gray-600">Digital checklists for fire safety, <span class="jargon" data-term="BNM">BNM</span> compliance, data center environmental checks, and branch facility audits</p>
+      <template data-detail-content>
+        <h3>Inspection</h3>
+        <p>Manual inspections make it difficult to prove compliance during regulatory audits from BNM, BOMBA, or internal risk teams.</p>
+        <ul>
+          <li><strong>Safety and fire compliance:</strong> BOMBA certification checklists</li>
+          <li><strong>Data center checks:</strong> Temperature, humidity, UPS battery status</li>
+          <li><strong>Branch audits:</strong> Signage, access control, vault area conditions</li>
+        </ul>
+        <p>Simplifies regulatory audits and improves risk control.</p>
+      </template>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 6. HOW FMX SOLVES IT — EXECUTE & TRACK ===== -->
+<div class="slide bg-navy" data-title="Execute & Track" data-slug="execute-track">
+  <div class="pill" data-animate data-delay="0">How FMX Solves It</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Execute &amp; Track</h2>
+    <p class="subline text-dim">Standardize issue reporting, ensure only authorized personnel handle work, and control repair costs.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3>Work Order</h3>
+      <p class="text-md text-dim">Standardized digital reporting for power, <span class="jargon" data-term="HVAC">HVAC</span>, access control — with incident history across all branches</p>
+      <template data-detail-content>
+        <h3>Work Order</h3>
+        <p>Facility incidents (power failures, HVAC breakdowns, access control malfunctions) are handled inconsistently across branches, making pattern detection impossible.</p>
+        <ul>
+          <li><strong>Standardized reporting:</strong> Every branch uses the same issue categories and priority levels</li>
+          <li><strong>Preventive + corrective:</strong> Scheduled maintenance and reactive fixes in one system</li>
+          <li><strong>Incident history:</strong> Full audit trail per asset, per branch</li>
+        </ul>
+        <p>Ensures consistent service quality across all locations.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3>Service Team</h3>
+      <p class="text-md text-dim">Assign tasks to authorized internal teams or vetted vendors — track response time and resolution for every job</p>
+      <template data-detail-content>
+        <h3>Service Team</h3>
+        <p>Facility issues in banks require fast, secure handling by trusted personnel — especially in vault areas, server rooms, and ATM enclosures.</p>
+        <ul>
+          <li><strong>Authorization:</strong> Only vetted personnel assigned to sensitive areas</li>
+          <li><strong>Response tracking:</strong> Time-to-acknowledge and time-to-resolve per assignment</li>
+          <li><strong>Accountability:</strong> Full visibility into who did what, when, and where</li>
+        </ul>
+        <p>Improves accountability and reduces downtime.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail>
+      <h3>Maintenance Quotation</h3>
+      <p class="text-md text-dim">Compare vendor pricing, enforce approval workflows, and track spending — no more uncontrolled emergency repair costs</p>
+      <template data-detail-content>
+        <h3>Maintenance Quotation</h3>
+        <p>Unplanned repairs in banking facilities result in uncontrolled costs and delayed approvals — especially when regional offices must escalate to HQ procurement.</p>
+        <ul>
+          <li><strong>Vendor comparison:</strong> Side-by-side pricing from qualified vendors</li>
+          <li><strong>Approval workflows:</strong> Route by value, category, or branch tier</li>
+          <li><strong>Spend tracking:</strong> Real-time visibility into maintenance costs per branch</li>
+        </ul>
+        <p>Improves financial control and transparency.</p>
+      </template>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7. HOW FMX SOLVES IT — PROTECT & COMPLY ===== -->
+<div class="slide bg-gray" data-title="Protect & Comply" data-slug="protect-comply">
+  <div class="pill" data-animate data-delay="0">How FMX Solves It</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Protect &amp; Comply</h2>
+    <p class="subline text-gray-600">Enforce vendor <span class="jargon" data-term="SLA">SLAs</span>, track regulatory permits, manage claims, standardize workflows, and lock down access.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">Facility Contract</h3>
+      <p class="text-md text-gray-600">Centralized vendor contracts with <span class="jargon" data-term="SLA">SLA</span> tracking, expiry alerts, and performance scoring</p>
+      <template data-detail-content>
+        <h3>Facility Contract</h3>
+        <p>Banks engage multiple vendors for cleaning, security, HVAC, and power systems. Without centralized tracking, SLAs are unenforceable.</p>
+        <ul>
+          <li><strong>Centralized contracts:</strong> All vendor agreements in one system</li>
+          <li><strong>SLA tracking:</strong> Automated alerts when response times breach thresholds</li>
+          <li><strong>Expiry management:</strong> Never miss a renewal deadline</li>
+        </ul>
+        <p>Ensures vendors meet performance and compliance standards.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">Facility License</h3>
+      <p class="text-md text-gray-600">Track regulatory permits, building certifications, and <span class="jargon" data-term="BOMBA">BOMBA</span> approvals — with automated renewal reminders</p>
+      <template data-detail-content>
+        <h3>Facility License</h3>
+        <p>Banks must comply with building, safety, and operational regulations across regions — a single expired permit can halt branch operations.</p>
+        <ul>
+          <li><strong>Permit tracking:</strong> BOMBA fire certificates, local authority approvals, occupancy permits</li>
+          <li><strong>Automated reminders:</strong> 90/60/30-day renewal alerts</li>
+        </ul>
+        <p>Keeps branches and data centers audit-ready at all times.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">Insurance Administration</h3>
+      <p class="text-md text-gray-600">Centralize policies by facility, link incidents to claims, and speed up processing for equipment or property damage</p>
+      <template data-detail-content>
+        <h3>Insurance Administration</h3>
+        <p>Claims related to equipment failure, fire, flood, or property damage are slow and poorly documented without centralized incident records.</p>
+        <ul>
+          <li><strong>Policy tracking:</strong> Insurance policies linked to each facility</li>
+          <li><strong>Claim documentation:</strong> Photos, work orders, and timelines bundled automatically</li>
+        </ul>
+        <p>Speeds up claims processing and reduces financial exposure.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">Workflow Setup</h3>
+      <p class="text-md text-gray-600">Configurable approval hierarchies and escalation rules — enforce regional consistency across all branches</p>
+      <template data-detail-content>
+        <h3>Workflow Setup</h3>
+        <p>Facility processes vary by region, branch tier, and local management style — increasing compliance risk and inconsistency.</p>
+        <ul>
+          <li><strong>Approval hierarchies:</strong> Route by cost threshold, branch tier, or category</li>
+          <li><strong>Escalation rules:</strong> Auto-escalate critical incidents (server room, vault, fire)</li>
+        </ul>
+        <p>Standardizes operations across all branches and offices.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail>
+      <h3 class="text-navy">Access Security</h3>
+      <p class="text-md text-gray-600">Role-based permissions, activity tracking, and audit logs — protect sensitive infrastructure data from unauthorized access</p>
+      <template data-detail-content>
+        <h3>Access Security</h3>
+        <p>Unauthorized access to facility systems or infrastructure data poses major security risks — especially for data center floor plans and vault maintenance records.</p>
+        <ul>
+          <li><strong>Role-based permissions:</strong> Branch staff, regional managers, HQ admin, vendors — each with appropriate access</li>
+          <li><strong>Audit logs:</strong> Every action tracked for regulatory compliance</li>
+        </ul>
+        <p>Protects sensitive infrastructure and supports regulatory compliance.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail>
+      <h3 class="text-navy">General Settings</h3>
+      <p class="text-md text-gray-600">Multi-branch and multi-region support — one scalable platform aligned to enterprise banking policies</p>
+      <template data-detail-content>
+        <h3>General Settings</h3>
+        <p>Banks operate across states and countries with different policies, currencies, and regulatory frameworks.</p>
+        <ul>
+          <li><strong>Multi-branch:</strong> Configure per-branch settings within a unified platform</li>
+          <li><strong>Multi-region:</strong> Support for different regulatory jurisdictions</li>
+          <li><strong>Policy alignment:</strong> Map facility workflows to bank-wide operational policies</li>
+        </ul>
+        <p>One scalable platform tailored to enterprise banking needs.</p>
+      </template>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 8. KEY BENEFITS ===== -->
+<div class="slide bg-navy" data-title="Key Benefits" data-slug="benefits">
+  <div class="pill" data-animate data-delay="0">Key Benefits</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>What financial institutions gain</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent mb-12">99.5%</p>
+      <p class="text-md text-dim">Branch &amp; <span class="jargon" data-term="ATM">ATM</span> uptime — fewer facility-related service disruptions</p>
+    </div>
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent mb-12">Audit-ready</p>
+      <p class="text-md text-dim">Full compliance trails for <span class="jargon" data-term="BNM">BNM</span>, <span class="jargon" data-term="BOMBA">BOMBA</span>, and internal risk audits</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent mb-12">Vendor control</p>
+      <p class="text-md text-dim">Enforce <span class="jargon" data-term="SLA">SLAs</span>, eliminate contract overlap, track actual performance</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent mb-12">Secured</p>
+      <p class="text-md text-dim">Role-based access and audit logs protect sensitive infrastructure data</p>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="big-number sm accent mb-12">Consistent CX</p>
+      <p class="text-md text-dim">Every branch delivers the same facility standard — from flagship to rural</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. WHY IFCA ===== -->
+<div class="slide bg-navy" data-title="Why IFCA FMX" data-slug="why-ifca">
+  <div class="pill" data-animate data-delay="0">Why IFCA</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Built for regulated financial institutions</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32" style="max-width:700px">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent">8 weeks</p>
+      <p class="text-md text-dim mt-8">Go-live — not 12 months like <span class="jargon" data-term="SAP">SAP</span> or <span class="jargon" data-term="Maximo">Maximo</span></p>
+    </div>
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent">&#8531; the cost</p>
+      <p class="text-md text-dim mt-8">Of enterprise FM platforms, with faster time to value</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent">90%+ adoption</p>
+      <p class="text-md text-dim mt-8">Staff using the system within 30 days — mobile-first design</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent">Multi-branch</p>
+      <p class="text-md text-dim mt-8">HQ, regional offices, branches, <span class="jargon" data-term="ATM">ATMs</span>, and data centers — one platform</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 10. NEXT STEP ===== -->
+<div class="slide bg-gradient" data-title="Next Step" data-slug="next-step">
+  <div class="max-w">
+    <div class="pill" data-animate data-delay="0">Next Step</div>
+    <h2 data-animate data-delay="1">Start with a pilot.<br>One region.<br>Eight weeks.</h2>
+    <div class="divider" data-animate data-delay="2"></div>
+    <div class="quote mt-40" data-animate data-delay="3">
+      "FMX typically recovers RM 70,000–95,000 per branch per year in hidden facility costs — whether you start with 5 branches or 50."
+    </div>
+    <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad · Kuala Lumpur · ifca.asia</p>
+  </div>
+</div>
+
+<script src="../../shared/js/deck-init.js"></script>
+<script>
+  DeckInit({
+    glossary: {
+      'ATM': { def: 'Automated Teller Machine — self-service banking terminal requiring reliable power, cooling, and physical security.', url: 'https://en.wikipedia.org/wiki/Automated_teller_machine' },
+      'BCP': { def: 'Business Continuity Plan — documented procedures to maintain operations during disruptions.', url: 'https://en.wikipedia.org/wiki/Business_continuity_planning' },
+      'BNM': { def: 'Bank Negara Malaysia — the central bank that regulates all financial institutions in Malaysia.', url: 'https://www.bnm.gov.my' },
+      'BOMBA': { def: 'Fire and Rescue Department of Malaysia — responsible for fire safety certifications and inspections.', url: 'https://www.bomba.gov.my' },
+      'DR': { def: 'Disaster Recovery — strategies and procedures for restoring IT and facility operations after a catastrophic event.', url: 'https://en.wikipedia.org/wiki/Disaster_recovery' },
+      'HVAC': { def: 'Heating, Ventilation, and Air Conditioning — critical for branch comfort, data center cooling, and ATM enclosure temperature control.', url: 'https://en.wikipedia.org/wiki/Heating,_ventilation,_and_air_conditioning' },
+      'Maximo': { def: 'IBM Maximo — enterprise asset management platform. Powerful but costly and slow to deploy.', url: 'https://en.wikipedia.org/wiki/IBM_Maximo' },
+      'PCI-DSS': { def: 'Payment Card Industry Data Security Standard — security standard for organizations handling credit card data.', url: 'https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard' },
+      'SAP': { def: 'SAP SE — German enterprise software company. Their facility management module is expensive and complex.', url: 'https://en.wikipedia.org/wiki/SAP' },
+      'SLA': { def: 'Service Level Agreement — contractual commitment on response time, resolution time, and service quality from vendors.', url: 'https://en.wikipedia.org/wiki/Service-level_agreement' },
+      'SOC': { def: 'System and Organization Controls — audit framework (SOC 1/2/3) for service organizations, covering security and availability.', url: 'https://en.wikipedia.org/wiki/System_and_Organization_Controls' },
+      'UPS': { def: 'Uninterruptible Power Supply — battery backup that provides emergency power when mains electricity fails.', url: 'https://en.wikipedia.org/wiki/Uninterruptible_power_supply' },
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HotelX PMF Discovery — IFCA</title>
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="HotelX PMF Discovery — IFCA">
+<meta property="og:description" content="Product-Market Fit discovery framework for HotelX — Mid-market hotel management platform for ASEAN.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ifca-software.github.io/decks/hotelx/pmf-discovery/">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EHotelX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EPMF Discovery%3C/text%3E%3C/svg%3E">
+<meta name="deck-base" content="../../">
+<meta name="deck-sibling" data-href="../../fmx/pmf-discovery/" data-label="FMX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../hrx/pmf-discovery/" data-label="HRX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../rentx/pmf-discovery/" data-label="RentX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../propertyx/pmf-discovery/" data-label="PropertyX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../contractx/pmf-discovery/" data-label="ContractX — PMF Discovery">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23f97316'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='18' fill='white'>H</text></svg>">
+<link rel="stylesheet" href="../../shared/css/deck.css">
+<script src="../../shared/js/auth-gate.js"></script>
+</head>
+<body>
+
+<!-- ===== 1. TITLE ===== -->
+<div class="slide bg-gradient active" data-title="HotelX PMF Discovery" data-slug="title">
+  <div class="pill" data-animate data-delay="0">IFCA HotelX</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h1>PMF Discovery</h1>
+    <p class="subtitle text-dim">Product-Market Fit Validation Framework</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div style="display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:5px 14px;border-radius:100px;background:rgba(239,68,68,0.2);color:#f87171;margin-top:16px" data-animate data-delay="3">INTERNAL ONLY</div>
+  <div class="card mt-24" style="max-width:640px" data-animate data-delay="4">
+    <p class="text-md"><em>Mid-market hotels in <span class="jargon" data-term="ASEAN">ASEAN</span> need a mobile-first, fully-integrated <span class="jargon" data-term="PMS">PMS</span> that empowers guests with self-service while reducing operational costs and <span class="jargon" data-term="OTA">OTA</span> dependency.</em></p>
+  </div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="5">George Yong &middot; January 2026</p>
+</div>
+
+<!-- ===== 2. THE OPPORTUNITY ===== -->
+<div class="slide bg-navy" data-title="The Opportunity" data-slug="opportunity">
+  <template data-sales-notes>
+    <h4>Priority Verticals</h4>
+    <table><thead><tr><th>Priority</th><th>Segment</th><th>24mo SOM</th><th>Motion</th></tr></thead><tbody>
+    <tr><td>#1</td><td>Independent Hotels</td><td>RM 3.2M</td><td>Direct — highest volume</td></tr>
+    <tr><td>#2</td><td>Hotel Chains</td><td>RM 2.8M</td><td>Direct + land-and-expand</td></tr>
+    <tr><td>#3</td><td>Resorts</td><td>RM 2.4M</td><td>Direct — high ACV</td></tr>
+    <tr><td>#4</td><td>Serviced Apartments</td><td>RM 1.6M</td><td>RentX cross-sell</td></tr>
+    </tbody></table>
+    <h4>Strategic Highlights</h4>
+    <ul>
+    <li><strong>Guest self-service is the differentiator</strong> — Reduces front desk staffing by 30–40%. Guests prefer mobile control. COVID accelerated expectations.</li>
+    <li><strong>Direct booking engine saves 15–25% commission</strong> — OTA fees are major cost. Built-in booking engine with zero commission. SEO/website integration.</li>
+    <li><strong>MenuX + FMX attach increases ARPU 2×</strong> — F&B operations need POS. Engineering needs work orders. Single vendor reduces integration cost.</li>
+    <li><strong>Tourism recovery drives investment</strong> — Malaysia targeting 27M tourists by 2026. Hotels upgrading systems post-pandemic.</li>
+    <li><strong>E-Invoice compliance is mandatory</strong> — LHDN deadline creates urgency. Built-in compliance differentiates from foreign PMS.</li>
+    </ul>
+  </template>
+  <div class="pill" data-animate data-delay="0">Executive Summary</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>The Opportunity</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-4 mt-24" data-animate data-delay="3">
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="TAM">TAM</span></p>
+      <p class="big-number sm accent">RM 100M</p>
+      <p class="text-sm text-dim mt-4">USD 22M &middot; MY Cloud PMS</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SAM">SAM</span></p>
+      <p class="big-number sm accent">RM 60M</p>
+      <p class="text-sm text-dim mt-4">USD 13M &middot; Mid-Market Hotels</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SOM">SOM</span></p>
+      <p class="big-number sm accent">RM 8–12M</p>
+      <p class="text-sm text-dim mt-4">ARR &middot; 24 months</p>
+    </div>
+    <div class="card">
+      <p class="label">Target Deals</p>
+      <p class="big-number sm accent">80–120</p>
+      <p class="text-sm text-dim mt-4">Properties in 24 months</p>
+    </div>
+  </div>
+  <div class="card-grid cols-2 mt-24" data-animate data-delay="4">
+    <div class="card" data-detail="Tourism recovery drives PMS upgrades. Malaysia targeting 27M tourists by 2026. Hotels upgrading systems post-pandemic to meet modern guest expectations.">
+      <p class="label accent">Tourism recovery</p>
+      <p class="text-sm text-dim mt-4">Malaysia targeting 27M tourists by 2026 — hotels upgrading systems</p>
+    </div>
+    <div class="card" data-detail="Guest self-service reduces front desk staffing by 30–40%. Mobile check-in/out, digital key, room selection. COVID accelerated expectations for contactless operations.">
+      <p class="label accent">Guest self-service</p>
+      <p class="text-sm text-dim mt-4">Reduces front desk staffing 30–40% — modern guest expectations</p>
+    </div>
+    <div class="card" data-detail="Built-in booking engine with zero commission vs OTA fees (15–25%). Hotels own guest data and relationship. SEO/website integration for direct bookings.">
+      <p class="label accent">Zero commission booking</p>
+      <p class="text-sm text-dim mt-4">Save 15–25% OTA fees with built-in booking engine</p>
+    </div>
+    <div class="card" data-detail="Only PMS connected to F&B (MenuX), Facilities (FMX), HR (HRX), and Finance (AccountX). Single vendor reduces integration cost and complexity.">
+      <p class="label accent">X-Series integration</p>
+      <p class="text-sm text-dim mt-4">Only PMS connected to F&B, Facilities, HR, and Finance</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3. PLATFORM ADVANTAGE ===== -->
+<div class="slide bg-white" data-title="Platform Advantage" data-slug="platform">
+  <div class="pill" data-animate data-delay="0">IFCA Ecosystem</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Platform Advantage</h2>
+    <p class="subline text-gray-600">HotelX is part of IFCA's X-Series — distribution and integration advantages that standalone PMS vendors cannot match.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="3">
+    <div class="card">
+      <p class="label">Founded</p>
+      <p class="big-number sm" style="color:var(--navy)">1991</p>
+      <p class="text-sm text-gray-600 mt-4">36+ years in property &amp; hospitality</p>
+    </div>
+    <div class="card">
+      <p class="label">Customers</p>
+      <p class="big-number sm" style="color:var(--navy)">1,300+</p>
+      <p class="text-sm text-gray-600 mt-4">Across X-Series products in ASEAN</p>
+    </div>
+    <div class="card">
+      <p class="label">Listed</p>
+      <p class="big-number sm" style="color:var(--navy)">Bursa</p>
+      <p class="text-sm text-gray-600 mt-4">MESDAQ since 2003</p>
+    </div>
+  </div>
+  <div class="table-wrap mt-24" data-animate data-delay="4">
+    <table>
+      <thead><tr><th>X-Series Product</th><th>HotelX Cross-Sell Opportunity</th></tr></thead>
+      <tbody>
+        <tr data-detail="F&B operations in hotels and resorts. MenuX integrates with HotelX for room charges, split bills, guest folios. Primary attach for hotels with restaurant/bar/banquet."><td><strong>MenuX</strong> <span class="text-sm text-gray-400">(F&B POS)</span></td><td>Primary — F&B operations in hotels/resorts</td></tr>
+        <tr data-detail="Engineering/maintenance is the top pain point for hotel operators. Guest complaints about AC, plumbing drive urgency. Mobile work orders for technicians."><td><strong>FMX</strong> <span class="text-sm text-gray-400">(Facility Management)</span></td><td>Primary — Engineering is pain point</td></tr>
+        <tr data-detail="Shift scheduling, multi-department staff (front desk, housekeeping, F&B, engineering). Leave management, payroll integration. High-volume roster planning."><td><strong>HRX</strong> <span class="text-sm text-gray-400">(Human Resources)</span></td><td>Primary — Shift scheduling, multi-department staff</td></tr>
+        <tr data-detail="Financial consolidation, automated posting from HotelX. Revenue recognition, VAT/GST tracking, LHDN E-Invoice compliance."><td><strong>AccountX</strong> <span class="text-sm text-gray-400">(Accounting)</span></td><td>Standard — Financial consolidation</td></tr>
+        <tr data-detail="MICE and banquet operations. Event booking, floor plan management, catering. Integrated with HotelX for group bookings."><td><strong>EventX</strong> <span class="text-sm text-gray-400">(Events)</span></td><td>Adjacent — MICE and banquet operations</td></tr>
+        <tr data-detail="Serviced apartments, long-stay properties. RentX handles extended-stay billing; HotelX for short-stay transient. Cross-sell to mixed-use properties."><td><strong>RentX</strong> <span class="text-sm text-gray-400">(Rental)</span></td><td>Adjacent — Serviced apartments, long-stay</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 4. MARKET SIZING ===== -->
+<div class="slide bg-navy" data-title="Market Sizing" data-slug="market">
+  <template data-sales-notes>
+    <h4>Calculation Methodology</h4>
+    <p><strong>TAM:</strong> Malaysia hotel rooms (~200K addressable, cloud-ready) × RM 20/room/month × 12 months = RM 48M. Including add-ons (booking engine, MenuX) = RM 100M.</p>
+    <p><strong>SAM:</strong> Mid-market segment (50–500 rooms, 3★+) = ~1,400 hotels × RM 20 PRPM × avg 150 rooms = RM 60M. Cloud PMS adoption ~50%.</p>
+    <p><strong>SOM:</strong> 3–4 AEs × 15-20 deals/year × RM 100K avg deal. Direct sales (independents + chains + resorts) + X-Series cross-sell + referrals = 86 deals = RM 10M base case.</p>
+    <h4>ASEAN Expansion</h4>
+    <p>Malaysia (RM 100M), Thailand (RM 250M), Indonesia (RM 200M), Vietnam (RM 100M), Singapore (RM 40M) = RM 690M ASEAN TAM. Phase 1: MY (2026). Phase 2: SG (2027). Phase 3: ASEAN (2028+).</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">TAM / SAM / SOM</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Market Sizing</h2>
+    <p class="subline text-dim">Malaysia Cloud PMS — top-down with bottom-up validation</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="3">
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="TAM">TAM</span></p>
+      <p class="big-number accent">RM 100M</p>
+      <p class="text-sm text-dim mt-4">USD 22M &middot; MY Cloud PMS</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SAM">SAM</span></p>
+      <p class="big-number accent">RM 60M</p>
+      <p class="text-sm text-dim mt-4">USD 13M &middot; Mid-Market Hotels</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SOM">SOM</span></p>
+      <p class="big-number accent">RM 8–12M</p>
+      <p class="text-sm text-dim mt-4">ARR &middot; 24 months</p>
+    </div>
+  </div>
+  <div class="table-wrap mt-24" data-animate data-delay="4">
+    <table>
+      <thead><tr><th>Scenario</th><th>ARR</th><th>Deals</th><th>Assumptions</th></tr></thead>
+      <tbody>
+        <tr><td>Conservative</td><td class="num">RM 8M</td><td class="num">70</td><td>Slower ramp</td></tr>
+        <tr><td><strong>Base</strong></td><td class="num"><strong>RM 10M</strong></td><td class="num"><strong>86</strong></td><td><strong>As projected</strong></td></tr>
+        <tr><td>Stretch</td><td class="num">RM 14M</td><td class="num">120</td><td>Faster hiring + partnerships</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-grid cols-2 mt-24" data-animate data-delay="5">
+    <div class="card" data-detail="200K addressable rooms (3★+, cloud-ready) × RM 20/room/month × 12 = RM 48M base. Including booking engine, MenuX add-ons = RM 100M.">
+      <p class="label accent">TAM Calculation</p>
+      <p class="text-sm text-dim mt-4">200K rooms × RM 20/room/mo + add-ons = RM 100M</p>
+    </div>
+    <div class="card" data-detail="ASEAN-5 (MY, TH, ID, VN, SG) = RM 690M. Malaysia is 15% of ASEAN TAM. Phase 1 focus: Malaysia (2026).">
+      <p class="label accent">ASEAN TAM</p>
+      <p class="text-sm text-dim mt-4">RM 600M — 6× Malaysia market</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 5. TARGET SEGMENTS ===== -->
+<div class="slide bg-white" data-title="Target Segments" data-slug="segments">
+  <div class="pill" data-animate data-delay="0">Priority Verticals</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Target Segments</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Priority</th><th>Segment</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr data-detail="50–200 rooms. Highest volume; need modern PMS; price-sensitive. Direct sales motion. Target ~800 properties in Malaysia."><td><strong>#1</strong></td><td><strong>Independent Hotels</strong></td><td>Highest volume; need modern PMS; price-sensitive</td></tr>
+        <tr data-detail="3–20 properties (regional groups). Land-and-expand; central management need. Multi-property dashboard. High LTV. Target Swiss Garden, Chariton, Holiday Villa, Avillion."><td><strong>#2</strong></td><td><strong>Hotel Chains (Regional)</strong></td><td>Land-and-expand; central management need; high LTV</td></tr>
+        <tr data-detail="100–500 rooms. High ACV; complex operations (spa, F&B, activities). MenuX + EventX attach. Beach, mountain, eco-resorts."><td><strong>#3</strong></td><td><strong>Resorts</strong></td><td>High ACV; complex operations; MenuX + EventX attach</td></tr>
+        <tr data-detail="50–200 units. RentX cross-sell; long-stay billing. Mixed-use properties with short-stay + long-stay units."><td>#4</td><td>Serviced Apartments</td><td>RentX cross-sell; long-stay billing</td></tr>
+        <tr data-detail="20–80 rooms. Premium positioning; guest experience focus. Design-led, lifestyle hotels. Limited volume but high engagement."><td>#5</td><td>Boutique Hotels</td><td>Premium positioning; guest experience focus</td></tr>
+        <tr data-detail="50–150 rooms. Limited-service hotels. Price-sensitive; basic PMS needs. Lower priority due to pricing pressure."><td>#6</td><td>Budget/Economy</td><td>Price-sensitive; basic PMS needs</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 6. JOBS-TO-BE-DONE ===== -->
+<div class="slide bg-navy" data-title="Jobs-to-be-Done" data-slug="jtbd">
+  <template data-sales-notes>
+    <h4>Interview Questions</h4>
+    <ul>
+    <li><strong>Current state:</strong> Walk me through how you handle a guest booking today. What systems do you use?</li>
+    <li><strong>Pain points:</strong> What's the most frustrating part of hotel operations? When did a system issue last cause a guest complaint?</li>
+    <li><strong>Desired state:</strong> If you had unlimited budget, what would your guest experience look like?</li>
+    <li><strong>Decision process:</strong> Who would be involved in buying a new PMS? What would make your owner/GM say yes?</li>
+    </ul>
+    <h4>Guest Self-Service Benefits</h4>
+    <ul>
+    <li><strong>Staffing reduction:</strong> 30–40% fewer front desk hours during peak check-in/out.</li>
+    <li><strong>Guest satisfaction:</strong> Skip the queue, mobile control, contactless.</li>
+    <li><strong>Operational efficiency:</strong> Staff focus on high-value guest interactions, not paperwork.</li>
+    </ul>
+  </template>
+  <div class="pill" data-animate data-delay="0"><span class="jargon" data-term="JTBD">JTBD</span> Framework</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Jobs-to-be-Done</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Functional Job</th><th>Pain Level</th><th>HotelX Solution</th></tr></thead>
+      <tbody>
+        <tr data-detail="Current: Multiple OTA extranet logins. HotelX: Centralised reservations with OTA channel manager integration — single interface for all bookings."><td>Manage reservations from multiple channels</td><td class="num">Very High</td><td>Centralised reservations, OTA integration</td></tr>
+        <tr data-detail="Current: Manual front desk, paper forms, queue delays. HotelX: Guest self-service app with mobile check-in/out, digital key, room selection — contactless operations."><td>Process check-in/check-out efficiently</td><td class="num">High</td><td>Guest self-service, mobile check-in</td></tr>
+        <tr data-detail="Current: WhatsApp, paper lists, no visibility. HotelX: Housekeeping portal with real-time room status, task assignment, mobile updates."><td>Manage housekeeping tasks</td><td class="num">High</td><td>Housekeeping portal, real-time status</td></tr>
+        <tr data-detail="Current: Separate POS system, manual reconciliation. HotelX: MenuX integration for room charges, split bills, guest folios — automatic posting."><td>Handle F&B operations</td><td class="num">Medium</td><td>MenuX integration</td></tr>
+        <tr data-detail="Current: Spreadsheets, manual reports, delayed insights. HotelX: Real-time KPI dashboard with occupancy, ADR, RevPAR, channel performance."><td>Track revenue and occupancy</td><td class="num">High</td><td>Real-time KPI dashboard</td></tr>
+        <tr data-detail="Current: Multiple payment terminals, manual reconciliation. HotelX: Unified payments engine with multiple gateways, automatic settlement."><td>Process payments</td><td class="num">Medium</td><td>Unified payments engine</td></tr>
+        <tr data-detail="Current: Manual invoicing, compliance anxiety. HotelX: Built-in LHDN E-Invoice integration — automatic compliance, no penalties."><td>Comply with tax regulations</td><td class="num">High</td><td>E-Invoice integration</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="4">
+    <div class="card"><p class="label accent">In control</p><p class="text-sm text-dim mt-4">Know occupancy, revenue, status at all times</p></div>
+    <div class="card"><p class="label accent">Guest-centric</p><p class="text-sm text-dim mt-4">Provide modern guest experience</p></div>
+    <div class="card"><p class="label accent">Efficient</p><p class="text-sm text-dim mt-4">Less admin, more guest interaction</p></div>
+  </div>
+</div>
+
+<!-- ===== 7. KEY HYPOTHESES ===== -->
+<div class="slide bg-white" data-title="Key Hypotheses" data-slug="hypotheses">
+  <template data-sales-notes>
+    <h4>Full Hypothesis Table</h4>
+    <p><strong>Problem:</strong> P1 OTA over-reliance (15–25% commission), P2 guest self-service gap, P3 multi-property visibility, P4 E-Invoice compliance anxiety, P5 mobile-first operations.</p>
+    <p><strong>Solution:</strong> S1 guest app reduces front desk workload 30%+, S2 booking engine reduces OTA dependency, S3 MenuX integration differentiates, S4 real-time dashboard changes GM decisions, S5 E-Invoice drives replacement.</p>
+    <p><strong>Business Model:</strong> B1 PRPM pricing acceptable, B2 RM 15–25/room/month, B3 MenuX attach 60%+, B4 <8 week implementation, B5 NRR 115%+ via module upsell.</p>
+    <h4>Pricing Benchmarks</h4>
+    <table><thead><tr><th>Competitor</th><th>Model</th><th>Cost</th></tr></thead><tbody>
+    <tr><td>Oracle OPERA Cloud</td><td>Per room/mo</td><td>USD 15–30 (RM 70–135)</td></tr>
+    <tr><td>Mews</td><td>Per room/mo</td><td>USD 8–15 (RM 36–68)</td></tr>
+    <tr><td>Cloudbeds</td><td>Per room/mo</td><td>USD 5–12 (RM 22–54)</td></tr>
+    <tr><td>eZee</td><td>Per room/mo</td><td>USD 3–8 (RM 14–36)</td></tr>
+    </tbody></table>
+    <p><strong>HotelX hypothesis:</strong> RM 60K–180K ARR per mid-market hotel (RM 15–25/room/mo for 100–300 rooms).</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">Hypotheses</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Key Hypotheses to Validate</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="3">
+    <div class="card" data-detail="P1: Mid-market hotels over-reliant on OTAs (15–25% commission). P2: Guest self-service is expected but not delivered by current PMS. P3: Multi-property chains lack centralised visibility. P4: E-Invoice compliance anxiety. P5: Legacy PMS cannot support mobile-first operations.">
+      <p class="label" style="color:#f87171">Problem</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Over-reliant on OTAs (15–25% commission)</span></li>
+        <li><span class="bullet"></span><span>Guest self-service gap</span></li>
+        <li><span class="bullet"></span><span>E-Invoice compliance anxiety</span></li>
+      </ul>
+    </div>
+    <div class="card" data-detail="S1: Guest app reduces front desk workload by 30%+. S2: Built-in booking engine reduces OTA dependency. S3: MenuX integration is a key differentiator vs standalone PMS. S4: Real-time dashboard changes GM decision-making. S5: E-Invoice compliance drives replacement decisions.">
+      <p class="label" style="color:#34a853">Solution</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Guest app reduces front desk 30%+</span></li>
+        <li><span class="bullet"></span><span>Booking engine cuts OTA dependency</span></li>
+        <li><span class="bullet"></span><span>MenuX integration differentiates</span></li>
+      </ul>
+    </div>
+    <div class="card" data-detail="B1: Per-room pricing (PRPM) is acceptable. B2: RM 15–25/room/month. B3: MenuX attach rate 60%+ for hotels with F&B. B4: <8 weeks for mid-market. B5: 115%+ NRR via module upsell (MenuX, FMX, EventX).">
+      <p class="label" style="color:var(--navy)">Business Model</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>RM 60K–180K ARR per customer</span></li>
+        <li><span class="bullet"></span><span>MenuX attach 60%+ for F&B hotels</span></li>
+        <li><span class="bullet"></span><span>&lt;8 week implementation</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 8. COMPETITIVE LANDSCAPE ===== -->
+<div class="slide bg-navy" data-title="Competitive Landscape" data-slug="competitive">
+  <div class="pill" data-animate data-delay="0">Competition</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Competitive Landscape</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Category</th><th>Examples</th><th>HotelX Win Theme</th></tr></thead>
+      <tbody>
+        <tr data-detail="Oracle OPERA, Shiji, Infor HMS. Feature-rich and enterprise-grade, but USD 100K+ TCO, 6-12 month implementation, complex. HotelX is 50% lower TCO and 3× faster."><td><strong>Global Enterprise PMS</strong></td><td>OPERA, Shiji, Infor</td><td>Same capability, 50% lower TCO, 3× faster</td></tr>
+        <tr data-detail="Mews, Cloudbeds, SiteMinder. Modern UX and quick start, but limited ASEAN compliance, USD pricing, Western support hours. HotelX has built-in LHDN E-Invoice and 24/7 MY support."><td><strong>Modern Cloud PMS</strong></td><td>Mews, Cloudbeds</td><td>Built for Malaysia, E-Invoice compliant, local support</td></tr>
+        <tr data-detail="eZee, Hotelogix, IDB Technologies. Affordable and local knowledge, but limited R&D, legacy architecture, narrow feature set. HotelX offers complete ecosystem (PMS, POS, FM, HR)."><td><strong>Regional/Local PMS</strong></td><td>eZee, Hotelogix</td><td>Complete ecosystem — PMS, POS, FM, HR in one</td></tr>
+        <tr data-detail="Booking.com Connectivity, Agoda YCS. Free/low-cost and OTA integration, but lock-in to OTA ecosystem, limited PMS features. HotelX owns guest relationship with zero commission."><td><strong>OTA-Owned Tools</strong></td><td>Booking.com, Agoda</td><td>Own your guest relationship, zero commission on direct</td></tr>
+        <tr data-detail="Custom-built, old OPERA on-prem. Familiar and owned, but no cloud, no mobile, no modern guest experience. HotelX provides guest self-service, mobile-first, no IT overhead."><td><strong>Legacy On-Prem</strong></td><td>Custom, old OPERA</td><td>Guest self-service, mobile-first, no IT overhead</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="4">
+    <div class="card">
+      <p class="label accent">vs Global Enterprise</p>
+      <p class="text-sm text-dim mt-4">Right-sized for ASEAN; faster, cheaper, local</p>
+    </div>
+    <div class="card">
+      <p class="label accent">vs Modern Cloud</p>
+      <p class="text-sm text-dim mt-4">Built for Malaysia; E-Invoice compliant; 24/7 support</p>
+    </div>
+    <div class="card">
+      <p class="label accent">vs Local/OTA</p>
+      <p class="text-sm text-dim mt-4">Complete ecosystem; own guest data</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. FEATURE PARITY ===== -->
+<div class="slide bg-white" data-title="Feature Parity" data-slug="features">
+  <div class="pill" data-animate data-delay="0">Head-to-Head</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Feature Parity Analysis</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Feature</th><th>HotelX</th><th>OPERA</th><th>Mews</th><th>eZee</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr data-detail="Table stakes for any PMS. All competitors offer reservations management."><td>Reservations management</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td>Table stakes</td></tr>
+        <tr data-detail="Core functionality. All competitors offer front desk operations."><td>Front desk operations</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td>Table stakes</td></tr>
+        <tr data-detail="All major competitors offer OTA channel manager integration."><td>OTA integration</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td>Table stakes</td></tr>
+        <tr data-detail="HotelX guest app with mobile check-in/out, digital key, room selection. OPERA has limited mobile; Mews has strong app; eZee has minimal mobile support."><td>Guest self-service app</td><td class="num">&check;</td><td class="num">~</td><td class="num">&check;</td><td class="num">~</td><td>Differentiator</td></tr>
+        <tr data-detail="HotelX and Mews have digital room key via mobile app. OPERA has integration with third-party lock systems. eZee lacks this feature."><td>Digital room key</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&mdash;</td><td>Differentiator</td></tr>
+        <tr data-detail="HotelX built-in booking engine with zero commission. OPERA has limited booking engine. Mews and eZee have booking engines but charge commission or fees."><td>Built-in booking engine</td><td class="num">&check;</td><td class="num">~</td><td class="num">&check;</td><td class="num">&check;</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="HotelX connects to MenuX for F&B POS integration — room charges, split bills, automatic posting. No competitor offers native PMS+POS integration."><td>F&B POS integration</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">~</td><td class="num">~</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="HotelX connects to FMX for facility management — work orders, maintenance requests, asset tracking. No competitor offers native FM integration."><td>Facility management</td><td class="num">&check;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="HotelX connects to HRX for HR/workforce management — shift scheduling, leave, payroll. No competitor offers native HR integration."><td>HR/workforce management</td><td class="num">&check;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="HotelX has built-in LHDN E-Invoice integration for Malaysia tax compliance. OPERA has limited support. Mews and eZee require manual workarounds."><td>E-Invoice (Malaysia)</td><td class="num">&check;</td><td class="num">~</td><td class="num">&mdash;</td><td class="num">~</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="HotelX roadmap item. OPERA has strong revenue management module. Mews has growing RM capabilities."><td>Revenue management</td><td class="num">~</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">~</td><td>Roadmap</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 10. PMF METRICS ===== -->
+<div class="slide bg-navy" data-title="PMF Metrics" data-slug="metrics">
+  <template data-sales-notes>
+    <h4>Anti-Signals</h4>
+    <table><thead><tr><th>Anti-Signal</th><th>Action</th></tr></thead><tbody>
+    <tr><td>High churn after go-live</td><td>Re-evaluate onboarding, data migration</td></tr>
+    <tr><td>Low guest app adoption</td><td>Re-evaluate UX, hotel training</td></tr>
+    <tr><td>OTA booking % not decreasing</td><td>Re-evaluate booking engine, SEO support</td></tr>
+    <tr><td>Long implementation (&gt;12 weeks)</td><td>Standardise implementation playbook</td></tr>
+    <tr><td>Heavy discounting to win</td><td>Re-evaluate pricing or value prop</td></tr>
+    </tbody></table>
+  </template>
+  <div class="pill" data-animate data-delay="0">Metrics Dashboard</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>PMF Metrics</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-40 mt-24">
+    <div class="col" data-animate data-delay="3">
+      <div class="card">
+        <p class="label accent">Leading Indicators (Pre-PMF)</p>
+        <ul class="clean mt-8">
+          <li><span class="bullet"></span><span>Inbound interest: <strong>20+ leads/month</strong></span></li>
+          <li><span class="bullet"></span><span>Demo-to-trial: <strong>&gt;35%</strong></span></li>
+          <li><span class="bullet"></span><span>Time to first booking: <strong>&lt;3 days</strong></span></li>
+          <li><span class="bullet"></span><span>Guest app adoption: <strong>&gt;40%</strong></span></li>
+          <li><span class="bullet"></span><span>Direct booking %: <strong>&gt;25%</strong></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col" data-animate data-delay="4">
+      <div class="card">
+        <p class="label accent">Lagging Indicators (PMF Achieved)</p>
+        <ul class="clean mt-8">
+          <li><span class="bullet"></span><span>Sean Ellis score: <strong>&gt;40%</strong> "very disappointed"</span></li>
+          <li><span class="bullet"></span><span><span class="jargon" data-term="NPS">NPS</span>: <strong>&gt;50</strong></span></li>
+          <li><span class="bullet"></span><span>Logo retention: <strong>&gt;95%</strong></span></li>
+          <li><span class="bullet"></span><span><span class="jargon" data-term="NRR">NRR</span>: <strong>&gt;115%</strong></span></li>
+          <li><span class="bullet"></span><span>Organic referrals: <strong>&gt;25%</strong></span></li>
+          <li><span class="bullet"></span><span>Sales cycle: <strong>&lt;75 days</strong></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 11. EXPERIMENTS & PILOTS ===== -->
+<div class="slide bg-white" data-title="Experiments & Pilots" data-slug="experiments">
+  <div class="pill" data-animate data-delay="0">Validation</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Experiments &amp; Pilots</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>ID</th><th>Experiment</th><th>Success Metric</th><th>Duration</th></tr></thead>
+      <tbody>
+        <tr data-detail="Hypothesis: Guest self-service drives satisfaction and reduces staffing costs. Launch guest app adoption tracking — measure self-service usage in pilot hotels."><td><strong>E1</strong></td><td>Guest app adoption campaign</td><td>50% guest app usage in pilot hotels</td><td>90 days</td></tr>
+        <tr data-detail="Hypothesis: Built-in booking engine reduces OTA dependency. Optimize direct booking flow, SEO integration, and measure increase in direct bookings vs OTA."><td><strong>E2</strong></td><td>Direct booking optimization</td><td>30% increase in direct bookings</td><td>90 days</td></tr>
+        <tr data-detail="Hypothesis: F&B hotels need integrated POS. Run MenuX attach campaign targeting hotels with restaurant/bar/banquet operations."><td><strong>E3</strong></td><td>MenuX attach campaign</td><td>60% attach rate on hotels with F&B</td><td>60 days</td></tr>
+        <tr data-detail="Hypothesis: Multi-property deals have higher LTV. Target regional hotel chains with 3+ properties. Land-and-expand motion with central dashboard."><td><strong>E4</strong></td><td>Chain land-and-expand</td><td>3 chain deals in 90 days</td><td>90 days</td></tr>
+        <tr data-detail="Hypothesis: Compliance deadline drives decisions. Test E-Invoice urgency messaging in sales — regulatory mandate creates buying urgency."><td><strong>E5</strong></td><td>E-Invoice urgency messaging</td><td>Higher win rate with compliance messaging</td><td>60 days</td></tr>
+        <tr data-detail="Hypothesis: Current pricing (RM 15–25 PRPM) is acceptable. Test at RM 20 average with no change in win rate."><td><strong>E6</strong></td><td>Price sensitivity test</td><td>Stable win rate at RM 20 avg</td><td>60 days</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="4">
+    <div class="card"><p class="label" style="color:var(--navy)">Go-live</p><p class="text-sm text-gray-600 mt-4">Week 6–8</p></div>
+    <div class="card"><p class="label" style="color:var(--navy)">First Value</p><p class="text-sm text-gray-600 mt-4">500+ reservations processed</p></div>
+    <div class="card"><p class="label" style="color:var(--navy)">Adoption</p><p class="text-sm text-gray-600 mt-4">40%+ guest app usage</p></div>
+  </div>
+</div>
+
+<!-- ===== 12. 90-DAY ACTION PLAN ===== -->
+<div class="slide bg-navy" data-title="90-Day Action Plan" data-slug="action-plan">
+  <div class="pill" data-animate data-delay="0">Execution</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>90-Day Action Plan</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24">
+    <div class="card" data-animate data-delay="3" data-detail="Identify 20 interview contacts (Week 1). Develop interview guide and script (Week 1). Conduct 10 customer discovery interviews (Week 2–4). Survey existing users — Sean Ellis test (Week 2). Analyse guest app usage data (Week 2). Competitor feature/pricing analysis (Week 2).">
+      <p class="label accent">Days 1–30</p>
+      <p class="text-md mt-8">Customer Discovery</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>10 customer interviews</span></li>
+        <li><span class="bullet"></span><span>Sean Ellis survey</span></li>
+        <li><span class="bullet"></span><span>Guest app usage analysis</span></li>
+        <li><span class="bullet"></span><span>Competitor pricing research</span></li>
+      </ul>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail="Complete 20+ interviews (Week 6). Synthesise insights (Week 7). Validate/refine hypotheses (Week 7). Launch 2 pilot experiments (Week 8). Identify 5 pilot customer candidates (Week 8).">
+      <p class="label accent">Days 30–60</p>
+      <p class="text-md mt-8">Hypothesis Validation</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>20+ interviews completed</span></li>
+        <li><span class="bullet"></span><span>Insight synthesis</span></li>
+        <li><span class="bullet"></span><span>2 pilot experiments launched</span></li>
+        <li><span class="bullet"></span><span>5 pilot candidates identified</span></li>
+      </ul>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail="Onboard pilot customers (Week 10–12). Collect pilot feedback (Week 12). Measure PMF leading indicators (Week 12). Iterate product based on feedback (Week 12+). Document case study (Week 12+).">
+      <p class="label accent">Days 60–90</p>
+      <p class="text-md mt-8">Pilot Execution</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Pilot customers onboarded</span></li>
+        <li><span class="bullet"></span><span>Feedback collected</span></li>
+        <li><span class="bullet"></span><span>Leading indicators measured</span></li>
+        <li><span class="bullet"></span><span>Product iterated</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 13. SEGMENT DEEP DIVES ===== -->
+<div class="slide bg-white" data-title="Segment Deep Dives" data-slug="deep-dives">
+  <div class="pill" data-animate data-delay="0">PMF by Segment</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Segment Deep Dives</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Segment</th><th>Severity</th><th>WTP</th><th>Competition</th><th>HotelX Fit</th></tr></thead>
+      <tbody>
+        <tr data-detail="50–200 rooms. Highest volume segment. OTA dependency, legacy PMS, manual operations. Price-sensitive but understand value. Modern UX, guest app, local support, affordable. Target ~800 properties in Malaysia."><td><strong>Independent Hotels</strong></td><td class="num">High</td><td class="num">Medium</td><td class="num">High</td><td class="num"><strong>High</strong></td></tr>
+        <tr data-detail="3–20 properties (regional groups). Very high problem severity — need central visibility, standardisation. High WTP — understand enterprise value. Medium competition — OPERA too expensive; local tools too basic. Multi-property dashboard, scalable. Target Swiss Garden, Chariton, Holiday Villa, Avillion."><td><strong>Hotel Chains (Regional)</strong></td><td class="num">Very High</td><td class="num">High</td><td class="num">Medium</td><td class="num"><strong>High</strong></td></tr>
+        <tr data-detail="100–500 rooms. Complex operations (spa, F&B, activities). High WTP — premium segment. Medium competition — need specialised features. MenuX for F&B, EventX for activities. High-ACV segment — complex sales but big deals."><td><strong>Resorts</strong></td><td class="num">High</td><td class="num">High</td><td class="num">Medium</td><td class="num"><strong>High</strong></td></tr>
+        <tr data-detail="50–200 units. Long-stay billing, less transient. Medium WTP — lower ARPU per unit. Low competition — most use property management, not PMS. RentX cross-sell opportunity — RentX entry, HotelX for short-stay."><td><strong>Serviced Apartments</strong></td><td class="num">Medium</td><td class="num">Medium</td><td class="num">Low</td><td class="num">Med-High</td></tr>
+        <tr data-detail="20–80 rooms. Premium positioning, guest experience focus. Design-led, lifestyle hotels. Limited volume but high engagement. Opportunistic; not primary focus."><td><strong>Boutique Hotels</strong></td><td class="num">Medium</td><td class="num">Med-High</td><td class="num">Medium</td><td class="num">Medium</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 14. DECISION FRAMEWORK ===== -->
+<div class="slide bg-gradient" data-title="Decision Framework" data-slug="decision">
+  <div class="pill" data-animate data-delay="0">PMF Decision</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Decision Framework</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-24" style="max-width:800px">
+    <div class="card" data-animate data-delay="3" data-detail="Quantitative: Sean Ellis >40%, logo retention >95%, NRR >115%, sales cycle <75 days, guest app usage >50%. Qualitative: unprompted referrals, leads increasing MoM, feature requests cluster around extensions not gaps, competitors mention us. Team: repeatable sales motion, predictable <8-week implementation, decreasing support load per customer.">
+      <p class="label accent">Declare PMF when&hellip;</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Sean Ellis &gt;40% "very disappointed"</span></li>
+        <li><span class="bullet"></span><span>Logo retention &gt;95%</span></li>
+        <li><span class="bullet"></span><span>NRR &gt;115%</span></li>
+        <li><span class="bullet"></span><span>Sales cycle &lt;75 days</span></li>
+        <li><span class="bullet"></span><span>Guest app usage &gt;50%</span></li>
+        <li><span class="bullet"></span><span>Unprompted referrals</span></li>
+      </ul>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail="Wrong segment: Focus on chains vs independents (or vice versa). Product gaps: Prioritise feature development based on feedback. Pricing mismatch: Adjust pricing model or packaging. GTM issue: Change sales motion, messaging, or channel. Guest app adoption low: Re-evaluate UX, hotel training support.">
+      <p class="label" style="color:#f87171">If PMF not achieved&hellip;</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Wrong segment &rarr; pivot focus</span></li>
+        <li><span class="bullet"></span><span>Product gaps &rarr; prioritise features</span></li>
+        <li><span class="bullet"></span><span>Pricing mismatch &rarr; adjust model</span></li>
+        <li><span class="bullet"></span><span>GTM issue &rarr; change sales motion</span></li>
+        <li><span class="bullet"></span><span>Guest app low &rarr; improve UX/training</span></li>
+      </ul>
+    </div>
+  </div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="5">IFCA MSC Berhad &middot; Kuala Lumpur &middot; ifca.asia</p>
+</div>
+
+<script src="../../shared/js/deck-init.js"></script>
+<script>
+  DeckInit({
+    glossary: {
+      'PMS': { def: 'Property Management System — hotel front-desk and reservations software.' },
+      'OTA': { def: 'Online Travel Agency — booking platforms (Booking.com, Agoda, Expedia).' },
+      'PRPM': { def: 'Per Room Per Month — common hotel PMS pricing model.' },
+      'ASEAN': { def: 'Association of Southeast Asian Nations — 10-country regional bloc.' },
+      'TAM': { def: 'Total Addressable Market — total market demand if we had 100% share.' },
+      'SAM': { def: 'Serviceable Addressable Market — portion of TAM we can realistically serve.' },
+      'SOM': { def: 'Serviceable Obtainable Market — portion of SAM we can capture.' },
+      'JTBD': { def: 'Jobs-to-be-Done — framework for understanding customer needs.' },
+      'NPS': { def: 'Net Promoter Score — customer loyalty metric (-100 to +100).' },
+      'NRR': { def: 'Net Revenue Retention — revenue kept from existing customers (>100% = growth).' },
+      'LTV': { def: 'Lifetime Value — total revenue expected from a customer.' },
+      'LHDN': { def: 'Lembaga Hasil Dalam Negeri — Malaysian Inland Revenue Board.' },
+      'TCO': { def: 'Total Cost of Ownership — full cost including implementation, training, support.' },
+      'ARR': { def: 'Annual Recurring Revenue — yearly subscription revenue from customers.' },
+      'ACV': { def: 'Annual Contract Value — total yearly value of a customer contract.' },
+      'AE': { def: 'Account Executive — sales role responsible for closing deals.' },
+      'CAC': { def: 'Customer Acquisition Cost — total cost to acquire one customer.' },
+      'ICP': { def: 'Ideal Customer Profile — characteristics of best-fit customers.' },
+      'PMF': { def: 'Product-Market Fit — when product satisfies strong market demand.' },
+    }
+  });
+</script>
+</body>
+</html>

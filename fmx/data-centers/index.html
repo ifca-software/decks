@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FMX for Data Centers & IT Infrastructure — IFCA</title>
+<meta property="og:title" content="FMX for Data Centers & IT Infrastructure — IFCA">
+<meta property="og:description" content="How data center operators eliminate unplanned downtime, enforce SLA compliance, and cut per-rack facility costs with a single platform.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EFMX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EData Centers%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
+<meta property="og:url" content="https://ifca-software.github.io/decks/fmx/data-centers/">
+<meta name="deck-base" content="../../">
+<meta name="deck-sibling" data-href="../healthcare-hospitals/" data-label="FMX — Healthcare &amp; Hospitals">
+<meta name="deck-sibling" data-href="../commercial-real-estate/" data-label="FMX — Commercial Real Estate">
+<meta name="deck-sibling" data-href="../retail-warehouses/" data-label="FMX — Retail &amp; Warehouses">
+<meta name="deck-sibling" data-href="../education-government/" data-label="FMX — Education &amp; Government">
+<meta name="deck-sibling" data-href="../manufacturing/" data-label="FMX — Manufacturing">
+<meta name="deck-sibling" data-href="../energy-utilities/" data-label="FMX — Energy &amp; Utilities">
+<meta name="deck-sibling" data-href="../financial-services/" data-label="FMX — Financial Services">
+<meta name="deck-sibling" data-href="../transportation-logistics/" data-label="FMX — Transportation &amp; Logistics">
+<meta name="deck-sibling" data-href="../pharma-biotech/" data-label="FMX — Pharma &amp; Biotech">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232d4a6f'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='18' fill='%23f97316'>F</text></svg>">
+<link rel="stylesheet" href="../../shared/css/deck.css">
+<meta name="robots" content="noindex, nofollow">
+<script src="../../shared/js/auth-gate.js"></script>
+</head>
+<body>
+
+<!-- ===== 1. TITLE ===== -->
+<div class="slide bg-gradient active" data-title="FMX for Data Centers & IT Infrastructure" data-slug="title">
+  <div class="pill" data-animate data-delay="0">IFCA FMX</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h1>FMX for<br>Data Centers &amp; IT Infrastructure</h1>
+    <p class="subtitle text-dim">Zero-downtime environments demand zero-gap facility management. One platform for <span class="jargon" data-term="SLA">SLA</span> compliance, asset reliability, and audit-ready operations.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad · February 2026 · Confidential</p>
+</div>
+
+<!-- ===== 2. THE REALITY ===== -->
+<div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <div class="pill" data-animate data-delay="0">The Reality</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Data centers invest billions in IT.<br>The physical infrastructure still runs on spreadsheets.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-32">
+    <div class="col">
+      <ul class="clean">
+        <li data-animate data-delay="3"><span class="bullet"></span><span>Even seconds of failure cause <strong class="accent">financial loss, <span class="jargon" data-term="SLA">SLA</span> violations, and reputational damage</strong> — yet most facilities manage M&amp;E manually</span></li>
+        <li data-animate data-delay="4"><span class="bullet"></span><span>Cooling and power systems account for <strong class="accent">40–50% of operating cost</strong> — with no centralised visibility into efficiency</span></li>
+        <li data-animate data-delay="5"><span class="bullet"></span><span><span class="jargon" data-term="ISO 27001">ISO 27001</span>, <span class="jargon" data-term="SOC 2">SOC 2</span>, and <span class="jargon" data-term="Uptime Institute">Uptime Institute</span> certifications demand documented proof of every maintenance action</span></li>
+        <li data-animate data-delay="6"><span class="bullet"></span><span>Multi-vendor coordination across <span class="jargon" data-term="UPS">UPS</span>, <span class="jargon" data-term="CRAC">CRAC</span>, generators, and fire suppression — tracked in silos</span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="card" data-animate data-delay="7">
+        <p class="label">The gap</p>
+        <p class="text-lg text-dim">IT infrastructure is world-class.<br>Facility management is <strong class="accent">still fragmented</strong> — from hyperscale campuses to single-hall colocation sites.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3. THE HIDDEN COST ===== -->
+<div class="slide bg-white" data-title="The Hidden Cost" data-slug="cost">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the RM 18,500/rack number — data center operators think in racks. If they push back, walk through the 4 line items. Each one is defensible independently.</p>
+    <h4>Objection handling</h4>
+    <p>"Our downtime costs aren't that high" — Ask them to check their last SLA penalty payout. Most operators don't consolidate cooling, power, and maintenance costs per rack — the number always surprises.</p>
+    <p>"We already have a DCIM" — Most DCIM tools focus on IT asset monitoring, not facility maintenance workflows. Ask: "Can you show me your CRAC unit PM compliance rate right now? Or your vendor SLA attainment this quarter?"</p>
+    <h4>Mental model</h4>
+    <p>Every rack generates RM 120K–200K/year in colocation revenue. RM 18,500 leaking is 10–15% — would any operator accept that without investigating?</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">The Hidden Cost</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">RM 18,500 per rack leaks out every year</h2>
+    <p class="subline text-gray-600">Data center operators think in racks. Here is where the money goes — and what stops the bleeding.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Where it leaks</th><th>What fixes it</th><th style="text-align:right">Cost / rack / year</th></tr></thead>
+      <tbody>
+        <tr data-detail><td>Unplanned downtime</td><td>Preventive scheduling, critical asset alerts, automated <span class="jargon" data-term="WO">WO</span> from alarms</td><td class="num"><strong>RM 7,500</strong></td>
+          <template data-detail-content>
+            <h3>Unplanned Downtime — RM 7,500/rack/year</h3>
+            <p>Based on average 0.05% unplanned downtime across ASEAN commercial data centers, against colocation revenue of RM 150,000/rack/year.</p>
+            <ul>
+              <li><strong>Critical assets:</strong> UPS systems, PDUs, generators, transfer switches — a single failure cascades across dozens of racks</li>
+              <li><strong>Downtime cost:</strong> Each hour of rack downtime = RM 700–1,500 in SLA credits plus reputational damage</li>
+              <li><strong>FMX impact:</strong> Automated work orders from alarm triggers, priority-based classification for P1/P2 incidents — cuts MTTR by 40–60%</li>
+            </ul>
+            <p>Source: Uptime Institute 2025 Global Data Center Survey, validated against SE Asian colocation benchmarks.</p>
+          </template>
+        </tr>
+        <tr data-detail><td>Cooling inefficiency</td><td>Scheduled <span class="jargon" data-term="CRAC">CRAC</span>/<span class="jargon" data-term="CRAH">CRAH</span> maintenance, <span class="jargon" data-term="PUE">PUE</span> tracking</td><td class="num"><strong>RM 5,000</strong></td>
+          <template data-detail-content>
+            <h3>Cooling Inefficiency — RM 5,000/rack/year</h3>
+            <p>Cooling accounts for 30–40% of total data center energy. Poor maintenance degrades PUE by 0.1–0.3, translating directly to wasted electricity.</p>
+            <ul>
+              <li><strong>CRAC/CRAH units:</strong> Filter clogging, refrigerant leaks, and fan bearing wear reduce efficiency 10–20% if not serviced on schedule</li>
+              <li><strong>Chiller plants:</strong> Missed condenser cleaning alone can increase energy consumption by 15%</li>
+              <li><strong>FMX feature:</strong> Digitised inspection checklists with photographic evidence, automated PM scheduling aligned to manufacturer intervals</li>
+            </ul>
+            <p>Calculation: RM 15,000 average cooling cost per rack × 30% inefficiency from deferred maintenance = RM 5,000 recoverable.</p>
+          </template>
+        </tr>
+        <tr data-detail><td><span class="jargon" data-term="SLA">SLA</span> penalties</td><td>Contract tracking, response-time monitoring, vendor accountability</td><td class="num"><strong>RM 3,500</strong></td>
+          <template data-detail-content>
+            <h3>SLA Penalties — RM 3,500/rack/year</h3>
+            <p>Colocation and managed hosting contracts carry SLA commitments for uptime, temperature, and response time. Penalties accumulate silently without centralised tracking.</p>
+            <ul>
+              <li><strong>Uptime SLAs:</strong> 99.99% commitment means &lt;53 minutes/year — each breach triggers 5–10% monthly credit</li>
+              <li><strong>Temperature SLAs:</strong> Excursions above 27C trigger penalty clauses in enterprise contracts</li>
+              <li><strong>FMX feature:</strong> SLA dashboard tracks actual vs. contracted response times, flags breaches before they compound</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Compliance gaps</td><td>Automated renewal alerts, audit-ready reporting, licence tracking</td><td class="num"><strong>RM 2,500</strong></td>
+          <template data-detail-content>
+            <h3>Compliance Gaps — RM 2,500/rack/year</h3>
+            <p>Data centers must maintain ISO 27001, SOC 2, fire safety, and electrical certifications. Lapsed compliance risks customer churn, insurance voidance, or forced shutdowns.</p>
+            <ul>
+              <li><strong>Certification audits:</strong> ISO 27001 and SOC 2 require documented proof of physical security controls, maintenance logs, and incident response</li>
+              <li><strong>Fire &amp; electrical:</strong> BOMBA and Suruhanjaya Tenaga approvals require periodic inspection evidence</li>
+              <li><strong>FMX feature:</strong> Licence and certification tracker with automated renewal alerts, audit-ready compliance reports in one click</li>
+            </ul>
+            <p>RM 2,500 represents annualised risk-adjusted cost of compliance gaps per rack (failed audit remediation + customer churn risk).</p>
+          </template>
+        </tr>
+        <tr><td style="font-weight:700;color:var(--navy)">Total recoverable</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 18,500</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 4. THE PAYOFF ===== -->
+<div class="slide bg-navy" data-title="The Payoff" data-slug="payoff">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>This slide is the "aha moment." The RM 6.25M number for a 500-rack facility lands hard — especially with operators expanding capacity or PE-backed colocation groups where NOI drives valuation.</p>
+    <h4>Who cares most</h4>
+    <p>VP Operations and CFO. Facility managers care about MTTR; the C-suite cares about PUE, SLA attainment, and cost-per-rack. Frame FMX as an operational finance tool, not just a maintenance system.</p>
+    <h4>Key insight</h4>
+    <p>Data center operators are expanding into Johor (Sedenak Tech Park) and Cyberjaya. Every new hall multiplies the maintenance complexity. FMX scales without adding headcount.</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">The Payoff</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Cut <span class="jargon" data-term="MTTR">MTTR</span> by 45% — and the numbers follow</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-80 mt-40">
+    <div class="col" data-animate data-delay="3">
+      <div class="card-grid cols-2 tight">
+        <div class="card metric">
+          <p class="label">Before <span class="jargon" data-term="FMX">FMX</span></p>
+          <p class="value">99.95%</p>
+          <p class="text-sm text-dim">infrastructure uptime</p>
+        </div>
+        <div class="card metric emphasis">
+          <p class="label">With FMX</p>
+          <p class="value accent">99.995%</p>
+          <p class="text-sm text-dim">infrastructure uptime</p>
+        </div>
+        <div class="card metric">
+          <p class="label">Before FMX</p>
+          <p class="value">4.2 hrs</p>
+          <p class="text-sm text-dim"><span class="jargon" data-term="MTTR">MTTR</span> average</p>
+        </div>
+        <div class="card metric emphasis">
+          <p class="label">With FMX</p>
+          <p class="value accent">2.3 hrs</p>
+          <p class="text-sm text-dim"><span class="jargon" data-term="MTTR">MTTR</span> average</p>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-animate data-delay="4">
+      <div class="card emphasis">
+        <p class="label">500-rack data center</p>
+        <p class="big-number accent">RM 6.25M</p>
+        <p class="text-md text-dim mt-8">recovered per year</p>
+        <p class="text-sm text-dim mt-16">500 racks × RM 12,500 net gain = RM 6.25M. That is capacity for 40+ additional racks without building new halls.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 5. HOW FMX SOLVES IT — PLAN & MONITOR ===== -->
+<div class="slide bg-gray" data-title="Plan & Monitor" data-slug="plan-monitor">
+  <div class="pill" data-animate data-delay="0">How FMX Solves It</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Plan &amp; Monitor</h2>
+    <p class="subline text-gray-600">Full visibility into every asset, every hall, every maintenance window — before something breaks.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32">
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">Facility Profile</h3>
+      <ul>
+        <li>Centralised digital profile for data halls, floors, zones, and racks</li>
+        <li>Stores asset details for <span class="jargon" data-term="UPS">UPS</span>, generators, chillers, <span class="jargon" data-term="CRAC">CRAC</span>/<span class="jargon" data-term="CRAH">CRAH</span> units, <span class="jargon" data-term="PDU">PDU</span>s, and fire suppression</li>
+        <li>Maintains asset hierarchy and dependencies for faster troubleshooting</li>
+      </ul>
+      <template data-detail-content>
+        <h3>Facility Profile — Deep Dive</h3>
+        <p>Data centers have complex asset hierarchies: campus > building > hall > row > rack > device. FMX mirrors this structure digitally.</p>
+        <ul>
+          <li><strong>Capacity planning:</strong> Track power draw per rack vs. provisioned capacity</li>
+          <li><strong>Dependency mapping:</strong> Know which UPS feeds which PDU feeds which racks — critical for maintenance impact assessment</li>
+          <li><strong>Lifecycle tracking:</strong> Warranty expiry, firmware versions, last service date — all in one place</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">Facility Dashboard</h3>
+      <ul>
+        <li>Real-time view of system status, alarms, open work orders, and compliance alerts</li>
+        <li>Highlights critical infrastructure risks across power, cooling, fire, and security</li>
+        <li><span class="jargon" data-term="KPI">KPI</span> tracking for uptime, <span class="jargon" data-term="MTTR">MTTR</span>, and <span class="jargon" data-term="SLA">SLA</span> performance</li>
+      </ul>
+      <template data-detail-content>
+        <h3>Facility Dashboard — Deep Dive</h3>
+        <p>The NOC team needs a single pane of glass for facility health — not just IT metrics, but physical infrastructure status.</p>
+        <ul>
+          <li><strong>Alarm integration:</strong> Surface BMS alerts alongside maintenance status</li>
+          <li><strong>PUE trending:</strong> Track power usage effectiveness over time to catch degradation early</li>
+          <li><strong>SLA scoreboard:</strong> Real-time uptime percentage against contractual commitments</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">Work Order Calendar</h3>
+      <ul>
+        <li>Centralised maintenance calendar across all infrastructure systems</li>
+        <li>Schedules preventive maintenance during approved maintenance windows</li>
+        <li>Avoids conflicts with customer <span class="jargon" data-term="SLA">SLA</span>s and peak load periods</li>
+      </ul>
+      <template data-detail-content>
+        <h3>Work Order Calendar — Deep Dive</h3>
+        <p>In a zero-downtime environment, every maintenance window must be planned with precision.</p>
+        <ul>
+          <li><strong>Maintenance windows:</strong> Align PM schedules with agreed customer change windows</li>
+          <li><strong>Conflict detection:</strong> Flag when two dependent systems are scheduled for concurrent maintenance</li>
+          <li><strong>Capacity view:</strong> Ensure maintenance crew availability matches the schedule</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">Inspection</h3>
+      <ul>
+        <li>Digitised checklists for power, cooling, fire suppression, and security systems</li>
+        <li>Scheduled inspections with photographic evidence and timestamps</li>
+        <li>Auto-generated corrective actions when issues are flagged</li>
+      </ul>
+      <template data-detail-content>
+        <h3>Inspection — Deep Dive</h3>
+        <p>Manual walk-throughs miss things. Digital inspections create an audit trail and trigger immediate follow-up.</p>
+        <ul>
+          <li><strong>Thermal scanning:</strong> Document hot spots with photos during rack inspections</li>
+          <li><strong>Fire suppression:</strong> Verify gas cylinder pressure, nozzle alignment, detection panel status</li>
+          <li><strong>Compliance proof:</strong> Every inspection is timestamped and stored — ready for auditor review</li>
+        </ul>
+      </template>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 6. HOW FMX SOLVES IT — EXECUTE & TRACK ===== -->
+<div class="slide bg-navy" data-title="Execute & Track" data-slug="execute-track">
+  <div class="pill" data-animate data-delay="0">How FMX Solves It</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Execute &amp; Track</h2>
+    <p class="subline text-dim">From alarm to resolution — every incident tracked, every cost controlled, every shift covered.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3>Work Order</h3>
+      <ul>
+        <li>Automated <span class="jargon" data-term="WO">WO</span> creation from alarms, inspections, or manual requests</li>
+        <li>Priority-based classification for critical systems (P1/P2/P3)</li>
+        <li>Complete incident and maintenance history per asset</li>
+      </ul>
+      <template data-detail-content>
+        <h3>Work Order — Deep Dive</h3>
+        <p>Data center incidents need immediate, structured response — not ad-hoc WhatsApp messages.</p>
+        <ul>
+          <li><strong>Alarm-to-WO:</strong> BMS alarm triggers auto-created work order with asset context, reducing triage time</li>
+          <li><strong>Escalation:</strong> P1 incidents auto-escalate if not acknowledged within 15 minutes</li>
+          <li><strong>Root cause:</strong> Link related incidents to identify recurring failures (e.g., same UPS module failing quarterly)</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3>Service Team</h3>
+      <ul>
+        <li>Manages internal facility engineers, <span class="jargon" data-term="NOC">NOC</span> teams, and external service providers</li>
+        <li>Role-based task assignment and escalation paths</li>
+        <li>24/7 shift and on-call management</li>
+      </ul>
+      <template data-detail-content>
+        <h3>Service Team — Deep Dive</h3>
+        <p>Data centers run 24/7 with rotating shifts. FMX ensures the right person is always assigned.</p>
+        <ul>
+          <li><strong>Shift handover:</strong> Digital handover logs ensure nothing falls through shift changes</li>
+          <li><strong>Vendor dispatch:</strong> One-click dispatch to contracted OEM with automatic SLA timer start</li>
+          <li><strong>Skill matrix:</strong> Route electrical issues to electrical engineers, cooling issues to HVAC specialists</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail>
+      <h3>Maintenance Quotation</h3>
+      <ul>
+        <li>Digital quotation requests and approvals for repairs and upgrades</li>
+        <li>Vendor comparison and budget tracking per asset category</li>
+        <li>Linked to work orders and asset records for full cost visibility</li>
+      </ul>
+      <template data-detail-content>
+        <h3>Maintenance Quotation — Deep Dive</h3>
+        <p>Uncontrolled maintenance spend is a margin killer. FMX brings procurement discipline to facility operations.</p>
+        <ul>
+          <li><strong>Multi-vendor quotes:</strong> Compare pricing from 2–3 vendors before approving</li>
+          <li><strong>Budget vs. actual:</strong> Track spend per system (cooling, power, fire) against annual budget</li>
+          <li><strong>Approval workflow:</strong> Auto-route high-value repairs to VP Ops for sign-off</li>
+        </ul>
+      </template>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7. HOW FMX SOLVES IT — PROTECT & COMPLY ===== -->
+<div class="slide bg-gray" data-title="Protect & Comply" data-slug="protect-comply">
+  <div class="pill" data-animate data-delay="0">How FMX Solves It</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Protect &amp; Comply</h2>
+    <p class="subline text-gray-600">Vendor accountability, certification tracking, role-based security — audit-ready at all times.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">Facility Contract</h3>
+      <ul>
+        <li>Manages service contracts for <span class="jargon" data-term="OEM">OEM</span>s, AMC/CMC, and third-party vendors</li>
+        <li>Tracks <span class="jargon" data-term="SLA">SLA</span>s, response times, penalties, and renewal dates</li>
+        <li>Links contracts to specific assets and incidents</li>
+      </ul>
+      <template data-detail-content>
+        <h3>Facility Contract — Deep Dive</h3>
+        <p>A typical data center has 20–40 active vendor contracts. Without centralised tracking, SLA breaches go unpenalised and overlaps go unnoticed.</p>
+        <ul>
+          <li><strong>SLA attainment:</strong> Compare contracted vs. actual response and resolution times</li>
+          <li><strong>Penalty enforcement:</strong> Auto-calculate penalties when vendors miss SLA thresholds</li>
+          <li><strong>Renewal management:</strong> 90/60/30-day alerts before contract expiry — no more auto-renewals at unfavourable terms</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">Facility License</h3>
+      <ul>
+        <li>Tracks certifications: <span class="jargon" data-term="ISO 27001">ISO 27001</span>, <span class="jargon" data-term="SOC 2">SOC 2</span>, <span class="jargon" data-term="Uptime Institute">Uptime Institute</span>, fire &amp; electrical approvals</li>
+        <li>Automated renewal alerts and document storage</li>
+        <li>Audit-ready compliance reporting in one click</li>
+      </ul>
+      <template data-detail-content>
+        <h3>Facility License — Deep Dive</h3>
+        <p>Lapsed certifications can trigger customer exit clauses, insurance voidance, or regulatory action.</p>
+        <ul>
+          <li><strong>ISO 27001:</strong> Physical security controls, access logs, maintenance records — all required for annual surveillance audit</li>
+          <li><strong>SOC 2 Type II:</strong> Requires continuous evidence of controls operating effectively over time</li>
+          <li><strong>Uptime Institute:</strong> Tier III/IV certification demands documented concurrent maintainability proof</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">Insurance Administration</h3>
+      <ul>
+        <li>Tracks insurance policies for high-value infrastructure assets</li>
+        <li>Manages renewals, claims, and incident documentation</li>
+        <li>Links insurance records to assets and failure events</li>
+      </ul>
+      <template data-detail-content>
+        <h3>Insurance Administration — Deep Dive</h3>
+        <p>A single UPS or chiller replacement can cost RM 500K–2M. Proper insurance documentation ensures fast claim processing.</p>
+        <ul>
+          <li><strong>Asset-level policies:</strong> Know exactly which assets are covered and to what value</li>
+          <li><strong>Incident linking:</strong> When a failure occurs, all maintenance history is ready for the claims adjuster</li>
+          <li><strong>Gap detection:</strong> Flag high-value assets without adequate coverage</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">Workflow Setup</h3>
+      <ul>
+        <li>Custom workflows for critical incidents, planned maintenance, and audits</li>
+        <li>Automated escalation paths for P1/P2 incidents</li>
+        <li>Approval chains aligned with operational policies</li>
+      </ul>
+      <template data-detail-content>
+        <h3>Workflow Setup — Deep Dive</h3>
+        <p>Inconsistent incident handling is a certification risk. FMX enforces standardised processes.</p>
+        <ul>
+          <li><strong>P1 workflow:</strong> Alarm > auto-WO > assign on-call engineer > escalate at 15 min > notify VP Ops at 30 min</li>
+          <li><strong>Change management:</strong> Planned maintenance requires approval from operations + customer notification workflow</li>
+          <li><strong>Audit workflow:</strong> Pre-audit checklist > evidence collection > gap remediation > sign-off</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail>
+      <h3 class="text-navy">Access Security</h3>
+      <ul>
+        <li>Role-based access control for engineers, vendors, and auditors</li>
+        <li>Restricted access to sensitive facility data and configurations</li>
+        <li>Supports <span class="jargon" data-term="ISO 27001">ISO 27001</span> physical security compliance requirements</li>
+      </ul>
+      <template data-detail-content>
+        <h3>Access Security — Deep Dive</h3>
+        <p>Data center security extends beyond the physical door. FMX ensures only authorised personnel access sensitive operational data.</p>
+        <ul>
+          <li><strong>Vendor access:</strong> Contractors see only their assigned work orders and relevant asset information</li>
+          <li><strong>Audit trail:</strong> Every login, data access, and configuration change is logged</li>
+          <li><strong>Segregation of duties:</strong> Requestor, approver, and executor roles are enforced — no single-person overrides</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail>
+      <h3 class="text-navy">General Settings</h3>
+      <ul>
+        <li>Configurable rules, alerts, <span class="jargon" data-term="SLA">SLA</span> thresholds, and terminologies</li>
+        <li>Supports <span class="jargon" data-term="Tier III">Tier III</span> / <span class="jargon" data-term="Tier IV">Tier IV</span> operational standards</li>
+        <li>Multi-site configuration for campus or distributed deployments</li>
+      </ul>
+      <template data-detail-content>
+        <h3>General Settings — Deep Dive</h3>
+        <p>Every data center operates differently. FMX adapts to your operating model, not the other way around.</p>
+        <ul>
+          <li><strong>SLA templates:</strong> Define uptime tiers, response times, and penalty calculations per customer segment</li>
+          <li><strong>Terminology:</strong> "Data Hall" vs "Server Room," "Rack" vs "Cabinet" — configure to match your team's language</li>
+          <li><strong>Multi-site:</strong> Standardise processes across Cyberjaya, Johor, and Singapore facilities while allowing local variations</li>
+        </ul>
+      </template>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 8. KEY BENEFITS ===== -->
+<div class="slide bg-navy" data-title="Key Benefits" data-slug="benefits">
+  <div class="pill" data-animate data-delay="0">Key Benefits</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>What changes when FMX runs your facility operations</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent mb-12">Uptime</p>
+      <p class="text-md text-dim">Higher uptime and reliability through preventive scheduling and proactive issue detection</p>
+    </div>
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent mb-12">Speed</p>
+      <p class="text-md text-dim">Reduced <span class="jargon" data-term="MTTR">MTTR</span> and operational risk with automated work orders and structured escalation</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent mb-12">Compliance</p>
+      <p class="text-md text-dim"><span class="jargon" data-term="SLA">SLA</span> and certification assurance — <span class="jargon" data-term="ISO 27001">ISO 27001</span>, <span class="jargon" data-term="SOC 2">SOC 2</span>, and <span class="jargon" data-term="Uptime Institute">Uptime Institute</span> audit-ready</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent mb-12">Cost Control</p>
+      <p class="text-md text-dim">Improved vendor and maintenance cost management with contract tracking and quotation workflows</p>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="big-number sm accent mb-12">Audit-Ready</p>
+      <p class="text-md text-dim">Every inspection, work order, and incident documented — compliance proof generated in one click</p>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="big-number sm accent mb-12">Scalable</p>
+      <p class="text-md text-dim">Multi-site support for campus deployments, colocation expansions, and distributed edge facilities</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. WHY IFCA ===== -->
+<div class="slide bg-navy" data-title="Why IFCA FMX" data-slug="why-ifca">
+  <div class="pill" data-animate data-delay="0">Why IFCA</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Built for mission-critical infrastructure</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32" style="max-width:700px">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent">8 weeks</p>
+      <p class="text-md text-dim mt-8">Go-live — not 12 months like <span class="jargon" data-term="SAP">SAP</span> or <span class="jargon" data-term="Maximo">Maximo</span></p>
+    </div>
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent">&#8531; the cost</p>
+      <p class="text-md text-dim mt-8">Of enterprise FM platforms, with faster time to value</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent">90%+ adoption</p>
+      <p class="text-md text-dim mt-8">Staff using the system within 30 days — mobile-first design</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent">Multi-site</p>
+      <p class="text-md text-dim mt-8">Standardise operations across Cyberjaya, Johor, Singapore — or any campus</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 10. NEXT STEP ===== -->
+<div class="slide bg-gradient" data-title="Next Step" data-slug="next-step">
+  <div class="max-w">
+    <div class="pill" data-animate data-delay="0">Next Step</div>
+    <h2 data-animate data-delay="1">Start with a pilot.<br>One facility.<br>Eight weeks.</h2>
+    <div class="divider" data-animate data-delay="2"></div>
+    <div class="quote mt-40" data-animate data-delay="3">
+      "FMX typically improves data center infrastructure uptime to 99.995% and cuts <span class="jargon" data-term="MTTR">MTTR</span> by 45% — whether you run 50 racks or 5,000."
+    </div>
+    <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad · Kuala Lumpur · ifca.asia</p>
+  </div>
+</div>
+
+<script src="../../shared/js/deck-init.js"></script>
+<script>
+  DeckInit({
+    glossary: {
+      'PUE': { def: 'Power Usage Effectiveness — ratio of total facility energy to IT equipment energy. A PUE of 1.0 means all energy goes to computing; typical data centers range 1.3–1.8.', url: 'https://en.wikipedia.org/wiki/Power_usage_effectiveness' },
+      'MTTR': { def: 'Mean Time To Repair — the average time from incident detection to full resolution. Lower is better.', url: 'https://en.wikipedia.org/wiki/Mean_time_to_repair' },
+      'SLA': { def: 'Service Level Agreement — contractual commitment for uptime, response time, and service quality between operator and customer.', url: 'https://en.wikipedia.org/wiki/Service-level_agreement' },
+      'UPS': { def: 'Uninterruptible Power Supply — provides battery backup during power outages or fluctuations, bridging the gap until generators start.', url: 'https://en.wikipedia.org/wiki/Uninterruptible_power_supply' },
+      'CRAC': { def: 'Computer Room Air Conditioning — precision cooling units designed specifically for data center environments.', url: 'https://en.wikipedia.org/wiki/Computer_room_air_conditioning' },
+      'CRAH': { def: 'Computer Room Air Handler — similar to CRAC but uses chilled water instead of direct expansion refrigerant for cooling.', url: 'https://en.wikipedia.org/wiki/Computer_room_air_handler' },
+      'NOC': { def: 'Network Operations Centre — the command centre that monitors data center infrastructure and IT systems 24/7.', url: 'https://en.wikipedia.org/wiki/Network_operations_center' },
+      'PDU': { def: 'Power Distribution Unit — distributes electrical power to racks and individual servers within a data center.', url: 'https://en.wikipedia.org/wiki/Power_distribution_unit' },
+      'ISO 27001': { def: 'International standard for information security management systems (ISMS). Requires documented physical security controls and maintenance processes.', url: 'https://en.wikipedia.org/wiki/ISO/IEC_27001' },
+      'SOC 2': { def: 'Service Organization Control 2 — audit framework for service providers storing customer data. Type II requires evidence of controls operating effectively over time.', url: 'https://en.wikipedia.org/wiki/System_and_Organization_Controls' },
+      'Uptime Institute': { def: 'Global authority on data center tier certification (Tier I–IV). Tier III requires concurrent maintainability; Tier IV requires fault tolerance.', url: 'https://uptimeinstitute.com' },
+      'Tier III': { def: 'Uptime Institute Tier III — requires concurrently maintainable infrastructure: every component can be serviced without impacting IT load. 99.982% uptime.', url: 'https://uptimeinstitute.com/tiers' },
+      'Tier IV': { def: 'Uptime Institute Tier IV — fault tolerant infrastructure: any single failure does not impact IT load. 99.995% uptime.', url: 'https://uptimeinstitute.com/tiers' },
+      'WO': { def: 'Work Order — a formal instruction to perform maintenance, repair, or inspection on a specific asset.', url: 'https://en.wikipedia.org/wiki/Work_order' },
+      'KPI': { def: 'Key Performance Indicator — quantifiable measure used to evaluate operational success against targets.', url: 'https://en.wikipedia.org/wiki/Performance_indicator' },
+      'OEM': { def: 'Original Equipment Manufacturer — the company that made the equipment (e.g., Schneider, Vertiv, Emerson) and provides specialised maintenance services.', url: 'https://en.wikipedia.org/wiki/Original_equipment_manufacturer' },
+      'FMX': { def: 'IFCA Facility Management Experience — IFCA\'s cloud-native facility management platform for managing assets, maintenance, compliance, and vendor operations.', url: 'https://ifca.asia' },
+      'SAP': { def: 'SAP SE — German enterprise software company. Their facility management module is expensive and takes 12–18 months to deploy.', url: 'https://en.wikipedia.org/wiki/SAP' },
+      'Maximo': { def: 'IBM Maximo — enterprise asset management platform. Powerful but costly and slow to deploy.', url: 'https://en.wikipedia.org/wiki/IBM_Maximo' },
+    }
+  });
+</script>
+</body>
+</html>

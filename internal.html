@@ -269,6 +269,7 @@
       <button class="chip" data-filter="has-deck">Has deck</button>
       <button class="chip" data-filter="coming-soon">Coming soon</button>
       <button class="chip" data-filter="battlecard">Battle cards</button>
+      <button class="chip" data-filter="pmf">PMF Discovery</button>
     </div>
   </div>
 
@@ -288,12 +289,18 @@ const DECKS = [
   { product: 'fmx', tier: 'vincent-merged', name: 'Commercial Real Estate', desc: 'Grade A towers, REITs, malls, campuses, smart buildings. OpEx per sqft + NOI story.', href: 'fmx/commercial-real-estate/', vincent: true, vincentNote: 'Vincent\'s renamed segment — broader than Corporate Offices' },
   { product: 'fmx', tier: 'vincent-merged', name: 'Retail Chains & Warehouses', desc: 'Multi-outlet retail + distribution centres, dock equipment, cold storage. HQ visibility story.', href: 'fmx/retail-warehouses/', vincent: true, vincentNote: 'Vincent\'s merged segment — combines Retail Chains + Warehouses' },
   { product: 'fmx', tier: 'vincent-merged', name: 'Education & Government', desc: 'Schools, campuses, government buildings, GLCs. Budget predictability + audit readiness.', href: 'fmx/education-government/', vincent: true, vincentNote: 'Vincent\'s merged segment — combines Schools + Government' },
+  { product: 'fmx', tier: 'vincent-merged', name: 'Data Centers & IT Infrastructure', desc: 'Uptime SLA, PUE optimization, redundancy compliance, rack-level cost tracking.', href: 'fmx/data-centers/', vincent: true, vincentNote: 'Vincent\'s segment #2 — detailed module content from sales deck' },
+  { product: 'fmx', tier: 'vincent-merged', name: 'Manufacturing & Industrial Plants', desc: 'Factories, production lines, safety systems. OEE and DOSH compliance.', href: 'fmx/manufacturing/', vincent: true, vincentNote: 'Vincent\'s segment #3 — detailed module content from sales deck' },
+  { product: 'fmx', tier: 'vincent-merged', name: 'Energy & Utilities', desc: 'Power plants, oil & gas, pipelines. HSE compliance, SCADA-linked maintenance.', href: 'fmx/energy-utilities/', vincent: true, vincentNote: 'Vincent\'s segment #4 — detailed module content from sales deck' },
+  { product: 'fmx', tier: 'vincent-merged', name: 'Financial Services & Banking', desc: 'Bank branches, ATMs, data centers. BNM compliance, BCP readiness.', href: 'fmx/financial-services/', vincent: true, vincentNote: 'Vincent\'s segment #5 — detailed module content from sales deck' },
+  { product: 'fmx', tier: 'vincent-merged', name: 'Transportation & Logistics', desc: 'Airports, ports, rail, logistics hubs. ICAO/IATA compliance, terminal uptime.', href: 'fmx/transportation-logistics/', vincent: true, vincentNote: 'Vincent\'s segment #6 — detailed module content from sales deck' },
+  { product: 'fmx', tier: 'vincent-merged', name: 'Pharmaceutical & Biotechnology', desc: 'Labs, clean rooms, GMP compliance. FDA/NPRA validation and environmental controls.', href: 'fmx/pharma-biotech/', vincent: true, vincentNote: 'Vincent\'s segment #8 — detailed module content from sales deck' },
 
   // ── FMX Enterprise ──
   { product: 'fmx', tier: 'enterprise', name: 'Healthcare', desc: 'Hospitals, specialist centres, dialysis chains. EBITDA per bed story.', href: 'fmx/healthcare/', vincent: true, vincentNote: 'Original focused deck — hospitals only' },
   { product: 'fmx', tier: 'enterprise', name: 'Corporate Offices', desc: 'Grade A towers, REITs, developers. OpEx per sqft story.', href: 'fmx/corporate-offices/', vincent: true, vincentNote: 'Original focused deck — office towers only' },
-  { product: 'fmx', tier: 'enterprise', name: 'Industrial', desc: 'Factories, warehouses, logistics hubs. Uptime and compliance.', href: null, vincent: true, vincentNote: 'Vincent renamed to "Manufacturing & Industrial Plants"' },
-  { product: 'fmx', tier: 'enterprise', name: 'Data Centres', desc: 'Uptime SLA, PUE optimization, redundancy compliance.', href: null, vincent: true, vincentNote: 'Vincent renamed to "Data Centers & IT Infrastructure"' },
+  { product: 'fmx', tier: 'enterprise', name: 'Industrial', desc: 'Factories, warehouses, logistics hubs. Uptime and compliance.', href: 'fmx/manufacturing/', vincent: true, vincentNote: 'Vincent renamed to "Manufacturing & Industrial Plants"' },
+  { product: 'fmx', tier: 'enterprise', name: 'Data Centres', desc: 'Uptime SLA, PUE optimization, redundancy compliance.', href: 'fmx/data-centers/', vincent: true, vincentNote: 'Vincent renamed to "Data Centers & IT Infrastructure"' },
   { product: 'fmx', tier: 'enterprise', name: 'Retail Malls', desc: 'Tenant experience, CAM optimization, foot traffic impact.', href: null, vincent: false },
   { product: 'fmx', tier: 'enterprise', name: 'Hospitality', desc: 'Hotels, resorts, serviced apartments. RevPAR protection.', href: null, vincent: false },
 
@@ -306,10 +313,10 @@ const DECKS = [
   { product: 'fmx', tier: 'sme', name: 'Retail Chains', desc: 'Multi-outlet maintenance, response time, cost control.', href: 'fmx/retail/', vincent: true, vincentNote: 'Original focused deck — see also merged "Retail Chains & Warehouses"' },
 
   // ── FMX — Vincent's new segments (no deck yet) ──
-  { product: 'fmx', tier: 'vincent-new', name: 'Energy & Utilities', desc: 'Power plants, oil & gas, pipelines. Safety and regulatory compliance.', href: null, vincent: true, vincentNote: 'New segment from Vincent' },
-  { product: 'fmx', tier: 'vincent-new', name: 'Financial Services & Banking', desc: 'Data centers, ATMs, branch offices. Security and uninterrupted operations.', href: null, vincent: true, vincentNote: 'New segment from Vincent' },
-  { product: 'fmx', tier: 'vincent-new', name: 'Transportation & Logistics', desc: 'Airports, ports, rail. Safety scheduling, regulatory compliance.', href: null, vincent: true, vincentNote: 'New segment from Vincent' },
-  { product: 'fmx', tier: 'vincent-new', name: 'Pharmaceutical & Biotechnology', desc: 'Labs, clean rooms, environmental controls. FDA compliance and traceability.', href: null, vincent: true, vincentNote: 'New segment from Vincent' },
+  { product: 'fmx', tier: 'vincent-new', name: 'Energy & Utilities', desc: 'Power plants, oil & gas, pipelines. Safety and regulatory compliance.', href: 'fmx/energy-utilities/', vincent: true, vincentNote: 'New segment from Vincent' },
+  { product: 'fmx', tier: 'vincent-new', name: 'Financial Services & Banking', desc: 'Data centers, ATMs, branch offices. Security and uninterrupted operations.', href: 'fmx/financial-services/', vincent: true, vincentNote: 'New segment from Vincent' },
+  { product: 'fmx', tier: 'vincent-new', name: 'Transportation & Logistics', desc: 'Airports, ports, rail. Safety scheduling, regulatory compliance.', href: 'fmx/transportation-logistics/', vincent: true, vincentNote: 'New segment from Vincent' },
+  { product: 'fmx', tier: 'vincent-new', name: 'Pharmaceutical & Biotechnology', desc: 'Labs, clean rooms, environmental controls. FDA compliance and traceability.', href: 'fmx/pharma-biotech/', vincent: true, vincentNote: 'New segment from Vincent' },
   { product: 'fmx', tier: 'vincent-new', name: 'Government', desc: 'Public buildings, agencies, heritage infrastructure. Public accountability and audit trails.', href: null, vincent: true, vincentNote: 'Vincent grouped with Education as "Education & Government" — shown separately here' },
 
   // ── HotelX ──
@@ -373,6 +380,14 @@ const DECKS = [
   { product: 'rentx', tier: 'battlecard', name: 'Battle Cards', desc: 'vs ServeDeck, MaintainX, spreadsheets. Competitive positioning and objection handling.', href: 'rentx/battlecard/', battlecard: true },
   { product: 'contractx', tier: 'battlecard', name: 'Battle Cards', desc: 'vs Procore, Oracle Aconex, local tools. Competitive positioning and objection handling.', href: 'contractx/battlecard/', battlecard: true },
   { product: 'hrx', tier: 'battlecard', name: 'Battle Cards', desc: 'vs Orisoft, BOSS HRMS, spreadsheets. Competitive positioning and objection handling.', href: 'hrx/battlecard/', battlecard: true },
+
+  // ── PMF Discovery (Internal) ──
+  { product: 'fmx', tier: 'pmf', name: 'PMF Discovery', desc: 'Market sizing, JTBD, hypotheses, competitive landscape, experiments, 90-day action plan.', href: 'fmx/pmf-discovery/', pmf: true },
+  { product: 'hrx', tier: 'pmf', name: 'PMF Discovery', desc: 'Market sizing, JTBD, hypotheses, competitive landscape, experiments, 90-day action plan.', href: 'hrx/pmf-discovery/', pmf: true },
+  { product: 'hotelx', tier: 'pmf', name: 'PMF Discovery', desc: 'Market sizing, JTBD, hypotheses, competitive landscape, experiments, 90-day action plan.', href: 'hotelx/pmf-discovery/', pmf: true },
+  { product: 'rentx', tier: 'pmf', name: 'PMF Discovery', desc: 'Market sizing, JTBD, hypotheses, competitive landscape, experiments, 90-day action plan.', href: 'rentx/pmf-discovery/', pmf: true },
+  { product: 'propertyx', tier: 'pmf', name: 'PMF Discovery', desc: 'Market sizing, JTBD, hypotheses, competitive landscape, experiments, 90-day action plan.', href: 'propertyx/pmf-discovery/', pmf: true },
+  { product: 'contractx', tier: 'pmf', name: 'PMF Discovery', desc: 'Market sizing, JTBD, hypotheses, competitive landscape, experiments, 90-day action plan.', href: 'contractx/pmf-discovery/', pmf: true },
 ];
 
 const PRODUCT_LABELS = {
@@ -402,6 +417,7 @@ function buildBadges(d) {
   if (d.vincentNote && d.vincentNote.includes('grouped')) html += '<span class="badge vincent-merged" title="' + d.vincentNote + '">Merged</span>';
   if (d.vincentNote && d.vincentNote.includes('renamed')) html += '<span class="badge vincent-merged" title="' + d.vincentNote + '">Renamed</span>';
   if (d.battlecard) html += '<span class="badge internal">Internal</span>';
+  if (d.pmf) html += '<span class="badge internal">Internal</span>';
   return html ? '<div class="badges">' + html + '</div>' : '';
 }
 
@@ -419,6 +435,7 @@ function render() {
     if (activeFilter === 'has-deck' && !d.href) { d._visible = false; return; }
     if (activeFilter === 'coming-soon' && d.href) { d._visible = false; return; }
     if (activeFilter === 'battlecard' && !d.battlecard) { d._visible = false; return; }
+    if (activeFilter === 'pmf' && !d.pmf) { d._visible = false; return; }
     if (activeFilter.startsWith('product:') && d.product !== activeFilter.split(':')[1]) { d._visible = false; return; }
 
     d._visible = true;

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PropertyX PMF Discovery — IFCA</title>
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="PropertyX PMF Discovery — IFCA">
+<meta property="og:description" content="Product-Market Fit discovery framework for PropertyX — ASEAN property development platform.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ifca-software.github.io/decks/propertyx/pmf-discovery/">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EPropertyX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EPMF Discovery%3C/text%3E%3C/svg%3E">
+<meta name="deck-base" content="../../">
+<meta name="deck-sibling" data-href="../../fmx/pmf-discovery/" data-label="FMX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../hrx/pmf-discovery/" data-label="HRX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../hotelx/pmf-discovery/" data-label="HotelX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../rentx/pmf-discovery/" data-label="RentX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../contractx/pmf-discovery/" data-label="ContractX — PMF Discovery">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23f97316'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='18' fill='white'>P</text></svg>">
+<link rel="stylesheet" href="../../shared/css/deck.css">
+<script src="../../shared/js/auth-gate.js"></script>
+</head>
+<body>
+
+<!-- ===== 1. TITLE ===== -->
+<div class="slide bg-gradient active" data-title="PropertyX PMF Discovery" data-slug="title">
+  <div class="pill" data-animate data-delay="0">IFCA PropertyX</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h1>PMF Discovery</h1>
+    <p class="subtitle text-dim">Product-Market Fit Validation Framework</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div style="display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:5px 14px;border-radius:100px;background:rgba(239,68,68,0.2);color:#f87171;margin-top:16px" data-animate data-delay="3">INTERNAL ONLY</div>
+  <div class="card mt-24" style="max-width:640px" data-animate data-delay="4">
+    <p class="text-md"><em>Mid-market property developers in Malaysia need a cloud-based platform that connects all stakeholders (developers, agents, solicitors, bankers, buyers) while ensuring <span class="jargon" data-term="MFRS-15">MFRS-15</span> compliance and seamless handoff to rental/FM operations.</em></p>
+  </div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="5">George Yong &middot; January 2026</p>
+</div>
+
+<!-- ===== 2. THE OPPORTUNITY ===== -->
+<div class="slide bg-navy" data-title="The Opportunity" data-slug="opportunity">
+  <template data-sales-notes>
+    <h4>Priority Verticals</h4>
+    <table><thead><tr><th>Priority</th><th>Segment</th><th>24mo SOM</th><th>Motion</th></tr></thead><tbody>
+    <tr><td>#1</td><td>Tier 1 Developers</td><td>RM 5.5M</td><td>Direct — high ACV, strategic</td></tr>
+    <tr><td>#2</td><td>Tier 2 Developers</td><td>RM 4.0M</td><td>Direct + ContractX cross-sell</td></tr>
+    <tr><td>#3</td><td>Mixed-Use Developers</td><td>RM 3.0M</td><td>Direct — complex operations</td></tr>
+    <tr><td>#4</td><td>Township Developers</td><td>RM 2.0M</td><td>Direct — large-scale projects</td></tr>
+    </tbody></table>
+    <h4>Strategic Highlights</h4>
+    <ul>
+    <li><strong>MFRS-15 is the compliance driver</strong> — Mandatory accounting standard. Auto-calculation reduces risk. Audit-ready.</li>
+    <li><strong>Multi-stakeholder collaboration is unique</strong> — One platform for entire ecosystem. Reduces friction. Faster transactions.</li>
+    <li><strong>ContractX integration is natural</strong> — Development + construction = same project. Seamless data flow.</li>
+    <li><strong>China Jinmao testimonial</strong> — Global developer endorsement: "strong foundation for partnership"</li>
+    </ul>
+  </template>
+  <div class="pill" data-animate data-delay="0">Executive Summary</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>The Opportunity</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-4 mt-24" data-animate data-delay="3">
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="TAM">TAM</span></p>
+      <p class="big-number sm accent">RM 350M</p>
+      <p class="text-sm text-dim mt-4">USD 78M &middot; MY Property Dev Software</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SAM">SAM</span></p>
+      <p class="big-number sm accent">RM 180M</p>
+      <p class="text-sm text-dim mt-4">USD 40M &middot; Mid-Market Developers</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SOM">SOM</span></p>
+      <p class="big-number sm accent">RM 12–18M</p>
+      <p class="text-sm text-dim mt-4">ARR &middot; 24 months</p>
+    </div>
+    <div class="card">
+      <p class="label">Target Deals</p>
+      <p class="big-number sm accent">50–70</p>
+      <p class="text-sm text-dim mt-4">Developers in 24 months</p>
+    </div>
+  </div>
+  <div class="card-grid cols-2 mt-24" data-animate data-delay="4">
+    <div class="card" data-detail="Multi-stakeholder platform connects developers, agents, solicitors, bankers, and buyers. No competitor offers end-to-end ecosystem integration.">
+      <p class="label accent">Multi-stakeholder platform</p>
+      <p class="text-sm text-dim mt-4">Entire ecosystem connected &mdash; developers to buyers</p>
+    </div>
+    <div class="card" data-detail="Automated MFRS-15 revenue recognition — mandatory for developers. Reduces accounting time by 50%+. Audit-ready compliance.">
+      <p class="label accent">MFRS-15 compliance built-in</p>
+      <p class="text-sm text-dim mt-4">Automated revenue recognition &mdash; audit-ready</p>
+    </div>
+    <div class="card" data-detail="China Jinmao (major developer) testimonial: 'strong foundation for partnership'. Global developer endorsement.">
+      <p class="label accent">China Jinmao testimonial</p>
+      <p class="text-sm text-dim mt-4">Global developer endorsement &mdash; enterprise credibility</p>
+    </div>
+    <div class="card" data-detail="Seamless integration with ContractX (construction) and RentX (rental). Complete property lifecycle from development to FM.">
+      <p class="label accent">ContractX integration</p>
+      <p class="text-sm text-dim mt-4">Only platform connected to construction &amp; rental</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3. PLATFORM ADVANTAGE ===== -->
+<div class="slide bg-white" data-title="Platform Advantage" data-slug="platform">
+  <div class="pill" data-animate data-delay="0">IFCA Ecosystem</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Platform Advantage</h2>
+    <p class="subline text-gray-600">PropertyX is part of IFCA's X-Series — distribution and integration advantages that standalone property platforms cannot match.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="3">
+    <div class="card">
+      <p class="label">Founded</p>
+      <p class="big-number sm" style="color:var(--navy)">1991</p>
+      <p class="text-sm text-gray-600 mt-4">36+ years in property &amp; construction</p>
+    </div>
+    <div class="card">
+      <p class="label">Customers</p>
+      <p class="big-number sm" style="color:var(--navy)">1,300+</p>
+      <p class="text-sm text-gray-600 mt-4">Across X-Series products in ASEAN</p>
+    </div>
+    <div class="card">
+      <p class="label">Listed</p>
+      <p class="big-number sm" style="color:var(--navy)">Bursa</p>
+      <p class="text-sm text-gray-600 mt-4">MESDAQ since 2003</p>
+    </div>
+  </div>
+  <div class="table-wrap mt-24" data-animate data-delay="4">
+    <table>
+      <thead><tr><th>X-Series Product</th><th>PropertyX Cross-Sell Opportunity</th></tr></thead>
+      <tbody>
+        <tr data-detail="Same project, different phase. Construction phase managed by ContractX, sales/handover by PropertyX. Natural project lifecycle integration."><td><strong>ContractX</strong> <span class="text-sm text-gray-400">(Construction)</span></td><td>Primary — Same project, different phase</td></tr>
+        <tr data-detail="Post-completion rental/lease management. PropertyX handles development and sales, RentX takes over rental operations after handover."><td><strong>RentX</strong> <span class="text-sm text-gray-400">(Rental Management)</span></td><td>Primary — Post-completion rental/lease</td></tr>
+        <tr data-detail="Financial integration for MFRS-15 compliance, revenue recognition, and accounting workflows."><td><strong>AccountX</strong> <span class="text-sm text-gray-400">(Accounting)</span></td><td>Standard — Financial integration</td></tr>
+        <tr data-detail="Developer staff management including sales teams, project teams, and back-office staff."><td><strong>HRX</strong> <span class="text-sm text-gray-400">(Human Resources)</span></td><td>Adjacent — Developer staff management</td></tr>
+        <tr data-detail="Post-handover asset tracking and management for completed properties."><td><strong>AssetX</strong> <span class="text-sm text-gray-400">(Asset Management)</span></td><td>Adjacent — Post-handover asset tracking</td></tr>
+        <tr data-detail="Post-handover FM services for completed developments, especially mixed-use and commercial properties."><td><strong>FMX</strong> <span class="text-sm text-gray-400">(Facility Management)</span></td><td>Adjacent — Post-handover FM services</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 4. MARKET SIZING ===== -->
+<div class="slide bg-navy" data-title="Market Sizing" data-slug="market">
+  <template data-sales-notes>
+    <h4>Calculation Methodology</h4>
+    <p><strong>TAM:</strong> 1,500 active developers × RM 200K avg spend + ContractX/AccountX attach = RM 350M. Sources: NAPIC, REHDA, SSM.</p>
+    <p><strong>SAM:</strong> Mid-market developers (Tier 1–3) = 750 developers. Tier 1: 50 × RM 500K = RM 25M. Tier 2: 200 × RM 250K = RM 50M. Tier 3: 400 × RM 150K = RM 60M. Township/Mixed-Use: 100 × RM 400K = RM 40M. Total = RM 180M.</p>
+    <p><strong>SOM:</strong> 4–5 AEs × 6–10 deals/year × RM 250K avg deal. Cross-sell (50% win) + new logos (30% win) = 72 deals = RM 15.8M base case.</p>
+    <h4>Bottom-up Validation</h4>
+    <p>~1,500 active property developers in Malaysia. Midpoint RM 180M SAM vs top-down RM 350M TAM — medium-high confidence.</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">TAM / SAM / SOM</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Market Sizing</h2>
+    <p class="subline text-dim">Malaysia property development software — top-down with bottom-up validation</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="3">
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="TAM">TAM</span></p>
+      <p class="big-number accent">RM 350M</p>
+      <p class="text-sm text-dim mt-4">USD 78M &middot; MY Property Dev Software</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SAM">SAM</span></p>
+      <p class="big-number accent">RM 180M</p>
+      <p class="text-sm text-dim mt-4">USD 40M &middot; Mid-Market Developers</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SOM">SOM</span></p>
+      <p class="big-number accent">RM 12–18M</p>
+      <p class="text-sm text-dim mt-4">ARR &middot; 24 months</p>
+    </div>
+  </div>
+  <div class="table-wrap mt-24" data-animate data-delay="4">
+    <table>
+      <thead><tr><th>Scenario</th><th>ARR</th><th>Deals</th><th>Assumptions</th></tr></thead>
+      <tbody>
+        <tr><td>Conservative</td><td class="num">RM 12M</td><td class="num">55</td><td>Slower ramp</td></tr>
+        <tr><td><strong>Base</strong></td><td class="num"><strong>RM 15.8M</strong></td><td class="num"><strong>72</strong></td><td><strong>As projected</strong></td></tr>
+        <tr><td>Stretch</td><td class="num">RM 22M</td><td class="num">95</td><td>Faster hiring + partnerships</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 5. TARGET SEGMENTS ===== -->
+<div class="slide bg-white" data-title="Target Segments" data-slug="segments">
+  <div class="pill" data-animate data-delay="0">Priority Verticals</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Target Segments</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Priority</th><th>Segment</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr data-detail="500+ units/project. High ACV; multi-project deals; MFRS-15 critical. Listed developers with professional operations and compliance requirements. Target: Sunway, SP Setia, Mah Sing, Gamuda, IJM, Beverly."><td><strong>#1</strong></td><td><strong>Tier 1 Developers</strong></td><td>High ACV; multi-project deals; MFRS-15 critical</td></tr>
+        <tr data-detail="200–500 units/project. Growth segment; ContractX cross-sell. Regional developers with scaling challenges and compliance pressure."><td><strong>#2</strong></td><td><strong>Tier 2 Developers</strong></td><td>Growth segment; ContractX cross-sell</td></tr>
+        <tr data-detail="Retail + residential + commercial. Complex billing; integrated ops need. RentX integration for retail component. Multi-component complexity requires integrated solution."><td><strong>#3</strong></td><td><strong>Mixed-Use Developers</strong></td><td>Complex operations; RentX integration</td></tr>
+        <tr data-detail="1,000+ units. Long-term projects; phased launches. Large-scale planned communities requiring scalable, multi-phase support."><td><strong>#4</strong></td><td><strong>Township Developers</strong></td><td>Large-scale projects; phased launches</td></tr>
+        <tr data-detail="50–200 units. Growing segment; simpler needs. Warehouses, factories — less complex requirements but good volume play."><td>#5</td><td>Industrial Developers</td><td>Growing segment; simpler needs</td></tr>
+        <tr data-detail="50–100 units. Price-sensitive; volume play. Small, design-led projects with lower complexity but higher deal volume."><td>#6</td><td>Boutique Developers</td><td>Volume play; simpler requirements</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 6. JOBS-TO-BE-DONE ===== -->
+<div class="slide bg-navy" data-title="Jobs-to-be-Done" data-slug="jtbd">
+  <template data-sales-notes>
+    <h4>Interview Questions</h4>
+    <ul>
+    <li><strong>Current state:</strong> Walk me through how you manage a property sale today. What systems do you use?</li>
+    <li><strong>Pain points:</strong> What's the most frustrating part? When did a coordination failure last cause a delay?</li>
+    <li><strong>Desired state:</strong> If you had unlimited budget, what would your sales process look like?</li>
+    <li><strong>Decision process:</strong> Who would be involved in buying property development software? What would make your MD say yes?</li>
+    </ul>
+    <h4>Interview Data</h4>
+    <ul>
+    <li><strong>Beverly Group (MD):</strong> MFRS-15 was major pain; PropertyX solved it. Pain score: 9/10.</li>
+    <li><strong>Platinum Victory (CFO):</strong> Cloud-based ERP boosted productivity. Pain score: 8/10.</li>
+    <li><strong>China Jinmao (Digital Lead):</strong> "Strong foundation for partnership". Pain score: 9/10.</li>
+    </ul>
+  </template>
+  <div class="pill" data-animate data-delay="0"><span class="jargon" data-term="JTBD">JTBD</span> Framework</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Jobs-to-be-Done</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Functional Job</th><th>Pain Level</th><th>PropertyX Solution</th></tr></thead>
+      <tbody>
+        <tr data-detail="Current: Spreadsheets, legacy systems. PropertyX: Sales Admin Platform with booking management, progress tracking, and stakeholder portals."><td>Manage sales and bookings</td><td class="num">Very High</td><td>Sales Admin Platform</td></tr>
+        <tr data-detail="Current: Manual reports, site visits. PropertyX: Project monitoring dashboard with real-time progress tracking."><td>Track project progress</td><td class="num">High</td><td>Project Dashboard</td></tr>
+        <tr data-detail="Current: Email, WhatsApp, paper. PropertyX: Purchaser Portal for self-service communications, payment tracking, and document access."><td>Handle purchaser communications</td><td class="num">High</td><td>Purchaser Portal</td></tr>
+        <tr data-detail="Current: Email, manual tracking. PropertyX: Solicitor Portal for SPA processing, document management, and completion tracking."><td>Manage solicitor coordination</td><td class="num">High</td><td>Solicitor Portal</td></tr>
+        <tr data-detail="Current: Paper forms, bank visits. PropertyX: Loan Portal for application processing, bank integration, and approval tracking."><td>Process loan applications</td><td class="num">High</td><td>Loan Portal</td></tr>
+        <tr data-detail="Current: Spreadsheets, accountants. PropertyX: Automated MFRS-15 revenue recognition with audit-ready compliance reporting."><td>Calculate MFRS-15 revenue recognition</td><td class="num">Very High</td><td>Automated MFRS-15</td></tr>
+        <tr data-detail="Current: Manual tracking. PropertyX: Agent commission module with automatic calculation, payment tracking, and reporting."><td>Manage agent commissions</td><td class="num">Medium</td><td>Agent Commission Module</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="4">
+    <div class="card"><p class="label accent">In control</p><p class="text-sm text-dim mt-4">Know sales status, progress at all times</p></div>
+    <div class="card"><p class="label accent">Compliant</p><p class="text-sm text-dim mt-4">No MFRS-15 audit issues</p></div>
+    <div class="card"><p class="label accent">Modern</p><p class="text-sm text-dim mt-4">Digital-first buyer experience</p></div>
+  </div>
+</div>
+
+<!-- ===== 7. KEY HYPOTHESES ===== -->
+<div class="slide bg-white" data-title="Key Hypotheses" data-slug="hypotheses">
+  <template data-sales-notes>
+    <h4>Full Hypothesis Table</h4>
+    <p><strong>Problem:</strong> P1 MFRS-15 is major pain, P2 multi-stakeholder coordination causes delays, P3 purchasers expect digital self-service, P4 legacy systems cannot support modern sales, P5 construction-to-sales handoff friction.</p>
+    <p><strong>Solution:</strong> S1 MFRS-15 automation reduces accounting time 50%+, S2 Purchaser Portal increases satisfaction, S3 Solicitor Portal reduces SPA processing time, S4 ContractX integration differentiates, S5 real-time dashboard improves decisions.</p>
+    <p><strong>Business Model:</strong> B1 per-project/per-unit pricing acceptable, B2 RM 150K–500K/year, B3 ContractX cross-sell cuts CAC 40%+, B4 <16 week implementation, B5 115%+ NRR via module upsell.</p>
+    <h4>Pricing Benchmarks</h4>
+    <table><thead><tr><th>Competitor</th><th>Model</th><th>Cost</th></tr></thead><tbody>
+    <tr><td>SAP Real Estate</td><td>Enterprise</td><td>RM 500K–2M+</td></tr>
+    <tr><td>Oracle Aconex</td><td>Per project</td><td>USD 50K–200K</td></tr>
+    <tr><td>Procore</td><td>Per project</td><td>USD 30K–100K</td></tr>
+    <tr><td>Local tools</td><td>Flat fee</td><td>RM 50K–150K</td></tr>
+    </tbody></table>
+    <p><strong>PropertyX hypothesis:</strong> RM 150K–500K ARR per mid-market developer.</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">Hypotheses</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Key Hypotheses to Validate</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="3">
+    <div class="card" data-detail="P1: MFRS-15 compliance is major pain. P2: Multi-stakeholder coordination causes delays. P3: Purchasers expect digital self-service. P4: Legacy systems cannot support modern sales. P5: Construction-to-sales handoff is friction point.">
+      <p class="label" style="color:#f87171">Problem</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>MFRS-15 compliance is major pain</span></li>
+        <li><span class="bullet"></span><span>Multi-stakeholder coordination delays</span></li>
+        <li><span class="bullet"></span><span>Digital buyer experience expected</span></li>
+      </ul>
+    </div>
+    <div class="card" data-detail="S1: MFRS-15 automation reduces accounting time 50%+. S2: Purchaser Portal increases buyer satisfaction. S3: Solicitor Portal reduces SPA processing time. S4: ContractX integration is key differentiator.">
+      <p class="label" style="color:#34a853">Solution</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>50%+ faster MFRS-15 compliance</span></li>
+        <li><span class="bullet"></span><span>Purchaser Portal drives satisfaction</span></li>
+        <li><span class="bullet"></span><span>ContractX integration differentiates</span></li>
+      </ul>
+    </div>
+    <div class="card" data-detail="B1: Per-project or per-unit pricing acceptable. B2: RM 150K–500K/year. B3: ContractX cross-sell reduces CAC 40%+. B4: <16 weeks implementation. B5: 115%+ NRR via module upsell.">
+      <p class="label" style="color:var(--navy)">Business Model</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>RM 150K–500K ARR per customer</span></li>
+        <li><span class="bullet"></span><span>ContractX cuts CAC by 40%+</span></li>
+        <li><span class="bullet"></span><span>&lt;16 week implementation</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 8. COMPETITIVE LANDSCAPE ===== -->
+<div class="slide bg-navy" data-title="Competitive Landscape" data-slug="competitive">
+  <div class="pill" data-animate data-delay="0">Competition</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Competitive Landscape</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Category</th><th>Examples</th><th>PropertyX Win Theme</th></tr></thead>
+      <tbody>
+        <tr data-detail="SAP Real Estate, Oracle. Feature-rich and enterprise-grade, but RM 500K+ TCO, 12-24 month implementation, overkill for mid-market. PropertyX is purpose-built for property with 60% lower TCO."><td><strong>Global Enterprise ERP</strong></td><td>SAP, Oracle</td><td>Purpose-built, 60% lower TCO, 2x faster</td></tr>
+        <tr data-detail="Procore, Aconex. Strong construction management and modern, but limited property sales focus, no MFRS-15, no stakeholder portals. PropertyX offers complete lifecycle."><td><strong>Construction Platforms</strong></td><td>Procore, Aconex</td><td>Complete lifecycle — development + sales + handoff</td></tr>
+        <tr data-detail="Various local Malaysian tools. Local knowledge and relationships, but point solutions with limited R&D and no multi-stakeholder support. PropertyX is integrated platform."><td><strong>Regional Property Tools</strong></td><td>Various local</td><td>Multi-stakeholder platform, not point solution</td></tr>
+        <tr data-detail="In-house custom systems. Tailored to needs, but expensive to maintain, no updates, no support, no roadmap. PropertyX is cloud SaaS with continuous updates."><td><strong>Custom-Built</strong></td><td>In-house</td><td>Cloud-based, always updated, lower TCO</td></tr>
+        <tr data-detail="Excel, Access, paper. Free and familiar, but no automation, audit nightmare, no stakeholder collaboration. PropertyX provides MFRS-15 compliance and portals."><td><strong>Spreadsheets/Legacy</strong></td><td>Excel, Access</td><td>MFRS-15 compliance, stakeholder collaboration</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="4">
+    <div class="card">
+      <p class="label accent">vs Global Enterprise</p>
+      <p class="text-sm text-dim mt-4">Purpose-built for property; 60% lower cost</p>
+    </div>
+    <div class="card">
+      <p class="label accent">vs Construction</p>
+      <p class="text-sm text-dim mt-4">Complete lifecycle: development to rental</p>
+    </div>
+    <div class="card">
+      <p class="label accent">vs Manual</p>
+      <p class="text-sm text-dim mt-4">MFRS-15 compliance; stakeholder portals</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. FEATURE PARITY ===== -->
+<div class="slide bg-white" data-title="Feature Parity" data-slug="features">
+  <div class="pill" data-animate data-delay="0">Head-to-Head</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Feature Parity Analysis</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Feature</th><th>PropertyX</th><th>SAP</th><th>Procore</th><th>Local</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr data-detail="Table stakes for property development software. All competitors offer basic sales management."><td>Sales management</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">~</td><td class="num">&check;</td><td>Table stakes</td></tr>
+        <tr data-detail="Core functionality. All major competitors offer project tracking."><td>Project tracking</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">~</td><td>Table stakes</td></tr>
+        <tr data-detail="PropertyX's automated MFRS-15 revenue recognition — audit-ready compliance. SAP has support via customization; others minimal."><td>MFRS-15 compliance</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&mdash;</td><td class="num">~</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="PropertyX's Purchaser Portal for self-service. Unique to PropertyX — no competitor offers buyer portal."><td>Purchaser portal</td><td class="num">&check;</td><td class="num">~</td><td class="num">&mdash;</td><td class="num">~</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="PropertyX's Solicitor Portal for SPA processing. Unique to PropertyX in mid-market segment."><td>Solicitor portal</td><td class="num">&check;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="PropertyX's Loan Portal for bank integration. Unique to PropertyX — no competitor offers loan portal."><td>Loan portal</td><td class="num">&check;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="PropertyX's agent commission module. SAP has limited support; local tools have basic commission tracking."><td>Agent management</td><td class="num">&check;</td><td class="num">~</td><td class="num">&mdash;</td><td class="num">&check;</td><td>Differentiator</td></tr>
+        <tr data-detail="PropertyX integrates with ContractX for construction phase. Procore strong in construction; SAP has modules."><td>Construction integration</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&mdash;</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="PropertyX integrates with RentX for post-completion rental. Unique lifecycle handoff — no competitor offers this."><td>Rental handoff</td><td class="num">&check;</td><td class="num">~</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="PropertyX has built-in e-Invoice compliance. SAP has support; others limited."><td>E-Invoice</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">~</td><td class="num">~</td><td>Table stakes</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 10. PMF METRICS ===== -->
+<div class="slide bg-navy" data-title="PMF Metrics" data-slug="metrics">
+  <template data-sales-notes>
+    <h4>Anti-Signals</h4>
+    <table><thead><tr><th>Anti-Signal</th><th>Action</th></tr></thead><tbody>
+    <tr><td>High churn after go-live</td><td>Re-evaluate onboarding, data migration</td></tr>
+    <tr><td>Low portal adoption</td><td>Re-evaluate UX, training</td></tr>
+    <tr><td>MFRS-15 errors</td><td>Immediate fix + audit</td></tr>
+    <tr><td>Long implementation (&gt;20 weeks)</td><td>Standardise implementation playbook</td></tr>
+    <tr><td>Heavy discounting to win</td><td>Re-evaluate pricing or value prop</td></tr>
+    </tbody></table>
+  </template>
+  <div class="pill" data-animate data-delay="0">Metrics Dashboard</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>PMF Metrics</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-40 mt-24">
+    <div class="col" data-animate data-delay="3">
+      <div class="card">
+        <p class="label accent">Leading Indicators (Pre-PMF)</p>
+        <ul class="clean mt-8">
+          <li><span class="bullet"></span><span>Inbound interest: <strong>10+ leads/month</strong></span></li>
+          <li><span class="bullet"></span><span>Demo-to-trial: <strong>&gt;35%</strong></span></li>
+          <li><span class="bullet"></span><span>Time to first transaction: <strong>&lt;14 days</strong></span></li>
+          <li><span class="bullet"></span><span>Stakeholder portal adoption: <strong>&gt;60%</strong></span></li>
+          <li><span class="bullet"></span><span>ContractX attach rate: <strong>&gt;35%</strong></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col" data-animate data-delay="4">
+      <div class="card">
+        <p class="label accent">Lagging Indicators (PMF Achieved)</p>
+        <ul class="clean mt-8">
+          <li><span class="bullet"></span><span>Sean Ellis score: <strong>&gt;40%</strong> "very disappointed"</span></li>
+          <li><span class="bullet"></span><span><span class="jargon" data-term="NPS">NPS</span>: <strong>&gt;50</strong></span></li>
+          <li><span class="bullet"></span><span>Logo retention: <strong>&gt;95%</strong></span></li>
+          <li><span class="bullet"></span><span><span class="jargon" data-term="NRR">NRR</span>: <strong>&gt;115%</strong></span></li>
+          <li><span class="bullet"></span><span>Organic referrals: <strong>&gt;30%</strong></span></li>
+          <li><span class="bullet"></span><span>Sales cycle: <strong>&lt;150 days</strong></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 11. EXPERIMENTS & PILOTS ===== -->
+<div class="slide bg-white" data-title="Experiments & Pilots" data-slug="experiments">
+  <div class="pill" data-animate data-delay="0">Validation</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Experiments &amp; Pilots</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>ID</th><th>Experiment</th><th>Success Metric</th><th>Duration</th></tr></thead>
+      <tbody>
+        <tr data-detail="Hypothesis: MFRS-15 compliance deadline drives purchasing decisions. Launch campaign highlighting regulatory urgency and audit readiness."><td><strong>E1</strong></td><td>MFRS-15 urgency campaign</td><td>Higher win rate with MFRS-15 messaging</td><td>60 days</td></tr>
+        <tr data-detail="Hypothesis: Same-project handoff from construction to sales is natural upsell. Target ContractX customers for PropertyX attach."><td><strong>E2</strong></td><td>ContractX cross-sell campaign</td><td>10 attached deals in 90 days</td><td>90 days</td></tr>
+        <tr data-detail="Hypothesis: Digital buyer experience differentiates PropertyX. Lead demos with Purchaser Portal showcase."><td><strong>E3</strong></td><td>Purchaser Portal showcase</td><td>Higher demo-to-pilot rate</td><td>60 days</td></tr>
+        <tr data-detail="Hypothesis: Banks and solicitors as referral sources. Activate partner channel for deal sourcing."><td><strong>E4</strong></td><td>Partner channel activation</td><td>5 partner-sourced deals in 90 days</td><td>90 days</td></tr>
+        <tr data-detail="Hypothesis: Replicate Malaysia success in China. Target China Jinmao reference for expansion pilot."><td><strong>E5</strong></td><td>China expansion pilot</td><td>2 China deals in 120 days</td><td>120 days</td></tr>
+        <tr data-detail="Hypothesis: Current pricing (RM 250K avg) is acceptable. Test pricing stability with no change in win rate."><td><strong>E6</strong></td><td>Price sensitivity test</td><td>No change in win rate at RM 250K</td><td>60 days</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="4">
+    <div class="card"><p class="label" style="color:var(--navy)">Go-live</p><p class="text-sm text-gray-600 mt-4">Week 12–16</p></div>
+    <div class="card"><p class="label" style="color:var(--navy)">First Value</p><p class="text-sm text-gray-600 mt-4">First project sales processed</p></div>
+    <div class="card"><p class="label" style="color:var(--navy)">Adoption</p><p class="text-sm text-gray-600 mt-4">80%+ sales team active; portals in use</p></div>
+  </div>
+</div>
+
+<!-- ===== 12. 90-DAY ACTION PLAN ===== -->
+<div class="slide bg-navy" data-title="90-Day Action Plan" data-slug="action-plan">
+  <div class="pill" data-animate data-delay="0">Execution</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>90-Day Action Plan</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24">
+    <div class="card" data-animate data-delay="3" data-detail="Identify 20 interview contacts (Week 1). Develop interview guide (Week 1). Conduct 10 discovery interviews (Week 2–4). Sean Ellis survey (Week 2). Analyse ContractX customer base for cross-sell (Week 2). Competitor analysis (Week 2).">
+      <p class="label accent">Days 1–30</p>
+      <p class="text-md mt-8">Customer Discovery</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>10 customer interviews</span></li>
+        <li><span class="bullet"></span><span>Sean Ellis survey</span></li>
+        <li><span class="bullet"></span><span>ContractX cross-sell analysis</span></li>
+        <li><span class="bullet"></span><span>Competitor pricing research</span></li>
+      </ul>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail="Complete 20+ interviews (Week 6). Synthesise insights (Week 7). Validate/refine hypotheses (Week 7). Launch 2 pilot experiments (Week 8). Identify 5 pilot customer candidates (Week 8).">
+      <p class="label accent">Days 30–60</p>
+      <p class="text-md mt-8">Hypothesis Validation</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>20+ interviews completed</span></li>
+        <li><span class="bullet"></span><span>Insight synthesis</span></li>
+        <li><span class="bullet"></span><span>2 pilot experiments launched</span></li>
+        <li><span class="bullet"></span><span>5 pilot candidates identified</span></li>
+      </ul>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail="Onboard pilot customers (Week 10–12). Collect pilot feedback (Week 12). Measure PMF leading indicators (Week 12). Iterate product based on feedback (Week 12+). Document case study (Week 12+).">
+      <p class="label accent">Days 60–90</p>
+      <p class="text-md mt-8">Pilot Execution</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Pilot customers onboarded</span></li>
+        <li><span class="bullet"></span><span>Feedback collected</span></li>
+        <li><span class="bullet"></span><span>Leading indicators measured</span></li>
+        <li><span class="bullet"></span><span>Product iterated</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 13. SEGMENT DEEP DIVES ===== -->
+<div class="slide bg-white" data-title="Segment Deep Dives" data-slug="deep-dives">
+  <div class="pill" data-animate data-delay="0">PMF by Segment</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Segment Deep Dives</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Segment</th><th>Severity</th><th>WTP</th><th>Competition</th><th>PropertyX Fit</th></tr></thead>
+      <tbody>
+        <tr data-detail="Very high — MFRS-15 critical, multi-project complexity. Very high WTP — budget available, compliance non-negotiable. Medium competition — SAP too heavy, local tools too basic. Target: Sunway, SP Setia, Mah Sing, Gamuda, IJM, Beverly."><td><strong>Tier 1 Developers</strong></td><td class="num">Very High</td><td class="num">Very High</td><td class="num">Medium</td><td class="num"><strong>Very High</strong></td></tr>
+        <tr data-detail="High severity — scaling challenges, compliance pressure. Medium-high WTP — growth segment, investing in systems. Low-medium competition — underserved by enterprise tools. Right-sized solution for scalable deals."><td><strong>Tier 2 Developers</strong></td><td class="num">High</td><td class="num">Med-High</td><td class="num">Low-Med</td><td class="num"><strong>High</strong></td></tr>
+        <tr data-detail="Very high severity — multi-component complexity. High WTP — understand need for integrated solution. Low competition — most tools can't handle mixed-use. RentX integration for retail component makes PropertyX unique."><td><strong>Mixed-Use Developers</strong></td><td class="num">Very High</td><td class="num">High</td><td class="num">Low</td><td class="num"><strong>Very High</strong></td></tr>
+        <tr data-detail="High severity — long-term projects, phased launches. High WTP — large projects, budget available. Medium competition — some on custom solutions. Scalable, multi-phase support for strategic long-term relationships."><td><strong>Township Developers</strong></td><td class="num">High</td><td class="num">High</td><td class="num">Medium</td><td class="num"><strong>High</strong></td></tr>
+        <tr data-detail="Medium severity — less complex than residential. Medium WTP — growing segment but simpler needs. Low-medium competition — underserved. Good volume play for ContractX cross-sell."><td><strong>Industrial Developers</strong></td><td class="num">Medium</td><td class="num">Medium</td><td class="num">Low-Med</td><td class="num">Med-High</td></tr>
+        <tr data-detail="Medium severity — smaller scale, simpler needs. Low-medium WTP — price-sensitive. Low competition — often on spreadsheets. Volume play with lower deal sizes but higher quantity."><td><strong>Boutique Developers</strong></td><td class="num">Medium</td><td class="num">Low-Med</td><td class="num">Low</td><td class="num">Medium</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 14. DECISION FRAMEWORK ===== -->
+<div class="slide bg-gradient" data-title="Decision Framework" data-slug="decision">
+  <div class="pill" data-animate data-delay="0">PMF Decision</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Decision Framework</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-24" style="max-width:800px">
+    <div class="card" data-animate data-delay="3" data-detail="Quantitative: Sean Ellis >40%, logo retention >95%, NRR >115%, sales cycle <150 days, CAC payback <18 months. Qualitative: unprompted referrals, leads increasing MoM, feature requests cluster around extensions not gaps, MFRS-15 zero issues. Team: repeatable sales motion, predictable implementation <16 weeks, decreasing support load per customer.">
+      <p class="label accent">Declare PMF when&hellip;</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Sean Ellis &gt;40% "very disappointed"</span></li>
+        <li><span class="bullet"></span><span>Logo retention &gt;95%</span></li>
+        <li><span class="bullet"></span><span>NRR &gt;115%</span></li>
+        <li><span class="bullet"></span><span>Sales cycle &lt;150 days</span></li>
+        <li><span class="bullet"></span><span>MFRS-15 zero issues</span></li>
+        <li><span class="bullet"></span><span>Repeatable sales motion</span></li>
+      </ul>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail="Wrong segment: Focus on Tier 1 vs Tier 2 (or vice versa). Product gaps: Prioritise feature development based on feedback. Pricing mismatch: Adjust pricing model or packaging. GTM issue: Change sales motion, messaging, or channel. MFRS-15 issues: Immediate fix — compliance is non-negotiable.">
+      <p class="label" style="color:#f87171">If PMF not achieved&hellip;</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Wrong segment &rarr; pivot focus</span></li>
+        <li><span class="bullet"></span><span>Product gaps &rarr; prioritise features</span></li>
+        <li><span class="bullet"></span><span>Pricing mismatch &rarr; adjust model</span></li>
+        <li><span class="bullet"></span><span>GTM issue &rarr; change sales motion</span></li>
+        <li><span class="bullet"></span><span>MFRS-15 issues &rarr; immediate fix</span></li>
+      </ul>
+    </div>
+  </div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="5">IFCA MSC Berhad &middot; Kuala Lumpur &middot; ifca.asia</p>
+</div>
+
+<script src="../../shared/js/deck-init.js"></script>
+<script>
+  DeckInit({
+    glossary: {
+      'MFRS-15': { def: 'Malaysian Financial Reporting Standard 15 — revenue recognition standard for property developers.' },
+      'REHDA': { def: 'Real Estate and Housing Developers\' Association Malaysia.' },
+      'SPA': { def: 'Sale and Purchase Agreement — legal contract for property sale.' },
+      'ASEAN': { def: 'Association of Southeast Asian Nations — 10-country regional bloc.' },
+      'TAM': { def: 'Total Addressable Market — total market demand if we had 100% share.' },
+      'SAM': { def: 'Serviceable Addressable Market — portion of TAM we can realistically serve.' },
+      'SOM': { def: 'Serviceable Obtainable Market — portion of SAM we can capture.' },
+      'JTBD': { def: 'Jobs-to-be-Done — framework for understanding customer needs.' },
+      'NPS': { def: 'Net Promoter Score — customer loyalty metric (-100 to +100).' },
+      'NRR': { def: 'Net Revenue Retention — revenue kept from existing customers (>100% = growth).' },
+      'ARR': { def: 'Annual Recurring Revenue — yearly subscription revenue from customers.' },
+      'ACV': { def: 'Annual Contract Value — total yearly value of a customer contract.' },
+      'CAC': { def: 'Customer Acquisition Cost — total cost to acquire one customer.' },
+      'ICP': { def: 'Ideal Customer Profile — characteristics of best-fit customers.' },
+      'TCO': { def: 'Total Cost of Ownership — full cost including implementation, training, support.' },
+      'PMF': { def: 'Product-Market Fit — when product satisfies strong market demand.' },
+      'SaaS': { def: 'Software as a Service — cloud-based subscription software model.' },
+    }
+  });
+</script>
+</body>
+</html>

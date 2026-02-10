@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FMX for Transportation &amp; Logistics — IFCA</title>
+<meta property="og:title" content="FMX for Transportation &amp; Logistics — IFCA">
+<meta property="og:description" content="How airports, ports, rail operators, and logistics hubs maintain uptime, ensure safety compliance, and control contractor costs across mission-critical infrastructure.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EFMX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3ETransport%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
+<meta property="og:url" content="https://ifca-software.github.io/decks/fmx/transportation-logistics/">
+<meta name="deck-base" content="../../">
+<meta name="deck-sibling" data-href="../healthcare-hospitals/" data-label="FMX — Healthcare &amp; Hospitals">
+<meta name="deck-sibling" data-href="../corporate-offices/" data-label="FMX — Corporate Offices">
+<meta name="deck-sibling" data-href="../commercial-real-estate/" data-label="FMX — Commercial Real Estate">
+<meta name="deck-sibling" data-href="../education-government/" data-label="FMX — Education &amp; Government">
+<meta name="deck-sibling" data-href="../retail/" data-label="FMX — Retail Chains">
+<meta name="deck-sibling" data-href="../warehouses/" data-label="FMX — Warehouses">
+<meta name="deck-sibling" data-href="../fnb/" data-label="FMX — F&amp;B Outlets">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232d4a6f'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='18' fill='%23f97316'>F</text></svg>">
+<link rel="stylesheet" href="../../shared/css/deck.css">
+<meta name="robots" content="noindex, nofollow">
+<script src="../../shared/js/auth-gate.js"></script>
+</head>
+<body>
+
+<!-- ===== 1. TITLE ===== -->
+<div class="slide bg-gradient active" data-title="FMX for Transportation &amp; Logistics" data-slug="title">
+  <div class="pill" data-animate data-delay="0">IFCA FMX</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h1>FMX for<br>Transportation &amp; Logistics</h1>
+    <p class="subtitle text-dim">Mission-critical infrastructure demands zero tolerance for equipment failure, safety lapses, and service disruption across airports, ports, rail networks, and logistics hubs</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad · February 2026 · Confidential</p>
+</div>
+
+<!-- ===== 2. THE REALITY ===== -->
+<div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with disruption cost. Airport and port executives live in a world where a single equipment failure cascades into flight delays, vessel queuing, and cargo backlogs. Say: "When a baggage handling system goes down for 2 hours, that's not a maintenance ticket — that's 40 delayed flights and a front-page headline." For rail: "A signalling fault at KL Sentral during rush hour affects 200,000 commuters."</p>
+    <h4>Key personas</h4>
+    <p>COO and VP Operations care about uptime KPIs. CFO cares about contractor spend (often 40-60% of total FM budget in transport). Head of Safety/Compliance cares about ICAO/IATA/SPAD audit readiness. All three need to be in the room for this deck to land.</p>
+    <h4>Context</h4>
+    <p>MAHB operates 39 airports. Major ports include Port Klang (Westports, Northport), PTP, Penang Port. KTMB and Prasarana run rail. Each has massive, dispersed infrastructure with heavy contractor reliance. Most still coordinate maintenance via WhatsApp and Excel.</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">The Reality</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Airports invest billions in terminals.<br>Maintenance still runs on WhatsApp.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-32">
+    <div class="col">
+      <ul class="clean">
+        <li data-animate data-delay="3"><span class="bullet"></span><span>Transportation facilities are <strong class="accent">mission-critical infrastructure</strong> — any failure cascades into service disruptions, safety incidents, and cargo delays</span></li>
+        <li data-animate data-delay="4"><span class="bullet"></span><span>A single baggage system outage or berth crane fault costs <strong class="accent">RM 50K–200K per hour</strong> in operational impact</span></li>
+        <li data-animate data-delay="5"><span class="bullet"></span><span>Massive, complex environments — terminals, container yards, rail tracks, depots, control centres — with <strong class="accent">thousands of assets</strong> across dispersed zones</span></li>
+        <li data-animate data-delay="6"><span class="bullet"></span><span>Heavy reliance on third-party contractors — 40–60% of FM spend — with <strong class="accent">no centralised SLA tracking</strong></span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="card" data-animate data-delay="7">
+        <p class="label">The gap</p>
+        <p class="text-lg text-dim">Operations technology is world-class.<br>Facility management is <strong class="accent">still manual</strong> — from international airports to regional rail depots.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3. THE HIDDEN COST ===== -->
+<div class="slide bg-white" data-title="The Hidden Cost" data-slug="cost">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the RM 2.4M/terminal/year number — it's the anchor. If they push back, walk through the 4 line items. Each one is defensible independently. For ports, substitute "terminal" with "berth cluster" and adjust slightly upward (RM 2.8M). For rail, use "per station/depot" at RM 800K-1.2M.</p>
+    <h4>Objection handling</h4>
+    <p>"Our maintenance costs aren't that high" — Ask them to check last year's emergency repair invoices and contractor overtime charges. Most transport operators don't track this centrally across all terminals/stations, so the number always surprises.</p>
+    <p>"We already have a CMMS" — Most transport operators have basic ticketing. Ask: "Can you show me your contractor SLA compliance rate across all terminals right now? Or your runway/berth inspection history for the last ICAO audit?"</p>
+    <h4>Mental model</h4>
+    <p>A major airport terminal processes RM 500M+ in economic activity per year. RM 2.4M in preventable FM waste is 0.5% — would any operator accept that without investigating?</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">The Hidden Cost</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">RM 2.4M per terminal leaks out every year</h2>
+    <p class="subline text-gray-600">Airport, port, and rail operators think in <strong>uptime and throughput</strong>. Hidden FM waste quietly erodes margins across every facility.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Where it leaks</th><th>What fixes it</th><th style="text-align:right">Cost / terminal / year</th></tr></thead>
+      <tbody>
+        <tr data-detail><td>Service disruption</td><td>Preventive scheduling, critical asset alerts, live dashboards</td><td class="num"><strong>RM 840,000</strong></td>
+          <template data-detail-content>
+            <h3>Service Disruption — RM 840,000/terminal/year</h3>
+            <p>Based on average 120 hours of unplanned asset downtime per terminal per year across ASEAN airports, against RM 7,000/hour in cascading operational impact.</p>
+            <ul>
+              <li><strong>Critical assets:</strong> Baggage handling systems, aerobridges, escalators/travelators, HVAC in terminal halls, runway lighting</li>
+              <li><strong>Cascade effect:</strong> A 2-hour baggage system outage delays 30-40 flights, triggers compensation claims, and damages airline relationships</li>
+              <li><strong>FMX impact:</strong> Predictive scheduling and live asset dashboards cut unplanned downtime by 40-55%</li>
+            </ul>
+            <p>For ports: crane and berth equipment downtime at RM 10,000-15,000/hour. For rail: signalling and platform system faults causing service delays.</p>
+          </template>
+        </tr>
+        <tr data-detail><td>Safety incidents</td><td>Digital inspections, photo evidence, audit trails</td><td class="num"><strong>RM 600,000</strong></td>
+          <template data-detail-content>
+            <h3>Safety Incidents — RM 600,000/terminal/year</h3>
+            <p>Risk-adjusted cost of safety-related maintenance failures. Includes near-misses, minor incidents, and annualised probability of major events.</p>
+            <ul>
+              <li><strong>Airport:</strong> Runway FOD incidents, fire suppression system failures, airside lighting faults — each can trigger ICAO/DCA investigations</li>
+              <li><strong>Port:</strong> Container handling incidents, hazardous cargo zone failures, crane safety system faults</li>
+              <li><strong>Rail:</strong> Platform edge safety, escalator incidents, tunnel ventilation failures</li>
+              <li><strong>FMX impact:</strong> Digital inspection checklists with photo evidence and sign-off ensure 100% safety compliance documentation</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Contractor waste</td><td>Centralised contracts, <span class="jargon" data-term="SLA">SLA</span> monitoring, quote comparison</td><td class="num"><strong>RM 720,000</strong></td>
+          <template data-detail-content>
+            <h3>Contractor Waste — RM 720,000/terminal/year</h3>
+            <p>Transport operators typically manage 30-80 active maintenance contracts per terminal. Without centralised tracking, overlap and SLA non-compliance are invisible.</p>
+            <ul>
+              <li><strong>Overlap:</strong> Multiple contractors covering similar equipment categories across terminal zones</li>
+              <li><strong>SLA drift:</strong> Contractors routinely miss response-time targets — 4-hour SLA becomes 8-hour reality without tracking</li>
+              <li><strong>Emergency premiums:</strong> After-hours callouts carry 50-100% surcharge — often triggered by missed preventive maintenance</li>
+              <li><strong>FMX feature:</strong> Contract dashboard tracks actual vs. contracted response times, flags overlap, compares contractor quotes before approval</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Compliance gaps</td><td>License tracking, automated renewal alerts, workflow <span class="jargon" data-term="SOP">SOPs</span></td><td class="num"><strong>RM 240,000</strong></td>
+          <template data-detail-content>
+            <h3>Compliance Gaps — RM 240,000/terminal/year</h3>
+            <p>Annualised risk-adjusted cost of regulatory non-compliance across <span class="jargon" data-term="ICAO">ICAO</span>, <span class="jargon" data-term="IATA">IATA</span>, <span class="jargon" data-term="SPAD">SPAD</span>, and <span class="jargon" data-term="MPA">MPA</span> requirements.</p>
+            <ul>
+              <li><strong>Airports:</strong> ICAO Annex 14 aerodrome certification, DCA safety audits, BOMBA fire safety — non-compliance can ground operations</li>
+              <li><strong>Ports:</strong> MPA operating licences, DOSH safety certifications, environmental permits for hazardous cargo areas</li>
+              <li><strong>Rail:</strong> SPAD operating licence conditions, tunnel safety certifications, escalator/lift JKKP inspections</li>
+              <li><strong>FMX feature:</strong> Automated licence renewal reminders, inspection scheduling with digital sign-off, complete audit trail for every maintenance action</li>
+            </ul>
+          </template>
+        </tr>
+        <tr><td style="font-weight:700;color:var(--navy)">Total recoverable</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 2.4M</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 4. THE PAYOFF ===== -->
+<div class="slide bg-navy" data-title="The Payoff" data-slug="payoff">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>This is the "aha moment." The RM 7.2M number for a 3-terminal airport lands hard — especially for MAHB, which operates 39 airports. Frame FMX as an operational resilience tool, not just a cost-reduction tool. Transport operators care about uptime as a KPI — tie savings to their operational scorecard.</p>
+    <h4>Who cares most</h4>
+    <p>COO and VP Operations care about the uptime improvement. CFO cares about the RM number. Head of Safety cares about incident response and compliance. All three see different value in the same platform.</p>
+    <h4>Scaling the number</h4>
+    <p>For MAHB (39 airports, multiple terminals at KLIA): multiply by total terminals. For Westports (multiple berth clusters): use RM 2.8M per cluster. For KTMB/Prasarana (network of stations): use RM 800K-1.2M per major station, RM 200K-400K per minor station. The fleet-wide number always impresses.</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">The Payoff</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Recover that — and infrastructure runs the way it should</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-80 mt-40">
+    <div class="col" data-animate data-delay="3">
+      <div class="card-grid cols-2 tight">
+        <div class="card metric">
+          <p class="label">Before <span class="jargon" data-term="FMX">FMX</span></p>
+          <p class="value">~92%</p>
+          <p class="text-sm text-dim">infrastructure uptime</p>
+        </div>
+        <div class="card metric emphasis">
+          <p class="label">With FMX</p>
+          <p class="value accent">99%+</p>
+          <p class="text-sm text-dim">infrastructure uptime</p>
+        </div>
+      </div>
+      <div class="card-grid cols-2 tight mt-16">
+        <div class="card metric">
+          <p class="label">Before FMX</p>
+          <p class="value">~6 hrs</p>
+          <p class="text-sm text-dim">avg incident response</p>
+        </div>
+        <div class="card metric emphasis">
+          <p class="label">With FMX</p>
+          <p class="value accent">&lt;2 hrs</p>
+          <p class="text-sm text-dim">avg incident response</p>
+        </div>
+      </div>
+    </div>
+    <div class="col" data-animate data-delay="4">
+      <div class="card emphasis">
+        <p class="label">Mid-size airport (3 terminals)</p>
+        <p class="big-number accent">RM 7.2M</p>
+        <p class="text-md text-dim mt-8">recoverable FM waste per year</p>
+        <p class="text-sm text-dim mt-16">Port operators and rail networks see proportional savings scaled by facility count.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 5. HOW FMX SOLVES IT — PLAN & MONITOR ===== -->
+<div class="slide bg-gray" data-title="Plan &amp; Monitor" data-slug="plan-monitor">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through each module and tie it to a specific transport pain point. Facility Profile: "Do you have a single view of all assets across all terminals right now — runways, aerobridges, baggage systems, HVAC — with zone classifications and risk ratings?" Dashboard: "When the baggage system at Terminal 2 goes down, how quickly does your COO know?" Calendar: "How do you coordinate maintenance windows with flight schedules to avoid peak-hour disruptions?" Inspection: "Can you show your ICAO auditor a complete runway inspection history with photos and sign-off?"</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">How FMX Solves It</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Plan &amp; Monitor</h2>
+    <p class="subline text-gray-600">Complete infrastructure visibility — from terminals and container yards to rail tracks and control centres</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32">
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">Facility Profile</h3>
+      <p class="text-md text-gray-600">Centralise terminals, ports, stations, depots, and yards. Map critical assets — runways, berths, tracks, signalling, baggage systems — with zone and risk classification.</p>
+      <template data-detail-content>
+        <h3>Facility Profile</h3>
+        <p>Transportation facilities span large, complex environments with diverse assets and zones. Without a structured asset register, operators lack visibility into what they have, where it is, and what condition it's in.</p>
+        <ul>
+          <li><strong>Asset scope:</strong> Runways, taxiways, aerobridges, baggage carousels, berth cranes, rail tracks, signalling equipment, escalators, HVAC systems, fire suppression</li>
+          <li><strong>Zone mapping:</strong> Airside vs. landside, restricted areas, hazardous cargo zones, passenger zones, maintenance depots</li>
+          <li><strong>Risk classification:</strong> Critical (runway lighting, signalling), high (HVAC, escalators), standard (lighting, furniture)</li>
+        </ul>
+        <p>Operators gain a complete, structured view of infrastructure and asset locations across all facilities.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">Facility Dashboard</h3>
+      <p class="text-md text-gray-600">Live work order and incident status, critical asset alerts, and compliance indicators across all facilities in real time.</p>
+      <template data-detail-content>
+        <h3>Facility Dashboard</h3>
+        <p>Operations teams lack real-time visibility across dispersed facilities. When a critical asset fails, discovery is often delayed — by the time it reaches the control room, the cascade has already started.</p>
+        <ul>
+          <li><strong>Live status:</strong> Open work orders, overdue tasks, and active incidents across all terminals/stations</li>
+          <li><strong>Critical alerts:</strong> Immediate notifications for safety-critical asset failures (runway systems, fire suppression, signalling)</li>
+          <li><strong>Compliance dashboard:</strong> Licence expiry, inspection schedules, and audit readiness at a glance</li>
+        </ul>
+        <p>Faster response to issues and reduced service disruption.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">Work Order Calendar</h3>
+      <p class="text-md text-gray-600">Visual planning across shifts and locations. Coordinate maintenance windows with flight, vessel, and rail schedules to avoid peak-hour disruptions.</p>
+      <template data-detail-content>
+        <h3>Work Order Calendar</h3>
+        <p>Maintenance activities that conflict with peak operations cause service disruptions. An aerobridge repair during morning departures or a berth crane service during vessel loading creates compounding delays.</p>
+        <ul>
+          <li><strong>Shift coordination:</strong> Assign tasks to night shifts or off-peak windows automatically</li>
+          <li><strong>Operations integration:</strong> Plan maintenance around flight schedules, vessel berthing windows, and train timetables</li>
+          <li><strong>Visual planning:</strong> Drag-and-drop calendar view across all facilities and teams</li>
+        </ul>
+        <p>Minimises service disruption while maintaining asset health.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">Inspection</h3>
+      <p class="text-md text-gray-600">Digital runway, terminal, berth, and track inspections with safety and environmental checks, photo evidence, and digital sign-off.</p>
+      <template data-detail-content>
+        <h3>Inspection</h3>
+        <p>Manual safety inspections are time-consuming and hard to audit. Transport regulators demand documented proof — paper logs get lost, photos are scattered across phones, and sign-offs are inconsistent.</p>
+        <ul>
+          <li><strong>Airport:</strong> Runway surface inspections (FOD checks), aerobridge safety, terminal fire system tests</li>
+          <li><strong>Port:</strong> Crane load tests, berth structural inspections, hazardous cargo zone checks</li>
+          <li><strong>Rail:</strong> Track geometry inspections, platform edge safety, tunnel ventilation tests</li>
+          <li><strong>Evidence:</strong> Photo capture, GPS tagging, timestamped digital sign-off — all linked to the asset record</li>
+        </ul>
+        <p>Enhances public safety and simplifies regulatory audits.</p>
+      </template>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 6. HOW FMX SOLVES IT — EXECUTE & TRACK ===== -->
+<div class="slide bg-navy" data-title="Execute &amp; Track" data-slug="execute-track">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Focus on the operational reality: "Your technicians are spread across 3 terminals and 2 maintenance depots. When a baggage carousel jams at Terminal 1, how does the nearest qualified tech get the job?" Work Order: mobile reporting from the field. Service Team: multi-shift team coordination with role and location awareness. Maintenance Quotation: "When you need emergency crane repair, are you comparing 3 quotes or just calling whoever picks up?"</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">How FMX Solves It</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Execute &amp; Track</h2>
+    <p class="subline text-dim">Mobile field operations, multi-shift coordination, and full cost visibility</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3>Work Order</h3>
+      <p class="text-md text-dim">Digitised preventive and corrective maintenance with incident tracking, asset history, and mobile reporting from the field.</p>
+      <template data-detail-content>
+        <h3>Work Order</h3>
+        <p>Maintenance issues are reported inconsistently across dispersed facilities, leading to delays, duplicate work, and repeat failures. Critical information is lost between shifts.</p>
+        <ul>
+          <li><strong>Preventive:</strong> Automated PM schedules for every asset — from baggage systems to runway lighting</li>
+          <li><strong>Corrective:</strong> Instant mobile reporting with photo evidence, priority classification, and auto-routing to the nearest qualified technician</li>
+          <li><strong>Asset history:</strong> Complete maintenance log per asset — tracks failure patterns, cost trends, and remaining useful life</li>
+        </ul>
+        <p>Improves asset reliability and reduces unexpected downtime.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3>Service Team</h3>
+      <p class="text-md text-dim">Task assignment by role, skill, and location across multi-shift teams. Performance and response tracking per technician.</p>
+      <template data-detail-content>
+        <h3>Service Team</h3>
+        <p>Large transport facilities run 24/7 with multi-shift maintenance teams. Coordination gaps between shifts cause missed handovers, duplicated work, and accountability blind spots.</p>
+        <ul>
+          <li><strong>Skill matching:</strong> Route tasks to technicians with the right certifications (electrical, HVAC, crane, track)</li>
+          <li><strong>Location awareness:</strong> Assign the nearest available technician across terminal zones or station clusters</li>
+          <li><strong>Shift handover:</strong> Digital handover notes ensure no open task falls through the cracks</li>
+          <li><strong>Performance tracking:</strong> Response time, completion rate, and quality metrics per team member</li>
+        </ul>
+        <p>Improves workforce efficiency and service reliability.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail>
+      <h3>Maintenance Quotation</h3>
+      <p class="text-md text-dim">Compare contractor quotes, enforce approval workflows before execution, and track maintenance costs against budget.</p>
+      <template data-detail-content>
+        <h3>Maintenance Quotation</h3>
+        <p>Emergency repairs and outsourced work in transport facilities are expensive — a single crane repair can cost RM 50,000+. Without structured quotation management, operators overpay consistently.</p>
+        <ul>
+          <li><strong>Quote comparison:</strong> Side-by-side contractor quotes with scope, timeline, and cost breakdown</li>
+          <li><strong>Approval workflows:</strong> Configurable thresholds — e.g., &gt;RM 10,000 requires VP approval, &gt;RM 50,000 requires COO sign-off</li>
+          <li><strong>Cost tracking:</strong> Actual spend vs. budget by asset category, facility, and contractor</li>
+        </ul>
+        <p>Improves cost control and budget transparency.</p>
+      </template>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7. HOW FMX SOLVES IT — PROTECT & COMPLY ===== -->
+<div class="slide bg-gray" data-title="Protect &amp; Comply" data-slug="protect-comply">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>This is the compliance and governance slide — critical for transport. Lead with: "When ICAO audits your aerodrome certification, can you produce a complete maintenance and inspection history for every runway, taxiway, and safety system? When SPAD reviews your operating licence, is every escalator inspection, tunnel ventilation test, and platform safety check documented?" Most operators scramble to compile this manually. FMX generates it automatically.</p>
+    <h4>Access Security angle</h4>
+    <p>Transport facilities have restricted zones (airside, control towers, engine rooms, signal rooms). FMX role-based access ensures only authorised personnel can view or modify maintenance records for sensitive areas — critical for security-sensitive environments.</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">How FMX Solves It</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Protect &amp; Comply</h2>
+    <p class="subline text-gray-600">Contractor <span class="jargon" data-term="SLA">SLA</span> enforcement, regulatory compliance, and operational governance across every facility</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">Facility Contract</h3>
+      <p class="text-md text-gray-600">Centralised service and maintenance contracts with <span class="jargon" data-term="SLA">SLA</span> monitoring and expiry alerts. Ensure contractors meet response-time and safety requirements.</p>
+      <template data-detail-content>
+        <h3>Facility Contract</h3>
+        <p>Transport operators rely heavily on third-party contractors — often 30-80 active contracts per terminal for specialised equipment (HVAC, electrical, lifts, fire systems, runway, cranes).</p>
+        <ul>
+          <li><strong>SLA tracking:</strong> Monitor actual response times vs. contracted targets per contractor, per facility</li>
+          <li><strong>Expiry alerts:</strong> 90/60/30-day renewal reminders ensure no contract lapses without review</li>
+          <li><strong>Performance scoring:</strong> Rate contractors on response time, work quality, and safety compliance</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">Facility License</h3>
+      <p class="text-md text-gray-600">Track operating permits, safety certifications, and environmental approvals. Automated renewal reminders keep facilities compliant and audit-ready.</p>
+      <template data-detail-content>
+        <h3>Facility License</h3>
+        <p>Transport facilities face strict regulatory requirements from multiple authorities — <span class="jargon" data-term="ICAO">ICAO</span>, <span class="jargon" data-term="DCA">DCA</span>, <span class="jargon" data-term="SPAD">SPAD</span>, <span class="jargon" data-term="MPA">MPA</span>, BOMBA, DOSH, JKKP, DOE. A single lapsed permit can trigger operational restrictions or fines.</p>
+        <ul>
+          <li><strong>Airports:</strong> Aerodrome certificates, fire safety permits, airside vehicle licences, environmental permits</li>
+          <li><strong>Ports:</strong> Port operating licences, hazardous goods permits, crane safety certificates</li>
+          <li><strong>Rail:</strong> Operating licences, tunnel safety certificates, escalator/lift permits</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">Insurance Administration</h3>
+      <p class="text-md text-gray-600">Centralise asset insurance coverage. Link incident documentation to claim tracking for faster processing and reduced financial exposure.</p>
+      <template data-detail-content>
+        <h3>Insurance Administration</h3>
+        <p>Accidents, equipment damage, and service delays create complex insurance claims across transport facilities. Without centralised documentation, claims take months and payouts shrink.</p>
+        <ul>
+          <li><strong>Coverage tracking:</strong> Insurance policies linked to specific assets and facilities</li>
+          <li><strong>Incident linkage:</strong> Work orders and inspection reports automatically attached to claims</li>
+          <li><strong>Claim status:</strong> Track claim progress from incident to payout</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">Workflow Setup</h3>
+      <p class="text-md text-gray-600">Standard operating procedures and escalation paths for critical incidents. Ensure consistent, compliant operations across all terminals and stations.</p>
+      <template data-detail-content>
+        <h3>Workflow Setup</h3>
+        <p>Inconsistent processes across terminals, ports, and stations increase operational risk. What works at Terminal 1 may not be followed at Terminal 2.</p>
+        <ul>
+          <li><strong>SOPs:</strong> Standardised maintenance procedures enforced system-wide</li>
+          <li><strong>Escalation:</strong> Auto-escalate critical incidents — e.g., runway lighting fault escalates to Ops Director within 15 minutes</li>
+          <li><strong>Multi-region:</strong> Configure different workflows for different regulatory jurisdictions</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail>
+      <h3 class="text-navy">Access Security</h3>
+      <p class="text-md text-gray-600">Role-based permissions and activity logging. Protect critical infrastructure data and maintain audit trails for restricted-area maintenance.</p>
+      <template data-detail-content>
+        <h3>Access Security</h3>
+        <p>Transport facilities have security-sensitive zones — airside areas, control towers, signal rooms, engine rooms. Maintenance records for these areas need access controls.</p>
+        <ul>
+          <li><strong>Role-based access:</strong> Technicians see only their assigned zones; managers see cross-facility dashboards</li>
+          <li><strong>Activity logging:</strong> Every action — view, edit, approve — is timestamped and attributed</li>
+          <li><strong>Audit trail:</strong> Complete record for security reviews and regulatory inspections</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail>
+      <h3 class="text-navy">General Settings</h3>
+      <p class="text-md text-gray-600">Multi-site and multi-operator support. Configure policies and compliance alignment for airports, ports, and rail networks under one platform.</p>
+      <template data-detail-content>
+        <h3>General Settings</h3>
+        <p>Operators manage multiple facilities under different authorities and regulations — <span class="jargon" data-term="MAHB">MAHB</span> runs 39 airports, <span class="jargon" data-term="KTMB">KTMB</span> operates stations across Peninsular Malaysia.</p>
+        <ul>
+          <li><strong>Multi-site:</strong> One platform for all facilities with facility-level configuration</li>
+          <li><strong>Multi-operator:</strong> Support for concessionaire structures (e.g., terminal operators within an airport authority)</li>
+          <li><strong>Policy alignment:</strong> Map compliance requirements to specific facility types and regulatory jurisdictions</li>
+        </ul>
+        <p>One scalable platform for airports, ports, and rail networks.</p>
+      </template>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 8. KEY BENEFITS ===== -->
+<div class="slide bg-navy" data-title="Key Benefits" data-slug="benefits">
+  <div class="pill" data-animate data-delay="0">Key Benefits</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>What changes after FMX goes live</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent mb-12">Higher uptime</p>
+      <p class="text-md text-dim">Critical infrastructure stays operational. Fewer unplanned outages across terminals, berths, stations, and depots.</p>
+    </div>
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent mb-12">Public safety</p>
+      <p class="text-md text-dim">100% documented inspections, digital safety checklists, and regulatory audit trails for <span class="jargon" data-term="ICAO">ICAO</span>, <span class="jargon" data-term="SPAD">SPAD</span>, and <span class="jargon" data-term="MPA">MPA</span>.</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent mb-12">Faster response</p>
+      <p class="text-md text-dim">Incident response time cut from ~6 hours to under 2 hours with mobile dispatch and auto-escalation.</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent mb-12">Contractor control</p>
+      <p class="text-md text-dim">Track every <span class="jargon" data-term="SLA">SLA</span>, compare quotes, and eliminate overlap across 30-80 active contracts per facility.</p>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="big-number sm accent mb-12">Consistent ops</p>
+      <p class="text-md text-dim">Standard <span class="jargon" data-term="SOP">SOPs</span> and workflows enforced across all facilities — from flagship terminals to regional stations.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. WHY IFCA ===== -->
+<div class="slide bg-navy" data-title="Why IFCA FMX" data-slug="why-ifca">
+  <div class="pill" data-animate data-delay="0">Why IFCA</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Built for critical transport infrastructure</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32" style="max-width:700px">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent">8 weeks</p>
+      <p class="text-md text-dim mt-8">Go-live — not 12 months like <span class="jargon" data-term="SAP">SAP</span> or <span class="jargon" data-term="Maximo">Maximo</span></p>
+    </div>
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent">&#8531; the cost</p>
+      <p class="text-md text-dim mt-8">Of enterprise FM platforms, with faster time to value</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent">90%+ adoption</p>
+      <p class="text-md text-dim mt-8">Field teams using the system within 30 days — mobile-first design</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent">Multi-site</p>
+      <p class="text-md text-dim mt-8">One platform for 39 airports, a port network, or a national rail system</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 10. NEXT STEP ===== -->
+<div class="slide bg-gradient" data-title="Next Step" data-slug="next-step">
+  <div class="max-w">
+    <div class="pill" data-animate data-delay="0">Next Step</div>
+    <h2 data-animate data-delay="1">Start with a pilot.<br>One terminal.<br>Eight weeks.</h2>
+    <div class="divider" data-animate data-delay="2"></div>
+    <div class="quote mt-40" data-animate data-delay="3">
+      "One terminal, 8 weeks — infrastructure uptime above 99%, incident response under 2 hours, and every contractor <span class="jargon" data-term="SLA">SLA</span> tracked automatically."
+    </div>
+    <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad · Kuala Lumpur · ifca.asia</p>
+  </div>
+</div>
+
+<script src="../../shared/js/deck-init.js"></script>
+<script>
+  DeckInit({
+    glossary: {
+      'MAHB': { def: 'Malaysia Airports Holdings Berhad — operates 39 airports in Malaysia including KLIA.', url: 'https://en.wikipedia.org/wiki/Malaysia_Airports' },
+      'KLIA': { def: 'Kuala Lumpur International Airport — Malaysia\'s primary international airport, handling 60M+ passengers annually.', url: 'https://en.wikipedia.org/wiki/Kuala_Lumpur_International_Airport' },
+      'MPA': { def: 'Marine Port Authority / Marine Department Malaysia — regulates port operations and maritime safety.', url: 'https://www.marine.gov.my' },
+      'KTMB': { def: 'Keretapi Tanah Melayu Berhad — Malaysia\'s national railway operator.', url: 'https://en.wikipedia.org/wiki/Keretapi_Tanah_Melayu' },
+      'SPAD': { def: 'Suruhanjaya Pengangkutan Awam Darat — Land Public Transport Agency, regulates rail and bus operators.', url: 'https://en.wikipedia.org/wiki/Land_Public_Transport_Agency' },
+      'ICAO': { def: 'International Civil Aviation Organization — sets global standards for aviation safety, including aerodrome maintenance.', url: 'https://en.wikipedia.org/wiki/International_Civil_Aviation_Organization' },
+      'IATA': { def: 'International Air Transport Association — the trade association for airlines, sets operational standards.', url: 'https://en.wikipedia.org/wiki/International_Air_Transport_Association' },
+      'DCA': { def: 'Department of Civil Aviation Malaysia — regulates and oversees civil aviation safety and licensing.', url: 'https://www.dca.gov.my' },
+      'SLA': { def: 'Service-Level Agreement — a contract defining response time and resolution targets for contractors.', url: 'https://en.wikipedia.org/wiki/Service-level_agreement' },
+      'SOP': { def: 'Standard Operating Procedure — documented process that ensures consistent execution of maintenance tasks.', url: 'https://en.wikipedia.org/wiki/Standard_operating_procedure' },
+      'MTTR': { def: 'Mean Time To Repair — average time from fault detection to resolution. Key KPI for transport infrastructure.', url: 'https://en.wikipedia.org/wiki/Mean_time_to_repair' },
+      'FOD': { def: 'Foreign Object Debris — objects on runways that can damage aircraft. Regular FOD inspections are mandatory.', url: 'https://en.wikipedia.org/wiki/Foreign_object_damage' },
+      'SAP': { def: 'SAP SE — German enterprise software company. Their facility management module is expensive and complex.', url: 'https://en.wikipedia.org/wiki/SAP' },
+      'Maximo': { def: 'IBM Maximo — enterprise asset management platform. Powerful but costly and slow to deploy.', url: 'https://en.wikipedia.org/wiki/IBM_Maximo' },
+      'PM': { def: 'Preventive Maintenance — scheduled upkeep to prevent breakdowns before they happen.', url: 'https://en.wikipedia.org/wiki/Preventive_maintenance' },
+    }
+  });
+</script>
+</body>
+</html>

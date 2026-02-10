@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FMX PMF Discovery — IFCA</title>
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="FMX PMF Discovery — IFCA">
+<meta property="og:description" content="Product-Market Fit discovery framework for FMX — ASEAN facility management platform.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ifca-software.github.io/decks/fmx/pmf-discovery/">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EFMX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EPMF Discovery%3C/text%3E%3C/svg%3E">
+<meta name="deck-base" content="../../">
+<meta name="deck-sibling" data-href="../../hrx/pmf-discovery/" data-label="HRX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../hotelx/pmf-discovery/" data-label="HotelX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../rentx/pmf-discovery/" data-label="RentX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../propertyx/pmf-discovery/" data-label="PropertyX — PMF Discovery">
+<meta name="deck-sibling" data-href="../../contractx/pmf-discovery/" data-label="ContractX — PMF Discovery">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232d4a6f'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='18' fill='%23f97316'>F</text></svg>">
+<link rel="stylesheet" href="../../shared/css/deck.css">
+<script src="../../shared/js/auth-gate.js"></script>
+</head>
+<body>
+
+<!-- ===== 1. TITLE ===== -->
+<div class="slide bg-gradient active" data-title="FMX PMF Discovery" data-slug="title">
+  <div class="pill" data-animate data-delay="0">IFCA FMX</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h1>PMF Discovery</h1>
+    <p class="subtitle text-dim">Product-Market Fit Validation Framework</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div style="display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:5px 14px;border-radius:100px;background:rgba(239,68,68,0.2);color:#f87171;margin-top:16px" data-animate data-delay="3">INTERNAL ONLY</div>
+  <div class="card mt-24" style="max-width:640px" data-animate data-delay="4">
+    <p class="text-md"><em>Mid-market property operators in <span class="jargon" data-term="ASEAN">ASEAN</span> need an integrated, locally-compliant <span class="jargon" data-term="FM">FM</span> platform that connects maintenance workflows to billing and accounting.</em></p>
+  </div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="5">George Yong &middot; January 2026</p>
+</div>
+
+<!-- ===== 2. THE OPPORTUNITY ===== -->
+<div class="slide bg-navy" data-title="The Opportunity" data-slug="opportunity">
+  <template data-sales-notes>
+    <h4>Priority Verticals</h4>
+    <table><thead><tr><th>Priority</th><th>Segment</th><th>24mo SOM</th><th>Motion</th></tr></thead><tbody>
+    <tr><td>#1</td><td>Data Centres</td><td>RM 960K</td><td>Direct — highest WTP, SLA-driven</td></tr>
+    <tr><td>#2</td><td>Hotels</td><td>RM 1.28M</td><td>HotelX cross-sell</td></tr>
+    <tr><td>#3</td><td>Commercial</td><td>RM 1.92M</td><td>RentX cross-sell — FM upsell</td></tr>
+    </tbody></table>
+    <h4>Strategic Highlights</h4>
+    <ul>
+    <li><strong>Cross-sell is the unfair advantage</strong> — 60% of ARR from existing RentX/HotelX customers. Lower CAC, 40% win rate vs 25% for new logos.</li>
+    <li><strong>Data centres are the beachhead</strong> — Highest WTP (downtime >> software cost). 70% pipeline growth in MY.</li>
+    <li><strong>High vacancy = FM differentiation</strong> — 28.3% office vacancy in KV. Landlords compete on service quality.</li>
+    </ul>
+  </template>
+  <div class="pill" data-animate data-delay="0">Executive Summary</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>The Opportunity</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-4 mt-24" data-animate data-delay="3">
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="TAM">TAM</span></p>
+      <p class="big-number sm accent">USD 1.2B</p>
+      <p class="text-sm text-dim mt-4">RM 5.4B &middot; ASEAN FM Software</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SAM">SAM</span></p>
+      <p class="big-number sm accent">USD 180M</p>
+      <p class="text-sm text-dim mt-4">RM 810M &middot; MY+SG Mid-Market</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SOM">SOM</span></p>
+      <p class="big-number sm accent">USD 0.8–1.8M</p>
+      <p class="text-sm text-dim mt-4">RM 3.5–8M ARR &middot; 24 months</p>
+    </div>
+    <div class="card">
+      <p class="label">Target Deals</p>
+      <p class="big-number sm accent">65</p>
+      <p class="text-sm text-dim mt-4">Customers in 24 months</p>
+    </div>
+  </div>
+  <div class="card-grid cols-2 mt-24" data-animate data-delay="4">
+    <div class="card" data-detail="IFCA's existing X-Series customers (RentX, HotelX) — 60% of SOM from cross-sell. Lower CAC and 40% win rate vs 25% for new logos.">
+      <p class="label accent">1,300+ warm leads</p>
+      <p class="text-sm text-dim mt-4">X-Series customers &mdash; 60% of SOM from cross-sell</p>
+    </div>
+    <div class="card" data-detail="Only FM platform connected to property revenue (RentX), hotel guests (HotelX), and finance (AccountX). Standalone CAFM vendors cannot match this.">
+      <p class="label accent">Integration moat</p>
+      <p class="text-sm text-dim mt-4">Only FM platform connected to revenue, guests, and finance</p>
+    </div>
+    <div class="card" data-detail="APAC FM software growing at 26.3% CAGR vs 10.7% global. Malaysia DC pipeline grew 70% in H1 2025.">
+      <p class="label accent">Fastest-growing region</p>
+      <p class="text-sm text-dim mt-4">APAC FM software at 26.3% CAGR</p>
+    </div>
+    <div class="card" data-detail="Deep property/hospitality knowledge since 1991; not generic CMMS. Understands local compliance (LHDN, BOMBA, DOSH, JKKP).">
+      <p class="label accent">36 years domain expertise</p>
+      <p class="text-sm text-dim mt-4">Property &amp; hospitality knowledge since 1991</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3. PLATFORM ADVANTAGE ===== -->
+<div class="slide bg-white" data-title="Platform Advantage" data-slug="platform">
+  <div class="pill" data-animate data-delay="0">IFCA Ecosystem</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Platform Advantage</h2>
+    <p class="subline text-gray-600">FMX is part of IFCA's X-Series — distribution and integration advantages that standalone CAFM vendors cannot match.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="3">
+    <div class="card">
+      <p class="label">Founded</p>
+      <p class="big-number sm" style="color:var(--navy)">1991</p>
+      <p class="text-sm text-gray-600 mt-4">36+ years in property &amp; construction</p>
+    </div>
+    <div class="card">
+      <p class="label">Customers</p>
+      <p class="big-number sm" style="color:var(--navy)">1,300+</p>
+      <p class="text-sm text-gray-600 mt-4">Across X-Series products in ASEAN</p>
+    </div>
+    <div class="card">
+      <p class="label">Listed</p>
+      <p class="big-number sm" style="color:var(--navy)">Bursa</p>
+      <p class="text-sm text-gray-600 mt-4">MESDAQ since 2003</p>
+    </div>
+  </div>
+  <div class="table-wrap mt-24" data-animate data-delay="4">
+    <table>
+      <thead><tr><th>X-Series Product</th><th>FMX Cross-Sell Opportunity</th></tr></thead>
+      <tbody>
+        <tr data-detail="FM already a module in RentX; upsell to full CAFM for shopping malls (100+ tenants), commercial buildings (500+ units), and mixed-use properties."><td><strong>RentX</strong> <span class="text-sm text-gray-400">(Malls, Commercial)</span></td><td>Primary — FM already in RentX; upsell to full CAFM</td></tr>
+        <tr data-detail="Engineering/maintenance is the top pain point for hotel operators. Guest complaints about AC, plumbing drive urgency. Mobile work orders for technicians."><td><strong>HotelX</strong> <span class="text-sm text-gray-400">(Hotels, Resorts)</span></td><td>Primary — Engineering is pain point</td></tr>
+        <tr data-detail="Post-handover FM services. PropertyX handles development, FMX handles ongoing facility management after handover to buyers."><td><strong>PropertyX</strong> <span class="text-sm text-gray-400">(Developers)</span></td><td>Secondary — Post-handover FM</td></tr>
+        <tr data-detail="Asset handover from construction phase to FM operations. ContractX manages build, FMX takes over ongoing maintenance."><td><strong>ContractX</strong> <span class="text-sm text-gray-400">(Construction)</span></td><td>Secondary — Asset handover to FM</td></tr>
+        <tr data-detail="Asset lifecycle extension through better maintenance. AssetX tracks physical assets, FMX manages their maintenance schedules."><td><strong>AssetX</strong> <span class="text-sm text-gray-400">(Asset Tracking)</span></td><td>Adjacent — Asset lifecycle extension</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 4. MARKET SIZING ===== -->
+<div class="slide bg-navy" data-title="Market Sizing" data-slug="market">
+  <template data-sales-notes>
+    <h4>Calculation Methodology</h4>
+    <p><strong>TAM:</strong> ASEAN FM services market (USD 36.35B) × software portion (3.5%) = USD 1.27B. Sources: Expert Market Research, Mordor Intelligence.</p>
+    <p><strong>SAM:</strong> Malaysia (USD 301M) + Singapore (USD 129M) = USD 430M. Apply mid-market filter (40%) + property-integrated zone (50%) = USD 180M.</p>
+    <p><strong>SOM:</strong> 2-3 AEs × 8-12 deals/year × RM 80K avg deal. Cross-sell (40% win) + new logos (25% win) = 65 deals = RM 5.5M base case.</p>
+    <h4>Bottom-up Validation</h4>
+    <p>~2,550 addressable properties in Malaysia: 1,200 office buildings, 600 malls, 400 mixed-use, 150 DCs, 200 healthcare. Midpoint RM 236M vs top-down RM 810M — within 2x range, medium-high confidence.</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">TAM / SAM / SOM</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Market Sizing</h2>
+    <p class="subline text-dim">ASEAN FM software — top-down with bottom-up validation</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="3">
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="TAM">TAM</span></p>
+      <p class="big-number accent">USD 1.2B</p>
+      <p class="text-sm text-dim mt-4">RM 5.4B &middot; ASEAN FM Software</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SAM">SAM</span></p>
+      <p class="big-number accent">USD 180M</p>
+      <p class="text-sm text-dim mt-4">RM 810M &middot; MY+SG Mid-Market</p>
+    </div>
+    <div class="card">
+      <p class="label"><span class="jargon" data-term="SOM">SOM</span></p>
+      <p class="big-number accent">USD 0.8–1.8M</p>
+      <p class="text-sm text-dim mt-4">RM 3.5–8M ARR &middot; 24 months</p>
+    </div>
+  </div>
+  <div class="table-wrap mt-24" data-animate data-delay="4">
+    <table>
+      <thead><tr><th>Scenario</th><th>ARR</th><th>Deals</th><th>Assumptions</th></tr></thead>
+      <tbody>
+        <tr><td>Conservative</td><td class="num">RM 3.5M</td><td class="num">50</td><td>Slower ramp</td></tr>
+        <tr><td><strong>Base</strong></td><td class="num"><strong>RM 5.5M</strong></td><td class="num"><strong>65</strong></td><td><strong>As projected</strong></td></tr>
+        <tr><td>Stretch</td><td class="num">RM 8M</td><td class="num">100</td><td>Faster hiring + PLG</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 5. TARGET SEGMENTS ===== -->
+<div class="slide bg-white" data-title="Target Segments" data-slug="segments">
+  <div class="pill" data-animate data-delay="0">Priority Verticals</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Target Segments</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Priority</th><th>Segment</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr data-detail="10–100 facilities. Highest WTP; SLA-driven; compliance-heavy (ISO 50001). MY DC pipeline grew 70% in H1 2025. Major operators: AirTrunk, Bridge, Yondr, AIMS."><td><strong>#1</strong></td><td><strong>Data Centres</strong></td><td>Highest WTP; SLA-driven; compliance-heavy; MY DC boom</td></tr>
+        <tr data-detail="50–500 rooms. HotelX cross-sell; engineering is pain point. Guest complaints → work orders → resolution. Existing customers: Swiss Garden, Hotel Maya, Holiday Villa, Avillion."><td><strong>#2</strong></td><td><strong>Hotels / Hospitality</strong></td><td>HotelX cross-sell; engineering is pain point</td></tr>
+        <tr data-detail="500–50,000 units. RentX cross-sell; FM already in RentX; upsell to full CAFM. High vacancy (28.3% in KV) means landlords compete on service quality."><td><strong>#3</strong></td><td><strong>Commercial Buildings</strong></td><td>RentX cross-sell; FM upsell; vacancy pressure</td></tr>
+        <tr data-detail="100–1,000 beds. Compliance-critical; asset-intensive; regulatory drivers (MOH, BOMBA). Inspection module + compliance tracking."><td>#4</td><td>Healthcare</td><td>Compliance-critical; asset-intensive</td></tr>
+        <tr data-detail="100–1,000 assets. Asset-heavy; preventive maintenance need. Manufacturing, logistics facilities."><td>#5</td><td>Industrial</td><td>Asset-heavy; preventive maintenance need</td></tr>
+        <tr data-detail="10–500 tenants. RentX cross-sell; GTO integration opportunity. Shopping centres with complex asset management needs."><td>#6</td><td>Retail / Mall</td><td>RentX cross-sell; GTO integration</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 6. JOBS-TO-BE-DONE ===== -->
+<div class="slide bg-navy" data-title="Jobs-to-be-Done" data-slug="jtbd">
+  <template data-sales-notes>
+    <h4>Interview Questions</h4>
+    <ul>
+    <li><strong>Current state:</strong> Walk me through how you handle a maintenance request today. What tools do you use?</li>
+    <li><strong>Pain points:</strong> What's the most frustrating part? When was the last time an FM issue caused a major problem?</li>
+    <li><strong>Desired state:</strong> If you had a magic wand, what would your FM operations look like?</li>
+    <li><strong>Decision process:</strong> Who would be involved in buying FM software? What would make your boss say yes?</li>
+    </ul>
+  </template>
+  <div class="pill" data-animate data-delay="0"><span class="jargon" data-term="JTBD">JTBD</span> Framework</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Jobs-to-be-Done</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Functional Job</th><th>Pain Level</th><th>FMX Solution</th></tr></thead>
+      <tbody>
+        <tr data-detail="Current: Spreadsheets, paper logs. FMX: Facility Profile module with full asset registry — digital record of every asset, location, warranty, and history."><td>Track all assets and equipment</td><td class="num">High</td><td>Facility Profile, Asset Registry</td></tr>
+        <tr data-detail="Current: WhatsApp, verbal instructions. FMX: Work Order module with mobile assignment, SLA tracking, and automatic scheduling."><td>Schedule and assign maintenance</td><td class="num">High</td><td>Work Order, Maintenance Schedule</td></tr>
+        <tr data-detail="Current: Paper checklists, photos. FMX: Inspection module with configurable checklists, photo capture, and compliance tracking."><td>Conduct facility inspections</td><td class="num">Medium</td><td>Inspection module</td></tr>
+        <tr data-detail="Current: Email, manual tracking. FMX: Service Team module with vendor scorecards, SLA monitoring, and work order assignment."><td>Manage vendor/contractor work</td><td class="num">Medium</td><td>Service Team, Work Order</td></tr>
+        <tr data-detail="Current: Spreadsheets, calendar alerts. FMX: Insurance Administration and Facility License modules with auto-renewal alerts."><td>Track insurance and licenses</td><td class="num">Medium</td><td>Insurance, Facility License</td></tr>
+        <tr data-detail="Current: Manual Excel reports. FMX: Facility Report and Dashboard with real-time KPIs, SLA compliance, and cost tracking."><td>Report on FM performance</td><td class="num">High</td><td>Dashboard, Facility Report</td></tr>
+        <tr data-detail="Current: Separate system, manual reconciliation. FMX + RentX integration: tenant service requests flow into FMX work orders, costs reconcile automatically."><td>Bill tenants for FM services</td><td class="num">High</td><td>RentX integration</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="4">
+    <div class="card"><p class="label accent">In control</p><p class="text-sm text-dim mt-4">Know status of all assets and work</p></div>
+    <div class="card"><p class="label accent">Proactive</p><p class="text-sm text-dim mt-4">Prevent breakdowns, not just react</p></div>
+    <div class="card"><p class="label accent">Efficient</p><p class="text-sm text-dim mt-4">Less time on admin, more on operations</p></div>
+  </div>
+</div>
+
+<!-- ===== 7. KEY HYPOTHESES ===== -->
+<div class="slide bg-white" data-title="Key Hypotheses" data-slug="hypotheses">
+  <template data-sales-notes>
+    <h4>Full Hypothesis Table</h4>
+    <p><strong>Problem:</strong> P1 integrated tools, P2 pricing gap, P3 revenue leakage, P4 reactive maintenance, P5 ASEAN compliance gap.</p>
+    <p><strong>Solution:</strong> S1 30% faster resolution, S2 RentX differentiator, S3 mobile table stakes, S4 inspection drives compliance, S5 dashboard changes behaviour.</p>
+    <p><strong>Business Model:</strong> B1 per-site pricing, B2 RM 2K–10K/site/month, B3 cross-sell cuts CAC 50%, B4 <12 week implementation, B5 110%+ NRR via module upsell.</p>
+    <h4>Pricing Benchmarks</h4>
+    <table><thead><tr><th>Competitor</th><th>Model</th><th>Cost</th></tr></thead><tbody>
+    <tr><td>UpKeep</td><td>Per user/mo</td><td>USD 45–75</td></tr>
+    <tr><td>Limble</td><td>Per user/mo</td><td>USD 28–69</td></tr>
+    <tr><td>IBM Maximo</td><td>Enterprise</td><td>USD 100K–500K+</td></tr>
+    <tr><td>MaintainX</td><td>Per user + asset</td><td>USD 16–49</td></tr>
+    </tbody></table>
+    <p><strong>FMX hypothesis:</strong> RM 50K–150K ARR per mid-market customer.</p>
+  </template>
+  <div class="pill" data-animate data-delay="0">Hypotheses</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Key Hypotheses to Validate</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="3">
+    <div class="card" data-detail="P1: Mid-market operators lack integrated FM tools. P2: Existing solutions are too expensive or too basic. P3: Disconnected FM/billing causes revenue leakage. P4: Reactive maintenance is the norm. P5: ASEAN compliance is a gap in global tools.">
+      <p class="label" style="color:#f87171">Problem</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Operators lack integrated FM tools</span></li>
+        <li><span class="bullet"></span><span>Solutions too expensive or too basic</span></li>
+        <li><span class="bullet"></span><span>FM/billing disconnect = revenue leakage</span></li>
+      </ul>
+    </div>
+    <div class="card" data-detail="S1: Work order workflow reduces resolution time by 30%+. S2: RentX integration is a key differentiator. S3: Mobile access for field teams is table stakes. S4: Inspection module drives compliance use case.">
+      <p class="label" style="color:#34a853">Solution</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>30%+ faster resolution time</span></li>
+        <li><span class="bullet"></span><span>RentX integration differentiates</span></li>
+        <li><span class="bullet"></span><span>Mobile for field teams is table stakes</span></li>
+      </ul>
+    </div>
+    <div class="card" data-detail="B1: Per-site/per-asset pricing is acceptable. B2: RM 2K–10K/site/month. B3: RentX cross-sell reduces CAC by 50%+. B4: <12 weeks for mid-market. B5: 110%+ NRR via module upsell.">
+      <p class="label" style="color:var(--navy)">Business Model</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>RM 50K–150K ARR per customer</span></li>
+        <li><span class="bullet"></span><span>Cross-sell cuts CAC by 50%+</span></li>
+        <li><span class="bullet"></span><span>&lt;12 week implementation</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 8. COMPETITIVE LANDSCAPE ===== -->
+<div class="slide bg-navy" data-title="Competitive Landscape" data-slug="competitive">
+  <div class="pill" data-animate data-delay="0">Competition</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Competitive Landscape</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Category</th><th>Examples</th><th>FMX Win Theme</th></tr></thead>
+      <tbody>
+        <tr data-detail="IBM Maximo, Yardi Voyager, SAP PM, Infor EAM. Feature-rich and enterprise-grade, but USD 100K+ TCO, 12-24 month implementation, requires dedicated admin. FMX is 50% lower TCO and 2x faster."><td><strong>Global Enterprise</strong></td><td><span class="jargon" data-term="Maximo">Maximo</span>, Yardi, SAP</td><td>Same capability, 50% lower TCO, 2x faster</td></tr>
+        <tr data-detail="UpKeep, Limble, Fiix, MaintainX. Modern UX and mobile-first, but no property/billing integration, Western support hours, USD pricing. FMX integrates with RentX, HotelX, AccountX."><td><strong>Pure-play FM SaaS</strong></td><td>UpKeep, Limble, MaintainX</td><td>Integrated with property &amp; billing — not a silo</td></tr>
+        <tr data-detail="Entrata, AppFolio, Buildium. Property + maintenance in one, but focused on residential and weak in commercial FM. FMX is built for ASEAN commercial + hospitality."><td><strong>Regional PropTech</strong></td><td>Entrata, AppFolio</td><td>Built for ASEAN, not retrofitted</td></tr>
+        <tr data-detail="Silverlake Axis, iProperty. Local knowledge and relationships, but point solutions with limited R&D and legacy tech. FMX offers complete FM lifecycle."><td><strong>Local Tools</strong></td><td>Silverlake, iProperty</td><td>Complete FM lifecycle, not just work orders</td></tr>
+        <tr data-detail="Excel, WhatsApp, paper forms. Free and familiar, but no automation, no visibility, audit nightmare. FMX provides dashboards, mobile, preventive maintenance."><td><strong>Spreadsheets</strong></td><td>Excel, WhatsApp</td><td>Stop fighting fires. See everything.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="4">
+    <div class="card">
+      <p class="label accent">vs Global Enterprise</p>
+      <p class="text-sm text-dim mt-4">Right-sized for ASEAN; faster, cheaper, local</p>
+    </div>
+    <div class="card">
+      <p class="label accent">vs FM SaaS</p>
+      <p class="text-sm text-dim mt-4">Integrated with property, billing, accounting</p>
+    </div>
+    <div class="card">
+      <p class="label accent">vs Manual</p>
+      <p class="text-sm text-dim mt-4">Visibility and automation; pays for itself</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. FEATURE PARITY ===== -->
+<div class="slide bg-white" data-title="Feature Parity" data-slug="features">
+  <div class="pill" data-animate data-delay="0">Head-to-Head</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Feature Parity Analysis</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Feature</th><th>FMX</th><th>Maximo</th><th>UpKeep</th><th>Local</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr data-detail="Table stakes for any CAFM/CMMS tool. All competitors offer basic asset management."><td>Asset management</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td>Table stakes</td></tr>
+        <tr data-detail="Core functionality. All competitors offer work order management."><td>Work order management</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td>Table stakes</td></tr>
+        <tr data-detail="All major competitors offer PM scheduling. Local tools have limited support."><td>Preventive maintenance</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">~</td><td>Table stakes</td></tr>
+        <tr data-detail="FMX's inspection module with configurable checklists and compliance tracking. UpKeep has limited inspection; local tools minimal."><td>Inspection management</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">~</td><td class="num">~</td><td>Differentiator</td></tr>
+        <tr data-detail="FMX tracks insurance policies, renewal dates, claims. Unique to FMX in the mid-market."><td>Insurance tracking</td><td class="num">&check;</td><td class="num">~</td><td class="num">&mdash;</td><td class="num">~</td><td>Differentiator</td></tr>
+        <tr data-detail="FMX connects to RentX for tenant billing, lease management. No competitor offers native property integration."><td>Property integration</td><td class="num">&check;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="FMX connects to AccountX for revenue reconciliation. No competitor in the FM SaaS space offers native billing integration."><td>Billing integration</td><td class="num">&check;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">&mdash;</td><td><strong>Key differentiator</strong></td></tr>
+        <tr data-detail="FMX has built-in LHDN e-Invoice, BOMBA, DOSH, JKKP compliance templates. Global tools require expensive customization."><td>ASEAN compliance</td><td class="num">&check;</td><td class="num">~</td><td class="num">&mdash;</td><td class="num">&check;</td><td>Differentiator</td></tr>
+        <tr data-detail="All major competitors offer mobile apps. Local tools have limited or no mobile support."><td>Mobile app</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">~</td><td>Table stakes</td></tr>
+        <tr data-detail="FMX roadmap item. Maximo has strong IoT (sensors, anomaly detection). UpKeep has growing IoT support."><td>IoT integration</td><td class="num">~</td><td class="num">&check;</td><td class="num">&check;</td><td class="num">&mdash;</td><td>Roadmap</td></tr>
+        <tr data-detail="FMX roadmap item. Maximo has strong AI/predictive capabilities."><td>AI / predictive</td><td class="num">&mdash;</td><td class="num">&check;</td><td class="num">~</td><td class="num">&mdash;</td><td>Roadmap</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 10. PMF METRICS ===== -->
+<div class="slide bg-navy" data-title="PMF Metrics" data-slug="metrics">
+  <template data-sales-notes>
+    <h4>Anti-Signals</h4>
+    <table><thead><tr><th>Anti-Signal</th><th>Action</th></tr></thead><tbody>
+    <tr><td>High churn after onboarding</td><td>Re-evaluate onboarding, time-to-value</td></tr>
+    <tr><td>Feature requests everywhere</td><td>Focus on core JTBD, not features</td></tr>
+    <tr><td>Heavy discounting to win</td><td>Re-evaluate pricing or value prop</td></tr>
+    <tr><td>Long sales cycles (&gt;180 days)</td><td>Re-evaluate ICP or sales motion</td></tr>
+    <tr><td>Low usage after go-live</td><td>Re-evaluate implementation, training</td></tr>
+    </tbody></table>
+  </template>
+  <div class="pill" data-animate data-delay="0">Metrics Dashboard</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>PMF Metrics</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-40 mt-24">
+    <div class="col" data-animate data-delay="3">
+      <div class="card">
+        <p class="label accent">Leading Indicators (Pre-PMF)</p>
+        <ul class="clean mt-8">
+          <li><span class="bullet"></span><span>Inbound interest: <strong>10+ leads/month</strong></span></li>
+          <li><span class="bullet"></span><span>Demo-to-trial: <strong>&gt;30%</strong></span></li>
+          <li><span class="bullet"></span><span>Time to first value: <strong>&lt;7 days</strong></span></li>
+          <li><span class="bullet"></span><span>Feature adoption: <strong>&gt;50% using 3+ modules</strong></span></li>
+          <li><span class="bullet"></span><span>DAU/MAU ratio: <strong>&gt;40%</strong></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col" data-animate data-delay="4">
+      <div class="card">
+        <p class="label accent">Lagging Indicators (PMF Achieved)</p>
+        <ul class="clean mt-8">
+          <li><span class="bullet"></span><span>Sean Ellis score: <strong>&gt;40%</strong> "very disappointed"</span></li>
+          <li><span class="bullet"></span><span><span class="jargon" data-term="NPS">NPS</span>: <strong>&gt;50</strong></span></li>
+          <li><span class="bullet"></span><span>Logo retention: <strong>&gt;90%</strong></span></li>
+          <li><span class="bullet"></span><span><span class="jargon" data-term="NRR">NRR</span>: <strong>&gt;110%</strong></span></li>
+          <li><span class="bullet"></span><span>Organic referrals: <strong>&gt;20%</strong></span></li>
+          <li><span class="bullet"></span><span>Sales cycle: <strong>&lt;90 days</strong></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 11. EXPERIMENTS & PILOTS ===== -->
+<div class="slide bg-white" data-title="Experiments & Pilots" data-slug="experiments">
+  <div class="pill" data-animate data-delay="0">Validation</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Experiments &amp; Pilots</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>ID</th><th>Experiment</th><th>Success Metric</th><th>Duration</th></tr></thead>
+      <tbody>
+        <tr data-detail="Hypothesis: Cross-sell is fastest path to FMX ARR. Run campaign targeting RentX customers (malls, commercial buildings) to attach FMX."><td><strong>E1</strong></td><td>RentX attach campaign</td><td>5 attached deals in 60 days</td><td>60 days</td></tr>
+        <tr data-detail="Hypothesis: Hotel engineering is underserved; HotelX relationship lowers CAC. Target hotels 100+ rooms with engineering pain points."><td><strong>E2</strong></td><td>HotelX attach campaign</td><td>3 hotel pilots in 60 days</td><td>60 days</td></tr>
+        <tr data-detail="Hypothesis: Data centres have highest WTP and pain. Identify 5 target DCs in MY (new builds, Tier 2/3 operators)."><td><strong>E3</strong></td><td>Data centre vertical focus</td><td>2 DC pilot customers</td><td>90 days</td></tr>
+        <tr data-detail="Hypothesis: SMB can onboard without sales team involvement. Self-serve trial with guided onboarding flow."><td><strong>E4</strong></td><td>Self-serve trial</td><td>10 trials, 3 conversions</td><td>90 days</td></tr>
+        <tr data-detail="Hypothesis: Inspection is compelling entry point as compliance driver. Lead with inspection use case in messaging."><td><strong>E5</strong></td><td>Inspection-first positioning</td><td>Higher demo-to-trial rate</td><td>60 days</td></tr>
+        <tr data-detail="Hypothesis: Current pricing (RM 50K–150K ARR) is acceptable. Test at RM 80K average with no change in win rate."><td><strong>E6</strong></td><td>Price sensitivity test</td><td>Stable win rate at RM 80K</td><td>60 days</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="4">
+    <div class="card"><p class="label" style="color:var(--navy)">Go-live</p><p class="text-sm text-gray-600 mt-4">Week 8–12</p></div>
+    <div class="card"><p class="label" style="color:var(--navy)">First Value</p><p class="text-sm text-gray-600 mt-4">100+ work orders processed</p></div>
+    <div class="card"><p class="label" style="color:var(--navy)">Adoption</p><p class="text-sm text-gray-600 mt-4">80%+ target users active</p></div>
+  </div>
+</div>
+
+<!-- ===== 12. 90-DAY ACTION PLAN ===== -->
+<div class="slide bg-navy" data-title="90-Day Action Plan" data-slug="action-plan">
+  <div class="pill" data-animate data-delay="0">Execution</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>90-Day Action Plan</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-24">
+    <div class="card" data-animate data-delay="3" data-detail="Identify 20 interview contacts (Week 1). Develop interview guide (Week 1). Conduct 10 discovery interviews (Week 2–4). Sean Ellis survey (Week 2). Analyse RentX customer base for cross-sell (Week 2). Competitor analysis (Week 2).">
+      <p class="label accent">Days 1–30</p>
+      <p class="text-md mt-8">Customer Discovery</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>10 customer interviews</span></li>
+        <li><span class="bullet"></span><span>Sean Ellis survey</span></li>
+        <li><span class="bullet"></span><span>RentX cross-sell analysis</span></li>
+        <li><span class="bullet"></span><span>Competitor pricing research</span></li>
+      </ul>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail="Complete 20+ interviews (Week 6). Synthesise insights (Week 7). Validate/refine hypotheses (Week 7). Launch 2 pilot experiments (Week 8). Identify 3 pilot customer candidates (Week 8).">
+      <p class="label accent">Days 30–60</p>
+      <p class="text-md mt-8">Hypothesis Validation</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>20+ interviews completed</span></li>
+        <li><span class="bullet"></span><span>Insight synthesis</span></li>
+        <li><span class="bullet"></span><span>2 pilot experiments launched</span></li>
+        <li><span class="bullet"></span><span>3 pilot candidates identified</span></li>
+      </ul>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail="Onboard pilot customers (Week 10–12). Collect pilot feedback (Week 12). Measure PMF leading indicators (Week 12). Iterate product based on feedback (Week 12+). Document case study (Week 12+).">
+      <p class="label accent">Days 60–90</p>
+      <p class="text-md mt-8">Pilot Execution</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Pilot customers onboarded</span></li>
+        <li><span class="bullet"></span><span>Feedback collected</span></li>
+        <li><span class="bullet"></span><span>Leading indicators measured</span></li>
+        <li><span class="bullet"></span><span>Product iterated</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 13. SEGMENT DEEP DIVES ===== -->
+<div class="slide bg-white" data-title="Segment Deep Dives" data-slug="deep-dives">
+  <div class="pill" data-animate data-delay="0">PMF by Segment</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Segment Deep Dives</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Segment</th><th>Severity</th><th>WTP</th><th>Competition</th><th>FMX Fit</th></tr></thead>
+      <tbody>
+        <tr data-detail="RentX integration is killer feature. Upsell from built-in FM to full CAFM. 28.3% office vacancy in KV means landlords compete on service quality. Target: malls (100+ tenants), commercial (500+ units), mixed-use, REITs."><td><strong>Commercial (RentX)</strong></td><td class="num">High</td><td class="num">Med-High</td><td class="num">Medium</td><td class="num"><strong>High</strong></td></tr>
+        <tr data-detail="Very high WTP — 1 hour downtime can cost USD 100K+. ISO 50001, BS 7671 compliance. Enterprise DCs on Maximo/ServiceNow; emerging DCs often manual. MY pipeline grew 70% in H1 2025. Target: Tier 2/3 operators, colocation, new builds."><td><strong>Data Centres</strong></td><td class="num">Very High</td><td class="num">Very High</td><td class="num">Medium</td><td class="num"><strong>High</strong></td></tr>
+        <tr data-detail="HotelX integration is unique differentiator. Guest request → work order → resolution. No competitor offers PMS + FM integration. Target: hotels 100+ rooms, resorts, chains. Existing HotelX customers: Swiss Garden, Hotel Maya, Holiday Villa, Avillion."><td><strong>Hospitality (HotelX)</strong></td><td class="num">High</td><td class="num">Med-High</td><td class="num">Low-Med</td><td class="num"><strong>Very High</strong></td></tr>
+        <tr data-detail="Regulatory compliance (MOH, BOMBA), patient safety. Budget-constrained but compliance-driven. Often on paper/legacy. Explore with 2–3 pilot discussions."><td><strong>Healthcare</strong></td><td class="num">High</td><td class="num">Medium</td><td class="num">Low-Med</td><td class="num">Med-High</td></tr>
+        <tr data-detail="Visible maintenance, tenant recharges. Margin pressure in retail. Often manual. Opportunistic; not primary focus."><td><strong>Retail / Mall</strong></td><td class="num">Medium</td><td class="num">Medium</td><td class="num">Low</td><td class="num">Medium</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 14. DECISION FRAMEWORK ===== -->
+<div class="slide bg-gradient" data-title="Decision Framework" data-slug="decision">
+  <div class="pill" data-animate data-delay="0">PMF Decision</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Decision Framework</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-24" style="max-width:800px">
+    <div class="card" data-animate data-delay="3" data-detail="Quantitative: Sean Ellis >40%, logo retention >90%, NRR >100%, sales cycle <90 days, CAC payback <18 months. Qualitative: unprompted referrals, leads increasing MoM, feature requests cluster around extensions not gaps, competitors mention us. Team: repeatable sales motion, predictable implementation, decreasing support load per customer.">
+      <p class="label accent">Declare PMF when&hellip;</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Sean Ellis &gt;40% "very disappointed"</span></li>
+        <li><span class="bullet"></span><span>Logo retention &gt;90%</span></li>
+        <li><span class="bullet"></span><span>NRR &gt;100%</span></li>
+        <li><span class="bullet"></span><span>Sales cycle &lt;90 days</span></li>
+        <li><span class="bullet"></span><span>Unprompted referrals</span></li>
+        <li><span class="bullet"></span><span>Repeatable sales motion</span></li>
+      </ul>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail="Wrong market: pivot to different segment. Product gaps: prioritise based on interview feedback. Pricing mismatch: adjust model or packaging. GTM issue: change sales motion, messaging, or channel. Timing issue: market not ready, nurture and wait.">
+      <p class="label" style="color:#f87171">If PMF not achieved&hellip;</p>
+      <ul class="clean mt-8">
+        <li><span class="bullet"></span><span>Wrong market &rarr; pivot segment</span></li>
+        <li><span class="bullet"></span><span>Product gaps &rarr; prioritise features</span></li>
+        <li><span class="bullet"></span><span>Pricing mismatch &rarr; adjust model</span></li>
+        <li><span class="bullet"></span><span>GTM issue &rarr; change sales motion</span></li>
+        <li><span class="bullet"></span><span>Timing &rarr; nurture and wait</span></li>
+      </ul>
+    </div>
+  </div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="5">IFCA MSC Berhad &middot; Kuala Lumpur &middot; ifca.asia</p>
+</div>
+
+<script src="../../shared/js/deck-init.js"></script>
+<script>
+  DeckInit({
+    glossary: {
+      'FM': { def: 'Facility Management — managing building operations and maintenance.' },
+      'CAFM': { def: 'Computer-Aided Facility Management — software for managing buildings/facilities.' },
+      'CMMS': { def: 'Computerised Maintenance Management System.' },
+      'ASEAN': { def: 'Association of Southeast Asian Nations — 10-country regional bloc.' },
+      'TAM': { def: 'Total Addressable Market — total market demand if we had 100% share.' },
+      'SAM': { def: 'Serviceable Addressable Market — portion of TAM we can realistically serve.' },
+      'SOM': { def: 'Serviceable Obtainable Market — portion of SAM we can capture.' },
+      'JTBD': { def: 'Jobs-to-be-Done — framework for understanding customer needs.' },
+      'NPS': { def: 'Net Promoter Score — customer loyalty metric (-100 to +100).' },
+      'NRR': { def: 'Net Revenue Retention — revenue kept from existing customers (>100% = growth).' },
+      'Maximo': { def: 'IBM Maximo — enterprise asset management platform.', url: 'https://en.wikipedia.org/wiki/IBM_Maximo' },
+      'PUE': { def: 'Power Usage Effectiveness — data centre energy efficiency (1.0 = perfect).' },
+      'DC': { def: 'Data Centre — facility housing computer systems and storage.' },
+      'PMS': { def: 'Property Management System — hotel front-desk and reservations software.' },
+      'GTO': { def: 'Gross Turnover — retail tenant total sales (basis for percentage rent).' },
+      'WTP': { def: 'Willingness To Pay — maximum price a customer would accept.' },
+      'CAGR': { def: 'Compound Annual Growth Rate — average yearly growth rate over time.' },
+    }
+  });
+</script>
+</body>
+</html>
