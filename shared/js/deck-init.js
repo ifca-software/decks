@@ -763,12 +763,29 @@ var DeckAnimations = {
       return 'RM ' + parts.join('.');
     }
 
+    // Scale labels: elements with data-roi-scale update their number dynamically
+    var scaleLabels = roiSlide.querySelectorAll('[data-roi-scale]');
+    var scaleLabelData = [];
+    for (var j = 0; j < scaleLabels.length; j++) {
+      scaleLabelData.push({
+        el: scaleLabels[j],
+        factor: parseFloat(scaleLabels[j].getAttribute('data-roi-scale')),
+        template: scaleLabels[j].innerHTML
+      });
+    }
+
     function update() {
       var val = parseFloat(input.value) || config.base;
       var ratio = val / config.base;
       for (var i = 0; i < originals.length; i++) {
         var newVal = originals[i].base * ratio;
         originals[i].el.textContent = formatRM(newVal);
+      }
+      // Update scale labels (e.g., "5-property REIT" → "15-property REIT")
+      for (var k = 0; k < scaleLabelData.length; k++) {
+        var s = scaleLabelData[k];
+        var scaledCount = Math.round(val * s.factor);
+        s.el.innerHTML = s.template.replace(/\d+/, scaledCount);
       }
     }
 
