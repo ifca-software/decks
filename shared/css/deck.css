@@ -1348,7 +1348,7 @@ td[data-detail]::after {
   .slide h3 { font-size: 17px; }
   .subtitle { font-size: 15px; }
   .big-number { font-size: 36px; }
-  .pill { font-size: 10px; padding: 4px 10px; margin-bottom: 12px; }
+  .pill { font-size: 10px; padding: 4px 10px; margin-bottom: 12px; margin-right: 52px; }
   .label { font-size: 11px; }
   .text-lg { font-size: 16px; }
   .text-md { font-size: 14px; }
