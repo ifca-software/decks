@@ -529,15 +529,40 @@
     noResults.style.display = totalVisible === 0 ? 'block' : 'none';
   }
 
-  search.addEventListener('input', apply);
+  function syncChips() {
+    filters.querySelectorAll('.chip').forEach(function(c) {
+      c.classList.toggle('active', c.dataset.filter === activeFilter);
+    });
+  }
+
+  function updateURL() {
+    var params = new URLSearchParams();
+    if (search.value.trim()) params.set('q', search.value.trim());
+    if (activeFilter !== 'all') params.set('filter', activeFilter);
+    var qs = params.toString();
+    history.replaceState(null, '', qs ? '?' + qs : location.pathname);
+  }
+
+  function readURL() {
+    var params = new URLSearchParams(location.search);
+    search.value = params.get('q') || '';
+    activeFilter = params.get('filter') || 'all';
+    syncChips();
+  }
+
+  search.addEventListener('input', function() { apply(); updateURL(); });
   filters.addEventListener('click', function(e) {
     var chip = e.target.closest('.chip');
     if (!chip) return;
-    filters.querySelectorAll('.chip').forEach(function(c) { c.classList.remove('active'); });
-    chip.classList.add('active');
     activeFilter = chip.dataset.filter;
+    syncChips();
     apply();
+    updateURL();
   });
+  window.addEventListener('popstate', function() { readURL(); apply(); });
+
+  readURL();
+  apply();
 })();
 </script>
 </body>

@@ -453,19 +453,39 @@ function render() {
   noResults.style.display = totalVisible === 0 ? 'block' : 'none';
 }
 
-// search
-searchInput.addEventListener('input', render);
+function syncChips() {
+  filtersEl.querySelectorAll('.chip').forEach(c => {
+    c.classList.toggle('active', c.dataset.filter === activeFilter);
+  });
+}
 
-// chips
+function updateURL() {
+  const params = new URLSearchParams();
+  if (searchInput.value.trim()) params.set('q', searchInput.value.trim());
+  if (activeFilter !== 'all') params.set('filter', activeFilter);
+  const qs = params.toString();
+  history.replaceState(null, '', qs ? '?' + qs : location.pathname);
+}
+
+function readURL() {
+  const params = new URLSearchParams(location.search);
+  searchInput.value = params.get('q') || '';
+  activeFilter = params.get('filter') || 'all';
+  syncChips();
+}
+
+searchInput.addEventListener('input', () => { render(); updateURL(); });
 filtersEl.addEventListener('click', e => {
   const chip = e.target.closest('.chip');
   if (!chip) return;
-  filtersEl.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-  chip.classList.add('active');
   activeFilter = chip.dataset.filter;
+  syncChips();
   render();
+  updateURL();
 });
+window.addEventListener('popstate', () => { readURL(); render(); });
 
+readURL();
 render();
 </script>
 
