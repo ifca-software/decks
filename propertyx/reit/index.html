@@ -208,7 +208,7 @@
 </div>
 
 <!-- ===== 7. THE INVESTMENT ===== -->
-<div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+<div class="slide bg-navy" data-title="The Investment" data-slug="roi" data-roi='{"unit":"M sqft","base":2}'>
   <template data-sales-notes>
     <h4>Pricing</h4>
     <p>RM 240K/year for a 2M sqft REIT portfolio — works out to RM 0.01/sqft/month. Position against the RM 4.80/sqft/month they already spend on OpEx: "PropertyX costs 0.2% of your OpEx budget and recovers 1%." For larger portfolios (5M+ sqft), offer volume pricing at RM 200K base + RM 0.008/sqft.</p>
@@ -223,17 +223,17 @@
   <div class="card-grid cols-3 mt-32">
     <div class="card metric" data-animate data-delay="3" data-detail="RM 240K/year = RM 20K/month for a 2M sqft REIT portfolio. This covers the full PropertyX platform: portfolio dashboards, OpEx categorization, vendor scorecards, and automated owner pack generation. Implementation is included in Year 1.">
       <p class="label">You invest</p>
-      <p class="value">RM 240K</p>
+      <p class="value" data-roi-val="240000">RM 240K</p>
       <p class="text-sm text-dim">per year</p>
     </div>
     <div class="card metric" data-animate data-delay="3" data-detail="RM 1.15M savings from 1% OpEx reduction on RM 115.2M total OpEx. Breakdown: utilities optimization ~RM 400K (sub-metering and usage alerts), maintenance scheduling ~RM 350K (preventive vs reactive), vendor scorecard-driven negotiations ~RM 250K, reporting labour reduction ~RM 150K.">
       <p class="label">You save</p>
-      <p class="value accent">RM 1.15M</p>
+      <p class="value accent" data-roi-val="1150000">RM 1.15M</p>
       <p class="text-sm text-dim">OpEx + reporting costs</p>
     </div>
     <div class="card metric emphasis" data-animate data-delay="3" data-detail="RM 910K net gain = RM 1.15M savings minus RM 240K investment. This flows directly to NOI, improving DPU for unitholders. On a REIT trading at 6% yield, RM 910K NOI improvement translates to ~RM 15.2M in asset valuation uplift.">
       <p class="label">You keep</p>
-      <p class="value accent">RM 910K</p>
+      <p class="value accent" data-roi-val="910000">RM 910K</p>
       <p class="text-sm text-dim">net gain per year</p>
     </div>
   </div>
@@ -250,7 +250,7 @@
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 5M sqft portfolio</p>
-      <p class="big-number">RM 2.88M</p>
+      <p class="big-number" data-roi-val="2880000">RM 2.88M</p>
       <p class="text-md text-dim">net gain per year</p>
     </div>
   </div>

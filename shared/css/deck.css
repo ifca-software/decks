@@ -433,6 +433,9 @@ html, body {
   opacity: 0.5;
   margin-bottom: 8px;
 }
+/* Boost label opacity on light backgrounds */
+.bg-white .label,
+.bg-gray .label { opacity: 0.7; }
 .accent { color: var(--orange); }
 .blue { color: var(--blue); }
 .green { color: var(--green); }
@@ -447,6 +450,9 @@ html, body {
 .text-gray-500 { color: var(--gray-500); }
 .text-cream { color: var(--text-on-dark); }
 .text-dim { color: var(--text-on-dark-dim); }
+/* Fix .text-dim on light backgrounds — cream-on-white is invisible */
+.bg-white .text-dim,
+.bg-gray .text-dim { color: var(--gray-500); }
 .font-display { font-family: var(--font-display); }
 
 /* === LAYOUT === */
@@ -499,6 +505,11 @@ html, body {
 .card.emphasis {
   border-color: rgba(251,142,40,0.5);
   box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+}
+/* Strengthen emphasis card when it carries its own bg-navy */
+.card.emphasis.bg-navy {
+  background: var(--navy-light);
+  border-color: rgba(251,142,40,0.7);
 }
 .card.metric {
   text-align: left;
@@ -1271,6 +1282,7 @@ td[data-detail]::after {
   .slide {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-padding-bottom: 80px;
   }
   .slide.active {
     justify-content: flex-start;
@@ -1325,11 +1337,12 @@ td[data-detail]::after {
 
 /* === PHONE / HUAWEI FOLD SHUT (up to 520px) === */
 @media (max-width: 520px) {
-  .detail-drawer { width: 100%; right: -100%; }
+  .detail-drawer { width: 100%; right: -100%; z-index: 500; }
   .detail-drawer.open { right: 0; }
-  .notes-drawer { width: 100%; left: -100%; }
+  .notes-drawer { width: 100%; left: -100%; z-index: 500; }
   .notes-drawer.open { left: 0; }
-  .slide { padding: 24px 24px 60px 24px; }
+  .slide { padding: 24px 24px 72px 24px; }
+  .copy-btn { right: 24px; bottom: 16px; font-size: 12px; padding: 6px 10px; }
   .slide h1 { font-size: 30px; margin-bottom: 12px; padding-right: 52px; }
   .slide h2 { font-size: 22px; margin-bottom: 12px; }
   .slide h3 { font-size: 17px; }
@@ -1381,6 +1394,40 @@ td[data-detail]::after {
   .big-number { font-size: 30px; }
   .card-grid.cols-2 { grid-template-columns: 1fr; }
   .quote { font-size: 15px; }
+  .menu-btn { top: 12px; right: 12px; width: 36px; height: 36px; }
+  .menu-btn span { width: 20px; }
+}
+
+/* === PROSPECT NAME (via ?prospect= query param) === */
+.prospect-name { color: var(--orange); font-weight: 600; }
+
+/* === ROI CALCULATOR (via data-roi on slide) === */
+.roi-input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+}
+.roi-input-row input {
+  width: 80px;
+  text-align: center;
+  background: rgba(232,236,240,0.1);
+  border: 1px solid rgba(232,236,240,0.3);
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: var(--orange);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: inherit;
+}
+.roi-input-row input:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+.roi-input-row .roi-label { color: var(--text-on-dark); }
+@media (max-width: 520px) {
+  .roi-input-row { font-size: 14px; gap: 8px; }
+  .roi-input-row input { width: 64px; font-size: 16px; padding: 6px 8px; }
 }
 
 /* === PRINT === */
@@ -1430,9 +1477,10 @@ td[data-detail]::after {
     display: none !important;
   }
 
-  /* Hide detail affordances in print */
+  /* Hide detail affordances and ROI input in print */
   [data-detail]::after { display: none !important; }
   [data-detail] { cursor: default; }
+  .roi-input-row { display: none !important; }
 
   /* Preserve dark backgrounds when printing */
   .bg-navy, .bg-gradient, .bg-gray, .bg-white {

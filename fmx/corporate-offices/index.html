@@ -223,7 +223,7 @@
 </div>
 
 <!-- ===== 7. THE INVESTMENT ===== -->
-<div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+<div class="slide bg-navy" data-title="The Investment" data-slug="roi" data-roi='{"unit":"towers","base":1}'>
   <template data-sales-notes>
     <h4>Pricing</h4>
     <p>RM 180K/year for a 500K sqft tower works out to RM 0.36/sqft/year — a fraction of the RM 4.50/sqft OpEx it's optimizing. For REIT portfolios with 5+ buildings, negotiate volume pricing at RM 150K/tower/year. Always frame the cost as a percentage of OpEx savings: "You're investing 30 sen per sqft to save RM 1.18 per sqft."</p>
@@ -238,17 +238,17 @@
   <div class="card-grid cols-3 mt-32">
     <div class="card metric" data-animate data-delay="3">
       <p class="label">You invest</p>
-      <p class="value">RM 180K</p>
+      <p class="value" data-roi-val="180000">RM 180K</p>
       <p class="text-sm text-dim">per tower / year</p>
     </div>
     <div class="card metric" data-animate data-delay="3">
       <p class="label">You save</p>
-      <p class="value accent">RM 590K</p>
+      <p class="value accent" data-roi-val="590000">RM 590K</p>
       <p class="text-sm text-dim">per tower / year</p>
     </div>
     <div class="card metric emphasis" data-animate data-delay="3">
       <p class="label">You keep</p>
-      <p class="value accent">RM 410K</p>
+      <p class="value accent" data-roi-val="410000">RM 410K</p>
       <p class="text-sm text-dim">per tower / year</p>
     </div>
   </div>
@@ -265,7 +265,7 @@
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 5-tower <span class="jargon" data-term="REIT">REIT</span></p>
-      <p class="big-number">RM 2.05M</p>
+      <p class="big-number" data-roi-val="2050000">RM 2.05M</p>
       <p class="text-md text-dim">net gain per year</p>
     </div>
   </div>

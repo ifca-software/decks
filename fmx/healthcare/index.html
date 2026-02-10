@@ -275,7 +275,7 @@
 </div>
 
 <!-- ===== 7. THE INVESTMENT ===== -->
-<div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+<div class="slide bg-navy" data-title="The Investment" data-slug="roi" data-roi='{"unit":"beds","base":300}'>
   <template data-sales-notes>
     <h4>Approach</h4>
     <p>This is the "ask" slide. Don't rush past it. Let the 3.2× ROI sit for a moment. Then say: "At RM 7,200 per bed, a 200-bed hospital invests RM 1.44M and gets back RM 4.6M. That's a decision most CFOs can make in one meeting."</p>
@@ -292,17 +292,17 @@
   <div class="card-grid cols-3 mt-32">
     <div class="card metric" data-animate data-delay="3">
       <p class="label">You invest</p>
-      <p class="value">RM 7,200</p>
+      <p class="value" data-roi-val="7200">RM 7,200</p>
       <p class="text-sm text-dim">per bed / year</p>
     </div>
     <div class="card metric" data-animate data-delay="3">
       <p class="label">You save</p>
-      <p class="value accent">RM 23,000</p>
+      <p class="value accent" data-roi-val="23000">RM 23,000</p>
       <p class="text-sm text-dim">per bed / year</p>
     </div>
     <div class="card metric emphasis" data-animate data-delay="3">
       <p class="label">You keep</p>
-      <p class="value accent">RM 15,800</p>
+      <p class="value accent" data-roi-val="15800">RM 15,800</p>
       <p class="text-sm text-dim">per bed / year</p>
     </div>
   </div>
@@ -325,7 +325,7 @@
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 200-bed hospital</p>
-      <p class="big-number">RM 3.16M</p>
+      <p class="big-number" data-roi-val="3160000">RM 3.16M</p>
       <p class="text-md text-dim">net gain per year</p>
     </div>
   </div>

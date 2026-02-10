@@ -153,11 +153,91 @@
     }
   });
 
+  // === PROSPECT NAME (?prospect= query param) ===
+  function applyProspectName() {
+    var params = new URLSearchParams(location.search);
+    var prospect = params.get('prospect');
+    if (!prospect) return;
+
+    var titleSlide = document.querySelector('.slide[data-slug="title"]') || document.querySelector('.slide');
+    if (!titleSlide) return;
+
+    var subtitle = titleSlide.querySelector('.subtitle');
+    if (subtitle) {
+      subtitle.innerHTML = '<span class="prospect-name">Prepared for ' + prospect + '</span> &mdash; ' + subtitle.innerHTML;
+    }
+
+    document.title = document.title.replace(' — IFCA', ' — ' + prospect + ' — IFCA');
+  }
+
+  // === ROI CALCULATOR (data-roi on slide) ===
+  function initRoiCalculator() {
+    var roiSlide = document.querySelector('[data-roi]');
+    if (!roiSlide) return;
+
+    var config;
+    try { config = JSON.parse(roiSlide.getAttribute('data-roi')); } catch(e) { return; }
+    if (!config || !config.base || !config.unit) return;
+
+    var scalables = roiSlide.querySelectorAll('[data-roi-val]');
+    if (scalables.length === 0) return;
+
+    // Store original values
+    var originals = [];
+    for (var i = 0; i < scalables.length; i++) {
+      originals.push({
+        el: scalables[i],
+        base: parseFloat(scalables[i].getAttribute('data-roi-val')),
+        html: scalables[i].innerHTML
+      });
+    }
+
+    // Build input row
+    var row = document.createElement('div');
+    row.className = 'roi-input-row';
+    row.innerHTML = '<span class="roi-label">Your portfolio:</span>' +
+      '<input type="number" min="1" value="' + config.base + '" aria-label="Number of ' + config.unit + '">' +
+      '<span class="roi-label">' + config.unit + '</span>';
+    var input = row.querySelector('input');
+
+    // Insert before the first card-grid
+    var firstGrid = roiSlide.querySelector('.card-grid');
+    if (firstGrid) {
+      firstGrid.parentNode.insertBefore(row, firstGrid);
+    }
+
+    // Prevent click/key navigation when interacting with input
+    input.addEventListener('click', function(e) { e.stopPropagation(); });
+    input.addEventListener('keydown', function(e) { e.stopPropagation(); });
+
+    function formatRM(val) {
+      if (Math.abs(val) >= 1000000) {
+        return 'RM ' + (val / 1000000).toFixed(2).replace(/\.?0+$/, '') + 'M';
+      }
+      var parts = Math.round(val).toString().split('.');
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return 'RM ' + parts.join('.');
+    }
+
+    function update() {
+      var val = parseFloat(input.value) || config.base;
+      var ratio = val / config.base;
+      for (var i = 0; i < originals.length; i++) {
+        var newVal = originals[i].base * ratio;
+        originals[i].el.textContent = formatRM(newVal);
+      }
+    }
+
+    input.addEventListener('input', update);
+  }
+
   // === INIT ===
   function init() {
     buildCopyButton();
     showHint();
     hookEngine();
+    applyProspectName();
+    initRoiCalculator();
   }
 
   if (document.readyState === 'loading') {
