@@ -102,6 +102,13 @@
 
 <!-- ===== 4. PROCORE PROFILE ===== -->
 <div class="slide bg-navy" data-title="Procore Profile" data-slug="procore-profile">
+  <template data-sales-notes>
+    <h4>Quick Intel</h4>
+    <p><strong>Procore</strong> is the 800-pound gorilla — USD 950M revenue, 16K+ customers. They dominate US general contracting.</p>
+    <p><strong>ASEAN:</strong> Opened Singapore office in 2021 but relies on CS Global Group as reseller. Limited local implementation capacity.</p>
+    <p><strong>Pricing model:</strong> Procore charges by Annual Construction Volume (ACV) — as your project volume grows, so does the bill. Unpredictable costs.</p>
+    <p><strong>Key signal:</strong> If the prospect says "industry standard" or has seen Procore at a conference, they're likely in early research. Position ContractX as the "right-sized" alternative.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Competitor #1</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Procore</h2>
@@ -140,6 +147,11 @@
 
 <!-- ===== 5. PROCORE ANALYSIS ===== -->
 <div class="slide bg-white" data-title="Procore Analysis" data-slug="procore-analysis">
+  <template data-sales-notes>
+    <h4>Key Talking Points</h4>
+    <p><strong>On price:</strong> "Procore's ACV model means a RM 500M portfolio costs ~USD 50K/year. ContractX is flat-rate — your costs don't balloon with project volume."</p>
+    <p><strong>On implementation:</strong> "Procore implementations for ASEAN clients run 3–6 months because the platform assumes US construction workflows. ContractX is built for how ASEAN contractors operate."</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Procore</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">Strengths vs Weaknesses</h2>
@@ -219,6 +231,12 @@
 
 <!-- ===== 7. ORACLE ACONEX PROFILE ===== -->
 <div class="slide bg-white" data-title="Oracle Aconex Profile" data-slug="aconex-profile">
+  <template data-sales-notes>
+    <h4>Quick Intel</h4>
+    <p><strong>Oracle Aconex</strong> excels at document control for mega-projects (airports, highways, LRT). Not a construction management tool per se.</p>
+    <p><strong>Oracle lock-in:</strong> Once on Aconex, customers get pulled into Oracle ERP, Primavera, and the Oracle ecosystem. Migration costs are astronomical.</p>
+    <p><strong>Key signal:</strong> If the prospect mentions government infrastructure projects, Aconex may be a requirement — don't compete, partner.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Competitor #2</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">Oracle Aconex</h2>
@@ -253,6 +271,11 @@
 
 <!-- ===== 8. ORACLE ACONEX ANALYSIS ===== -->
 <div class="slide bg-navy" data-title="Aconex Analysis" data-slug="aconex-analysis">
+  <template data-sales-notes>
+    <h4>Key Talking Points</h4>
+    <p><strong>On fit:</strong> "Aconex is designed for 10-year infrastructure projects. For commercial construction — condos, malls, offices — it's like using a sledgehammer to hang a picture."</p>
+    <p><strong>On support:</strong> "Oracle support is ticket-based, timezone-challenged for ASEAN. IFCA has on-the-ground teams."</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Oracle Aconex</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Strengths vs Weaknesses</h2>
@@ -363,19 +386,36 @@
     <table>
       <thead><tr><th>Feature</th><th>ContractX</th><th>Procore</th><th>Aconex</th><th>Local</th></tr></thead>
       <tbody>
-        <tr><td>Real-time cost control</td><td class="num">&#10003;</td><td class="num">&#10003;</td><td class="num">~</td><td class="num">—</td></tr>
-        <tr><td><span class="jargon" data-term="5-Way Match">5-way match</span> (PO-DO-Invoice)</td><td class="num">&#10003;</td><td class="num">~ basic</td><td class="num">~</td><td class="num">—</td></tr>
-        <tr><td>E-Invoice (<span class="jargon" data-term="LHDN">LHDN</span>)</td><td class="num">&#10003;</td><td class="num">—</td><td class="num">—</td><td class="num">~</td></tr>
-        <tr><td>Stakeholder apps</td><td class="num">&#10003;</td><td class="num">&#10003;</td><td class="num">~</td><td class="num">—</td></tr>
-        <tr><td>PropertyX integration</td><td class="num">&#10003;</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr data-detail="Live dashboard showing budget vs actual spending at project, phase, and line-item level. Prevents cost overruns by alerting before budgets are exceeded."><td>Real-time cost control</td><td class="num">&#10003;</td><td class="num">&#10003;</td><td class="num">~</td><td class="num">—</td></tr>
+        <tr data-detail="Matches Purchase Order → Delivery Order → Invoice → Payment → Contract to prevent duplicate payments, fraud, and reconciliation errors. Procore has basic PO matching only."><td><span class="jargon" data-term="5-Way Match">5-way match</span> (PO-DO-Invoice)</td><td class="num">&#10003;</td><td class="num">~ basic</td><td class="num">~</td><td class="num">—</td></tr>
+        <tr data-detail="Built-in Malaysian e-invoicing compliance. Mandatory deadline creates urgency — neither Procore nor Aconex supports LHDN, giving ContractX an immediate differentiator."><td>E-Invoice (<span class="jargon" data-term="LHDN">LHDN</span>)</td><td class="num">&#10003;</td><td class="num">—</td><td class="num">—</td><td class="num">~</td></tr>
+        <tr data-detail="Dedicated portals for clients, subcontractors, and suppliers to enter their own claims and progress updates. Reduces data entry errors and admin overhead."><td>Stakeholder apps</td><td class="num">&#10003;</td><td class="num">&#10003;</td><td class="num">~</td><td class="num">—</td></tr>
+        <tr data-detail="Seamless handoff from construction (ContractX) to property management (PropertyX) — unique value for developer-builders who construct and then operate their assets."><td>PropertyX integration</td><td class="num">&#10003;</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td>Plant &amp; machinery</td><td class="num">&#10003;</td><td class="num">~</td><td class="num">~</td><td class="num">—</td></tr>
         <tr><td>Mobile apps</td><td class="num">&#10003;</td><td class="num">&#10003;</td><td class="num">&#10003;</td><td class="num">~</td></tr>
         <tr><td>Local MY support</td><td class="num">&#10003;</td><td class="num">—</td><td class="num">—</td><td class="num">&#10003;</td></tr>
         <tr><td>Affordable (&lt;RM 200K/yr)</td><td class="num">&#10003;</td><td class="num">—</td><td class="num">—</td><td class="num">&#10003;</td></tr>
-        <tr><td>Fast implementation (&lt;16 wks)</td><td class="num">&#10003;</td><td class="num">—</td><td class="num">—</td><td class="num">&#10003;</td></tr>
+        <tr data-detail="ContractX go-live in 8–16 weeks. Procore ASEAN implementations run 3–6 months. Aconex implementations can take 6–12 months with Oracle consulting."><td>Fast implementation (&lt;16 wks)</td><td class="num">&#10003;</td><td class="num">—</td><td class="num">—</td><td class="num">&#10003;</td></tr>
         <tr><td>Enterprise-grade features</td><td class="num">&#10003;</td><td class="num">&#10003;</td><td class="num">&#10003;</td><td class="num">—</td></tr>
       </tbody>
     </table>
+  </div>
+  <div class="card-grid cols-3 mt-24" data-animate data-delay="4">
+    <div class="card">
+      <p class="label accent">ContractX</p>
+      <p class="text-md text-navy"><strong>RM 50K–150K</strong></p>
+      <p class="text-sm text-gray-600">per year · flat-rate licensing</p>
+    </div>
+    <div class="card">
+      <p class="label">Procore</p>
+      <p class="text-md text-navy"><strong>USD 12K–100K+</strong></p>
+      <p class="text-sm text-gray-600">per year (~RM 54K–450K) · ACV-based</p>
+    </div>
+    <div class="card">
+      <p class="label">Oracle Aconex</p>
+      <p class="text-md text-navy"><strong>USD 50K–200K+</strong></p>
+      <p class="text-sm text-gray-600">per year (~RM 225K–900K)</p>
+    </div>
   </div>
 </div>
 
@@ -406,6 +446,10 @@
       <p class="label accent">vs Spreadsheets</p>
       <p class="text-md text-dim mt-8">"Prevent overruns, automate compliance, reduce errors"</p>
       <p class="text-sm text-dim mt-8">Real-time tracking, stakeholder apps, audit-ready</p>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="label" style="color:#f87171">Walk Away When</p>
+      <p class="text-md text-dim mt-8">Customer is a global GC committed to Procore, needs mega-project document control (Aconex territory), or has an Oracle mandate from HQ</p>
     </div>
   </div>
 </div>
