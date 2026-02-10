@@ -283,21 +283,27 @@
 
 <script>
 const DECKS = [
+  // ── FMX Vincent Merged Segments ──
+  { product: 'fmx', tier: 'vincent-merged', name: 'Healthcare & Hospitals', desc: 'Hospitals, specialist centres, clinics, dialysis chains, dental groups. Broadened segment covering full healthcare.', href: 'fmx/healthcare-hospitals/', vincent: true, vincentNote: 'Vincent\'s merged segment — combines Healthcare + Clinics' },
+  { product: 'fmx', tier: 'vincent-merged', name: 'Commercial Real Estate', desc: 'Grade A towers, REITs, malls, campuses, smart buildings. OpEx per sqft + NOI story.', href: 'fmx/commercial-real-estate/', vincent: true, vincentNote: 'Vincent\'s renamed segment — broader than Corporate Offices' },
+  { product: 'fmx', tier: 'vincent-merged', name: 'Retail Chains & Warehouses', desc: 'Multi-outlet retail + distribution centres, dock equipment, cold storage. HQ visibility story.', href: 'fmx/retail-warehouses/', vincent: true, vincentNote: 'Vincent\'s merged segment — combines Retail Chains + Warehouses' },
+  { product: 'fmx', tier: 'vincent-merged', name: 'Education & Government', desc: 'Schools, campuses, government buildings, GLCs. Budget predictability + audit readiness.', href: 'fmx/education-government/', vincent: true, vincentNote: 'Vincent\'s merged segment — combines Schools + Government' },
+
   // ── FMX Enterprise ──
-  { product: 'fmx', tier: 'enterprise', name: 'Healthcare', desc: 'Hospitals, specialist centres, dialysis chains. EBITDA per bed story.', href: 'fmx/healthcare/', vincent: true, vincentNote: 'Vincent grouped as "Healthcare & Hospitals" with Clinics' },
-  { product: 'fmx', tier: 'enterprise', name: 'Corporate Offices', desc: 'Grade A towers, REITs, developers. OpEx per sqft story.', href: 'fmx/corporate-offices/', vincent: true, vincentNote: 'Vincent renamed to "Commercial Real Estate & Smart Cities"' },
+  { product: 'fmx', tier: 'enterprise', name: 'Healthcare', desc: 'Hospitals, specialist centres, dialysis chains. EBITDA per bed story.', href: 'fmx/healthcare/', vincent: true, vincentNote: 'Original focused deck — hospitals only' },
+  { product: 'fmx', tier: 'enterprise', name: 'Corporate Offices', desc: 'Grade A towers, REITs, developers. OpEx per sqft story.', href: 'fmx/corporate-offices/', vincent: true, vincentNote: 'Original focused deck — office towers only' },
   { product: 'fmx', tier: 'enterprise', name: 'Industrial', desc: 'Factories, warehouses, logistics hubs. Uptime and compliance.', href: null, vincent: true, vincentNote: 'Vincent renamed to "Manufacturing & Industrial Plants"' },
   { product: 'fmx', tier: 'enterprise', name: 'Data Centres', desc: 'Uptime SLA, PUE optimization, redundancy compliance.', href: null, vincent: true, vincentNote: 'Vincent renamed to "Data Centers & IT Infrastructure"' },
   { product: 'fmx', tier: 'enterprise', name: 'Retail Malls', desc: 'Tenant experience, CAM optimization, foot traffic impact.', href: null, vincent: false },
   { product: 'fmx', tier: 'enterprise', name: 'Hospitality', desc: 'Hotels, resorts, serviced apartments. RevPAR protection.', href: null, vincent: false },
 
   // ── FMX SME ──
-  { product: 'fmx', tier: 'sme', name: 'Clinics', desc: 'Critical asset uptime, compliance checks, PM schedules.', href: 'fmx/clinics/', vincent: true, vincentNote: 'Vincent grouped under "Healthcare & Hospitals"' },
+  { product: 'fmx', tier: 'sme', name: 'Clinics', desc: 'Critical asset uptime, compliance checks, PM schedules.', href: 'fmx/clinics/', vincent: true, vincentNote: 'Original focused deck — see also merged "Healthcare & Hospitals"' },
   { product: 'fmx', tier: 'sme', name: 'F&B Outlets', desc: 'Refrigeration safety, emergency call-outs, vendor dispatch.', href: 'fmx/fnb/', vincent: false },
-  { product: 'fmx', tier: 'sme', name: 'Warehouses', desc: 'Forklifts, dock equipment, downtime tracking, vendor scorecards.', href: 'fmx/warehouses/', vincent: true, vincentNote: 'Vincent grouped as "Retail Chains & Warehouses"' },
-  { product: 'fmx', tier: 'sme', name: 'Schools & Education', desc: 'Campus assets, safety compliance, scheduled maintenance.', href: 'fmx/schools/', vincent: true, vincentNote: 'Vincent grouped as "Education & Government"' },
+  { product: 'fmx', tier: 'sme', name: 'Warehouses', desc: 'Forklifts, dock equipment, downtime tracking, vendor scorecards.', href: 'fmx/warehouses/', vincent: true, vincentNote: 'Original focused deck — see also merged "Retail Chains & Warehouses"' },
+  { product: 'fmx', tier: 'sme', name: 'Schools & Education', desc: 'Campus assets, safety compliance, scheduled maintenance.', href: 'fmx/schools/', vincent: true, vincentNote: 'Original focused deck — see also merged "Education & Government"' },
   { product: 'fmx', tier: 'sme', name: 'Gyms & Clubs', desc: 'Equipment uptime, member experience, vendor management.', href: 'fmx/gyms/', vincent: false },
-  { product: 'fmx', tier: 'sme', name: 'Retail Chains', desc: 'Multi-outlet maintenance, response time, cost control.', href: 'fmx/retail/', vincent: true, vincentNote: 'Vincent grouped as "Retail Chains & Warehouses"' },
+  { product: 'fmx', tier: 'sme', name: 'Retail Chains', desc: 'Multi-outlet maintenance, response time, cost control.', href: 'fmx/retail/', vincent: true, vincentNote: 'Original focused deck — see also merged "Retail Chains & Warehouses"' },
 
   // ── FMX — Vincent's new segments (no deck yet) ──
   { product: 'fmx', tier: 'vincent-new', name: 'Energy & Utilities', desc: 'Power plants, oil & gas, pipelines. Safety and regulatory compliance.', href: null, vincent: true, vincentNote: 'New segment from Vincent' },
@@ -388,6 +394,7 @@ let activeFilter = 'all';
 
 function buildBadges(d) {
   let html = '';
+  if (d.product === 'fmx' && d.tier === 'vincent-merged') html += '<span class="badge vincent">Vincent segment</span>';
   if (d.product === 'fmx' && d.tier === 'enterprise') html += '<span class="badge enterprise">Enterprise</span>';
   if (d.product === 'fmx' && d.tier === 'sme') html += '<span class="badge sme">SME</span>';
   if (d.product === 'fmx' && d.tier === 'vincent-new') html += '<span class="badge new-segment">New segment</span>';
