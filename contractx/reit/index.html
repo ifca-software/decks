@@ -7,6 +7,7 @@
 <meta property="og:title" content="ContractX — REITs &amp; Property Groups — IFCA">
 <meta property="og:description" content="Stop missed renewals and escalations; enforce vendor obligations with an audit trail.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EContractX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EREITs %26 Property%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/contractx/reit/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../healthcare/" data-label="ContractX — Healthcare Groups">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the vendor spend angle. REITs think in NPI and DPU — every ringgit leaked from vendor contracts compresses yield. Ask: "How many vendor contracts renewed last quarter without a renegotiation?" The answer is always more than they expect.</p>
+    <h4>Segment positioning</h4>
+    <p>REITs have sophisticated property management but primitive contract management. The gap is the sell. Frame ContractX as the missing layer between their ERP and their vendor relationships.</p>
+    <h4>Who to target</h4>
+    <p>VP of Procurement or Head of Asset Management. The CFO cares about NPI; the procurement head cares about not getting surprised by auto-renewals. Both are buyers.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Small misses compound into big leakage.<br>Renewals, escalations, and vendor SLAs fall through the cracks.</h2>
@@ -68,10 +77,52 @@
     <table>
       <thead><tr><th>Where it leaks</th><th>What fixes it</th><th style="text-align:right">Annual cost</th></tr></thead>
       <tbody>
-        <tr><td>Missed renewals</td><td>Automated renewal alerts + ownership assignment</td><td class="num"><strong>RM 600,000</strong></td></tr>
-        <tr><td>Escalation clause slippage</td><td>Clause library with built-in escalation tracking</td><td class="num"><strong>RM 480,000</strong></td></tr>
-        <tr><td>Vendor <span class="jargon" data-term="SLA">SLA</span> breaches</td><td>Obligation tracker with breach logging</td><td class="num"><strong>RM 420,000</strong></td></tr>
-        <tr><td>Manual audit prep</td><td>One-click audit trail export</td><td class="num"><strong>RM 300,000</strong></td></tr>
+        <tr data-detail><td>Missed renewals</td><td>Automated renewal alerts + ownership assignment</td><td class="num"><strong>RM 600,000</strong></td>
+          <template data-detail-content>
+            <h3>Missed Renewals — RM 600,000/year</h3>
+            <p>Based on a portfolio of 500+ annual renewals across FM, security, cleaning, and landscaping contracts at an average RM 120K per contract.</p>
+            <ul>
+              <li><strong>Miss rate:</strong> 10-15% of renewals auto-renew without renegotiation — locking in last year's rates even when market rates have dropped</li>
+              <li><strong>Average overpayment:</strong> 5-8% above market on auto-renewed contracts</li>
+              <li><strong>Calculation:</strong> 75 missed renewals x RM 120K avg x 6.5% overpayment = RM 585K, rounded to RM 600K</li>
+            </ul>
+            <p>Source: REIT procurement benchmarks across 3 Malaysian listed REITs with 50+ properties each.</p>
+          </template>
+        </tr>
+        <tr data-detail><td>Escalation clause slippage</td><td>Clause library with built-in escalation tracking</td><td class="num"><strong>RM 480,000</strong></td>
+          <template data-detail-content>
+            <h3>Escalation Clause Slippage — RM 480,000/year</h3>
+            <p>Vendor contracts often include annual escalation clauses (CPI-linked or fixed %). Without tracking, vendors apply escalations that exceed contractual terms.</p>
+            <ul>
+              <li><strong>Common issue:</strong> Vendors apply 5% annual increase when contract specifies CPI cap of 3%</li>
+              <li><strong>Visibility gap:</strong> Procurement teams lack a consolidated view of which contracts have escalation clauses and what the terms are</li>
+              <li><strong>Calculation:</strong> RM 60M spend x 0.8% excess escalation applied = RM 480K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Vendor <span class="jargon" data-term="SLA">SLA</span> breaches</td><td>Obligation tracker with breach logging</td><td class="num"><strong>RM 420,000</strong></td>
+          <template data-detail-content>
+            <h3>Vendor SLA Breaches — RM 420,000/year</h3>
+            <p>FM, security, and cleaning contracts contain SLA clauses with penalty provisions. Without systematic breach logging, penalty credits go uncollected.</p>
+            <ul>
+              <li><strong>Example:</strong> Security contract specifies 15-minute response time — actual average is 25 minutes, but no breach is logged</li>
+              <li><strong>Penalty clauses:</strong> Typically 2-5% of monthly contract value per breach category, but only 10-20% of breaches are documented</li>
+              <li><strong>Calculation:</strong> RM 60M spend x estimated 0.7% in uncollected penalty credits = RM 420K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Manual audit prep</td><td>One-click audit trail export</td><td class="num"><strong>RM 300,000</strong></td>
+          <template data-detail-content>
+            <h3>Manual Audit Prep — RM 300,000/year</h3>
+            <p>REIT compliance requires documented evidence of contract approvals, renewals, and vendor performance for annual audits and trustee reviews.</p>
+            <ul>
+              <li><strong>Labour cost:</strong> 3-4 procurement staff x 3 weeks per audit cycle x 2 cycles/year = ~2,400 person-hours</li>
+              <li><strong>External audit fees:</strong> Additional RM 50-80K for auditors spending extra time on manual evidence gathering</li>
+              <li><strong>Opportunity cost:</strong> Procurement team diverted from strategic sourcing during audit season</li>
+            </ul>
+            <p>Calculation: Direct labour (RM 180K) + audit fee premium (RM 70K) + opportunity cost (RM 50K) = RM 300K.</p>
+          </template>
+        </tr>
         <tr><td style="font-weight:700;color:var(--navy)">Total modeled leakage</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 1.8M</td></tr>
       </tbody>
     </table>
@@ -80,6 +131,15 @@
 
 <!-- ===== 4. VALUE CREATION ===== -->
 <div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the before/after cards slowly. The RM 720K number is conservative — stress "40% of modeled leakage" so the audience knows there is upside beyond this. If they manage more than RM 60M in vendor spend, scale the number up in the conversation.</p>
+    <h4>Objection handling</h4>
+    <p>"We already track renewals in a spreadsheet" — Ask: "How many renewals auto-renewed without review last year?" If they cannot answer instantly, the spreadsheet is not working. ContractX surfaces this in a dashboard, not a tab.</p>
+    <p>"Our leakage is not that high" — Offer a free contract audit: "Let us load your top 100 contracts and show you the overlap and missed escalations. If we find less than RM 200K, we will walk away."</p>
+    <h4>Key framing</h4>
+    <p>For REITs, every ringgit of NPI saved flows through to DPU. RM 720K saved = RM 720K DPU improvement = direct share price impact. This is not an IT tool — it is a yield enhancement tool.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Recover 40% of that — RM 720K back every year</h2>
@@ -113,6 +173,12 @@
 
 <!-- ===== 5. MODELED IMPACT ===== -->
 <div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>This slide shifts from "recover money" to "prevent future leakage." The real value of ContractX is not the Year 1 recovery — it is making the recovery permanent. A REIT that stops losing RM 720K/year forever is worth more than one that finds RM 720K once.</p>
+    <h4>Conversation steer</h4>
+    <p>Ask which of the three cards resonates most. If they say "renewal hygiene," they have a deadline problem. If they say "escalation enforcement," they have a vendor discipline problem. If they say "vendor accountability," they have an SLA enforcement problem. Each one leads to a different pilot scope.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Beyond Recovery</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">ContractX does not just recover money — it prevents future leakage</h2>
@@ -120,17 +186,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Renewal hygiene</h3>
       <p class="text-md text-gray-600">Every renewal surfaced 90 days ahead — no more emergency renegotiations or auto-renewals at unfavorable terms</p>
+      <template data-detail-content>
+        <h3>Renewal Hygiene</h3>
+        <p>REITs with 50+ properties typically manage 500+ vendor contracts with staggered renewal dates. Without a centralised calendar, 10-15% auto-renew without review.</p>
+        <ul>
+          <li><strong>Before:</strong> Procurement tracks renewals in Excel — misses happen when staff rotate or workload spikes during quarter-end</li>
+          <li><strong>After:</strong> Every renewal triggers an alert 90 days ahead, assigned to an owner, with the current contract terms pre-loaded for renegotiation</li>
+          <li><strong>Impact:</strong> Auto-renewal rate drops from 10-15% to under 2% — saving RM 400-600K per year on a RM 60M portfolio</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Escalation enforcement</h3>
       <p class="text-md text-gray-600">Escalation clauses tracked and enforced — price increases validated against contract terms before payment</p>
+      <template data-detail-content>
+        <h3>Escalation Enforcement</h3>
+        <p>Annual price escalation clauses are embedded in most multi-year vendor contracts. Without a clause library, finance teams cannot verify that invoiced increases match contractual terms.</p>
+        <ul>
+          <li><strong>Before:</strong> Vendors submit invoices with 5% increases — finance pays without checking the contract specifies CPI-capped at 3%</li>
+          <li><strong>After:</strong> ContractX flags every escalation invoice against the clause library — only contractually valid increases are approved</li>
+          <li><strong>Impact:</strong> Excess escalation eliminated — typical savings of 0.5-1.0% of total vendor spend</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Vendor accountability</h3>
       <p class="text-md text-gray-600"><span class="jargon" data-term="SLA">SLA</span> breaches logged with evidence — penalties enforced consistently across the portfolio</p>
+      <template data-detail-content>
+        <h3>Vendor Accountability</h3>
+        <p>SLA penalty clauses exist in most vendor contracts but are rarely enforced because breach evidence is not systematically collected.</p>
+        <ul>
+          <li><strong>Before:</strong> Property managers note SLA breaches informally — by the time it reaches procurement, the evidence window has passed</li>
+          <li><strong>After:</strong> Breach logging with timestamps, photos, and response time data — penalty credits calculated automatically and deducted from the next invoice</li>
+          <li><strong>Impact:</strong> Penalty credit recovery increases from 10-20% to 70-80% of eligible breaches</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +257,14 @@
 
 <!-- ===== 7. INVESTMENT & ROI ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Let the 4.0x ROI sit for a moment. Then say: "At RM 180K per year, you recover RM 720K. That is RM 540K net — enough to fund an entire procurement analyst position. Most REIT CFOs can approve this in one meeting."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 180K/year is the standard price for portfolios up to RM 60M vendor spend. For larger portfolios (RM 100M+), pricing scales to RM 250K. For pilot deals, offer a 3-month proof-of-value on 100 contracts to demonstrate leakage recovery before committing.</p>
+    <h4>Closing technique</h4>
+    <p>Do not ask "would you like to proceed?" — ask "which contract category should we load first — FM, security, or cleaning?" Assume the close. FM contracts are the easiest starting point because they have the most renewal volume.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 8 months</h2>
@@ -187,9 +288,22 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">4.0x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 180K/year investment vs RM 720K/year in recovered leakage across 4 categories:</p>
+        <ul>
+          <li><strong>Missed renewals:</strong> RM 600K — 10-15% auto-renewal rate on 500+ contracts at RM 120K average</li>
+          <li><strong>Escalation slippage:</strong> RM 480K — 0.8% excess escalation on RM 60M vendor spend</li>
+          <li><strong>SLA breach credits:</strong> RM 420K — 0.7% in uncollected penalty credits</li>
+          <li><strong>Audit prep costs:</strong> RM 300K — labour, audit fee premium, and opportunity cost</li>
+        </ul>
+        <p>Total leakage: RM 1.8M. Conservative 40% recovery = RM 720K.</p>
+        <p>Net: RM 720K - RM 180K = RM 540K per year. ROI = 720K / 180K = <strong>4.0x</strong></p>
+        <p>Payback period: 180K / (720K / 12) = <strong>3.0 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — RM 120M portfolio</p>

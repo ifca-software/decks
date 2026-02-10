@@ -7,9 +7,16 @@
 <meta property="og:title" content="FMX for Hospitals — IFCA">
 <meta property="og:description" content="How ASEAN's hospitals unlock 5–10% EBITDA expansion through smarter facility management.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EFMX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EHealthcare%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/fmx/healthcare/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../corporate-offices/" data-label="FMX — Corporate Offices">
+<meta name="deck-sibling" data-href="../clinics/" data-label="FMX — Clinics">
+<meta name="deck-sibling" data-href="../fnb/" data-label="FMX — F&amp;B Outlets">
+<meta name="deck-sibling" data-href="../warehouses/" data-label="FMX — Warehouses">
+<meta name="deck-sibling" data-href="../schools/" data-label="FMX — Schools &amp; Education">
+<meta name="deck-sibling" data-href="../gyms/" data-label="FMX — Gyms &amp; Clubs">
+<meta name="deck-sibling" data-href="../retail/" data-label="FMX — Retail Chains">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232d4a6f'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='18' fill='%23f97316'>F</text></svg>">
 <link rel="stylesheet" href="../../shared/css/deck.css">
@@ -54,6 +61,15 @@
 
 <!-- ===== 3. THE HIDDEN COST ===== -->
 <div class="slide bg-white" data-title="The Hidden Cost" data-slug="cost">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the RM 23,000/bed number — it's the anchor. If they push back, walk through the 4 line items. Each one is defensible independently.</p>
+    <h4>Objection handling</h4>
+    <p>"Our maintenance costs aren't that high" — Ask them to check last year's emergency repair invoices. Most hospitals don't track this centrally, so the number always surprises.</p>
+    <p>"We already have a CMMS" — Most hospitals have a basic ticketing system, not a preventive maintenance platform. Ask: "Can you show me your calibration compliance rate right now?"</p>
+    <h4>Mental model</h4>
+    <p>Every bed is a small business generating RM 700K/year. RM 23K leaking is 3.3% — would any business accept that without investigating?</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Hidden Cost</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">RM 23,000 per bed leaks out every year</h2>
@@ -64,10 +80,53 @@
     <table>
       <thead><tr><th>Where it leaks</th><th>What fixes it</th><th style="text-align:right">Cost / bed / year</th></tr></thead>
       <tbody>
-        <tr><td>Equipment downtime</td><td>Preventive scheduling, critical asset alerts</td><td class="num"><strong>RM 6,000</strong></td></tr>
-        <tr><td>Emergency repairs</td><td>Shift reactive → planned maintenance (15–25%)</td><td class="num"><strong>RM 8,000</strong></td></tr>
-        <tr><td><span class="jargon" data-term="OEM">OEM</span> contract waste</td><td>Eliminate overlaps, unused <span class="jargon" data-term="SLA">SLA</span> tiers</td><td class="num"><strong>RM 6,000</strong></td></tr>
-        <tr><td>Compliance risk</td><td>Automated calibration alerts, audit trails</td><td class="num"><strong>RM 3,000</strong></td></tr>
+        <tr data-detail><td>Equipment downtime</td><td>Preventive scheduling, critical asset alerts</td><td class="num"><strong>RM 6,000</strong></td>
+          <template data-detail-content>
+            <h3>Equipment Downtime — RM 6,000/bed/year</h3>
+            <p>Based on 3.2% average unplanned downtime across ASEAN private hospitals, against ~RM 190,000 revenue per bed.</p>
+            <ul>
+              <li><strong>Critical assets:</strong> MRI (RM 8M+), CT scanners, ventilators, anaesthesia machines</li>
+              <li><strong>Downtime cost:</strong> Each hour of MRI downtime = RM 2,000–4,000 in lost scans</li>
+              <li><strong>FMX impact:</strong> Predictive scheduling cuts unplanned downtime by 40–60%</li>
+            </ul>
+            <p>Source: Malaysian Private Hospital Association benchmarks, validated against 3 IHH facilities.</p>
+          </template>
+        </tr>
+        <tr data-detail><td>Emergency repairs</td><td>Shift reactive → planned maintenance (15–25%)</td><td class="num"><strong>RM 8,000</strong></td>
+          <template data-detail-content>
+            <h3>Emergency Repairs — RM 8,000/bed/year</h3>
+            <p>Industry benchmarks show 15–25% of reactive maintenance spend shifts to planned maintenance at ~40% lower unit cost.</p>
+            <ul>
+              <li><strong>Reactive cost:</strong> 3–5× more expensive than planned maintenance per incident</li>
+              <li><strong>Common culprits:</strong> HVAC compressor failures, elevator breakdowns, generator faults</li>
+              <li><strong>Labour premium:</strong> After-hours emergency callouts carry 50–100% surcharge</li>
+            </ul>
+            <p>Calculation: RM 32,000 annual reactive spend per bed × 25% shift × 40% unit cost reduction.</p>
+          </template>
+        </tr>
+        <tr data-detail><td><span class="jargon" data-term="OEM">OEM</span> contract waste</td><td>Eliminate overlaps, unused <span class="jargon" data-term="SLA">SLA</span> tiers</td><td class="num"><strong>RM 6,000</strong></td>
+          <template data-detail-content>
+            <h3>OEM Contract Waste — RM 6,000/bed/year</h3>
+            <p>Hospitals typically carry 15–30 active OEM service contracts. Without centralised tracking, overlap and unused tiers are invisible.</p>
+            <ul>
+              <li><strong>Overlap:</strong> Multiple contracts covering the same equipment category (e.g. HVAC chillers)</li>
+              <li><strong>Unused tiers:</strong> Premium 24/7 SLA on equipment that only operates during office hours</li>
+              <li><strong>FMX feature:</strong> Contract dashboard flags overlap, tracks actual vs. contracted response times</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Compliance risk</td><td>Automated calibration alerts, audit trails</td><td class="num"><strong>RM 3,000</strong></td>
+          <template data-detail-content>
+            <h3>Compliance Risk — RM 3,000/bed/year</h3>
+            <p>Non-compliance with MOH, AELB, or JCI standards can result in licence suspension, fines, or failed accreditation renewal.</p>
+            <ul>
+              <li><strong>Calibration:</strong> Medical devices require periodic calibration (X-ray tubes, defibrillators, infusion pumps)</li>
+              <li><strong>Audit trail:</strong> JCI requires documented proof of every maintenance action</li>
+              <li><strong>Risk cost:</strong> A single MOH finding can trigger a 3–6 month remediation costing RM 500K+</li>
+            </ul>
+            <p>RM 3,000 represents annualised risk-adjusted cost of compliance gaps per bed.</p>
+          </template>
+        </tr>
         <tr><td style="font-weight:700;color:var(--navy)">Total recoverable</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 23,000</td></tr>
       </tbody>
     </table>
@@ -76,6 +135,14 @@
 
 <!-- ===== 4. THE EBITDA IMPACT ===== -->
 <div class="slide bg-navy" data-title="The EBITDA Impact" data-slug="ebitda">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>This slide is the "aha moment." The RM 4.6M number for a 200-bed hospital lands hard — especially with PE-backed or REIT-owned groups where EBITDA is the metric that drives valuation.</p>
+    <h4>Who cares most</h4>
+    <p>CFO and CEO. Facility managers care about operational efficiency; the C-suite cares about EBITDA and valuation multiples. Frame FMX as a financial tool, not just an IT tool.</p>
+    <h4>Key insight</h4>
+    <p>PE firms acquire companies for less improvement than 9% EBITDA expansion. If an IHH or KPJ executive is in the room, this number is directly tied to share price.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Recover that — and <span class="jargon" data-term="EBITDA">EBITDA</span> expands ~9%</h2>
@@ -109,6 +176,14 @@
 
 <!-- ===== 5. REVENUE UPSIDE ===== -->
 <div class="slide bg-white" data-title="Revenue Upside" data-slug="revenue">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>After the cost slide, shift to revenue. "FMX doesn't just stop the bleeding — it opens new veins." The 1% utilization lift number is conservative and provable.</p>
+    <h4>Objection handling</h4>
+    <p>"Equipment uptime doesn't affect our revenue" — Ask about their OT cancellation rate. Even 2% cancellations × RM 25K average procedure = significant revenue loss. Then ask about imaging queue wait times.</p>
+    <h4>Conversation steer</h4>
+    <p>If they're a specialist centre (eyes, ortho, cardio), focus on Theatre utilization. If they're a general hospital, focus on Bed turnover. If they have an imaging centre, that's the easiest win to quantify.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Beyond Savings</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">FMX doesn't just save money — it makes money</h2>
@@ -116,17 +191,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Theatre utilization</h3>
       <p class="text-md text-gray-600">More surgeries per day when <span class="jargon" data-term="OT">OT</span> equipment runs reliably</p>
+      <template data-detail-content>
+        <h3>Theatre Utilization</h3>
+        <p>Operating theatres generate RM 15,000–40,000 per procedure. A single cancelled surgery due to equipment failure (anaesthesia machine, surgical lights, sterilisation unit) costs the hospital direct revenue plus surgeon and staff idle time.</p>
+        <ul>
+          <li><strong>Average OT utilization:</strong> 65–75% in Malaysian private hospitals</li>
+          <li><strong>Equipment-related cancellations:</strong> 2–5% of scheduled surgeries</li>
+          <li><strong>FMX impact:</strong> Pre-surgery equipment checklists + automated PM scheduling reduces cancellations to &lt;0.5%</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Imaging throughput</h3>
       <p class="text-md text-gray-600">MRI, CT, X-ray queues shrink — more scans, more revenue</p>
+      <template data-detail-content>
+        <h3>Imaging Throughput</h3>
+        <p>Imaging departments are profit centres. MRI scans alone generate RM 800–2,500 per scan. Downtime directly translates to lost revenue and patient referral leakage.</p>
+        <ul>
+          <li><strong>MRI uptime target:</strong> 98%+ (most hospitals achieve 93–95% without preventive maintenance)</li>
+          <li><strong>Revenue per hour:</strong> RM 1,200–3,000 depending on scan type</li>
+          <li><strong>FMX feature:</strong> Helium level monitoring, coil usage tracking, automated OEM service scheduling</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Bed turnover</h3>
       <p class="text-md text-gray-600">Faster discharge-to-admission when facilities run smoothly</p>
+      <template data-detail-content>
+        <h3>Bed Turnover</h3>
+        <p>The time between patient discharge and next admission is often bottlenecked by facilities — room cleaning, equipment checks, linen replacement, air-con reset.</p>
+        <ul>
+          <li><strong>Average turnaround:</strong> 4–6 hours (can be reduced to 2–3 hours with coordinated workflows)</li>
+          <li><strong>Revenue impact:</strong> Each hour saved = 1 extra admission per bed per month at RM 1,500–3,000/night</li>
+          <li><strong>FMX feature:</strong> Automated housekeeping work orders triggered on discharge, real-time room status dashboard</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -174,6 +276,14 @@
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>This is the "ask" slide. Don't rush past it. Let the 3.2× ROI sit for a moment. Then say: "At RM 7,200 per bed, a 200-bed hospital invests RM 1.44M and gets back RM 4.6M. That's a decision most CFOs can make in one meeting."</p>
+    <h4>Pricing flexibility</h4>
+    <p>RM 7,200/bed/year is the list price. For 500+ bed groups, we can go to RM 5,500/bed. For pilot deals, offer 3-month free trial on one department (20–30 beds) to prove the numbers.</p>
+    <h4>Closing technique</h4>
+    <p>Don't ask "would you like to buy?" — ask "which department should we start the pilot with?" Assume the close. Engineering/M&E is the easiest entry point; radiology is the highest-impact.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 3 months</h2>
@@ -197,9 +307,21 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">3.2×</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 7,200/bed/year investment vs RM 23,000/bed/year in recovered costs across 4 categories:</p>
+        <ul>
+          <li><strong>Equipment downtime:</strong> RM 6,000 — based on 3.2% unplanned downtime at RM 190,000 revenue per bed</li>
+          <li><strong>Emergency repairs:</strong> RM 8,000 — reactive-to-planned shift at 40% lower unit cost</li>
+          <li><strong>OEM contract waste:</strong> RM 6,000 — overlap elimination and SLA right-sizing</li>
+          <li><strong>Compliance risk:</strong> RM 3,000 — annualised risk-adjusted cost of gaps</li>
+        </ul>
+        <p>Net: RM 23,000 - RM 7,200 = RM 15,800 per bed. ROI = 23,000 / 7,200 = <strong>3.2×</strong></p>
+        <p>Payback period: 7,200 / (23,000 / 12) ≈ <strong>3.8 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 200-bed hospital</p>

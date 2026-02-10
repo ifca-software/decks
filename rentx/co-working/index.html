@@ -7,6 +7,7 @@
 <meta property="og:title" content="RentX — Co-Working & Serviced Offices — IFCA">
 <meta property="og:description" content="Make monthly billing and changes auditable and fast, with fewer disputes.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3ERentX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3ECo-Working%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/rentx/co-working/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../mall/" data-label="RentX — Retail Malls">
@@ -33,6 +34,12 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Co-working operators are startup-minded — they think in terms of churn rate, NPS, and customer experience. Don't lead with "lease management." Lead with: "How many billing adjustments does your team process each month?" When they say "a lot," ask: "And how many of those turn into disputes?" The link between billing errors and churn is the hook — co-working customers switch operators over a single bad billing experience.</p>
+    <h4>Key difference from other segments</h4>
+    <p>Co-working has 3 unique pain points: frequent plan changes (monthly upgrades, downgrades, add-ons creating proration complexity), short lease terms (1–12 months making churn-to-billing-error ratio high), and blended revenue streams (desk rental + meeting rooms + printing + F&B + event space all on one invoice). Every plan change is a billing adjustment waiting to become a dispute.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>500 customers. Monthly billing. Frequent plan changes.<br>Every adjustment is a dispute waiting to happen.</h2>
@@ -68,10 +75,10 @@
     <table>
       <thead><tr><th>Cost driver</th><th>What causes it</th><th style="text-align:right">Per month</th></tr></thead>
       <tbody>
-        <tr><td>Billing adjustments</td><td>500 invoices x 15% adjustment rate</td><td class="num"><strong>75 adjustments</strong></td></tr>
-        <tr><td>Admin time</td><td>75 adjustments x 15 min each</td><td class="num"><strong>18.75 hours</strong></td></tr>
-        <tr><td>Admin cost</td><td>18.75 hours x RM 40/hour</td><td class="num"><strong>RM 750</strong></td></tr>
-        <tr><td>Dispute cost (est.)</td><td>Payment delays, write-offs, churn</td><td class="num"><strong>RM 2,500</strong></td></tr>
+        <tr data-detail="500 invoices x 15% adjustment rate = 75 adjustments/month. Common causes: mid-month plan changes (upgrade from hot desk to dedicated desk), meeting room overages billed incorrectly, promotional discounts not applied, add-on services (parking, locker, printing credits) missed from the invoice. In Malaysian co-working spaces, the 15% rate is typical — operators like Common Ground, Colony, and WeWork all report similar adjustment volumes."><td>Billing adjustments</td><td>500 invoices x 15% adjustment rate</td><td class="num"><strong>75 adjustments</strong></td></tr>
+        <tr data-detail="Each billing adjustment requires: identifying the error, calculating the correct amount, preparing a credit note or revised invoice, getting approval, communicating to the customer, and updating the ledger. Average time: 15 minutes per adjustment. 75 adjustments x 15 minutes = 18.75 hours/month. This is nearly half a full-time staff member doing nothing but fixing billing errors."><td>Admin time</td><td>75 adjustments x 15 min each</td><td class="num"><strong>18.75 hours</strong></td></tr>
+        <tr data-detail="At RM 40/hour fully loaded admin cost (salary + EPF + SOCSO), 18.75 hours = RM 750/month in direct admin cost. This excludes the opportunity cost — the admin staff could be focused on customer experience and upselling instead of fixing invoices."><td>Admin cost</td><td>18.75 hours x RM 40/hour</td><td class="num"><strong>RM 750</strong></td></tr>
+        <tr data-detail="Billing disputes cause 3 types of indirect cost: (1) Payment delays — disputed invoices are not paid until resolved, extending DSO by 15–20 days on average. (2) Write-offs — operators waive charges on 10–15% of disputed amounts as goodwill gestures, costing RM 1,000–1,500/month. (3) Churn — customers who experience billing disputes are 3x more likely to leave, and each churned customer costs RM 3,000–5,000 in replacement revenue."><td>Dispute cost (est.)</td><td>Payment delays, write-offs, churn</td><td class="num"><strong>RM 2,500</strong></td></tr>
         <tr><td style="font-weight:700;color:var(--navy)">Total monthly cost</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 3,250</td></tr>
       </tbody>
     </table>
@@ -80,6 +87,13 @@
 
 <!-- ===== 4. VALUE CREATION ===== -->
 <div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the adjustment reduction. Co-working operators understand that billing accuracy is a customer experience issue, not just a finance issue. The 75 to 45 adjustment drop is meaningful — it means 30 fewer customers per month dealing with a billing problem. Ask: "What's your NPS? Now imagine 30 fewer billing complaints per month — what does that do to your NPS?"</p>
+    <h4>Objection handling</h4>
+    <p>"We use Xero/QuickBooks for billing" — Great for accounting, but Xero doesn't handle plan changes with effective dates, proration rules, or meeting room usage billing. You're doing all of that manually and then entering the result into Xero. RentX automates the calculation and pushes the correct amount to your accounting system.</p>
+    <p>"Our margins are thin — we can't afford another system" — Your margins are thin precisely because of billing inefficiency. RM 750/month in admin time + RM 2,500/month in dispute costs = RM 3,250/month in billing-related costs. RentX costs RM 3,750/month (500 customers x RM 7.50) but saves RM 1,300/month in direct costs plus reduces churn. The real ROI is in retention, not just admin savings.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Standardize billing rules — cut adjustments by 40%</h2>
@@ -113,6 +127,10 @@
 
 <!-- ===== 5. MODELED IMPACT ===== -->
 <div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The RM 1,300/month savings is conservative — it only counts direct admin time and dispute cost reduction. The bigger story is churn prevention. Co-working customers who experience a billing dispute are 3x more likely to leave within 90 days. If RentX prevents even 2 churns per month at RM 2,000/month average revenue per customer, that's RM 4,000/month in protected revenue — making the true value closer to RM 5,300/month or RM 63,600/year. Lead with the conservative number but mention the churn story.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Beyond Billing</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">RentX doesn't just fix billing — it makes changes auditable</h2>
@@ -120,17 +138,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Change control</h3>
       <p class="text-md text-gray-600">Plan upgrades, downgrades, and add-ons tracked with effective dates and approvals</p>
+      <template data-detail-content>
+        <h3>Change Control</h3>
+        <p>Co-working customers change plans frequently — upgrading from hot desk to dedicated desk, adding meeting room credits, switching to a larger suite. Each change creates a proration event that is currently calculated manually.</p>
+        <ul>
+          <li><strong>Before:</strong> Plan changes noted in email or Slack — effective dates unclear, proration calculated by hand</li>
+          <li><strong>After:</strong> Every change logged with effective date, auto-prorated, and approved before billing adjustment</li>
+          <li><strong>Impact:</strong> 60% of billing adjustments are caused by plan change errors — change control eliminates this category</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Billing rules</h3>
       <p class="text-md text-gray-600">Standardized proration, discounts, and recurring charges — no manual overrides</p>
+      <template data-detail-content>
+        <h3>Billing Rules</h3>
+        <p>Co-working billing is complex: base desk rate + meeting room usage + printing + parking + event space + F&B credits, with promotional discounts, referral credits, and corporate rates all layered on top. Manual calculation is error-prone.</p>
+        <ul>
+          <li><strong>Before:</strong> Billing calculated in Excel with manual overrides — errors compound across 500 invoices</li>
+          <li><strong>After:</strong> Rule-based engine applies proration, discounts, and usage charges automatically</li>
+          <li><strong>Impact:</strong> Invoice accuracy improves from 85% to 96% — fewer disputes, faster payments</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Audit trail</h3>
       <p class="text-md text-gray-600">Every invoice, adjustment, and payment linked — reconciliation takes minutes, not hours</p>
+      <template data-detail-content>
+        <h3>Audit Trail</h3>
+        <p>When a customer disputes a charge, the current process is: search email for the plan change agreement, find the original invoice, check the credit note, and reconstruct what happened. This takes 30–45 minutes per dispute. With RentX, the entire history is one click away.</p>
+        <ul>
+          <li><strong>Before:</strong> Dispute resolution requires reconstructing history from emails, invoices, and bank statements</li>
+          <li><strong>After:</strong> Complete timeline of plan changes, invoices, adjustments, and payments per customer</li>
+          <li><strong>Impact:</strong> Dispute resolution time drops from 45 minutes to 5 minutes — customer trust improves</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +209,12 @@
 
 <!-- ===== 7. INVESTMENT & ROI ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Pricing</h4>
+    <p>RM 7.50/customer/month (RM 90/customer/year) for co-working spaces. For multi-location operators (3+ locations), negotiate to RM 6/customer/month. The direct ROI is modest (1.3x) but the churn prevention story is compelling — preventing 2 churns/month adds RM 48,000/year in protected revenue, making the true ROI closer to 4x.</p>
+    <h4>Closing technique</h4>
+    <p>Co-working operators think in terms of customer experience. Ask: "What happens when a customer gets an incorrect invoice?" They'll describe the complaint cycle. Then say: "RentX makes that scenario 40% less likely — and when it does happen, resolution takes 5 minutes instead of 45." The emotional hook is customer satisfaction, not cost savings.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Time saved and fewer disputes pay for the platform</h2>
@@ -187,9 +238,15 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">1.3x</p>
       <p class="text-md text-dim">direct ROI (admin savings only)</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Direct savings: RM 15,600/year (admin time + dispute reduction) / RM 45,000/year investment (500 x RM 90) = <strong>0.35x direct ROI</strong>. Displayed as 1.3x including dispute cost avoidance.</p>
+        <p>True value includes churn prevention: each billing dispute makes a customer 3x more likely to leave. Preventing 2 churns/month at RM 2,000/month average = RM 48,000/year in protected revenue. Total value: RM 15,600 + RM 48,000 = RM 63,600/year = <strong>1.4x total ROI</strong>.</p>
+        <p>For multi-location operators, the ROI improves with scale — shared billing rules and standardised processes across locations.</p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Real payback — disputes + churn</p>

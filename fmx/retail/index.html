@@ -7,8 +7,11 @@
 <meta property="og:title" content="FMX — Retail Chains — IFCA">
 <meta property="og:description" content="Standardize maintenance across outlets with one dashboard and fewer emergency call-outs.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EFMX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3ERetail Chains%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/fmx/retail/">
 <meta name="deck-base" content="../../">
+<meta name="deck-sibling" data-href="../healthcare/" data-label="FMX — Healthcare">
+<meta name="deck-sibling" data-href="../corporate-offices/" data-label="FMX — Corporate Offices">
 <meta name="deck-sibling" data-href="../clinics/" data-label="FMX — Clinics">
 <meta name="deck-sibling" data-href="../fnb/" data-label="FMX — F&amp;B Outlets">
 <meta name="deck-sibling" data-href="../warehouses/" data-label="FMX — Warehouses">
@@ -33,6 +36,12 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Retail chain operators think in multi-site terms. The pain isn't "one outlet has a problem" — it's "I have no visibility across 30 outlets." Lead with the HQ visibility angle: "Right now, your outlet managers each handle maintenance their own way. You have no idea which outlets have the most breakdowns, which vendors are fastest, or where you're overspending. FMX gives you a single dashboard for all 30 locations."</p>
+    <h4>Key difference for retail</h4>
+    <p>Retail chains have a unique scaling problem: each new outlet multiplies the maintenance chaos. The person who opened 5 outlets with WhatsApp management can't scale to 30 the same way. FMX is the process that scales — same PM schedule template deployed to every outlet automatically. Also, retail has brand consistency requirements: a broken sign or flickering light in one outlet damages the entire brand.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>30 outlets. 30 WhatsApp groups.<br>Zero visibility from HQ.</h2>
@@ -79,6 +88,12 @@
 
 <!-- ===== 4. WHERE FMX CREATES VALUE ===== -->
 <div class="slide bg-navy" data-title="Where FMX Creates Value" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the chain-wide multiplication. Retail operators immediately grasp "1 call-out per outlet per month x 30 outlets = 30 call-outs." Then show the reduction: "FMX cuts that by 30% = 9 fewer call-outs = RM 3,600/month saved — just from emergency premiums, before counting vendor cost standardization."</p>
+    <h4>Objection handling</h4>
+    <p>"Our outlet managers won't adopt a new system" — That's why FMX uses the same workflow they already know: take a photo, describe the issue, submit. The difference is it goes to a central dashboard instead of a WhatsApp group. Most outlet managers prefer it because they get faster vendor response and don't have to chase anyone. Adoption is typically 80%+ within 2 weeks because it's easier than the current process.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>One dashboard. Fewer call-outs. Consistent standards.</h2>
@@ -100,7 +115,7 @@
       </div>
     </div>
     <div class="col" data-animate data-delay="4">
-      <div class="card emphasis">
+      <div class="card emphasis" data-detail="30-outlet retail chain averaging 1 emergency call-out per outlet per month at RM 400 premium each = RM 12,000/month in emergency costs. FMX deploys standardized PM schedules across all outlets — air-con servicing, signage checks, electrical inspections, plumbing maintenance. This reduces chain-wide call-outs by ~30% (30 → 21), saving RM 3,600/month in premiums. Additional savings come from vendor cost standardization: benchmarking vendor pricing across outlets eliminates the 15–20% cost variance where the same repair costs different amounts at different locations.">
         <p class="label">Chain-wide savings</p>
         <p class="big-number accent">RM 3,600</p>
         <p class="text-md text-dim mt-8">saved per month from reduced emergency premiums</p>
@@ -112,6 +127,10 @@
 
 <!-- ===== 5. IMPACT ===== -->
 <div class="slide bg-white" data-title="Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>For retail chains, the most compelling metric isn't the per-outlet savings (RM 120/outlet/month is modest) — it's the HQ visibility and vendor standardization story. Ask: "Do you know right now which of your 30 outlets had the most breakdowns last month? Which vendor was slowest? Where you spent the most on repairs?" The answer is always "no." That's the hook — FMX makes the invisible visible, and visibility drives accountability.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">FMX standardizes maintenance across every outlet</h2>
@@ -119,17 +138,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Fewer call-outs</h3>
       <p class="text-md text-gray-600">Reduce emergency call-outs by <strong class="accent">20–40%</strong> with <span class="jargon" data-term="PM">PM</span> schedules rolled out to every outlet</p>
+      <template data-detail-content>
+        <h3>Fewer Call-outs</h3>
+        <p>Retail outlets have a standard set of assets that fail predictably: air-con units, signage lighting, electrical panels, and plumbing. Without PM schedules, each outlet handles maintenance reactively — waiting for the air-con to fail before calling a vendor.</p>
+        <ul>
+          <li><strong>Before:</strong> ~1 emergency call-out per outlet per month at RM 400 premium = RM 12,000/month for a 30-outlet chain</li>
+          <li><strong>After:</strong> ~0.7 call-outs per outlet per month with standardized PM schedules deployed chain-wide</li>
+          <li><strong>Impact:</strong> 9 fewer call-outs per month across the chain = RM 3,600 in avoided emergency premiums, plus reduced store disruption during trading hours</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Faster response</h3>
       <p class="text-md text-gray-600">Cut response time by <strong class="accent">30–50%</strong> with dispatch tracking and vendor <span class="jargon" data-term="SLA">SLA</span> monitoring</p>
+      <template data-detail-content>
+        <h3>Faster Response</h3>
+        <p>When an air-con fails at a retail outlet during a Saturday afternoon rush, the outlet manager WhatsApps their personal contact for a vendor. Different managers use different vendors, get different prices, and have no SLA tracking. FMX standardizes vendor dispatch across all outlets.</p>
+        <ul>
+          <li><strong>Before:</strong> Average 4–8 hours from report to vendor arrival, with no tracking or escalation</li>
+          <li><strong>After:</strong> Average 2–4 hours with central dispatch, pre-assigned vendors per region, and automatic SLA escalation</li>
+          <li><strong>Impact:</strong> Faster resolution means less disruption during trading hours — a critical retail metric, especially for outlets in malls with lease compliance requirements</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">HQ visibility</h3>
       <p class="text-md text-gray-600">One dashboard showing <strong class="accent">every outlet's</strong> response time, call-outs, and vendor performance in real time</p>
+      <template data-detail-content>
+        <h3>HQ Visibility</h3>
+        <p>Retail HQ teams currently rely on outlet managers to report maintenance issues — which means they only hear about problems when they escalate. FMX gives HQ a real-time dashboard across all outlets without any manual reporting.</p>
+        <ul>
+          <li><strong>Before:</strong> Zero HQ visibility into outlet maintenance — no data on call-out frequency, vendor performance, or repair costs per outlet</li>
+          <li><strong>After:</strong> Live dashboard showing every outlet's open work orders, response times, vendor scorecards, and monthly spend</li>
+          <li><strong>Impact:</strong> HQ can identify problem outlets (high call-out frequency), underperforming vendors (slow response), and cost outliers (expensive repairs) — enabling data-driven decisions instead of reactive management</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -163,6 +209,12 @@
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Pricing</h4>
+    <p>RM 350/outlet/month is the standard rate. For chains with 20+ outlets, negotiate to RM 250/outlet. For 50+ outlets, RM 200/outlet. Retail chains negotiate hard on per-unit pricing — be prepared to show the chain-wide value: "At RM 250/outlet x 30 outlets, you invest RM 7,500/month to save RM 3,600 in call-outs alone, plus vendor cost standardization and HQ visibility you can't put a price on."</p>
+    <h4>Closing technique</h4>
+    <p>Retail chains have ops managers who make decisions quickly when they see data. Offer: "Start with your 10 highest-maintenance outlets. Deploy standardized PM schedules and the HQ dashboard in one week. After 30 days, I'll show you a comparison report: call-out frequency, response time, and vendor spend — FMX outlets vs non-FMX outlets. The data will make the rollout decision for you."</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 3 months</h2>
@@ -186,9 +238,15 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">3.4x</p>
       <p class="text-md text-dim">return on investment (chain-wide)</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Chain-wide: RM 3,600 saved per month / (RM 350 x 30 outlets = RM 10,500 investment) = <strong>34% monthly return</strong>, or <strong>3.4x annualized ROI</strong>.</p>
+        <p>Payback period: RM 10,500 / RM 3,600 = <strong>2.9 months</strong>.</p>
+        <p>This calculation only includes emergency call-out savings. Additional value from vendor cost standardization (eliminating 15–20% price variance across outlets) and reduced store disruption during trading hours is not quantified but typically adds another <strong>RM 1,000–2,000/month</strong> chain-wide.</p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 50 outlets</p>

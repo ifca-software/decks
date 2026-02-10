@@ -7,6 +7,7 @@
 <meta property="og:title" content="HRX — BPO &amp; Call Centres — IFCA">
 <meta property="og:description" content="Reduce payroll admin and corrections at scale with standardized workflows for high-volume operations.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EHRX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EBPO%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/hrx/bpo/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../manufacturing/" data-label="HRX — Manufacturing &amp; Shift Work">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>BPO operations are built on efficiency metrics — cost per seat, utilisation rate, SLA compliance. Open with: "You measure every KPI for your clients' processes. What's your internal cost per payroll transaction?" BPO leaders understand unit economics intuitively — they just haven't applied it to their own HR function.</p>
+    <h4>Segment positioning</h4>
+    <p>BPO's unique pain is volume combined with shift complexity. 5,000 employees across multiple campaigns, each with different shift patterns, incentive structures, and KPI-based bonuses. The payroll team can't keep up manually — and every error erodes the thin margins BPO operates on. Position HRX as the system that brings the same process discipline to payroll that BPO applies to client operations.</p>
+    <h4>Who to target</h4>
+    <p>Head of HR or COO. In BPO companies, the COO owns both operational efficiency and people costs — they're the natural buyer. The Finance Director cares about payroll as a percentage of revenue (typically 55-65% in BPO). Even a 1% improvement in payroll accuracy drops straight to margin.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>5,000 employees. Shifts, incentives, adjustments.<br>Payroll admin doesn't scale.</h2>
@@ -68,10 +77,10 @@
     <table>
       <thead><tr><th>Metric</th><th>Current state</th><th style="text-align:right">Impact</th></tr></thead>
       <tbody>
-        <tr><td>Admin time</td><td>1 hour per employee per month</td><td class="num"><strong>5,000 hours / month</strong></td></tr>
-        <tr><td>Admin cost rate</td><td>RM 40 / hour</td><td class="num"><strong>RM 200,000 / month</strong></td></tr>
-        <tr><td>Payroll close time</td><td>Adjustments + approvals + disbursement</td><td class="num"><strong>5 days</strong></td></tr>
-        <tr><td>Correction rate</td><td>Manual adjustments per cycle</td><td class="num"><strong>High volume</strong></td></tr>
+        <tr data-detail="1 hour per employee per month in BPO covers: shift differential calculations (~15 min), incentive/KPI bonus processing (~20 min), attendance reconciliation (~10 min), and leave/claim processing (~15 min). BPO incentive structures are the biggest time sink — campaign-specific KPIs change frequently and create manual calculation overhead."><td>Admin time</td><td>1 hour per employee per month</td><td class="num"><strong>5,000 hours / month</strong></td></tr>
+        <tr data-detail="RM 40/hour is the blended cost of HR executives (RM 2,800-3,500/month), team leads involved in approvals (RM 3,500-5,000/month), and payroll specialists (RM 3,000-4,000/month). Includes employer statutory contributions: EPF 13%, SOCSO 1.75%, EIS 0.2%. BPO HR teams are lean — typically 1 HR person per 300-400 employees."><td>Admin cost rate</td><td>RM 40 / hour</td><td class="num"><strong>RM 200,000 / month</strong></td></tr>
+        <tr data-detail="5-day close in BPO is compressed by client billing deadlines. Most BPO contracts require monthly headcount and cost reports to clients within 5 business days of month-end. Late payroll = late client reporting = SLA breach. The real pressure is both internal (staff pay) and external (client reporting)."><td>Payroll close time</td><td>Adjustments + approvals + disbursement</td><td class="num"><strong>5 days</strong></td></tr>
+        <tr data-detail="'High volume' in BPO means 400-600 manual adjustments per cycle for 5,000 employees. This includes: shift swap corrections, incentive recalculations, attendance overrides, and campaign-transfer adjustments. Each adjustment takes 8-12 minutes. At 500 adjustments x 10 min = 83 hours of correction work per month."><td>Correction rate</td><td>Manual adjustments per cycle</td><td class="num"><strong>High volume</strong></td></tr>
         <tr><td style="font-weight:700;color:var(--navy)">Annual admin cost</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 2.4M</td></tr>
       </tbody>
     </table>
@@ -80,6 +89,15 @@
 
 <!-- ===== 4. WHERE HRX CREATES VALUE ===== -->
 <div class="slide bg-navy" data-title="Where HRX Creates Value" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the before/after: "5,000 admin hours down to 3,250 means your HR team gets 1,750 hours back every month. That's equivalent to eliminating 10 full-time admin positions — without firing anyone, just by removing the manual work." BPO leaders understand FTE savings viscerally.</p>
+    <h4>Objection handling</h4>
+    <p>"We already have an HRIS" — Ask what it does. Most BPO companies have a basic employee database, not a payroll automation system. The gap is between the HRIS and payroll — incentive calculations, shift differential rules, and campaign-specific bonus structures are still done in Excel. That's what HRX automates.</p>
+    <p>"35% reduction is too optimistic" — Break it down: self-service submissions eliminate 15% (leave, claims, schedule swap requests), automated incentive calculations eliminate 10% (campaign KPI → payroll), and attendance integration eliminates 10% (clock data → payroll without re-entry). Each component is individually conservative.</p>
+    <h4>Key value items</h4>
+    <p>For BPO, the top 3 admin time sinks are: (1) incentive/KPI bonus calculations across multiple campaigns, (2) shift differential and night shift allowance processing, (3) attendance reconciliation across multiple sites. HRX automates all three with configurable incentive rules, shift-based payroll rules, and direct attendance integration.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Automate the volume. Standardize the approvals.</h2>
@@ -113,6 +131,12 @@
 
 <!-- ===== 5. IMPACT ===== -->
 <div class="slide bg-white" data-title="Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>RM 840,000 in admin savings at 5,000 headcount. But the scalability story is even more powerful: "When you win a new client contract for 500 seats, your payroll admin doesn't scale linearly. With HRX, adding 500 employees takes zero additional HR headcount. Without HRX, you need to hire another payroll executive."</p>
+    <h4>Conversation steer</h4>
+    <p>If the prospect is growing or bidding for new contracts, frame HRX as a competitive advantage: "In your next client bid, you can factor in lower HR overhead per seat. That makes your per-seat pricing more competitive while protecting your margin." BPO companies live and die by per-seat economics.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">Scale payroll without scaling the payroll team</h2>
@@ -120,17 +144,47 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Admin time</h3>
       <p class="text-md text-gray-600">Down <strong class="accent">25-40%</strong> through automated approvals and self-service submissions</p>
+      <template data-detail-content>
+        <h3>Admin Time Reduction — 25-40%</h3>
+        <p>BPO payroll admin time is dominated by three activities that HRX automates:</p>
+        <ul>
+          <li><strong>Incentive calculations:</strong> Campaign-specific KPI bonuses are configured as rules. When AHT, CSAT, or FCR targets are met, the bonus calculates automatically from performance data — no more Excel formulas across 20 campaign spreadsheets.</li>
+          <li><strong>Shift differential processing:</strong> Night shift (10pm-6am), weekend, and public holiday rates are rules-based. A worker rostered for night shift gets the correct differential without manual payroll input.</li>
+          <li><strong>Self-service submissions:</strong> Employees submit leave, claims, and schedule swap requests via mobile. Team leads approve in batches. HR only handles exceptions.</li>
+        </ul>
+        <p>25% reduction in month 1 (self-service + attendance integration). 40% by month 3 when incentive rule automation is fully configured across all campaigns.</p>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Close time</h3>
       <p class="text-md text-gray-600">Down <strong class="accent">20-30%</strong> with standardized workflows across all sites and teams</p>
+      <template data-detail-content>
+        <h3>Payroll Close Time — 20-30% Faster</h3>
+        <p>BPO payroll close is pressured by both internal deadlines (staff salary) and external deadlines (client headcount and cost reports).</p>
+        <ul>
+          <li><strong>Automated data flow:</strong> Attendance, shift data, and incentive metrics flow into payroll automatically — no manual data entry from site managers</li>
+          <li><strong>Campaign-level processing:</strong> Process payroll by campaign in parallel instead of sequentially. Each campaign manager sees only their team's exceptions.</li>
+          <li><strong>Client reporting:</strong> Headcount and payroll cost reports for clients generate automatically from the same data — no separate report preparation step</li>
+        </ul>
+        <p>Target: 3.5-day close within 2 cycles. Critical for BPO companies with Day 5 client reporting SLAs.</p>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Corrections</h3>
       <p class="text-md text-gray-600">Fewer disputes when <strong class="accent">incentive rules and shift data</strong> flow automatically into payroll</p>
+      <template data-detail-content>
+        <h3>Correction Volume Reduction</h3>
+        <p>BPO payroll corrections are driven by three root causes — all addressed by automation:</p>
+        <ul>
+          <li><strong>Incentive disputes:</strong> When KPI bonuses are calculated manually, disputes are inevitable. With HRX, the calculation is transparent — employees can see exactly which KPIs they hit and how the bonus was derived.</li>
+          <li><strong>Shift swap errors:</strong> Agents frequently swap shifts. Without automation, the original shift rate may be applied instead of the actual shift worked. HRX recalculates based on actual clock data.</li>
+          <li><strong>Campaign transfer adjustments:</strong> When agents move between campaigns mid-month, their incentive structure changes. Manual processing often misses the transition date. HRX handles prorated incentives automatically.</li>
+        </ul>
+        <p>Typical correction volume drops 40-60% within 3 months. The remaining corrections are genuine edge cases, not system errors.</p>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +218,14 @@
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>BPO companies think in per-seat economics. Frame it accordingly: "RM 10 per employee per month. Your average cost per seat is RM 3,000-5,000/month. HRX is 0.2-0.3% of seat cost and saves 10x that in admin overhead. At 5,000 seats, you invest RM 600K and save RM 2.4M. Net RM 1.8M."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 120/employee/year is list price. For BPO companies with 8,000+ employees, we can go to RM 85/employee. For pilot deals, offer 2-month free on one campaign team (500-1,000 agents) to prove the admin time reduction and incentive calculation accuracy.</p>
+    <h4>Closing technique</h4>
+    <p>Ask: "Which campaign has the most complex incentive structure?" Start there — the incentive calculation automation will be the most dramatic proof point. If the campaign manager saves 20 hours/month on incentive processing alone, the COO will fund the enterprise rollout.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 6 months</h2>
@@ -187,9 +249,21 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">4x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 120/employee/year investment vs RM 480/employee/year in recovered admin costs:</p>
+        <ul>
+          <li><strong>Admin time savings:</strong> 35% reduction in 5,000 hours/month at RM 40/hour = RM 840K/year</li>
+          <li><strong>Incentive accuracy:</strong> Eliminates overpayment from manual KPI bonus calculation errors — estimated 1-2% of incentive spend recovered = RM 60K-120K/year</li>
+          <li><strong>Close time savings:</strong> Payroll team recovers 1.5 days/month. Faster client reporting improves SLA compliance, avoiding potential contractual penalties.</li>
+          <li><strong>Scalability:</strong> Each new 500-seat contract adds zero incremental HR headcount. Without HRX, each contract requires 1-2 additional payroll staff at RM 42K-54K/year each.</li>
+        </ul>
+        <p>Net: RM 480 - RM 120 = RM 360 per employee. ROI = 480 / 120 = <strong>4.0x</strong></p>
+        <p>Payback period: 120 / (480 / 12) = <strong>3 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 5,000 employees</p>

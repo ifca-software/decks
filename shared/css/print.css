@@ -29,16 +29,24 @@
     page-break-after: auto;
   }
 
-  .slide.fade-out, .slide.fade-in {
+  .slide.fade-out, .slide.fade-in,
+  .slide.slide-out-left, .slide.slide-in-right,
+  .slide.slide-out-right, .slide.slide-in-left {
     animation: none !important;
   }
 
   /* Hide UI chrome */
   .progress, .slide-counter, .menu-btn,
   .slide-menu, .menu-backdrop,
-  .deck-hint, .copy-btn, .presenter-bar {
+  .deck-hint, .copy-btn, .presenter-bar,
+  .detail-drawer, .detail-backdrop,
+  .notes-drawer, .notes-backdrop, .notes-btn {
     display: none !important;
   }
+
+  /* Hide detail affordances in print */
+  [data-detail]::after { display: none !important; }
+  [data-detail] { cursor: default; }
 
   /* Preserve dark backgrounds when printing */
   .bg-navy, .bg-gradient, .bg-gray, .bg-white {

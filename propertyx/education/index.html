@@ -7,6 +7,7 @@
 <meta property="og:title" content="PropertyX — Education Campuses — IFCA">
 <meta property="og:description" content="One campus performance view with budget control and reporting that does not depend on spreadsheets.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EPropertyX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EEducation%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/propertyx/education/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../reit/" data-label="PropertyX — REIT Portfolios">
@@ -33,6 +34,12 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>University administrators are cautious buyers — they operate on academic calendars and committee-driven decisions. Don't pitch to the facilities director alone. Lead with: "Your Vice-Chancellor asks for campus performance data. How long does it take to produce?" The 18-day answer is the opening. Frame PropertyX as a governance tool for university leadership, not just an FM system.</p>
+    <h4>Key difference for education</h4>
+    <p>Education campuses have 3 unique pressures: diverse building types (lecture halls, labs, libraries, residences, sports facilities) with different operational profiles, seasonal usage patterns (semester vs break), and accountability to university leadership and boards of governors who demand transparency. The 3 FTE doing manual reporting is an especially sore point because universities are under budget pressure and those staff could be doing actual facility management.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Reporting lags. Budgets are hard to govern.<br>Leadership waits.</h2>
@@ -68,10 +75,10 @@
     <table>
       <thead><tr><th>Metric</th><th>Current baseline</th><th style="text-align:right">Annual impact</th></tr></thead>
       <tbody>
-        <tr><td>Campus size</td><td>1,500,000 sqft across buildings</td><td class="num"><strong>—</strong></td></tr>
-        <tr><td><span class="jargon" data-term="OpEx">OpEx</span> per sqft / month</td><td>RM 4.00 blended</td><td class="num"><strong>RM 72.0M</strong></td></tr>
-        <tr><td>Reporting effort</td><td>3 FTE equivalent at RM 90K each</td><td class="num"><strong>RM 270K</strong></td></tr>
-        <tr><td style="font-weight:700;color:var(--navy)">Combined savings</td><td>Reporting automation + 0.5% OpEx reduction</td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 495K / year</td></tr>
+        <tr data-detail="1.5M sqft represents a mid-sized Malaysian university campus — e.g. Taylor's University Lakeside Campus, INTI International, or a Universiti Malaya faculty cluster. Larger campuses like UPM or UTM main campus run 3-5M sqft. Includes lecture halls, labs, libraries, admin buildings, residences, and sports facilities."><td>Campus size</td><td>1,500,000 sqft across buildings</td><td class="num"><strong>—</strong></td></tr>
+        <tr data-detail="RM 4.00/sqft/month is the blended average for Malaysian education campuses — slightly lower than commercial (RM 4.80) due to less intensive HVAC and simpler building services. Breakdown: utilities ~RM 1.60 (including lab equipment power), maintenance ~RM 1.00, security ~RM 0.60, cleaning ~RM 0.50, landscaping + grounds ~RM 0.30."><td><span class="jargon" data-term="OpEx">OpEx</span> per sqft / month</td><td>RM 4.00 blended</td><td class="num"><strong>RM 72.0M</strong></td></tr>
+        <tr data-detail="3 FTE at RM 90K each (RM 7,500/month including EPF/SOCSO). Typically: 1 senior facilities executive, 1 finance analyst, 1 admin coordinator. Their time split: ~70% data collection and report compilation, ~30% actual facility oversight. These staff could be managing maintenance quality instead of compiling spreadsheets."><td>Reporting effort</td><td>3 FTE equivalent at RM 90K each</td><td class="num"><strong>RM 270K</strong></td></tr>
+        <tr data-detail="Combined savings: RM 135K from 50% reporting effort reduction (1.5 FTE redeployed at RM 90K each) + RM 360K from 0.5% OpEx reduction on RM 72M (primarily utilities and maintenance optimization). Total RM 495K. The 0.5% OpEx target is conservative — universities with lab buildings often find 1%+ through utilities visibility alone." style="font-weight:700;color:var(--navy)"><td style="font-weight:700;color:var(--navy)">Combined savings</td><td>Reporting automation + 0.5% OpEx reduction</td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 495K / year</td></tr>
       </tbody>
     </table>
   </div>
@@ -79,6 +86,12 @@
 
 <!-- ===== 4. VALUE ===== -->
 <div class="slide bg-navy" data-title="Where PropertyX Creates Value" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Show the before/after on leadership pack cycle first — "18 days to 7 days" is immediately understood. Then transition to the combined savings: "RM 135K from freed-up reporting staff plus RM 360K from OpEx visibility. Total RM 495K — that's enough to fund a new lab or library renovation." Universities think in terms of what savings can fund.</p>
+    <h4>Objection handling</h4>
+    <p>"We don't have budget for new systems" — PropertyX saves RM 495K/year and costs RM 180K/year. It funds itself and generates RM 315K surplus. Ask: "What would you do with an extra RM 315K per year?" "Our facilities team isn't tech-savvy" — PropertyX is mobile-first. If your maintenance staff can use WhatsApp, they can use PropertyX. 90%+ adoption within 30 days is the norm because the interface is designed for facilities workers, not IT staff.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Standardized KPIs, automated packs — leadership gets answers</h2>
@@ -112,6 +125,12 @@
 
 <!-- ===== 5. IMPACT ===== -->
 <div class="slide bg-white" data-title="Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>Universities measure campus quality by student and faculty satisfaction — but facilities teams can't improve what they can't measure. When OpEx is visible by building and category, the facilities director can finally answer the VC's question: "Why is the engineering faculty's electricity bill 40% higher than the business school's?" Data-driven facility management is the pitch.</p>
+    <h4>What resonates</h4>
+    <p>The cycle time card resonates with facilities directors who dread the monthly reporting grind. The OpEx visibility card resonates with university CFOs and bursars who want to know where the money goes. The budget governance card resonates with VCs and boards who want accountability. Tailor to your audience.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">PropertyX turns campus reporting into a governed process</h2>
@@ -119,17 +138,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Cycle time</h3>
       <p class="text-md text-gray-600">Leadership packs generated from system data — <strong class="accent">30–60% faster</strong></p>
+      <template data-detail-content>
+        <h3>Cycle Time Reduction</h3>
+        <p>A typical Malaysian university campus has 20-40 buildings across academic, residential, sports, and administrative functions. Each building submits performance data separately — often via email or shared drives. The facilities team manually compiles everything into a leadership pack.</p>
+        <ul>
+          <li><strong>Before:</strong> 18 days per leadership pack — 5 days collecting data from building managers, 8 days manual Excel compilation, 5 days review and corrections with VCs office</li>
+          <li><strong>After:</strong> 7 days — building data flows automatically into standardized campus dashboards and report templates</li>
+          <li><strong>Impact:</strong> University leadership gets timely facility performance data. Maintenance issues at lecture halls or labs are flagged in days, not weeks.</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">OpEx visibility</h3>
       <p class="text-md text-gray-600">Category breakdowns by building reveal savings — <strong class="accent">0.5–1.0% reduction modeled</strong></p>
+      <template data-detail-content>
+        <h3>OpEx Visibility</h3>
+        <p>Universities typically track OpEx at the department budget level, not by building or category. This means a 40% higher electricity bill at the engineering faculty gets buried in the overall campus utility line. PropertyX breaks down OpEx by building, floor, and category — making waste visible for the first time.</p>
+        <ul>
+          <li><strong>Before:</strong> Campus-level OpEx reported as lump sums. No way to compare energy efficiency across buildings or identify which categories are overspending.</li>
+          <li><strong>After:</strong> Building-by-building OpEx breakdown — utilities, maintenance, cleaning, security, landscaping — with cross-building benchmarking.</li>
+          <li><strong>Impact:</strong> 0.5-1.0% OpEx reduction on RM 72M = RM 360K-720K annually. Most savings come from utilities optimization and maintenance scheduling improvements.</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Budget governance</h3>
       <p class="text-md text-gray-600">Approval workflows and real-time tracking — <strong class="accent">overruns flagged early</strong></p>
+      <template data-detail-content>
+        <h3>Budget Governance</h3>
+        <p>University facilities budgets are set annually by the bursar and approved by the board of governors. Once allocated, spending is tracked quarterly at best. Overruns surface too late to course-correct, often requiring emergency supplementary budget requests that embarrass the facilities director in board meetings.</p>
+        <ul>
+          <li><strong>Before:</strong> Budget variance reports arrive quarterly. Emergency maintenance (burst pipe, HVAC failure) approved ad hoc with no real-time budget visibility.</li>
+          <li><strong>After:</strong> Real-time budget tracking by building and category. Threshold alerts at 80%. Emergency spend requires digital approval with remaining budget shown.</li>
+          <li><strong>Impact:</strong> Facilities directors enter board reviews with data-backed explanations. Budget overruns caught 60+ days earlier, reducing supplementary budget requests.</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -163,32 +209,44 @@
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Pricing</h4>
+    <p>RM 180K/year for a 1.5M sqft campus. Works out to RM 0.01/sqft/month — position against the RM 4.00/sqft they spend on OpEx: "PropertyX costs 0.25% of your OpEx and recovers 0.5%+ in savings plus frees up 1.5 FTE." For multi-campus university groups, offer RM 150K/campus with a 3-campus minimum.</p>
+    <h4>Closing technique</h4>
+    <p>Universities operate on academic year budgets (usually set by March for the following academic year). Time the pitch for Q4 so it gets into next year's facilities budget. The hook: "Start with one building cluster during the semester break. By the time the new academic year starts, the leadership pack is already automated and the VC has real-time campus data." The 2.75x ROI is strong for education — emphasize the freed-up staff: "Those 1.5 FTE stop compiling reports and start managing facility quality."</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 6 months</h2>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32">
-    <div class="card metric" data-animate data-delay="3">
+    <div class="card metric" data-animate data-delay="3" data-detail="RM 180K/year = RM 15K/month for a 1.5M sqft campus. Covers campus-wide dashboards, building-by-building OpEx tracking, budget governance workflows, and automated leadership pack generation. Implementation, training, and first-semester onboarding included in Year 1.">
       <p class="label">You invest</p>
       <p class="value">RM 180K</p>
       <p class="text-sm text-dim">per year</p>
     </div>
-    <div class="card metric" data-animate data-delay="3">
+    <div class="card metric" data-animate data-delay="3" data-detail="RM 495K combined savings: RM 135K from reporting automation (1.5 FTE redeployed from data compilation to facility management) + RM 360K from 0.5% OpEx reduction on RM 72M (primarily utilities optimization in lab buildings and HVAC scheduling across lecture halls).">
       <p class="label">You save</p>
       <p class="value accent">RM 495K</p>
       <p class="text-sm text-dim">OpEx + reporting costs</p>
     </div>
-    <div class="card metric emphasis" data-animate data-delay="3">
+    <div class="card metric emphasis" data-animate data-delay="3" data-detail="RM 315K net gain = RM 495K savings minus RM 180K investment. For a university, RM 315K funds a new computer lab, a library renovation, or 3 research assistantships. Frame savings in terms the university values — academic impact, not just cost reduction.">
       <p class="label">You keep</p>
       <p class="value accent">RM 315K</p>
       <p class="text-sm text-dim">net gain per year</p>
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">2.75x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>RM 495K combined savings per year / RM 180K investment per year = <strong>2.75x ROI</strong>.</p>
+        <p>Payback period: RM 180K / (RM 495K / 12) ≈ <strong>4.4 months</strong> — pays for itself within a single semester.</p>
+        <p>Year 2 ROI improves as OpEx visibility drives deeper savings (0.8-1.0% reduction is typical once full building-level data is available for 12 months). Universities with energy-intensive buildings (labs, data rooms) often achieve 1.5%+ OpEx reduction, pushing ROI to 4-5x.</p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 3 campus clusters</p>

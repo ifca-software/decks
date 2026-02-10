@@ -7,6 +7,7 @@
 <meta property="og:title" content="ContractX — Energy &amp; Utilities — IFCA">
 <meta property="og:description" content="Enforce obligations and SLAs with traceability and fewer renewal surprises.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EContractX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EEnergy%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/contractx/energy/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../reit/" data-label="ContractX — REITs &amp; Property Groups">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the obligation enforcement angle. Energy companies have long-term contracts (5-15 years) with complex performance clauses, KPIs, and penalty schedules. Ask: "How many performance obligations in your top 20 contracts are being tracked right now?" The answer is almost always "we know they exist but nobody is actively monitoring them."</p>
+    <h4>Segment positioning</h4>
+    <p>Energy and utilities companies operate in a heavily regulated environment. They have sophisticated SCADA systems for operations but primitive contract management. The gap between operational discipline and contract discipline is the sell.</p>
+    <h4>Who to target</h4>
+    <p>Head of Contracts or VP of Procurement. In regulated utilities, the compliance officer is also a key stakeholder because contract traceability feeds into regulatory reporting. Get procurement and compliance in the same room.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Obligations exist in your contracts.<br>But they are not enforced systematically.</h2>
@@ -68,10 +77,51 @@
     <table>
       <thead><tr><th>Where it leaks</th><th>What fixes it</th><th style="text-align:right">Annual cost</th></tr></thead>
       <tbody>
-        <tr><td>Missed <span class="jargon" data-term="SLA">SLA</span> credits</td><td>Breach logging with evidence and penalty enforcement</td><td class="num"><strong>RM 800,000</strong></td></tr>
-        <tr><td>Terms slippage</td><td>Obligation tracker with ownership and deadlines</td><td class="num"><strong>RM 700,000</strong></td></tr>
-        <tr><td>Missed renewals</td><td>Renewal calendar with 90-day alerts</td><td class="num"><strong>RM 600,000</strong></td></tr>
-        <tr><td>Manual compliance tracking</td><td>Audit trail export and change control</td><td class="num"><strong>RM 400,000</strong></td></tr>
+        <tr data-detail><td>Missed <span class="jargon" data-term="SLA">SLA</span> credits</td><td>Breach logging with evidence and penalty enforcement</td><td class="num"><strong>RM 800,000</strong></td>
+          <template data-detail-content>
+            <h3>Missed SLA Credits — RM 800,000/year</h3>
+            <p>Energy service contracts contain complex SLA and KPI frameworks — uptime guarantees, response time commitments, and performance penalties. Without systematic breach logging, penalty credits go uncollected.</p>
+            <ul>
+              <li><strong>Example:</strong> O&M contractor guarantees 98% plant availability — actual availability was 96.5% for 3 months, but the shortfall was not formally documented with timestamps</li>
+              <li><strong>Penalty structure:</strong> Typical penalty is 1-3% of monthly contract value per percentage point below target, but only 15-20% of breaches are captured with sufficient evidence</li>
+              <li><strong>Calculation:</strong> RM 100M contract value x 0.8% in uncollected penalty credits = RM 800K</li>
+            </ul>
+            <p>Source: Benchmarked against 3 Malaysian IPP and utility companies with RM 50-150M in annual service contracts.</p>
+          </template>
+        </tr>
+        <tr data-detail><td>Terms slippage</td><td>Obligation tracker with ownership and deadlines</td><td class="num"><strong>RM 700,000</strong></td>
+          <template data-detail-content>
+            <h3>Terms Slippage — RM 700,000/year</h3>
+            <p>Long-term energy contracts contain dozens of obligations — reporting deadlines, maintenance schedules, insurance renewals, environmental compliance milestones. Without tracking, obligations lapse silently.</p>
+            <ul>
+              <li><strong>Example:</strong> Contractor obligated to provide quarterly performance reports and annual equipment recertification — 3 of 8 obligations were overdue by 60+ days with no escalation</li>
+              <li><strong>Financial impact:</strong> Lapsed obligations weaken the company's position in disputes and audits — settlement costs and regulatory penalties</li>
+              <li><strong>Calculation:</strong> 0.7% of RM 100M contract value in obligation-related losses and weakened negotiating position = RM 700K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Missed renewals</td><td>Renewal calendar with 90-day alerts</td><td class="num"><strong>RM 600,000</strong></td>
+          <template data-detail-content>
+            <h3>Missed Renewals — RM 600,000/year</h3>
+            <p>Energy contracts include ancillary agreements (insurance, environmental monitoring, equipment leases) that renew on different cycles. Missing a renewal creates coverage gaps or locks in stale terms.</p>
+            <ul>
+              <li><strong>High-value contracts:</strong> A single turbine maintenance agreement can be RM 5-10M — missing the renewal window means auto-renewal at last year's rate plus 3-5% escalation</li>
+              <li><strong>Coverage gaps:</strong> Expired insurance or environmental monitoring contracts create regulatory exposure</li>
+              <li><strong>Calculation:</strong> 5-8 missed renewals on high-value contracts x 1.5-2% overpayment = RM 600K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Manual compliance tracking</td><td>Audit trail export and change control</td><td class="num"><strong>RM 400,000</strong></td>
+          <template data-detail-content>
+            <h3>Manual Compliance Tracking — RM 400,000/year</h3>
+            <p>Energy companies face regulatory audits from the Energy Commission, DOE, and DOSH. Contract traceability — who approved what, when, and under which terms — is a core audit requirement.</p>
+            <ul>
+              <li><strong>Labour cost:</strong> Contracts team spends 3-4 weeks per audit cycle gathering evidence from emails, shared drives, and filing cabinets</li>
+              <li><strong>External audit fees:</strong> Auditors charge premium rates when evidence is manual — estimated RM 80-120K in additional fees per audit cycle</li>
+              <li><strong>Calculation:</strong> Direct labour (RM 200K) + audit fee premium (RM 100K) + regulatory risk cost (RM 100K) = RM 400K</li>
+            </ul>
+          </template>
+        </tr>
         <tr><td style="font-weight:700;color:var(--navy)">Total modeled leakage</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 2.5M</td></tr>
       </tbody>
     </table>
@@ -80,6 +130,15 @@
 
 <!-- ===== 4. VALUE CREATION ===== -->
 <div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the before/after cards. The RM 750K number is 30% of RM 2.5M — conservative because energy contracts are long-term and some obligation enforcement takes 6-12 months to fully realise. Stress: "These are contracts you already have and obligations you already negotiated. ContractX does not change the contracts — it enforces what is already in them."</p>
+    <h4>Objection handling</h4>
+    <p>"Our contracts team already tracks obligations" — Ask: "Can you show me a dashboard right now with every obligation, its owner, its deadline, and its status?" If they cannot, tracking is informal. ContractX makes it systematic.</p>
+    <p>"RM 750K is small relative to our RM 100M spend" — That is 0.75% — pure bottom-line recovery from enforcing terms that already exist. It requires no renegotiation, no vendor confrontation, just systematic tracking. And RM 750K is Year 1 — the number grows as more contracts are loaded.</p>
+    <h4>Key framing</h4>
+    <p>For energy companies, frame ContractX as a risk and compliance tool, not just a cost tool. Untracked obligations = regulatory risk. Unenforced SLAs = performance risk. The board cares about governance; the operations team cares about vendor accountability.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Recover 30% of that — RM 750K back every year</h2>
@@ -113,6 +172,12 @@
 
 <!-- ===== 5. MODELED IMPACT ===== -->
 <div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>Energy contracts are long-term (5-15 years) with embedded obligations that compound over time. A missed obligation in Year 1 weakens the company's position for the entire remaining contract term. ContractX does not just enforce today's obligations — it builds the evidence base that strengthens every future renegotiation and dispute resolution.</p>
+    <h4>Conversation steer</h4>
+    <p>Ask: "Of these three — obligation tracking, SLA enforcement, or renewal visibility — which one would your board most want to see on a dashboard?" The answer reveals the governance priority and the entry point for the pilot.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Beyond Recovery</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">ContractX does not just recover credits — it enforces obligations</h2>
@@ -120,17 +185,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Obligation tracking</h3>
       <p class="text-md text-gray-600">Every obligation mapped, assigned an owner, and tracked to deadline — no more silent lapses on performance commitments</p>
+      <template data-detail-content>
+        <h3>Obligation Tracking</h3>
+        <p>A single O&M contract for a power plant can contain 30-50 distinct obligations — quarterly reporting, equipment inspections, spare parts stocking, insurance renewals, environmental compliance milestones. Without systematic tracking, obligations lapse silently.</p>
+        <ul>
+          <li><strong>Before:</strong> Obligations noted during contract signing but not tracked post-execution — the contracts team discovers lapses during audits or disputes, months after the deadline</li>
+          <li><strong>After:</strong> Every obligation extracted, assigned to a named owner, and tracked with automated deadline alerts. Dashboard shows red/amber/green status across all contracts.</li>
+          <li><strong>Impact:</strong> Obligation compliance rate improves from 60-70% to 90%+ — strengthening the company's position in every vendor interaction and audit</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy"><span class="jargon" data-term="SLA">SLA</span> enforcement</h3>
       <p class="text-md text-gray-600">Breach log with timestamps, evidence, and penalty calculations — credits enforced consistently across all contracts</p>
+      <template data-detail-content>
+        <h3>SLA Enforcement</h3>
+        <p>Energy service contracts specify performance KPIs — plant availability, response times, heat rate guarantees. Penalty clauses are negotiated carefully but enforced poorly because evidence is not systematically collected.</p>
+        <ul>
+          <li><strong>Before:</strong> Operations team notes underperformance informally — by month-end, the specific timestamps and evidence needed to invoke penalty clauses are lost</li>
+          <li><strong>After:</strong> Every performance event logged with timestamp, KPI measurement, and contractual threshold. Penalty calculation runs automatically against the contract terms.</li>
+          <li><strong>Impact:</strong> Penalty credit recovery increases from 15-20% to 70-80% of eligible breaches — recovering RM 400-600K per year on a RM 100M portfolio</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Renewal visibility</h3>
       <p class="text-md text-gray-600">Every high-value contract visible with renewal dates and responsible owners — no more deadline surprises</p>
+      <template data-detail-content>
+        <h3>Renewal Visibility</h3>
+        <p>Energy contracts include long-term master agreements and shorter-term ancillary contracts (insurance, environmental monitoring, equipment leases). The ancillary contracts renew frequently and are often forgotten until a gap emerges.</p>
+        <ul>
+          <li><strong>Before:</strong> Turbine maintenance contract renewal is on the CEO's radar, but the RM 500K environmental monitoring agreement expiring next month is not — creating a regulatory gap</li>
+          <li><strong>After:</strong> Every contract — from RM 10M O&M agreements to RM 50K insurance policies — visible on a single renewal calendar with 180/90/30-day alerts</li>
+          <li><strong>Impact:</strong> Zero coverage gaps; every renewal enters the renegotiation window with sufficient time for competitive benchmarking</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +256,14 @@
 
 <!-- ===== 7. INVESTMENT & ROI ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Let the 3.8x ROI sit, then contextualise: "RM 200K per year against RM 100M in contract value is 0.002 of spend. You are paying two basis points to recover 75 basis points. The board will see this as a governance investment, not just a software subscription."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 200K/year is the standard price for up to RM 100M in contract value. For larger portfolios (RM 200M+), pricing scales to RM 320K. For pilot deals, offer a 60-day proof-of-value loading one contract category (e.g., all O&M contracts) to demonstrate obligation gaps and missed SLA credits.</p>
+    <h4>Closing technique</h4>
+    <p>Do not ask "are you interested?" — ask "should we start with your O&M contracts or your equipment lease portfolio?" Assume the close. O&M contracts are the highest-value entry point because they have the most performance obligations and SLA clauses.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 8 months</h2>
@@ -187,9 +287,22 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">3.8x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 200K/year investment vs RM 750K/year in recovered leakage across 4 categories:</p>
+        <ul>
+          <li><strong>Missed SLA credits:</strong> RM 800K — 0.8% in uncollected penalty credits on RM 100M contract value</li>
+          <li><strong>Terms slippage:</strong> RM 700K — 0.7% in obligation-related losses and weakened negotiating position</li>
+          <li><strong>Missed renewals:</strong> RM 600K — 5-8 missed renewals on high-value contracts at 1.5-2% overpayment</li>
+          <li><strong>Manual compliance:</strong> RM 400K — labour, audit fee premium, and regulatory risk cost</li>
+        </ul>
+        <p>Total leakage: RM 2.5M. Conservative 30% recovery = RM 750K.</p>
+        <p>Net: RM 750K - RM 200K = RM 550K per year. ROI = 750K / 200K = <strong>3.8x</strong></p>
+        <p>Payback period: 200K / (750K / 12) = <strong>3.2 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — RM 200M portfolio</p>

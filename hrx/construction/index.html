@@ -7,6 +7,7 @@
 <meta property="og:title" content="HRX — Construction — IFCA">
 <meta property="og:description" content="Standardize approvals and payroll exceptions across sites with a clear audit trail.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EHRX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EConstruction%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/hrx/construction/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../manufacturing/" data-label="HRX — Manufacturing &amp; Shift Work">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Construction HR deals with a uniquely fragmented workforce — local workers, foreign workers, subcontractor labour, and project-based assignments. Open with: "How many of your workers are on different site allowance rates right now? And how confident are you that payroll is applying the right rate to each one?" This question always reveals gaps.</p>
+    <h4>Segment positioning</h4>
+    <p>Construction's unique pain is foreign worker compliance. Malaysia's construction workforce is 60-70% foreign labour, each with FWCMS registration, SOCSO Foreign Worker coverage, Levy payments, and passport/permit tracking. A single compliance violation can trigger a site shutdown. Position HRX as the system that manages both payroll accuracy and worker compliance in one place.</p>
+    <h4>Who to target</h4>
+    <p>Group HR Manager or HR Director. In construction companies, the payroll team is often 2-3 people managing 800-2,000 workers across 10-20 sites. The Project Director cares about site-level cost control. The CFO cares about foreign worker levy compliance and SOCSO audit risk.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>20 sites. 20 different ways to track attendance.<br>Payroll pays the price every cycle.</h2>
@@ -68,10 +77,10 @@
     <table>
       <thead><tr><th>Metric</th><th>Current state</th><th style="text-align:right">Impact</th></tr></thead>
       <tbody>
-        <tr><td>Active sites</td><td>Projects running concurrently</td><td class="num"><strong>20 sites</strong></td></tr>
-        <tr><td>Exception rate</td><td>12% of headcount per cycle</td><td class="num"><strong>144 exceptions / month</strong></td></tr>
-        <tr><td>Cost per exception</td><td>Admin time + correction effort</td><td class="num"><strong>RM 60</strong></td></tr>
-        <tr><td>Monthly exception cost</td><td>144 x RM 60</td><td class="num"><strong>RM 8,640</strong></td></tr>
+        <tr data-detail="20 concurrent sites is mid-range for a Malaysian construction company. Large players like Gamuda or IJM may run 40-60 sites simultaneously. Each site operates semi-independently with its own supervisor, which is why payroll data arrives in inconsistent formats."><td>Active sites</td><td>Projects running concurrently</td><td class="num"><strong>20 sites</strong></td></tr>
+        <tr data-detail="12% exception rate in construction is driven by: site allowance changes when workers move between projects (4%), attendance discrepancies from remote sites without biometric (4%), and foreign worker levy/permit-related payroll adjustments (4%). Sites without digital attendance can see 18-20%."><td>Exception rate</td><td>12% of headcount per cycle</td><td class="num"><strong>144 exceptions / month</strong></td></tr>
+        <tr data-detail="RM 60 per exception covers: site supervisor verification call/WhatsApp (~15 min at RM 30/hr), HR executive processing (~20 min at RM 25/hr), payroll recalculation (~25 min at RM 30/hr). For foreign worker exceptions, add immigration document verification time — these can take 30+ minutes each."><td>Cost per exception</td><td>Admin time + correction effort</td><td class="num"><strong>RM 60</strong></td></tr>
+        <tr data-detail="144 x RM 60 = RM 8,640/month. This excludes the compliance risk cost: a single foreign worker with expired permit found on site during a DOSH or immigration raid can result in RM 10,000-50,000 compound per worker. HRX's permit expiry alerts prevent this entirely."><td>Monthly exception cost</td><td>144 x RM 60</td><td class="num"><strong>RM 8,640</strong></td></tr>
         <tr><td style="font-weight:700;color:var(--navy)">Annual exception cost</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 103,680</td></tr>
       </tbody>
     </table>
@@ -80,6 +89,15 @@
 
 <!-- ===== 4. WHERE HRX CREATES VALUE ===== -->
 <div class="slide bg-navy" data-title="Where HRX Creates Value" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the before/after: "144 exceptions down to 86 means your HR team processes 58 fewer corrections every month. But the real win is compliance — every foreign worker's permit status, SOCSO coverage, and levy payment is tracked automatically."</p>
+    <h4>Objection handling</h4>
+    <p>"Our sites are too remote for a cloud system" — HRX mobile works offline. Supervisors submit attendance data when they have connectivity — it syncs automatically. Most construction sites have at least 3G coverage. For truly remote sites, batch upload from the site office at the end of each day.</p>
+    <p>"We use subcontractor labour, not direct employees" — HRX tracks both. Subcontractor workers can be registered with limited profiles for attendance and site allocation tracking. When DOSH or immigration asks "who was on site on this date?", you have the answer regardless of employment relationship.</p>
+    <h4>Key value items</h4>
+    <p>For construction, the top 3 pain points are: (1) site allowance calculation errors when workers move between projects, (2) foreign worker compliance documentation, (3) site-level attendance data arriving late or in inconsistent formats. HRX automates all three with project-based allowance rules, permit tracking with expiry alerts, and mobile attendance capture.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Standard approvals across every site</h2>
@@ -113,6 +131,12 @@
 
 <!-- ===== 5. IMPACT ===== -->
 <div class="slide bg-white" data-title="Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The RM 41,760 in exception savings is the visible cost. The invisible cost is compliance risk — a single immigration raid finding workers with expired permits can cost RM 50,000-500,000 in compounds, plus project delays. "HRX doesn't just save you RM 41K — it prevents a RM 500K compliance event."</p>
+    <h4>Conversation steer</h4>
+    <p>If the prospect has a large foreign workforce (60%+ of headcount), pivot to FWCMS and permit management: "Right now, who in your company knows exactly how many permits expire in the next 30 days? With HRX, that's a dashboard — and it sends alerts 90, 60, and 30 days before expiry."</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">Fewer disputes, faster close, site-level visibility</h2>
@@ -120,17 +144,47 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Exception volume</h3>
       <p class="text-md text-gray-600">Down <strong class="accent">25-45%</strong> through standardized approvals per site supervisor</p>
+      <template data-detail-content>
+        <h3>Exception Volume Reduction — 25-45%</h3>
+        <p>Construction payroll exceptions cluster in three areas: site allowance errors (35%), attendance discrepancies (40%), and foreign worker adjustments (25%).</p>
+        <ul>
+          <li><strong>Site allowances:</strong> Workers assigned to Project A get Site Allowance A. When they move to Project B, the allowance changes automatically based on project assignment — no manual HR update needed.</li>
+          <li><strong>Attendance:</strong> Mobile check-in with GPS verification replaces paper sign-in sheets. Supervisors confirm attendance digitally. Missing punches are flagged same-day, not at month-end.</li>
+          <li><strong>Foreign worker adjustments:</strong> Levy deductions, SOCSO Foreign Worker rates, and permit-related deductions are rules-based. When a permit is renewed, the system updates the levy category automatically.</li>
+        </ul>
+        <p>25% reduction is achievable in month 1. 45% typical by month 4 once all sites are live on mobile attendance.</p>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Close time</h3>
       <p class="text-md text-gray-600">Down <strong class="accent">20-30%</strong> with cleaner inputs from every project site</p>
+      <template data-detail-content>
+        <h3>Payroll Close Time — 20-30% Faster</h3>
+        <p>The 5-day close in construction is driven by waiting for site data from remote locations and reconciling inconsistent formats.</p>
+        <ul>
+          <li><strong>Real-time site data:</strong> Attendance data syncs daily from each site — no waiting for supervisors to email spreadsheets at month-end</li>
+          <li><strong>Site readiness dashboard:</strong> Payroll team sees at a glance which of the 20 sites have complete data, pending approvals, or exceptions</li>
+          <li><strong>Automated allowance calculation:</strong> Site allowances, travel allowances, and hazard pay are calculated automatically based on project assignment records</li>
+        </ul>
+        <p>Target: 3.5-day close within 2 cycles. Best construction clients achieve 3-day close within 4 months.</p>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Audit trail</h3>
       <p class="text-md text-gray-600">Every allowance change and attendance correction carries a <strong class="accent">supervisor sign-off</strong></p>
+      <template data-detail-content>
+        <h3>Compliance &amp; Audit Trail</h3>
+        <p>Construction companies face multi-agency scrutiny: DOSH (safety compliance), Immigration (foreign worker permits), and Labour Department (wage compliance with minimum wage RM 1,500/month).</p>
+        <ul>
+          <li><strong>Foreign worker tracking:</strong> Passport expiry, work permit validity, FWCMS registration, and levy payment status — all in one dashboard with automated alerts</li>
+          <li><strong>Minimum wage compliance:</strong> System enforces RM 1,500/month minimum wage for all workers including foreign labour. Prevents accidental underpayment that triggers Labour Department investigations.</li>
+          <li><strong>Site attendance records:</strong> GPS-verified attendance logs prove which workers were on which site on any given date. Critical for DOSH accident investigations and immigration audits.</li>
+        </ul>
+        <p>One construction client avoided a RM 200K compound by catching 12 expired permits through HRX alerts before an unannounced immigration inspection.</p>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +218,14 @@
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Construction companies are cost-driven. Anchor on risk avoidance: "RM 120 per employee per year is RM 10 per month. One immigration compound for an expired permit is RM 10,000-50,000 per worker. HRX pays for your entire workforce with the cost of preventing 2-3 violations."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 120/employee/year is list price. For construction groups with 3,000+ workers, we can go to RM 90/employee. For pilot deals, offer 2-month free on 3 sites (300-500 workers) to prove the exception reduction and compliance tracking value.</p>
+    <h4>Closing technique</h4>
+    <p>Ask: "When was your last immigration inspection? And how confident were you that every worker on site had a valid permit?" If they hesitate, you've found the entry point. Start with foreign worker compliance tracking — it's the fastest path to proving value because the risk is tangible and immediate.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 6 months</h2>
@@ -187,9 +249,21 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">4x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 120/employee/year investment vs RM 480/employee/year in recovered costs and avoided risks:</p>
+        <ul>
+          <li><strong>Exception cost savings:</strong> RM 256/employee/year — 40% reduction in 144 monthly exceptions at RM 60 each across 1,200 workers</li>
+          <li><strong>Close time savings:</strong> Payroll team recovers 1.5 days/month = 0.4 FTE at RM 4,500/month = RM 21.6K/year</li>
+          <li><strong>Compliance risk avoidance:</strong> Foreign worker permit violations carry RM 10,000-50,000 compound per worker. Preventing just 3 violations/year = RM 30,000-150,000 avoided</li>
+          <li><strong>Site allowance accuracy:</strong> Eliminates overpayment from workers receiving wrong project-level allowances = estimated RM 2,000-5,000/month recovered</li>
+        </ul>
+        <p>Net: RM 480 - RM 120 = RM 360 per employee. ROI = 480 / 120 = <strong>4.0x</strong></p>
+        <p>Payback period: 120 / (480 / 12) = <strong>3 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 1,200 employees</p>

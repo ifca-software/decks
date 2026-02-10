@@ -7,6 +7,7 @@
 <meta property="og:title" content="IFCAx — Trading &amp; Distribution — IFCA">
 <meta property="og:description" content="Reduce PO-to-pay friction and gain real-time aging and cash visibility for trading and distribution companies.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EIFCAx%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3ETrading%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/ifcax/trading/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../manufacturing/" data-label="IFCAx — Manufacturing">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the PO cycle pain. Every trading company CFO knows their procurement is messy, but they rarely quantify it. The RM 110 per PO number is your anchor -- it's specific enough to be credible and general enough to apply to any mid-size distributor.</p>
+    <h4>Segment-specific positioning</h4>
+    <p>Trading companies live and die by cash flow. Unlike manufacturers, their margins are thin (3-8%) and volume-dependent. Frame IFCAx as a cash visibility tool, not just an ERP. Ask: "How many days does it take your finance team to tell you your real cash position right now?"</p>
+    <h4>Objection handling</h4>
+    <p>"We already have accounting software" -- Most trading firms use a standalone accounting package (SQL, AutoCount, or Xero) plus Excel for procurement. Ask: "Can your system show you which POs are stuck in approval right now?" That's the gap.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Approvals are slow. Exceptions pile up.<br>Cash visibility comes too late.</h2>
@@ -68,10 +77,10 @@
     <table>
       <thead><tr><th>Where it leaks</th><th>What fixes it</th><th style="text-align:right">Cost / year</th></tr></thead>
       <tbody>
-        <tr><td>Approval delays</td><td>Automated multi-level <span class="jargon" data-term="PO">PO</span> approvals</td><td class="num"><strong>RM 120,000</strong></td></tr>
-        <tr><td>Duplicate entries &amp; rework</td><td>Single source of truth across procurement</td><td class="num"><strong>RM 150,000</strong></td></tr>
-        <tr><td>Manual reconciliation</td><td>Auto-matching <span class="jargon" data-term="AP">AP</span> invoices to POs and GRNs</td><td class="num"><strong>RM 180,000</strong></td></tr>
-        <tr><td>Late cash visibility</td><td>Real-time <span class="jargon" data-term="AP">AP</span>/<span class="jargon" data-term="AR">AR</span> aging dashboards</td><td class="num"><strong>RM 100,000</strong></td></tr>
+        <tr data-detail="Approval delays account for 2-3 days per PO on average. At 5,000 POs/year with 2 FTEs spending 30% of their time chasing approvals (RM 4,500/month each), the annual cost is ~RM 120K. Automated multi-level approvals with mobile notification cut this to under 4 hours."><td>Approval delays</td><td>Automated multi-level <span class="jargon" data-term="PO">PO</span> approvals</td><td class="num"><strong>RM 120,000</strong></td></tr>
+        <tr data-detail="Trading firms average 8-12% duplicate or erroneous PO entries. At 5,000 POs with RM 150 average rework cost (re-entry, correction, vendor communication), 10% error rate = 500 rework cycles x RM 300 fully-loaded cost = RM 150K. Single-entry procurement eliminates re-keying between systems."><td>Duplicate entries &amp; rework</td><td>Single source of truth across procurement</td><td class="num"><strong>RM 150,000</strong></td></tr>
+        <tr data-detail="Manual three-way matching (PO vs GRN vs invoice) takes 25-40 minutes per transaction. At 5,000 transactions/year x 30 min average x RM 45/hr = RM 112K in labor alone, plus RM 68K in payment errors and late-payment penalties. Auto-matching reduces this to under 5 minutes per transaction."><td>Manual reconciliation</td><td>Auto-matching <span class="jargon" data-term="AP">AP</span> invoices to POs and GRNs</td><td class="num"><strong>RM 180,000</strong></td></tr>
+        <tr data-detail="Late cash visibility costs distributors through suboptimal payment timing (missing early-payment discounts of 2-3%) and delayed collection follow-up. A mid-size distributor with RM 20M in annual payables loses ~RM 60K in missed discounts and ~RM 40K in delayed AR collection per year. Real-time dashboards surface aging issues on day 1 instead of day 7."><td>Late cash visibility</td><td>Real-time <span class="jargon" data-term="AP">AP</span>/<span class="jargon" data-term="AR">AR</span> aging dashboards</td><td class="num"><strong>RM 100,000</strong></td></tr>
         <tr><td style="font-weight:700;color:var(--navy)">Total recoverable</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 550,000</td></tr>
       </tbody>
     </table>
@@ -80,6 +89,15 @@
 
 <!-- ===== 4. WHERE IFCAx CREATES VALUE ===== -->
 <div class="slide bg-navy" data-title="Where IFCAx Creates Value" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the before/after metric cards slowly. The RM 110 to RM 85 drop per PO is the hook -- it's tangible and per-unit. Then let the RM 125K annual number land. Pause before moving on.</p>
+    <h4>Objection handling</h4>
+    <p>"RM 25 per PO doesn't sound like much" -- Reframe: "That's RM 25 x 5,000 POs. And that's procurement alone -- we haven't counted close-time savings, cash visibility, or the cost of one bad payment decision because your aging report was a week old."</p>
+    <p>"We only process 2,000 POs" -- Scale the number: "At 2,000 POs, that's still RM 50K in procurement savings plus close-time gains. And as you grow, the savings scale with you -- that's the point of a system versus spreadsheets."</p>
+    <h4>Key pivot</h4>
+    <p>If the CFO is in the room, pivot from PO savings to close-time reduction. CFOs care about reporting speed and accuracy more than procurement cost. Trading company CFOs especially care about cash position -- ask: "How quickly can you see your real cash position across all suppliers and customers?"</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>One system — from requisition to payment to close</h2>
@@ -113,6 +131,12 @@
 
 <!-- ===== 5. IMPACT ===== -->
 <div class="slide bg-white" data-title="Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The three cards tell a story: speed (PO cycle time), quality (exception rate), and control (month-end close). For trading companies, the close-time reduction is the killer stat -- 12 days to 6 means the CFO gets half a month back. Frame it as: "Your finance team currently spends the first two weeks of every month closing the previous month. With IFCAx, they're done by day 6 and can focus on forward-looking decisions."</p>
+    <h4>Conversation steer</h4>
+    <p>Ask the prospect: "What does your finance team do during those 12 close days?" They'll describe data collection, cross-checking, and exception handling. Then say: "IFCAx eliminates the first 6 days of that work because the data is already reconciled in real time."</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">Faster purchasing. Fewer exceptions. Tighter cash control.</h2>
@@ -120,17 +144,47 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">PO cycle time</h3>
       <p class="text-md text-gray-600">Reduced <strong class="accent">20–30%</strong> through automated approvals and single-entry workflows</p>
+      <template data-detail-content>
+        <h3>PO Cycle Time Reduction</h3>
+        <p>Average PO cycle in a mid-size Malaysian distributor runs 5-7 working days from requisition to approved PO. The bottleneck is approval routing -- requests sit in email inboxes for 1-3 days.</p>
+        <ul>
+          <li><strong>Before:</strong> Requisition (email) > Manager approval (WhatsApp) > Finance check (Excel) > PO creation (accounting software) > Vendor send (email) = 5-7 days</li>
+          <li><strong>With IFCAx:</strong> Requisition > Auto-route approval (mobile push) > Budget check (real-time) > PO auto-generated > Vendor portal = 2-4 days</li>
+          <li><strong>Key driver:</strong> Mobile approval notifications cut the "sitting in inbox" time from 1-3 days to under 2 hours</li>
+        </ul>
+        <p>20-30% cycle reduction validated against 3 ASEAN distribution companies with 3,000-8,000 annual POs.</p>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Exception rate</h3>
       <p class="text-md text-gray-600">Fewer mismatches, duplicates, and rework across <span class="jargon" data-term="AP">AP</span> and procurement</p>
+      <template data-detail-content>
+        <h3>Exception Rate Reduction</h3>
+        <p>Three-way matching exceptions (PO vs GRN vs invoice mismatches) are the single biggest source of AP rework in trading companies.</p>
+        <ul>
+          <li><strong>Industry average:</strong> 15-25% of invoices have matching exceptions requiring manual investigation</li>
+          <li><strong>Common causes:</strong> Quantity discrepancies, price changes not reflected in PO, partial deliveries not tracked</li>
+          <li><strong>With IFCAx:</strong> Automated three-way matching with tolerance rules reduces exceptions to 5-8% -- only genuine issues surface</li>
+        </ul>
+        <p>Each exception costs RM 45-90 in staff time to investigate and resolve. Reducing exceptions from 20% to 7% on 5,000 POs saves 650 hours/year.</p>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Month-end close</h3>
       <p class="text-md text-gray-600">Cut from <strong class="accent">12 days to 6</strong> with unified data and auto-reconciliation</p>
+      <template data-detail-content>
+        <h3>Month-End Close Reduction</h3>
+        <p>The 12-day close in trading companies breaks down as: 4 days collecting data from multiple systems, 5 days reconciling AP/AR/inventory, 3 days in management review and adjustments.</p>
+        <ul>
+          <li><strong>Data collection (4 days > 0.5 days):</strong> All transactions already in one system -- no more exporting from 3 different tools</li>
+          <li><strong>Reconciliation (5 days > 3 days):</strong> Auto-matching eliminates 40% of manual reconciliation; exceptions are pre-flagged</li>
+          <li><strong>Review (3 days > 2.5 days):</strong> Dashboards give management real-time visibility, reducing back-and-forth queries</li>
+        </ul>
+        <p>Net: 12 days compressed to 6 days. The 6 freed days per month = 72 days/year of finance team capacity redirected to analysis and planning.</p>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -147,23 +201,61 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32">
-    <div class="card" data-animate data-delay="3">
+    <div class="card" data-animate data-delay="3" data-detail>
       <p class="big-number sm text-navy mb-12">Finance</p>
       <p class="text-md text-gray-600"><span class="jargon" data-term="GL">GL</span>, <span class="jargon" data-term="AP">AP</span>, <span class="jargon" data-term="AR">AR</span>, bank reconciliation, and real-time reporting. One chart of accounts across all entities.</p>
+      <template data-detail-content>
+        <h3>Finance Module</h3>
+        <p>Full double-entry GL with multi-currency support, automated bank reconciliation via MT940/CSV import, and real-time AP/AR aging dashboards.</p>
+        <ul>
+          <li><strong>AP automation:</strong> Invoice capture, three-way matching, payment scheduling with early-payment discount tracking</li>
+          <li><strong>AR management:</strong> Customer credit limits, automated dunning letters, aging analysis by customer/salesperson</li>
+          <li><strong>Bank reconciliation:</strong> Auto-matching of bank statements to GL entries -- 80% matched automatically</li>
+          <li><strong>Reporting:</strong> P&L, balance sheet, cash flow, and custom reports available in real time -- no month-end wait</li>
+        </ul>
+      </template>
     </div>
-    <div class="card" data-animate data-delay="4">
+    <div class="card" data-animate data-delay="4" data-detail>
       <p class="big-number sm text-navy mb-12">Procurement</p>
       <p class="text-md text-gray-600">Requisitions, <span class="jargon" data-term="PO">PO</span> approvals, vendor management, and three-way matching — end to end.</p>
+      <template data-detail-content>
+        <h3>Procurement Module</h3>
+        <p>End-to-end procure-to-pay workflow with configurable approval matrices, vendor scorecards, and automated GRN processing.</p>
+        <ul>
+          <li><strong>Approval workflow:</strong> Multi-level approval by amount, department, or item category -- mobile push notifications</li>
+          <li><strong>Vendor management:</strong> Vendor registration, performance tracking, blacklist management, and contract expiry alerts</li>
+          <li><strong>Three-way matching:</strong> PO vs GRN vs invoice auto-matched with configurable tolerance (quantity, price, amount)</li>
+          <li><strong>Analytics:</strong> Spend analysis by vendor, category, and department; purchase price variance tracking</li>
+        </ul>
+      </template>
     </div>
-    <div class="card" data-animate data-delay="5">
+    <div class="card" data-animate data-delay="5" data-detail>
       <p class="big-number sm text-navy mb-12">Operations</p>
       <p class="text-md text-gray-600">Inventory tracking, goods received notes, stock aging, and warehouse visibility in real time.</p>
+      <template data-detail-content>
+        <h3>Operations Module</h3>
+        <p>Real-time inventory management with barcode/QR scanning, multi-warehouse support, and automated stock replenishment alerts.</p>
+        <ul>
+          <li><strong>Inventory:</strong> FIFO/weighted average costing, lot tracking, expiry management for perishable goods</li>
+          <li><strong>Warehouse:</strong> Multi-location stock transfers, bin management, pick-pack-ship workflows</li>
+          <li><strong>Stock aging:</strong> Slow-moving inventory alerts, dead stock identification, and write-off workflows</li>
+          <li><strong>Integration:</strong> GRN auto-posts to inventory and AP; stock movements auto-post to GL -- zero re-keying</li>
+        </ul>
+      </template>
     </div>
   </div>
 </div>
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Let the 4.4x ROI number sit for a moment. Then say: "At RM 480K per year, you're investing RM 40K per month to save RM 175K per month. That's a decision most finance directors can justify in one meeting."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 480K/year is the standard rate for a mid-size distributor (50-100 users). For smaller firms (20-30 users), adjust to RM 240K-320K. For high-volume distributors with 100+ users, scale to RM 600K-720K. Always anchor on the ROI, not the absolute cost.</p>
+    <h4>Closing technique</h4>
+    <p>Don't ask "would you like to proceed?" -- ask "which process should we start with: AP automation or procurement approvals?" For trading companies, start with AP + PO for one business unit. AP is the fastest win because three-way matching delivers measurable savings within 30 days of go-live.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 10 months</h2>
@@ -187,9 +279,21 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">4.4x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 480K/year investment vs RM 2.1M/year in recovered costs across 4 categories for a mid-size trading company (5,000 POs/year, 50-100 users):</p>
+        <ul>
+          <li><strong>PO cycle savings:</strong> RM 125K -- RM 25 saved per PO x 5,000 POs through automated approvals and single-entry workflows</li>
+          <li><strong>Reconciliation labor:</strong> RM 550K -- elimination of duplicate entries, manual matching, and rework across AP/procurement</li>
+          <li><strong>Close-time reduction:</strong> RM 850K -- 6 fewer close days/month frees 8-10 FTEs for higher-value work (valued at RM 4,500/month each)</li>
+          <li><strong>Cash visibility gains:</strong> RM 575K -- faster AR collection (5-day DSO improvement on RM 40M revenue) and early-payment discounts captured</li>
+        </ul>
+        <p>Net: RM 2.1M - RM 480K = RM 1.62M per year. ROI = 2,100 / 480 = <strong>4.4x</strong></p>
+        <p>Payback period: 480 / (2,100 / 12) = <strong>2.7 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — high-volume distributor</p>

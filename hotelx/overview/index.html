@@ -7,8 +7,14 @@
 <meta property="og:title" content="HotelX Overview — IFCA">
 <meta property="og:description" content="Improve EBITDA per room by 7–15% through smarter hotel management.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EHotelX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EOverview%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/hotelx/overview/">
 <meta name="deck-base" content="../../">
+<meta name="deck-sibling" data-href="../resorts/" data-label="HotelX — Resorts">
+<meta name="deck-sibling" data-href="../budget/" data-label="HotelX — Budget Hotels">
+<meta name="deck-sibling" data-href="../serviced-apartments/" data-label="HotelX — Serviced Apartments">
+<meta name="deck-sibling" data-href="../chains/" data-label="HotelX — Hotel Chains">
+<meta name="deck-sibling" data-href="../boutique/" data-label="HotelX — Boutique Hotels">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232d4a6f'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='18' fill='%23f97316'>H</text></svg>">
 <link rel="stylesheet" href="../../shared/css/deck.css">
@@ -31,6 +37,12 @@
 
 <!-- ===== 2. THE PROBLEM ===== -->
 <div class="slide bg-navy" data-title="The Problem" data-slug="problem">
+  <template data-sales-notes>
+    <h4>Positioning</h4>
+    <p>Lead with the RM 3,000/room number — it's concrete and immediately credible. Every GM can do the mental math on their own property size.</p>
+    <h4>Objection: "We already have a PMS"</h4>
+    <p>Most PMS only handles front desk — reservations, check-in, check-out. It doesn't touch the full revenue leakage stack: OTA commission bleed, housekeeping inefficiency, dynamic pricing gaps, and guest self-service. HotelX covers the entire margin recovery surface, not just the reception counter.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Problem</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Hotels spend millions to fill rooms.<br>The back office still leaks margin.</h2>
@@ -91,6 +103,12 @@
 
 <!-- ===== 4. WHERE HOTELX CREATES VALUE ===== -->
 <div class="slide bg-gray" data-title="Where HotelX Creates Value" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the 5 value items line by line. Don't rush — let the GM absorb each number. The biggest hook is OTA commission — every hotel GM knows this pain and has accepted it as "cost of doing business."</p>
+    <h4>If they push back on numbers</h4>
+    <p>Ask: "What percentage of your bookings are direct vs OTA right now?" Most will say 30–40% direct. Then: "So 60% of your bookings are paying 18–25% commission. What if we shifted just 15% of those to direct?" Let them do the math themselves — it's always more than they expect.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">HotelX Delta</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">RM 3,000 saved per room, per year.</h2>
@@ -98,35 +116,35 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="value-list mt-32">
-    <div class="value-item" data-animate data-delay="3">
+    <div class="value-item" data-animate data-delay="3" data-detail="Based on shifting 15% of bookings from OTA (18-25% commission) to direct channel. At RM 200 ADR × 70% occupancy × 365 days = RM 51K room revenue. 15% shift × 20% avg commission = RM 1,500 saved.">
       <div>
         <div class="item-title"><span class="jargon" data-term="OTA">OTA</span> commission</div>
         <div class="item-note">Shift 15% of bookings to direct</div>
       </div>
       <div class="item-value">RM 1,500</div>
     </div>
-    <div class="value-item" data-animate data-delay="4">
+    <div class="value-item" data-animate data-delay="4" data-detail="Self check-in/out kiosks and mobile check-in reduce front desk staffing by ~30%. Average front desk staff costs RM 2,500/month. Per 100 rooms, save 1 FTE = RM 500/room/year.">
       <div>
         <div class="item-title">Front desk labor</div>
         <div class="item-note">Self check-in/out cuts headcount ~30%</div>
       </div>
       <div class="item-value">RM 500</div>
     </div>
-    <div class="value-item" data-animate data-delay="5">
+    <div class="value-item" data-animate data-delay="5" data-detail="Real-time room status portal eliminates manual status checks. Automated task assignment improves room turnover by 20 minutes per room. Saves ~0.5 FTE per 100 rooms.">
       <div>
         <div class="item-title">Housekeeping</div>
         <div class="item-note">Real-time portal and automated tasking</div>
       </div>
       <div class="item-value">RM 300</div>
     </div>
-    <div class="value-item" data-animate data-delay="6">
+    <div class="value-item" data-animate data-delay="6" data-detail="Dynamic pricing engine captures RM 5-15/room/night in RevPAR uplift during high-demand periods. Reduces overbooking incidents by 90%. In-app upsell (room upgrades, late checkout) adds RM 3-5/occupied room.">
       <div>
         <div class="item-title">Revenue recovery</div>
         <div class="item-note">Fewer overbookings, dynamic pricing, upsell</div>
       </div>
       <div class="item-value">RM 500</div>
     </div>
-    <div class="value-item" data-animate data-delay="7">
+    <div class="value-item" data-animate data-delay="7" data-detail="Cloud PMS eliminates on-premise server costs (RM 15-25K/year hardware refresh + RM 8-12K/year IT support). Per 100 rooms = RM 200/room/year saved.">
       <div>
         <div class="item-title">IT infrastructure</div>
         <div class="item-note">Cloud replaces on-prem servers</div>
@@ -145,6 +163,12 @@
 
 <!-- ===== 5. THE EBITDA IMPACT ===== -->
 <div class="slide bg-navy" data-title="The EBITDA Impact" data-slug="ebitda">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>RM 3K/room on RM 45K EBITDA = 6.7% lift. For a 150-room hotel that's RM 450K/year — enough to fund two additional staff positions. This is not theoretical savings; it's measurable cash flow improvement.</p>
+    <h4>Cross-sell opportunity</h4>
+    <p>With X-Series cross-sell (FMX for facilities, MenuX for F&amp;B, AccountX for financials), the uplift reaches 15–20%. Plant this seed here but don't push it — let the GM ask "what else can you do?"</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>From RM 45K to RM 48K <span class="jargon" data-term="EBITDA">EBITDA</span> per room.</h2>
@@ -186,37 +210,97 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Self check-in / check-out</h3>
       <p class="text-md text-gray-600">Skip the front desk queue — arrive, tap, and go straight to the room.</p>
+      <template data-detail-content>
+        <h3>Self Check-in / Check-out</h3>
+        <p>65% of hotel guests prefer mobile check-in over front desk queuing. HotelX self-service reduces average check-in time from 12 minutes to under 2 minutes.</p>
+        <ul>
+          <li><strong>Before:</strong> 12-minute average queue at front desk during peak check-in (3–6 PM)</li>
+          <li><strong>After:</strong> Guest completes check-in on their phone before arrival — walks straight to the room</li>
+          <li><strong>Impact:</strong> Reduces front desk staffing needs by 30%, improves first-impression guest satisfaction scores</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Digital room key</h3>
       <p class="text-md text-gray-600">Phone unlocks the door — no plastic cards to lose or demagnetize.</p>
+      <template data-detail-content>
+        <h3>Digital Room Key</h3>
+        <p>Eliminates plastic key card costs and the frustration of demagnetized cards. Improves guest satisfaction scores measurably.</p>
+        <ul>
+          <li><strong>Cost saving:</strong> Plastic key cards cost RM 3–5 each, with an average of 3 replacements per room per year — eliminated entirely</li>
+          <li><strong>Guest satisfaction:</strong> No more trips back to the front desk for replacement cards</li>
+          <li><strong>Security:</strong> Digital keys can be remotely revoked and time-limited, reducing unauthorized access incidents</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">In-app F&amp;B ordering</h3>
       <p class="text-md text-gray-600">Order room service, restaurant, or bar directly in the guest app.</p>
+      <template data-detail-content>
+        <h3>In-App F&amp;B Ordering</h3>
+        <p>Convenience drives revenue. In-app ordering increases F&amp;B revenue by 12–18% compared to traditional phone/counter ordering.</p>
+        <ul>
+          <li><strong>Average order size:</strong> Increases by RM 8–12 vs counter orders — guests browse the full menu and add more items</li>
+          <li><strong>Order volume:</strong> Guests order more frequently when the barrier is a tap instead of a phone call</li>
+          <li><strong>Operational:</strong> Orders go directly to kitchen — no miscommunication, no lost orders, faster service</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card-grid cols-3 mt-16" data-animate data-delay="4">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Room selector</h3>
       <p class="text-md text-gray-600">Guests choose their room, floor, and view before arrival.</p>
+      <template data-detail-content>
+        <h3>Room Selector</h3>
+        <p>Reduces front desk upgrade negotiations and turns room preference into a revenue stream.</p>
+        <ul>
+          <li><strong>Before:</strong> Only 3% of guests pay for room upgrades when offered at the front desk</li>
+          <li><strong>After:</strong> 15% paid upgrade take-rate when guests can visually browse and select rooms pre-arrival</li>
+          <li><strong>Guest experience:</strong> Eliminates "I wanted a higher floor" complaints — guests get exactly what they chose</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Service requests</h3>
       <p class="text-md text-gray-600">Request towels, housekeeping, or concierge — no phone calls needed.</p>
+      <template data-detail-content>
+        <h3>Service Requests</h3>
+        <p>Digital service requests dramatically improve response times and guest satisfaction.</p>
+        <ul>
+          <li><strong>Before:</strong> Average response time of 25 minutes via phone — often longer during peak hours</li>
+          <li><strong>After:</strong> 8-minute average response time via digital request with automated routing and tracking</li>
+          <li><strong>Guest satisfaction:</strong> Improves NPS by 12 points — guests feel heard without the friction of phone calls</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Self-payment</h3>
       <p class="text-md text-gray-600">Settle the bill and check out without waiting at the desk.</p>
+      <template data-detail-content>
+        <h3>Self-Payment</h3>
+        <p>Eliminates the checkout queue and reduces billing disputes.</p>
+        <ul>
+          <li><strong>Queue elimination:</strong> Guests review and settle their bill on their phone — no waiting at the front desk during peak checkout (10–11 AM)</li>
+          <li><strong>Dispute reduction:</strong> Real-time billing visibility throughout the stay reduces final billing disputes by 60%</li>
+          <li><strong>Staff impact:</strong> Front desk can focus on arriving guests instead of processing departures</li>
+        </ul>
+      </template>
     </div>
   </div>
 </div>
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="Investment & Return" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Pricing anchor</h4>
+    <p>RM 20/room/month is the anchor. Let them absorb that number before showing the 12x return. Most GMs expect enterprise software to cost 10x more — the low price point removes the "let me check the budget" objection.</p>
+    <h4>Closing technique</h4>
+    <p>"Pick your weakest-performing property. Let us prove the delta in 8 weeks." This works because it's low-risk (one property), time-bound (8 weeks), and measurable (EBITDA delta). The GM doesn't have to commit the entire portfolio — just one proof point.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>RM 20 per room per month. 12x return.</h2>
@@ -241,9 +325,15 @@
     </div>
   </div>
   <div class="row mt-24 gap-60" data-animate data-delay="4">
-    <div class="card emphasis col text-center">
+    <div class="card emphasis col text-center" data-detail>
       <p class="big-number accent">12x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>RM 3,000 recovered per room per year / RM 240 investment per room per year = <strong>12.5x ROI</strong>.</p>
+        <p>Payback period: RM 240 / (RM 3,000 / 12) = <strong>0.96 months</strong> — pays for itself in under 1 month.</p>
+        <p>For a 150-room hotel: RM 450K recovered - RM 36K investment = <strong>RM 414K net gain</strong> per year.</p>
+      </template>
     </div>
     <div class="card col text-center">
       <p class="label">Scale it — 150-room hotel</p>

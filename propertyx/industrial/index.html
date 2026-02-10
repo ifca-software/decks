@@ -7,6 +7,7 @@
 <meta property="og:title" content="PropertyX — Industrial Parks — IFCA">
 <meta property="og:description" content="Control OpEx and vendor performance across every park with one governance dashboard.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EPropertyX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EIndustrial Parks%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/propertyx/industrial/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../reit/" data-label="PropertyX — REIT Portfolios">
@@ -33,6 +34,12 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Industrial park operators think in terms of infrastructure reliability and tenant retention. Lead with: "Your tenants chose this park for reliable infrastructure. But can you prove your vendors are delivering the uptime and maintenance quality they promised?" The pain is vendor dependency without accountability across geographically dispersed sites.</p>
+    <h4>Key difference for industrial</h4>
+    <p>Industrial parks have 3 unique pressures: infrastructure-heavy assets (roads, drainage, substations, water treatment) that are expensive to maintain, multi-site portfolios where each park may be 50+ km apart, and vendor contracts that are larger (RM 81.9M) because of the infrastructure burden. Vendor governance isn't a nice-to-have — it's the difference between tenant retention and churn.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Infrastructure drives cost.<br>Vendors drive operations. Reporting is slow.</h2>
@@ -68,10 +75,10 @@
     <table>
       <thead><tr><th>Metric</th><th>Current baseline</th><th style="text-align:right">Annual impact</th></tr></thead>
       <tbody>
-        <tr><td>Portfolio size</td><td>3,000,000 sqft across multiple parks</td><td class="num"><strong>—</strong></td></tr>
-        <tr><td><span class="jargon" data-term="OpEx">OpEx</span> per sqft / month</td><td>RM 3.50 (industrial baseline)</td><td class="num"><strong>RM 126.0M</strong></td></tr>
-        <tr><td>Vendor share of <span class="jargon" data-term="OpEx">OpEx</span></td><td>65% outsourced</td><td class="num"><strong>RM 81.9M</strong></td></tr>
-        <tr><td style="font-weight:700;color:var(--navy)">1% vendor OpEx reduction</td><td>Scorecard-driven governance</td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 819K / year</td></tr>
+        <tr data-detail="3M sqft represents a mid-to-large Malaysian industrial park operator — e.g. 3-5 parks across Selangor, Johor, and Penang. Think AME Elite Consortium, Eco World Industrial, or i-Park clusters. Larger operators like Malaysian Industrial Development manage 10M+ sqft."><td>Portfolio size</td><td>3,000,000 sqft across multiple parks</td><td class="num"><strong>—</strong></td></tr>
+        <tr data-detail="RM 3.50/sqft/month is the industrial park baseline — lower than commercial (RM 4.80) because of simpler building services but offset by infrastructure costs. Breakdown: infrastructure maintenance ~RM 1.40 (roads, drainage, substations), common area upkeep ~RM 0.80, security ~RM 0.60, utilities ~RM 0.40, admin ~RM 0.30."><td><span class="jargon" data-term="OpEx">OpEx</span> per sqft / month</td><td>RM 3.50 (industrial baseline)</td><td class="num"><strong>RM 126.0M</strong></td></tr>
+        <tr data-detail="65% vendor share is typical for industrial parks — infrastructure maintenance (roads, drainage, substations), landscaping, security, and waste management are almost entirely outsourced. Only park management staff (5-10 FTE per park) are in-house. RM 126.0M × 65% = RM 81.9M."><td>Vendor share of <span class="jargon" data-term="OpEx">OpEx</span></td><td>65% outsourced</td><td class="num"><strong>RM 81.9M</strong></td></tr>
+        <tr data-detail="1% vendor OpEx reduction from cross-park benchmarking and scorecard-driven governance. Typical sources: standardizing vendor rates across parks (0.4%), preventive infrastructure maintenance reducing emergency costs (0.3%), eliminating duplicate contracts (0.2%), SLA-based performance bonuses replacing flat-fee contracts (0.1%). RM 81.9M × 1% = RM 819K." style="font-weight:700;color:var(--navy)"><td style="font-weight:700;color:var(--navy)">1% vendor OpEx reduction</td><td>Scorecard-driven governance</td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 819K / year</td></tr>
       </tbody>
     </table>
   </div>
@@ -79,6 +86,12 @@
 
 <!-- ===== 4. VALUE ===== -->
 <div class="slide bg-navy" data-title="Where PropertyX Creates Value" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the governance pack cycle — industrial park boards expect regular reporting and 18 days is embarrassingly slow. Then pivot to the RM 819K: "Your vendor spend is RM 81.9M. A 1% improvement isn't optimization — it's accountability. You're simply making sure you get what you pay for." Industrial operators respond to reliability and accountability language.</p>
+    <h4>Objection handling</h4>
+    <p>"We manage vendors directly at each park" — That's the problem. Each park manager has their own relationship with vendors. There's no cross-park benchmarking. Your cleaning vendor at Park A might charge RM 0.80/sqft while the same service at Park B costs RM 1.10/sqft. PropertyX makes that visible. "Our parks are too different to standardize" — Infrastructure is infrastructure. Roads, drainage, power supply, and common areas have the same KPIs regardless of location. Tenants may differ, but vendor accountability doesn't.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Vendor scorecards, budget dashboards — spend comes under control</h2>
@@ -112,6 +125,12 @@
 
 <!-- ===== 5. IMPACT ===== -->
 <div class="slide bg-white" data-title="Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>Industrial parks are infrastructure businesses — tenants pay for reliable roads, drainage, power, and common facilities. When vendor performance drops, tenant satisfaction drops, and that directly affects occupancy and rental rates. Frame the impact as: "This isn't cost savings. It's tenant retention insurance."</p>
+    <h4>What resonates</h4>
+    <p>The vendor governance card resonates with park operations directors who deal with vendor issues daily. The budget control card resonates with CFOs managing multi-park P&Ls. The reporting speed card matters to board-level stakeholders who need governance packs for investor meetings. Adjust based on your audience.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">PropertyX turns vendor spend into a governed process</h2>
@@ -119,17 +138,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Vendor governance</h3>
       <p class="text-md text-gray-600"><span class="jargon" data-term="KPI">KPI</span> scorecards for every vendor — <strong class="accent">performance is visible</strong> across parks</p>
+      <template data-detail-content>
+        <h3>Vendor Governance</h3>
+        <p>Industrial parks typically engage 20-40 vendors across landscaping, road maintenance, drainage, power infrastructure, security, and waste management. Each park manager handles their own vendors with no cross-park benchmarking. The same service can cost 30-40% more at one park versus another.</p>
+        <ul>
+          <li><strong>Before:</strong> Each park manager tracks vendor performance independently. No cross-park comparison. Contract renewals are relationship-based.</li>
+          <li><strong>After:</strong> Standardized KPI scorecards across all parks — response time, completion rate, SLA compliance, cost per service call — with cross-park benchmarking.</li>
+          <li><strong>Impact:</strong> Underperforming vendors identified within 60 days. Cross-park price discrepancies for identical services become visible and negotiable.</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Budget control</h3>
       <p class="text-md text-gray-600">Real-time budget vs actual — <strong class="accent">overruns flagged early</strong>, not at quarter-end</p>
+      <template data-detail-content>
+        <h3>Budget Control</h3>
+        <p>Industrial parks have large infrastructure budgets — drainage repairs, road resurfacing, and substation maintenance can each run RM 200K-500K per incident. Without real-time tracking, these costs surprise the CFO at quarter-end when the books close.</p>
+        <ul>
+          <li><strong>Before:</strong> Budget overruns discovered 60-90 days late. Infrastructure emergency repairs approved on the spot without budget visibility.</li>
+          <li><strong>After:</strong> Real-time budget dashboards across all parks. Threshold alerts at 80% and 95%. Emergency spend requires approval with budget impact shown.</li>
+          <li><strong>Impact:</strong> RM 81.9M vendor spend tracked in real-time. Budget overruns caught 60+ days earlier, enabling course correction before quarter-end.</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Reporting speed</h3>
       <p class="text-md text-gray-600">Governance packs from system data — <strong class="accent">30–60% faster</strong> cycle time</p>
+      <template data-detail-content>
+        <h3>Reporting Speed</h3>
+        <p>Industrial park governance packs consolidate data from multiple geographically dispersed sites. Each park submits data on different timelines, in different formats, to a central team that manually consolidates in Excel. The 18-day cycle is driven by coordination delays, not data volume.</p>
+        <ul>
+          <li><strong>Before:</strong> 18 days per governance pack — 5 days chasing park teams, 8 days manual consolidation, 5 days review and corrections across sites.</li>
+          <li><strong>After:</strong> 7 days — data flows automatically from each park into standardized governance templates.</li>
+          <li><strong>Impact:</strong> Board and investor packs delivered on schedule. Cross-park performance comparison available on demand, not once per quarter.</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -163,32 +209,44 @@
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Pricing</h4>
+    <p>RM 240K/year for a 3M sqft multi-park portfolio. Works out to RM 0.007/sqft/month — negligible against the RM 3.50/sqft they spend on OpEx. Position it as: "PropertyX costs 0.2% of your OpEx and recovers 1% of vendor spend." For operators with 5M+ sqft, offer volume pricing at RM 200K base + RM 0.005/sqft.</p>
+    <h4>Closing technique</h4>
+    <p>Industrial park operators often have new parks under development. Time the pitch to coincide: "Deploy PropertyX on your newest park from day one. Vendor scorecards are live within 6 weeks. Then benchmark those results against your legacy parks and roll out." The 3.4x ROI is strong — use it. "For every RM 1 you spend, you get RM 3.40 back. And that's Year 1."</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 6 months</h2>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32">
-    <div class="card metric" data-animate data-delay="3">
+    <div class="card metric" data-animate data-delay="3" data-detail="RM 240K/year = RM 20K/month for a 3M sqft multi-park portfolio. Covers vendor scorecards across all parks, cross-park benchmarking, budget governance dashboards, and automated governance pack generation. Implementation and park-by-park onboarding included in Year 1.">
       <p class="label">You invest</p>
       <p class="value">RM 240K</p>
       <p class="text-sm text-dim">per year</p>
     </div>
-    <div class="card metric" data-animate data-delay="3">
+    <div class="card metric" data-animate data-delay="3" data-detail="RM 819K savings from 1% vendor OpEx reduction on RM 81.9M. Breakdown: cross-park vendor rate standardization ~RM 330K, preventive maintenance shift reducing emergency callouts ~RM 250K, duplicate contract elimination ~RM 160K, SLA-driven performance improvements ~RM 79K.">
       <p class="label">You save</p>
       <p class="value accent">RM 819K</p>
       <p class="text-sm text-dim">vendor OpEx / year</p>
     </div>
-    <div class="card metric emphasis" data-animate data-delay="3">
+    <div class="card metric emphasis" data-animate data-delay="3" data-detail="RM 579K net gain = RM 819K savings minus RM 240K investment. This flows directly to the operating surplus. Year 2 typically improves to 1.5-2% vendor savings (RM 1.2-1.6M) as 12 months of cross-park data enables renegotiation leverage. Net gain grows to RM 1M+ in Year 2.">
       <p class="label">You keep</p>
       <p class="value accent">RM 579K</p>
       <p class="text-sm text-dim">net gain per year</p>
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">3.4x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>RM 819K vendor OpEx recovered per year / RM 240K investment per year = <strong>3.4x ROI</strong>.</p>
+        <p>Payback period: RM 240K / (RM 819K / 12) ≈ <strong>3.5 months</strong> — pays for itself before the first quarterly governance pack is due.</p>
+        <p>This excludes indirect benefits: reduced tenant complaints from better vendor performance, lower tenant churn (each 1% occupancy improvement on 3M sqft is worth RM 126K/year at RM 3.50/sqft), and faster board decision-making from real-time dashboards.</p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 10M sqft across parks</p>

@@ -7,6 +7,7 @@
 <meta property="og:title" content="PropertyX — Data Centres — IFCA">
 <meta property="og:description" content="Governance and cost visibility for critical infrastructure portfolios.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EPropertyX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EData Centres%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/propertyx/data-centers/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../reit/" data-label="PropertyX — REIT Portfolios">
@@ -33,6 +34,12 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Data centre operators are compliance-driven and risk-averse. Don't lead with cost savings — lead with governance and audit trails. "Your clients trust you with their critical infrastructure. Can you prove every vendor change was approved, tracked, and auditable?" The answer is usually "we use email." That's the opening. Frame PropertyX as compliance infrastructure, not property management software.</p>
+    <h4>Key difference for data centres</h4>
+    <p>Data centres have 3 unique pressures: every vendor change is a potential uptime risk (a cleaning crew in the wrong room can cause outages), compliance requirements demand full audit trails (ISO 27001, SOC 2), and vendor spend per site is enormous (RM 800K/month) because of specialized HVAC, power, and security contractors. The governance gap isn't inefficiency — it's risk.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Governance and reporting must match criticality.<br>Today they don't.</h2>
@@ -68,10 +75,10 @@
     <table>
       <thead><tr><th>Metric</th><th>Current baseline</th><th style="text-align:right">Annual impact</th></tr></thead>
       <tbody>
-        <tr><td>Sites under management</td><td>5 data centres</td><td class="num"><strong>—</strong></td></tr>
-        <tr><td>Vendor <span class="jargon" data-term="OpEx">OpEx</span> per site / month</td><td>RM 800,000</td><td class="num"><strong>RM 48.0M</strong></td></tr>
-        <tr><td>Governance pack cycle</td><td>18 days per reporting period</td><td class="num"><strong>—</strong></td></tr>
-        <tr><td style="font-weight:700;color:var(--navy)">1% vendor OpEx reduction</td><td>Scorecard-driven governance</td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 480K / year</td></tr>
+        <tr data-detail="5 sites represents a mid-tier Malaysian data centre operator — e.g. AIMS Data Centre, Keppel DC, or NTT Malaysia scale. Larger operators like CyberJaya-based global providers manage 10-20+ sites. Each site typically 30,000-100,000 sqft of raised floor space."><td>Sites under management</td><td>5 data centres</td><td class="num"><strong>—</strong></td></tr>
+        <tr data-detail="RM 800K/month per site covers all facility vendors: HVAC/CRAC maintenance ~RM 250K, power systems (UPS, generators, switchgear) ~RM 200K, physical security ~RM 120K, cleaning (cleanroom-grade) ~RM 80K, fire suppression ~RM 60K, cabling and structured wiring ~RM 50K, other specialized contractors ~RM 40K. 5 sites × 12 months = RM 48M/year."><td>Vendor <span class="jargon" data-term="OpEx">OpEx</span> per site / month</td><td>RM 800,000</td><td class="num"><strong>RM 48.0M</strong></td></tr>
+        <tr data-detail="18 days is driven by multi-site complexity: each site submits vendor performance, change logs, incident reports, and budget data separately. Manual consolidation across 5 sites, cross-referencing with compliance requirements, and formatting for investor-grade presentation takes 8-10 days alone."><td>Governance pack cycle</td><td>18 days per reporting period</td><td class="num"><strong>—</strong></td></tr>
+        <tr data-detail="1% vendor OpEx reduction through scorecard-driven governance. Typical sources: optimizing HVAC maintenance schedules based on performance data (0.3%), renegotiating underperforming power system contracts (0.3%), standardizing vendor rates across sites (0.2%), reducing emergency callout frequency through preventive maintenance (0.2%). RM 48M × 1% = RM 480K." style="font-weight:700;color:var(--navy)"><td style="font-weight:700;color:var(--navy)">1% vendor OpEx reduction</td><td>Scorecard-driven governance</td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 480K / year</td></tr>
       </tbody>
     </table>
   </div>
@@ -79,6 +86,12 @@
 
 <!-- ===== 4. VALUE ===== -->
 <div class="slide bg-navy" data-title="Where PropertyX Creates Value" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Show the before/after on governance pack cycle first — "18 days to 7 days" in a compliance-heavy environment is powerful. Then pivot to vendor savings: "RM 480K isn't the real story. The real story is that every vendor interaction is now tracked, approved, and auditable. Your ISO auditor will love this." Data centre operators respond to compliance language more than cost language.</p>
+    <h4>Objection handling</h4>
+    <p>"We already have DCIM tools" — DCIM handles IT infrastructure monitoring (power, cooling, capacity). PropertyX handles facility management governance — vendor scorecards, change control approvals, budget tracking, and governance packs. They're complementary, not competing. "Our sites are too small for this" — Each site spends RM 800K/month on vendors. At RM 9.6M/year per site, even 1% savings (RM 96K) is meaningful. With 5 sites, the RM 480K annual recovery dwarfs the RM 240K investment.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Vendor scorecards and governance packs — compliance-grade visibility</h2>
@@ -112,6 +125,12 @@
 
 <!-- ===== 5. IMPACT ===== -->
 <div class="slide bg-white" data-title="Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>Data centre operators sell uptime. Every vendor interaction is a potential risk to that uptime. When change control runs on email, there's no audit trail, no approval workflow, and no way to prove compliance during ISO or SOC audits. Frame the impact as: "PropertyX doesn't just save money — it protects your uptime SLA and your compliance posture."</p>
+    <h4>What resonates</h4>
+    <p>The change control card resonates with operations directors and compliance officers — this is their daily pain. The vendor governance card resonates with COOs managing multi-site operations. The reporting speed card matters to board-level stakeholders preparing governance packs for investors. Lead with change control for technical audiences, lead with governance packs for executive audiences.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">PropertyX delivers governance that matches criticality</h2>
@@ -119,17 +138,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Vendor governance</h3>
       <p class="text-md text-gray-600"><span class="jargon" data-term="KPI">KPI</span> scorecards for every vendor — <strong class="accent">performance measured</strong> across sites</p>
+      <template data-detail-content>
+        <h3>Vendor Governance</h3>
+        <p>Malaysian data centres typically engage 15-25 specialized vendors per site: HVAC/CRAC maintenance, UPS and power systems, fire suppression, physical security, cleaning (cleanroom-grade), cabling, and generator maintenance. Each vendor's performance directly impacts uptime — yet most operators track vendor quality by incident reports alone.</p>
+        <ul>
+          <li><strong>Before:</strong> Vendor performance tracked by incident count. No proactive measurement of response time, SLA compliance, or maintenance quality across sites.</li>
+          <li><strong>After:</strong> Monthly scorecards per vendor per site: response time, first-fix rate, SLA compliance, scheduled vs missed maintenance windows, and cost per service call.</li>
+          <li><strong>Impact:</strong> Underperforming vendors identified before they cause incidents. Cross-site vendor benchmarking reveals which contractors deliver the best uptime protection.</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Change control</h3>
       <p class="text-md text-gray-600">Approval workflows with full audit trails — <strong class="accent">compliance-ready</strong></p>
+      <template data-detail-content>
+        <h3>Change Control</h3>
+        <p>In a data centre, every vendor activity is a potential risk: HVAC maintenance windows, power system testing, physical access by contractors, and emergency repairs. ISO 27001 and SOC 2 require documented approval workflows and audit trails. Email-based approvals fail compliance audits.</p>
+        <ul>
+          <li><strong>Before:</strong> Vendor access and maintenance changes approved via email or WhatsApp. No centralized audit trail. ISO auditors find gaps in change documentation every cycle.</li>
+          <li><strong>After:</strong> Digital change control workflows: request, risk assessment, approval chain, execution window, and post-completion sign-off. Full audit trail retained for compliance.</li>
+          <li><strong>Impact:</strong> ISO 27001 and SOC 2 audit readiness built into daily operations. Zero manual documentation needed for compliance reviews.</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Reporting speed</h3>
       <p class="text-md text-gray-600">Governance packs from system data — <strong class="accent">30–60% faster</strong> cycle time</p>
+      <template data-detail-content>
+        <h3>Reporting Speed</h3>
+        <p>Data centre governance packs must cover vendor performance, change control logs, incident summaries, and budget tracking across all sites. These are typically compiled manually from multiple spreadsheets, email chains, and ticketing systems. The 18-day cycle creates a dangerous gap between operations reality and governance visibility.</p>
+        <ul>
+          <li><strong>Before:</strong> 18 days per governance pack — data pulled from 5+ systems, manually consolidated, reviewed by site managers, and formatted for board presentation.</li>
+          <li><strong>After:</strong> 7 days — vendor scorecards, change logs, incident summaries, and budget data auto-populate governance templates from PropertyX.</li>
+          <li><strong>Impact:</strong> Investor and board governance packs delivered on schedule. Real-time dashboards available between formal reporting cycles for ad-hoc queries.</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -163,32 +209,44 @@
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Pricing</h4>
+    <p>RM 240K/year for 5 data centre sites — RM 48K per site per year or RM 4K per site per month. Position against the RM 800K/month they spend on vendors per site: "PropertyX costs 0.5% of your vendor spend per site and recovers 1%." For operators with 10+ sites, offer RM 200K base + RM 40K per additional site.</p>
+    <h4>Closing technique</h4>
+    <p>Data centre operators have long sales cycles and committee-driven procurement. Start with a compliance angle: "Deploy PropertyX on your most compliance-sensitive site first. Within 6 weeks, your change control audit trail is live. Walk into your next ISO audit with system-generated evidence instead of email screenshots." The 2x ROI is solid, but data centre buyers care more about risk reduction than ROI. Emphasize the compliance and uptime protection value.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in the first year</h2>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32">
-    <div class="card metric" data-animate data-delay="3">
+    <div class="card metric" data-animate data-delay="3" data-detail="RM 240K/year = RM 48K per site per year for 5 data centres. Covers vendor scorecards, change control workflows with audit trails, budget governance dashboards, and automated governance pack generation. Implementation and site-by-site onboarding included in Year 1.">
       <p class="label">You invest</p>
       <p class="value">RM 240K</p>
       <p class="text-sm text-dim">per year</p>
     </div>
-    <div class="card metric" data-animate data-delay="3">
+    <div class="card metric" data-animate data-delay="3" data-detail="RM 480K savings from 1% vendor OpEx reduction on RM 48M. Breakdown: HVAC maintenance optimization ~RM 150K, power system contract renegotiation ~RM 140K, cross-site vendor rate standardization ~RM 100K, emergency callout reduction ~RM 90K. Excludes compliance cost avoidance (ISO audit preparation savings, typically RM 50-100K/year).">
       <p class="label">You save</p>
       <p class="value accent">RM 480K</p>
       <p class="text-sm text-dim">vendor OpEx / year</p>
     </div>
-    <div class="card metric emphasis" data-animate data-delay="3">
+    <div class="card metric emphasis" data-animate data-delay="3" data-detail="RM 240K net gain = RM 480K savings minus RM 240K investment. This excludes the compliance value: data centres that fail ISO 27001 audits risk losing clients. PropertyX's change control audit trails reduce compliance preparation effort by 60-70%, avoiding RM 50-100K in audit preparation costs.">
       <p class="label">You keep</p>
       <p class="value accent">RM 240K</p>
       <p class="text-sm text-dim">net gain per year</p>
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">2x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>RM 480K vendor OpEx recovered per year / RM 240K investment per year = <strong>2.0x ROI</strong>.</p>
+        <p>Payback period: RM 240K / (RM 480K / 12) ≈ <strong>6 months</strong> — pays for itself in the first year.</p>
+        <p>The 2x ROI is conservative — it captures only direct vendor spend savings. Including compliance cost avoidance (ISO audit prep: RM 50-100K/year), reduced incident risk from better change control (one major outage costs RM 500K-2M in SLA penalties), and faster governance reporting, the effective ROI is 3-4x.</p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 15 sites</p>

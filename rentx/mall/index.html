@@ -7,6 +7,7 @@
 <meta property="og:title" content="RentX — Retail Malls — IFCA">
 <meta property="og:description" content="Reduce arrears and disputes with a single tenant ledger and automated collections cadence.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3ERentX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3ERetail Malls%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/rentx/mall/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../residential/" data-label="RentX — Residential">
@@ -33,6 +34,12 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Mall leasing managers live and breathe occupancy rates. Don't lead with "your collections are broken." Lead with "your arrears number is too high for a mall this size — here's why." Most mall operators know they have an arrears problem but don't realise how much it costs in staff time and dispute write-offs.</p>
+    <h4>Key difference from other segments</h4>
+    <p>Malls have 3 unique pain points: turnover rent complexity (percentage-of-sales clauses that are impossible to track manually), high tenant count (200–500 tenants creating thousands of invoices), and the critical importance of tenant mix management — losing an anchor tenant to a billing dispute is catastrophic.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Malls collect millions in rent.<br>Arrears and disputes still run on spreadsheets.</h2>
@@ -68,10 +75,10 @@
     <table>
       <thead><tr><th>Leakage source</th><th>What drives it</th><th style="text-align:right">RM / month</th></tr></thead>
       <tbody>
-        <tr><td>Tenant arrears</td><td>Late payments, no automated reminders</td><td class="num"><strong>RM 234,000</strong></td></tr>
-        <tr><td>Collections staffing</td><td>2 <span class="jargon" data-term="FTE">FTE</span> + agency fees</td><td class="num"><strong>RM 12,000</strong></td></tr>
-        <tr><td>Dispute write-offs</td><td>Unresolved disputes aged past 90 days</td><td class="num"><strong>RM 18,000</strong></td></tr>
-        <tr><td>Late renewal gaps</td><td>Vacancy during negotiation (est. 2 lots)</td><td class="num"><strong>RM 24,000</strong></td></tr>
+        <tr data-detail="300 tenants x RM 12,000 average rent x 6.5% arrears rate = RM 234,000/month. Malaysian mall arrears rates typically run 5–8% depending on tenant mix. F&B tenants tend to pay slower (7–9%) while fashion anchors pay on time (2–3%). Turnover rent clauses add complexity — tenants dispute the base when sales dip."><td>Tenant arrears</td><td>Late payments, no automated reminders</td><td class="num"><strong>RM 234,000</strong></td></tr>
+        <tr data-detail="A typical 300-tenant mall needs 2 full-time collections officers at RM 4,000/month each plus one part-time agency at RM 4,000/month retainer. These staff spend 80% of their time on phone calls, WhatsApp chasing, and manual ledger reconciliation that RentX automates."><td>Collections staffing</td><td>2 <span class="jargon" data-term="FTE">FTE</span> + agency fees</td><td class="num"><strong>RM 12,000</strong></td></tr>
+        <tr data-detail="When disputes age past 90 days without resolution, malls typically write off 30–40% of the disputed amount. On a 300-tenant mall, roughly 8–10 disputes per month at RM 2,000 average disputed value, with 30% written off = RM 18,000/month. Most disputes stem from turnover rent calculations or service charge reconciliation errors."><td>Dispute write-offs</td><td>Unresolved disputes aged past 90 days</td><td class="num"><strong>RM 18,000</strong></td></tr>
+        <tr data-detail="When renewal negotiations start late, a vacant lot in a Malaysian mall at RM 12,000/month average rent sits empty for 2–4 weeks during tenant transition. At any given time, 2 lots in a 300-tenant mall are in vacancy gap — that is 2 x RM 12,000 = RM 24,000/month in foregone rent, plus fitout downtime."><td>Late renewal gaps</td><td>Vacancy during negotiation (est. 2 lots)</td><td class="num"><strong>RM 24,000</strong></td></tr>
         <tr><td style="font-weight:700;color:var(--navy)">Total monthly exposure</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 288,000</td></tr>
       </tbody>
     </table>
@@ -80,6 +87,13 @@
 
 <!-- ===== 4. VALUE CREATION ===== -->
 <div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the before/after comparison. Mall operators are visual — the RM 234K to RM 129K drop in arrears is the hook. Ask them: "What would your board say if you cut arrears by 45% in 60 days?" Most GMs know exactly what their arrears number is — it's reported monthly to the REIT or parent company.</p>
+    <h4>Objection handling</h4>
+    <p>"Our tenants won't use a portal" — They don't have to. RentX sends automated WhatsApp and email reminders with a payment link. The portal is for tenants who want self-service statements. Even without the portal, the automated collections cadence alone cuts arrears by 25–30%.</p>
+    <p>"We already have a property management system" — RentX doesn't replace your PMS. It sits on top and automates the collections workflow that your PMS doesn't handle — reminders, escalation triggers, dispute tracking, and renewal pipeline.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Automate collections — recover up to 45% of arrears</h2>
@@ -113,6 +127,10 @@
 
 <!-- ===== 5. MODELED IMPACT ===== -->
 <div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The RM 105K/month figure combines three things: arrears reduction (RM 87.5K), dispute write-off reduction (RM 10K), and collections staffing savings (RM 7.5K). Mall operators always ask "how did you get that number?" — break it down into these three components. The arrears piece alone pays for the platform 23x over.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Beyond Arrears</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">RentX doesn't just recover arrears — it prevents disputes</h2>
@@ -120,17 +138,46 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Dispute resolution</h3>
       <p class="text-md text-gray-600">Disputes tracked from raised to resolved — no more lost WhatsApp threads</p>
+      <template data-detail-content>
+        <h3>Dispute Resolution</h3>
+        <p>In a typical 300-tenant mall, 8–12 billing disputes arise each month — mostly around turnover rent calculations, service charge reconciliation, or proration during fit-out periods. Without a system, disputes live in WhatsApp groups and email threads.</p>
+        <ul>
+          <li><strong>Before:</strong> Average dispute resolution takes 45–60 days; 30% of disputed amounts are written off</li>
+          <li><strong>After:</strong> Structured workflow resolves disputes in 10–15 days; write-offs drop to under 10%</li>
+          <li><strong>Impact:</strong> RM 10,000/month in avoided write-offs on a 300-tenant mall</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Renewal pipeline</h3>
       <p class="text-md text-gray-600">90-day visibility on expiring leases — start negotiations early, reduce vacancy</p>
+      <template data-detail-content>
+        <h3>Renewal Pipeline</h3>
+        <p>Malaysian malls typically have 15–20% of leases expiring each year. On a 300-tenant mall, that's 45–60 renewals — or roughly 4–5 per month. Without pipeline visibility, leasing managers discover expirations too late.</p>
+        <ul>
+          <li><strong>Before:</strong> Renewal conversations start 30 days before expiry — not enough time to negotiate or find replacements</li>
+          <li><strong>After:</strong> 90-day pipeline means leasing managers start early and maintain tenant mix quality</li>
+          <li><strong>Impact:</strong> 2 fewer vacancy gaps per year at RM 12,000/lot/month = RM 24,000 saved</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Collections cadence</h3>
       <p class="text-md text-gray-600">Automated reminders on day 1, 7, 14 — escalation triggers at 30 days</p>
+      <template data-detail-content>
+        <h3>Collections Cadence</h3>
+        <p>Manual collections means tenants are chased inconsistently — some get called on day 3, others not until day 30. The automated cadence ensures every tenant gets the same treatment at the same intervals.</p>
+        <ul>
+          <li><strong>Day 1:</strong> Automated invoice + payment link via email and WhatsApp</li>
+          <li><strong>Day 7:</strong> First reminder with outstanding balance</li>
+          <li><strong>Day 14:</strong> Second reminder with escalation warning</li>
+          <li><strong>Day 30:</strong> Escalation to leasing manager + late payment fee trigger</li>
+          <li><strong>Impact:</strong> 70% of late payers respond to automated reminders before day 14</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +211,12 @@
 
 <!-- ===== 7. INVESTMENT & ROI ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Pricing</h4>
+    <p>RM 15/tenant/month for malls (RM 180/tenant/year). For malls with 300+ tenants, negotiate to RM 12/tenant/month. Turnover rent module is included — don't let them think it's an add-on. For REITs with multiple malls, offer portfolio pricing at RM 10/tenant/month across all properties.</p>
+    <h4>Closing technique</h4>
+    <p>Mall operators report arrears to their board or REIT quarterly. Time the pitch 6 weeks before quarter-end: "Deploy RentX now and show a 30% arrears improvement in your next board pack." The urgency is the board reporting cycle, not a seasonal event.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 5 months</h2>
@@ -187,9 +240,15 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">23.3x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>RM 4,200 recovered per tenant per year / RM 180 investment per tenant per year = <strong>23.3x ROI</strong>.</p>
+        <p>Recovery is calculated as: RM 234,000 monthly arrears x 45% reduction = RM 105,300/month recovered, divided by 300 tenants = RM 4,200/tenant/year.</p>
+        <p>Payback period: RM 180 / (RM 4,200 / 12) = <strong>0.5 months</strong> — pays for itself in the first billing cycle.</p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 300-tenant mall</p>

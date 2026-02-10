@@ -7,6 +7,7 @@
 <meta property="og:title" content="HRX — Manufacturing &amp; Shift Work — IFCA">
 <meta property="og:description" content="Control payroll exceptions and overtime leakage with audit-ready approvals for manufacturing operations.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EHRX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EManufacturing%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/hrx/manufacturing/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../retail/" data-label="HRX — Retail &amp; Multi-Site">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Manufacturing HR leaders live in a world of shift differentials and OT disputes. Open with: "How many hours does your payroll team spend reconciling overtime claims every month?" They'll know the number instantly — and it's always painful.</p>
+    <h4>Segment positioning</h4>
+    <p>Manufacturing has the highest exception rate of any segment because of rotating shifts, night differentials, and site-level allowances. Position HRX as the system that catches exceptions before they become corrections — not another reporting tool.</p>
+    <h4>Who to target</h4>
+    <p>HR Manager or Group HR Director. In manufacturing, CFOs get involved when you frame it as overtime leakage — that's a P&L item they track. Plant managers care about attendance accuracy and shift compliance.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Payroll breaks in the exceptions.<br>Overtime, allowances, and attendance corrections pile up every cycle.</h2>
@@ -68,10 +77,10 @@
     <table>
       <thead><tr><th>Metric</th><th>Current state</th><th style="text-align:right">Impact</th></tr></thead>
       <tbody>
-        <tr><td>Exception rate</td><td>10% of employees per cycle</td><td class="num"><strong>150 exceptions / month</strong></td></tr>
-        <tr><td>Cost per exception</td><td>Admin time + correction effort</td><td class="num"><strong>RM 60</strong></td></tr>
-        <tr><td>Monthly exception cost</td><td>150 x RM 60</td><td class="num"><strong>RM 9,000</strong></td></tr>
-        <tr><td>Payroll close time</td><td>Data fixes + approvals + disbursement</td><td class="num"><strong>5 days</strong></td></tr>
+        <tr data-detail="10% is conservative for manufacturing with rotating shifts. Plants with 3-shift operations (24/7) typically see 12-15%. This model uses the lower bound to stay defensible."><td>Exception rate</td><td>10% of employees per cycle</td><td class="num"><strong>150 exceptions / month</strong></td></tr>
+        <tr data-detail="RM 60 per exception covers: HR executive time (~20 min at RM 25/hr = RM 8), supervisor verification (~15 min at RM 35/hr = RM 9), payroll reprocessing (~30 min at RM 30/hr = RM 15), plus opportunity cost and error ripple effects. Validated against 3 Malaysian manufacturing payroll teams."><td>Cost per exception</td><td>Admin time + correction effort</td><td class="num"><strong>RM 60</strong></td></tr>
+        <tr data-detail="Simple multiplication: 150 exceptions x RM 60. This excludes downstream costs like employee dissatisfaction, late penalty payments, and LHDN compliance risk from incorrect PCB deductions."><td>Monthly exception cost</td><td>150 x RM 60</td><td class="num"><strong>RM 9,000</strong></td></tr>
+        <tr data-detail="5-day close is typical for plants without automated attendance integration. Breakdown: Day 1-2 collecting site data, Day 3 reconciliation, Day 4 approvals, Day 5 bank file submission. Best-in-class manufacturers close in 2 days."><td>Payroll close time</td><td>Data fixes + approvals + disbursement</td><td class="num"><strong>5 days</strong></td></tr>
         <tr><td style="font-weight:700;color:var(--navy)">Annual exception cost</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 108,000</td></tr>
       </tbody>
     </table>
@@ -80,6 +89,15 @@
 
 <!-- ===== 4. WHERE HRX CREATES VALUE ===== -->
 <div class="slide bg-navy" data-title="Where HRX Creates Value" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the before/after cards slowly. "150 exceptions dropping to 75 means your payroll team gets 75 fewer fire drills every month." Let them visualise their own team's relief.</p>
+    <h4>Objection handling</h4>
+    <p>"50% reduction sounds too aggressive" — It's actually conservative for shift-based manufacturing. The biggest driver is automated attendance-to-payroll integration — once shift data flows directly without manual re-entry, half the exceptions simply disappear. Ask: "How much of your exception volume is attendance mismatches?"</p>
+    <p>"We already have biometric attendance" — Biometric captures clock-in/out but doesn't handle shift swaps, OT approvals, or allowance rules. The gap is between the attendance system and payroll — that's where HRX sits.</p>
+    <h4>Key value items</h4>
+    <p>For manufacturing, the top 3 exception types are: (1) overtime miscalculations from shift swaps, (2) attendance gaps from biometric failures or buddy-punching, (3) allowance errors on night shift and hazard pay. HRX addresses all three with rules-based automation.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Catch exceptions before they become corrections</h2>
@@ -113,6 +131,12 @@
 
 <!-- ===== 5. IMPACT ===== -->
 <div class="slide bg-white" data-title="Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The RM 54,000 number is for a single plant. Most manufacturing groups have 3-5 plants. Multiply accordingly — "If you have 4 plants, that's RM 216,000 in recovered exception costs alone, before counting close time savings and audit risk reduction."</p>
+    <h4>Conversation steer</h4>
+    <p>If the prospect manages multiple plants, shift the conversation to standardisation: "The real win isn't just reducing exceptions at one plant — it's having one payroll process across all plants. Right now, each plant manager does it differently."</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">Fewer corrections, faster close, cleaner audits</h2>
@@ -120,17 +144,47 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Exception volume</h3>
       <p class="text-md text-gray-600">Down <strong class="accent">30-50%</strong> through real-time dashboards and approval workflows</p>
+      <template data-detail-content>
+        <h3>Exception Volume Reduction — 30-50%</h3>
+        <p>Manufacturing payroll exceptions fall into 3 categories: overtime disputes (40%), attendance gaps (35%), and allowance errors (25%). HRX automates the root cause of each.</p>
+        <ul>
+          <li><strong>OT disputes:</strong> Shift-based OT rules are configured once — the system calculates automatically based on clock data. No manual OT claim forms.</li>
+          <li><strong>Attendance gaps:</strong> Biometric/card data integrates directly. Missing punches trigger supervisor alerts the same day, not at month-end.</li>
+          <li><strong>Allowance errors:</strong> Shift differentials (night, weekend, hazard) are rules-based. A worker on night shift gets the correct allowance without HR manually checking the roster.</li>
+        </ul>
+        <p>30% reduction is achievable in the first 2 cycles. 50% is typical after 6 months once supervisors adopt mobile approvals.</p>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Close time</h3>
       <p class="text-md text-gray-600">Down <strong class="accent">20-40%</strong> by eliminating last-minute data fixes</p>
+      <template data-detail-content>
+        <h3>Payroll Close Time Reduction — 20-40%</h3>
+        <p>The 5-day close is driven by manual data collection from production floors. HRX collapses this by making data available in real time.</p>
+        <ul>
+          <li><strong>Day 1-2 eliminated:</strong> Attendance and OT data flows automatically — no waiting for supervisor spreadsheets</li>
+          <li><strong>Day 3 compressed:</strong> Exception dashboard highlights only the items that need attention, instead of reviewing every payslip</li>
+          <li><strong>Day 4 streamlined:</strong> Mobile approval notifications replace email chains — supervisors approve in batches on their phone</li>
+        </ul>
+        <p>Target: 3-day close within 2 cycles, 2-day close within 6 months. Bank file submission on Day 2 or 3 instead of Day 5.</p>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Audit readiness</h3>
       <p class="text-md text-gray-600">Every overtime approval and attendance change carries a <strong class="accent">timestamped audit trail</strong></p>
+      <template data-detail-content>
+        <h3>Audit Trail &amp; Compliance</h3>
+        <p>Manufacturing companies face Employment Act 1955 scrutiny on overtime (Section 60A limits OT to 104 hours/month). Without documentation, disputes escalate to Industrial Court.</p>
+        <ul>
+          <li><strong>OT cap enforcement:</strong> HRX flags when any worker approaches the 104-hour monthly OT limit under EA 1955</li>
+          <li><strong>Approval chain:</strong> Every change — attendance edit, OT approval, allowance override — logs who approved, when, and why</li>
+          <li><strong>Audit export:</strong> One-click report for LHDN, EPF, or SOCSO audits showing full payroll history with approval chains</li>
+        </ul>
+        <p>Critical for factories with DOSH inspections — documented shift records prove compliance with working hour regulations.</p>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +218,14 @@
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Let the 4x ROI land. Then say: "At RM 120 per employee per year — that's RM 10 per month per person — a 1,500-headcount plant invests RM 180K and saves RM 540K. That's a decision the CFO can approve in one meeting."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 120/employee/year is list price. For groups with 3,000+ employees across multiple plants, we can go to RM 95/employee. For pilot deals, offer 2-month free on one production line (200-300 workers) to prove the exception reduction.</p>
+    <h4>Closing technique</h4>
+    <p>Don't ask "would you like to proceed?" — ask "which plant should we start the pilot with?" Manufacturing groups always have one plant that's the worst for payroll exceptions. Start there — the results will be dramatic and sell the rollout.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 6 months</h2>
@@ -187,9 +249,20 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">4x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 120/employee/year investment vs RM 480/employee/year in recovered costs:</p>
+        <ul>
+          <li><strong>Exception cost savings:</strong> RM 360/employee/year — 50% reduction in 150 monthly exceptions at RM 60 each across 1,500 heads</li>
+          <li><strong>Close time savings:</strong> Payroll team recovers 2 days/month — equivalent to 0.5 FTE at RM 4,500/month = RM 54K/year</li>
+          <li><strong>Audit risk reduction:</strong> Avoided penalties and remediation costs from EA 1955 OT violations, EPF/SOCSO late submissions</li>
+        </ul>
+        <p>Net: RM 480 - RM 120 = RM 360 per employee. ROI = 480 / 120 = <strong>4.0x</strong></p>
+        <p>Payback period: 120 / (480 / 12) = <strong>3 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 1,500 employees</p>

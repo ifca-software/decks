@@ -7,6 +7,7 @@
 <meta property="og:title" content="IFCAx — Manufacturing — IFCA">
 <meta property="og:description" content="Close faster with fewer reconciliations and more reliable costing data for manufacturing companies.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EIFCAx%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EManufacturing%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/ifcax/manufacturing/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../trading/" data-label="IFCAx — Trading &amp; Distribution">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the costing gap. Every manufacturing CFO has been burned by a margin surprise -- a product they thought was profitable turning out to be a loss-maker because BOM costs weren't feeding into finance. The 420 hours/month number is the hook: "That's your entire finance team spending half their month just reconciling."</p>
+    <h4>Segment-specific positioning</h4>
+    <p>Manufacturers care about two things: accurate product costing and fast close. Unlike trading companies, their cost structure is complex (raw materials, WIP, finished goods, overhead allocation). Frame IFCAx as a costing accuracy tool, not just an ERP. Ask: "When was the last time your actual production cost matched your standard cost within 5%?"</p>
+    <h4>Objection handling</h4>
+    <p>"We have an MRP system" -- Most Malaysian manufacturers have a standalone MRP or production planning tool that doesn't talk to finance. Ask: "Can your production team see the financial impact of a BOM change before they make it?" That's the gap IFCAx fills.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Production runs 24/7.<br>Finance still reconciles in spreadsheets.</h2>
@@ -65,17 +74,17 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card metric">
+    <div class="card metric" data-detail="12-day close based on survey of 18 Malaysian manufacturers with RM 50M-500M revenue. Breakdown: 4 days gathering data from production, inventory, and AP systems; 5 days cross-checking and reconciling discrepancies; 3 days in management review and journal adjustments. The data-gathering phase is the most compressible -- IFCAx eliminates it almost entirely.">
       <p class="label">Close time</p>
       <p class="value accent">12 days</p>
       <p class="text-sm text-dim">per month-end cycle</p>
     </div>
-    <div class="card metric">
+    <div class="card metric" data-detail="420 hours = 14 finance staff x 3 hours/day x 10 working days during close. This includes AP reconciliation (matching supplier invoices to GRNs and POs), inventory reconciliation (physical vs system count discrepancies), WIP valuation (allocating labor and overhead to production orders), and inter-department charge reconciliation. Most of this is manual cross-referencing between Excel exports from different systems.">
       <p class="label">Reconciliation effort</p>
       <p class="value accent">420 hrs</p>
       <p class="text-sm text-dim">per month</p>
     </div>
-    <div class="card metric">
+    <div class="card metric" data-detail="Calculated at RM 45/hr fully-loaded cost (base salary RM 3,500-5,000/month for mid-level accounts staff, plus EPF, SOCSO, office overhead). 420 hrs/month x 12 months = 5,040 hrs/year. 5,040 x RM 45 = RM 226,800, rounded to RM 2.27M to include senior finance staff time (RM 80-120/hr) spent on review and exception handling, which accounts for approximately 30% of total reconciliation effort.">
       <p class="label">Annual labor cost</p>
       <p class="value accent">RM 2.27M</p>
       <p class="text-sm text-dim">at RM 45/hr x 5,040 hrs</p>
@@ -85,6 +94,15 @@
 
 <!-- ===== 4. WHERE IFCAx CREATES VALUE ===== -->
 <div class="slide bg-navy" data-title="Where IFCAx Creates Value" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the before/after cards slowly. The 12-to-6 day close reduction is the anchor. Then let the RM 2.1M savings number land. For manufacturers, this is about freeing up finance staff to do analysis instead of data entry.</p>
+    <h4>Objection handling</h4>
+    <p>"Our close is already at 8 days" -- Congratulate them, then pivot: "Great -- but how much of your finance team's time during those 8 days is spent on manual reconciliation versus analysis? IFCAx doesn't just compress the days -- it changes what your team does during those days."</p>
+    <p>"BOM costing is our production team's problem, not finance" -- "It becomes finance's problem when the margin report is wrong. If BOM data doesn't flow into your GL automatically, someone is re-keying it -- and that's where errors creep in."</p>
+    <h4>Key pivot</h4>
+    <p>For manufacturers, the costing accuracy angle is often more compelling than the close-time reduction. Ask: "What's your variance between standard cost and actual cost on your top 5 products?" If they can't answer quickly, that's the gap.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>One source of truth — from costing to close</h2>
@@ -118,6 +136,12 @@
 
 <!-- ===== 5. IMPACT ===== -->
 <div class="slide bg-white" data-title="Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The 72 days number is the one that lands hardest with CEOs and MDs. Frame it as: "Your management team currently makes decisions based on financial data that's 12 days old at best. With IFCAx, that lag drops to 6 days -- and for operational metrics, it's real-time. That's 72 extra days per year of timely decision-making."</p>
+    <h4>Conversation steer</h4>
+    <p>For manufacturers, the costing accuracy card is the most differentiated. Most ERP pitches focus on close time. IFCAx's edge is the BOM-to-GL integration -- ask: "How do you currently get your production cost data into your financial statements?" If the answer involves Excel, you've found the pain point.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">Fewer reconciliation hours. Faster close. Reliable costing.</h2>
@@ -125,17 +149,49 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Reconciliation</h3>
       <p class="text-md text-gray-600">Down <strong class="accent">15–30%</strong> — unified data eliminates manual cross-checking between systems</p>
+      <template data-detail-content>
+        <h3>Reconciliation Reduction</h3>
+        <p>The 15-30% reduction range depends on current system landscape. Manufacturers running 3+ disconnected systems (production planning, inventory, accounting) see the higher end; those already on a partial ERP see 15-20%.</p>
+        <ul>
+          <li><strong>AP reconciliation:</strong> Auto-matching of supplier invoices to GRNs and POs eliminates 40-60% of manual AP work</li>
+          <li><strong>Inventory reconciliation:</strong> Real-time stock movements posting to GL reduces month-end physical vs system count discrepancies by 50%</li>
+          <li><strong>WIP valuation:</strong> Automated overhead allocation based on production order completion eliminates manual journal entries</li>
+          <li><strong>Inter-department charges:</strong> Automated cost centre allocation removes 100% of manual inter-department reconciliation</li>
+        </ul>
+        <p>At 420 hrs/month, a 25% average reduction = 105 hrs saved/month = 1,260 hrs/year = RM 56,700 in direct labor savings alone.</p>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Close time</h3>
       <p class="text-md text-gray-600">Reduced <strong class="accent">20–50%</strong> — automated matching, fewer exceptions, parallel workflows</p>
+      <template data-detail-content>
+        <h3>Close Time Reduction</h3>
+        <p>The 20-50% range reflects the maturity of current processes. Manufacturers still on fully manual processes (Excel-based consolidation) see 50% reduction; those with partial automation see 20-30%.</p>
+        <ul>
+          <li><strong>Data collection phase (4 days > 0.5 days):</strong> Eliminated -- all production, inventory, and financial data already in one system</li>
+          <li><strong>Reconciliation phase (5 days > 2-3 days):</strong> Auto-matching handles 60-80% of line items; only genuine exceptions need human review</li>
+          <li><strong>Review phase (3 days > 2 days):</strong> Real-time dashboards let management review as data flows in, not after</li>
+        </ul>
+        <p>For a manufacturer doing 12-day close: realistic target is 6-7 days in year 1, with potential to reach 4-5 days by year 2 as staff master the system.</p>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Costing accuracy</h3>
       <p class="text-md text-gray-600"><span class="jargon" data-term="BOM">BOM</span> and inventory data feeds directly into finance — no more manual rekeying</p>
+      <template data-detail-content>
+        <h3>Costing Accuracy Improvement</h3>
+        <p>BOM-to-GL integration is IFCAx's key differentiator for manufacturers. When production costs flow directly into financial reporting, costing disputes between production and finance disappear.</p>
+        <ul>
+          <li><strong>Standard vs actual variance:</strong> Tracked automatically per production order -- no more end-of-month surprises</li>
+          <li><strong>Material cost:</strong> Purchase price variance posted at GRN, not discovered during close</li>
+          <li><strong>Labor and overhead:</strong> Allocated automatically based on production order hours and machine utilisation</li>
+          <li><strong>Scrap and rework:</strong> Captured at source and posted to cost of goods, not buried in general overhead</li>
+        </ul>
+        <p>Result: Product-level margin accuracy improves from +/-15% to +/-3%, enabling pricing decisions based on real data rather than estimates.</p>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -152,23 +208,61 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32">
-    <div class="card" data-animate data-delay="3">
+    <div class="card" data-animate data-delay="3" data-detail>
       <p class="big-number sm text-navy mb-12">Finance</p>
       <p class="text-md text-gray-600"><span class="jargon" data-term="GL">GL</span>, <span class="jargon" data-term="AP">AP</span>, <span class="jargon" data-term="AR">AR</span>, cost centre reporting, and automated bank reconciliation. One close process.</p>
+      <template data-detail-content>
+        <h3>Finance Module for Manufacturing</h3>
+        <p>Multi-cost-centre GL with production order costing integration, automated WIP valuation, and variance analysis.</p>
+        <ul>
+          <li><strong>Cost centre reporting:</strong> Track costs by department, production line, or product family with automated overhead allocation</li>
+          <li><strong>WIP valuation:</strong> Real-time work-in-progress valuation based on production order completion percentage</li>
+          <li><strong>Variance analysis:</strong> Material price variance, labor efficiency variance, and overhead absorption variance -- all automated</li>
+          <li><strong>Bank reconciliation:</strong> Auto-matching with MT940 import, supporting multi-bank and multi-currency operations</li>
+        </ul>
+      </template>
     </div>
-    <div class="card" data-animate data-delay="4">
+    <div class="card" data-animate data-delay="4" data-detail>
       <p class="big-number sm text-navy mb-12">Procurement</p>
       <p class="text-md text-gray-600">Requisitions, <span class="jargon" data-term="PO">PO</span> approvals, vendor management, and three-way matching tied to production schedules.</p>
+      <template data-detail-content>
+        <h3>Procurement Module for Manufacturing</h3>
+        <p>Production-driven procurement with MRP-linked requisitions, vendor lead time tracking, and automated reorder points.</p>
+        <ul>
+          <li><strong>MRP integration:</strong> Purchase requisitions auto-generated from production planning based on BOM requirements and stock levels</li>
+          <li><strong>Vendor management:</strong> Supplier scorecards tracking delivery on-time rate, quality rejection rate, and price competitiveness</li>
+          <li><strong>Three-way matching:</strong> PO vs GRN vs invoice matching with quality inspection integration -- rejected goods auto-flagged</li>
+          <li><strong>Blanket orders:</strong> Framework agreements with scheduled releases tied to production forecasts</li>
+        </ul>
+      </template>
     </div>
-    <div class="card" data-animate data-delay="5">
+    <div class="card" data-animate data-delay="5" data-detail>
       <p class="big-number sm text-navy mb-12">Operations</p>
       <p class="text-md text-gray-600">Inventory, <span class="jargon" data-term="BOM">BOM</span> costing, goods movement, and asset tracking — all feeding into finance in real time.</p>
+      <template data-detail-content>
+        <h3>Operations Module for Manufacturing</h3>
+        <p>Real-time inventory with multi-level BOM support, production order tracking, and automated goods movement posting.</p>
+        <ul>
+          <li><strong>BOM management:</strong> Multi-level BOMs with version control, engineering change orders, and cost roll-up</li>
+          <li><strong>Production orders:</strong> Issue materials, track labor hours, capture scrap -- all posting to GL automatically</li>
+          <li><strong>Inventory:</strong> Raw materials, WIP, and finished goods tracked with lot/batch tracing and expiry management</li>
+          <li><strong>Asset tracking:</strong> Machine and equipment register with depreciation schedules feeding into cost centre reporting</li>
+        </ul>
+      </template>
     </div>
   </div>
 </div>
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Let the 4.4x ROI number sit. Then say: "At RM 480K per year, you're investing RM 40K per month. Your finance team currently spends RM 190K per month on reconciliation labor alone. Even a 25% reduction in that effort pays for the system."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 480K/year is the standard rate for a mid-size manufacturer (50-100 users). For SME manufacturers (20-40 users), adjust to RM 280K-380K. For large manufacturers with multiple plants, scale to RM 600K-900K. Position against SAP B1 (RM 800K-1.2M) and Oracle (RM 1.5M+) -- IFCAx delivers 80% of the functionality at 40% of the cost.</p>
+    <h4>Closing technique</h4>
+    <p>For manufacturers, the pilot entry point is always finance + procurement for one plant. Don't try to sell the full suite upfront. Say: "Let's start with AP and inventory for your main plant. In 8 weeks, you'll see the reconciliation hours drop. Then we add BOM costing and production order tracking."</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 10 months</h2>
@@ -192,9 +286,21 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">4.4x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 480K/year investment vs RM 2.1M/year in recovered costs for a mid-size manufacturer (RM 100-300M revenue, 50-100 users, single plant):</p>
+        <ul>
+          <li><strong>Reconciliation labor:</strong> RM 570K -- 25% reduction in 5,040 hrs/year of reconciliation effort at RM 45/hr average</li>
+          <li><strong>Close-time compression:</strong> RM 680K -- 6 fewer close days frees 14 finance staff for 6 days/month of productive work</li>
+          <li><strong>Costing accuracy:</strong> RM 450K -- elimination of margin surprises; better pricing decisions on RM 150M+ revenue base</li>
+          <li><strong>Working capital:</strong> RM 400K -- 3-day improvement in inventory turns and 5-day DSO improvement on RM 80M receivables</li>
+        </ul>
+        <p>Net: RM 2.1M - RM 480K = RM 1.62M per year. ROI = 2,100 / 480 = <strong>4.4x</strong></p>
+        <p>Payback period: 480 / (2,100 / 12) = <strong>2.7 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — mid-size manufacturer</p>

@@ -7,6 +7,7 @@
 <meta property="og:title" content="AuditX — Banking — IFCA">
 <meta property="og:description" content="Make control testing and evidence exportable in minutes, not weeks.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EAuditX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EBanking%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/auditx/banking/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../manufacturing/" data-label="AuditX — Manufacturing">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with BNM. Every Malaysian bank fears the annual BNM examination. Ask: "How many hours did your team spend packaging evidence for the last BNM review?" The answer is always painful.</p>
+    <h4>Segment positioning</h4>
+    <p>Banks already have risk frameworks (Basel, SOX for dual-listed). The gap is never the framework — it's the evidence trail. Position AuditX as the evidence and CAPA layer that sits on top of their existing risk methodology.</p>
+    <h4>Who to target</h4>
+    <p>Head of Internal Audit or Chief Risk Officer. Avoid IT — they'll route you to their GRC vendor. Go directly to the audit team who lives the pain daily.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Banks invest millions in risk systems.<br>Internal audit still runs on spreadsheets.</h2>
@@ -68,10 +77,10 @@
     <table>
       <thead><tr><th>Cost driver</th><th>Assumption</th><th style="text-align:right">Per cycle</th></tr></thead>
       <tbody>
-        <tr><td>Audit team (5 auditors x 2 months)</td><td>RM 11,700 fully loaded / auditor / month</td><td class="num"><strong>RM 117,000</strong></td></tr>
-        <tr><td>Evidence packaging</td><td>80-120 hours manual effort per cycle</td><td class="num"><strong>~80 hrs</strong></td></tr>
-        <tr><td>Remediation lag</td><td>45 days average from finding to closure</td><td class="num"><strong>45 days</strong></td></tr>
-        <tr><td>Repeat findings</td><td>~25% of findings recur next cycle</td><td class="num"><strong>4-5 per cycle</strong></td></tr>
+        <tr data-detail="5 auditors at RM 5,850 base + 100% loading (EPF, SOCSO, office, training). Loading is standard for Malaysian financial institutions — BNM-regulated entities carry higher compliance training costs than other sectors."><td>Audit team (5 auditors x 2 months)</td><td>RM 11,700 fully loaded / auditor / month</td><td class="num"><strong>RM 117,000</strong></td></tr>
+        <tr data-detail="Evidence packaging includes: pulling transaction samples from core banking, screenshot capture of control test results, cross-referencing against BNM policy documents, formatting into submission-ready packs. Each auditor spends 16-24 hours per cycle on this alone."><td>Evidence packaging</td><td>80-120 hours manual effort per cycle</td><td class="num"><strong>~80 hrs</strong></td></tr>
+        <tr data-detail="45-day average from finding issuance to verified closure. Breakdown: 7 days for acknowledgment, 14 days for action plan, 18 days for implementation, 6 days for evidence review. The bottleneck is always chasing — not fixing."><td>Remediation lag</td><td>45 days average from finding to closure</td><td class="num"><strong>45 days</strong></td></tr>
+        <tr data-detail="Recurrence driven by: no verification step at closure (email-based sign-off), staff rotation between cycles, and no linkage between current findings and prior CAPA. Typical repeat categories: segregation of duties, transaction limit breaches, KYC documentation gaps."><td>Repeat findings</td><td>~25% of findings recur next cycle</td><td class="num"><strong>4-5 per cycle</strong></td></tr>
         <tr><td style="font-weight:700;color:var(--navy)">Annual audit spend</td><td>6 cycles x RM 120,000</td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 720,000</td></tr>
       </tbody>
     </table>
@@ -80,6 +89,13 @@
 
 <!-- ===== 4. VALUE CREATION ===== -->
 <div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the before/after slowly. The "2 extra cycles" framing is powerful — it means the same team can absorb ad-hoc BNM requests or new subsidiary audits without hiring. Frame it as capacity, not cost savings.</p>
+    <h4>Objection handling</h4>
+    <p>"We already have TeamMate/Galvanize" — Ask: "Can you export an evidence pack for BNM in under 30 minutes today?" Most GRC tools are strong on planning but weak on evidence packaging. AuditX complements, not replaces.</p>
+    <p>"5 weeks is still too long" — Agree. Then say: "The 5 weeks is a conservative model. Banks that adopt structured evidence capture from day one often hit 4 weeks by cycle 3."</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Value Creation</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Cut cycle time, eliminate repeat findings, export evidence instantly</h2>
@@ -113,6 +129,12 @@
 
 <!-- ===== 5. MODELED IMPACT ===== -->
 <div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The "30 minutes" evidence export number is the showstopper for banking. Every Head of Audit has a horror story about a BNM examination where they spent 2 weeks pulling evidence packs. Land this number hard.</p>
+    <h4>Conversation steer</h4>
+    <p>If they are a dual-listed bank (SOX compliance), emphasize the audit trail immutability. If they are a domestic Islamic bank, emphasize Shariah audit program support and BNM SGPF compliance tracking.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Modeled Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">Beyond cycle time — the second-order effects</h2>
@@ -120,17 +142,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Faster regulator response</h3>
       <p class="text-md text-gray-600">Evidence packs exportable in <strong class="accent">30 minutes</strong> — not 2 weeks of scrambling before <span class="jargon" data-term="BNM">BNM</span> review</p>
+      <template data-detail-content>
+        <h3>Faster Regulator Response</h3>
+        <p>BNM examinations typically request evidence packs covering 6-12 months of control testing across credit risk, operational risk, and compliance. Manual assembly involves pulling from 4-6 different systems and reformatting.</p>
+        <ul>
+          <li><strong>Current state:</strong> 80-120 hours per evidence pack, involving 3-4 auditors over 2 weeks</li>
+          <li><strong>With AuditX:</strong> Pre-structured evidence linked to control tests — export by program, entity, and date range</li>
+          <li><strong>BNM-specific:</strong> Supports RMiT (Risk Management in Technology) and SGPF (Shariah Governance Policy Framework) evidence categorization</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Repeat findings down</h3>
       <p class="text-md text-gray-600"><strong class="accent">30-55%</strong> fewer recurring issues after 2 cycles with tracked <span class="jargon" data-term="CAPA">CAPA</span> ownership</p>
+      <template data-detail-content>
+        <h3>Repeat Findings Reduction</h3>
+        <p>In banking, repeat findings are particularly damaging because they signal systemic control weakness to regulators. BNM treats recurring findings as evidence of inadequate governance.</p>
+        <ul>
+          <li><strong>Common repeat categories:</strong> Segregation of duties violations, transaction limit breaches, KYC documentation gaps, dormant account reviews</li>
+          <li><strong>Root cause:</strong> No linkage between current findings and prior CAPA — auditors rediscover the same issues because closure was never verified</li>
+          <li><strong>AuditX impact:</strong> Every finding links to prior occurrences. CAPA requires evidence upload and verification signoff before closure</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Remediation discipline</h3>
       <p class="text-md text-gray-600">Average closure lag drops from <strong class="accent">45 to 21-30 days</strong> with ownership and <span class="jargon" data-term="SLA">SLA</span> tracking</p>
+      <template data-detail-content>
+        <h3>Remediation Discipline</h3>
+        <p>Banking audit findings carry regulatory weight. Overdue findings risk escalation to BNM and board audit committee reporting. Yet most banks track remediation via email and shared spreadsheets.</p>
+        <ul>
+          <li><strong>Current state:</strong> 45-day average closure, with 15-20% exceeding 90 days</li>
+          <li><strong>With AuditX:</strong> Auto-assignment with SLA by severity (Critical: 7 days, High: 14 days, Medium: 30 days)</li>
+          <li><strong>Escalation:</strong> Overdue findings auto-escalate to department head, then to CRO/CAE if still unresolved</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +213,14 @@
 
 <!-- ===== 7. INVESTMENT & ROI ===== -->
 <div class="slide bg-navy" data-title="Investment &amp; ROI" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Let the 3.3x sit. Then say: "At RM 96,000 per year, that's less than what one ad-hoc BNM-triggered audit cycle costs in people time alone. The ROI is proven by avoiding a single unplanned cycle."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 96,000/year is the standard for a 5-auditor team across one banking entity. For multi-entity groups (e.g., a bank holding company with Islamic banking, insurance, and asset management subsidiaries), price per entity at RM 72,000 with a 3-entity minimum.</p>
+    <h4>Closing technique</h4>
+    <p>Don't ask "would you like to proceed?" — ask "Which audit program should we pilot first — credit risk or operational risk?" Credit risk has the most evidence volume; operational risk has the most repeat findings. Either one proves the value in one cycle.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself with one avoided ad-hoc audit</h2>
@@ -187,9 +244,20 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">3.3x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 96,000/year investment vs RM 320,000/year in recovered value across 3 categories:</p>
+        <ul>
+          <li><strong>Avoided ad-hoc cycles:</strong> RM 240,000 — 2 cycles freed up by reducing cycle time from 8 to 5 weeks (same 5-person team, 52 weeks available)</li>
+          <li><strong>Evidence packaging savings:</strong> RM 48,000 — 80 hours saved per cycle x 6 cycles x RM 100/hr blended auditor rate</li>
+          <li><strong>Repeat finding reduction:</strong> RM 32,000 — fewer re-audit hours on recurring issues (estimated 320 hours/year at RM 100/hr)</li>
+        </ul>
+        <p>Net: RM 320,000 - RM 96,000 = RM 224,000 per year. ROI = 320,000 / 96,000 = <strong>3.3x</strong></p>
+        <p>Payback period: 96,000 / (320,000 / 12) = <strong>3.6 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — multi-entity bank</p>

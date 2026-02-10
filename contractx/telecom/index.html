@@ -7,6 +7,7 @@
 <meta property="og:title" content="ContractX — Telecom Enterprise — IFCA">
 <meta property="og:description" content="Faster approvals and fewer SLA misses with a single renewal and obligation view.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EContractX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3ETelecom%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/contractx/telecom/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../reit/" data-label="ContractX — REITs &amp; Property Groups">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the deal velocity angle. Telecom enterprise groups process 120+ contracts per month — tower leases, enterprise service agreements, interconnect deals, equipment procurement. Every day in the redline cycle is a day of delayed revenue. Ask: "How many contracts are sitting in legal review right now?" The backlog is always bigger than they think.</p>
+    <h4>Segment positioning</h4>
+    <p>Telecom companies have automated network operations with NOC dashboards and real-time monitoring. But their contract operations still run on email and spreadsheets. ContractX is the NOC equivalent for contracts — real-time visibility, automated alerts, and performance tracking.</p>
+    <h4>Who to target</h4>
+    <p>Head of Legal/Commercial or VP of Enterprise Sales. Legal cares about risk and efficiency; enterprise sales cares about closing deals faster. If you can get both in the room, pitch ContractX as the deal acceleration layer between them.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Cycle time and SLA misses create revenue leakage.<br>At 120 contracts per month, every day counts.</h2>
@@ -68,10 +77,50 @@
     <table>
       <thead><tr><th>Where it leaks</th><th>What fixes it</th><th style="text-align:right">Annual cost</th></tr></thead>
       <tbody>
-        <tr><td><span class="jargon" data-term="SLA">SLA</span> penalty misses</td><td>Breach logging with evidence and penalty tracking</td><td class="num"><strong>RM 200,000</strong></td></tr>
-        <tr><td>Pricing slippage</td><td>Clause library and standardized templates</td><td class="num"><strong>RM 150,000</strong></td></tr>
-        <tr><td>Missed renewals</td><td>Renewal pipeline with 90-day alerts</td><td class="num"><strong>RM 150,000</strong></td></tr>
-        <tr><td>Slow approval cycles</td><td>Approval routing and version control</td><td class="num"><strong>RM 100,000</strong></td></tr>
+        <tr data-detail><td><span class="jargon" data-term="SLA">SLA</span> penalty misses</td><td>Breach logging with evidence and penalty tracking</td><td class="num"><strong>RM 200,000</strong></td>
+          <template data-detail-content>
+            <h3>SLA Penalty Misses — RM 200,000/year</h3>
+            <p>Telecom enterprise contracts contain complex SLA frameworks — network uptime, latency, packet loss, and response time commitments. Penalty clauses exist in both directions: from vendors to the telco, and from the telco to enterprise clients.</p>
+            <ul>
+              <li><strong>As buyer:</strong> Network equipment vendors and tower companies breach SLAs (e.g., 99.9% uptime target missed by 0.3%) — penalty credits go unclaimed because breach evidence is not systematically captured</li>
+              <li><strong>As provider:</strong> Enterprise clients submit SLA credit claims at quarter-end — without proactive logging, the telco cannot contest inflated claims</li>
+              <li><strong>Calculation:</strong> Net SLA credit exposure of 0.33% on RM 60M contract value = RM 200K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Pricing slippage</td><td>Clause library and standardized templates</td><td class="num"><strong>RM 150,000</strong></td>
+          <template data-detail-content>
+            <h3>Pricing Slippage — RM 150,000/year</h3>
+            <p>Without standardised templates, account managers negotiate enterprise deals independently. Pricing, discount structures, and volume commitments vary across similar-sized clients.</p>
+            <ul>
+              <li><strong>Example:</strong> Two enterprise clients with similar bandwidth requirements — one paying RM 12/Mbps and the other RM 14/Mbps because the contracts were negotiated by different account managers without a standard rate card</li>
+              <li><strong>Discount creep:</strong> Account managers offer ad hoc discounts to close deals — no visibility on cumulative discount exposure across the portfolio</li>
+              <li><strong>Calculation:</strong> 0.25% of RM 60M contract value lost to pricing inconsistency = RM 150K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Missed renewals</td><td>Renewal pipeline with 90-day alerts</td><td class="num"><strong>RM 150,000</strong></td>
+          <template data-detail-content>
+            <h3>Missed Renewals — RM 150,000/year</h3>
+            <p>Enterprise contracts renew annually or bi-annually. When renewals are not proactively managed, clients either churn or renegotiate from a position of strength because the telco is scrambling.</p>
+            <ul>
+              <li><strong>Churn risk:</strong> Enterprise clients shopping alternatives during the unmanaged renewal window — competitors offer aggressive pricing to poach accounts</li>
+              <li><strong>Emergency renegotiation:</strong> When the account manager discovers a renewal 2 weeks before expiry, the client has leverage — resulting in deeper discounts to retain</li>
+              <li><strong>Calculation:</strong> 10-15 renewals per year handled reactively x RM 10-15K in concessions per contract = RM 150K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Slow approval cycles</td><td>Approval routing and version control</td><td class="num"><strong>RM 100,000</strong></td>
+          <template data-detail-content>
+            <h3>Slow Approval Cycles — RM 100,000/year</h3>
+            <p>Enterprise deals require multi-stakeholder approval — legal, finance, product, and sometimes regulatory. Email-based routing creates bottlenecks and version confusion.</p>
+            <ul>
+              <li><strong>Bottleneck:</strong> Legal reviews 120 contracts/month with 3-4 staff — each contract passes through 3-5 reviewers via email, with comments scattered across threads</li>
+              <li><strong>Version confusion:</strong> "Contract_v3_final_REVISED_2.docx" — multiple versions circulating simultaneously, leading to rework when the wrong version is signed</li>
+              <li><strong>Calculation:</strong> Direct cost of rework, expedite fees, and delayed revenue recognition = RM 100K</li>
+            </ul>
+          </template>
+        </tr>
         <tr><td style="font-weight:700;color:var(--navy)">Total modeled leakage</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 600K</td></tr>
       </tbody>
     </table>
@@ -80,6 +129,15 @@
 
 <!-- ===== 4. VALUE CREATION ===== -->
 <div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>This slide has two stories: leakage reduction (RM 600K) and deal acceleration (42 to 27 days). Lead with deal acceleration — telecom enterprise groups care about closing deals faster because every day of delay is a day of deferred ARPU. Then say: "The leakage recovery is the bonus — the real value is 15 days of revenue pulled forward on every deal."</p>
+    <h4>Objection handling</h4>
+    <p>"We already have a CRM that tracks contracts" — CRM tracks the client relationship and deal pipeline. It does not track contract terms, clause compliance, or SLA performance. ContractX starts where the CRM ends — at the point of signature.</p>
+    <p>"Our legal team is already fast" — Ask: "What percentage of contracts use your standard template without modification?" If less than 60%, there is significant time spent on bespoke redlines that could be standardised.</p>
+    <h4>Key framing</h4>
+    <p>For telecom, frame ContractX as a revenue acceleration tool. Faster contracts = faster ARPU recognition. Protected renewals = lower enterprise churn. SLA discipline = fewer surprise credit payouts. Every metric feeds into the P&L.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Recover leakage + accelerate revenue with faster cycles</h2>
@@ -113,6 +171,12 @@
 
 <!-- ===== 5. MODELED IMPACT ===== -->
 <div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The 20-35% cycle time reduction on 120 contracts per month is the anchor number. That is 1,800 contract-days per month recovered. For the legal team, that means capacity to handle growth without hiring. For the sales team, that means deals close faster. For finance, that means earlier revenue recognition. Everyone wins.</p>
+    <h4>Conversation steer</h4>
+    <p>Ask which card resonates most. "Faster approvals" means they have a legal bottleneck. "SLA discipline" means they are getting hit with credit claims. "Renewal pipeline" means they have enterprise churn concerns. Each leads to a different pilot scope — template standardisation, breach logging, or renewal dashboard.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Beyond Recovery</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">ContractX does not just reduce leakage — it accelerates deal velocity</h2>
@@ -120,17 +184,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Faster approvals</h3>
       <p class="text-md text-gray-600">Standard <span class="jargon" data-term="MSA">MSA</span>/<span class="jargon" data-term="SOW">SOW</span> templates and approval routing cut cycle time by 20-35% — every deal closes faster</p>
+      <template data-detail-content>
+        <h3>Faster Approvals</h3>
+        <p>Telecom enterprise deals follow complex approval chains — legal, finance, product, regulatory. Without standardised routing, contracts bounce between stakeholders via email with no visibility on where the bottleneck is.</p>
+        <ul>
+          <li><strong>Before:</strong> 42-day average cycle. Account managers chase approvers by email. Comments from legal, finance, and product arrive on different versions. Rework is common.</li>
+          <li><strong>After:</strong> Pre-approved MSA/SOW templates cover 70-80% of terms. Only non-standard clauses trigger legal review. Parallel routing means legal and finance review simultaneously, not sequentially.</li>
+          <li><strong>Impact:</strong> Cycle time drops to 27 days — 15 days of earlier ARPU recognition on every enterprise deal. Legal capacity increases without hiring.</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy"><span class="jargon" data-term="SLA">SLA</span> discipline</h3>
       <p class="text-md text-gray-600">Breach log with evidence — penalty credits tracked and enforced consistently across all enterprise clients</p>
+      <template data-detail-content>
+        <h3>SLA Discipline</h3>
+        <p>Telecom enterprise contracts have bidirectional SLA exposure — the telco receives SLAs from infrastructure vendors and provides SLAs to enterprise clients. ContractX manages both sides of the equation.</p>
+        <ul>
+          <li><strong>Inbound (as buyer):</strong> Tower companies, equipment vendors, and interconnect partners breach SLAs — credits go unclaimed because the NOC logs network events but nobody maps them to contract penalty clauses</li>
+          <li><strong>Outbound (as provider):</strong> Enterprise clients submit credit claims at quarter-end — without proactive breach logging, the telco cannot contest inflated or invalid claims</li>
+          <li><strong>Impact:</strong> Net SLA credit position improves — more credits recovered from vendors, fewer invalid credits paid to clients</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Renewal pipeline</h3>
       <p class="text-md text-gray-600">Every renewal visible 90 days ahead — churn risk flagged, forecast accuracy improved, revenue protected</p>
+      <template data-detail-content>
+        <h3>Renewal Pipeline</h3>
+        <p>Enterprise contracts are the highest-margin segment for most telcos. Losing an enterprise client to churn costs 5-10x more than retaining them. Proactive renewal management is the best anti-churn tool available.</p>
+        <ul>
+          <li><strong>Before:</strong> Account managers discover renewals when the client mentions they are shopping alternatives — by then, the competitor has already presented pricing</li>
+          <li><strong>After:</strong> Renewal pipeline dashboard shows every enterprise contract expiring in the next 90/60/30 days, with contract value, margin, usage trends, and churn risk score</li>
+          <li><strong>Impact:</strong> Enterprise churn reduced by catching at-risk accounts early; upsell revenue from proactive expansion conversations 90 days before renewal</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +255,14 @@
 
 <!-- ===== 7. INVESTMENT & ROI ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Let the 3.3x ROI sit, then add: "RM 180K per year is the cost of one junior legal counsel. But ContractX gives you the output equivalent of 2-3 contract administrators plus deal acceleration that no amount of hiring can replicate. And unlike headcount, ContractX scales — double the contract volume, same subscription."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 180K/year is the standard price for up to RM 60M in contract value and up to 150 active users. For larger telcos (RM 100M+ contract value), pricing scales to RM 280K. For pilot deals, offer a 30-day proof-of-value with one product line or one enterprise segment to demonstrate cycle time reduction and renewal visibility.</p>
+    <h4>Closing technique</h4>
+    <p>Do not ask "would you like to proceed?" — ask "which product line should we pilot with — enterprise connectivity, managed services, or cloud?" Assume the close. Enterprise connectivity is the easiest starting point because it has the most standardisable contract structures.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself within the first year</h2>
@@ -187,9 +286,22 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">3.3x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 180K/year investment vs RM 600K/year in recovered value across 4 categories:</p>
+        <ul>
+          <li><strong>SLA penalty misses:</strong> RM 200K — 0.33% net SLA credit exposure on RM 60M contract value</li>
+          <li><strong>Pricing slippage:</strong> RM 150K — 0.25% lost to pricing inconsistency across account managers</li>
+          <li><strong>Missed renewals:</strong> RM 150K — 10-15 renewals handled reactively at RM 10-15K in concessions each</li>
+          <li><strong>Slow approval cycles:</strong> RM 100K — rework, expedite fees, and delayed revenue recognition</li>
+        </ul>
+        <p>Total leakage: RM 600K. Full recovery modeled because template standardisation and routing deliver near-immediate efficiency gains.</p>
+        <p>Net: RM 600K - RM 180K = RM 420K per year. ROI = 600K / 180K = <strong>3.3x</strong></p>
+        <p>Payback period: 180K / (600K / 12) = <strong>3.6 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — RM 120M portfolio</p>

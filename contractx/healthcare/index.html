@@ -7,6 +7,7 @@
 <meta property="og:title" content="ContractX — Healthcare Groups — IFCA">
 <meta property="og:description" content="Control OEM contracts and service SLAs so uptime is not dependent on spreadsheets.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EContractX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EHealthcare%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/contractx/healthcare/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../reit/" data-label="ContractX — REITs &amp; Property Groups">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the OEM overlap angle. Healthcare groups have 20-40 OEM service contracts per hospital — Siemens, GE, Philips, Daikin, Schindler. Ask: "Do you know which equipment is covered by more than one contract right now?" They never do.</p>
+    <h4>Segment positioning</h4>
+    <p>Healthcare groups care about uptime because uptime = patient safety + revenue. But they manage uptime through OEM contracts that nobody centrally tracks. ContractX is the visibility layer between clinical operations and vendor management.</p>
+    <h4>Who to target</h4>
+    <p>Head of Clinical Engineering or VP of Procurement. Clinical engineers care about equipment uptime; procurement cares about spend efficiency. Both are buyers — present to both in the same room if possible.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Service contracts are clinical uptime.<br>But most healthcare groups manage them manually.</h2>
@@ -68,10 +77,50 @@
     <table>
       <thead><tr><th>Where it leaks</th><th>What fixes it</th><th style="text-align:right">Annual cost</th></tr></thead>
       <tbody>
-        <tr><td>Contract overlaps</td><td>Asset-linked contract registry eliminates duplicate coverage</td><td class="num"><strong>RM 300,000</strong></td></tr>
-        <tr><td>Unused <span class="jargon" data-term="SLA">SLA</span> tiers</td><td>SLA tier review — downgrade where premium is not justified</td><td class="num"><strong>RM 200,000</strong></td></tr>
-        <tr><td>Missed <span class="jargon" data-term="SLA">SLA</span> credits</td><td>Breach logging with evidence — enforce penalty clauses</td><td class="num"><strong>RM 150,000</strong></td></tr>
-        <tr><td>Missed renewals</td><td>Renewal calendar with automated alerts per asset</td><td class="num"><strong>RM 100,000</strong></td></tr>
+        <tr data-detail><td>Contract overlaps</td><td>Asset-linked contract registry eliminates duplicate coverage</td><td class="num"><strong>RM 300,000</strong></td>
+          <template data-detail-content>
+            <h3>Contract Overlaps — RM 300,000/year</h3>
+            <p>Hospitals typically carry 20-40 OEM service contracts per site. Without asset-to-contract linkage, the same equipment category is often covered by multiple vendors.</p>
+            <ul>
+              <li><strong>Common overlaps:</strong> HVAC chillers covered by both the building FM vendor and a specialist OEM contract; elevator maintenance in both the FM scope and a standalone Schindler/KONE agreement</li>
+              <li><strong>Visibility gap:</strong> Procurement signs contracts by vendor, not by asset — overlaps are invisible until someone maps both</li>
+              <li><strong>Calculation:</strong> Estimated 1.2% of RM 25M service spend is duplicate coverage = RM 300K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Unused <span class="jargon" data-term="SLA">SLA</span> tiers</td><td>SLA tier review — downgrade where premium is not justified</td><td class="num"><strong>RM 200,000</strong></td>
+          <template data-detail-content>
+            <h3>Unused SLA Tiers — RM 200,000/year</h3>
+            <p>OEM contracts offer tiered SLA options (Bronze/Silver/Gold or 8x5/12x5/24x7). Hospitals often buy premium tiers for equipment that does not justify the response time guarantee.</p>
+            <ul>
+              <li><strong>Example:</strong> 24x7 SLA on sterilisation units that only operate during weekday theatre hours — paying RM 18K/year for coverage needed 40 hours/week</li>
+              <li><strong>Right-sizing opportunity:</strong> Downgrade 15-20% of contracts from premium to standard tier where actual usage does not require premium response</li>
+              <li><strong>Calculation:</strong> RM 25M spend x 20% on premium tiers x 40% eligible for downgrade x 10% savings = RM 200K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Missed <span class="jargon" data-term="SLA">SLA</span> credits</td><td>Breach logging with evidence — enforce penalty clauses</td><td class="num"><strong>RM 150,000</strong></td>
+          <template data-detail-content>
+            <h3>Missed SLA Credits — RM 150,000/year</h3>
+            <p>OEM contracts include SLA penalty clauses for response time breaches, but most hospitals lack the evidence infrastructure to enforce them.</p>
+            <ul>
+              <li><strong>Example:</strong> Siemens MRI contract specifies 4-hour response — actual response was 8 hours on 6 occasions last year, but no breach was formally logged</li>
+              <li><strong>Penalty structure:</strong> Typical penalty is 2-5% of monthly contract value per breach, but only 10-15% of breaches are documented with timestamps</li>
+              <li><strong>Calculation:</strong> RM 25M spend x 0.6% in uncollected penalty credits = RM 150K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Missed renewals</td><td>Renewal calendar with automated alerts per asset</td><td class="num"><strong>RM 100,000</strong></td>
+          <template data-detail-content>
+            <h3>Missed Renewals — RM 100,000/year</h3>
+            <p>Service contract renewals in healthcare are tied to individual assets (MRI, CT, chillers). When renewals are missed, hospitals either lose coverage during the gap or auto-renew at stale terms.</p>
+            <ul>
+              <li><strong>Coverage gap risk:</strong> Equipment operating without valid service contract — any breakdown becomes a full-cost emergency repair</li>
+              <li><strong>Auto-renewal penalty:</strong> Vendors lock in last year's rates plus escalation — no opportunity to renegotiate scope or benchmark against competitors</li>
+              <li><strong>Calculation:</strong> 5-8 missed renewals per year x RM 12-15K average overpayment per contract = RM 100K</li>
+            </ul>
+          </template>
+        </tr>
         <tr><td style="font-weight:700;color:var(--navy)">Total modeled leakage</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 750K</td></tr>
       </tbody>
     </table>
@@ -80,6 +129,15 @@
 
 <!-- ===== 4. VALUE CREATION ===== -->
 <div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the before/after cards. The RM 300K recovery number is deliberately conservative — 40% of RM 750K. For multi-hospital groups (IHH, KPJ, Ramsay Sime Darby), multiply by the number of hospitals: "A 5-hospital group is looking at RM 1.5M in recovered spend."</p>
+    <h4>Objection handling</h4>
+    <p>"We already track our OEM contracts" — Ask: "Can you show me which assets have overlapping coverage right now?" If they need to check with someone, the tracking is not working. ContractX shows this in one dashboard.</p>
+    <p>"RM 300K is not material for us" — Scale it: "That is per hospital. Across 5 hospitals, it is RM 1.5M — enough to fund 2 biomedical engineer positions or upgrade a department's monitoring equipment."</p>
+    <h4>Key framing</h4>
+    <p>For healthcare, frame ContractX as a clinical risk tool, not just a cost tool. Untracked contracts = untracked coverage gaps = untracked equipment risk. The CFO cares about cost; the CMO cares about patient safety. Both are addressed.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Recover 20-40% — up to RM 300K back in year one</h2>
@@ -113,6 +171,12 @@
 
 <!-- ===== 5. MODELED IMPACT ===== -->
 <div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>This slide shifts the conversation from cost recovery to operational discipline. The real sell for healthcare is that ContractX makes contract compliance visible — which matters for MOH audits, JCI accreditation, and internal governance. The CFO cares about money; the compliance officer cares about traceability. This slide speaks to both.</p>
+    <h4>Conversation steer</h4>
+    <p>Ask: "Which of these three is your biggest pain point — OEM overlaps, SLA enforcement, or renewal surprises?" The answer reveals the entry point for the pilot. Overlap removal is the quickest win because it has immediate cost impact. SLA enforcement is the stickiest because it creates ongoing value.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Beyond Recovery</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">ContractX does not just save money — it enforces compliance</h2>
@@ -120,17 +184,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Overlap removal</h3>
       <p class="text-md text-gray-600">Asset-linked registry shows which equipment is double-covered — eliminate redundant <span class="jargon" data-term="OEM">OEM</span> agreements</p>
+      <template data-detail-content>
+        <h3>Overlap Removal</h3>
+        <p>Hospitals sign OEM contracts by vendor (Siemens, GE, Daikin) and FM contracts by scope (M&E, building services). Without an asset-level view, the same equipment ends up covered by two contracts.</p>
+        <ul>
+          <li><strong>Before:</strong> HVAC chillers covered by both the building FM vendor (scope: "all M&E equipment") and a standalone Daikin OEM agreement — double-paying for the same coverage</li>
+          <li><strong>After:</strong> ContractX maps every contract to the assets it covers — overlaps are flagged automatically with cost impact calculations</li>
+          <li><strong>Impact:</strong> Typical overlap elimination saves 1-2% of total service spend in the first year</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy"><span class="jargon" data-term="SLA">SLA</span> enforcement</h3>
       <p class="text-md text-gray-600">Breach logging with timestamps and evidence — enforce penalty credits consistently across all hospitals</p>
+      <template data-detail-content>
+        <h3>SLA Enforcement</h3>
+        <p>OEM service contracts specify response times (e.g., 4 hours for critical equipment, 8 hours for non-critical). Without systematic logging, breaches go unrecorded and penalty credits uncollected.</p>
+        <ul>
+          <li><strong>Before:</strong> Clinical engineering notes a late response informally — by month-end, the evidence is lost and the penalty clause cannot be invoked</li>
+          <li><strong>After:</strong> Every service call logged with timestamp of request, arrival, and resolution — breach calculated automatically against contract terms</li>
+          <li><strong>Impact:</strong> Penalty credit recovery increases from 10-15% to 70-80% of eligible breaches — typical recovery of RM 100-200K per hospital</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Renewal control</h3>
       <p class="text-md text-gray-600">Every critical asset contract visible with renewal dates, terms, and responsible owners — no more surprises</p>
+      <template data-detail-content>
+        <h3>Renewal Control</h3>
+        <p>Healthcare service contracts renew at different times throughout the year — each tied to a specific asset or equipment category. Missing a renewal creates either a coverage gap or an auto-renewal at stale terms.</p>
+        <ul>
+          <li><strong>Before:</strong> Renewal dates tracked in Excel by the clinical engineering team — gaps occur during staff turnover or when contracts are filed by vendor rather than by asset</li>
+          <li><strong>After:</strong> Every contract linked to its asset with renewal alerts at 90, 60, and 30 days — assigned to a named owner with escalation to procurement if unactioned</li>
+          <li><strong>Impact:</strong> Zero coverage gaps on critical equipment; renegotiation window preserved for every contract</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +255,14 @@
 
 <!-- ===== 7. INVESTMENT & ROI ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Let the 2.5x ROI land, then contextualise: "At RM 120K per year, you recover RM 300K in the first year. For a 5-hospital group, that is RM 900K net — more than enough to justify the investment in one budget cycle."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 120K/year is the single-hospital price for up to RM 25M in service contracts. For multi-hospital groups, pricing is RM 100K per hospital. For pilot deals, offer a 45-day proof-of-value loading their top 30 critical contracts to demonstrate overlap and missed credits.</p>
+    <h4>Closing technique</h4>
+    <p>Do not ask "would you like to proceed?" — ask "which hospital should we start with?" or "should we start with OEM contracts or FM contracts first?" Assume the close. The clinical engineering department is the easiest entry point because they feel the OEM pain most acutely.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself within the first year</h2>
@@ -187,9 +286,22 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">2.5x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 120K/year investment vs RM 300K/year in recovered leakage across 4 categories:</p>
+        <ul>
+          <li><strong>Contract overlaps:</strong> RM 300K — 1.2% duplicate coverage on RM 25M service spend</li>
+          <li><strong>Unused SLA tiers:</strong> RM 200K — premium-to-standard downgrades on 15-20% of contracts</li>
+          <li><strong>Missed SLA credits:</strong> RM 150K — 0.6% in uncollected penalty credits</li>
+          <li><strong>Missed renewals:</strong> RM 100K — 5-8 missed renewals at RM 12-15K overpayment each</li>
+        </ul>
+        <p>Total leakage: RM 750K. Conservative 40% recovery = RM 300K.</p>
+        <p>Net: RM 300K - RM 120K = RM 180K per year. ROI = 300K / 120K = <strong>2.5x</strong></p>
+        <p>Payback period: 120K / (300K / 12) = <strong>4.8 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 5-hospital group</p>

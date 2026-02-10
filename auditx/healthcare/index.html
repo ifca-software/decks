@@ -7,6 +7,7 @@
 <meta property="og:title" content="AuditX — Healthcare — IFCA">
 <meta property="og:description" content="Make accreditation evidence and audit closure a repeatable workflow, not a scramble.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EAuditX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EHealthcare%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/auditx/healthcare/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../banking/" data-label="AuditX — Banking">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the accreditation scramble. Ask: "How many weeks did your team spend assembling the evidence pack before your last MSQH or JCI survey?" Every quality manager has a war story about the 3 AM document assembly session.</p>
+    <h4>Segment positioning</h4>
+    <p>Healthcare audit is about accreditation readiness, not just compliance. Position AuditX as the "always ready for survey" platform. The buyer cares about smooth accreditation renewals and avoiding conditional findings, not software features.</p>
+    <h4>Who to target</h4>
+    <p>Head of Quality / Quality Manager or Chief Nursing Officer. For hospital groups, target the Group Quality Director. Avoid IT procurement — they'll compare you to document management systems that miss the CAPA workflow entirely.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Accreditation deadlines drive panic.<br>Evidence is scattered across sites.</h2>
@@ -68,10 +77,10 @@
     <table>
       <thead><tr><th>Metric</th><th>Assumption</th><th style="text-align:right">Per site / year</th></tr></thead>
       <tbody>
-        <tr><td>Audit programs</td><td>4 per site per year</td><td class="num"><strong>4 programs</strong></td></tr>
-        <tr><td>Findings per audit</td><td>18 average</td><td class="num"><strong>72 findings</strong></td></tr>
-        <tr><td>Repeat finding rate</td><td>20% recur due to weak closure</td><td class="num"><strong>~14 repeats</strong></td></tr>
-        <tr><td><span class="jargon" data-term="CAPA">CAPA</span> closure time</td><td>45 days baseline</td><td class="num"><strong>45 days avg</strong></td></tr>
+        <tr data-detail="4 programs typically covers: 1 MSQH/JCI accreditation-linked internal audit, 1 infection control audit, 1 medication safety audit, and 1 facility/fire safety audit. Hospitals pursuing both MSQH and JCI may run 6+ programs."><td>Audit programs</td><td>4 per site per year</td><td class="num"><strong>4 programs</strong></td></tr>
+        <tr data-detail="18 findings is the median across MSQH-accredited hospitals. Breakdown: 1-2 major NCs (immediate action required), 8-10 minor NCs, 6-8 opportunities for improvement. Infection control audits tend to generate more findings (22-25) due to their granularity."><td>Findings per audit</td><td>18 average</td><td class="num"><strong>72 findings</strong></td></tr>
+        <tr data-detail="20% recurrence driven by: email-based CAPA sign-off, clinical staff rotation between departments, and no linkage between survey findings and prior corrective actions. Common repeat categories: hand hygiene compliance, medication labeling, informed consent documentation, fire exit obstruction."><td>Repeat finding rate</td><td>20% recur due to weak closure</td><td class="num"><strong>~14 repeats</strong></td></tr>
+        <tr data-detail="45-day breakdown: 5 days for root cause analysis, 10 days for department head approval, 20 days for clinical workflow changes, 10 days for verification evidence. The bottleneck is verification — quality teams chase department heads for closure photos and updated SOPs via email."><td><span class="jargon" data-term="CAPA">CAPA</span> closure time</td><td>45 days baseline</td><td class="num"><strong>45 days avg</strong></td></tr>
         <tr><td style="font-weight:700;color:var(--navy)">Across 5 sites</td><td>5 sites x 14 repeat findings</td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">70 preventable repeats</td></tr>
       </tbody>
     </table>
@@ -80,6 +89,13 @@
 
 <!-- ===== 4. VALUE CREATION ===== -->
 <div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through both metrics. CAPA closure from 45 to 21-30 days is the operational win. 30-50% fewer repeats is the accreditation win. Frame it as: "Faster closure AND smoother survey outcomes — your quality team stops firefighting and starts preventing."</p>
+    <h4>Objection handling</h4>
+    <p>"We use our own quality management system" — Ask: "Can you pull up the CAPA verification evidence for your last 10 closed findings right now?" Most hospital QMS tools track the action plan, not the proof of effectiveness. AuditX requires evidence upload and verification signoff.</p>
+    <p>"MSQH only surveys every 4 years" — True, but internal audits happen quarterly. And when MSQH does survey, they pull 4 years of evidence. If CAPAs weren't properly closed, every repeat finding becomes a conditional that delays your accreditation renewal.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Value Creation</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Close CAPAs faster and stop findings from repeating</h2>
@@ -113,6 +129,12 @@
 
 <!-- ===== 5. MODELED IMPACT ===== -->
 <div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The "35 fewer repeat findings across 5 sites" number is the anchor for hospital group quality directors. Each repeat finding at a JCI survey is a potential conditional — and conditionals delay accreditation by 3-6 months, costing the hospital marketing credibility and insurance panel status.</p>
+    <h4>Conversation steer</h4>
+    <p>If they are pursuing JCI accreditation (international patients), emphasize the International Patient Safety Goals (IPSG) evidence tracking. If they are MSQH-only, emphasize the MSQH 5th Edition standards mapping and evidence export by chapter. If they are a dialysis chain, emphasize infection control audit frequency and compliance tracking.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Modeled Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">Beyond CAPA closure — the accreditation effect</h2>
@@ -120,17 +142,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Accreditation readiness</h3>
       <p class="text-md text-gray-600">Evidence packs exportable <strong class="accent">per program, site, and date</strong> — no more last-minute assembly</p>
+      <template data-detail-content>
+        <h3>Accreditation Readiness</h3>
+        <p>MSQH and JCI surveys require documented evidence across hundreds of standards. Assembling the evidence pack manually takes 2-4 weeks per site and involves pulling from shared drives, filing cabinets, and email archives.</p>
+        <ul>
+          <li><strong>Current state:</strong> 2-4 weeks of manual assembly per site before each survey, involving 3-5 quality staff full-time</li>
+          <li><strong>With AuditX:</strong> Evidence linked to standards and audit programs from day one. Export by MSQH chapter, JCI standard, or date range in minutes</li>
+          <li><strong>JCI-specific:</strong> Tracer methodology evidence organized by patient flow — from admission through discharge — with timestamped audit trails</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Cross-site visibility</h3>
       <p class="text-md text-gray-600">Group-level <span class="jargon" data-term="CAPA">CAPA</span> dashboard shows <strong class="accent">aging, verification, and overdue</strong> across all sites</p>
+      <template data-detail-content>
+        <h3>Cross-Site Visibility</h3>
+        <p>Hospital groups with 5-10 sites have no centralized view of audit findings and CAPA status. The Group Quality Director relies on monthly Excel reports from each site — always 2-3 weeks stale.</p>
+        <ul>
+          <li><strong>Current state:</strong> Each site manages its own quality data. Group-level reporting is manual consolidation</li>
+          <li><strong>With AuditX:</strong> Live dashboard showing open, aging, and overdue CAPAs across all sites. Filter by site, department, severity, or standard</li>
+          <li><strong>Pattern detection:</strong> If hand hygiene findings appear at 3 of 5 sites, that's a systemic issue — not 3 separate problems. AuditX surfaces this automatically</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Standardized audits</h3>
       <p class="text-md text-gray-600">Site-level templates ensure <strong class="accent">every facility audits the same way</strong> — consistent evidence quality</p>
+      <template data-detail-content>
+        <h3>Standardized Audits</h3>
+        <p>Audit quality varies across sites in hospital groups. Each site's quality team may interpret MSQH standards differently, leading to inconsistent evidence and findings that don't compare across facilities.</p>
+        <ul>
+          <li><strong>Current state:</strong> Each site creates its own audit checklists. Evidence quality depends on the individual auditor</li>
+          <li><strong>With AuditX:</strong> Centrally managed audit templates mapped to MSQH 5th Edition or JCI 7th Edition standards. Required fields and mandatory evidence per item</li>
+          <li><strong>Benefit:</strong> Group quality director can benchmark sites against each other — identifying best practices and lagging facilities</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +213,14 @@
 
 <!-- ===== 7. INVESTMENT & ROI ===== -->
 <div class="slide bg-navy" data-title="Investment &amp; ROI" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Let the 3.3x sit. Then say: "At RM 96,000 per year for 5 sites, that's RM 19,200 per hospital — less than the cost of one quality officer's monthly salary. And you get smoother accreditation surveys, which protect your MSQH/JCI status."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 96,000/year is the standard for a 5-site hospital group. For single hospitals, price at RM 36,000/year. For large groups (10+ sites), RM 15,000/site with a 10-site minimum. JCI-pursuing hospitals pay a premium for standards mapping — RM 48,000/site.</p>
+    <h4>Closing technique</h4>
+    <p>Don't ask "would you like to buy?" — ask "When is your next MSQH survey?" Then work backward: "If the survey is in 8 months, we go live in 6 weeks and run 2 full audit cycles before the survey. Your evidence pack will be ready in minutes, not weeks."</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>The ROI is in closure discipline and evidence readiness</h2>
@@ -187,9 +244,20 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">3.3x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 96,000/year investment vs RM 320,000/year in recovered value across a 5-site hospital group:</p>
+        <ul>
+          <li><strong>Evidence pack assembly savings:</strong> RM 120,000 — 2-4 weeks of quality staff time saved per site per survey x 5 sites (estimated 600 hours/year at RM 50/hr blended quality staff rate)</li>
+          <li><strong>Repeat finding reduction:</strong> RM 100,000 — 35 fewer repeat findings across 5 sites x estimated 20 hours re-audit and re-work per finding x RM 50/hr</li>
+          <li><strong>Accreditation risk avoidance:</strong> RM 100,000 — annualized cost of avoiding conditional findings that delay accreditation renewal (marketing impact, insurance panel risk, patient referral leakage)</li>
+        </ul>
+        <p>Net: RM 320,000 - RM 96,000 = RM 224,000 per year. ROI = 320,000 / 96,000 = <strong>3.3x</strong></p>
+        <p>Payback period: 96,000 / (320,000 / 12) = <strong>3.6 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 10-site hospital group</p>

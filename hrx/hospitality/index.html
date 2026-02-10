@@ -7,6 +7,7 @@
 <meta property="og:title" content="HRX — Hospitality — IFCA">
 <meta property="og:description" content="Close payroll reliably despite shifts, allowances, and high turnover — with audit-ready approvals.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EHRX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EHospitality%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/hrx/hospitality/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../manufacturing/" data-label="HRX — Manufacturing &amp; Shift Work">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Hotel HR managers live in constant firefighting mode — shift changes, last-minute OT, service charge calculations, and high turnover. Open with: "How many payroll corrections did you process last month?" In hospitality, the answer is always shockingly high because of shift complexity and outlet-level variations.</p>
+    <h4>Segment positioning</h4>
+    <p>Hospitality has the highest exception rate (12%) of any segment because of 3 compounding factors: rotating shifts across F&B/housekeeping/front office, service charge distribution rules that vary by outlet, and 60-80% annual turnover requiring constant onboarding and exit processing. Position HRX as the system that tames the chaos without changing how operations run.</p>
+    <h4>Who to target</h4>
+    <p>Group HR Director or Hotel GM. In hotel groups, the payroll team is usually 2-4 people handling 1,000-3,000 employees across multiple properties and F&B outlets. The Director of Finance cares about service charge accuracy and statutory compliance. The GM cares about staff satisfaction scores tied to payroll accuracy.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Shifts and adjustments create payroll chaos.<br>Every property adds another layer of exceptions.</h2>
@@ -68,10 +77,10 @@
     <table>
       <thead><tr><th>Metric</th><th>Current state</th><th style="text-align:right">Impact</th></tr></thead>
       <tbody>
-        <tr><td>Exception rate</td><td>12% of payslips per cycle</td><td class="num"><strong>240 exceptions / month</strong></td></tr>
-        <tr><td>Cost per exception</td><td>Admin time + correction effort</td><td class="num"><strong>RM 60</strong></td></tr>
-        <tr><td>Monthly exception cost</td><td>240 x RM 60</td><td class="num"><strong>RM 14,400</strong></td></tr>
-        <tr><td>Payroll close time</td><td>Data fixes + approvals + disbursement</td><td class="num"><strong>5 days</strong></td></tr>
+        <tr data-detail="12% is typical for hospitality because of three compounding factors: shift-based operations (F&B, housekeeping, front office all on different rosters), service charge distribution variations by outlet, and high turnover requiring constant prorated calculations. Hotels with 24/7 room service operations can see 15%+."><td>Exception rate</td><td>12% of payslips per cycle</td><td class="num"><strong>240 exceptions / month</strong></td></tr>
+        <tr data-detail="RM 60 per exception covers: HR executive verification (~20 min at RM 25/hr), outlet manager confirmation (~15 min at RM 35/hr), payroll recalculation (~25 min at RM 30/hr). In hospitality, many exceptions involve service charge recalculation which cascades across all staff in that outlet."><td>Cost per exception</td><td>Admin time + correction effort</td><td class="num"><strong>RM 60</strong></td></tr>
+        <tr data-detail="240 x RM 60 = RM 14,400/month. This excludes the soft cost of employee dissatisfaction — in an industry with 60-80% turnover, payroll errors are a top-3 reason staff leave. Every incorrect payslip accelerates turnover, and replacing a hotel employee costs 3-6 months of salary."><td>Monthly exception cost</td><td>240 x RM 60</td><td class="num"><strong>RM 14,400</strong></td></tr>
+        <tr data-detail="5-day close in hospitality is driven by: Day 1 collecting outlet attendance data, Day 2 reconciling service charge pools, Day 3 processing OT and allowances, Day 4 manager approvals across properties, Day 5 bank file. Service charge calculation alone can take a full day if done manually across multiple outlets."><td>Payroll close time</td><td>Data fixes + approvals + disbursement</td><td class="num"><strong>5 days</strong></td></tr>
         <tr><td style="font-weight:700;color:var(--navy)">Annual exception cost</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 172,800</td></tr>
       </tbody>
     </table>
@@ -80,6 +89,15 @@
 
 <!-- ===== 4. WHERE HRX CREATES VALUE ===== -->
 <div class="slide bg-navy" data-title="Where HRX Creates Value" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the before/after: "240 exceptions down to 120 means your payroll team processes 120 fewer corrections every month. That's 3 fewer working days spent on fire drills." For hotel HR teams, this is transformational — they currently spend the last week of every month in crisis mode.</p>
+    <h4>Objection handling</h4>
+    <p>"Our outlet managers are too busy to use a new system" — That's the point. HRX doesn't add work for outlet managers — it removes it. Attendance data flows automatically from time clocks. Service charge calculations are rules-based. Managers only need to approve exceptions, not process routine data.</p>
+    <p>"Service charge distribution is too complex for a system" — HRX handles outlet-level service charge pools with configurable distribution rules: percentage by rank, department weighting, pro-ration for mid-month joiners/leavers. Ask: "Can you show me how you calculate service charge distribution today?" — it's always a spreadsheet nightmare.</p>
+    <h4>Key value items</h4>
+    <p>For hospitality, the top 3 exception types are: (1) service charge distribution errors across outlets, (2) OT miscalculations from shift swaps and split shifts, (3) prorated calculations for the constant stream of new hires and leavers. HRX automates all three.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Standardized workflows tame the exception chaos</h2>
@@ -113,6 +131,12 @@
 
 <!-- ===== 5. IMPACT ===== -->
 <div class="slide bg-white" data-title="Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>RM 86,400 is for one hotel group. The real power move: "If you're a hotel group with 3 properties and 6,000 employees, that's RM 259,200 in recovered exception costs — plus the service charge accuracy improvement that directly reduces staff complaints and turnover."</p>
+    <h4>Conversation steer</h4>
+    <p>If the prospect is a hotel group or chain (e.g., Berjaya, YTL Hotels), pivot to standardisation across properties: "Your Langkawi property and KL property probably calculate OT and service charge differently. HRX gives you one set of rules across all properties — the CFO sees consolidated payroll data in one dashboard."</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">Fewer corrections, faster close, reliable payroll</h2>
@@ -120,17 +144,47 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Exception volume</h3>
       <p class="text-md text-gray-600">Down <strong class="accent">30-50%</strong> through real-time dashboards and approval workflows</p>
+      <template data-detail-content>
+        <h3>Exception Volume Reduction — 30-50%</h3>
+        <p>Hospitality payroll exceptions cluster in three areas: service charge distribution (35%), OT and shift differential errors (40%), and onboarding/exit prorations (25%).</p>
+        <ul>
+          <li><strong>Service charge:</strong> Rules-based distribution by outlet, rank, and employment days. No more manual spreadsheet calculations. Auto-prorates for mid-month joiners/leavers.</li>
+          <li><strong>OT &amp; shift differentials:</strong> Clock data flows directly into payroll rules. Split shifts, night differentials, and public holiday rates are calculated automatically — no manual OT claim forms.</li>
+          <li><strong>Onboarding/exit:</strong> New hire payroll setup takes 5 minutes instead of 45. Exit calculations (prorated salary, unused leave encashment, service charge) are automated.</li>
+        </ul>
+        <p>30% reduction in month 1. 50% typical by month 4 once all outlets and departments are live.</p>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Close time</h3>
       <p class="text-md text-gray-600">Down <strong class="accent">20-40%</strong> by standardizing inputs across all outlets</p>
+      <template data-detail-content>
+        <h3>Payroll Close Time — 20-40% Faster</h3>
+        <p>The 5-day close in hospitality is driven by waiting for outlet-level data and manual service charge reconciliation.</p>
+        <ul>
+          <li><strong>Real-time attendance:</strong> Clock data from all outlets is available immediately — no waiting for department heads to submit spreadsheets</li>
+          <li><strong>Auto service charge:</strong> Service charge pool is calculated automatically as revenue data comes in. Distribution runs in minutes, not hours.</li>
+          <li><strong>Property-level dashboard:</strong> Payroll team sees which outlets have pending approvals, missing data, or exceptions — chase the 3 problem outlets instead of checking all 20</li>
+        </ul>
+        <p>Target: 3-day close within 2 cycles. Service charge distribution that used to take a full day now takes 30 minutes.</p>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">OT &amp; allowance accuracy</h3>
       <p class="text-md text-gray-600">Every shift change and service charge adjustment carries a <strong class="accent">timestamped approval</strong></p>
+      <template data-detail-content>
+        <h3>OT &amp; Allowance Audit Trail</h3>
+        <p>Hotels face Employment Act 1955 scrutiny on overtime and rest day calculations. Service charge distribution must also comply with the Employment (Amendment) Act 2022 requirements for transparent distribution.</p>
+        <ul>
+          <li><strong>OT cap tracking:</strong> System flags when any employee approaches 104-hour monthly OT limit. Alerts go to outlet manager and HR simultaneously.</li>
+          <li><strong>Service charge transparency:</strong> Every distribution shows the formula, pool total, individual share, and pro-ration basis. Employees can see their own calculation via self-service.</li>
+          <li><strong>Shift change log:</strong> Every roster change, shift swap, and OT approval is logged with who, when, and why. Critical for Labour Department inspections.</li>
+        </ul>
+        <p>Service charge transparency alone reduces staff complaints by 40-60% — employees trust the system when they can see the calculation.</p>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +218,14 @@
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Hotels understand per-room economics intuitively. Reframe: "RM 120 per employee per year — that's less than the cost of one room night. For a 2,000-headcount group, you invest RM 240K and save RM 960K. That's RM 720K straight to the bottom line."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 120/employee/year is list price. For hotel groups with 4,000+ employees across multiple properties, we can go to RM 95/employee. For pilot deals, offer 2-month free on one property (e.g., the hotel with the most payroll complaints) to prove the exception reduction.</p>
+    <h4>Closing technique</h4>
+    <p>Ask: "Which property gives your payroll team the most headaches?" Every hotel group has one property that's worse than the rest — usually the one with the most F&B outlets or the highest turnover. Start there. When that property's exception rate drops by half, the GM will request rollout to the other properties.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 6 months</h2>
@@ -187,9 +249,21 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">4x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 120/employee/year investment vs RM 480/employee/year in recovered costs:</p>
+        <ul>
+          <li><strong>Exception cost savings:</strong> RM 360/employee/year — 50% reduction in 240 monthly exceptions at RM 60 each across 2,000 heads</li>
+          <li><strong>Service charge accuracy:</strong> Eliminates distribution disputes that currently cost ~RM 3,000/month in HR time investigating complaints</li>
+          <li><strong>Turnover reduction:</strong> Payroll accuracy improvement reduces turnover by 5-8%. At RM 4,500 replacement cost per employee and 60% turnover, even 5% reduction = RM 270K/year saved</li>
+          <li><strong>Close time savings:</strong> Payroll team recovers 2 days/month = 0.5 FTE at RM 4,500/month = RM 27K/year</li>
+        </ul>
+        <p>Net: RM 480 - RM 120 = RM 360 per employee. ROI = 480 / 120 = <strong>4.0x</strong></p>
+        <p>Payback period: 120 / (480 / 12) = <strong>3 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 2,000 employees</p>

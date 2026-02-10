@@ -7,6 +7,7 @@
 <meta property="og:title" content="RentX — Student Housing — IFCA">
 <meta property="og:description" content="Handle seasonal renewals and collections at scale with an automated cadence.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3ERentX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EStudent Housing%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/rentx/student-housing/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../mall/" data-label="RentX — Retail Malls">
@@ -33,6 +34,12 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Student housing operators think in terms of bed count and occupancy cycles. Their biggest fear is the intake wave — 1,500 renewals hitting in the same month. Lead with: "How many staff do you add during intake season?" Most will say 2–3 temporary hires. Then ask: "What if the system handled 80% of the renewal admin automatically?" The seasonal staffing cost is the hook they never quantify.</p>
+    <h4>Key difference from other segments</h4>
+    <p>Student housing has 3 unique pain points: seasonal intake waves (70–80% of leases renew in the same 2-month window), high volume of small payments (RM 650/month per bed making collections costly relative to rent), and deposit/refund disputes at move-out (students and parents are vocal complainers — one bad review on Google can hurt next year's intake). International students add FX payment complexity.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>2,000 beds. Seasonal churn. Many small payments.<br>Renewals and reminders still run manually.</h2>
@@ -68,8 +75,8 @@
     <table>
       <thead><tr><th>Leakage source</th><th>What drives it</th><th style="text-align:right">RM / bed / month</th></tr></thead>
       <tbody>
-        <tr><td>Tenant arrears</td><td>No automated reminders, limited payment channels</td><td class="num"><strong>RM 42.25</strong></td></tr>
-        <tr><td>Admin overhead</td><td>Manual ledger updates, reminder calls (6 min/bed)</td><td class="num"><strong>RM 4.00</strong></td></tr>
+        <tr data-detail="2,000 beds x RM 650/month x 6.5% arrears rate = RM 84,500/month total, or RM 42.25/bed. Student arrears are driven by semester payment cycles — parents pay lump sum at semester start but monthly tenants often fall behind mid-semester. International students (20–30% of beds in Malaysian university towns) sometimes face FX transfer delays adding 7–10 days to payment timing."><td>Tenant arrears</td><td>No automated reminders, limited payment channels</td><td class="num"><strong>RM 42.25</strong></td></tr>
+        <tr data-detail="6 minutes per bed per month in manual work: generating statements, sending WhatsApp reminders, updating spreadsheets, reconciling payments. At RM 40/hour admin cost, that is RM 4/bed/month. Across 2,000 beds, this is 200 hours/month — roughly 1.25 full-time admin staff. During intake season (Jan/Feb and Sep/Oct), this doubles as renewal processing is added."><td>Admin overhead</td><td>Manual ledger updates, reminder calls (6 min/bed)</td><td class="num"><strong>RM 4.00</strong></td></tr>
         <tr><td style="font-weight:700;color:var(--navy)">Total per bed / month</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 46.25</td></tr>
       </tbody>
     </table>
@@ -78,6 +85,13 @@
 
 <!-- ===== 4. VALUE CREATION ===== -->
 <div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the per-bed economics and then multiply by bed count. Student housing operators think in total portfolio value, not per-bed margins. The RM 432K/year recovery number is the hook. Ask: "What's your current annual arrears write-off?" Most operators don't track this precisely — which is exactly the problem RentX solves.</p>
+    <h4>Objection handling</h4>
+    <p>"Students can't afford to pay on time — it's a demographic issue" — Students respond better to digital reminders than any other tenant segment. They live on their phones. Automated WhatsApp reminders with payment links see 65% response rates within 48 hours for the student demographic. The issue isn't willingness — it's friction.</p>
+    <p>"We only have 500 beds — the savings seem small" — Scale the numbers: 500 beds x RM 18/bed/month savings = RM 9,000/month = RM 108,000/year. More importantly, the seasonal intake automation saves 2 temporary staff hires at RM 2,500/month each for 2 months = RM 10,000/year in seasonal staffing alone.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Small per-bed savings scale fast across 2,000 beds</h2>
@@ -111,6 +125,10 @@
 
 <!-- ===== 5. MODELED IMPACT ===== -->
 <div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The RM 18/bed/month savings breaks down to: arrears reduction RM 16.90/bed (40% improvement on RM 42.25 arrears from 6.5% to 3.9%) plus admin time savings RM 1.20/bed (2 minutes saved per bed per month at RM 40/hour). But the hidden value is seasonal: during the 2-month intake wave, RentX batch-processes renewals that would normally require 2 temporary hires. That seasonal staffing savings (RM 10,000/year) is not in the per-bed calculation but is real money.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Beyond Collections</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">RentX doesn't just collect — it handles the seasonal wave</h2>
@@ -118,17 +136,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Renewal pipeline</h3>
       <p class="text-md text-gray-600">90-day visibility on every expiring lease — manage seasonal waves without chaos</p>
+      <template data-detail-content>
+        <h3>Renewal Pipeline</h3>
+        <p>Student housing intake is seasonal — 70–80% of leases expire in Jan/Feb (Semester 2) or Sep/Oct (Semester 1). On a 2,000-bed facility, that's 1,400–1,600 renewals in a 2-month window. Without automation, this requires temporary staff and overtime.</p>
+        <ul>
+          <li><strong>Before:</strong> Renewal letters printed and distributed manually — 3–4 weeks of overtime for admin team</li>
+          <li><strong>After:</strong> Batch renewal notices sent digitally 90 days before expiry, with online acceptance</li>
+          <li><strong>Impact:</strong> Intake processing time drops from 4 weeks to 1 week — no temporary staff needed</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Payment channels</h3>
       <p class="text-md text-gray-600"><span class="jargon" data-term="FPX">FPX</span>, online banking, and auto-debit — students pay how they prefer</p>
+      <template data-detail-content>
+        <h3>Payment Channels</h3>
+        <p>Students are digital natives — they expect to pay via app, not by bank transfer with a manual reference number. International students need payment channels that handle FX and cross-border transfers.</p>
+        <ul>
+          <li><strong>FPX:</strong> Real-time bank transfer with automatic invoice matching — the default for Malaysian students</li>
+          <li><strong>Auto-debit:</strong> Standing instruction reduces late payments by 50% for students whose parents set it up</li>
+          <li><strong>International:</strong> Multi-currency payment support for international students (20–30% of beds)</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Deposit tracking</h3>
       <p class="text-md text-gray-600">Deposits, deductions, and refunds tracked per bed — fewer move-out disputes</p>
+      <template data-detail-content>
+        <h3>Deposit Tracking</h3>
+        <p>Move-out deposit disputes are the #1 source of complaints and negative reviews for student housing operators. Parents call, email, and post on social media when refunds are delayed or deductions are unclear.</p>
+        <ul>
+          <li><strong>Before:</strong> Deposits tracked in Excel — deductions calculated manually, refund processing takes 2–4 weeks</li>
+          <li><strong>After:</strong> Every deposit, deduction, and refund tracked per bed with photo evidence and tenant sign-off</li>
+          <li><strong>Impact:</strong> Refund processing drops from 4 weeks to 5 days — dispute rate down 60%</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -162,6 +207,12 @@
 
 <!-- ===== 7. INVESTMENT & ROI ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Pricing</h4>
+    <p>RM 7.50/bed/month (RM 90/bed/year) for student housing — lower per-unit pricing reflects the lower rent values and higher bed count. For facilities with 3,000+ beds, negotiate to RM 6/bed/month. Position the seasonal intake automation as the value differentiator — "RentX eliminates 2 temporary hires every intake season."</p>
+    <h4>Closing technique</h4>
+    <p>Time the pitch 3–4 months before the next intake season (May–June for September intake, or November for January intake). "Deploy RentX now and have it running before the next intake wave. Your team will process 1,500 renewals in 1 week instead of 4." The emotional hook is the chaos of intake season — every operator has war stories.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Small per-bed cost, big portfolio payback</h2>
@@ -185,9 +236,15 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">2.4x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>RM 216 saved per bed per year / RM 90 investment per bed per year = <strong>2.4x ROI</strong>.</p>
+        <p>Savings breakdown: arrears reduction RM 16.90/bed/month (40% improvement on RM 42.25 arrears) + admin time RM 1.20/bed/month (2 min saved at RM 40/hr) = RM 18/bed/month = RM 216/bed/year.</p>
+        <p>Payback period: RM 90 / (RM 216 / 12) = <strong>5 months</strong>. Adding seasonal intake automation savings (RM 10,000/year for temporary staff), effective payback is under 4 months.</p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 2,000-bed facility</p>

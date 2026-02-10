@@ -54,4 +54,15 @@
     animation: none !important;
     opacity: 1;
   }
+  .slide.slide-out-left,
+  .slide.slide-out-right,
+  .slide.slide-in-left,
+  .slide.slide-in-right {
+    animation: none !important;
+    opacity: 0;
+  }
+  .slide.slide-in-left,
+  .slide.slide-in-right {
+    opacity: 1;
+  }
 }

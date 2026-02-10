@@ -7,6 +7,7 @@
 <meta property="og:title" content="PropertyX — REIT Portfolios — IFCA">
 <meta property="og:description" content="How ASEAN REITs unlock NOI growth through unified portfolio governance and automated owner reporting.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EPropertyX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EREIT Portfolios%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/propertyx/reit/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../mixed-use/" data-label="PropertyX — Mixed-Use Developers">
@@ -33,6 +34,12 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>REIT asset managers live and breathe NOI and DPU. Don't lead with "your reporting is slow" — lead with "every day your owner pack is late, your board is making decisions on stale data." REITs are governance-heavy; frame PropertyX as a governance upgrade, not an IT project.</p>
+    <h4>Key difference for REITs</h4>
+    <p>REITs have 3 unique pressures: SC quarterly reporting deadlines (miss one and the board notices), multi-asset portfolio consolidation (office + retail + industrial under one REIT), and trustee/board scrutiny on OpEx ratios. The 18-day pack cycle is a governance risk, not just an efficiency problem.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Owners want performance now.<br>Reporting arrives late.</h2>
@@ -68,10 +75,10 @@
     <table>
       <thead><tr><th>Metric</th><th>Current baseline</th><th style="text-align:right">Annual impact</th></tr></thead>
       <tbody>
-        <tr><td>Portfolio size</td><td>2,000,000 sqft under management</td><td class="num"><strong>—</strong></td></tr>
-        <tr><td><span class="jargon" data-term="OpEx">OpEx</span> per sqft / month</td><td>RM 4.80 blended (utilities + maintenance + admin)</td><td class="num"><strong>RM 115.2M</strong></td></tr>
-        <tr><td>Owner pack cycle</td><td>18 days per reporting period</td><td class="num"><strong>—</strong></td></tr>
-        <tr><td style="font-weight:700;color:var(--navy)">1% OpEx reduction</td><td>Visibility-driven governance</td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 1.15M / year</td></tr>
+        <tr data-detail="Based on a mid-tier Malaysian REIT portfolio — e.g. 8-12 commercial buildings across Klang Valley and Penang. Larger REITs like IGB REIT or Pavilion REIT manage 3-5M sqft."><td>Portfolio size</td><td>2,000,000 sqft under management</td><td class="num"><strong>—</strong></td></tr>
+        <tr data-detail="RM 4.80/sqft/month is the blended average for Malaysian commercial properties: utilities ~RM 1.80, maintenance ~RM 1.20, security ~RM 0.80, cleaning ~RM 0.60, admin ~RM 0.40. Varies by building age and grade — Grade A offices run RM 5.50+."><td><span class="jargon" data-term="OpEx">OpEx</span> per sqft / month</td><td>RM 4.80 blended (utilities + maintenance + admin)</td><td class="num"><strong>RM 115.2M</strong></td></tr>
+        <tr data-detail="18 days is the industry average for Malaysian REIT owner packs: 5 days data collection from site teams, 8 days manual consolidation in Excel, 5 days review and sign-off. Some REITs take 21+ days for quarterly SC filings."><td>Owner pack cycle</td><td>18 days per reporting period</td><td class="num"><strong>—</strong></td></tr>
+        <tr data-detail="1% OpEx reduction is conservative. Once category-level visibility exists, most property managers find 1.5-2% in the first year — typically in utilities (sub-metering reveals waste) and maintenance (preventive vs reactive ratio improves). RM 115.2M × 1% = RM 1.152M." style="font-weight:700;color:var(--navy)"><td style="font-weight:700;color:var(--navy)">1% OpEx reduction</td><td>Visibility-driven governance</td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 1.15M / year</td></tr>
       </tbody>
     </table>
   </div>
@@ -79,6 +86,12 @@
 
 <!-- ===== 4. VALUE ===== -->
 <div class="slide bg-navy" data-title="Where PropertyX Creates Value" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the before/after on owner pack cycle time first — this is the pain they feel every month. Then transition to OpEx recovery: "The pack speed is the visible win. The RM 1.15M OpEx recovery is the financial win your board cares about."</p>
+    <h4>Objection handling</h4>
+    <p>"We already have Yardi/MRI" — Those are accounting systems. They don't consolidate KPIs across asset types or generate governance-ready owner packs. PropertyX sits on top as the portfolio governance layer. "1% OpEx reduction sounds small" — On RM 115M, 1% is RM 1.15M. That's 5x the software cost. And most REITs find 1.5-2% once they have category-level visibility.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Unified KPIs, automated packs — <span class="jargon" data-term="NOI">NOI</span> improves</h2>
@@ -112,6 +125,12 @@
 
 <!-- ===== 5. IMPACT ===== -->
 <div class="slide bg-white" data-title="Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>REITs measure success in DPU (distribution per unit). A 6% NOI lift directly increases DPU, which drives unit price. Frame the impact as: "This isn't just cost savings — it's DPU improvement that your unitholders will see in the next quarterly report."</p>
+    <h4>What resonates</h4>
+    <p>The reporting speed card lands hardest with CFOs and compliance officers. The NOI improvement card lands with asset managers. The OpEx reduction card lands with operations heads. Know your audience and lead with the right card.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">PropertyX doesn't just report — it governs</h2>
@@ -119,17 +138,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Reporting speed</h3>
       <p class="text-md text-gray-600">Owner packs generated from system data — <strong class="accent">60% faster</strong> cycle time</p>
+      <template data-detail-content>
+        <h3>Reporting Speed</h3>
+        <p>Malaysian REIT owner packs typically involve consolidating data from 10-30 buildings across multiple asset classes. The manual process: 5 days collecting data from site teams, 8 days consolidating in Excel, 5 days review and corrections.</p>
+        <ul>
+          <li><strong>Before:</strong> 18-day cycle with 4-6 FTE involved in data gathering and manual consolidation</li>
+          <li><strong>After:</strong> 7-day cycle — data flows automatically from site operations into standardized templates</li>
+          <li><strong>Impact:</strong> SC quarterly reporting deadlines met with days to spare instead of last-minute scrambles</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">NOI improvement</h3>
       <p class="text-md text-gray-600"><span class="jargon" data-term="OpEx">OpEx</span> categorization reveals leakage — <strong class="accent">6% modeled NOI lift</strong></p>
+      <template data-detail-content>
+        <h3>NOI Improvement</h3>
+        <p>Most Malaysian REITs track OpEx at the building level but not by category. When PropertyX breaks down OpEx into utilities, maintenance, security, cleaning, and admin, asset managers discover categories where spend is 20-40% above benchmark.</p>
+        <ul>
+          <li><strong>Before:</strong> OpEx reported as a single line item per building — no way to identify which category is overspending</li>
+          <li><strong>After:</strong> Category-level OpEx benchmarking across the portfolio reveals specific savings opportunities</li>
+          <li><strong>Impact:</strong> 6% modeled NOI lift based on 1% OpEx reduction on a portfolio where OpEx is ~17% of gross revenue</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">OpEx reduction</h3>
       <p class="text-md text-gray-600">Vendor scorecards and budget governance drive <strong class="accent">10% lower cost per sqft</strong></p>
+      <template data-detail-content>
+        <h3>OpEx Reduction</h3>
+        <p>Vendor scorecards create accountability. When cleaning contractors know their response time and quality scores are tracked monthly, performance improves without renegotiating contracts. Budget governance catches overruns at the PO level, not at quarter-end.</p>
+        <ul>
+          <li><strong>Before:</strong> Vendor renewals based on relationship, not performance data. Budget overruns discovered 60-90 days late.</li>
+          <li><strong>After:</strong> Monthly vendor scorecards drive contract renewal decisions. Budget alerts trigger at 80% threshold.</li>
+          <li><strong>Impact:</strong> 10% lower cost per sqft achieved over 12-18 months through data-driven vendor management and early overrun detection</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -163,32 +209,44 @@
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Pricing</h4>
+    <p>RM 240K/year for a 2M sqft REIT portfolio — works out to RM 0.01/sqft/month. Position against the RM 4.80/sqft/month they already spend on OpEx: "PropertyX costs 0.2% of your OpEx budget and recovers 1%." For larger portfolios (5M+ sqft), offer volume pricing at RM 200K base + RM 0.008/sqft.</p>
+    <h4>Closing technique</h4>
+    <p>REITs have fiscal year budgets locked by November. Time the pitch for Q3 so it gets into next year's budget. The hook: "Start with 3 buildings as a pilot in Q4. By the time the board reviews Q1 results, the owner pack is already faster and the OpEx savings are visible."</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 9 months</h2>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32">
-    <div class="card metric" data-animate data-delay="3">
+    <div class="card metric" data-animate data-delay="3" data-detail="RM 240K/year = RM 20K/month for a 2M sqft REIT portfolio. This covers the full PropertyX platform: portfolio dashboards, OpEx categorization, vendor scorecards, and automated owner pack generation. Implementation is included in Year 1.">
       <p class="label">You invest</p>
       <p class="value">RM 240K</p>
       <p class="text-sm text-dim">per year</p>
     </div>
-    <div class="card metric" data-animate data-delay="3">
+    <div class="card metric" data-animate data-delay="3" data-detail="RM 1.15M savings from 1% OpEx reduction on RM 115.2M total OpEx. Breakdown: utilities optimization ~RM 400K (sub-metering and usage alerts), maintenance scheduling ~RM 350K (preventive vs reactive), vendor scorecard-driven negotiations ~RM 250K, reporting labour reduction ~RM 150K.">
       <p class="label">You save</p>
       <p class="value accent">RM 1.15M</p>
       <p class="text-sm text-dim">OpEx + reporting costs</p>
     </div>
-    <div class="card metric emphasis" data-animate data-delay="3">
+    <div class="card metric emphasis" data-animate data-delay="3" data-detail="RM 910K net gain = RM 1.15M savings minus RM 240K investment. This flows directly to NOI, improving DPU for unitholders. On a REIT trading at 6% yield, RM 910K NOI improvement translates to ~RM 15.2M in asset valuation uplift.">
       <p class="label">You keep</p>
       <p class="value accent">RM 910K</p>
       <p class="text-sm text-dim">net gain per year</p>
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">5x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>RM 1.15M recovered OpEx per year / RM 240K investment per year = <strong>4.8x ROI</strong> (rounded to 5x).</p>
+        <p>Payback period: RM 240K / (RM 1.15M / 12) ≈ <strong>2.5 months</strong> — pays for itself before the second quarterly SC filing.</p>
+        <p>This is conservative — it excludes the value of faster reporting (reduced compliance risk), better vendor negotiations (data-driven renewals), and the NOI improvement that flows through to DPU.</p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 5M sqft portfolio</p>

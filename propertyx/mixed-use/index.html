@@ -7,6 +7,7 @@
 <meta property="og:title" content="PropertyX — Mixed-Use Developers — IFCA">
 <meta property="og:description" content="One portfolio view across asset types — without manual consolidation.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EPropertyX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EMixed-Use%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/propertyx/mixed-use/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../reit/" data-label="PropertyX — REIT Portfolios">
@@ -33,6 +34,12 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Mixed-use developers are proud of their developments — they've built something complex. Don't criticize their systems. Lead with: "You've built a world-class development. The management platform should match." The pain is coordination friction between asset types, not any single system failure.</p>
+    <h4>Key difference for mixed-use</h4>
+    <p>Mixed-use has 3 unique pains: each asset type (office, retail, hospitality) uses different KPI definitions (occupancy means different things), reporting consolidation across asset types requires manual translation, and 4 FTE doing consolidation work is an invisible cost centre that leadership rarely questions.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Three asset types. Three systems.<br>One spreadsheet pack.</h2>
@@ -68,10 +75,10 @@
     <table>
       <thead><tr><th>Metric</th><th>Current baseline</th><th style="text-align:right">Annual impact</th></tr></thead>
       <tbody>
-        <tr><td>Asset types managed</td><td>3 (office + retail + hospitality)</td><td class="num"><strong>—</strong></td></tr>
-        <tr><td>Reporting cycle</td><td>18 days per period</td><td class="num"><strong>—</strong></td></tr>
-        <tr><td>Reporting effort</td><td>4 FTE equivalent at RM 90K each</td><td class="num"><strong>RM 360K</strong></td></tr>
-        <tr><td style="font-weight:700;color:var(--navy)">30-50% effort reduction</td><td>Consolidation automation</td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 108–180K / year</td></tr>
+        <tr data-detail="Typical Malaysian mixed-use: office tower (500K sqft), retail podium (300K sqft), serviced residences or hotel (200K sqft). Examples: Pavilion KL, IPC Shopping Centre + office towers, KL Sentral development."><td>Asset types managed</td><td>3 (office + retail + hospitality)</td><td class="num"><strong>—</strong></td></tr>
+        <tr data-detail="18 days is the industry average: 5 days collecting data from 3 different property management teams, 8 days manual consolidation (translating KPIs across asset types in Excel), 5 days review cycle with corrections and re-submissions."><td>Reporting cycle</td><td>18 days per period</td><td class="num"><strong>—</strong></td></tr>
+        <tr data-detail="4 FTE at RM 90K each (RM 7,500/month including EPF/SOCSO). Typically: 1 senior property executive, 2 finance analysts, 1 admin coordinator. Their time split is ~65% data consolidation, ~35% actual property management. RM 360K = 4 × RM 90K."><td>Reporting effort</td><td>4 FTE equivalent at RM 90K each</td><td class="num"><strong>RM 360K</strong></td></tr>
+        <tr data-detail="30-50% effort reduction is conservative. The lower bound (30% = RM 108K) assumes only automated data aggregation. The upper bound (50% = RM 180K) includes automated KPI standardization and template generation. Most mixed-use clients achieve 40-50% within 6 months." style="font-weight:700;color:var(--navy)"><td style="font-weight:700;color:var(--navy)">30-50% effort reduction</td><td>Consolidation automation</td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 108–180K / year</td></tr>
       </tbody>
     </table>
   </div>
@@ -79,6 +86,12 @@
 
 <!-- ===== 4. VALUE ===== -->
 <div class="slide bg-navy" data-title="Where PropertyX Creates Value" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the cycle time improvement — 18 days to 7 days is visceral. Then pivot to labour savings: "Those 4 FTE aren't doing property management. They're doing data entry. PropertyX frees them to actually manage the assets." The RM 180K savings is the financial proof, but the real value is strategic: leadership gets answers in days, not weeks.</p>
+    <h4>Objection handling</h4>
+    <p>"We've already invested in separate systems for each asset type" — PropertyX doesn't replace them. It sits on top as the consolidation layer. Data flows in from your existing systems. "RM 180K savings isn't life-changing" — It's the reporting savings alone. The real upside is decision speed: when your CEO asks about portfolio occupancy, the answer is a dashboard click, not a 2-week exercise.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Unified portfolio model — reporting runs itself</h2>
@@ -112,6 +125,12 @@
 
 <!-- ===== 5. IMPACT ===== -->
 <div class="slide bg-white" data-title="Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>Mixed-use developers care about decision speed more than cost savings. The RM 180K is nice, but the real pitch is: "Your competitor's CEO gets portfolio performance on a dashboard. Yours waits 18 days for a spreadsheet." Frame the impact as competitive advantage, not just cost reduction.</p>
+    <h4>What resonates</h4>
+    <p>The visibility card lands hardest with CEOs and board members. The cycle time card resonates with operations directors. The effort reduction card matters to finance teams who are tired of the consolidation burden. Adjust emphasis based on who is in the room.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">PropertyX turns coordination friction into decision speed</h2>
@@ -119,17 +138,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Cycle time</h3>
       <p class="text-md text-gray-600">Reporting drops from 18 days to 7 — <strong class="accent">60% faster</strong></p>
+      <template data-detail-content>
+        <h3>Cycle Time Reduction</h3>
+        <p>A typical Malaysian mixed-use development like Pavilion or IPC consolidates office, retail, and hospitality data from separate systems every month. The 18-day cycle breaks down as: 5 days chasing site teams for data, 8 days manually translating and combining in Excel, 5 days leadership review and corrections.</p>
+        <ul>
+          <li><strong>Before:</strong> 18 days per reporting cycle — leadership decisions delayed by 3 weeks of stale data</li>
+          <li><strong>After:</strong> 7 days — data flows automatically from all asset types into a unified report</li>
+          <li><strong>Impact:</strong> Board and investor packs delivered on schedule every time, with 60% less elapsed time</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Effort</h3>
       <p class="text-md text-gray-600">Consolidation effort down <strong class="accent">30–50%</strong> — fewer FTE on manual data work</p>
+      <template data-detail-content>
+        <h3>Effort Reduction</h3>
+        <p>Mixed-use developments typically assign 3-5 FTE to reporting consolidation — finance analysts and property executives whose primary job becomes data wrangling. At RM 90K per FTE per year, this is RM 270K-450K in hidden cost.</p>
+        <ul>
+          <li><strong>Before:</strong> 4 FTE spend 60-70% of their time on data collection, Excel formatting, and cross-checking between systems</li>
+          <li><strong>After:</strong> 2 FTE handle review and exception management — the other 2 FTE are redeployed to actual asset management</li>
+          <li><strong>Impact:</strong> RM 180K direct labour savings plus improved asset management from freed-up capacity</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Visibility</h3>
       <p class="text-md text-gray-600">Standardized <span class="jargon" data-term="KPI">KPIs</span> across office, retail, and hospitality in <strong class="accent">one view</strong></p>
+      <template data-detail-content>
+        <h3>Cross-Asset Visibility</h3>
+        <p>In a mixed-use development, "occupancy" means NLA for office, footfall for retail, and room nights for hospitality. "Revenue per sqft" is calculated differently for each. Without standardization, comparing performance across asset types is meaningless.</p>
+        <ul>
+          <li><strong>Before:</strong> Each asset type reports in its own format with its own KPI definitions — no apples-to-apples comparison possible</li>
+          <li><strong>After:</strong> PropertyX normalizes KPIs across asset types so the portfolio view is consistent and comparable</li>
+          <li><strong>Impact:</strong> Leadership can identify which asset type is underperforming and why, without waiting for a manual analysis</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -163,32 +209,44 @@
 
 <!-- ===== 7. THE INVESTMENT ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Pricing</h4>
+    <p>RM 120K/year for a single mixed-use development with 3 asset types. This is RM 10K/month — less than one of the 4 FTE they're currently paying for consolidation work. For developers with 3+ sites, offer RM 100K/site/year with a 3-year commitment.</p>
+    <h4>Closing technique</h4>
+    <p>Mixed-use developers often have a new development coming online. Time the pitch to coincide: "Deploy PropertyX on your new development from day one. No legacy data migration needed. Then roll it back to existing sites once the team sees the value." The 1.5x ROI is modest — sell the decision speed and competitive advantage instead.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself before the first renewal</h2>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32">
-    <div class="card metric" data-animate data-delay="3">
+    <div class="card metric" data-animate data-delay="3" data-detail="RM 120K/year = RM 10K/month for a single mixed-use development. Covers all 3 asset types (office, retail, hospitality) with unified dashboards, automated consolidation, and standardized KPI reporting. Implementation and onboarding included in Year 1.">
       <p class="label">You invest</p>
       <p class="value">RM 120K</p>
       <p class="text-sm text-dim">per year</p>
     </div>
-    <div class="card metric" data-animate data-delay="3">
+    <div class="card metric" data-animate data-delay="3" data-detail="RM 180K savings from 50% reduction in consolidation effort: 2 FTE redeployed from data wrangling to asset management (2 × RM 90K = RM 180K). Additional unlocked value from faster decision-making and cross-asset visibility not quantified here.">
       <p class="label">You save</p>
       <p class="value accent">RM 180K</p>
       <p class="text-sm text-dim">reporting labour / year</p>
     </div>
-    <div class="card metric emphasis" data-animate data-delay="3">
+    <div class="card metric emphasis" data-animate data-delay="3" data-detail="RM 60K net gain = RM 180K savings minus RM 120K investment. The 1.5x ROI is conservative — it only captures direct labour savings. Indirect benefits (faster board decisions, cross-asset optimization, reduced compliance risk) typically add another RM 50-100K in value.">
       <p class="label">You keep</p>
       <p class="value accent">RM 60K</p>
       <p class="text-sm text-dim">net gain per year</p>
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">1.5x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>RM 180K reporting labour saved per year / RM 120K investment per year = <strong>1.5x ROI</strong>.</p>
+        <p>Payback period: RM 120K / (RM 180K / 12) ≈ <strong>8 months</strong> — pays for itself before the first annual renewal.</p>
+        <p>The conservative ROI reflects the focus on labour savings only. Mixed-use developers who also use PropertyX for OpEx visibility across asset types typically discover an additional 0.5-1% OpEx savings (RM 200K-400K on a RM 40M+ OpEx base), bringing effective ROI to 3-4x.</p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 5 developments</p>

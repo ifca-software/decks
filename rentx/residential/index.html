@@ -7,6 +7,7 @@
 <meta property="og:title" content="RentX — Residential Portfolios — IFCA">
 <meta property="og:description" content="Make collections and renewals predictable across every unit.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3ERentX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EResidential%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/rentx/residential/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../mall/" data-label="RentX — Retail Malls">
@@ -33,6 +34,12 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Residential portfolio managers care about two things: arrears rate and vacancy rate. Don't lead with technology — lead with "what's your arrears rate?" Most will say 5–8%. Then ask: "How much admin time does your team spend on manual reminders?" That's the hook — the admin time cost is the hidden pain they never quantify.</p>
+    <h4>Key difference from other segments</h4>
+    <p>Residential has 3 unique pain points: JMB/MC compliance (Strata Management Act 2013 requirements for sinking fund, maintenance charges, and AGM reporting), high unit count with small rent values (making per-unit economics tight), and the Tenancy Act requirements around deposit handling and refund timelines that create disputes at move-out.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Thousands of units, thousands of payments.<br>Renewals still run on reminders and memory.</h2>
@@ -68,8 +75,8 @@
     <table>
       <thead><tr><th>Leakage source</th><th>What drives it</th><th style="text-align:right">RM / unit / month</th></tr></thead>
       <tbody>
-        <tr><td>Tenant arrears</td><td>No automated reminders, limited payment channels</td><td class="num"><strong>RM 117</strong></td></tr>
-        <tr><td>Admin overhead</td><td>Manual ledger updates, reminder calls (10 min/unit)</td><td class="num"><strong>RM 6.67</strong></td></tr>
+        <tr data-detail="1,000 units x RM 1,800 average rent x 6.5% arrears rate = RM 117,000/month total, or RM 117/unit. Malaysian residential arrears are driven by inconsistent reminder cadence — most property managers only chase arrears after 15–30 days, by which point tenants have deprioritised rent payment. Younger tenants (condo rentals near KL, PJ, Subang) respond well to WhatsApp reminders with payment links."><td>Tenant arrears</td><td>No automated reminders, limited payment channels</td><td class="num"><strong>RM 117</strong></td></tr>
+        <tr data-detail="10 minutes per unit per month in manual work: generating statements, making reminder calls, updating the ledger in Excel, reconciling bank transfers. At RM 40/hour admin cost, that is RM 6.67/unit/month. Across 1,000 units, this is 166 hours/month — roughly one full-time admin staff doing nothing but chasing payments."><td>Admin overhead</td><td>Manual ledger updates, reminder calls (10 min/unit)</td><td class="num"><strong>RM 6.67</strong></td></tr>
         <tr><td style="font-weight:700;color:var(--navy)">Total per unit / month</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 124</td></tr>
       </tbody>
     </table>
@@ -78,6 +85,13 @@
 
 <!-- ===== 4. VALUE CREATION ===== -->
 <div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the per-unit economics. Residential portfolio managers think in per-unit terms because that's how they report to owners. The RM 124 to RM 80 leakage drop per unit is intuitive. For JMB-managed properties, emphasise that RentX produces the arrears reports required under the Strata Management Act — currently prepared manually in Excel.</p>
+    <h4>Objection handling</h4>
+    <p>"Our tenants are mostly individual landlords, not corporate" — That's exactly who benefits most. Individual landlords don't have systems — they rely on property agents who use WhatsApp. RentX gives agents a professional platform that makes them look good to landlords and improves collection rates.</p>
+    <p>"The savings per unit are small" — Yes, but that's the point. At RM 43/unit/month savings x 1,000 units = RM 43,000/month. The small per-unit margin compounds at scale. Ask: "How many units does your portfolio have?"</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Automate reminders and renewals — recover RM 520 per unit per year</h2>
@@ -111,6 +125,10 @@
 
 <!-- ===== 5. MODELED IMPACT ===== -->
 <div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The RM 43/unit/month figure breaks down to: arrears reduction RM 37/unit (3% improvement on RM 1,800 rent from 6.5% to 3.5%) plus admin time savings RM 6/unit (7 minutes saved per unit per month at RM 40/hour). For JMB properties, add compliance reporting value — the Strata Management Act requires quarterly arrears reports to the Commissioner of Buildings, currently prepared manually.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Beyond Collections</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">RentX doesn't just collect faster — it retains tenants</h2>
@@ -118,17 +136,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Renewal pipeline</h3>
       <p class="text-md text-gray-600">90-day visibility on every expiring lease — start early, reduce vacancy gaps</p>
+      <template data-detail-content>
+        <h3>Renewal Pipeline</h3>
+        <p>In a 1,000-unit residential portfolio, roughly 20% of leases (200 units) expire each year. Without pipeline visibility, property managers discover renewals too late — the tenant has already found another unit.</p>
+        <ul>
+          <li><strong>Before:</strong> 30-day notice period means scrambling to retain or replace</li>
+          <li><strong>After:</strong> 90-day pipeline triggers early renewal conversations — retention rate improves 15–20%</li>
+          <li><strong>Impact:</strong> Each avoided vacancy gap saves 1 month rent (RM 1,800) plus agent commission (RM 1,800) = RM 3,600 per unit retained</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Payment channels</h3>
       <p class="text-md text-gray-600"><span class="jargon" data-term="FPX">FPX</span>, online banking, and auto-debit — tenants pay how they prefer</p>
+      <template data-detail-content>
+        <h3>Payment Channels</h3>
+        <p>Malaysian residential tenants are used to bank transfers, but reconciliation is painful for property managers — matching 1,000 bank transfer references manually each month. FPX integration auto-matches payments to invoices.</p>
+        <ul>
+          <li><strong>FPX:</strong> Real-time bank transfer with automatic invoice matching — no manual reconciliation</li>
+          <li><strong>Auto-debit:</strong> Standing instruction reduces late payments by 40% for tenants who opt in</li>
+          <li><strong>Impact:</strong> Payment reconciliation drops from 3 days/month to 2 hours/month</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Tenant portal</h3>
       <p class="text-md text-gray-600">Self-service for statements, receipts, and maintenance requests</p>
+      <template data-detail-content>
+        <h3>Tenant Portal</h3>
+        <p>Tenants currently WhatsApp the property manager for every statement, receipt, or maintenance issue. Each request takes 5–10 minutes of admin time. The tenant portal eliminates 80% of these ad-hoc requests.</p>
+        <ul>
+          <li><strong>Statements:</strong> Tenants download their own statement of account anytime — no admin needed</li>
+          <li><strong>Receipts:</strong> Auto-generated and available in-app after each payment</li>
+          <li><strong>Maintenance:</strong> Requests submitted with photos, tracked to resolution — no more "I already told you about this" disputes</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -162,6 +207,12 @@
 
 <!-- ===== 7. INVESTMENT & ROI ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Pricing</h4>
+    <p>RM 15/unit/month (RM 180/unit/year) for residential portfolios. For portfolios with 500+ units, negotiate to RM 12/unit/month. For JMB/MC properties, position the compliance reporting as included value — they currently pay RM 3,000–5,000/year for external audit prep that RentX generates automatically.</p>
+    <h4>Closing technique</h4>
+    <p>Residential portfolio managers answer to landlord-owners who ask one question: "Why is the rent late?" Position RentX as the answer to that question: "Give your landlords a portal where they can see real-time payment status instead of calling you." The emotional hook is reducing owner complaints, not just saving admin time.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 5 months</h2>
@@ -185,9 +236,15 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">2.9x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>RM 520 saved per unit per year / RM 180 investment per unit per year = <strong>2.9x ROI</strong>.</p>
+        <p>Savings breakdown: arrears reduction RM 37/unit/month (3% improvement on RM 1,800 rent) + admin time RM 6/unit/month (7 min saved at RM 40/hr) = RM 43/unit/month = RM 520/unit/year.</p>
+        <p>Payback period: RM 180 / (RM 520 / 12) = <strong>4.2 months</strong>.</p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 1,000-unit portfolio</p>

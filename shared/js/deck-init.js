@@ -282,6 +282,14 @@ var DeckAnimations = {
     }
   }
 
+  var transitionClasses = ['fade-out', 'fade-in', 'slide-out-left', 'slide-in-right', 'slide-out-right', 'slide-in-left'];
+
+  function clearTransitions(el) {
+    for (var i = 0; i < transitionClasses.length; i++) {
+      el.classList.remove(transitionClasses[i]);
+    }
+  }
+
   function showSlide(n, instant) {
     if (n === current && !instant) return;
     n = Math.max(0, Math.min(n, total - 1));
@@ -290,20 +298,29 @@ var DeckAnimations = {
     var prevIndex = current;
     var prev = slides[current];
     var next = slides[n];
+    var direction = n > current ? 'forward' : 'backward';
 
     if (typeof DeckAnimations !== 'undefined') {
       DeckAnimations.deactivate(prev);
     }
+
+    clearTransitions(prev);
+    clearTransitions(next);
 
     if (instant) {
       prev.classList.remove('active');
       next.classList.add('active');
     } else {
       prev.classList.remove('active');
-      prev.classList.add('fade-out');
-      next.classList.add('fade-in');
-      setTimeout(function() { prev.classList.remove('fade-out'); }, 200);
-      setTimeout(function() { next.classList.remove('fade-in'); next.classList.add('active'); }, 450);
+      if (direction === 'forward') {
+        prev.classList.add('slide-out-left');
+        next.classList.add('slide-in-right');
+      } else {
+        prev.classList.add('slide-out-right');
+        next.classList.add('slide-in-left');
+      }
+      setTimeout(function() { clearTransitions(prev); }, 300);
+      setTimeout(function() { clearTransitions(next); next.classList.add('active'); }, 450);
     }
 
     current = n;
@@ -369,6 +386,9 @@ var DeckAnimations = {
       if (e.target.closest('a')) return;
       if (e.target.closest('.jargon')) return;
       if (e.target.closest('.copy-btn') || e.target.closest('.presenter-bar')) return;
+      if (e.target.closest('[data-detail]')) return;
+      if (e.target.closest('.detail-drawer') || e.target.closest('.detail-backdrop')) return;
+      if (e.target.closest('.notes-drawer') || e.target.closest('.notes-backdrop') || e.target.closest('.notes-btn')) return;
 
       if (menuOpen) { toggleMenu(); return; }
 
@@ -384,11 +404,15 @@ var DeckAnimations = {
     var touchStartX = 0, touchStartY = 0;
     document.addEventListener('touchstart', function(e) {
       if (e.target.closest('.slide-menu') || e.target.closest('.menu-btn')) return;
+      if (e.target.closest('.detail-drawer') || e.target.closest('.detail-backdrop')) return;
+      if (e.target.closest('.notes-drawer') || e.target.closest('.notes-backdrop') || e.target.closest('.notes-btn')) return;
       touchStartX = e.touches[0].clientX;
       touchStartY = e.touches[0].clientY;
     });
     document.addEventListener('touchend', function(e) {
       if (e.target.closest('.slide-menu') || e.target.closest('.menu-btn')) return;
+      if (e.target.closest('.detail-drawer') || e.target.closest('.detail-backdrop')) return;
+      if (e.target.closest('.notes-drawer') || e.target.closest('.notes-backdrop') || e.target.closest('.notes-btn')) return;
       if (e.target.closest('.jargon') && e.target.closest('.jargon')._tooltipShown) return;
       var diffX = touchStartX - e.changedTouches[0].clientX;
       var diffY = touchStartY - e.changedTouches[0].clientY;
@@ -532,7 +556,7 @@ var DeckAnimations = {
 
     var hint = document.createElement('div');
     hint.className = 'deck-hint';
-    hint.textContent = 'Use arrow keys or swipe to navigate';
+    hint.textContent = ('ontouchstart' in window) ? 'Swipe to navigate' : 'Use arrow keys to navigate';
     document.body.appendChild(hint);
 
     setTimeout(function() { hint.classList.add('visible'); }, 800);
@@ -544,12 +568,36 @@ var DeckAnimations = {
       document.removeEventListener('keydown', dismiss);
       document.removeEventListener('click', dismiss);
       document.removeEventListener('touchstart', dismiss);
+      showDetailHint();
     }
 
     setTimeout(dismiss, 4000);
 
     document.addEventListener('keydown', dismiss);
     document.addEventListener('click', dismiss);
+    document.addEventListener('touchstart', dismiss);
+  }
+
+  function showDetailHint() {
+    if (localStorage.getItem('deck-detail-hint-seen')) return;
+    if (!('ontouchstart' in window)) return;
+    if (!document.querySelector('[data-detail]')) return;
+
+    var hint = document.createElement('div');
+    hint.className = 'deck-hint';
+    hint.textContent = 'Tap highlighted items for more detail';
+    document.body.appendChild(hint);
+
+    setTimeout(function() { hint.classList.add('visible'); }, 600);
+
+    function dismiss() {
+      hint.classList.remove('visible');
+      localStorage.setItem('deck-detail-hint-seen', '1');
+      setTimeout(function() { if (hint.parentNode) hint.parentNode.removeChild(hint); }, 300);
+      document.removeEventListener('touchstart', dismiss);
+    }
+
+    setTimeout(dismiss, 4000);
     document.addEventListener('touchstart', dismiss);
   }
 
@@ -662,7 +710,235 @@ var DeckAnimations = {
 })();
 
 /* ═══════════════════════════════════════════
-   6. INIT GLUE (progress bar, counter, DeckInit API)
+   6. DETAIL DRAWER
+   ═══════════════════════════════════════════ */
+(function() {
+  var backdrop, drawer, closeBtn, contentEl;
+  var drawerOpen = false;
+  var touchStartX = 0;
+
+  function build() {
+    backdrop = document.createElement('div');
+    backdrop.className = 'detail-backdrop';
+    backdrop.addEventListener('click', function(e) { e.stopPropagation(); close(); });
+
+    drawer = document.createElement('div');
+    drawer.className = 'detail-drawer drawer-dark';
+    drawer.innerHTML = '<button class="drawer-close" aria-label="Close">&times;</button><div class="drawer-content"></div>';
+    closeBtn = drawer.querySelector('.drawer-close');
+    contentEl = drawer.querySelector('.drawer-content');
+    closeBtn.addEventListener('click', function(e) { e.stopPropagation(); close(); });
+
+    // Swipe right to close
+    drawer.addEventListener('touchstart', function(e) {
+      touchStartX = e.touches[0].clientX;
+    });
+    drawer.addEventListener('touchend', function(e) {
+      var diff = e.changedTouches[0].clientX - touchStartX;
+      if (diff > 60) close();
+    });
+
+    document.body.appendChild(backdrop);
+    document.body.appendChild(drawer);
+  }
+
+  function getTheme(el) {
+    var slide = el.closest('.slide');
+    if (!slide) return 'dark';
+    if (slide.classList.contains('bg-white') || slide.classList.contains('bg-gray')) return 'light';
+    return 'dark';
+  }
+
+  function open(target) {
+    if (!drawer) build();
+
+    var theme = getTheme(target);
+    drawer.className = 'detail-drawer drawer-' + theme + ' open';
+    backdrop.classList.add('open');
+    drawerOpen = true;
+
+    // Get content: <template data-detail-content> child, or data-detail attribute string
+    var tmpl = target.querySelector('template[data-detail-content]');
+    if (tmpl) {
+      contentEl.innerHTML = '';
+      contentEl.appendChild(tmpl.content.cloneNode(true));
+    } else {
+      var text = target.getAttribute('data-detail');
+      if (text && text !== '' && text !== 'true') {
+        contentEl.innerHTML = '<p>' + text + '</p>';
+      } else {
+        contentEl.innerHTML = '<p style="opacity:0.4;font-style:italic">No detail content provided.</p>';
+      }
+    }
+  }
+
+  function close() {
+    if (!drawer) return;
+    drawer.classList.remove('open');
+    backdrop.classList.remove('open');
+    drawerOpen = false;
+  }
+
+  function isOpen() { return drawerOpen; }
+
+  // Click handler for [data-detail] elements
+  document.addEventListener('click', function(e) {
+    var target = e.target.closest('[data-detail]');
+    if (!target) return;
+    e.stopPropagation();
+    open(target);
+  });
+
+  // Escape to close
+  document.addEventListener('keydown', function(e) {
+    if (drawerOpen && e.key === 'Escape') {
+      e.preventDefault();
+      close();
+    }
+    // Block slide navigation while drawer is open
+    if (drawerOpen && (e.key === 'ArrowRight' || e.key === 'ArrowLeft' ||
+        e.key === 'ArrowUp' || e.key === 'ArrowDown' ||
+        e.key === ' ' || e.key === 'Enter')) {
+      e.stopPropagation();
+    }
+  }, true);
+
+  // Close on slide change
+  var prevOnChange = window.DeckEngine ? window.DeckEngine.onSlideChange : null;
+  function hookSlideChange() {
+    if (!window.DeckEngine) return;
+    var existing = window.DeckEngine.onSlideChange;
+    window.DeckEngine.onSlideChange = function(from, to) {
+      close();
+      if (existing) existing(from, to);
+    };
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', hookSlideChange);
+  } else {
+    hookSlideChange();
+  }
+
+  window.DeckDetailDrawer = { open: open, close: close, isOpen: isOpen };
+})();
+
+/* ═══════════════════════════════════════════
+   7. SALES NOTES DRAWER
+   ═══════════════════════════════════════════ */
+(function() {
+  var params = new URLSearchParams(location.search);
+  var notesEnabled = params.has('notes');
+  if (!notesEnabled) return;
+
+  var backdrop, drawer, closeBtn, contentEl, notesBtn;
+  var drawerOpen = false;
+
+  function build() {
+    // Notes button
+    notesBtn = document.createElement('button');
+    notesBtn.className = 'notes-btn visible';
+    notesBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 3h12M2 7h8M2 11h10"/></svg> Notes';
+    notesBtn.addEventListener('click', function(e) { e.stopPropagation(); toggle(); });
+    document.body.appendChild(notesBtn);
+
+    // Backdrop
+    backdrop = document.createElement('div');
+    backdrop.className = 'notes-backdrop';
+    backdrop.addEventListener('click', function(e) { e.stopPropagation(); close(); });
+
+    // Drawer
+    drawer = document.createElement('div');
+    drawer.className = 'notes-drawer';
+    drawer.innerHTML = '<button class="drawer-close" aria-label="Close">&times;</button>' +
+      '<p class="notes-label">Sales Notes</p>' +
+      '<div class="notes-content"></div>';
+    closeBtn = drawer.querySelector('.drawer-close');
+    contentEl = drawer.querySelector('.notes-content');
+    closeBtn.addEventListener('click', function(e) { e.stopPropagation(); close(); });
+
+    document.body.appendChild(backdrop);
+    document.body.appendChild(drawer);
+  }
+
+  function getNotesForSlide(index) {
+    var slides = document.querySelectorAll('.slide');
+    if (!slides[index]) return null;
+    var tmpl = slides[index].querySelector('template[data-sales-notes]');
+    return tmpl || null;
+  }
+
+  function updateContent() {
+    if (!contentEl) return;
+    var engine = window.DeckEngine;
+    var index = engine ? engine.getCurrentSlide() : 0;
+    var tmpl = getNotesForSlide(index);
+    if (tmpl) {
+      contentEl.innerHTML = '';
+      contentEl.appendChild(tmpl.content.cloneNode(true));
+    } else {
+      contentEl.innerHTML = '<p class="notes-empty">No notes for this slide.</p>';
+    }
+  }
+
+  function open() {
+    if (!drawer) build();
+    updateContent();
+    drawer.classList.add('open');
+    backdrop.classList.add('open');
+    drawerOpen = true;
+  }
+
+  function close() {
+    if (!drawer) return;
+    drawer.classList.remove('open');
+    backdrop.classList.remove('open');
+    drawerOpen = false;
+  }
+
+  function toggle() {
+    if (drawerOpen) close(); else open();
+  }
+
+  // Keyboard shortcut: 'n' to toggle
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'n' || e.key === 'N') {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.metaKey || e.ctrlKey) return;
+      e.preventDefault();
+      toggle();
+    }
+    // Escape closes notes
+    if (drawerOpen && e.key === 'Escape') {
+      e.preventDefault();
+      close();
+    }
+  });
+
+  // Update notes on slide change
+  function hookSlideChange() {
+    if (!window.DeckEngine) return;
+    var existing = window.DeckEngine.onSlideChange;
+    window.DeckEngine.onSlideChange = function(from, to) {
+      if (existing) existing(from, to);
+      if (drawerOpen) updateContent();
+    };
+  }
+
+  function init() {
+    build();
+    hookSlideChange();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+/* ═══════════════════════════════════════════
+   8. INIT GLUE (progress bar, counter, DeckInit API)
    ═══════════════════════════════════════════ */
 (function () {
   var progress = document.createElement('div');

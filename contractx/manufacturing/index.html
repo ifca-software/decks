@@ -7,6 +7,7 @@
 <meta property="og:title" content="ContractX — Manufacturing — IFCA">
 <meta property="og:description" content="Reduce supplier leakage and speed up approvals with a single repository and renewal discipline.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EContractX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EManufacturing%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/contractx/manufacturing/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../reit/" data-label="ContractX — REITs &amp; Property Groups">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the fragmentation angle. Multi-plant manufacturers have the same supplier providing the same service at different prices across different plants. Ask: "Do you know if Plant A and Plant B are paying the same rate for the same supplier?" The answer is always no — and the delta is always larger than expected.</p>
+    <h4>Segment positioning</h4>
+    <p>Manufacturing groups optimise production processes down to the minute but let supplier contracts sit unreviewed for years. ContractX is the procurement visibility layer that production already has for operations.</p>
+    <h4>Who to target</h4>
+    <p>Head of Procurement or Group CFO. Plant managers care about supply continuity; the CFO cares about spend leakage across plants. Frame ContractX as the tool that gives HQ visibility without disrupting plant autonomy.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Plant-by-plant fragmentation causes inconsistent terms.<br>Small gaps compound into real leakage.</h2>
@@ -68,10 +77,50 @@
     <table>
       <thead><tr><th>Where it leaks</th><th>What fixes it</th><th style="text-align:right">Annual cost</th></tr></thead>
       <tbody>
-        <tr><td>Missed renewals</td><td>Renewal calendar with 90-day alerts and ownership</td><td class="num"><strong>RM 800,000</strong></td></tr>
-        <tr><td>Price/term slippage</td><td>Clause library with standardized terms across plants</td><td class="num"><strong>RM 720,000</strong></td></tr>
-        <tr><td>Inconsistent approvals</td><td>Approval matrix with routing and audit trail</td><td class="num"><strong>RM 480,000</strong></td></tr>
-        <tr><td>Manual contract tracking</td><td>Central repository with plant-by-category views</td><td class="num"><strong>RM 400,000</strong></td></tr>
+        <tr data-detail><td>Missed renewals</td><td>Renewal calendar with 90-day alerts and ownership</td><td class="num"><strong>RM 800,000</strong></td>
+          <template data-detail-content>
+            <h3>Missed Renewals — RM 800,000/year</h3>
+            <p>Manufacturing groups with RM 80M in supplier spend typically manage 300-500 active contracts across multiple plants. When renewals are tracked per-plant in spreadsheets, 8-12% auto-renew without renegotiation.</p>
+            <ul>
+              <li><strong>Auto-renewal trap:</strong> Tooling and maintenance contracts auto-renew at last year's rate + escalation — no opportunity to benchmark against alternative suppliers</li>
+              <li><strong>Volume leverage lost:</strong> When renewals are not coordinated across plants, the group misses volume discount opportunities with common suppliers</li>
+              <li><strong>Calculation:</strong> 40 missed renewals x RM 200K avg contract x 10% overpayment vs renegotiated rate = RM 800K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Price/term slippage</td><td>Clause library with standardized terms across plants</td><td class="num"><strong>RM 720,000</strong></td>
+          <template data-detail-content>
+            <h3>Price/Term Slippage — RM 720,000/year</h3>
+            <p>Each plant negotiates independently with common suppliers, resulting in inconsistent pricing, payment terms, and warranty clauses for the same services.</p>
+            <ul>
+              <li><strong>Example:</strong> Same chemicals supplier charges Plant A RM 4.20/kg and Plant B RM 4.80/kg — a 14% difference for the same product because Plant B renewed without benchmarking</li>
+              <li><strong>Payment terms:</strong> Some plants agree to 30-day terms while others have negotiated 60 days — inconsistency weakens the group's negotiating position</li>
+              <li><strong>Calculation:</strong> 0.9% of RM 80M supplier spend lost to pricing inconsistency across plants = RM 720K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Inconsistent approvals</td><td>Approval matrix with routing and audit trail</td><td class="num"><strong>RM 480,000</strong></td>
+          <template data-detail-content>
+            <h3>Inconsistent Approvals — RM 480,000/year</h3>
+            <p>Contract approvals happen via email — no standard routing, no threshold-based escalation, no audit trail. This creates both speed and risk problems.</p>
+            <ul>
+              <li><strong>Speed cost:</strong> Procurement requests sit in inboxes for 5-10 days — production timelines slip when raw material contracts are delayed</li>
+              <li><strong>Risk cost:</strong> Plant managers approve contracts below threshold without legal review — liability and indemnity clauses go unchecked</li>
+              <li><strong>Calculation:</strong> Direct cost of production delays (RM 300K) + cost of unfavourable terms discovered post-signature (RM 180K) = RM 480K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Manual contract tracking</td><td>Central repository with plant-by-category views</td><td class="num"><strong>RM 400,000</strong></td>
+          <template data-detail-content>
+            <h3>Manual Contract Tracking — RM 400,000/year</h3>
+            <p>Each plant maintains its own contract files — some in shared drives, some in filing cabinets. HQ has no consolidated view of total supplier exposure or contract coverage by category.</p>
+            <ul>
+              <li><strong>Labour cost:</strong> 2-3 procurement staff per plant spending 15-20% of time on contract administration instead of strategic sourcing</li>
+              <li><strong>Audit cost:</strong> Internal and external auditors spend extra weeks gathering evidence from multiple plant systems</li>
+              <li><strong>Calculation:</strong> Labour (RM 280K across 4 plants) + audit premium (RM 120K) = RM 400K</li>
+            </ul>
+          </template>
+        </tr>
         <tr><td style="font-weight:700;color:var(--navy)">Total modeled leakage</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 2.4M</td></tr>
       </tbody>
     </table>
@@ -80,6 +129,15 @@
 
 <!-- ===== 4. VALUE CREATION ===== -->
 <div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through the before/after cards. The RM 720K number is 30% of RM 2.4M — conservative because manufacturing contracts have long renewal cycles and some leakage takes 12-18 months to fully address. Stress: "This is the Year 1 number. Year 2 recovery is higher because you have full renewal visibility by then."</p>
+    <h4>Objection handling</h4>
+    <p>"Each plant has its own procurement process — we cannot centralise" — You do not need to centralise procurement. ContractX gives HQ visibility while plants retain operational autonomy. Think of it as a reporting layer, not a control layer.</p>
+    <p>"Our ERP handles procurement already" — ERP handles purchase orders and invoices. It does not track contract terms, renewal dates, or clause compliance. ContractX sits between the ERP and the supplier relationship.</p>
+    <h4>Key framing</h4>
+    <p>For manufacturers, frame ContractX as a supply chain risk tool. Untracked renewals = supply disruption risk. Inconsistent terms = quality and liability risk. The COO cares about continuity; the CFO cares about spend.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Recover 30% of that — RM 720K back every year</h2>
@@ -113,6 +171,12 @@
 
 <!-- ===== 5. MODELED IMPACT ===== -->
 <div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The real value for manufacturing is not just cost recovery — it is standardisation. When all plants use the same terms, templates, and approval flows, the group negotiates as one entity instead of four. That volume leverage alone can drive 2-5% savings on common suppliers. This slide plants the seed for that conversation.</p>
+    <h4>Conversation steer</h4>
+    <p>Ask: "Are your plants coordinating supplier negotiations, or does each plant deal with suppliers independently?" If independently, the fragmentation cost is likely higher than modeled. If partially coordinated, ContractX accelerates what they have already started.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Beyond Recovery</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">ContractX does not just recover leakage — it standardizes procurement</h2>
@@ -120,17 +184,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Renewal hygiene</h3>
       <p class="text-md text-gray-600">Every supplier renewal surfaced 90 days ahead — no more emergency renegotiations or auto-renewals at last year's prices</p>
+      <template data-detail-content>
+        <h3>Renewal Hygiene</h3>
+        <p>Manufacturing groups with 4+ plants and 300-500 active supplier contracts face staggered renewal dates year-round. Without a centralised calendar, plant-level procurement teams miss renewals during peak production periods.</p>
+        <ul>
+          <li><strong>Before:</strong> Plant procurement tracks renewals in Excel — misses spike during production ramp-up periods when staff are focused on supply assurance</li>
+          <li><strong>After:</strong> Every renewal triggers alerts at 90, 60, and 30 days — assigned to the plant procurement owner with escalation to group procurement if unactioned</li>
+          <li><strong>Impact:</strong> Auto-renewal rate drops from 8-12% to under 2% — preserving renegotiation opportunity on every contract</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Terms consistency</h3>
       <p class="text-md text-gray-600">Clause library ensures consistent pricing, payment terms, and liability clauses across all plants and categories</p>
+      <template data-detail-content>
+        <h3>Terms Consistency</h3>
+        <p>Without standardised templates, each plant negotiates independently — same supplier, different prices, different terms. This weakens the group's collective bargaining position.</p>
+        <ul>
+          <li><strong>Before:</strong> Plant A pays RM 4.20/kg for chemicals while Plant B pays RM 4.80/kg — neither knows about the other's rate</li>
+          <li><strong>After:</strong> Clause library with standard rate cards, payment terms (60-day minimum), and warranty clauses. Any deviation requires group procurement approval.</li>
+          <li><strong>Impact:</strong> Price consistency across plants — group-level volume leverage recovers 1-3% on common suppliers</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Faster approvals</h3>
       <p class="text-md text-gray-600">Routing and approval matrix replace email chains — procurement requests move through the system, not inboxes</p>
+      <template data-detail-content>
+        <h3>Faster Approvals</h3>
+        <p>Contract approvals in manufacturing are time-sensitive — delayed raw material or tooling contracts directly impact production schedules. Email-based approvals create bottlenecks.</p>
+        <ul>
+          <li><strong>Before:</strong> Procurement sends approval requests by email — contracts below RM 50K approved by plant manager, above RM 50K requires group CFO sign-off. Average wait: 5-10 business days.</li>
+          <li><strong>After:</strong> Approval matrix with threshold-based routing. Below RM 50K auto-routes to plant manager; above routes to group procurement with SLA on response time.</li>
+          <li><strong>Impact:</strong> Approval cycle drops from 5-10 days to 1-3 days — fewer production delays from procurement bottlenecks</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +255,14 @@
 
 <!-- ===== 7. INVESTMENT & ROI ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Let the 4.0x ROI land, then contextualise: "RM 180K per year across 4 plants is RM 45K per plant — less than the cost of one procurement clerk. But you get group-level visibility, standardised terms, and renewal discipline that no amount of hiring can deliver."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 180K/year is the standard price for up to 4 plants and RM 80M in supplier spend. For larger groups (6+ plants), pricing scales to RM 250K. For pilot deals, offer a 45-day proof-of-value loading the top 50 contracts from 1-2 plants to demonstrate pricing inconsistency and missed renewals.</p>
+    <h4>Closing technique</h4>
+    <p>Do not ask "would you like to proceed?" — ask "which two plants should we start with?" Assume the close. Start with the two plants that share the most common suppliers — the pricing inconsistency will be immediately visible and compelling.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 8 months</h2>
@@ -187,9 +286,22 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">4.0x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 180K/year investment vs RM 720K/year in recovered leakage across 4 categories:</p>
+        <ul>
+          <li><strong>Missed renewals:</strong> RM 800K — 8-12% auto-renewal rate on 300-500 contracts at RM 200K average</li>
+          <li><strong>Price/term slippage:</strong> RM 720K — 0.9% pricing inconsistency across plants on RM 80M spend</li>
+          <li><strong>Inconsistent approvals:</strong> RM 480K — production delays and unfavourable terms from email-based approvals</li>
+          <li><strong>Manual tracking:</strong> RM 400K — labour and audit costs from per-plant contract administration</li>
+        </ul>
+        <p>Total leakage: RM 2.4M. Conservative 30% recovery = RM 720K.</p>
+        <p>Net: RM 720K - RM 180K = RM 540K per year. ROI = 720K / 180K = <strong>4.0x</strong></p>
+        <p>Payback period: 180K / (720K / 12) = <strong>3.0 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — RM 160M multi-plant group</p>

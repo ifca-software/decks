@@ -68,6 +68,10 @@
 
 /* === PHONE / HUAWEI FOLD SHUT (up to 520px) === */
 @media (max-width: 520px) {
+  .detail-drawer { width: 100%; right: -100%; }
+  .detail-drawer.open { right: 0; }
+  .notes-drawer { width: 100%; left: -100%; }
+  .notes-drawer.open { left: 0; }
   .slide { padding: 24px 24px 60px 24px; }
   .slide h1 { font-size: 30px; margin-bottom: 12px; }
   .slide h2 { font-size: 22px; margin-bottom: 12px; }

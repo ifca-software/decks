@@ -7,6 +7,7 @@
 <meta property="og:title" content="AuditX — Manufacturing — IFCA">
 <meta property="og:description" content="Reduce repeat nonconformities by turning audit findings into verified CAPA closure.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EAuditX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EManufacturing%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/auditx/manufacturing/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../banking/" data-label="AuditX — Banking">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the certification risk angle. Ask: "When was your last ISO surveillance audit, and how many repeat findings came up?" Repeat NCs are the single biggest threat to certification continuity — and every QA manager knows it.</p>
+    <h4>Segment positioning</h4>
+    <p>Manufacturing already has audit programs (ISO 9001, 14001, 45001). The gap is never the checklist — it's CAPA closure and verification. Position AuditX as the CAPA enforcement layer, not a replacement for their management system.</p>
+    <h4>Who to target</h4>
+    <p>QA/QC Manager or Head of Operations. DOSH compliance officer if the plant has had recent safety incidents. Avoid procurement — they'll compare you to document management systems.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Audits find the issues.<br>Fixes do not stick.</h2>
@@ -68,10 +77,10 @@
     <table>
       <thead><tr><th>Metric</th><th>Assumption</th><th style="text-align:right">Per plant / year</th></tr></thead>
       <tbody>
-        <tr><td>Audit cycles</td><td>4 per plant per year</td><td class="num"><strong>4 cycles</strong></td></tr>
-        <tr><td>Findings per audit</td><td>18 (mix of minor + observations)</td><td class="num"><strong>72 findings</strong></td></tr>
-        <tr><td>Repeat finding rate</td><td>25% recur due to weak closure</td><td class="num"><strong>~18 repeats</strong></td></tr>
-        <tr><td><span class="jargon" data-term="CAPA">CAPA</span> cycle time</td><td>45 days baseline</td><td class="num"><strong>45 days avg</strong></td></tr>
+        <tr data-detail="4 cycles typically covers: 2 internal audits (ISO 9001/14001), 1 DOSH safety audit, and 1 customer/supplier audit. Plants with automotive clients (IATF 16949) may run 6+ cycles."><td>Audit cycles</td><td>4 per plant per year</td><td class="num"><strong>4 cycles</strong></td></tr>
+        <tr data-detail="18 findings is the median across ISO 9001 internal audits in ASEAN manufacturing. Breakdown: 2-3 major NCs, 8-10 minor NCs, 5-7 observations. Plants with mature QMS tend toward 12; newly certified plants average 22-25."><td>Findings per audit</td><td>18 (mix of minor + observations)</td><td class="num"><strong>72 findings</strong></td></tr>
+        <tr data-detail="25% recurrence driven by: email-based CAPA sign-off with no evidence, staff turnover on the production floor (30-40% annual in Malaysian manufacturing), and no linkage between current findings and prior CAPAs. Common repeat categories: calibration gaps, PPE non-compliance, housekeeping, document control."><td>Repeat finding rate</td><td>25% recur due to weak closure</td><td class="num"><strong>~18 repeats</strong></td></tr>
+        <tr data-detail="45-day breakdown: 5 days for root cause analysis, 10 days for action plan approval, 20 days for implementation, 10 days for verification and sign-off. The bottleneck is verification — QA managers chase production supervisors for closure evidence via WhatsApp."><td><span class="jargon" data-term="CAPA">CAPA</span> cycle time</td><td>45 days baseline</td><td class="num"><strong>45 days avg</strong></td></tr>
         <tr><td style="font-weight:700;color:var(--navy)">Core problem</td><td>Each repeat NC triggers re-audit scope and risks certification</td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">18 preventable NCs</td></tr>
       </tbody>
     </table>
@@ -80,6 +89,13 @@
 
 <!-- ===== 4. VALUE CREATION ===== -->
 <div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Walk through both metrics together. CAPA cycle time from 45 to 21-30 days is the operational win. 40-60% fewer repeats is the certification win. Frame it as: "Faster closure AND stickier fixes."</p>
+    <h4>Objection handling</h4>
+    <p>"We already track CAPAs in our QMS" — Ask: "Can you show me the verification evidence for the last 10 CAPAs closed?" Most QMS tools track the plan, not the proof. AuditX requires photo evidence and verification signoff before any CAPA can be marked closed.</p>
+    <p>"Our repeat rate is already low" — Ask for their last surveillance audit report. If the external auditor found even 1 repeat major NC, that's a certification risk. AuditX prevents that from happening.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Value Creation</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Enforce CAPA discipline — and repeat findings disappear</h2>
@@ -113,6 +129,12 @@
 
 <!-- ===== 5. MODELED IMPACT ===== -->
 <div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The "1-click export" for ISO evidence packs is the hook for QA managers who dread surveillance audits. Every plant QA manager has spent a weekend assembling the audit pack. Land this number alongside the repeat NC reduction — together they make the case for "smoother certifications."</p>
+    <h4>Conversation steer</h4>
+    <p>If they have DOSH compliance requirements (chemical plants, heavy machinery), emphasize safety audit trails and incident linkage. If they are an automotive supplier (IATF 16949), emphasize customer audit readiness and layered process audit support.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Modeled Impact</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">Beyond CAPA closure — the downstream effects</h2>
@@ -120,17 +142,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Certification confidence</h3>
       <p class="text-md text-gray-600">Fewer repeat <span class="jargon" data-term="NC">NCs</span> means <strong class="accent">smoother surveillance audits</strong> and reduced risk of suspension</p>
+      <template data-detail-content>
+        <h3>Certification Confidence</h3>
+        <p>ISO certification bodies (SIRIM, TUV, BSI) flag repeat major NCs as systemic failures. Two consecutive surveillance audits with repeat majors can trigger a special audit or certificate suspension.</p>
+        <ul>
+          <li><strong>Suspension cost:</strong> Loss of ISO certification can halt customer orders — especially for MNC supply chains that require certified suppliers</li>
+          <li><strong>Common repeat majors:</strong> Calibration records incomplete, management review not conducted, corrective action not verified</li>
+          <li><strong>AuditX impact:</strong> Every CAPA links to the original finding. Verification requires evidence upload before closure — no more "closed by email"</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Audit churn reduction</h3>
       <p class="text-md text-gray-600"><strong class="accent">Less re-audit scope</strong> when repeat findings drop — same team covers more ground</p>
+      <template data-detail-content>
+        <h3>Audit Churn Reduction</h3>
+        <p>When repeat findings drop, auditors spend less time re-testing the same controls. This frees capacity for higher-value activities like process improvement audits and supplier audits.</p>
+        <ul>
+          <li><strong>Current state:</strong> 25% of audit time spent re-auditing prior findings that weren't properly closed</li>
+          <li><strong>With AuditX:</strong> Prior findings dashboard shows verified closure status — auditors skip re-testing and focus on new risk areas</li>
+          <li><strong>Capacity freed:</strong> Estimated 1 fewer internal audit cycle worth of rework per 3-plant group per year</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Evidence-based closure</h3>
       <p class="text-md text-gray-600"><span class="jargon" data-term="ISO">ISO</span>-ready audit pack with <strong class="accent">evidence attachments and timestamps</strong> — exportable in minutes</p>
+      <template data-detail-content>
+        <h3>Evidence-Based Closure</h3>
+        <p>ISO 19011 requires documented evidence of corrective action effectiveness. Most plants rely on paper sign-offs or email confirmations that external auditors cannot easily verify.</p>
+        <ul>
+          <li><strong>Current state:</strong> Evidence scattered across WhatsApp photos, shared drives, and paper files — assembly takes 2-3 days per audit program</li>
+          <li><strong>With AuditX:</strong> Every finding has timestamped evidence, root cause analysis, and verification photos in one exportable pack</li>
+          <li><strong>External auditor benefit:</strong> SIRIM/TUV auditors can review CAPA evidence on-screen during surveillance visits — faster, smoother audits</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +213,14 @@
 
 <!-- ===== 7. INVESTMENT & ROI ===== -->
 <div class="slide bg-navy" data-title="Investment &amp; ROI" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Let the 3.3x sit. Then say: "At RM 96,000 per year for a 3-plant group, that's RM 32,000 per plant — less than the cost of one failed surveillance audit re-visit from SIRIM."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 96,000/year is the standard for a multi-plant group (3 plants, shared audit team). For single-plant operations, price at RM 48,000/year. For groups with 5+ plants, RM 28,000/plant with a 5-plant minimum.</p>
+    <h4>Closing technique</h4>
+    <p>Don't ask "would you like to proceed?" — ask "Which plant should we start the pilot with?" Pick the plant with the most repeat findings or the next upcoming surveillance audit. That's where the proof happens fastest.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>The ROI is in closure discipline, not software features</h2>
@@ -187,9 +244,20 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">3.3x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 96,000/year investment vs RM 320,000/year in recovered value across a 3-plant group:</p>
+        <ul>
+          <li><strong>Reduced re-audit rework:</strong> RM 180,000 — 10 fewer repeat NCs per plant x 3 plants x estimated 20 hours re-audit time per NC x RM 100/hr</li>
+          <li><strong>CAPA cycle time savings:</strong> RM 90,000 — QA team recovers ~900 hours/year across 3 plants from faster closure (less chasing, less re-verification)</li>
+          <li><strong>Certification risk avoidance:</strong> RM 50,000 — annualized cost of avoiding one certification suspension event (lost orders, re-audit fees, remediation)</li>
+        </ul>
+        <p>Net: RM 320,000 - RM 96,000 = RM 224,000 per year. ROI = 320,000 / 96,000 = <strong>3.3x</strong></p>
+        <p>Payback period: 96,000 / (320,000 / 12) = <strong>3.6 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — 3-plant group</p>

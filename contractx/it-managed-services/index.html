@@ -7,6 +7,7 @@
 <meta property="og:title" content="ContractX — IT Managed Services — IFCA">
 <meta property="og:description" content="Reduce redline time and protect renewals with a single renewal and SLA view.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%232d4a6f'/%3E%3Ctext x='600' y='260' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='96' fill='white'%3EContractX%3C/text%3E%3Ctext x='600' y='360' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='600' font-size='48' fill='%23f97316'%3EIT Services%3C/text%3E%3Ctext x='600' y='560' text-anchor='middle' font-family='system-ui,-apple-system,sans-serif' font-weight='400' font-size='24' fill='%2394a3b8'%3EIFCA Software%3C/text%3E%3C/svg%3E">
 <meta property="og:url" content="https://ifca-software.github.io/decks/contractx/it-managed-services/">
 <meta name="deck-base" content="../../">
 <meta name="deck-sibling" data-href="../reit/" data-label="ContractX — REITs &amp; Property Groups">
@@ -33,6 +34,14 @@
 
 <!-- ===== 2. THE REALITY ===== -->
 <div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Lead with the cycle time angle. IT managed services firms live and die by deal velocity — every day a contract sits in redline is a day of delayed revenue recognition. Ask: "How many days does your average contract take from request to signature?" If the answer is over 30, there is money on the table.</p>
+    <h4>Segment positioning</h4>
+    <p>IT services firms have mature delivery operations but immature contract operations. Deals are won by the sales team and then bottlenecked by legal. ContractX unblocks the pipeline by standardising templates and routing approvals.</p>
+    <h4>Who to target</h4>
+    <p>Head of Legal/Contracts or VP of Commercial Operations. Legal cares about risk and efficiency; commercial cares about deal velocity. If you can get both in the room, pitch ContractX as the bridge between them.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Reality</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Revenue depends on renewals and SLAs.<br>But most IT services firms manage them in email.</h2>
@@ -68,10 +77,50 @@
     <table>
       <thead><tr><th>Where it leaks</th><th>What fixes it</th><th style="text-align:right">Annual cost</th></tr></thead>
       <tbody>
-        <tr><td>Missed renewals</td><td>Renewal pipeline dashboard with 90-day alerts</td><td class="num"><strong>RM 360,000</strong></td></tr>
-        <tr><td>Pricing/term slippage</td><td>Clause library and standardized templates</td><td class="num"><strong>RM 360,000</strong></td></tr>
-        <tr><td><span class="jargon" data-term="SLA">SLA</span> credit misses</td><td>Breach logging with evidence and penalty tracking</td><td class="num"><strong>RM 240,000</strong></td></tr>
-        <tr><td>Slow redline cycles</td><td>Version control and approval routing</td><td class="num"><strong>RM 240,000</strong></td></tr>
+        <tr data-detail><td>Missed renewals</td><td>Renewal pipeline dashboard with 90-day alerts</td><td class="num"><strong>RM 360,000</strong></td>
+          <template data-detail-content>
+            <h3>Missed Renewals — RM 360,000/year</h3>
+            <p>IT managed services firms with RM 60M in annual contract value typically manage 200-400 active contracts. When renewals are tracked in spreadsheets, 5-8% lapse or auto-renew without negotiation.</p>
+            <ul>
+              <li><strong>Lapsed contracts:</strong> Client continues service month-to-month at discounted rates while a formal renewal is "in progress" — revenue erosion of 3-5% per lapsed contract</li>
+              <li><strong>Auto-renewals:</strong> Contracts renew at last year's rates without scope adjustment — missing the opportunity to upsell or adjust pricing for expanded scope</li>
+              <li><strong>Calculation:</strong> 25 missed renewals x RM 240K avg contract value x 6% revenue erosion = RM 360K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Pricing/term slippage</td><td>Clause library and standardized templates</td><td class="num"><strong>RM 360,000</strong></td>
+          <template data-detail-content>
+            <h3>Pricing/Term Slippage — RM 360,000/year</h3>
+            <p>Without standardised templates, each account manager negotiates terms independently. This creates inconsistent pricing, favourable-to-client liability clauses, and non-standard payment terms.</p>
+            <ul>
+              <li><strong>Pricing inconsistency:</strong> Same service tier priced 10-15% differently across clients because there is no standard rate card enforcement</li>
+              <li><strong>Liability creep:</strong> Account managers accept unlimited liability clauses to close deals — creating hidden risk exposure</li>
+              <li><strong>Calculation:</strong> 0.6% of RM 60M contract value lost to pricing inconsistency and non-standard terms = RM 360K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td><span class="jargon" data-term="SLA">SLA</span> credit misses</td><td>Breach logging with evidence and penalty tracking</td><td class="num"><strong>RM 240,000</strong></td>
+          <template data-detail-content>
+            <h3>SLA Credit Misses — RM 240,000/year</h3>
+            <p>Managed services contracts contain SLA commitments (uptime, response time, resolution time). When the firm breaches an SLA, clients are entitled to credits — but many breaches go untracked, creating surprise credit claims months later.</p>
+            <ul>
+              <li><strong>Reactive exposure:</strong> Without proactive breach logging, clients submit credit claims at quarter-end — often inflated because there is no counter-evidence</li>
+              <li><strong>Proactive benefit:</strong> Logging breaches as they happen allows the firm to self-report, control the narrative, and offer remediation instead of credits</li>
+              <li><strong>Calculation:</strong> 0.4% of RM 60M contract value in avoidable credit payouts = RM 240K</li>
+            </ul>
+          </template>
+        </tr>
+        <tr data-detail><td>Slow redline cycles</td><td>Version control and approval routing</td><td class="num"><strong>RM 240,000</strong></td>
+          <template data-detail-content>
+            <h3>Slow Redline Cycles — RM 240,000/year</h3>
+            <p>The average contract takes 42 days from request to signature. Each day of delay is a day of deferred revenue recognition. For a firm processing 120 contracts per month, even small improvements compound.</p>
+            <ul>
+              <li><strong>Bottleneck:</strong> Legal reviews 120 contracts/month with 3 staff — email-based redlines create version confusion and missed comments</li>
+              <li><strong>Revenue deferral:</strong> 15 days removed from cycle time means RM 60M / 365 x 15 = ~RM 2.5M in earlier revenue recognition</li>
+              <li><strong>Calculation:</strong> Direct cost of delayed deals (re-work, expedite fees, lost early-payment discounts) = RM 240K</li>
+            </ul>
+          </template>
+        </tr>
         <tr><td style="font-weight:700;color:var(--navy)">Total modeled leakage</td><td></td><td class="num" style="font-weight:700;color:var(--orange);font-size:18px">RM 1.2M</td></tr>
       </tbody>
     </table>
@@ -80,6 +129,15 @@
 
 <!-- ===== 4. VALUE CREATION ===== -->
 <div class="slide bg-navy" data-title="Value Creation" data-slug="value">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>This slide has two stories: cost recovery (RM 720K) and speed (42 to 27 days). Lead with speed — IT services firms care more about deal velocity than cost recovery. Then say: "The cost recovery is the bonus — the real value is getting 15 days of revenue back on every deal."</p>
+    <h4>Objection handling</h4>
+    <p>"Our legal team is efficient enough" — Ask: "How many contracts are in redline right now?" If they cannot answer instantly, there is no visibility. ContractX shows the pipeline in a dashboard — just like a sales pipeline but for contracts.</p>
+    <p>"We have a contract management tool already" — Most IT firms use SharePoint or a shared drive. Ask: "Can you see the total value of contracts expiring in the next 90 days?" If not, it is a filing cabinet, not a management tool.</p>
+    <h4>Key framing</h4>
+    <p>For IT managed services, frame ContractX as a revenue acceleration tool, not a cost reduction tool. Faster contracts = faster revenue. Protected renewals = protected revenue. SLA discipline = fewer surprise credits.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Payoff</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Recover 0.5-1.5% of contract value — up to RM 720K</h2>
@@ -113,6 +171,12 @@
 
 <!-- ===== 5. MODELED IMPACT ===== -->
 <div class="slide bg-white" data-title="Modeled Impact" data-slug="impact">
+  <template data-sales-notes>
+    <h4>Key insight</h4>
+    <p>The 35% cycle time reduction is the headline number. 120 contracts per month x 15 days saved = 1,800 contract-days recovered per month. That is not just efficiency — it is capacity. The legal team can handle more deals without hiring, or reallocate time to strategic negotiations instead of routine redlines.</p>
+    <h4>Conversation steer</h4>
+    <p>Ask which card resonates most. "Faster deals" means they have a pipeline bottleneck. "Renewal pipeline" means they have churn or revenue protection concerns. "SLA discipline" means they are getting hit with surprise credit claims. Each leads to a different pilot approach.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">Beyond Recovery</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">ContractX does not just save money — it accelerates revenue</h2>
@@ -120,17 +184,44 @@
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32" data-animate data-delay="3">
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Faster deals</h3>
       <p class="text-md text-gray-600">Standardized <span class="jargon" data-term="MSA">MSA</span>/<span class="jargon" data-term="SOW">SOW</span> templates and clause library cut redline cycles by 20-35%</p>
+      <template data-detail-content>
+        <h3>Faster Deals</h3>
+        <p>IT managed services contracts follow a repeatable structure: MSA for the master relationship, SOWs for each engagement. Yet most firms draft each SOW from scratch and redline via email.</p>
+        <ul>
+          <li><strong>Before:</strong> 42-day average cycle — legal reviews every clause, account managers send PDFs back and forth, version confusion causes rework</li>
+          <li><strong>After:</strong> Pre-approved clause library means 80% of terms are standardised. Only non-standard clauses require legal review. Version control eliminates confusion.</li>
+          <li><strong>Impact:</strong> Cycle time drops to 27 days — 15 days of earlier revenue start on every contract, plus reduced legal workload per deal</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy">Renewal pipeline</h3>
       <p class="text-md text-gray-600">Every renewal visible 90 days ahead — forecast accuracy improves and churn risk drops</p>
+      <template data-detail-content>
+        <h3>Renewal Pipeline</h3>
+        <p>Managed services revenue is recurring — but only if contracts are renewed. Without a renewal pipeline, account managers discover expiring contracts too late to renegotiate or upsell.</p>
+        <ul>
+          <li><strong>Before:</strong> Renewal dates in a spreadsheet maintained by finance — account managers learn about upcoming renewals when the client asks for a discount</li>
+          <li><strong>After:</strong> Renewal pipeline dashboard shows every contract expiring in the next 90/60/30 days, with contract value, margin, and upsell opportunity</li>
+          <li><strong>Impact:</strong> Churn reduced by catching at-risk renewals early; upsell revenue from proactive scope expansion conversations</li>
+        </ul>
+      </template>
     </div>
-    <div class="card">
+    <div class="card" data-detail>
       <h3 class="text-navy"><span class="jargon" data-term="SLA">SLA</span> discipline</h3>
       <p class="text-md text-gray-600">Breach log with evidence — penalty credits enforced consistently across the portfolio</p>
+      <template data-detail-content>
+        <h3>SLA Discipline</h3>
+        <p>IT services firms are both vendors (providing SLAs to clients) and buyers (receiving SLAs from subcontractors/cloud providers). ContractX manages both sides.</p>
+        <ul>
+          <li><strong>As vendor:</strong> Proactive breach logging prevents surprise credit claims — self-reporting builds client trust and controls the narrative</li>
+          <li><strong>As buyer:</strong> Subcontractor SLA breaches are logged with evidence — credits recovered from cloud providers, data centre operators, and network vendors</li>
+          <li><strong>Impact:</strong> Net SLA credit position improves — fewer payouts to clients, more recoveries from subcontractors</li>
+        </ul>
+      </template>
     </div>
   </div>
   <div class="card emphasis bg-navy mt-24" data-animate data-delay="4">
@@ -164,6 +255,14 @@
 
 <!-- ===== 7. INVESTMENT & ROI ===== -->
 <div class="slide bg-navy" data-title="The Investment" data-slug="roi">
+  <template data-sales-notes>
+    <h4>Approach</h4>
+    <p>Let the 4.0x ROI sit, then add: "RM 180K per year is less than one headcount. You are getting the output of 2-3 contract administrators for the price of a software subscription — plus the deal acceleration benefit that no amount of hiring can replicate."</p>
+    <h4>Pricing guidance</h4>
+    <p>RM 180K/year is the standard price for up to RM 60M in contract value and up to 150 active users. For larger firms (RM 100M+), pricing scales to RM 280K. For pilot deals, offer a 30-day proof-of-value with one delivery unit (30-50 contracts) to demonstrate cycle time reduction.</p>
+    <h4>Closing technique</h4>
+    <p>Do not ask "are you interested?" — ask "which delivery unit should we pilot with?" or "should we start with your MSA templates or your renewal pipeline?" Assume the close. MSA/SOW standardisation is the quickest win because the templates can be built in 2 weeks.</p>
+  </template>
   <div class="pill" data-animate data-delay="0">The Investment</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Pays for itself in under 8 months</h2>
@@ -187,9 +286,22 @@
     </div>
   </div>
   <div class="row mt-24 gap-60">
-    <div class="card emphasis col text-center" data-animate data-delay="4">
+    <div class="card emphasis col text-center" data-animate data-delay="4" data-detail>
       <p class="big-number accent">4.0x</p>
       <p class="text-md text-dim">return on investment</p>
+      <template data-detail-content>
+        <h3>ROI Methodology</h3>
+        <p>Based on RM 180K/year investment vs RM 720K/year in recovered value across 4 categories:</p>
+        <ul>
+          <li><strong>Missed renewals:</strong> RM 360K — 5-8% of renewals lapsing or auto-renewing at RM 240K average contract value</li>
+          <li><strong>Pricing/term slippage:</strong> RM 360K — 0.6% of contract value lost to inconsistent pricing and non-standard terms</li>
+          <li><strong>SLA credit misses:</strong> RM 240K — 0.4% of contract value in avoidable credit payouts</li>
+          <li><strong>Slow redline cycles:</strong> RM 240K — direct cost of delayed deals and re-work</li>
+        </ul>
+        <p>Total leakage: RM 1.2M. Conservative 60% recovery = RM 720K (higher recovery rate due to template-driven efficiency gains).</p>
+        <p>Net: RM 720K - RM 180K = RM 540K per year. ROI = 720K / 180K = <strong>4.0x</strong></p>
+        <p>Payback period: 180K / (720K / 12) = <strong>3.0 months</strong></p>
+      </template>
     </div>
     <div class="card col text-center" data-animate data-delay="4">
       <p class="label">Scale it — RM 120M portfolio</p>
