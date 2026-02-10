@@ -811,6 +811,7 @@ ul.clean .bullet {
   padding-left: 28px;
   max-width: 750px;
 }
+.divider + .quote { margin-top: 16px; }
 
 /* === ENTRANCE ANIMATIONS === */
 @keyframes fadeInUp {
