@@ -754,13 +754,15 @@ var DeckAnimations = {
     input.addEventListener('click', function(e) { e.stopPropagation(); });
     input.addEventListener('keydown', function(e) { e.stopPropagation(); });
 
+    function trimDec(s) { return s.replace(/\.?0+$/, ''); }
+    function addCommas(n) { return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
     function formatRM(val) {
-      if (Math.abs(val) >= 1000000) {
-        return 'RM ' + (val / 1000000).toFixed(2).replace(/\.?0+$/, '') + 'M';
-      }
-      var parts = Math.round(val).toString().split('.');
-      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-      return 'RM ' + parts.join('.');
+      var abs = Math.abs(val);
+      if (abs >= 1e9)  return 'RM ' + trimDec((val / 1e9).toFixed(2)) + 'B';
+      if (abs >= 1e6)  return 'RM ' + trimDec((val / 1e6).toFixed(2)) + 'M';
+      if (abs >= 10000) return 'RM ' + trimDec((val / 1000).toFixed(1)) + 'K';
+      return 'RM ' + addCommas(Math.round(val));
     }
 
     // Scale labels: elements with data-roi-scale update their number dynamically
@@ -781,11 +783,11 @@ var DeckAnimations = {
         var newVal = originals[i].base * ratio;
         originals[i].el.textContent = formatRM(newVal);
       }
-      // Update scale labels (e.g., "5-property REIT" → "15-property REIT")
+      // Update scale labels (e.g., "5-property REIT" → "15,000-property REIT")
       for (var k = 0; k < scaleLabelData.length; k++) {
         var s = scaleLabelData[k];
         var scaledCount = Math.round(val * s.factor);
-        s.el.innerHTML = s.template.replace(/\d+/, scaledCount);
+        s.el.innerHTML = s.template.replace(/\d+/, addCommas(scaledCount));
       }
     }
 
