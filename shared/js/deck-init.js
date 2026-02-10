@@ -759,6 +759,8 @@ var DeckAnimations = {
 
     function formatRM(val) {
       var abs = Math.abs(val);
+      if (abs >= 1e15) return 'RM ' + trimDec((val / 1e15).toFixed(2)) + 'Q';
+      if (abs >= 1e12) return 'RM ' + trimDec((val / 1e12).toFixed(2)) + 'T';
       if (abs >= 1e9)  return 'RM ' + trimDec((val / 1e9).toFixed(2)) + 'B';
       if (abs >= 1e6)  return 'RM ' + trimDec((val / 1e6).toFixed(2)) + 'M';
       if (abs >= 10000) return 'RM ' + trimDec((val / 1000).toFixed(1)) + 'K';
