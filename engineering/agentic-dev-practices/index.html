@@ -156,6 +156,39 @@
   /* === Next step slide centered === */
   .slide .max-w { color: #e6edf3; }
   .slide .max-w h2 { color: #e6edf3 !important; }
+
+  /* === Responsive: terminal theme === */
+  @media (max-width: 768px) {
+    .slide .row { flex-direction: column !important; }
+    .slide .card-grid.cols-3 { grid-template-columns: 1fr !important; }
+    .slide .card-grid.cols-2 { grid-template-columns: 1fr !important; }
+    .slide .card-grid.cols-2.tight { grid-template-columns: 1fr 1fr !important; }
+    .slide .row .col { flex: 1 !important; }
+    .slide-title-terminal h1 { font-size: clamp(1.8rem, 8vw, 3.5rem) !important; }
+    .terminal-prompt { font-size: 1rem; margin-bottom: 1.5rem; }
+    .slide .card-grid { max-width: 100% !important; }
+    .slide .card.emphasis { max-width: 100% !important; }
+  }
+
+  /* === Glossary jargon: dark terminal style === */
+  .slide .jargon {
+    color: #7ee787 !important;
+    border-bottom-color: #30363d !important;
+    cursor: help;
+  }
+  .slide .jargon:hover {
+    border-bottom-color: #7ee787 !important;
+  }
+  /* Tooltip dark overrides */
+  .glossary-tip {
+    background: #1c2128 !important;
+    border: 1px solid #30363d !important;
+    color: #c9d1d9 !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4) !important;
+  }
+  .glossary-tip a {
+    color: #7ee787 !important;
+  }
 </style>
 
 <!-- ===== 1. TITLE ===== -->
@@ -178,10 +211,10 @@
   <div class="row gap-60 mt-32">
     <div class="col">
       <ul class="clean">
-        <li data-animate data-delay="3"><span class="bullet"></span><span>Traditional dev cycles are <strong class="accent">too slow</strong> — manual coding, manual testing, manual refactoring</span></li>
-        <li data-animate data-delay="4"><span class="bullet"></span><span>Boilerplate and repetitive patterns eat <strong class="accent">40-60%</strong> of engineering time</span></li>
+        <li data-animate data-delay="3"><span class="bullet"></span><span>Traditional dev cycles are <strong class="accent">too slow</strong> — manual coding, manual testing, manual <span class="jargon" data-term="refactoring">refactoring</span></span></li>
+        <li data-animate data-delay="4"><span class="bullet"></span><span><span class="jargon" data-term="boilerplate">Boilerplate</span> and repetitive patterns eat <strong class="accent">40-60%</strong> of engineering time</span></li>
         <li data-animate data-delay="5"><span class="bullet"></span><span>Context switching between projects, frameworks, and codebases <strong class="accent">kills momentum</strong></span></li>
-        <li data-animate data-delay="6"><span class="bullet"></span><span>AI coding agents can do in <strong class="accent">minutes</strong> what used to take <strong class="accent">hours or days</strong></span></li>
+        <li data-animate data-delay="6"><span class="bullet"></span><span><span class="jargon" data-term="agentic coding">AI coding agents</span> can do in <strong class="accent">minutes</strong> what used to take <strong class="accent">hours or days</strong></span></li>
       </ul>
     </div>
     <div class="col">
@@ -204,7 +237,7 @@
   <div class="card-grid cols-3 mt-32">
     <div class="card" data-animate data-delay="3" data-detail>
       <p class="big-number sm accent mb-12">Claude Code</p>
-      <p class="text-md text-gray-600">Terminal-based AI agent. Reads your codebase, edits files, runs commands. <strong>Auto-switches to Sonnet</strong> for mundane tasks like grep and git.</p>
+      <p class="text-md text-gray-600">Terminal-based <span class="jargon" data-term="CLI">CLI</span> agent. Reads your codebase, edits files, runs commands. <strong>Auto-switches to <span class="jargon" data-term="Sonnet">Sonnet</span></strong> for mundane tasks like grep and git.</p>
       <template data-detail-content>
         <h3>Claude Code (CC)</h3>
         <p>Anthropic's official CLI coding agent. Runs in your terminal, has full access to your project files and tools.</p>
@@ -219,14 +252,14 @@
     </div>
     <div class="card" data-animate data-delay="4" data-detail>
       <p class="big-number sm text-navy mb-12">Cursor</p>
-      <p class="text-md text-gray-600">VS Code fork with AI built in. Great for inline edits and tab-complete. <strong>Uses Opus for everything</strong> — burns tokens fast.</p>
+      <p class="text-md text-gray-600"><span class="jargon" data-term="VS Code">VS Code</span> fork with AI built in. Great for inline edits and tab-complete. <strong>Uses <span class="jargon" data-term="Opus">Opus</span> for everything</strong> — burns <span class="jargon" data-term="tokens">tokens</span> fast.</p>
       <template data-detail-content>
         <h3>Cursor</h3>
         <p>AI-powered code editor based on VS Code. Excellent UX for inline suggestions and chat-driven edits.</p>
         <ul>
           <li><strong>Inline editing:</strong> Highlight code, describe change, apply — very intuitive for small edits</li>
           <li><strong>Tab complete:</strong> Context-aware autocomplete that understands your project</li>
-          <li><strong>Cost issue:</strong> When running Opus, Cursor uses it for <em>everything</em> including trivial operations — cost me <strong>$720 in 20 days</strong></li>
+          <li><strong>Cost issue:</strong> When running Opus, Cursor uses it for <em>everything</em> including trivial operations — cost me <strong>$720 in 20 days</strong> (my personal experience)</li>
           <li><strong>Still useful:</strong> Great as a code editor with AI assist, especially for quick inline changes</li>
         </ul>
         <p>Best for: quick inline edits, exploring unfamiliar code, tab-complete during manual coding.</p>
@@ -234,7 +267,7 @@
     </div>
     <div class="card" data-animate data-delay="5" data-detail>
       <p class="big-number sm text-navy mb-12">Codex / GPT 5.2</p>
-      <p class="text-md text-gray-600">OpenAI's offering. Tried GPT 5.2 Thinking in Cursor — <strong>slow and underwhelming</strong> for coding reliability.</p>
+      <p class="text-md text-gray-600"><span class="jargon" data-term="OpenAI">OpenAI</span>'s offering. Tried <span class="jargon" data-term="GPT 5.2">GPT 5.2</span> Thinking in <span class="jargon" data-term="Cursor">Cursor</span> — <strong>slow and underwhelming</strong> for coding reliability.</p>
       <template data-detail-content>
         <h3>Codex / GPT 5.2</h3>
         <p>OpenAI's coding models. Tested GPT 5.2 Thinking mode in Cursor for comparison.</p>
@@ -262,7 +295,7 @@
     <div class="col" data-animate data-delay="3">
       <div class="card" data-detail>
         <p class="big-number sm accent mb-12">Dario Amodei</p>
-        <p class="text-md text-gray-600">CEO of Anthropic. Former <strong>VP of Research at OpenAI</strong> where he led the development of <strong>GPT-2</strong> and <strong>GPT-3</strong>. Co-inventor of RLHF. PhD in Biophysics from Princeton.</p>
+        <p class="text-md text-gray-600">CEO of <span class="jargon" data-term="Anthropic">Anthropic</span>. Former <strong>VP of Research at <span class="jargon" data-term="OpenAI">OpenAI</span></strong> where he led the development of <strong><span class="jargon" data-term="GPT-2">GPT-2</span></strong> and <strong><span class="jargon" data-term="GPT-3">GPT-3</span></strong>. Co-inventor of <span class="jargon" data-term="RLHF">RLHF</span>. PhD in Biophysics from <span class="jargon" data-term="Princeton">Princeton</span>.</p>
         <p class="text-sm text-gray-600 mt-8"><a href="https://www.linkedin.com/in/dario-amodei-3934934/" target="_blank" style="color:var(--accent)">LinkedIn Profile &rarr;</a></p>
         <template data-detail-content>
           <h3>The 7 Co-Founders — All Ex-OpenAI</h3>
@@ -293,7 +326,8 @@
 <div class="slide bg-navy" data-title="The Economics" data-slug="economics">
   <div class="pill" data-animate data-delay="0">The Economics</div>
   <div class="slide-head" data-animate data-delay="1">
-    <h2>Claude Code is dramatically cheaper<br>than Cursor with Opus</h2>
+    <h2><span class="jargon" data-term="Claude Code">Claude Code</span> is dramatically cheaper<br>than <span class="jargon" data-term="Cursor">Cursor</span> with <span class="jargon" data-term="Opus">Opus</span></h2>
+    <p class="subline text-gray-600">Based on my personal usage — your mileage may vary.</p>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-2 mt-32" style="max-width:700px">
@@ -301,17 +335,17 @@
       <p class="label">Cursor + Opus</p>
       <p class="value">$720</p>
       <p class="text-sm text-dim">in just 20 days</p>
-      <p class="text-sm text-dim mt-8">Uses Opus for <em>everything</em> — grep, git, file reads, all billed at Opus rates</p>
+      <p class="text-sm text-dim mt-8">Uses <span class="jargon" data-term="Opus">Opus</span> for <em>everything</em> — grep, git, file reads, all billed at Opus rates</p>
     </div>
     <div class="card metric emphasis" data-animate data-delay="3">
-      <p class="label">Claude Code + Opus</p>
+      <p class="label"><span class="jargon" data-term="Claude Code">Claude Code</span> + Opus</p>
       <p class="value accent">~$200/mo</p>
       <p class="text-sm text-dim">with heavy daily usage</p>
-      <p class="text-sm text-dim mt-8">Auto-switches to <strong>Sonnet</strong> for mundane tasks — Opus only when reasoning matters</p>
+      <p class="text-sm text-dim mt-8">Auto-switches to <strong><span class="jargon" data-term="Sonnet">Sonnet</span></strong> for mundane tasks — Opus only when reasoning matters</p>
     </div>
   </div>
   <div class="card emphasis mt-24" data-animate data-delay="4" style="max-width:700px">
-    <p class="text-md text-center">The secret: CC uses <span class="accent bold">Sonnet for 60-70% of operations</span> (search, git, file reads) and reserves <span class="accent bold">Opus for reasoning</span>. Same quality output, fraction of the cost.</p>
+    <p class="text-md text-center">The secret: CC uses <span class="accent bold"><span class="jargon" data-term="Sonnet">Sonnet</span> for 60-70% of operations</span> (search, git, file reads) and reserves <span class="accent bold"><span class="jargon" data-term="Opus">Opus</span> for reasoning</span>. Same quality output, fraction of the cost.</p>
   </div>
 </div>
 
@@ -320,7 +354,7 @@
   <div class="pill" data-animate data-delay="0">The Proof</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">5 IFCA projects — built 99% with AI agents</h2>
-    <p class="subline text-gray-600">All built with Cursor and Claude Code, both running Opus. Real production code, not toy demos.</p>
+    <p class="subline text-gray-600">All built with <span class="jargon" data-term="Cursor">Cursor</span> and <span class="jargon" data-term="Claude Code">Claude Code</span>, both running <span class="jargon" data-term="Opus">Opus</span>. Real production code, not toy demos.</p>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="card-grid cols-3 mt-32">
@@ -359,7 +393,7 @@
         <p>Major codebase refactoring with comprehensive test coverage added by AI agents.</p>
         <ul>
           <li><strong>Refactoring:</strong> Code structure improvements, pattern standardisation</li>
-          <li><strong>E2E tests:</strong> End-to-end test suite with Playwright</li>
+          <li><strong><span class="jargon" data-term="e2e">E2E</span> tests:</strong> End-to-end test suite with <span class="jargon" data-term="Playwright">Playwright</span></li>
           <li><strong>Unit tests:</strong> Component and function-level test coverage</li>
           <li>AI agents understand the codebase context and generate tests that actually match the implementation</li>
         </ul>
@@ -369,7 +403,7 @@
   <div class="card-grid cols-2 mt-16" style="max-width:520px">
     <div class="card" data-animate data-delay="4" data-detail>
       <h3 class="text-navy">FMX Data Seeding</h3>
-      <p class="text-md text-gray-600">Playwright automation for realistic demo data</p>
+      <p class="text-md text-gray-600"><span class="jargon" data-term="Playwright">Playwright</span> automation for realistic demo data</p>
       <template data-detail-content>
         <h3>FMX Data Seeding</h3>
         <p>Comprehensive Playwright-based browser automation to seed FMX with realistic Malaysian demo data.</p>
@@ -388,10 +422,10 @@
         <h3>Sales Deck System</h3>
         <p>Full interactive presentation system — the same framework powering this slide deck.</p>
         <ul>
-          <li>10-slide format with glossary, detail drawers, ROI calculators</li>
+          <li>10-slide format with glossary, detail drawers, <span class="jargon" data-term="ROI">ROI</span> calculators</li>
           <li>Product decks for IFCAx, RentX, AuditX, FMX, HotelX, ContractX, PropertyX</li>
           <li>Segment variants (hospitality, trading, manufacturing, etc.)</li>
-          <li>Code: 99% AI-generated. Business notes: GPT 5.2 for prose, Opus for code</li>
+          <li>Code: 99% AI-generated. Business notes: <span class="jargon" data-term="GPT 5.2">GPT 5.2</span> for prose, <span class="jargon" data-term="Opus">Opus</span> for code</li>
         </ul>
       </template>
     </div>
@@ -451,7 +485,7 @@
     </div>
     <div class="card" data-animate data-delay="4">
       <p class="big-number sm accent mb-12">Use Opus</p>
-      <p class="text-md text-dim">Model quality matters. Opus one-shots complex tasks that Sonnet or GPT struggle with. Pay for the best model — it saves time.</p>
+      <p class="text-md text-dim">Model quality matters. <span class="jargon" data-term="Opus">Opus</span> <span class="jargon" data-term="one-shot">one-shots</span> complex tasks that <span class="jargon" data-term="Sonnet">Sonnet</span> or GPT struggle with. Pay for the best model — it saves time.</p>
     </div>
   </div>
 </div>
@@ -468,7 +502,7 @@
       <p class="big-number sm accent mb-12">1</p>
       <p class="text-md text-navy"><strong>Install Claude Code</strong></p>
       <p class="text-sm text-gray-600 mt-8"><code>npm install -g @anthropic-ai/claude-code</code></p>
-      <p class="text-sm text-gray-600 mt-8">Needs Node.js 18+ and an Anthropic API key (or Max subscription)</p>
+      <p class="text-sm text-gray-600 mt-8">Needs <span class="jargon" data-term="Node.js">Node.js</span> 18+ and an <span class="jargon" data-term="Anthropic">Anthropic</span> <span class="jargon" data-term="API key">API key</span> (or <span class="jargon" data-term="Claude Max">Max</span> subscription)</p>
     </div>
     <div class="card" data-animate data-delay="4">
       <p class="big-number sm accent mb-12">2</p>
@@ -495,7 +529,7 @@
     <div class="quote mt-40" data-animate data-delay="3">
       "Someday soon, the idea of writing an application in Java or C++ will seem as absurd as writing an application in assembler does today."
     </div>
-    <p class="text-sm" data-animate data-delay="4" style="color:#7ee787;margin-top:0.5rem">&mdash; Grady Booch, inventor of UML, on the third golden age of software engineering</p>
+    <p class="text-sm" data-animate data-delay="4" style="color:#7ee787;margin-top:0.5rem">&mdash; <span class="jargon" data-term="Grady Booch">Grady Booch</span>, inventor of <span class="jargon" data-term="UML">UML</span>, on the third golden age of software engineering</p>
     <p class="text-sm text-dim mt-auto" data-animate data-delay="5">George Yong &middot; IFCA MSC Berhad &middot; February 2026</p>
   </div>
 </div>
@@ -505,13 +539,47 @@
 <script>
   DeckInit({
     glossary: {
-      'Claude Code': 'Anthropic\'s official CLI coding agent — runs in your terminal, reads your codebase, writes and edits files.',
-      'Opus': 'Claude Opus — Anthropic\'s most capable AI model, optimised for complex reasoning and code generation.',
-      'Sonnet': 'Claude Sonnet — Anthropic\'s balanced model, fast and cheaper, used by Claude Code for routine operations.',
-      'Cursor': 'AI-powered code editor based on VS Code with inline AI suggestions and chat-driven editing.',
-      'CLAUDE.md': 'A project-level instructions file that Claude Code reads every session to learn your codebase conventions.',
-      'Playwright': 'Microsoft\'s browser automation framework for end-to-end testing and web scraping.',
-      'e2e': 'End-to-end testing — automated tests that simulate real user interactions through the full application stack.',
+      // AI Companies
+      'Anthropic': { def: 'AI safety company founded in 2021 by 7 ex-OpenAI researchers. Makers of Claude.', url: 'https://www.anthropic.com' },
+      'OpenAI': { def: 'AI research company founded in 2015. Makers of ChatGPT, GPT series, and Codex.', url: 'https://openai.com' },
+
+      // Models
+      'Opus': { def: 'Claude Opus — Anthropic\'s most capable AI model. Best at complex reasoning, code generation, and multi-step tasks.', url: 'https://docs.anthropic.com/en/docs/about-claude/models' },
+      'Sonnet': { def: 'Claude Sonnet — Anthropic\'s balanced model. Fast and cheaper than Opus. Claude Code uses it for routine operations like file search and git.', url: 'https://docs.anthropic.com/en/docs/about-claude/models' },
+      'GPT-2': { def: 'OpenAI\'s 2019 language model (1.5B parameters). Led by Dario Amodei at OpenAI. Caused controversy when OpenAI initially withheld release over misuse concerns.', url: 'https://en.wikipedia.org/wiki/GPT-2' },
+      'GPT-3': { def: 'OpenAI\'s 2020 language model (175B parameters). Also led by Dario Amodei. A landmark in AI — demonstrated that scaling up parameters produces emergent capabilities.', url: 'https://en.wikipedia.org/wiki/GPT-3' },
+      'GPT 5.2': { def: 'OpenAI\'s latest model (2025). Has a "Thinking" mode for step-by-step reasoning. Good at prose but slower and less reliable than Opus for coding tasks.', url: 'https://openai.com' },
+
+      // Tools
+      'Claude Code': { def: 'Anthropic\'s official CLI coding agent. Runs in your terminal, reads your entire codebase, writes/edits files, runs commands. Auto-switches between Opus and Sonnet to save cost.', url: 'https://docs.anthropic.com/en/docs/claude-code' },
+      'Cursor': { def: 'AI-powered code editor based on VS Code. Supports multiple AI models (Claude, GPT). Great for inline edits but uses the selected model for all operations — expensive with Opus.', url: 'https://cursor.com' },
+      'Codex': { def: 'OpenAI\'s coding agent product. Competes with Claude Code. Uses GPT models under the hood.', url: 'https://openai.com/index/codex' },
+      'CLAUDE.md': { def: 'A markdown file you place in your project root. Claude Code reads it every session to learn your conventions, folder structure, tech stack, and rules. Like a README for your AI.', url: 'https://docs.anthropic.com/en/docs/claude-code/memory' },
+      'Playwright': { def: 'Microsoft\'s open-source browser automation framework. Used for end-to-end testing, web scraping, and automated UI interactions. Supports Chromium, Firefox, and WebKit.', url: 'https://playwright.dev' },
+
+      // People
+      'Dario Amodei': { def: 'CEO of Anthropic. Former VP of Research at OpenAI where he led GPT-2 and GPT-3. Co-invented RLHF. PhD in Biophysics from Princeton. Left OpenAI in 2021 with 6 colleagues to found Anthropic.', url: 'https://www.linkedin.com/in/dario-amodei-3934934/' },
+      'Grady Booch': { def: 'Legendary software engineer and IBM Fellow. Invented UML (Unified Modeling Language). Recently spoke about AI ushering in the "third golden age of software engineering" on the Pragmatic Engineer podcast.', url: 'https://en.wikipedia.org/wiki/Grady_Booch' },
+
+      // Concepts
+      'RLHF': { def: 'Reinforcement Learning from Human Feedback — a technique where humans rate AI outputs and the AI learns from those ratings. Co-invented by Dario Amodei. Critical to making LLMs useful and safe.', url: 'https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback' },
+      'tokens': { def: 'The units AI models process. Roughly 1 token = ¾ of a word. A 1,000-line code file ≈ 5,000-10,000 tokens. API pricing is per-token — so more tokens = more cost.', url: 'https://docs.anthropic.com/en/docs/build-with-claude/token-counting' },
+      'one-shot': 'Completing an entire task in a single prompt/attempt — no back-and-forth iteration needed. Opus excels at this for complex coding tasks.',
+      'agentic coding': { def: 'A paradigm where an AI agent autonomously writes, tests, and iterates on code. The developer\'s role shifts from writing code to directing the agent and reviewing output.', url: 'https://docs.anthropic.com/en/docs/claude-code' },
+      'context window': { def: 'The maximum amount of text an AI model can "see" at once. Larger windows = the AI can understand more of your codebase simultaneously. Claude\'s is 200K tokens (~150K words).', url: 'https://docs.anthropic.com/en/docs/about-claude/models' },
+      'boilerplate': 'Repetitive, standardised code that appears in many places with little variation. Examples: API route handlers, form validation, CRUD operations, test setup.',
+      'refactoring': { def: 'Restructuring existing code without changing its external behavior. Improves readability, reduces complexity, and makes code easier to maintain.', url: 'https://en.wikipedia.org/wiki/Code_refactoring' },
+      'e2e': { def: 'End-to-end testing — automated tests that simulate real user interactions through the full application stack (browser → frontend → API → database).', url: 'https://playwright.dev/docs/intro' },
+      'ROI': 'Return on Investment — the ratio of net profit to cost. An ROI of 4x means you get RM 4 back for every RM 1 spent.',
+
+      // Tech
+      'CLI': { def: 'Command Line Interface — a text-based interface where you type commands. Claude Code runs in your terminal as a CLI tool.', url: 'https://en.wikipedia.org/wiki/Command-line_interface' },
+      'VS Code': { def: 'Visual Studio Code — Microsoft\'s popular open-source code editor. Cursor is a fork of VS Code with AI features built in.', url: 'https://code.visualstudio.com' },
+      'Node.js': { def: 'JavaScript runtime built on Chrome\'s V8 engine. Lets you run JavaScript outside the browser. Required for Claude Code.', url: 'https://nodejs.org' },
+      'API key': { def: 'A secret token that authenticates your requests to an API. You need an Anthropic API key to use Claude Code with pay-per-token pricing (alternative: Claude Max subscription).', url: 'https://docs.anthropic.com/en/docs/initial-setup' },
+      'Claude Max': { def: 'Anthropic\'s $100/month subscription plan. Includes Claude Code with Opus access. $200/month tier gives 5x the usage. Alternative to pay-per-token API pricing.', url: 'https://claude.ai' },
+      'UML': { def: 'Unified Modeling Language — a standardised diagramming language for visualising software architecture. Invented by Grady Booch and colleagues in the 1990s.', url: 'https://en.wikipedia.org/wiki/Unified_Modeling_Language' },
+      'Princeton': { def: 'Princeton University — Ivy League research university in New Jersey, USA. Dario Amodei earned his PhD in Computational Neuroscience/Biophysics here.', url: 'https://www.princeton.edu' },
     }
   });
 </script>
