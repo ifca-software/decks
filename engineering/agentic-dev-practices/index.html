@@ -302,13 +302,25 @@
         <li data-animate data-delay="6"><span class="bullet"></span><span><span class="jargon" data-term="agentic coding">AI coding agents</span> can do in <strong class="accent">minutes</strong> what used to take <strong class="accent">hours or days</strong></span></li>
       </ul>
     </div>
-    <div class="col">
-      <div class="card" data-animate data-delay="7">
+    <div class="col" style="flex:1.2">
+      <div class="card" data-animate data-delay="7" style="padding:12px 16px">
         <p class="label">The shift</p>
-        <p class="text-lg text-dim">Your job isn't to type code.<br>It's to <strong class="accent">direct the agent.</strong></p>
-        <div style="margin-top:16px;border-top:1px solid #30363d;padding-top:16px">
-          <p class="text-sm" style="color:#8b949e;font-style:italic">"We're 3 to 6 months from a world where AI is writing 90% of the code. And in 12 months, AI may be writing essentially all of the code."</p>
-          <p class="text-sm" style="color:#7ee787;margin-top:8px;display:flex;align-items:center;gap:8px"><img src="img/dario-amodei.jpg" alt="Dario Amodei" class="quote-avatar" style="width:28px;height:28px"><span>— <span class="jargon" data-term="Dario Amodei">Dario Amodei</span>, CEO of Anthropic <a href="https://x.com/heykahn/status/1900154989043212495" target="_blank" rel="noopener" style="font-size:12px;opacity:0.6">(March 2025)</a></span></p>
+        <p class="text-md text-dim" style="margin-bottom:12px">Your job isn't to type code. It's to <strong class="accent">direct the agent.</strong></p>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div class="tweet-slot">
+            <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Anthropic CEO Dario Amodei has said that AI will write 90% of code in the next 3 to 6 months &mdash; and maybe 100% within a year. <a href="https://t.co/wHJ9NKU67i">https://t.co/wHJ9NKU67i</a></p>&mdash; Zain Kahn (@heykahn) <a href="https://twitter.com/heykahn/status/1900154989043212495?ref_src=twsrc%5Etfw">March 13, 2025</a></blockquote>
+            <div class="tweet-fallback">
+              <p class="text-sm" style="color:#8b949e;font-style:italic">"Anthropic CEO Dario Amodei has said that AI will write 90% of code in the next 3 to 6 months — and maybe 100% within a year."</p>
+              <p class="text-sm" style="color:#7ee787;margin-top:6px;display:flex;align-items:center;gap:8px"><img src="img/dario-amodei.jpg" alt="Dario Amodei" style="width:48px;height:48px;border-radius:50%;border:2px solid #7ee787;object-fit:cover"><span>— @heykahn, citing <span class="jargon" data-term="Dario Amodei">Dario Amodei</span> (March 2025)</span></p>
+            </div>
+          </div>
+          <div class="tweet-slot">
+            <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">I&#39;m not joking and this isn&#39;t funny. We have been trying to build distributed agent orchestrators at Google since last year. There are various options, not everyone is aligned... I gave Claude Code a description of the problem, it generated what we built last year in an hour.</p>&mdash; Jaana Dogan ヤナ ドガン (@rakyll) <a href="https://twitter.com/rakyll/status/2007239758158975130?ref_src=twsrc%5Etfw">January 2, 2026</a></blockquote>
+            <div class="tweet-fallback">
+              <p class="text-sm" style="color:#8b949e;font-style:italic">"We have been trying to build distributed agent orchestrators at Google since last year. I gave Claude Code a description of the problem, it generated what we built last year in an hour."</p>
+              <p class="text-sm" style="color:#7ee787;margin-top:6px">— Jaana Dogan, Principal Engineer at Google (Jan 2026)</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -708,6 +720,7 @@
       'Boris Cherny': { def: 'Creator and Head of Claude Code at Anthropic. Author of O\'Reilly\'s "Programming TypeScript". Formerly at Meta. Known for running 5+ parallel Claude Code sessions and championing CLAUDE.md as team documentation.', url: 'https://x.com/bcherny' },
       'Grady Booch': { def: 'Legendary software engineer and IBM Fellow. Invented UML (Unified Modeling Language). Recently spoke about AI ushering in the "third golden age of software engineering" on the Pragmatic Engineer podcast.', url: 'https://en.wikipedia.org/wiki/Grady_Booch' },
       'Andrej Karpathy': { def: 'AI researcher, former Director of AI at Tesla, founding member of OpenAI. Known for his deep learning courses at Stanford and his widely-quoted insight that English is becoming the new programming language.', url: 'https://en.wikipedia.org/wiki/Andrej_Karpathy' },
+      'Jaana Dogan': { def: 'Principal Engineer at Google on the Gemini API team. Her viral tweet about Claude Code generating in 1 hour what her Google team built over a year went viral with 4M+ views.', url: 'https://x.com/rakyll' },
 
       // Concepts
       'RLHF': { def: 'Reinforcement Learning from Human Feedback — a technique where humans rate AI outputs and the AI learns from those ratings. Co-invented by Dario Amodei. Critical to making LLMs useful and safe.', url: 'https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback' },
