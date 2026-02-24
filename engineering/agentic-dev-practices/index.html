@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic Development Practices — IFCA Engineering</title>
+<meta property="og:title" content="Agentic Development Practices — IFCA Engineering">
+<meta property="og:description" content="How Claude Code and Opus are changing the way we build software at IFCA.">
+<meta property="og:type" content="website">
+<meta name="deck-base" content="../../">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232d4a6f'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='14' fill='%23f97316'>AI</text></svg>">
+<link rel="stylesheet" href="../../shared/css/deck.css">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+
+<!-- ===== 1. TITLE ===== -->
+<div class="slide bg-gradient active" data-title="Agentic Development Practices" data-slug="title">
+  <div class="pill" data-animate data-delay="0">IFCA Engineering</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h1>Agentic Development<br>Practices</h1>
+    <p class="subtitle text-dim">How AI coding agents are changing the way we build software at IFCA</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="4">George Yong &middot; IFCA MSC Berhad &middot; 24 February 2026 &middot; Wisma IFCA Auditorium</p>
+</div>
+
+<!-- ===== 2. THE REALITY ===== -->
+<div class="slide bg-navy" data-title="The Reality" data-slug="reality">
+  <div class="pill" data-animate data-delay="0">The Reality</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>We need to ship more products, faster,<br>with the same team.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-32">
+    <div class="col">
+      <ul class="clean">
+        <li data-animate data-delay="3"><span class="bullet"></span><span>Traditional dev cycles are <strong class="accent">too slow</strong> — manual coding, manual testing, manual refactoring</span></li>
+        <li data-animate data-delay="4"><span class="bullet"></span><span>Boilerplate and repetitive patterns eat <strong class="accent">40-60%</strong> of engineering time</span></li>
+        <li data-animate data-delay="5"><span class="bullet"></span><span>Context switching between projects, frameworks, and codebases <strong class="accent">kills momentum</strong></span></li>
+        <li data-animate data-delay="6"><span class="bullet"></span><span>AI coding agents can do in <strong class="accent">minutes</strong> what used to take <strong class="accent">hours or days</strong></span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="card" data-animate data-delay="7">
+        <p class="label">The shift</p>
+        <p class="text-lg text-dim">Your job isn't to type code.<br>It's to <strong class="accent">direct the agent.</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3. THE TOOLSET ===== -->
+<div class="slide bg-white" data-title="The Toolset" data-slug="toolset">
+  <div class="pill" data-animate data-delay="0">The Toolset</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Claude Code + Opus is the winning combination</h2>
+    <p class="subline text-gray-600">I've tested Cursor, Claude Code, and Codex extensively. Here's what works.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3" data-detail>
+      <p class="big-number sm accent mb-12">Claude Code</p>
+      <p class="text-md text-gray-600">Terminal-based AI agent. Reads your codebase, edits files, runs commands. <strong>Auto-switches to Sonnet</strong> for mundane tasks like grep and git.</p>
+      <template data-detail-content>
+        <h3>Claude Code (CC)</h3>
+        <p>Anthropic's official CLI coding agent. Runs in your terminal, has full access to your project files and tools.</p>
+        <ul>
+          <li><strong>Model switching:</strong> Automatically uses Sonnet for simple tasks (file search, git operations) and Opus for complex reasoning — huge cost savings</li>
+          <li><strong>CLAUDE.md:</strong> Project-level instructions file that teaches the agent your conventions, paths, and rules</li>
+          <li><strong>Tool use:</strong> Can run shell commands, read/write files, search codebases, make API calls</li>
+          <li><strong>Context window:</strong> Manages context intelligently — compresses old messages, keeps relevant code in focus</li>
+        </ul>
+        <p>Best for: complex multi-file changes, refactoring, test generation, project scaffolding, automation scripts.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <p class="big-number sm text-navy mb-12">Cursor</p>
+      <p class="text-md text-gray-600">VS Code fork with AI built in. Great for inline edits and tab-complete. <strong>Uses Opus for everything</strong> — burns tokens fast.</p>
+      <template data-detail-content>
+        <h3>Cursor</h3>
+        <p>AI-powered code editor based on VS Code. Excellent UX for inline suggestions and chat-driven edits.</p>
+        <ul>
+          <li><strong>Inline editing:</strong> Highlight code, describe change, apply — very intuitive for small edits</li>
+          <li><strong>Tab complete:</strong> Context-aware autocomplete that understands your project</li>
+          <li><strong>Cost issue:</strong> When running Opus, Cursor uses it for <em>everything</em> including trivial operations — cost me <strong>$720 in 20 days</strong></li>
+          <li><strong>Still useful:</strong> Great as a code editor with AI assist, especially for quick inline changes</li>
+        </ul>
+        <p>Best for: quick inline edits, exploring unfamiliar code, tab-complete during manual coding.</p>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="5" data-detail>
+      <p class="big-number sm text-navy mb-12">Codex / GPT 5.2</p>
+      <p class="text-md text-gray-600">OpenAI's offering. Tried GPT 5.2 Thinking in Cursor — <strong>slow and underwhelming</strong> for coding reliability.</p>
+      <template data-detail-content>
+        <h3>Codex / GPT 5.2</h3>
+        <p>OpenAI's coding models. Tested GPT 5.2 Thinking mode in Cursor for comparison.</p>
+        <ul>
+          <li><strong>Speed:</strong> Noticeably slower than Opus for code generation</li>
+          <li><strong>Reliability:</strong> More likely to produce code that doesn't compile or has subtle bugs</li>
+          <li><strong>Codex:</strong> Haven't tried the standalone product yet — but GPT 5.2's performance in Cursor wasn't compelling enough to switch</li>
+          <li><strong>Good at:</strong> Business writing — used GPT 5.2 to generate business notes for the Sales Deck project</li>
+        </ul>
+        <p>Verdict: Opus significantly outperforms GPT 5.2 for coding tasks. Use GPT for prose, Opus for code.</p>
+      </template>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 4. WHY ANTHROPIC ===== -->
+<div class="slide bg-gray" data-title="Why Anthropic" data-slug="why-anthropic">
+  <div class="pill" data-animate data-delay="0">Why Anthropic</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Built by the people who created GPT-2 and GPT-3</h2>
+    <p class="subline text-gray-600">All 7 Anthropic co-founders are ex-OpenAI. They left to build something better.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-32">
+    <div class="col" data-animate data-delay="3">
+      <div class="card" data-detail>
+        <p class="big-number sm accent mb-12">Dario Amodei</p>
+        <p class="text-md text-gray-600">CEO of Anthropic. Former <strong>VP of Research at OpenAI</strong> where he led the development of <strong>GPT-2</strong> and <strong>GPT-3</strong>. Co-inventor of RLHF. PhD in Biophysics from Princeton.</p>
+        <p class="text-sm text-gray-600 mt-8"><a href="https://www.linkedin.com/in/dario-amodei-3934934/" target="_blank" style="color:var(--accent)">LinkedIn Profile &rarr;</a></p>
+        <template data-detail-content>
+          <h3>The 7 Co-Founders — All Ex-OpenAI</h3>
+          <ul>
+            <li><strong>Dario Amodei</strong> — CEO (VP of Research at OpenAI, led GPT-2 &amp; GPT-3)</li>
+            <li><strong>Daniela Amodei</strong> — President (VP of Safety &amp; Policy at OpenAI)</li>
+            <li><strong>Tom Brown</strong> — Lead author of the GPT-3 paper</li>
+            <li><strong>Chris Olah</strong> — Interpretability research pioneer at OpenAI</li>
+            <li><strong>Sam McCandlish</strong> — Research at OpenAI</li>
+            <li><strong>Jack Clark</strong> — Policy Director at OpenAI</li>
+            <li><strong>Jared Kaplan</strong> — Research at OpenAI, neural scaling laws</li>
+          </ul>
+          <p>They left OpenAI in 2021 over directional differences and founded Anthropic to build AI that is safe, steerable, and honest.</p>
+        </template>
+      </div>
+    </div>
+    <div class="col" style="flex:1.2" data-animate data-delay="4">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <blockquote class="twitter-tweet" data-theme="light" data-conversation="none"><a href="https://x.com/shanaka86/status/2024470005790781507"></a></blockquote>
+        <blockquote class="twitter-tweet" data-theme="light" data-conversation="none"><a href="https://x.com/DarioAmodei/status/1977010693460443151"></a></blockquote>
+        <blockquote class="twitter-tweet" data-theme="light" data-conversation="none"><a href="https://x.com/GergelyOrosz/status/2025936338931925375"></a></blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 5. THE ECONOMICS ===== -->
+<div class="slide bg-navy" data-title="The Economics" data-slug="economics">
+  <div class="pill" data-animate data-delay="0">The Economics</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Claude Code is dramatically cheaper<br>than Cursor with Opus</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32" style="max-width:700px">
+    <div class="card metric" data-animate data-delay="3">
+      <p class="label">Cursor + Opus</p>
+      <p class="value">$720</p>
+      <p class="text-sm text-dim">in just 20 days</p>
+      <p class="text-sm text-dim mt-8">Uses Opus for <em>everything</em> — grep, git, file reads, all billed at Opus rates</p>
+    </div>
+    <div class="card metric emphasis" data-animate data-delay="3">
+      <p class="label">Claude Code + Opus</p>
+      <p class="value accent">~$200/mo</p>
+      <p class="text-sm text-dim">with heavy daily usage</p>
+      <p class="text-sm text-dim mt-8">Auto-switches to <strong>Sonnet</strong> for mundane tasks — Opus only when reasoning matters</p>
+    </div>
+  </div>
+  <div class="card emphasis mt-24" data-animate data-delay="4" style="max-width:700px">
+    <p class="text-md text-center">The secret: CC uses <span class="accent bold">Sonnet for 60-70% of operations</span> (search, git, file reads) and reserves <span class="accent bold">Opus for reasoning</span>. Same quality output, fraction of the cost.</p>
+  </div>
+</div>
+
+<!-- ===== 6. THE PROOF ===== -->
+<div class="slide bg-white" data-title="The Proof — 5 Projects" data-slug="proof">
+  <div class="pill" data-animate data-delay="0">The Proof</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">5 IFCA projects — built 99% with AI agents</h2>
+    <p class="subline text-gray-600">All built with Cursor and Claude Code, both running Opus. Real production code, not toy demos.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">AuditX</h3>
+      <p class="text-md text-gray-600">Full product built from scratch with AI agents</p>
+      <template data-detail-content>
+        <h3>AuditX</h3>
+        <p>Complete audit management application scaffolded and implemented primarily through AI coding agents.</p>
+        <ul>
+          <li>Project setup, architecture decisions, and code generation</li>
+          <li>Component library, API integrations, business logic</li>
+          <li>Built in a fraction of the time a manual approach would have taken</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">AI Agent Project</h3>
+      <p class="text-md text-gray-600">PropertyX AI agents — agents-ui, agents-node, product tooling</p>
+      <template data-detail-content>
+        <h3>PropertyX AI Agent Project</h3>
+        <p>Multi-repo AI agent system for PropertyX with shared infrastructure and product-specific tooling.</p>
+        <ul>
+          <li><strong>agents-ui:</strong> Frontend chat interface for AI interactions</li>
+          <li><strong>agents-node:</strong> Backend agent orchestration and API layer</li>
+          <li><strong>Product tooling:</strong> Separated product-specific code into dedicated repos</li>
+          <li>Architecture and implementation driven by AI coding agents</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="3" data-detail>
+      <h3 class="text-navy">IFCAx Refactoring</h3>
+      <p class="text-md text-gray-600">Codebase refactoring + e2e tests + unit tests</p>
+      <template data-detail-content>
+        <h3>IFCAx Refactoring + Testing</h3>
+        <p>Major codebase refactoring with comprehensive test coverage added by AI agents.</p>
+        <ul>
+          <li><strong>Refactoring:</strong> Code structure improvements, pattern standardisation</li>
+          <li><strong>E2E tests:</strong> End-to-end test suite with Playwright</li>
+          <li><strong>Unit tests:</strong> Component and function-level test coverage</li>
+          <li>AI agents understand the codebase context and generate tests that actually match the implementation</li>
+        </ul>
+      </template>
+    </div>
+  </div>
+  <div class="card-grid cols-2 mt-16" style="max-width:520px">
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">FMX Data Seeding</h3>
+      <p class="text-md text-gray-600">Playwright automation for realistic demo data</p>
+      <template data-detail-content>
+        <h3>FMX Data Seeding</h3>
+        <p>Comprehensive Playwright-based browser automation to seed FMX with realistic Malaysian demo data.</p>
+        <ul>
+          <li>Work orders, maintenance contracts, facility profiles</li>
+          <li>Idempotent seeders — check before create, screenshot on failure</li>
+          <li>Realistic data: actual Malaysian company names, addresses, phone numbers</li>
+          <li>49 TD Berhad properties configured with Number Structure (FP + WO + FC)</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-animate data-delay="4" data-detail>
+      <h3 class="text-navy">Sales Decks</h3>
+      <p class="text-md text-gray-600">Interactive HTML presentations with ROI calculators</p>
+      <template data-detail-content>
+        <h3>Sales Deck System</h3>
+        <p>Full interactive presentation system — the same framework powering this slide deck.</p>
+        <ul>
+          <li>10-slide format with glossary, detail drawers, ROI calculators</li>
+          <li>Product decks for IFCAx, RentX, AuditX, FMX, HotelX, ContractX, PropertyX</li>
+          <li>Segment variants (hospitality, trading, manufacturing, etc.)</li>
+          <li>Code: 99% AI-generated. Business notes: GPT 5.2 for prose, Opus for code</li>
+        </ul>
+      </template>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7. LIVE DEMO ===== -->
+<div class="slide bg-gray" data-title="Live Demo" data-slug="demo">
+  <div class="pill" data-animate data-delay="0">Live Demo</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Seeing is believing</h2>
+    <p class="subline text-gray-600">Quick showcase of each project — what the AI built and how it works.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32" style="max-width:700px">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm text-navy mb-12">1</p>
+      <p class="text-md text-gray-600"><strong>AuditX</strong> — the product itself</p>
+    </div>
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm text-navy mb-12">2</p>
+      <p class="text-md text-gray-600"><strong>AI Agent</strong> — PropertyX chat agents in action</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm text-navy mb-12">3</p>
+      <p class="text-md text-gray-600"><strong>IFCAx</strong> — refactored code + test suites</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm text-navy mb-12">4</p>
+      <p class="text-md text-gray-600"><strong>FMX Seeders</strong> — Playwright automation running live</p>
+    </div>
+  </div>
+  <div class="card emphasis bg-navy mt-24" data-animate data-delay="5" style="max-width:700px">
+    <p class="text-md text-cream text-center">Plus: a <span class="accent bold">live Claude Code session</span> — watch an AI agent write real code in real time</p>
+  </div>
+</div>
+
+<!-- ===== 8. BEST PRACTICES ===== -->
+<div class="slide bg-navy" data-title="Best Practices" data-slug="best-practices">
+  <div class="pill" data-animate data-delay="0">Best Practices</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>How to get the most out of AI agents</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32" style="max-width:700px">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent mb-12">CLAUDE.md</p>
+      <p class="text-md text-dim">Write a project instructions file. Teach the agent your conventions, folder structure, and rules. It reads this every session.</p>
+    </div>
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent mb-12">Be specific</p>
+      <p class="text-md text-dim">Clear, detailed prompts beat vague instructions. Include file paths, function names, expected behavior. The agent is literal.</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent mb-12">Review, don't rewrite</p>
+      <p class="text-md text-dim">Let the agent generate, then review and iterate. Your role shifts from writer to <strong>editor and architect</strong>.</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent mb-12">Use Opus</p>
+      <p class="text-md text-dim">Model quality matters. Opus one-shots complex tasks that Sonnet or GPT struggle with. Pay for the best model — it saves time.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. GETTING STARTED ===== -->
+<div class="slide bg-white" data-title="Getting Started" data-slug="getting-started">
+  <div class="pill" data-animate data-delay="0">Getting Started</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Start today — it takes 5 minutes</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent mb-12">1</p>
+      <p class="text-md text-navy"><strong>Install Claude Code</strong></p>
+      <p class="text-sm text-gray-600 mt-8"><code>npm install -g @anthropic-ai/claude-code</code></p>
+      <p class="text-sm text-gray-600 mt-8">Needs Node.js 18+ and an Anthropic API key (or Max subscription)</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent mb-12">2</p>
+      <p class="text-md text-navy"><strong>Write your CLAUDE.md</strong></p>
+      <p class="text-sm text-gray-600 mt-8">Add project context: folder structure, conventions, common commands, tech stack</p>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="big-number sm accent mb-12">3</p>
+      <p class="text-md text-navy"><strong>Start coding</strong></p>
+      <p class="text-sm text-gray-600 mt-8">Run <code>claude</code> in your project root and describe what you want to build. Watch it work.</p>
+    </div>
+  </div>
+  <div class="card emphasis bg-navy mt-24" data-animate data-delay="6">
+    <p class="text-md text-cream text-center">Pricing: <span class="accent bold">$20/month</span> for Claude Pro (Sonnet) &middot; <span class="accent bold">$100/month</span> for Claude Max (Opus) &middot; <span class="accent bold">$200/month</span> for Max with 5x usage</p>
+  </div>
+</div>
+
+<!-- ===== 10. NEXT STEP ===== -->
+<div class="slide bg-gradient" data-title="Next Step" data-slug="next-step">
+  <div class="max-w">
+    <div class="pill" data-animate data-delay="0">Next Step</div>
+    <h2 data-animate data-delay="1">Try it on your next task.<br>Start small. Be amazed.</h2>
+    <div class="divider" data-animate data-delay="2"></div>
+    <div class="quote mt-40" data-animate data-delay="3">
+      "The best developers won't be replaced by AI.<br>They'll be the ones who learn to direct it."
+    </div>
+    <p class="text-sm text-dim mt-auto" data-animate data-delay="4">George Yong &middot; IFCA MSC Berhad &middot; February 2026</p>
+  </div>
+</div>
+
+<script async src="https://platform.twitter.com/widgets.js"></script>
+<script src="../../shared/js/deck-init.js"></script>
+<script>
+  DeckInit({
+    glossary: {
+      'Claude Code': 'Anthropic\'s official CLI coding agent — runs in your terminal, reads your codebase, writes and edits files.',
+      'Opus': 'Claude Opus — Anthropic\'s most capable AI model, optimised for complex reasoning and code generation.',
+      'Sonnet': 'Claude Sonnet — Anthropic\'s balanced model, fast and cheaper, used by Claude Code for routine operations.',
+      'Cursor': 'AI-powered code editor based on VS Code with inline AI suggestions and chat-driven editing.',
+      'CLAUDE.md': 'A project-level instructions file that Claude Code reads every session to learn your codebase conventions.',
+      'Playwright': 'Microsoft\'s browser automation framework for end-to-end testing and web scraping.',
+      'e2e': 'End-to-end testing — automated tests that simulate real user interactions through the full application stack.',
+    }
+  });
+</script>
+</body>
+</html>
