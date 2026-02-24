@@ -9,21 +9,163 @@
 <meta property="og:type" content="website">
 <meta name="deck-base" content="../../">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232d4a6f'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='800' font-size='14' fill='%23f97316'>AI</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230d1117'/><text x='16' y='21' text-anchor='middle' font-family='monospace' font-weight='800' font-size='12' fill='%237ee787'>&gt;_</text></svg>">
 <link rel="stylesheet" href="../../shared/css/deck.css">
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
 
+<!-- ===== TERMINAL THEME ===== -->
+<style>
+  /* === Base: override all slide backgrounds to dark === */
+  .slide { background: #0d1117 !important; }
+  .slide.bg-navy { background: #010409 !important; }
+  .slide.bg-white { background: #0d1117 !important; }
+  .slide.bg-gray { background: #161b22 !important; }
+  .slide.bg-gradient { background: linear-gradient(160deg, #0d1117 0%, #161b22 50%, #1c2128 100%) !important; }
+
+  /* === Typography === */
+  .slide h1, .slide h2 { color: #e6edf3 !important; }
+  .slide h3 { color: #e6edf3 !important; }
+  .slide .text-navy { color: #e6edf3 !important; }
+  .slide .text-dim { color: #8b949e !important; }
+  .slide .text-gray-600, .slide .subline { color: #8b949e !important; }
+  .slide .text-gray-500 { color: #484f58 !important; }
+  .slide .text-cream { color: #e6edf3 !important; }
+  .slide p, .slide li, .slide span { color: inherit; }
+  .slide ul.clean li > span { color: #c9d1d9; }
+
+  /* === Accent: terminal green === */
+  .slide .accent, .slide strong.accent { color: #7ee787 !important; }
+  .slide .bold { font-weight: 700; }
+
+  /* === Pill === */
+  .slide .pill {
+    border-color: #30363d !important;
+    color: #8b949e !important;
+    background: transparent !important;
+  }
+
+  /* === Divider === */
+  .slide .divider { background: #30363d !important; }
+
+  /* === Bullet === */
+  .slide .bullet { background: #7ee787 !important; }
+
+  /* === Cards === */
+  .slide .card {
+    background: #161b22 !important;
+    border: 1px solid #30363d !important;
+    color: #c9d1d9 !important;
+  }
+  .slide .card h3 { color: #e6edf3 !important; }
+  .slide .card .label { color: #8b949e !important; }
+  .slide .card .value { color: #e6edf3 !important; }
+  .slide .card .value.accent { color: #7ee787 !important; }
+  .slide .card .text-md { color: #8b949e !important; }
+  .slide .card .text-sm { color: #484f58 !important; }
+  .slide .card .text-sm.text-dim { color: #8b949e !important; }
+  .slide .card strong { color: #e6edf3; }
+  .slide .card em { color: #8b949e; }
+
+  /* === Card emphasis === */
+  .slide .card.emphasis {
+    background: #1c2128 !important;
+    border-color: #7ee787 !important;
+  }
+  .slide .card.emphasis.bg-navy {
+    background: #010409 !important;
+    border-color: #7ee787 !important;
+  }
+
+  /* === Big numbers === */
+  .slide .big-number { color: #e6edf3 !important; }
+  .slide .big-number.accent, .slide .big-number.sm.accent { color: #7ee787 !important; }
+  .slide .big-number.sm { color: #e6edf3 !important; }
+
+  /* === Code elements === */
+  .slide code {
+    font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Cascadia Code', monospace;
+    background: #1c2128;
+    color: #7ee787;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid #30363d;
+    font-size: 0.85em;
+  }
+
+  /* === Links === */
+  .slide a { color: #7ee787 !important; }
+  .slide a:hover { color: #56d364 !important; }
+
+  /* === Quote === */
+  .slide .quote {
+    color: #8b949e !important;
+    border-left-color: #7ee787 !important;
+  }
+
+  /* === Detail drawers (if visible) === */
+  .slide [data-detail]:hover { border-color: #7ee787 !important; }
+
+  /* === Twitter embeds: force dark theme === */
+  .twitter-tweet { color-scheme: dark; }
+
+  /* === Title slide specifics === */
+  .slide-title-terminal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .terminal-prompt {
+    font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Cascadia Code', monospace;
+    font-size: 1.25rem;
+    color: #7ee787;
+    letter-spacing: 0.05em;
+    margin-bottom: 2.5rem;
+  }
+  .terminal-prompt .cursor {
+    display: inline-block;
+    width: 0.6em;
+    height: 1.2em;
+    background: #7ee787;
+    vertical-align: text-bottom;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+  .slide-title-terminal h1 {
+    color: #fff !important;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 1rem;
+  }
+  .slide-title-terminal .subtitle {
+    color: #8b949e;
+    font-size: 1.15rem;
+    font-weight: 400;
+    max-width: 32em;
+  }
+  .slide .meta {
+    color: #484f58;
+    font-size: 0.85rem;
+  }
+
+  /* === Next step slide centered === */
+  .slide .max-w { color: #e6edf3; }
+  .slide .max-w h2 { color: #e6edf3 !important; }
+</style>
+
 <!-- ===== 1. TITLE ===== -->
-<div class="slide bg-gradient active" data-title="Agentic Development Practices" data-slug="title">
-  <div class="pill" data-animate data-delay="0">IFCA Engineering</div>
-  <div class="slide-head" data-animate data-delay="1">
-    <h1>Agentic Development<br>Practices</h1>
-    <p class="subtitle text-dim">How AI coding agents are changing the way we build software at IFCA</p>
-  </div>
-  <div class="divider" data-animate data-delay="2"></div>
-  <p class="text-sm text-dim mt-auto" data-animate data-delay="4">George Yong &middot; IFCA MSC Berhad &middot; 24 February 2026 &middot; Wisma IFCA Auditorium</p>
+<div class="slide slide-title-terminal active" data-title="Agentic Development Practices" data-slug="title">
+  <div class="pill" data-animate data-delay="0" style="border-color:#30363d;color:#8b949e">Internal Engineering Talk</div>
+  <div class="terminal-prompt" data-animate data-delay="1">$ claude<span class="cursor"></span></div>
+  <h1 data-animate data-delay="2">Agentic Development<br>Practices</h1>
+  <p class="subtitle" data-animate data-delay="3">How AI coding agents are changing the way we build software at IFCA</p>
+  <div class="divider" data-animate data-delay="4" style="margin:2rem auto"></div>
+  <p class="meta" data-animate data-delay="5">George Yong &middot; IFCA MSC Berhad &middot; 24 February 2026 &middot; 2:00pm &middot; Wisma IFCA Auditorium</p>
 </div>
 
 <!-- ===== 2. THE REALITY ===== -->
@@ -139,9 +281,9 @@
     </div>
     <div class="col" style="flex:1.2" data-animate data-delay="4">
       <div style="display:flex;flex-direction:column;gap:16px">
-        <blockquote class="twitter-tweet" data-theme="light" data-conversation="none"><a href="https://x.com/shanaka86/status/2024470005790781507"></a></blockquote>
-        <blockquote class="twitter-tweet" data-theme="light" data-conversation="none"><a href="https://x.com/DarioAmodei/status/1977010693460443151"></a></blockquote>
-        <blockquote class="twitter-tweet" data-theme="light" data-conversation="none"><a href="https://x.com/GergelyOrosz/status/2025936338931925375"></a></blockquote>
+        <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/shanaka86/status/2024470005790781507"></a></blockquote>
+        <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/DarioAmodei/status/1977010693460443151"></a></blockquote>
+        <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/GergelyOrosz/status/2025936338931925375"></a></blockquote>
       </div>
     </div>
   </div>
@@ -351,9 +493,10 @@
     <h2 data-animate data-delay="1">Try it on your next task.<br>Start small. Be amazed.</h2>
     <div class="divider" data-animate data-delay="2"></div>
     <div class="quote mt-40" data-animate data-delay="3">
-      "The best developers won't be replaced by AI.<br>They'll be the ones who learn to direct it."
+      "Someday soon, the idea of writing an application in Java or C++ will seem as absurd as writing an application in assembler does today."
     </div>
-    <p class="text-sm text-dim mt-auto" data-animate data-delay="4">George Yong &middot; IFCA MSC Berhad &middot; February 2026</p>
+    <p class="text-sm" data-animate data-delay="4" style="color:#7ee787;margin-top:0.5rem">&mdash; Grady Booch, inventor of UML, on the third golden age of software engineering</p>
+    <p class="text-sm text-dim mt-auto" data-animate data-delay="5">George Yong &middot; IFCA MSC Berhad &middot; February 2026</p>
   </div>
 </div>
 
