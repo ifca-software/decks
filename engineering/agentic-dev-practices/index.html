@@ -238,7 +238,19 @@
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 8px;
+    padding: 4px 0 8px;
+  }
+  .proof-scroll .card .proof-row {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+  }
+  .proof-scroll .card .proof-time {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #7ee787;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .proof-scroll .card {
     min-width: 260px;
@@ -443,17 +455,20 @@
 </div>
 
 <!-- ===== 6. THE PROOF ===== -->
-<div class="slide bg-white" data-title="The Proof — 5 Projects" data-slug="proof">
+<div class="slide bg-white" data-title="The Proof — 6 Projects" data-slug="proof">
   <div class="pill" data-animate data-delay="0">The Proof</div>
   <div class="slide-head" data-animate data-delay="1">
-    <h2 class="text-navy">5 IFCA projects — built 99% with AI agents</h2>
+    <h2 class="text-navy">6 IFCA projects — built 99% with AI agents</h2>
     <p class="subline text-gray-600">All built with <span class="jargon" data-term="Cursor">Cursor</span> and <span class="jargon" data-term="Claude Code">Claude Code</span>, both running <span class="jargon" data-term="Opus">Opus</span>. Real production code, not toy demos.</p>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="proof-scroll mt-32" data-animate data-delay="3">
     <div class="card" data-detail>
       <h3 class="accent"><span class="jargon" data-term="AuditX">AuditX</span></h3>
-      <p class="text-md text-gray-600">Feature MVP shipped in <strong class="accent">1/2 a day</strong> with Cursor + Opus.</p>
+      <div class="proof-row">
+        <span class="proof-time">1/2 day</span>
+        <p class="text-md text-gray-600">Feature MVP shipped with Cursor + Opus.</p>
+      </div>
       <template data-detail-content>
         <h3>AuditX</h3>
         <p>Plug-and-play audit management module for X-Series products.</p>
@@ -466,9 +481,12 @@
     </div>
     <div class="card" data-detail>
       <h3 class="accent"><span class="jargon" data-term="AI Agent Project">AI Agent</span></h3>
-      <p class="text-md text-gray-600">MVP'd in <strong class="accent">1/2 a day</strong>. Agentic ops on <span class="jargon" data-term="PropertyX">PropertyX</span> via user credentials + <span class="jargon" data-term="GraphQL">GraphQL</span>.</p>
+      <div class="proof-row">
+        <span class="proof-time">1/2 day</span>
+        <p class="text-md text-gray-600">MVP'd. Agentic ops on <span class="jargon" data-term="IFCAX">IFCAX</span> via user credentials + <span class="jargon" data-term="GraphQL">GraphQL</span>.</p>
+      </div>
       <template data-detail-content>
-        <h3>PropertyX AI Agent Project</h3>
+        <h3>IFCAX AI Agent Project</h3>
         <p>Multi-repo AI agent system: agents-ui, agents-node, product tooling.</p>
         <ul>
           <li>Agents act on behalf of the logged-in user — same permissions, same data</li>
@@ -479,20 +497,40 @@
     </div>
     <div class="card" data-detail>
       <h3 class="accent"><span class="jargon" data-term="IFCAX">IFCAX</span> Refactoring</h3>
-      <p class="text-md text-gray-600">Dist refactor in <strong class="accent">1 day</strong>. &gt;90% tests in <strong class="accent">1/2 a day</strong>. <span class="jargon" data-term="e2e">E2E</span> in <strong class="accent">1/2 a day</strong>. Subgraph <code>_args</code>.</p>
+      <div class="proof-row">
+        <span class="proof-time">1 day</span>
+        <p class="text-md text-gray-600">Dist refactor. 90% test cov in 1/2 day. <span class="jargon" data-term="e2e">E2E</span> in 1/2 day.</p>
+      </div>
       <template data-detail-content>
         <h3>IFCAX Refactoring + Testing</h3>
         <ul>
           <li><strong>Dist refactor:</strong> Migrated to proper dist builds in 1 day. Dual ESM+CJS due to TypeORM CLI constraint — agents pivoted quickly</li>
-          <li><strong>&gt;90% test coverage:</strong> Unit tests generated with full codebase context in 1/2 a day</li>
+          <li><strong>90% test coverage:</strong> Unit tests generated with full codebase context in 1/2 a day</li>
           <li><strong>E2E tests:</strong> End-to-end suite with Playwright in 1/2 a day</li>
+        </ul>
+      </template>
+    </div>
+    <div class="card" data-detail>
+      <h3 class="accent"><span class="jargon" data-term="IFCAX">IFCAX</span> Subgraph <code>_args</code></h3>
+      <div class="proof-row">
+        <span class="proof-time">1/2 day</span>
+        <p class="text-md text-gray-600">Recursive arguments for <span class="jargon" data-term="GraphQL">GraphQL</span> API — enables nested query filtering.</p>
+      </div>
+      <template data-detail-content>
+        <h3>IFCAX Subgraph _args</h3>
+        <ul>
           <li><strong>Subgraph _args:</strong> Recursive arguments feature for GraphQL API — enables nested query filtering</li>
+          <li>Complex type generation and resolver logic handled entirely by AI agents</li>
+          <li>90% test coverage achieved in 1/2 a day</li>
         </ul>
       </template>
     </div>
     <div class="card" data-detail>
       <h3 class="accent"><span class="jargon" data-term="FMX">FMX</span> Data Seeding</h3>
-      <p class="text-md text-gray-600">Agent explores the app, writes its own <span class="jargon" data-term="Playwright">Playwright</span> code, seeds <strong class="accent">49 properties</strong> autonomously.</p>
+      <div class="proof-row">
+        <span class="proof-time">49 props</span>
+        <p class="text-md text-gray-600">Agent explores the app, writes its own <span class="jargon" data-term="Playwright">Playwright</span> code autonomously.</p>
+      </div>
       <template data-detail-content>
         <h3>FMX Data Seeding</h3>
         <p>Browser automation that seeds realistic Malaysian demo data. The agent discovers UI patterns and writes its own selectors.</p>
@@ -505,7 +543,10 @@
     </div>
     <div class="card" data-detail>
       <h3 class="accent">Sales Decks</h3>
-      <p class="text-md text-gray-600">This very deck — built with <span class="jargon" data-term="Claude Code">Claude Code</span>. Business notes by <span class="jargon" data-term="GPT 5.2">GPT 5.2</span>. <strong class="accent">7 products</strong>.</p>
+      <div class="proof-row">
+        <span class="proof-time">7 products</span>
+        <p class="text-md text-gray-600">This very deck — built with <span class="jargon" data-term="Claude Code">Claude Code</span>. Business notes by <span class="jargon" data-term="GPT 5.2">GPT 5.2</span>.</p>
+      </div>
       <template data-detail-content>
         <h3>Sales Deck System</h3>
         <p>Interactive HTML presentations with glossary tooltips, detail drawers, ROI calculators.</p>
@@ -697,7 +738,7 @@
       'IFCAX': 'IFCA\'s core backend framework — a Node.js/TypeScript platform powering the X-Series product suite (PropertyX, FMX, RentX, etc.).',
       'FMX': 'Facility Management X — IFCA\'s facility management product. Covers work orders, maintenance contracts, facility profiles, and asset management.',
       'PropertyX': 'IFCA\'s property management ERP product. Manages property sales, leasing, billing, and CRM for real estate developers.',
-      'AI Agent Project': 'Multi-repo AI agent system for PropertyX: agents-ui (frontend chat), agents-node (backend orchestration), and product tooling repos. Agents use the user\'s credentials to interact with existing GraphQL APIs.',
+      'AI Agent Project': 'Multi-repo AI agent system for IFCAX: agents-ui (frontend chat), agents-node (backend orchestration), and product tooling repos. Agents use the user\'s credentials to interact with existing GraphQL APIs.',
 
       // Tech
       'GraphQL': { def: 'A query language for APIs developed by Facebook. Lets clients request exactly the data they need in a single call — unlike REST where each endpoint returns a fixed shape.', url: 'https://graphql.org' },
