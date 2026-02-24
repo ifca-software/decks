@@ -175,8 +175,8 @@
   .slide .max-w { color: #e6edf3; }
   .slide .max-w h2 { color: #e6edf3 !important; }
 
-  /* === Responsive: terminal theme === */
-  @media (max-width: 768px) {
+  /* === Responsive: terminal theme (mobile only) === */
+  @media (max-width: 520px) {
     .slide .row { flex-direction: column !important; }
     .slide .card-grid.cols-3 { grid-template-columns: 1fr !important; }
     .slide .card-grid.cols-2 { grid-template-columns: 1fr !important; }
@@ -186,6 +186,28 @@
     .terminal-prompt { font-size: 1rem; margin-bottom: 1.5rem; }
     .slide .card-grid { max-width: 100% !important; }
     .slide .card.emphasis { max-width: 100% !important; }
+  }
+
+  /* === Tweet embed fallbacks === */
+  .tweet-slot { position: relative; min-height: 60px; }
+  .tweet-fallback { display: none; }
+
+  /* === Grady Booch large avatar === */
+  .quote-avatar-lg {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #7ee787;
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .quote-avatar-lg:hover {
+    transform: scale(2.5);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    z-index: 10;
+    position: relative;
   }
 
   /* === Glossary jargon: dark terminal style === */
@@ -230,14 +252,15 @@
   .proof-scroll::-webkit-scrollbar-thumb:hover { background: #7ee787; }
 
   /* === Bottom bar: slide counter + copy-btn === */
-  .slide-counter { color: #8b949e !important; }
+  .slide-counter { color: #8b949e !important; left: auto !important; right: 40px !important; }
   .copy-btn {
-    right: auto !important;
-    left: 80px !important;
-    bottom: 24px !important;
+    left: auto !important;
+    right: 80px !important;
+    bottom: 21px !important;
+    padding: 2px 6px;
   }
   @media (max-width: 768px) {
-    .copy-btn { left: 60px !important; bottom: 16px !important; }
+    .copy-btn { right: 60px !important; bottom: 16px !important; }
   }
 </style>
 
@@ -271,6 +294,10 @@
       <div class="card" data-animate data-delay="7">
         <p class="label">The shift</p>
         <p class="text-lg text-dim">Your job isn't to type code.<br>It's to <strong class="accent">direct the agent.</strong></p>
+        <div style="margin-top:16px;border-top:1px solid #30363d;padding-top:16px">
+          <p class="text-sm" style="color:#8b949e;font-style:italic">"We're 3 to 6 months from a world where AI is writing 90% of the code. And in 12 months, AI may be writing essentially all of the code."</p>
+          <p class="text-sm" style="color:#7ee787;margin-top:8px;display:flex;align-items:center;gap:8px"><img src="img/dario-amodei.jpg" alt="Dario Amodei" class="quote-avatar" style="width:28px;height:28px"><span>— <span class="jargon" data-term="Dario Amodei">Dario Amodei</span>, CEO of Anthropic <a href="https://x.com/heykahn/status/1900154989043212495" target="_blank" rel="noopener" style="font-size:12px;opacity:0.6">(March 2025)</a></span></p>
+        </div>
       </div>
     </div>
   </div>
@@ -359,9 +386,30 @@
     </div>
     <div class="col" style="flex:1.2" data-animate data-delay="4">
       <div style="display:flex;flex-direction:column;gap:16px">
-        <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/shanaka86/status/2024470005790781507"></a></blockquote>
-        <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/DarioAmodei/status/1977010693460443151"></a></blockquote>
-        <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/GergelyOrosz/status/2025936338931925375"></a></blockquote>
+        <div class="tweet-slot">
+          <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/shanaka86/status/2024470005790781507"></a></blockquote>
+          <div class="tweet-fallback">
+            <div class="card" style="padding:16px">
+              <p class="text-sm" style="color:#8b949e"><strong style="color:#e6edf3">@shanaka86</strong> — "Anthropic commands 40% of enterprise AI spending, 54% of enterprise coding. Engineers are 8x more likely to leave OpenAI for Anthropic than the reverse."</p>
+            </div>
+          </div>
+        </div>
+        <div class="tweet-slot">
+          <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/DarioAmodei/status/1977010693460443151"></a></blockquote>
+          <div class="tweet-fallback">
+            <div class="card" style="padding:16px">
+              <p class="text-sm" style="color:#8b949e"><strong style="color:#e6edf3">@DarioAmodei</strong> — "Met with PM @narendramodi to discuss Anthropic's expansion to India — where Claude Code use is up 5x since June."</p>
+            </div>
+          </div>
+        </div>
+        <div class="tweet-slot">
+          <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/GergelyOrosz/status/2025936338931925375"></a></blockquote>
+          <div class="tweet-fallback">
+            <div class="card" style="padding:16px">
+              <p class="text-sm" style="color:#8b949e"><strong style="color:#e6edf3">@GergelyOrosz</strong> — "All 7 cofounders of Anthropic were OpenAI employees who disagreed with the direction. 5 years later they are leaders in enterprise AI usage + coding."</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -375,7 +423,7 @@
     <p class="subline text-gray-600">Based on my personal usage — your mileage may vary.</p>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
-  <div class="card-grid cols-2 mt-32" style="max-width:700px">
+  <div class="card-grid cols-2 mt-24" style="max-width:700px">
     <div class="card metric" data-animate data-delay="3">
       <p class="label">Cursor + Opus</p>
       <p class="value">$720</p>
@@ -405,7 +453,7 @@
   <div class="proof-scroll mt-32" data-animate data-delay="3">
     <div class="card" data-detail>
       <h3 class="accent"><span class="jargon" data-term="AuditX">AuditX</span></h3>
-      <p class="text-md text-gray-600">Built from scratch in <strong class="accent">half a day</strong> with Cursor + Opus.</p>
+      <p class="text-md text-gray-600">Feature MVP shipped in <strong class="accent">1/2 a day</strong> with Cursor + Opus.</p>
       <template data-detail-content>
         <h3>AuditX</h3>
         <p>Plug-and-play audit management module for X-Series products.</p>
@@ -418,7 +466,7 @@
     </div>
     <div class="card" data-detail>
       <h3 class="accent"><span class="jargon" data-term="AI Agent Project">AI Agent</span></h3>
-      <p class="text-md text-gray-600">Agentic ops on <span class="jargon" data-term="PropertyX">PropertyX</span> via user credentials + <span class="jargon" data-term="GraphQL">GraphQL</span>.</p>
+      <p class="text-md text-gray-600">MVP'd in <strong class="accent">1/2 a day</strong>. Agentic ops on <span class="jargon" data-term="PropertyX">PropertyX</span> via user credentials + <span class="jargon" data-term="GraphQL">GraphQL</span>.</p>
       <template data-detail-content>
         <h3>PropertyX AI Agent Project</h3>
         <p>Multi-repo AI agent system: agents-ui, agents-node, product tooling.</p>
@@ -430,16 +478,15 @@
       </template>
     </div>
     <div class="card" data-detail>
-      <h3 class="accent"><span class="jargon" data-term="IFCAx">IFCAx</span> Refactoring</h3>
-      <p class="text-md text-gray-600">Dist build in <strong class="accent">1 day</strong>. &gt;90% tests in <strong class="accent">½ day</strong>. <span class="jargon" data-term="e2e">E2E</span> in <strong class="accent">½ day</strong>. All previously failed over months.</p>
+      <h3 class="accent"><span class="jargon" data-term="IFCAX">IFCAX</span> Refactoring</h3>
+      <p class="text-md text-gray-600">Dist refactor in <strong class="accent">1 day</strong>. &gt;90% tests in <strong class="accent">1/2 a day</strong>. <span class="jargon" data-term="e2e">E2E</span> in <strong class="accent">1/2 a day</strong>. Subgraph <code>_args</code>.</p>
       <template data-detail-content>
-        <h3>IFCAx Refactoring + Testing</h3>
-        <p>Tasks the team attempted for months — completed in days with agents.</p>
+        <h3>IFCAX Refactoring + Testing</h3>
         <ul>
-          <li><strong>Dist build refactor:</strong> Migrated to proper dist builds. Dual ESM+CJS due to TypeORM CLI constraint — agents pivoted quickly</li>
-          <li><strong>&gt;90% test coverage:</strong> Unit tests generated with full codebase context</li>
-          <li><strong>E2E tests:</strong> End-to-end suite with Playwright</li>
-          <li><strong>Nth-level _args:</strong> Recursive arguments feature for GraphQL API</li>
+          <li><strong>Dist refactor:</strong> Migrated to proper dist builds in 1 day. Dual ESM+CJS due to TypeORM CLI constraint — agents pivoted quickly</li>
+          <li><strong>&gt;90% test coverage:</strong> Unit tests generated with full codebase context in 1/2 a day</li>
+          <li><strong>E2E tests:</strong> End-to-end suite with Playwright in 1/2 a day</li>
+          <li><strong>Subgraph _args:</strong> Recursive arguments feature for GraphQL API — enables nested query filtering</li>
         </ul>
       </template>
     </div>
@@ -483,11 +530,43 @@
     <p class="subline text-gray-600" style="display:flex;align-items:center;gap:12px"><img src="img/boris-cherny.jpg" alt="Boris Cherny" class="quote-avatar" data-animate data-delay="2" style="width:40px;height:40px"> Direct quotes from the person who built the tool.</p>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:2rem;max-width:900px" data-animate data-delay="3">
-    <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/bcherny/status/2007179838864666847"></a></blockquote>
-    <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/bcherny/status/2007179840848597422"></a></blockquote>
-    <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/bcherny/status/2007179845336527000"></a></blockquote>
-    <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/bcherny/status/2007179861115511237"></a></blockquote>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:1.5rem;max-width:900px" data-animate data-delay="3">
+    <div class="tweet-slot">
+      <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/bcherny/status/2007179838864666847"></a></blockquote>
+      <div class="tweet-fallback">
+        <div class="card">
+          <p class="big-number sm accent mb-12">Use Opus</p>
+          <p class="text-sm" style="color:#8b949e">"I use Opus with thinking for everything. It's the best coding model I've ever used — since you have to steer it less, it is almost always faster than using a smaller model."</p>
+        </div>
+      </div>
+    </div>
+    <div class="tweet-slot">
+      <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/bcherny/status/2007179840848597422"></a></blockquote>
+      <div class="tweet-fallback">
+        <div class="card">
+          <p class="big-number sm accent mb-12">CLAUDE.md</p>
+          <p class="text-sm" style="color:#8b949e">"Our team shares a single CLAUDE.md. We check it into git. Anytime we see Claude do something incorrectly we add it, so Claude knows not to do it next time."</p>
+        </div>
+      </div>
+    </div>
+    <div class="tweet-slot">
+      <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/bcherny/status/2007179845336527000"></a></blockquote>
+      <div class="tweet-fallback">
+        <div class="card">
+          <p class="big-number sm accent mb-12">Plan Mode</p>
+          <p class="text-sm" style="color:#8b949e">"Most sessions start in Plan mode. I go back and forth with Claude until I like its plan. From there, Claude can usually 1-shot it. A good plan is really important!"</p>
+        </div>
+      </div>
+    </div>
+    <div class="tweet-slot">
+      <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none"><a href="https://x.com/bcherny/status/2007179861115511237"></a></blockquote>
+      <div class="tweet-fallback">
+        <div class="card">
+          <p class="big-number sm accent mb-12">Verify</p>
+          <p class="text-sm" style="color:#8b949e">"Give Claude a way to verify its work. If Claude has that feedback loop, it will 2-3x the quality of the final result."</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -498,7 +577,7 @@
     <h2 class="text-navy">Start today — it takes 5 minutes</h2>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
-  <div class="card-grid cols-3 mt-32">
+  <div class="card-grid cols-2 mt-32" style="max-width:800px">
     <div class="card" data-animate data-delay="3">
       <p class="big-number sm accent mb-12">1</p>
       <p class="text-md text-navy"><strong>Install Claude Code</strong></p>
@@ -507,11 +586,6 @@
     </div>
     <div class="card" data-animate data-delay="4">
       <p class="big-number sm accent mb-12">2</p>
-      <p class="text-md text-navy"><strong>Write your CLAUDE.md</strong></p>
-      <p class="text-sm text-gray-600 mt-8">Add project context: folder structure, conventions, common commands, tech stack</p>
-    </div>
-    <div class="card" data-animate data-delay="5">
-      <p class="big-number sm accent mb-12">3</p>
       <p class="text-md text-navy"><strong>Start coding</strong></p>
       <p class="text-sm text-gray-600 mt-8">Run <code>claude</code> in your project root and describe what you want to build. Watch it work.</p>
     </div>
@@ -522,21 +596,64 @@
 </div>
 
 <!-- ===== 9. NEXT STEP ===== -->
-<div class="slide bg-gradient" data-title="Next Step" data-slug="next-step" style="display:flex;align-items:center;justify-content:center">
-  <div class="max-w" style="display:flex;flex-direction:column;align-items:flex-start;justify-content:center;flex:1;height:100%">
+<div class="slide bg-gradient" data-title="Next Step" data-slug="next-step" style="justify-content:center">
+  <div style="max-width:1000px">
     <div class="pill" data-animate data-delay="0">Next Step</div>
     <h2 data-animate data-delay="1">Try it on your next task.<br>Start small. <span class="accent">Stay in the flow.</span></h2>
-    <div class="divider" data-animate data-delay="2"></div>
-    <div class="quote mt-40" data-animate data-delay="3" style="padding-left:1.5rem">
-      "Someday soon, the idea of writing an application in Java or C++ will seem as absurd as writing an application in assembler does today."
+    <div class="row mt-40" style="align-items:center;gap:48px">
+      <div class="col" data-animate data-delay="2">
+        <div class="quote" style="padding-left:1.5rem;font-size:22px;margin:0">
+          "Someday soon, the idea of writing an application in Java or C++ will seem as absurd as writing an application in assembler does today."
+        </div>
+        <p class="text-sm" style="color:#7ee787;margin-top:1rem;padding-left:1.5rem">&mdash; <span class="jargon" data-term="Grady Booch">Grady Booch</span>, inventor of <span class="jargon" data-term="UML">UML</span></p>
+        <p class="text-sm" style="color:#6b7280;padding-left:1.5rem">on the third golden age of software engineering</p>
+      </div>
+      <div style="flex-shrink:0" data-animate data-delay="3">
+        <img src="img/grady-booch.jpg" alt="Grady Booch" style="width:200px;height:200px;border-radius:50%;border:3px solid #7ee787;object-fit:cover">
+      </div>
     </div>
-    <p class="text-sm" data-animate data-delay="4" style="color:#7ee787;margin-top:0.75rem;display:flex;align-items:center;gap:10px"><img src="img/grady-booch.jpg" alt="Grady Booch" class="quote-avatar"><span>&mdash; <span class="jargon" data-term="Grady Booch">Grady Booch</span>, inventor of <span class="jargon" data-term="UML">UML</span>, on the third golden age of software engineering</span></p>
-    <p class="text-sm text-dim" data-animate data-delay="5" style="position:absolute;bottom:2rem;right:2rem">George Yong &middot; IFCA MSC Berhad &middot; February 2026</p>
+  </div>
+</div>
+
+<!-- ===== 10. THE FUTURE ===== -->
+<div class="slide bg-navy" data-title="The Future" data-slug="the-future" style="justify-content:center">
+  <div style="max-width:900px">
+    <div class="pill" data-animate data-delay="0">The Future</div>
+    <div class="row mt-40" style="align-items:center;gap:48px">
+      <div class="col" data-animate data-delay="1">
+        <div class="quote" style="padding-left:1.5rem;font-size:28px;line-height:1.4;margin:0">
+          "The hottest new programming language is English."
+        </div>
+        <p class="text-sm" style="color:#7ee787;margin-top:1rem;padding-left:1.5rem">&mdash; <span class="jargon" data-term="Andrej Karpathy">Andrej Karpathy</span>, former Director of AI at Tesla, founding member of OpenAI</p>
+      </div>
+      <div style="flex-shrink:0" data-animate data-delay="2">
+        <img src="img/andrej-karpathy.jpg" alt="Andrej Karpathy" style="width:200px;height:200px;border-radius:50%;border:3px solid #7ee787;object-fit:cover">
+      </div>
+    </div>
+    <div class="divider" data-animate data-delay="3" style="margin:2.5rem 0"></div>
+    <p class="text-lg" data-animate data-delay="4" style="color:#e6edf3">The tools are here. The cost is low.<br>The only thing left is to <strong class="accent">start.</strong></p>
+    <p class="text-sm text-dim" data-animate data-delay="5" style="position:absolute;bottom:2rem;left:2rem">George Yong &middot; IFCA MSC Berhad &middot; February 2026</p>
   </div>
 </div>
 
 <script async src="https://platform.twitter.com/widgets.js"></script>
 <script src="../../shared/js/deck-init.js"></script>
+<script>
+  // Tweet fallback: if tweets don't render within 8s, show fallback cards
+  setTimeout(function() {
+    var slots = document.querySelectorAll('.tweet-slot');
+    for (var i = 0; i < slots.length; i++) {
+      var slot = slots[i];
+      var iframe = slot.querySelector('iframe');
+      var fallback = slot.querySelector('.tweet-fallback');
+      if (!iframe && fallback) {
+        var blockquote = slot.querySelector('blockquote');
+        if (blockquote) blockquote.style.display = 'none';
+        fallback.style.display = 'block';
+      }
+    }
+  }, 8000);
+</script>
 <script>
   DeckInit({
     glossary: {
@@ -562,6 +679,7 @@
       'Dario Amodei': { def: 'CEO of Anthropic. Former VP of Research at OpenAI where he led GPT-2 and GPT-3. Co-invented RLHF. PhD in Biophysics from Princeton. Left OpenAI in 2021 with 6 colleagues to found Anthropic.', url: 'https://www.linkedin.com/in/dario-amodei-3934934/' },
       'Boris Cherny': { def: 'Creator and Head of Claude Code at Anthropic. Author of O\'Reilly\'s "Programming TypeScript". Formerly at Meta. Known for running 5+ parallel Claude Code sessions and championing CLAUDE.md as team documentation.', url: 'https://x.com/bcherny' },
       'Grady Booch': { def: 'Legendary software engineer and IBM Fellow. Invented UML (Unified Modeling Language). Recently spoke about AI ushering in the "third golden age of software engineering" on the Pragmatic Engineer podcast.', url: 'https://en.wikipedia.org/wiki/Grady_Booch' },
+      'Andrej Karpathy': { def: 'AI researcher, former Director of AI at Tesla, founding member of OpenAI. Known for his deep learning courses at Stanford and his widely-quoted insight that English is becoming the new programming language.', url: 'https://en.wikipedia.org/wiki/Andrej_Karpathy' },
 
       // Concepts
       'RLHF': { def: 'Reinforcement Learning from Human Feedback — a technique where humans rate AI outputs and the AI learns from those ratings. Co-invented by Dario Amodei. Critical to making LLMs useful and safe.', url: 'https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback' },
@@ -576,7 +694,7 @@
 
       // IFCA Products
       'AuditX': 'Plug-and-play audit management module for IFCA\'s X-Series ERP products. Covers audit planning, execution, findings, and reporting.',
-      'IFCAx': 'IFCA\'s core backend framework — a Node.js/TypeScript platform powering the X-Series product suite (PropertyX, FMX, RentX, etc.).',
+      'IFCAX': 'IFCA\'s core backend framework — a Node.js/TypeScript platform powering the X-Series product suite (PropertyX, FMX, RentX, etc.).',
       'FMX': 'Facility Management X — IFCA\'s facility management product. Covers work orders, maintenance contracts, facility profiles, and asset management.',
       'PropertyX': 'IFCA\'s property management ERP product. Manages property sales, leasing, billing, and CRM for real estate developers.',
       'AI Agent Project': 'Multi-repo AI agent system for PropertyX: agents-ui (frontend chat), agents-node (backend orchestration), and product tooling repos. Agents use the user\'s credentials to interact with existing GraphQL APIs.',

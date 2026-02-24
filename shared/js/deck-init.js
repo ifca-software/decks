@@ -235,6 +235,7 @@ var DeckAnimations = {
   var indexMap = {};
   var menuOpen = false;
   var suppressHashUpdate = false;
+  var transitionTimers = [];
 
   function init() {
     slides = document.querySelectorAll('.slide');
@@ -295,6 +296,18 @@ var DeckAnimations = {
     n = Math.max(0, Math.min(n, total - 1));
     if (n === current && !instant) return;
 
+    // Cancel any pending transition and force-finalize
+    for (var t = 0; t < transitionTimers.length; t++) {
+      clearTimeout(transitionTimers[t]);
+    }
+    transitionTimers = [];
+    // Force all slides to clean state
+    for (var s = 0; s < slides.length; s++) {
+      clearTransitions(slides[s]);
+      slides[s].classList.remove('active');
+    }
+    slides[current].classList.add('active');
+
     var prevIndex = current;
     var prev = slides[current];
     var next = slides[n];
@@ -319,8 +332,8 @@ var DeckAnimations = {
         prev.classList.add('slide-out-right');
         next.classList.add('slide-in-left');
       }
-      setTimeout(function() { clearTransitions(prev); }, 300);
-      setTimeout(function() { clearTransitions(next); next.classList.add('active'); }, 450);
+      transitionTimers.push(setTimeout(function() { clearTransitions(prev); }, 300));
+      transitionTimers.push(setTimeout(function() { clearTransitions(next); next.classList.add('active'); }, 450));
     }
 
     current = n;
