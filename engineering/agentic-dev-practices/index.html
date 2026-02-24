@@ -240,17 +240,11 @@
     -webkit-overflow-scrolling: touch;
     padding: 4px 0 8px;
   }
-  .proof-scroll .card .proof-row {
-    display: flex;
-    gap: 12px;
-    align-items: baseline;
-  }
   .proof-scroll .card .proof-time {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: #7ee787;
-    white-space: nowrap;
-    flex-shrink: 0;
+    margin: 0.25rem 0 0.5rem;
   }
   .proof-scroll .card {
     min-width: 260px;
@@ -465,10 +459,8 @@
   <div class="proof-scroll mt-32" data-animate data-delay="3">
     <div class="card" data-detail>
       <h3 class="accent"><span class="jargon" data-term="AuditX">AuditX</span></h3>
-      <div class="proof-row">
-        <span class="proof-time">1/2 day</span>
-        <p class="text-md text-gray-600">Feature MVP shipped with Cursor + Opus.</p>
-      </div>
+      <p class="proof-time">1/2 day</p>
+      <p class="text-md text-gray-600">Feature MVP shipped with Cursor + Opus.</p>
       <template data-detail-content>
         <h3>AuditX</h3>
         <p>Plug-and-play audit management module for X-Series products.</p>
@@ -481,10 +473,8 @@
     </div>
     <div class="card" data-detail>
       <h3 class="accent"><span class="jargon" data-term="AI Agent Project">AI Agent</span></h3>
-      <div class="proof-row">
-        <span class="proof-time">1/2 day</span>
-        <p class="text-md text-gray-600">MVP'd. Agentic ops on <span class="jargon" data-term="IFCAX">IFCAX</span> via user credentials + <span class="jargon" data-term="GraphQL">GraphQL</span>.</p>
-      </div>
+      <p class="proof-time">1/2 day</p>
+      <p class="text-md text-gray-600">MVP'd. Agentic ops on <span class="jargon" data-term="IFCAX">IFCAX</span> via user credentials + <span class="jargon" data-term="GraphQL">GraphQL</span>.</p>
       <template data-detail-content>
         <h3>IFCAX AI Agent Project</h3>
         <p>Multi-repo AI agent system: agents-ui, agents-node, product tooling.</p>
@@ -497,10 +487,8 @@
     </div>
     <div class="card" data-detail>
       <h3 class="accent"><span class="jargon" data-term="IFCAX">IFCAX</span> Refactoring</h3>
-      <div class="proof-row">
-        <span class="proof-time">1 day</span>
-        <p class="text-md text-gray-600">Dist refactor. 90% test cov in 1/2 day. <span class="jargon" data-term="e2e">E2E</span> in 1/2 day.</p>
-      </div>
+      <p class="proof-time">1 day</p>
+      <p class="text-md text-gray-600">Dist refactor. 90% test cov in 1/2 day. <span class="jargon" data-term="e2e">E2E</span> in 1/2 day.</p>
       <template data-detail-content>
         <h3>IFCAX Refactoring + Testing</h3>
         <ul>
@@ -512,10 +500,8 @@
     </div>
     <div class="card" data-detail>
       <h3 class="accent"><span class="jargon" data-term="IFCAX">IFCAX</span> Subgraph <code>_args</code></h3>
-      <div class="proof-row">
-        <span class="proof-time">1/2 day</span>
-        <p class="text-md text-gray-600">Recursive arguments for <span class="jargon" data-term="GraphQL">GraphQL</span> API — enables nested query filtering.</p>
-      </div>
+      <p class="proof-time">1/2 day</p>
+      <p class="text-md text-gray-600">Recursive arguments for <span class="jargon" data-term="GraphQL">GraphQL</span> API — nested query filtering.</p>
       <template data-detail-content>
         <h3>IFCAX Subgraph _args</h3>
         <ul>
@@ -527,10 +513,8 @@
     </div>
     <div class="card" data-detail>
       <h3 class="accent"><span class="jargon" data-term="FMX">FMX</span> Data Seeding</h3>
-      <div class="proof-row">
-        <span class="proof-time">49 props</span>
-        <p class="text-md text-gray-600">Agent explores the app, writes its own <span class="jargon" data-term="Playwright">Playwright</span> code autonomously.</p>
-      </div>
+      <p class="proof-time">49 props</p>
+      <p class="text-md text-gray-600">Agent explores the app, writes its own <span class="jargon" data-term="Playwright">Playwright</span> code autonomously.</p>
       <template data-detail-content>
         <h3>FMX Data Seeding</h3>
         <p>Browser automation that seeds realistic Malaysian demo data. The agent discovers UI patterns and writes its own selectors.</p>
@@ -543,10 +527,8 @@
     </div>
     <div class="card" data-detail>
       <h3 class="accent">Sales Decks</h3>
-      <div class="proof-row">
-        <span class="proof-time">7 products</span>
-        <p class="text-md text-gray-600">This very deck — built with <span class="jargon" data-term="Claude Code">Claude Code</span>. Business notes by <span class="jargon" data-term="GPT 5.2">GPT 5.2</span>.</p>
-      </div>
+      <p class="proof-time">7 products</p>
+      <p class="text-md text-gray-600">This very deck — built with <span class="jargon" data-term="Claude Code">Claude Code</span>. Business notes by <span class="jargon" data-term="GPT 5.2">GPT 5.2</span>.</p>
       <template data-detail-content>
         <h3>Sales Deck System</h3>
         <p>Interactive HTML presentations with glossary tooltips, detail drawers, ROI calculators.</p>
@@ -568,7 +550,7 @@
   <div class="pill" data-animate data-delay="0">Best Practices</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2>Tips from <span class="jargon" data-term="Boris Cherny">Boris Cherny</span>, creator of <span class="jargon" data-term="Claude Code">Claude Code</span></h2>
-    <p class="subline text-gray-600" style="display:flex;align-items:center;gap:12px"><img src="img/boris-cherny.jpg" alt="Boris Cherny" class="quote-avatar" data-animate data-delay="2" style="width:40px;height:40px"> Direct quotes from the person who built the tool.</p>
+    <p class="subline text-gray-600" style="display:flex;align-items:center;gap:16px"><img src="img/boris-cherny.jpg" alt="Boris Cherny" class="quote-avatar" data-animate data-delay="2" style="width:72px;height:72px;border-radius:50%;border:2px solid #7ee787;object-fit:cover"> Direct quotes from the person who built the tool.</p>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:1.5rem;max-width:900px" data-animate data-delay="3">
