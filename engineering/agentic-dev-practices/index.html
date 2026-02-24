@@ -113,8 +113,13 @@
   /* === Detail drawers (if visible) === */
   .slide [data-detail]:hover { border-color: #7ee787 !important; }
 
-  /* === Twitter embeds: force dark theme === */
+  /* === Twitter embeds: force dark theme + fix white corners === */
   .twitter-tweet { color-scheme: dark; }
+  .twitter-tweet-rendered_in_page,
+  .tweet-slot iframe { border-radius: 12px !important; }
+  .tweet-slot { overflow: hidden; border-radius: 12px; }
+  /* Scrollable tweet columns */
+  .tweet-scroll { max-height: 480px; overflow-y: auto; padding-right: 4px; }
 
   /* === Title slide specifics === */
   .slide-title-terminal {
@@ -401,7 +406,7 @@
       </div>
     </div>
     <div class="col" style="flex:1.2" data-animate data-delay="4">
-      <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="tweet-scroll" style="display:flex;flex-direction:column;gap:16px">
         <div class="tweet-slot">
           <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">The most damning video on the internet just summarized my entire $850 Billion Blind Spot thesis in 4 seconds.<br><br>Dario Amodei refused to hold Sam Altman's hand on stage at the India AI Summit.<br><br>This is the same Dario Amodei who was VP of Research at OpenAI. Who led GPT-2 and GPT-3.&hellip;</p>&mdash; Shanaka Anslem Perera &#x26a1; (@shanaka86) <a href="https://twitter.com/shanaka86/status/2024470005790781507?ref_src=twsrc%5Etfw">February 19, 2026</a></blockquote>
           <div class="tweet-fallback">
@@ -509,7 +514,7 @@
       </template>
     </div>
     <div class="card" data-detail>
-      <h3 class="accent"><span class="jargon" data-term="IFCAX">IFCAX</span> Subgraph <code>_args</code></h3>
+      <h3 class="accent" style="white-space:nowrap"><span class="jargon" data-term="IFCAX">IFCAX</span> <code>_args</code></h3>
       <p class="proof-time">1/2 day</p>
       <p class="text-md text-gray-600">Recursive arguments for <span class="jargon" data-term="GraphQL">GraphQL</span> API — nested query filtering.</p>
       <template data-detail-content>
