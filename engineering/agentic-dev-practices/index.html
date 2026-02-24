@@ -208,6 +208,27 @@
     color: #7ee787 !important;
   }
 
+  /* === Proof slide: horizontal scroll strip === */
+  .proof-scroll {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+  .proof-scroll .card {
+    min-width: 260px;
+    max-width: 300px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+  .proof-scroll::-webkit-scrollbar { height: 4px; }
+  .proof-scroll::-webkit-scrollbar-track { background: #161b22; border-radius: 2px; }
+  .proof-scroll::-webkit-scrollbar-thumb { background: #30363d; border-radius: 2px; }
+  .proof-scroll::-webkit-scrollbar-thumb:hover { background: #7ee787; }
+
   /* === Bottom bar: slide counter + copy-btn === */
   .slide-counter { color: #8b949e !important; }
   .copy-btn {
@@ -322,23 +343,18 @@
   <div class="divider" data-animate data-delay="2"></div>
   <div class="row gap-60 mt-32">
     <div class="col" data-animate data-delay="3">
-      <div class="card" data-detail>
-        <p class="big-number sm accent mb-12">Dario Amodei</p>
-        <p class="text-md text-gray-600">CEO of <span class="jargon" data-term="Anthropic">Anthropic</span>. Former <strong>VP of Research at <span class="jargon" data-term="OpenAI">OpenAI</span></strong> where he led the development of <strong><span class="jargon" data-term="GPT-2">GPT-2</span></strong> and <strong><span class="jargon" data-term="GPT-3">GPT-3</span></strong>. Co-inventor of <span class="jargon" data-term="RLHF">RLHF</span>. PhD in Biophysics from <span class="jargon" data-term="Princeton">Princeton</span>.</p>
-        <p class="text-sm text-gray-600 mt-8"><a href="https://www.linkedin.com/in/dario-amodei-3934934/" target="_blank" style="color:var(--accent)">LinkedIn Profile &rarr;</a></p>
-        <template data-detail-content>
-          <h3>The 7 Co-Founders — All Ex-OpenAI</h3>
-          <ul>
-            <li><strong>Dario Amodei</strong> — CEO (VP of Research at OpenAI, led GPT-2 &amp; GPT-3)</li>
-            <li><strong>Daniela Amodei</strong> — President (VP of Safety &amp; Policy at OpenAI)</li>
-            <li><strong>Tom Brown</strong> — Lead author of the GPT-3 paper</li>
-            <li><strong>Chris Olah</strong> — Interpretability research pioneer at OpenAI</li>
-            <li><strong>Sam McCandlish</strong> — Research at OpenAI</li>
-            <li><strong>Jack Clark</strong> — Policy Director at OpenAI</li>
-            <li><strong>Jared Kaplan</strong> — Research at OpenAI, neural scaling laws</li>
-          </ul>
-          <p>They left OpenAI in 2021 over directional differences and founded Anthropic to build AI that is safe, steerable, and honest.</p>
-        </template>
+      <div class="card">
+        <p class="big-number sm accent mb-12">The 7 Co-Founders</p>
+        <ul class="clean" style="font-size:15px">
+          <li style="padding:6px 0"><span class="bullet"></span><span><strong><span class="jargon" data-term="Dario Amodei">Dario Amodei</span></strong> — CEO <span class="text-gray-600">(VP of Research at OpenAI, led <span class="jargon" data-term="GPT-2">GPT-2</span> &amp; <span class="jargon" data-term="GPT-3">GPT-3</span>)</span></span></li>
+          <li style="padding:6px 0"><span class="bullet"></span><span><strong>Daniela Amodei</strong> — President <span class="text-gray-600">(VP of Safety &amp; Policy at OpenAI)</span></span></li>
+          <li style="padding:6px 0"><span class="bullet"></span><span><strong>Tom Brown</strong> <span class="text-gray-600">— Lead author of the GPT-3 paper</span></span></li>
+          <li style="padding:6px 0"><span class="bullet"></span><span><strong>Chris Olah</strong> <span class="text-gray-600">— Interpretability research pioneer at OpenAI</span></span></li>
+          <li style="padding:6px 0"><span class="bullet"></span><span><strong>Sam McCandlish</strong> <span class="text-gray-600">— Research at OpenAI</span></span></li>
+          <li style="padding:6px 0"><span class="bullet"></span><span><strong>Jack Clark</strong> <span class="text-gray-600">— Policy Director at OpenAI</span></span></li>
+          <li style="padding:6px 0"><span class="bullet"></span><span><strong>Jared Kaplan</strong> <span class="text-gray-600">— Research at OpenAI, neural scaling laws</span></span></li>
+        </ul>
+        <p class="text-sm text-gray-600 mt-8">Left OpenAI in 2021. Co-invented <span class="jargon" data-term="RLHF">RLHF</span>. Founded Anthropic to build AI that is safe, steerable, and honest.</p>
       </div>
     </div>
     <div class="col" style="flex:1.2" data-animate data-delay="4">
@@ -386,90 +402,75 @@
     <p class="subline text-gray-600">All built with <span class="jargon" data-term="Cursor">Cursor</span> and <span class="jargon" data-term="Claude Code">Claude Code</span>, both running <span class="jargon" data-term="Opus">Opus</span>. Real production code, not toy demos.</p>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
-  <div class="card-grid cols-3 mt-32" style="align-items:stretch">
-    <div class="card" data-animate data-delay="3" data-detail style="display:flex;flex-direction:column">
-      <h3 class="text-navy">Audit<span class="accent">X</span></h3>
-      <p class="text-md text-gray-600" style="flex:1">Plug-and-play audit features for X-Series products. Built from scratch in <strong class="accent">half a day</strong> with <span class="jargon" data-term="Cursor">Cursor</span> + <span class="jargon" data-term="Opus">Opus</span> 4.5.</p>
-      <p class="text-sm text-gray-600 mt-8" style="opacity:0.6">&#9201; ~4 hours</p>
+  <div class="proof-scroll mt-32" data-animate data-delay="3">
+    <div class="card" data-detail>
+      <h3 class="accent"><span class="jargon" data-term="AuditX">AuditX</span></h3>
+      <p class="text-md text-gray-600">Built from scratch in <strong class="accent">half a day</strong> with Cursor + Opus.</p>
       <template data-detail-content>
         <h3>AuditX</h3>
-        <p>Complete audit management feature set, designed as a plug-and-play module for X-Series products.</p>
+        <p>Plug-and-play audit management module for X-Series products.</p>
         <ul>
-          <li>Project setup, architecture decisions, and full code generation</li>
+          <li>Project setup, architecture, full code generation — all in ~4 hours</li>
           <li>Component library, API integrations, business logic</li>
-          <li>Built from scratch to working product in half a day using Cursor with Opus 4.5</li>
-          <li>Demonstrates the "one-shot" capability of Opus on greenfield projects</li>
+          <li>Demonstrates Opus's "one-shot" capability on greenfield projects</li>
         </ul>
       </template>
     </div>
-    <div class="card" data-animate data-delay="3" data-detail style="display:flex;flex-direction:column">
-      <h3 class="text-navy">AI Agent Project</h3>
-      <p class="text-md text-gray-600" style="flex:1">Plug-and-play AI agent features for Property<span class="accent">X</span>. Uses the user's credentials to interact with existing <span class="jargon" data-term="GraphQL">GraphQL</span> to perform <span class="jargon" data-term="agentic coding">agentic</span> operations. Requires tooling setup.</p>
-      <p class="text-sm text-gray-600 mt-8" style="opacity:0.6">agents-ui &middot; agents-node &middot; product tooling</p>
+    <div class="card" data-detail>
+      <h3 class="accent"><span class="jargon" data-term="AI Agent Project">AI Agent</span></h3>
+      <p class="text-md text-gray-600">Agentic ops on <span class="jargon" data-term="PropertyX">PropertyX</span> via user credentials + <span class="jargon" data-term="GraphQL">GraphQL</span>.</p>
       <template data-detail-content>
         <h3>PropertyX AI Agent Project</h3>
-        <p>Multi-repo AI agent system that leverages the user's existing credentials and GraphQL APIs to perform autonomous operations.</p>
+        <p>Multi-repo AI agent system: agents-ui, agents-node, product tooling.</p>
         <ul>
-          <li><strong>agents-ui:</strong> Frontend chat interface for AI interactions</li>
-          <li><strong>agents-node:</strong> Backend agent orchestration and API layer</li>
-          <li><strong>Product tooling:</strong> Separated product-specific code into dedicated repos for each X-Series product</li>
-          <li><strong>Credential passthrough:</strong> Agents act on behalf of the logged-in user — same permissions, same data access</li>
+          <li>Agents act on behalf of the logged-in user — same permissions, same data</li>
+          <li>Separated product-specific code into dedicated repos per X-Series product</li>
           <li>Architecture and implementation driven by AI coding agents</li>
         </ul>
       </template>
     </div>
-    <div class="card" data-animate data-delay="3" data-detail style="display:flex;flex-direction:column">
-      <h3 class="text-navy">IFCA<span class="accent" style="font-size:inherit">X</span> Refactoring</h3>
-      <p class="text-md text-gray-600" style="flex:1">Codebase refactor (build to dist instead of direct src imports) in <strong class="accent">1 day</strong>. &gt;90% test coverage in <strong class="accent">half a day</strong>. <span class="jargon" data-term="e2e">E2E</span> tests in <strong class="accent">half a day</strong>. Nth-level <code>_args</code> feature in <strong class="accent">half a day</strong>.</p>
-      <p class="text-sm text-gray-600 mt-8" style="opacity:0.6">All previously failed over months</p>
+    <div class="card" data-detail>
+      <h3 class="accent"><span class="jargon" data-term="IFCAx">IFCAx</span> Refactoring</h3>
+      <p class="text-md text-gray-600">Dist build in <strong class="accent">1 day</strong>. &gt;90% tests in <strong class="accent">½ day</strong>. <span class="jargon" data-term="e2e">E2E</span> in <strong class="accent">½ day</strong>. All previously failed over months.</p>
       <template data-detail-content>
         <h3>IFCAx Refactoring + Testing</h3>
-        <p>Tasks that the team had attempted for months and failed — completed in days with AI agents.</p>
+        <p>Tasks the team attempted for months — completed in days with agents.</p>
         <ul>
-          <li><strong>Dist build refactor (1 day):</strong> Migrated from direct src imports to proper dist builds. Forced to use dual-builds (ESM + CommonJS) because TypeORM's CLI still requires CommonJS for migrations — agents pivoted quickly after discovering this constraint</li>
-          <li><strong>&gt;90% test coverage (½ day):</strong> Unit tests generated with full understanding of the codebase context</li>
-          <li><strong>E2E tests (½ day):</strong> End-to-end test suite with <span class="jargon" data-term="Playwright">Playwright</span></li>
-          <li><strong>Nth-level _args (½ day):</strong> Recursive arguments feature for the GraphQL API</li>
-          <li><strong>Key advantage:</strong> Agents allow quick pivoting — when one approach fails, try a different path in minutes, not days</li>
+          <li><strong>Dist build refactor:</strong> Migrated to proper dist builds. Dual ESM+CJS due to TypeORM CLI constraint — agents pivoted quickly</li>
+          <li><strong>&gt;90% test coverage:</strong> Unit tests generated with full codebase context</li>
+          <li><strong>E2E tests:</strong> End-to-end suite with Playwright</li>
+          <li><strong>Nth-level _args:</strong> Recursive arguments feature for GraphQL API</li>
         </ul>
       </template>
     </div>
-  </div>
-  <div class="card-grid cols-2 mt-16" style="max-width:600px;align-items:stretch">
-    <div class="card" data-animate data-delay="4" data-detail style="display:flex;flex-direction:column">
-      <h3 class="text-navy">FM<span class="accent">X</span> Data Seeding</h3>
-      <p class="text-md text-gray-600" style="flex:1">Built with <span class="jargon" data-term="Cursor">Cursor</span> and <span class="jargon" data-term="Claude Code">Claude Code</span>. The agent explores the app by itself, writes its own <span class="jargon" data-term="Playwright">Playwright</span> code, and seeds realistic Malaysian demo data autonomously.</p>
-      <p class="text-sm text-gray-600 mt-8" style="opacity:0.6">49 properties &middot; WOs &middot; contracts &middot; facility profiles</p>
+    <div class="card" data-detail>
+      <h3 class="accent"><span class="jargon" data-term="FMX">FMX</span> Data Seeding</h3>
+      <p class="text-md text-gray-600">Agent explores the app, writes its own <span class="jargon" data-term="Playwright">Playwright</span> code, seeds <strong class="accent">49 properties</strong> autonomously.</p>
       <template data-detail-content>
         <h3>FMX Data Seeding</h3>
-        <p>Comprehensive Playwright-based browser automation to seed FMX with realistic Malaysian demo data. The agent navigates the app, discovers UI patterns, and writes its own selectors.</p>
+        <p>Browser automation that seeds realistic Malaysian demo data. The agent discovers UI patterns and writes its own selectors.</p>
         <ul>
           <li>Work orders, maintenance contracts, facility profiles</li>
           <li>Idempotent seeders — check before create, screenshot on failure</li>
-          <li>Realistic data: actual Malaysian company names, addresses, phone numbers</li>
-          <li>49 TD Berhad properties configured with Number Structure (FP + WO + FC)</li>
-          <li><strong>Key insight:</strong> The agent can explore a running web app and figure out how to interact with it — you don't need to hand-write every selector</li>
+          <li>Realistic: actual Malaysian company names, addresses, phone numbers</li>
         </ul>
       </template>
     </div>
-    <div class="card" data-animate data-delay="4" data-detail style="display:flex;flex-direction:column">
-      <h3 class="text-navy">Sales Decks</h3>
-      <p class="text-md text-gray-600" style="flex:1">Interactive HTML presentations with glossary tooltips, detail drawers, and <span class="jargon" data-term="ROI">ROI</span> calculators. This very deck was built with <span class="jargon" data-term="Claude Code">Claude Code</span>. Business notes by <span class="jargon" data-term="GPT 5.2">GPT 5.2</span>.</p>
-      <p class="text-sm text-gray-600 mt-8" style="opacity:0.6">IFCAx &middot; RentX &middot; AuditX &middot; FMX &middot; HotelX &middot; PropertyX</p>
+    <div class="card" data-detail>
+      <h3 class="accent">Sales Decks</h3>
+      <p class="text-md text-gray-600">This very deck — built with <span class="jargon" data-term="Claude Code">Claude Code</span>. Business notes by <span class="jargon" data-term="GPT 5.2">GPT 5.2</span>. <strong class="accent">7 products</strong>.</p>
       <template data-detail-content>
         <h3>Sales Deck System</h3>
-        <p>Full interactive presentation system — the same framework powering this slide deck right now.</p>
+        <p>Interactive HTML presentations with glossary tooltips, detail drawers, ROI calculators.</p>
         <ul>
-          <li>10-slide format with glossary tooltips, detail drawers, ROI calculators</li>
           <li>Product decks for IFCAx, RentX, AuditX, FMX, HotelX, ContractX, PropertyX</li>
           <li>Segment variants (hospitality, trading, manufacturing, etc.)</li>
-          <li>Code: 99% AI-generated with <span class="jargon" data-term="Opus">Opus</span></li>
-          <li>Business notes and sales coaching: generated with <span class="jargon" data-term="GPT 5.2">GPT 5.2</span> (better at long-form prose)</li>
+          <li>Code: 99% AI-generated with Opus. Business prose: GPT 5.2</li>
         </ul>
       </template>
     </div>
   </div>
-  <div class="card emphasis bg-navy mt-24" data-animate data-delay="5" style="max-width:700px">
+  <div class="card emphasis bg-navy mt-24" data-animate data-delay="4" style="max-width:700px">
     <p class="text-md text-cream text-center">I'll demo each of these live — plus a <span class="accent bold">live Claude Code session</span> writing real code in real time</p>
   </div>
 </div>
@@ -572,6 +573,13 @@
       'refactoring': { def: 'Restructuring existing code without changing its external behavior. Improves readability, reduces complexity, and makes code easier to maintain.', url: 'https://en.wikipedia.org/wiki/Code_refactoring' },
       'e2e': { def: 'End-to-end testing — automated tests that simulate real user interactions through the full application stack (browser → frontend → API → database).', url: 'https://playwright.dev/docs/intro' },
       'ROI': 'Return on Investment — the ratio of net profit to cost. An ROI of 4x means you get RM 4 back for every RM 1 spent.',
+
+      // IFCA Products
+      'AuditX': 'Plug-and-play audit management module for IFCA\'s X-Series ERP products. Covers audit planning, execution, findings, and reporting.',
+      'IFCAx': 'IFCA\'s core backend framework — a Node.js/TypeScript platform powering the X-Series product suite (PropertyX, FMX, RentX, etc.).',
+      'FMX': 'Facility Management X — IFCA\'s facility management product. Covers work orders, maintenance contracts, facility profiles, and asset management.',
+      'PropertyX': 'IFCA\'s property management ERP product. Manages property sales, leasing, billing, and CRM for real estate developers.',
+      'AI Agent Project': 'Multi-repo AI agent system for PropertyX: agents-ui (frontend chat), agents-node (backend orchestration), and product tooling repos. Agents use the user\'s credentials to interact with existing GraphQL APIs.',
 
       // Tech
       'GraphQL': { def: 'A query language for APIs developed by Facebook. Lets clients request exactly the data they need in a single call — unlike REST where each endpoint returns a fixed shape.', url: 'https://graphql.org' },
