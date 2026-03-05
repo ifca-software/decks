@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Infrastructure Strategy — IFCA Engineering</title>
+<meta property="og:title" content="AI Agent Infrastructure Strategy — IFCA Engineering">
+<meta property="og:description" content="How to power PropertyX AI Agents at a fraction of the cost.">
+<meta property="og:type" content="website">
+<meta name="deck-base" content="../../">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230d1117'/><text x='16' y='21' text-anchor='middle' font-family='monospace' font-weight='800' font-size='12' fill='%237ee787'>&gt;_</text></svg>">
+<link rel="stylesheet" href="../../shared/css/deck.css">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+
+<!-- ===== TERMINAL THEME ===== -->
+<style>
+  /* === Base: override all slide backgrounds to dark === */
+  .slide { background: #0d1117 !important; }
+  .slide.bg-navy { background: #010409 !important; }
+  .slide.bg-white { background: #0d1117 !important; }
+  .slide.bg-gray { background: #161b22 !important; }
+  .slide.bg-gradient { background: linear-gradient(160deg, #0d1117 0%, #161b22 50%, #1c2128 100%) !important; }
+
+  /* === Typography === */
+  .slide h1, .slide h2 { color: #e6edf3 !important; }
+  .slide h3 { color: #e6edf3 !important; }
+  .slide .text-navy { color: #e6edf3 !important; }
+  .slide .text-dim { color: #8b949e !important; }
+  .slide .text-gray-600, .slide .subline { color: #9ca3af !important; }
+  .slide .text-gray-500 { color: #6b7280 !important; }
+  .slide .text-cream { color: #e6edf3 !important; }
+  .slide p, .slide li, .slide span { color: inherit; }
+  .slide ul.clean li > span { color: #c9d1d9; }
+
+  /* === Accent: terminal green === */
+  .slide .accent, .slide strong.accent { color: #7ee787 !important; }
+  .slide .bold { font-weight: 700; }
+
+  /* === Pill === */
+  .slide .pill {
+    border-color: #30363d !important;
+    color: #8b949e !important;
+    background: transparent !important;
+  }
+
+  /* === Divider === */
+  .slide .divider { background: #30363d !important; }
+
+  /* === Bullet === */
+  .slide .bullet { background: #7ee787 !important; }
+
+  /* === Cards === */
+  .slide .card {
+    background: #161b22 !important;
+    border: 1px solid #30363d !important;
+    color: #c9d1d9 !important;
+  }
+  .slide .card h3 { color: #e6edf3 !important; }
+  .slide .card .label { color: #8b949e !important; }
+  .slide .card .value { color: #e6edf3 !important; }
+  .slide .card .value.accent { color: #7ee787 !important; }
+  .slide .card .text-md { color: #8b949e !important; }
+  .slide .card .text-sm { color: #6b7280 !important; }
+  .slide .card .text-sm.text-dim { color: #9ca3af !important; }
+  .slide .card strong { color: #e6edf3; }
+  .slide .card em { color: #8b949e; }
+
+  /* === Card emphasis === */
+  .slide .card.emphasis {
+    background: #1c2128 !important;
+    border-color: #7ee787 !important;
+  }
+
+  /* === Big numbers === */
+  .slide .big-number { color: #e6edf3 !important; }
+  .slide .big-number.accent, .slide .big-number.sm.accent { color: #7ee787 !important; }
+  .slide .big-number.sm { color: #e6edf3 !important; }
+
+  /* === Code elements === */
+  .slide code {
+    font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Cascadia Code', monospace;
+    background: #1c2128;
+    color: #7ee787;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid #30363d;
+    font-size: 0.85em;
+  }
+
+  /* === Links === */
+  .slide a { color: #7ee787 !important; }
+  .slide a:hover { color: #56d364 !important; }
+
+  /* === Quote === */
+  .slide .quote {
+    color: #8b949e !important;
+    border-left-color: #7ee787 !important;
+  }
+
+  /* === Title slide specifics === */
+  .slide-title-terminal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .terminal-prompt {
+    font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Cascadia Code', monospace;
+    font-size: 1.25rem;
+    color: #7ee787;
+    letter-spacing: 0.05em;
+    margin-bottom: 2.5rem;
+  }
+  .terminal-prompt .cursor {
+    display: inline-block;
+    width: 0.6em;
+    height: 1.2em;
+    background: #7ee787;
+    vertical-align: text-bottom;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .slide-title-terminal h1 {
+    color: #fff !important;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 1rem;
+  }
+  .slide-title-terminal .subtitle {
+    color: #8b949e;
+    font-size: 1.15rem;
+    font-weight: 400;
+    max-width: 32em;
+  }
+  .slide .meta {
+    color: #484f58;
+    font-size: 0.85rem;
+  }
+
+  /* === Glossary jargon: dark terminal style === */
+  .slide .jargon {
+    color: #7ee787 !important;
+    border-bottom-color: #30363d !important;
+    cursor: help;
+  }
+  .slide .jargon:hover {
+    border-bottom-color: #7ee787 !important;
+  }
+  .glossary-tip {
+    background: #1c2128 !important;
+    border: 1px solid #30363d !important;
+    color: #c9d1d9 !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4) !important;
+  }
+  .glossary-tip a {
+    color: #7ee787 !important;
+  }
+  /* Force all tooltips dark in terminal theme */
+  .jargon-tooltip.tooltip-light {
+    background: #1c2128 !important;
+    color: #c9d1d9 !important;
+    border: 1px solid #30363d !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4) !important;
+  }
+  .jargon-tooltip.tooltip-light .tooltip-term {
+    color: #7ee787 !important;
+  }
+  .jargon-tooltip.tooltip-light .tooltip-link {
+    color: #7ee787 !important;
+  }
+
+  /* === Today / Tomorrow comparison cards === */
+  .compare-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin-top: 1.5rem;
+  }
+  @media (max-width: 640px) {
+    .compare-cards { grid-template-columns: 1fr; }
+  }
+
+  /* === Phase timeline === */
+  .phase-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 960px;
+    margin-top: 1.5rem;
+  }
+  @media (max-width: 768px) {
+    .phase-cards { grid-template-columns: 1fr; }
+  }
+  .phase-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #7ee787;
+    margin-bottom: 8px;
+  }
+
+  /* === Timeline strip === */
+  .timeline-strip {
+    display: flex;
+    gap: 0;
+    max-width: 960px;
+    margin-top: 1.5rem;
+  }
+  .timeline-step {
+    flex: 1;
+    padding: 16px 18px;
+    border: 1px solid #30363d;
+    border-right: none;
+    background: #161b22;
+    position: relative;
+  }
+  .timeline-step:first-child { border-radius: 8px 0 0 8px; }
+  .timeline-step:last-child { border-radius: 0 8px 8px 0; border-right: 1px solid #30363d; }
+  .timeline-step .step-when {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #7ee787;
+    margin-bottom: 4px;
+  }
+  .timeline-step .step-what {
+    font-size: 14px;
+    color: #c9d1d9;
+    line-height: 1.4;
+  }
+  .timeline-step .step-arrow {
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #30363d;
+    font-size: 16px;
+    z-index: 1;
+  }
+  @media (max-width: 768px) {
+    .timeline-strip { flex-direction: column; }
+    .timeline-step { border-right: 1px solid #30363d; border-bottom: none; border-radius: 0; }
+    .timeline-step:first-child { border-radius: 8px 8px 0 0; }
+    .timeline-step:last-child { border-radius: 0 0 8px 8px; border-bottom: 1px solid #30363d; }
+    .timeline-step .step-arrow { display: none; }
+  }
+
+  /* === Table dark overrides === */
+  .slide table th {
+    background: #1c2128 !important;
+    color: #8b949e !important;
+    border-bottom: 1px solid #30363d !important;
+  }
+  .slide table td {
+    border-bottom: 1px solid #21262d !important;
+    color: #c9d1d9 !important;
+  }
+  .slide table td:first-child { color: #e6edf3 !important; font-weight: 600; }
+  .slide table td strong { color: #7ee787 !important; }
+  .slide table tr.tier-highlight td {
+    background: rgba(126, 231, 135, 0.06);
+  }
+
+  /* === Next step ask/get cards === */
+  .ask-get {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin-top: 1.5rem;
+  }
+  @media (max-width: 640px) {
+    .ask-get { grid-template-columns: 1fr; }
+  }
+  .ask-get .card .card-type {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .ask-get .card .card-type.ask { color: #7ee787; }
+  .ask-get .card .card-type.get { color: #58a6ff; }
+
+  /* === Bottom bar: slide counter + copy-btn === */
+  .slide-counter { color: #8b949e !important; left: auto !important; right: 40px !important; }
+  .copy-btn {
+    left: auto !important;
+    right: 80px !important;
+    bottom: 21px !important;
+    padding: 2px 6px;
+  }
+  @media (max-width: 768px) {
+    .copy-btn { right: 60px !important; bottom: 16px !important; }
+  }
+
+  /* === Responsive: terminal theme (mobile only) === */
+  @media (max-width: 520px) {
+    .slide .row { flex-direction: column !important; }
+    .slide .card-grid.cols-3 { grid-template-columns: 1fr !important; }
+    .slide .card-grid.cols-2 { grid-template-columns: 1fr !important; }
+    .slide .row .col { flex: 1 !important; }
+    .slide-title-terminal h1 { font-size: clamp(1.8rem, 8vw, 3.5rem) !important; }
+    .terminal-prompt { font-size: 1rem; margin-bottom: 1.5rem; }
+    .slide .card-grid { max-width: 100% !important; }
+    .slide .card.emphasis { max-width: 100% !important; }
+  }
+</style>
+
+<!-- ===== 1. TITLE ===== -->
+<div class="slide slide-title-terminal active" data-title="AI Agent Infrastructure Strategy" data-slug="title">
+  <div class="pill" data-animate data-delay="0" style="border-color:#30363d;color:#8b949e">CEO Strategy Briefing</div>
+  <div class="terminal-prompt" data-animate data-delay="1">$ ai-agent --strategy<span class="cursor"></span></div>
+  <h1 data-animate data-delay="2">AI Agent Infrastructure<br>Strategy</h1>
+  <p class="subtitle" data-animate data-delay="3">How to power <span class="jargon" data-term="PropertyX">PropertyX</span> <span class="jargon" data-term="AI Agent">AI Agents</span> at a fraction of the cost</p>
+  <div class="divider" data-animate data-delay="4" style="margin:2rem auto"></div>
+  <p class="meta" data-animate data-delay="5">George Yong &middot; IFCA MSC Berhad &middot; March 2026</p>
+</div>
+
+<!-- ===== 2. WHAT ARE AI AGENTS? ===== -->
+<div class="slide bg-navy" data-title="What Are AI Agents?" data-slug="what-are-agents">
+  <div class="pill" data-animate data-delay="0">The Basics</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2><span class="jargon" data-term="AI Agent">AI Agents</span> are digital employees that work<br>inside our software.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-32">
+    <div class="col">
+      <ul class="clean">
+        <li data-animate data-delay="3"><span class="bullet"></span><span>User types a request in <strong class="accent">plain English</strong> — "Create a work order for broken AC in Block A"</span></li>
+        <li data-animate data-delay="4"><span class="bullet"></span><span>The Agent <strong class="accent">understands</strong> the request, finds the right form, and fills it in</span></li>
+        <li data-animate data-delay="5"><span class="bullet"></span><span>Does in <strong class="accent">seconds</strong> what takes a human minutes of clicking through menus</span></li>
+        <li data-animate data-delay="6"><span class="bullet"></span><span>Every <strong>X-Series product</strong> gets one — <span class="jargon" data-term="FMX">FMX</span>, <span class="jargon" data-term="RentX">RentX</span>, <span class="jargon" data-term="PropertyX">PropertyX</span>, <span class="jargon" data-term="AuditX">AuditX</span>, <span class="jargon" data-term="ContractX">ContractX</span></span></li>
+      </ul>
+    </div>
+    <div class="col" style="flex:0 0 auto;max-width:380px">
+      <div class="card emphasis" data-animate data-delay="7" style="padding:24px">
+        <p class="text-lg" style="color:#e6edf3;line-height:1.6">Like hiring a <strong class="accent">very fast staff member</strong> who works 24/7, never takes MC, and costs a <strong class="accent">fraction</strong> of a real hire.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3. THE BRAIN — ANTHROPIC VS MINIMAX ===== -->
+<div class="slide bg-gray" data-title="The Brain" data-slug="the-brain">
+  <div class="pill" data-animate data-delay="0">The Brain</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Every <span class="jargon" data-term="AI Agent">AI Agent</span> needs a brain.<br>We found one that costs <strong class="accent">much less.</strong></h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32" style="max-width:900px">
+    <div class="card metric" data-animate data-delay="3">
+      <p class="label"><span class="jargon" data-term="Anthropic">Anthropic</span> (Claude)</p>
+      <p class="value">The Best</p>
+      <p class="text-sm text-dim mt-8">Most capable <span class="jargon" data-term="AI Agent">AI</span> on the market. We use it to <em>build</em> our products.</p>
+      <p class="text-sm text-dim mt-8">But expensive when every customer interaction costs money.</p>
+    </div>
+    <div class="card metric emphasis" data-animate data-delay="4">
+      <p class="label"><span class="jargon" data-term="Minimax">Minimax</span></p>
+      <p class="value accent">95% as Good</p>
+      <p class="text-sm text-dim mt-8">Doesn't <span class="jargon" data-term="Hallucinate">hallucinate</span>. Calls <span class="jargon" data-term="Tool Calling">tools</span> properly. Follows instructions reliably.</p>
+      <p class="text-sm text-dim mt-8"><span class="jargon" data-term="Open Weights">Open weights</span> — we can run it on our own hardware.</p>
+    </div>
+  </div>
+  <div class="card emphasis mt-24" data-animate data-delay="5" style="max-width:900px">
+    <p class="text-md text-center" style="color:#c9d1d9"><span class="jargon" data-term="Minimax">Minimax</span> is <span class="jargon" data-term="Open Weights">open weights</span> — like <strong class="accent">buying a car</strong> vs taking <strong class="accent">Grab every day</strong>. One-time investment, then you drive for free.</p>
+  </div>
+</div>
+
+<!-- ===== 4. THE COST DIFFERENCE ===== -->
+<div class="slide bg-navy" data-title="The Cost Difference" data-slug="cost">
+  <div class="pill" data-animate data-delay="0">The Economics</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2><span class="jargon" data-term="Anthropic">Anthropic</span> charges per request.<br><span class="jargon" data-term="Minimax">Minimax</span> can be <strong class="accent">free.</strong></h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32" style="max-width:900px">
+    <div class="card metric" data-animate data-delay="3">
+      <p class="label"><span class="jargon" data-term="Anthropic">Anthropic</span> <span class="jargon" data-term="API">API</span></p>
+      <p class="value">~RM 0.50–2.00</p>
+      <p class="text-sm text-dim">per interaction</p>
+      <p class="text-md mt-16" style="color:#c9d1d9">At scale: <strong style="color:#e6edf3">RM 30K–120K/month</strong></p>
+      <p class="text-sm text-dim mt-8">More customers = more cost. Every request hits their meter.</p>
+    </div>
+    <div class="card metric emphasis" data-animate data-delay="4">
+      <p class="label"><span class="jargon" data-term="Minimax">Minimax</span> <span class="jargon" data-term="Self-Hosted">Self-Hosted</span></p>
+      <p class="value accent">RM 0.00</p>
+      <p class="text-sm text-dim">per interaction</p>
+      <p class="text-md mt-16" style="color:#c9d1d9">One-time: <strong class="accent">hardware cost only</strong></p>
+      <p class="text-sm text-dim mt-8">More customers = more profit. The cost stays the same.</p>
+    </div>
+  </div>
+  <div class="card emphasis mt-24" data-animate data-delay="5" style="max-width:900px">
+    <p class="text-md text-center" style="color:#c9d1d9"><strong class="accent">More customers = more profit, same cost.</strong> That's the economics of owning the infrastructure.</p>
+  </div>
+</div>
+
+<!-- ===== 5. KEN'S INSIGHT — AGENT AS PRIMARY INTERFACE ===== -->
+<div class="slide bg-gray" data-title="Agent as Primary Interface" data-slug="agent-first">
+  <div class="pill" data-animate data-delay="0">Ken's Insight</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>With this cost model, the <span class="jargon" data-term="AI Agent">AI Agent</span> becomes<br>the <strong class="accent">primary interface.</strong></h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="compare-cards" data-animate data-delay="3">
+    <div class="card" style="padding:24px">
+      <p class="label">Today — App First</p>
+      <p class="big-number sm mb-12" style="color:#8b949e">Click, Click, Click</p>
+      <p class="text-md" style="color:#6b7280">User navigates menus, finds the right screen, fills in every field manually. Training required.</p>
+    </div>
+    <div class="card emphasis" style="padding:24px">
+      <p class="label" style="color:#7ee787 !important">Tomorrow — Agent First</p>
+      <p class="big-number sm accent mb-12">Just Say It</p>
+      <p class="text-md" style="color:#9ca3af">User tells the Agent what they need in plain English. Agent does the rest. No training needed.</p>
+    </div>
+  </div>
+  <div class="card mt-24" data-animate data-delay="4" style="max-width:900px;padding:20px 24px">
+    <div class="quote" style="font-size:20px;border-left-color:#7ee787;padding-left:20px;margin:0">
+      "Why make the user click through 10 screens when the Agent can do it in <strong class="accent">one sentence?</strong>"
+    </div>
+  </div>
+</div>
+
+<!-- ===== 6. PHASED APPROACH ===== -->
+<div class="slide bg-navy" data-title="Phased Approach" data-slug="phases">
+  <div class="pill" data-animate data-delay="0">The Plan</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Start with <span class="jargon" data-term="API">APIs</span>. Scale to our own hardware<br>when sales grow.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="phase-cards" data-animate data-delay="3">
+    <div class="card" style="padding:24px">
+      <div class="phase-label">Phase 1 — API Only</div>
+      <p class="big-number sm accent mb-12">Now</p>
+      <p class="text-sm text-dim">Now to Q2 2026</p>
+      <p class="text-md mt-16" style="color:#c9d1d9">Use <span class="jargon" data-term="Minimax">Minimax</span> <span class="jargon" data-term="API">API</span> to build and test. Low risk, low cost. Pay only for what we use.</p>
+      <p class="text-sm text-dim mt-8"><strong style="color:#7ee787">RM 2K–5K/month</strong></p>
+    </div>
+    <div class="card" style="padding:24px">
+      <div class="phase-label">Phase 2 — First Server</div>
+      <p class="big-number sm mb-12">5–10 customers</p>
+      <p class="text-sm text-dim">When demand is proven</p>
+      <p class="text-md mt-16" style="color:#c9d1d9">Buy our first <span class="jargon" data-term="GPU">GPU</span> server. Eliminate per-request costs. Start saving.</p>
+      <p class="text-sm text-dim mt-8"><strong style="color:#7ee787">RM 78K–171K</strong> one-time</p>
+    </div>
+    <div class="card" style="padding:24px">
+      <div class="phase-label">Phase 3 — Full Scale</div>
+      <p class="big-number sm mb-12">20+ customers</p>
+      <p class="text-sm text-dim">When we're growing fast</p>
+      <p class="text-md mt-16" style="color:#c9d1d9">Expand to multiple servers. Handle hundreds of concurrent users. Maximum performance.</p>
+      <p class="text-sm text-dim mt-8"><strong style="color:#7ee787">RM 545K–1.9M</strong> <span class="jargon" data-term="CAPEX">CAPEX</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7. HARDWARE PRICING TIERS ===== -->
+<div class="slide bg-gray" data-title="Hardware Pricing" data-slug="hardware">
+  <div class="pill" data-animate data-delay="0">Hardware Options</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Three tiers — from starter to no-compromise.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-32" data-animate data-delay="3" style="max-width:960px">
+    <table>
+      <thead>
+        <tr>
+          <th>Tier</th>
+          <th><span class="jargon" data-term="GPU">GPU</span></th>
+          <th>Precision</th>
+          <th>Cost (RM)</th>
+          <th>Best For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tier-highlight">
+          <td><strong>Tier A — Starter</strong></td>
+          <td>1–2× <span class="jargon" data-term="RTX 6000 Ada">RTX 6000 Ada</span></td>
+          <td><span class="jargon" data-term="Quantized">Quantized</span></td>
+          <td><strong>78K–171K</strong></td>
+          <td>5–10 customers, proving the model</td>
+        </tr>
+        <tr>
+          <td><strong>Tier B — Growth</strong></td>
+          <td>1–2× <span class="jargon" data-term="H100">H100</span></td>
+          <td><span class="jargon" data-term="bf16">bf16</span></td>
+          <td><strong>545K–654K</strong></td>
+          <td>20+ customers, full precision</td>
+        </tr>
+        <tr>
+          <td><strong>Tier C — Enterprise</strong></td>
+          <td>2–4× <span class="jargon" data-term="H200">H200</span></td>
+          <td><span class="jargon" data-term="bf16">bf16</span></td>
+          <td><strong>1.2M–1.9M</strong></td>
+          <td>50+ customers, no compromise</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card emphasis mt-24" data-animate data-delay="4" style="max-width:960px">
+    <p class="text-md text-center" style="color:#c9d1d9"><strong class="accent">Tier A costs less than one senior developer's annual salary.</strong> And it serves every customer we have.</p>
+  </div>
+</div>
+
+<!-- ===== 8. RECOMMENDATION ===== -->
+<div class="slide bg-navy" data-title="Recommendation" data-slug="recommendation">
+  <div class="pill" data-animate data-delay="0">Recommendation</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>What we should do, starting <strong class="accent">today.</strong></h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="timeline-strip" data-animate data-delay="3">
+    <div class="timeline-step">
+      <div class="step-when">Now</div>
+      <div class="step-what">Build with <span class="jargon" data-term="Minimax">Minimax</span> <span class="jargon" data-term="API">API</span></div>
+      <span class="step-arrow">&rarr;</span>
+    </div>
+    <div class="timeline-step">
+      <div class="step-when">Q2 2026</div>
+      <div class="step-what">Ship in <span class="jargon" data-term="PropertyX">PropertyX</span> / <span class="jargon" data-term="FMX">FMX</span> / <span class="jargon" data-term="RentX">RentX</span></div>
+      <span class="step-arrow">&rarr;</span>
+    </div>
+    <div class="timeline-step">
+      <div class="step-when">Q3 2026</div>
+      <div class="step-what">Prove demand with real customers</div>
+      <span class="step-arrow">&rarr;</span>
+    </div>
+    <div class="timeline-step">
+      <div class="step-when">When Ready</div>
+      <div class="step-what">Buy hardware (Tier A)</div>
+      <span class="step-arrow">&rarr;</span>
+    </div>
+    <div class="timeline-step">
+      <div class="step-when">When Growing</div>
+      <div class="step-what">Scale to Tier B/C</div>
+    </div>
+  </div>
+  <div class="card emphasis mt-32" data-animate data-delay="4" style="max-width:960px">
+    <p class="text-md text-center" style="color:#c9d1d9"><strong class="accent">Zero hardware cost today.</strong> Only invest when we have paying customers.</p>
+  </div>
+</div>
+
+<!-- ===== 9. NEXT STEP ===== -->
+<div class="slide bg-gradient" data-title="Next Step" data-slug="next-step" style="justify-content:center">
+  <div style="max-width:900px">
+    <div class="pill" data-animate data-delay="0">Next Step</div>
+    <h2 data-animate data-delay="1">Approve <span class="jargon" data-term="API">API</span>-first development.<br>The hardware comes <strong class="accent">later.</strong></h2>
+    <div class="divider" data-animate data-delay="2" style="margin:1.5rem 0"></div>
+    <div class="ask-get" data-animate data-delay="3">
+      <div class="card" style="padding:24px">
+        <div class="card-type ask">The Ask</div>
+        <p class="text-lg" style="color:#e6edf3;margin-bottom:12px"><strong>Approve <span class="jargon" data-term="Minimax">Minimax</span> <span class="jargon" data-term="API">API</span> budget</strong></p>
+        <p class="text-md" style="color:#8b949e">Estimated <strong class="accent">RM 2,000–5,000/month</strong> during development. Less than one intern.</p>
+      </div>
+      <div class="card emphasis" style="padding:24px">
+        <div class="card-type get" style="color:#58a6ff">What We Get</div>
+        <p class="text-lg" style="color:#e6edf3;margin-bottom:12px"><strong><span class="jargon" data-term="AI Agent">AI Agents</span> in every X-Series product</strong></p>
+        <p class="text-md" style="color:#8b949e">At a cost <strong class="accent">competitors can't match</strong>. PropertyX, FMX, RentX, AuditX, ContractX — all with AI built in.</p>
+      </div>
+    </div>
+    <p class="text-sm text-dim" data-animate data-delay="4" style="position:absolute;bottom:2rem;left:2rem">George Yong &middot; IFCA MSC Berhad &middot; March 2026</p>
+  </div>
+</div>
+
+<script src="../../shared/js/deck-init.js"></script>
+<script>
+  DeckInit({
+    glossary: {
+      // Core concepts
+      'AI Agent': 'A software program that can understand natural language instructions and perform tasks inside an application — like a digital employee that works 24/7.',
+      'Minimax': { def: 'A Chinese AI company that produces high-quality open-weights language models. Their models can run on your own hardware instead of paying per-request.', url: 'https://www.minimaxi.com' },
+      'Anthropic': { def: 'The company behind Claude — the best AI model for coding and complex tasks. We use Anthropic to build our products. Founded by ex-OpenAI researchers.', url: 'https://www.anthropic.com' },
+      'Open Weights': 'An AI model whose internal parameters are publicly available. This means anyone can download it and run it on their own hardware — no ongoing fees to the creator. Like buying a car vs renting one.',
+      'API': 'Application Programming Interface — a way for software to talk to other software. When we use the Minimax API, we send requests to their servers and pay per use. Like making phone calls vs owning the phone line.',
+      'Self-Hosted': 'Running the AI model on our own servers instead of paying another company to run it for us. Higher upfront cost, but zero per-request cost afterwards.',
+      'Hallucinate': 'When an AI makes up information that sounds correct but isn\'t. Good AI models hallucinate less. Minimax has been tested and does not hallucinate on our use cases.',
+      'Tool Calling': 'The ability of an AI to use software tools — click buttons, fill forms, read data, call APIs. Essential for AI Agents that need to perform actions inside our products.',
+
+      // Hardware
+      'GPU': 'Graphics Processing Unit — originally designed for gaming graphics, now the primary hardware for running AI models. More powerful GPU = faster AI responses.',
+      'Quantized': 'A technique to compress an AI model so it uses less memory and runs on cheaper hardware. Like compressing a video file — slightly lower quality, but much smaller and faster.',
+      'bf16': 'Brain Float 16 — a number format that gives full precision AI results. No compression, no quality loss. Requires more expensive hardware (H100/H200) but gives the best output.',
+      'RTX 6000 Ada': { def: 'NVIDIA\'s professional GPU with 48GB memory. Costs RM 39K–55K each. Can run Minimax models in quantized mode. Good starter option.', url: 'https://www.nvidia.com/en-us/design-visualization/rtx-6000/' },
+      'H100': { def: 'NVIDIA\'s data-centre AI GPU with 80GB memory. Costs RM 215K–275K each. The industry standard for running large AI models at full precision.', url: 'https://www.nvidia.com/en-us/data-center/h100/' },
+      'H200': { def: 'NVIDIA\'s latest and most powerful AI GPU with 141GB memory. Costs RM 300K–475K each. Maximum performance, no compromises.', url: 'https://www.nvidia.com/en-us/data-center/h200/' },
+
+      // IFCA Products
+      'PropertyX': 'IFCA\'s property management ERP product. Manages property sales, leasing, billing, and CRM for real estate developers.',
+      'FMX': 'Facility Management X — IFCA\'s facility management product. Covers work orders, maintenance contracts, facility profiles, and asset management.',
+      'RentX': 'IFCA\'s rental management product for commercial and residential property leasing.',
+      'AuditX': 'IFCA\'s plug-and-play audit management module for X-Series products.',
+      'ContractX': 'IFCA\'s contract management product for construction and project management.',
+
+      // Financial
+      'CAPEX': { def: 'Capital Expenditure — a one-time investment in long-term assets like servers and hardware. Unlike monthly costs, CAPEX is a one-off purchase.', url: 'https://en.wikipedia.org/wiki/Capital_expenditure' },
+    }
+  });
+</script>
+</body>
+</html>
