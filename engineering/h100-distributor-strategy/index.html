@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H100 Distributor Strategy — IFCA AIX</title>
+<meta property="og:title" content="H100 Distributor Strategy — IFCA AIX">
+<meta property="og:description" content="Sourcing NVIDIA H100 infrastructure for IFCA's turnkey AI solutions.">
+<meta property="og:type" content="website">
+<meta name="deck-base" content="../../">
+<meta name="deck-sibling" data-href="../ai-agent-infrastructure/" data-label="AI Agent Infrastructure">
+<meta name="deck-sibling" data-href="../agentic-dev-practices/" data-label="Agentic Dev Practices">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230d1117'/><text x='16' y='21' text-anchor='middle' font-family='monospace' font-weight='800' font-size='12' fill='%237ee787'>&gt;_</text></svg>">
+<link rel="stylesheet" href="../../shared/css/deck.css">
+<meta name="robots" content="noindex, nofollow">
+<script src="../../shared/js/auth-gate.js"></script>
+</head>
+<body>
+
+<!-- ===== TERMINAL THEME ===== -->
+<style>
+  .slide { background: #0d1117 !important; }
+  .slide.bg-navy { background: #010409 !important; }
+  .slide.bg-white { background: #0d1117 !important; }
+  .slide.bg-gray { background: #161b22 !important; }
+  .slide.bg-gradient { background: linear-gradient(160deg, #0d1117 0%, #161b22 50%, #1c2128 100%) !important; }
+
+  .slide h1, .slide h2 { color: #e6edf3 !important; }
+  .slide h3 { color: #e6edf3 !important; }
+  .slide .text-navy { color: #e6edf3 !important; }
+  .slide .text-dim { color: #8b949e !important; }
+  .slide .text-gray-600, .slide .subline { color: #9ca3af !important; }
+  .slide .text-gray-500 { color: #6b7280 !important; }
+  .slide .text-cream { color: #e6edf3 !important; }
+  .slide p, .slide li, .slide span { color: inherit; }
+  .slide ul.clean li > span { color: #c9d1d9; }
+
+  .slide .accent, .slide strong.accent { color: #7ee787 !important; }
+  .slide .bold { font-weight: 700; }
+
+  .slide .pill { border-color: #30363d !important; color: #8b949e !important; background: transparent !important; }
+  .slide .divider { background: #30363d !important; }
+  .slide .bullet { background: #7ee787 !important; }
+
+  .slide .card { background: #161b22 !important; border: 1px solid #30363d !important; color: #c9d1d9 !important; }
+  .slide .card h3 { color: #e6edf3 !important; }
+  .slide .card .label { color: #8b949e !important; }
+  .slide .card .value { color: #e6edf3 !important; }
+  .slide .card .value.accent { color: #7ee787 !important; }
+  .slide .card .text-md { color: #8b949e !important; }
+  .slide .card .text-sm { color: #6b7280 !important; }
+  .slide .card strong { color: #e6edf3; }
+
+  .slide .card.emphasis { background: #1c2128 !important; border-color: #7ee787 !important; }
+
+  .slide .big-number { color: #e6edf3 !important; }
+  .slide .big-number.accent { color: #7ee787 !important; }
+  .slide .big-number.sm { color: #e6edf3 !important; }
+  .slide .big-number.sm.accent { color: #7ee787 !important; }
+
+  .slide code {
+    font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', monospace;
+    background: #1c2128; color: #7ee787; padding: 2px 8px; border-radius: 4px; border: 1px solid #30363d; font-size: 0.85em;
+  }
+
+  .slide a { color: #7ee787 !important; }
+  .slide a:hover { color: #56d364 !important; }
+  .slide .quote { color: #8b949e !important; border-left-color: #7ee787 !important; }
+
+  /* === Table === */
+  .slide table { border-collapse: collapse; width: 100%; }
+  .slide th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #8b949e; padding: 12px 16px; border-bottom: 1px solid #30363d; }
+  .slide td { padding: 12px 16px; border-bottom: 1px solid #21262d; color: #c9d1d9; font-size: 14px; }
+  .slide td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .slide td strong { color: #7ee787; }
+  .slide tr:last-child td { border-bottom: none; }
+</style>
+
+<!-- ===== 1. TITLE ===== -->
+<div class="slide bg-gradient active" data-title="H100 Distributor Strategy" data-slug="title">
+  <div class="pill" data-animate data-delay="0">IFCA AIX</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h1>H100 Distributor<br>Strategy</h1>
+    <p class="subtitle text-dim">Sourcing NVIDIA GPU infrastructure for IFCA's turnkey AI solutions — deployed at client data centres</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad &middot; March 2026 &middot; Internal</p>
+</div>
+
+<!-- ===== 2. THE OPPORTUNITY ===== -->
+<div class="slide bg-navy" data-title="The Opportunity" data-slug="opportunity">
+  <div class="pill" data-animate data-delay="0">The Opportunity</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>IFCA customers want AI.<br>They need hardware to run it.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-32">
+    <div class="col">
+      <ul class="clean">
+        <li data-animate data-delay="3"><span class="bullet"></span><span>Minimax validated as our AI agent brain — <strong class="accent">fraction of OpenAI/Anthropic cost</strong></span></li>
+        <li data-animate data-delay="4"><span class="bullet"></span><span>Enterprise customers want AI on <strong class="accent">their own infrastructure</strong> — data sovereignty, compliance, latency</span></li>
+        <li data-animate data-delay="5"><span class="bullet"></span><span>IFCA can sell <strong class="accent">software + hardware</strong> as a turnkey AI solution</span></li>
+        <li data-animate data-delay="6"><span class="bullet"></span><span>Distributors handle setup and security — <strong class="accent">IFCA owns the relationship</strong></span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="card emphasis" data-animate data-delay="7">
+        <p class="label">The model</p>
+        <p class="text-md" style="color:#c9d1d9">Client &larr;&rarr; <strong class="accent">IFCA</strong> &larr;&rarr; Distributor</p>
+        <p class="text-sm text-dim" style="margin-top:12px">IFCA sells the solution. Distributor deploys the hardware. Client gets one vendor.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3. TOP DISTRIBUTORS ===== -->
+<div class="slide bg-gray" data-title="Top Distributors" data-slug="distributors">
+  <div class="pill" data-animate data-delay="0">Who to Call</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Three distributors. Contact in this order.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent mb-12">#1</p>
+      <h3>NationGate Holdings</h3>
+      <p class="text-sm" style="color:#8b949e">Bursa: 0270 &middot; Penang</p>
+      <p class="text-md" style="color:#c9d1d9;margin-top:12px">NVIDIA's <strong class="accent">only OEM partner in SEA</strong>. Assembles H100/H200 servers. NH8230 (8x H100 HGX).</p>
+      <p class="text-sm text-dim" style="margin-top:12px">Both Bursa-listed &mdash; natural procurement fit.</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent mb-12">#2</p>
+      <h3>SNS Network</h3>
+      <p class="text-sm" style="color:#8b949e">Bursa-listed &middot; Dell Titanium Partner</p>
+      <p class="text-md" style="color:#c9d1d9;margin-top:12px">Already runs <strong class="accent">64x H100 GPUaaS</strong> in Malaysia. Deploys Dell PowerEdge XE9680 systems.</p>
+      <p class="text-sm text-dim" style="margin-top:12px">SNS AI Factory &mdash; proven deployment capability.</p>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="big-number sm accent mb-12">#3</p>
+      <h3>Ingram Micro</h3>
+      <p class="text-sm" style="color:#8b949e">Official NVIDIA ASEAN Distributor</p>
+      <p class="text-md" style="color:#c9d1d9;margin-top:12px">Full NVIDIA stack &mdash; GPUs, InfiniBand networking, AI Enterprise software.</p>
+      <p class="text-sm text-dim" style="margin-top:12px">Standard enterprise procurement channel.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 4. HARDWARE PRICING ===== -->
+<div class="slide bg-navy" data-title="Hardware Pricing" data-slug="pricing">
+  <div class="pill" data-animate data-delay="0">Pricing</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>H100 prices have dropped <strong class="accent">85%</strong> from peak.<br>This is the window.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Configuration</th><th style="text-align:right">Price (USD)</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>8x H100 server (new)</td><td class="num"><strong>$200K–$400K</strong></td><td>NationGate NH8230, Dell XE9680</td></tr>
+        <tr><td>8x H100 server (used/refurb)</td><td class="num"><strong>$100K–$150K</strong></td><td>Secondary market opportunity</td></tr>
+        <tr><td>Single H100 (new)</td><td class="num">$25K–$40K</td><td>SXM vs PCIe variants</td></tr>
+        <tr><td>Single H100 (secondary)</td><td class="num"><strong>$6K–$18K</strong></td><td>85% off peak &mdash; cratering</td></tr>
+        <tr><td>DGX H200 (current gen)</td><td class="num">$500K+</td><td>For premium clients</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card emphasis mt-24" data-animate data-delay="4">
+    <p class="text-md" style="color:#c9d1d9;text-align:center"><strong class="accent">Strategy:</strong> Used/refurb H100 for cost-sensitive clients. New H200/Blackwell for premium. GPUaaS for POC.</p>
+  </div>
+</div>
+
+<!-- ===== 5. BUSINESS MODEL ===== -->
+<div class="slide bg-gray" data-title="Business Model" data-slug="model">
+  <div class="pill" data-animate data-delay="0">Business Model</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">IFCA as AI Solutions Integrator</h2>
+    <p class="subline">Software + hardware + deployment — one vendor, one contract.</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32" style="max-width:700px">
+    <div class="card" data-animate data-delay="3">
+      <h3>IFCA Provides</h3>
+      <p class="text-md" style="color:#c9d1d9">AI agent platform (Minimax-powered), ERP integration, model fine-tuning, managed services, L1/L2 support</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <h3>Distributor Provides</h3>
+      <p class="text-md" style="color:#c9d1d9">Hardware supply, rack &amp; stack at client DC, networking, OS hardening, security audit, warranty, L3 support</p>
+    </div>
+  </div>
+  <div class="card-grid cols-3 mt-24">
+    <div class="card" data-animate data-delay="5">
+      <p class="big-number sm accent mb-12">Resell</p>
+      <p class="text-sm" style="color:#8b949e">Buy at partner pricing, sell with 15&ndash;25% markup</p>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="big-number sm accent mb-12">Referral</p>
+      <p class="text-sm" style="color:#8b949e">Distributor sells direct, pays IFCA a commission</p>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="big-number sm accent mb-12">Managed</p>
+      <p class="text-sm" style="color:#8b949e">Monthly per-node fee: hardware lease + software + support</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 6. COMPETITIVE ADVANTAGE ===== -->
+<div class="slide bg-navy" data-title="Why IFCA Wins" data-slug="advantage">
+  <div class="pill" data-animate data-delay="0">Why IFCA Wins</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>No distributor can do what we do.<br>No software vendor sells the hardware.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-2 mt-32" style="max-width:700px">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent">Full ERP</p>
+      <p class="text-md text-dim" style="margin-top:8px">FMX + RentX + HotelX + AuditX + IFCAx &mdash; the AI agent already knows the customer's data</p>
+    </div>
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent">On-Premise</p>
+      <p class="text-md text-dim" style="margin-top:8px">Data stays in the client's DC. Critical for banking, GLC, healthcare compliance.</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent">One Vendor</p>
+      <p class="text-md text-dim" style="margin-top:8px">Client deals with IFCA only. Distributor is invisible. One contract, one throat to choke.</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent">Cross-Sell</p>
+      <p class="text-md text-dim" style="margin-top:8px">Existing IFCA customer base &mdash; property developers, hospitals, REITs already using our ERP.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7. GPUaaS FOR POC ===== -->
+<div class="slide bg-gray" data-title="POC Options" data-slug="poc">
+  <div class="pill" data-animate data-delay="0">Start Without Buying</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">GPUaaS for POC &mdash; prove value before hardware commitment</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Provider</th><th>Type</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>SNS AI Factory</strong></td><td>GPUaaS (H100)</td><td>Malaysian-hosted, Bursa-listed, Dell infrastructure</td></tr>
+        <tr><td><strong>IP ServerOne NovaGPU</strong></td><td>Bare metal rental</td><td>Malaysian-hosted, pay-per-use, H200 NVL available</td></tr>
+        <tr><td><strong>Maxis Business</strong></td><td>Enterprise GPUaaS</td><td>Telco-backed, enterprise SLAs, planning GB200</td></tr>
+        <tr><td><strong>NationGate</strong></td><td>POC hardware</td><td>Ask about partner POC program &mdash; free capacity</td></tr>
+        <tr><td><strong>Dell / HPE</strong></td><td>Try &amp; Buy</td><td>Dell Try-and-Buy, HPE GreenLake consumption model</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card emphasis mt-24" data-animate data-delay="4">
+    <p class="text-md" style="color:#c9d1d9;text-align:center"><strong class="accent">Rule:</strong> Don't buy hardware upfront. Prove the workload on GPUaaS first. Buy only when a client commits.</p>
+  </div>
+</div>
+
+<!-- ===== 8. KEY RISKS ===== -->
+<div class="slide bg-navy" data-title="Key Risks" data-slug="risks">
+  <div class="pill" data-animate data-delay="0">Watch Out</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Three things that can go wrong.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3">
+      <h3>Price Crash</h3>
+      <p class="text-md" style="color:#c9d1d9">H100 prices are still falling. Don't stockpile hardware. Buy per-deal or use GPUaaS until margins stabilise.</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <h3>Security Liability</h3>
+      <p class="text-md" style="color:#c9d1d9">Deploying at client DCs means shared responsibility. Insist distributor provides ISO 27001 hardening docs and sign-off.</p>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <h3>Talent Gap</h3>
+      <p class="text-md" style="color:#c9d1d9">Need to hire GPU infra engineers or rely entirely on distributor. Hybrid model recommended &mdash; IFCA owns software, distributor owns hardware ops.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. ACTION PLAN ===== -->
+<div class="slide bg-gray" data-title="Action Plan" data-slug="action">
+  <div class="pill" data-animate data-delay="0">Next Steps</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">This week &mdash; three calls.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-32">
+    <div class="col">
+      <ul class="clean">
+        <li data-animate data-delay="3"><span class="bullet"></span><span><strong class="accent">Call NationGate</strong> &mdash; partner/reseller program, POC hardware access, on-site deployment capability</span></li>
+        <li data-animate data-delay="4"><span class="bullet"></span><span><strong class="accent">Call SNS Network</strong> &mdash; AI Factory partner program, white-label options, GPUaaS for POC</span></li>
+        <li data-animate data-delay="5"><span class="bullet"></span><span><strong class="accent">Call Ingram Micro MY</strong> &mdash; NVIDIA ASEAN distribution channel, pricing tiers, partner onboarding</span></li>
+        <li data-animate data-delay="6"><span class="bullet"></span><span><strong class="accent">Pick one pilot client</strong> &mdash; existing IFCA ERP customer with a DC and AI ambitions</span></li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="card emphasis" data-animate data-delay="7">
+        <p class="label">Data sovereignty angle</p>
+        <p class="text-md" style="color:#c9d1d9">Malaysian clients (GLC, banking, healthcare) <strong class="accent">want hardware on Malaysian soil</strong>. This is IFCA's advantage over cloud providers.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 10. CLOSE ===== -->
+<div class="slide bg-gradient" data-title="Close" data-slug="close" style="justify-content:center">
+  <div class="max-w">
+    <div class="pill" data-animate data-delay="0">Summary</div>
+    <h2 data-animate data-delay="1">IFCA sells the brain.<br>The distributor delivers the body.<br>The client gets <strong class="accent">one solution.</strong></h2>
+    <div class="divider" data-animate data-delay="2"></div>
+    <div class="quote mt-40" data-animate data-delay="3">
+      "Don't buy hardware upfront. Prove the workload. Sign the client. Then deploy."
+    </div>
+    <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad &middot; Kuala Lumpur &middot; ifca.asia</p>
+  </div>
+</div>
+
+<script src="../../shared/js/deck-init.js"></script>
+<script>
+  DeckInit({
+    glossary: {
+      'H100': { def: 'NVIDIA H100 Tensor Core GPU — the current workhorse for AI training and inference in data centres.' },
+      'H200': { def: 'NVIDIA H200 — successor to H100 with more HBM3e memory. Current generation.' },
+      'HGX': { def: 'NVIDIA HGX — a GPU baseboard that holds 4 or 8 GPUs with high-speed NVLink interconnect.' },
+      'DGX': { def: 'NVIDIA DGX — a turnkey AI server system with 8 GPUs, networking, and NVIDIA software stack pre-installed.' },
+      'GPUaaS': { def: 'GPU-as-a-Service — renting GPU compute by the hour from a cloud provider instead of buying hardware.' },
+      'NVLink': { def: 'NVIDIA\'s high-bandwidth GPU-to-GPU interconnect. Critical for multi-GPU inference and training.' },
+      'InfiniBand': { def: 'High-performance networking standard used to connect GPU servers in AI clusters.' },
+      'Blackwell': { def: 'NVIDIA\'s next-generation GPU architecture (B100/B200/GB200). Successor to Hopper (H100/H200).' },
+      '3PL': { def: 'Third-Party Logistics — outsourced warehousing, distribution, and fulfilment services.' },
+      'GLC': { def: 'Government-Linked Company — Malaysian companies with significant government shareholding.' },
+      'ISO 27001': { def: 'International standard for information security management systems (ISMS).' },
+    }
+  });
+</script>
+</body>
+</html>

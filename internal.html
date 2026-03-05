@@ -388,6 +388,10 @@ const DECKS = [
   { product: 'rentx', tier: 'pmf', name: 'PMF Discovery', desc: 'Market sizing, JTBD, hypotheses, competitive landscape, experiments, 90-day action plan.', href: 'rentx/pmf-discovery/', pmf: true },
   { product: 'propertyx', tier: 'pmf', name: 'PMF Discovery', desc: 'Market sizing, JTBD, hypotheses, competitive landscape, experiments, 90-day action plan.', href: 'propertyx/pmf-discovery/', pmf: true },
   { product: 'contractx', tier: 'pmf', name: 'PMF Discovery', desc: 'Market sizing, JTBD, hypotheses, competitive landscape, experiments, 90-day action plan.', href: 'contractx/pmf-discovery/', pmf: true },
+
+  // ── Engineering (Internal) ──
+  { product: 'engineering', tier: 'internal', name: 'H100 Distributor Strategy', desc: 'Sourcing NVIDIA H100 infrastructure. Distributor comparison, pricing, business model, action plan.', href: 'engineering/h100-distributor-strategy/', internal: true },
+  { product: 'engineering', tier: 'internal', name: 'AI Agent Infrastructure', desc: 'Minimax vs Anthropic cost model, phased deployment, hardware pricing tiers.', href: 'engineering/ai-agent-infrastructure/', internal: true },
 ];
 
 const PRODUCT_LABELS = {
@@ -399,6 +403,7 @@ const PRODUCT_LABELS = {
   auditx: 'AuditX — Internal Audit & Compliance',
   hrx: 'HRX — Human Resources & Payroll',
   ifcax: 'IFCAx — Core ERP',
+  engineering: 'Engineering — Internal',
 };
 
 const container = document.getElementById('deck-container');
@@ -444,7 +449,7 @@ function render() {
   });
 
   let html = '';
-  const productOrder = ['fmx','hotelx','propertyx','rentx','contractx','auditx','hrx','ifcax'];
+  const productOrder = ['fmx','hotelx','propertyx','rentx','contractx','auditx','hrx','ifcax','engineering'];
 
   productOrder.forEach(p => {
     const items = groups[p];
