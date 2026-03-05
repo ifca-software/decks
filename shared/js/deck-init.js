@@ -380,6 +380,7 @@ var DeckAnimations = {
 
   function bindKeys() {
     document.addEventListener('keydown', function(e) {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
       if (menuOpen && e.key === 'Escape') { toggleMenu(); return; }
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ' || e.key === 'Enter') {
         e.preventDefault(); showSlide(current + 1);
