@@ -205,6 +205,7 @@
   .badge.sme { background: rgba(34,197,94,0.12); color: #86efac; }
   .badge.new-segment { background: rgba(249,115,22,0.12); color: var(--orange); }
   .badge.internal { background: rgba(239,68,68,0.15); color: #f87171; }
+  .badge.jd { background: rgba(126,231,135,0.15); color: #7ee787; }
 
   /* ── no results ── */
   .no-results {
@@ -264,12 +265,15 @@
       <button class="chip" data-filter="product:auditx">AuditX</button>
       <button class="chip" data-filter="product:hrx">HRX</button>
       <button class="chip" data-filter="product:ifcax">IFCAx</button>
+      <button class="chip" data-filter="product:engineering">Engineering</button>
+      <button class="chip" data-filter="product:hiring">Hiring</button>
       <div class="chip-divider"></div>
       <button class="chip" data-filter="vincent">Vincent's targets</button>
       <button class="chip" data-filter="has-deck">Has deck</button>
       <button class="chip" data-filter="coming-soon">Coming soon</button>
       <button class="chip" data-filter="battlecard">Battle cards</button>
       <button class="chip" data-filter="pmf">PMF Discovery</button>
+      <button class="chip" data-filter="jd">Job descriptions</button>
     </div>
   </div>
 
@@ -392,6 +396,9 @@ const DECKS = [
   // ── Engineering (Internal) ──
   { product: 'engineering', tier: 'internal', name: 'GPU Infrastructure Strategy', desc: 'Sourcing GPU infrastructure for turnkey AI solutions. Distributor comparison, pricing, business model, action plan.', href: 'engineering/gpu-infrastructure-strategy/', internal: true },
   { product: 'engineering', tier: 'internal', name: 'AI Agent Infrastructure', desc: 'Minimax vs Anthropic cost model, phased deployment, hardware pricing tiers.', href: 'engineering/ai-agent-infrastructure/', internal: true },
+
+  // ── Hiring (JD) ──
+  { product: 'hiring', tier: 'jd', name: 'Full Stack AI Engineer', desc: 'Build AI agents for IFCA products. Deploy GPU infrastructure (cloud, on-prem, hybrid) for enterprise customers. RM 6K–15K.', href: 'hiring/fullstack-ai-engineer/', jd: true },
 ];
 
 const PRODUCT_LABELS = {
@@ -404,6 +411,7 @@ const PRODUCT_LABELS = {
   hrx: 'HRX — Human Resources & Payroll',
   ifcax: 'IFCAx — Core ERP',
   engineering: 'Engineering — Internal',
+  hiring: 'Hiring — Job Descriptions',
 };
 
 const container = document.getElementById('deck-container');
@@ -423,6 +431,7 @@ function buildBadges(d) {
   if (d.vincentNote && d.vincentNote.includes('renamed')) html += '<span class="badge vincent-merged" title="' + d.vincentNote + '">Renamed</span>';
   if (d.battlecard) html += '<span class="badge internal">Internal</span>';
   if (d.pmf) html += '<span class="badge internal">Internal</span>';
+  if (d.jd) html += '<span class="badge jd">JD</span>';
   return html ? '<div class="badges">' + html + '</div>' : '';
 }
 
@@ -441,6 +450,7 @@ function render() {
     if (activeFilter === 'coming-soon' && d.href) { d._visible = false; return; }
     if (activeFilter === 'battlecard' && !d.battlecard) { d._visible = false; return; }
     if (activeFilter === 'pmf' && !d.pmf) { d._visible = false; return; }
+    if (activeFilter === 'jd' && !d.jd) { d._visible = false; return; }
     if (activeFilter.startsWith('product:') && d.product !== activeFilter.split(':')[1]) { d._visible = false; return; }
 
     d._visible = true;
@@ -449,7 +459,7 @@ function render() {
   });
 
   let html = '';
-  const productOrder = ['fmx','hotelx','propertyx','rentx','contractx','auditx','hrx','ifcax','engineering'];
+  const productOrder = ['fmx','hotelx','propertyx','rentx','contractx','auditx','hrx','ifcax','engineering','hiring'];
 
   productOrder.forEach(p => {
     const items = groups[p];
