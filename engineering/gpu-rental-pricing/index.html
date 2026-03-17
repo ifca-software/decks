@@ -78,6 +78,13 @@
   .slide td.num { text-align: right; font-variant-numeric: tabular-nums; }
   .slide td strong { color: #7ee787 !important; }
   .slide tr:last-child td { border-bottom: none; }
+
+  /* Tooltip indicator — dotted underline + help cursor on all titled elements */
+  .slide [title] { cursor: help; border-bottom: 1px dotted rgba(126, 231, 135, 0.35); }
+  .slide [title]:hover { border-bottom-color: rgba(126, 231, 135, 0.7); }
+  /* Exclude structural elements that shouldn't show the indicator */
+  .slide th[title], .slide td[title], .slide tr[title], .slide a[title], .slide .card[title], .slide img[title] { border-bottom: none; cursor: default; }
+  .slide td[title], .slide th[title] { cursor: help; }
 </style>
 
 <!-- ===== 1. TITLE ===== -->
@@ -88,7 +95,7 @@
     <p class="subtitle text-dim">Cloud <span title="GPU = Graphics Processing Unit. The hardware that runs AI models. Made by NVIDIA. Renting GPUs from cloud providers is cheaper than buying servers.">GPU</span> cost comparison for hosting <span title="MiniMax M2.5 — a 229-billion parameter open-source AI model by MiniMax (Chinese AI lab). Uses Mixture of Experts architecture. MIT licensed = fully commercial, no royalties. Comparable to GPT-4 class models but self-hostable.">MiniMax M2.5</span> <span title="Inference = running a trained AI model to generate responses. This is the production workload — what happens when a user asks a question and the AI answers.">inference</span></p>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
-  <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad &middot; March 2026 &middot; Internal</p>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad &middot; March 2026 &middot; Internal &middot; <span style="border-bottom:1px dotted rgba(126,231,135,0.35);cursor:help" title="Like this! Dotted underlines indicate a term has a tooltip. Hover to learn more.">Hover dotted terms for definitions</span></p>
 </div>
 
 <!-- ===== 2. WHY RENT ===== -->
