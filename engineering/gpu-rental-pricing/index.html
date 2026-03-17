@@ -136,32 +136,68 @@
           <p class="text-sm text-dim">256 experts, 8 active</p>
         </div>
         <div class="card" data-animate data-delay="4">
-          <p class="label">VRAM needed (FP8)</p>
-          <p class="big-number sm accent">~280GB</p>
-          <p class="text-sm text-dim">weights + vLLM overhead</p>
-        </div>
-        <div class="card" data-animate data-delay="4">
           <p class="label">License</p>
           <p class="big-number sm accent">MIT</p>
           <p class="text-sm text-dim">fully commercial, no royalties</p>
+        </div>
+        <div class="card" data-animate data-delay="4">
+          <p class="label">Deploy via</p>
+          <p class="big-number sm accent" style="font-size:20px">vLLM / SGLang</p>
+          <p class="text-sm text-dim">industry-standard inference</p>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card emphasis" data-animate data-delay="5">
-        <p class="label">Minimum GPU configs</p>
-        <div style="margin-top:12px">
-          <p class="text-md" style="color:#c9d1d9"><strong class="accent">4x H100 SXM 80GB</strong> &mdash; 320GB total</p>
-          <p class="text-sm text-dim">Tight. ~40GB left for KV cache (~400K tokens)</p>
-        </div>
-        <div style="margin-top:12px">
-          <p class="text-md" style="color:#c9d1d9"><strong class="accent">4x H200 141GB</strong> &mdash; 564GB total</p>
-          <p class="text-sm text-dim">Comfortable. Plenty of KV cache headroom</p>
-        </div>
-        <div style="margin-top:12px">
-          <p class="text-md" style="color:#c9d1d9"><strong class="accent">8x A100 SXM 80GB</strong> &mdash; 640GB total</p>
-          <p class="text-sm text-dim">Cheaper GPUs, more of them. Good value option</p>
-        </div>
+        <p class="label">FP8 (8-bit) &mdash; official open-source release</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px">Only 8-bit quantised weights are open-sourced by MiniMax.</p>
+      </div>
+      <div class="card mt-16" data-animate data-delay="6">
+        <p class="label">Also available (community)</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px"><strong class="accent">FP8+INT4 AWQ</strong> &mdash; ~92.5GB VRAM. Runs on 2x 48GB GPUs. Dramatically cheaper if quality holds.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3b. VRAM BUDGET ===== -->
+<div class="slide bg-navy" data-title="VRAM Budget" data-slug="vram">
+  <div class="pill" data-animate data-delay="0">Memory Budget</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>MiniMax M2.5 at FP8 &mdash;<br>where the <strong class="accent">~280GB</strong> goes</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-32">
+    <div class="col">
+      <div class="table-wrap" data-animate data-delay="3">
+        <table>
+          <thead><tr><th>Component</th><th style="text-align:right">VRAM</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Model weights (FP8)</strong></td><td class="num"><strong>~220GB</strong></td><td>229B params at 8-bit precision</td></tr>
+            <tr><td><strong>vLLM runtime + CUDA</strong></td><td class="num"><strong>~20&ndash;30GB</strong></td><td>Engine overhead, buffers, CUDA context</td></tr>
+            <tr><td><strong>KV cache</strong></td><td class="num"><strong>~240GB / 1M tokens</strong></td><td>Scales with context length</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-dim mt-16" data-animate data-delay="4">Max context per sequence: <strong style="color:#e6edf3">196K tokens</strong> regardless of total KV cache capacity</p>
+    </div>
+    <div class="col">
+      <p class="text-sm text-dim mb-12" data-animate data-delay="5"><strong style="color:#e6edf3">GPU configs &mdash; what fits</strong></p>
+      <div class="table-wrap" data-animate data-delay="5">
+        <table>
+          <thead><tr><th>Config</th><th style="text-align:right">Total VRAM</th><th style="text-align:right">Free for KV</th><th>Context capacity</th></tr></thead>
+          <tbody>
+            <tr><td><strong>4x H100 80GB</strong></td><td class="num">320GB</td><td class="num">~70&ndash;80GB</td><td>~400K tokens (tight)</td></tr>
+            <tr><td><strong>4x H200 141GB</strong></td><td class="num">564GB</td><td class="num">~310GB</td><td>~1.3M tokens</td></tr>
+            <tr><td><strong>8x A100 80GB</strong></td><td class="num">640GB</td><td class="num">~380GB</td><td>~1.5M tokens</td></tr>
+            <tr><td><strong>8x H100 80GB</strong></td><td class="num">640GB</td><td class="num">~380GB</td><td>~1.5M tokens</td></tr>
+            <tr><td><strong>4x 96GB GPU</strong></td><td class="num">384GB</td><td class="num">~130GB</td><td>~400K tokens</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card emphasis mt-16" data-animate data-delay="6">
+        <p class="label">Budget option</p>
+        <p class="text-md" style="color:#c9d1d9"><strong class="accent">FP8+INT4 AWQ</strong> variant: only ~92.5GB VRAM &mdash; runs on <strong class="accent">2x L40S 48GB</strong> ($1.58/hr on RunPod)</p>
       </div>
     </div>
   </div>
