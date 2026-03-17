@@ -85,7 +85,7 @@
   <div class="pill" data-animate data-delay="0">IFCA AIX</div>
   <div class="slide-head" data-animate data-delay="1">
     <h1>GPU Rental<br>Pricing</h1>
-    <p class="subtitle text-dim">Cloud GPU cost comparison for hosting MiniMax M2.5 inference</p>
+    <p class="subtitle text-dim">Cloud <span title="GPU = Graphics Processing Unit. The hardware that runs AI models. Made by NVIDIA. Renting GPUs from cloud providers is cheaper than buying servers.">GPU</span> cost comparison for hosting <span title="MiniMax M2.5 — a 229-billion parameter open-source AI model by MiniMax (Chinese AI lab). Uses Mixture of Experts architecture. MIT licensed = fully commercial, no royalties. Comparable to GPT-4 class models but self-hostable.">MiniMax M2.5</span> <span title="Inference = running a trained AI model to generate responses. This is the production workload — what happens when a user asks a question and the AI answers.">inference</span></p>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad &middot; March 2026 &middot; Internal</p>
@@ -102,7 +102,7 @@
     <div class="card" data-animate data-delay="3">
       <p class="big-number sm accent mb-12">$0</p>
       <h3>No Capex</h3>
-      <p class="text-md" style="color:#c9d1d9">An 8x H100 server costs $200K&ndash;$400K to buy. Renting starts at <strong class="accent">$6/hr</strong> for 4 GPUs.</p>
+      <p class="text-md" style="color:#c9d1d9">An 8x <span title="NVIDIA H100 80GB (Mar 2023, Hopper architecture). The current standard GPU for AI workloads in data centres. Made by NVIDIA. MSRP $25K–40K per GPU, but prices have crashed 50–85% from 2023 peak due to oversupply.">H100</span> server costs $200K&ndash;$400K to buy. Renting starts at <strong class="accent">$6/hr</strong> for 4 <span title="GPU = Graphics Processing Unit. Originally designed for rendering graphics, now the primary hardware for running AI models. NVIDIA dominates the AI GPU market. Think of it as the engine that powers AI — more GPUs = more AI capacity.">GPUs</span>.</p>
     </div>
     <div class="card" data-animate data-delay="4">
       <h3>Scale On Demand</h3>
@@ -128,29 +128,29 @@
         <div class="card" data-animate data-delay="3">
           <p class="label">Parameters</p>
           <p class="big-number sm accent">229B</p>
-          <p class="text-sm text-dim">Mixture of Experts</p>
+          <p class="text-sm text-dim" title="Mixture of Experts (MoE) — an AI architecture where only a fraction of the model's parameters activate per input, making it faster and cheaper to run than a dense model of the same size">Mixture of Experts</p>
         </div>
         <div class="card" data-animate data-delay="3">
-          <p class="label">Active per token</p>
+          <p class="label" title="A 'token' is roughly ¾ of a word. 'Active per token' means how much of the model actually runs for each word generated.">Active per token</p>
           <p class="big-number sm accent">10B</p>
-          <p class="text-sm text-dim">256 experts, 8 active</p>
+          <p class="text-sm text-dim" title="The model has 256 specialist sub-networks ('experts'). For each word it generates, it picks the 8 most relevant experts to use — ignoring the other 248. This is why it's fast despite being 229B params.">256 experts, 8 active</p>
         </div>
         <div class="card" data-animate data-delay="4">
           <p class="label">License</p>
-          <p class="big-number sm accent">MIT</p>
+          <p class="big-number sm accent" title="MIT License — the most permissive open-source license. Allows commercial use, modification, and distribution with no royalties or restrictions. Originally created at the Massachusetts Institute of Technology.">MIT</p>
           <p class="text-sm text-dim">fully commercial, no royalties</p>
         </div>
         <div class="card" data-animate data-delay="4">
           <p class="label">Deploy via</p>
-          <p class="big-number sm accent" style="font-size:20px">vLLM / SGLang</p>
-          <p class="text-sm text-dim">industry-standard inference</p>
+          <p class="big-number sm accent" style="font-size:20px"><span title="vLLM — open-source high-throughput inference engine for large language models. Created at UC Berkeley. Industry standard for serving AI models in production. Handles batching, memory management, and GPU utilisation automatically.">vLLM</span> / <span title="SGLang — fast LLM serving framework with structured generation support. Alternative to vLLM, developed at UC Berkeley. Optimised for complex multi-step AI workflows.">SGLang</span></p>
+          <p class="text-sm text-dim" title="Inference = running a trained AI model to generate responses. Unlike training (which teaches the model), inference is the production workload — what happens when a user sends a question and gets an answer.">industry-standard inference</p>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card emphasis" data-animate data-delay="5">
-        <p class="label">FP8 (8-bit) &mdash; official open-source release</p>
-        <p class="text-md" style="color:#c9d1d9;margin-top:8px">Only 8-bit quantised weights are open-sourced by MiniMax.</p>
+        <p class="label"><span title="FP8 = 8-bit floating point. A way to compress AI model weights to use half the memory of the standard 16-bit format, with minimal quality loss. Think of it as JPEG compression for AI models — smaller file, nearly the same quality.">FP8 (8-bit)</span> &mdash; official open-source release</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px">Only 8-bit <span title="Quantisation = compressing a model's numerical precision to use less memory. Like reducing a photo from RAW to JPEG — takes less storage with minimal visible quality loss.">quantised</span> weights are open-sourced by MiniMax.</p>
         <p class="text-sm text-dim" style="margin-top:8px">Source: <a href="https://huggingface.co/MiniMaxAI/MiniMax-M1-80k-FP8" target="_blank">HuggingFace</a> &middot; <a href="https://minimaxi.com/en/news/minimax-text-01-open-weight" target="_blank">MiniMax blog</a></p>
       </div>
       <div class="card mt-16" data-animate data-delay="6">
@@ -166,18 +166,18 @@
 <div class="slide bg-navy" data-title="VRAM Budget" data-slug="vram">
   <div class="pill" data-animate data-delay="0">Memory Budget</div>
   <div class="slide-head" data-animate data-delay="1">
-    <h2>MiniMax M2.5 at FP8 &mdash;<br>where the <strong class="accent">~280GB</strong> goes</h2>
+    <h2>MiniMax M2.5 at <span title="FP8 = 8-bit floating point — compressed model format using half the memory of standard 16-bit">FP8</span> &mdash;<br>where the <strong class="accent">~280GB</strong> goes</h2>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="row gap-60 mt-32">
     <div class="col">
       <div class="table-wrap" data-animate data-delay="3">
         <table>
-          <thead><tr><th>Component</th><th style="text-align:right">VRAM</th><th>Notes</th></tr></thead>
+          <thead><tr><th>Component</th><th style="text-align:right" title="VRAM = Video RAM. The memory on a GPU, used to hold model weights and data during processing. More VRAM = can run larger models or serve more users.">VRAM</th><th>Notes</th></tr></thead>
           <tbody>
             <tr><td><strong>Model weights (FP8)</strong></td><td class="num"><strong>~220GB</strong></td><td>229B params at 8-bit precision</td></tr>
-            <tr><td><strong>vLLM runtime + CUDA</strong></td><td class="num"><strong>~20&ndash;30GB</strong></td><td>Engine overhead, buffers, CUDA context</td></tr>
-            <tr><td><strong>KV cache</strong></td><td class="num"><strong>~240GB / 1M tokens</strong></td><td>Scales with context length</td></tr>
+            <tr><td><strong><span title="vLLM — open-source inference engine that manages GPU memory and request batching automatically">vLLM</span> runtime + <span title="CUDA = Compute Unified Device Architecture. NVIDIA's programming platform that lets software run computations on the GPU. Every AI inference engine depends on CUDA. Only works on NVIDIA GPUs.">CUDA</span></strong></td><td class="num"><strong>~20&ndash;30GB</strong></td><td>Engine overhead, buffers, CUDA context</td></tr>
+            <tr><td><strong><span title="KV Cache = Key-Value Cache. Temporary memory the model uses to 'remember' the conversation so far during a response. The longer the conversation, the more KV cache is needed. This is the main factor limiting how many users can run simultaneously.">KV cache</span></strong></td><td class="num"><strong>~240GB / 1M tokens</strong></td><td>Scales with <span title="Context length = how many tokens (words) the model can 'see' at once. Longer context = model can reference more of the conversation history, but uses more GPU memory.">context length</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -187,7 +187,7 @@
       <p class="text-sm text-dim mb-12" data-animate data-delay="5"><strong style="color:#e6edf3">GPU configs &mdash; what fits</strong></p>
       <div class="table-wrap" data-animate data-delay="5">
         <table>
-          <thead><tr><th>Config</th><th style="text-align:right">Total VRAM</th><th style="text-align:right">Free for KV</th><th>Context capacity</th></tr></thead>
+          <thead><tr><th>Config</th><th style="text-align:right">Total VRAM</th><th style="text-align:right" title="VRAM left over after loading model weights and engine overhead. This remaining memory is used for KV cache — more free VRAM = more concurrent users.">Free for KV</th><th title="How many tokens (roughly ¾ of a word each) the model can hold in memory across all active conversations combined.">Context capacity</th></tr></thead>
           <tbody>
             <tr><td><strong>4x H100 80GB</strong></td><td class="num">320GB</td><td class="num">~70&ndash;80GB</td><td>~400K tokens (tight)</td></tr>
             <tr><td><strong>4x H200 141GB</strong></td><td class="num">564GB</td><td class="num">~310GB</td><td>~1.3M tokens</td></tr>
@@ -199,7 +199,7 @@
       </div>
       <div class="card emphasis mt-16" data-animate data-delay="6">
         <p class="label">Budget option</p>
-        <p class="text-md" style="color:#c9d1d9"><strong class="accent">FP8+INT4 AWQ</strong> variant: only ~92.5GB VRAM &mdash; needs just <strong class="accent">2 GPUs</strong> (L40S 48GB) at $0.79/hr/GPU = <strong class="accent">$1.58/hr total</strong></p>
+        <p class="text-md" style="color:#c9d1d9"><strong class="accent" title="FP8+INT4 AWQ = a community-made, more aggressively compressed version of the model. AWQ (Activation-aware Weight Quantisation) shrinks weights to 4-bit integers while keeping critical layers at 8-bit. Much smaller but may lose some quality.">FP8+INT4 AWQ</strong> variant: only ~92.5GB VRAM &mdash; needs just <strong class="accent">2 GPUs</strong> (<span title="NVIDIA L40S (Oct 2023). Data centre inference GPU, 48GB GDDR6. ~$7K–8K. Designed specifically for AI inference.">L40S</span> 48GB) at $0.79/hr/GPU = <strong class="accent">$1.58/hr total</strong></p>
       </div>
     </div>
   </div>
@@ -216,20 +216,20 @@
     <table>
       <thead><tr><th>Provider</th><th style="text-align:right">$/hr (1 GPU)</th><th>Type</th><th>Notes</th></tr></thead>
       <tbody>
-        <tr><td title="Peer-to-peer GPU marketplace — individual hosts rent spare capacity"><strong>Vast.ai</strong></td><td class="num" title="4 GPUs 24/7: ~$4,300–5,400/mo | Biz hrs: ~$1,550–1,950/mo"><strong>$1.49&ndash;1.87</strong></td><td>Marketplace</td><td>Cheapest. Peer-to-peer, variable availability</td></tr>
-        <tr><td title="RunPod's shared cloud — cheaper, community-hosted GPUs via PCIe slot"><strong>RunPod Community (PCIe)</strong></td><td class="num" title="4 GPUs 24/7: ~$5,731/mo | Biz hrs: ~$2,070/mo"><strong>$1.99</strong></td><td>Cloud</td><td>Per-second billing, no ingress/egress fees</td></tr>
-        <tr><td title="Bare-metal GPU cloud with Kubernetes-native orchestration"><strong>CoreWeave</strong></td><td class="num" title="4 GPUs 24/7: ~$5,933–7,546/mo | Biz hrs: ~$2,142–2,725/mo"><strong>$2.06&ndash;2.62</strong></td><td>Bare metal</td><td>Kubernetes-native, GPU specialist</td></tr>
-        <tr><td title="RunPod's enterprise tier — SOC2 certified, dedicated hardware"><strong>RunPod Secure</strong></td><td class="num" title="4 GPUs 24/7: ~$6,883/mo | Biz hrs: ~$2,486/mo"><strong>$2.39</strong></td><td>Cloud</td><td title="SOC2 = Service Organization Control 2 security compliance">SOC2 compliant, dedicated infrastructure</td></tr>
-        <tr><td title="Mid-tier cloud GPU provider"><strong>Hyperstack</strong></td><td class="num" title="4 GPUs 24/7: ~$7,171/mo | Biz hrs: ~$2,590/mo"><strong>~$2.49</strong></td><td>Cloud</td><td>Competitive mid-tier option</td></tr>
-        <tr><td title="RunPod's shared cloud — SXM form factor with faster NVLink GPU-to-GPU interconnect"><strong>RunPod Community (SXM)</strong></td><td class="num" title="4 GPUs 24/7: ~$7,747/mo | Biz hrs: ~$2,797/mo"><strong>$2.69</strong></td><td>Cloud</td><td title="SXM = server form factor with NVLink for faster GPU-to-GPU communication">Faster interconnect than PCIe</td></tr>
-        <tr><td title="ML-focused GPU cloud with strong uptime guarantees"><strong>Lambda Cloud</strong></td><td class="num" title="4 GPUs 24/7: ~$8,611/mo | Biz hrs: ~$3,110/mo"><strong>$2.99</strong></td><td>Cloud</td><td>Strong ML focus, good uptime SLAs</td></tr>
-        <tr><td title="ML-focused cloud provider with affordable A100 options"><strong>Jarvislabs</strong></td><td class="num" title="4 GPUs 24/7: ~$8,611/mo | Biz hrs: ~$3,110/mo"><strong>$2.99</strong></td><td>Cloud</td><td>ML-focused, A100 from $1.19/hr</td></tr>
-        <tr><td title="Major hyperscale cloud providers — most expensive but strongest enterprise SLAs">AWS / GCP / Azure</td><td class="num" title="4 GPUs 24/7: ~$8,640–20,102/mo | Biz hrs: ~$3,120–7,259/mo">$3.00&ndash;6.98</td><td title="Large-scale cloud providers (Amazon, Google, Microsoft)">Hyperscaler</td><td>Enterprise SLAs, most expensive</td></tr>
-        <tr><td title="Malaysian-hosted GPU providers — data stays on Malaysian soil for PDPA compliance">MY providers (SNS, Maxis, NovaGPU)</td><td class="num" title="Contact providers directly for pricing">Contact</td><td>Local</td><td title="PDPA = Personal Data Protection Act 2010 (Malaysia)">Data sovereignty premium</td></tr>
+        <tr><td title="Vast.ai — peer-to-peer GPU marketplace (San Francisco, founded 2020). Individual GPU owners list spare capacity. Like Airbnb for GPUs — cheapest prices because hosts compete, but less reliability guarantees than managed clouds."><strong>Vast.ai</strong></td><td class="num" title="4 GPUs 24/7: ~$4,300–5,400/mo | Biz hrs: ~$1,550–1,950/mo"><strong>$1.49&ndash;1.87</strong></td><td>Marketplace</td><td>Cheapest. Peer-to-peer, variable availability</td></tr>
+        <tr><td title="RunPod (San Francisco, founded 2022) — managed GPU cloud platform. 'Community Cloud' = shared infrastructure at lower cost. PCIe = standard server slot, cheaper but slower GPU-to-GPU communication than SXM. Per-second billing, no data transfer fees."><strong>RunPod Community (PCIe)</strong></td><td class="num" title="4 GPUs 24/7: ~$5,731/mo | Biz hrs: ~$2,070/mo"><strong>$1.99</strong></td><td>Cloud</td><td>Per-second billing, no ingress/egress fees</td></tr>
+        <tr><td title="CoreWeave (New Jersey, founded 2017) — GPU-specialised cloud provider. Bare metal = you get a dedicated physical server, not a shared virtual machine. Kubernetes-native = built for automated container orchestration. Backed by NVIDIA. Raised $12B+."><strong>CoreWeave</strong></td><td class="num" title="4 GPUs 24/7: ~$5,933–7,546/mo | Biz hrs: ~$2,142–2,725/mo"><strong>$2.06&ndash;2.62</strong></td><td>Bare metal</td><td>Kubernetes-native, GPU specialist</td></tr>
+        <tr><td title="RunPod Secure — RunPod's enterprise tier with dedicated (not shared) hardware and SOC2 security compliance certification. Costs $0.10–0.40/hr more than Community Cloud but meets enterprise security requirements."><strong>RunPod Secure</strong></td><td class="num" title="4 GPUs 24/7: ~$6,883/mo | Biz hrs: ~$2,486/mo"><strong>$2.39</strong></td><td>Cloud</td><td title="SOC2 = Service Organization Control 2 security compliance">SOC2 compliant, dedicated infrastructure</td></tr>
+        <tr><td title="Hyperstack — mid-tier GPU cloud provider offering competitive pricing between the budget marketplaces (Vast.ai) and premium clouds (Lambda, CoreWeave). Managed infrastructure with standard cloud features."><strong>Hyperstack</strong></td><td class="num" title="4 GPUs 24/7: ~$7,171/mo | Biz hrs: ~$2,590/mo"><strong>~$2.49</strong></td><td>Cloud</td><td>Competitive mid-tier option</td></tr>
+        <tr><td title="RunPod Community Cloud with SXM form factor. SXM = a server socket design with NVLink (NVIDIA's proprietary high-speed GPU-to-GPU interconnect at 900 GB/s). Faster than PCIe for multi-GPU workloads like running MiniMax across 4 GPUs."><strong>RunPod Community (SXM)</strong></td><td class="num" title="4 GPUs 24/7: ~$7,747/mo | Biz hrs: ~$2,797/mo"><strong>$2.69</strong></td><td>Cloud</td><td title="SXM = server form factor with NVLink for faster GPU-to-GPU communication">Faster interconnect than PCIe</td></tr>
+        <tr><td title="Lambda Cloud (San Francisco, founded 2012) — GPU cloud built by Lambda Labs, an AI hardware company. Strong ML focus with good uptime SLAs. Also sells GPU workstations. Used by major AI research labs."><strong>Lambda Cloud</strong></td><td class="num" title="4 GPUs 24/7: ~$8,611/mo | Biz hrs: ~$3,110/mo"><strong>$2.99</strong></td><td>Cloud</td><td>Strong ML focus, good uptime SLAs</td></tr>
+        <tr><td title="Jarvislabs (India, founded 2020) — ML-focused GPU cloud with competitive pricing. Popular with AI researchers. Also published the MiniMax deployment benchmark data referenced in this deck."><strong>Jarvislabs</strong></td><td class="num" title="4 GPUs 24/7: ~$8,611/mo | Biz hrs: ~$3,110/mo"><strong>$2.99</strong></td><td>Cloud</td><td>ML-focused, A100 from $1.19/hr</td></tr>
+        <tr><td title="AWS (Amazon Web Services), GCP (Google Cloud Platform), Azure (Microsoft). The 'Big 3' hyperscale cloud providers. Most expensive GPU option but strongest enterprise SLAs, global presence, and compliance certifications. Typically 2–3x the cost of GPU-specialist providers.">AWS / GCP / Azure</td><td class="num" title="4 GPUs 24/7: ~$8,640–20,102/mo | Biz hrs: ~$3,120–7,259/mo">$3.00&ndash;6.98</td><td title="Large-scale cloud providers (Amazon, Google, Microsoft)">Hyperscaler</td><td>Enterprise SLAs, most expensive</td></tr>
+        <tr><td title="Malaysian-hosted GPU providers. Data stays on Malaysian soil for PDPA (Personal Data Protection Act 2010) compliance. Critical for banks, GLCs (government-linked companies), and healthcare. Premium pricing due to limited local supply.">MY providers (<span title="SNS Network Technology — Bursa-listed IT distributor operating the SNS AI Factory with 64x H100 GPUs at TM Cyberjaya data centre">SNS</span>, <span title="Maxis Berhad — Malaysia's leading telco. First telco in Malaysia to offer GPU-as-a-Service. Planning next-gen NVIDIA GB200 deployment.">Maxis</span>, <span title="NovaGPU by IP ServerOne — Malaysian cloud provider offering RTX 3090 through H200 NVL GPUs on-demand. ISO27017 and PCI-DSS certified.">NovaGPU</span>)</td><td class="num" title="Contact providers directly for pricing">Contact</td><td>Local</td><td title="PDPA = Personal Data Protection Act 2010 (Malaysia)">Data sovereignty premium</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="text-sm text-dim mt-16" data-animate data-delay="4">H100 prices trending sub-$2/hr by mid-2026 as H200/Blackwell supply increases &middot; Sources: <a href="https://www.runpod.io/pricing" target="_blank">RunPod</a> &middot; <a href="https://vast.ai/pricing" target="_blank">Vast.ai</a> &middot; <a href="https://www.coreweave.com/pricing" target="_blank">CoreWeave</a> &middot; <a href="https://lambdalabs.com/service/gpu-cloud/pricing" target="_blank">Lambda</a></p>
+  <p class="text-sm text-dim mt-16" data-animate data-delay="4">H100 prices trending sub-$2/hr by mid-2026 as H200/<span title="Blackwell — NVIDIA's newest GPU architecture (2025). Includes B200 and GB200 chips. As Blackwell GPUs enter the market, older H100s become cheaper due to oversupply.">Blackwell</span> supply increases &middot; Sources: <a href="https://www.runpod.io/pricing" target="_blank">RunPod</a> &middot; <a href="https://vast.ai/pricing" target="_blank">Vast.ai</a> &middot; <a href="https://www.coreweave.com/pricing" target="_blank">CoreWeave</a> &middot; <a href="https://lambdalabs.com/service/gpu-cloud/pricing" target="_blank">Lambda</a></p>
 </div>
 
 <!-- ===== 5. RUNPOD FULL MENU ===== -->
@@ -262,7 +262,7 @@
     </div>
     <div class="col">
       <div class="card emphasis" data-animate data-delay="4">
-        <p class="label">Secure Cloud (SOC2)</p>
+        <p class="label">Secure Cloud (<span title="SOC2 = Service Organization Control 2. A security compliance framework that audits how a company protects customer data. Required by many enterprise customers before they'll use a cloud provider. Covers security, availability, confidentiality, and privacy.">SOC2</span>)</p>
         <p class="text-md" style="color:#c9d1d9;margin-top:8px">Adds $0.10&ndash;0.40/hr for dedicated infra</p>
         <div style="margin-top:12px">
           <p class="text-sm text-dim">A100 PCIe 80GB &mdash; <strong class="accent">$1.39/hr/GPU</strong></p>
@@ -274,10 +274,10 @@
         <p class="label">Storage</p>
         <p class="text-sm" style="color:#c9d1d9;margin-top:8px">Container/Volume: <strong class="accent">$0.10/GB/mo</strong></p>
         <p class="text-sm" style="color:#c9d1d9">Idle volume: <strong class="accent">$0.20/GB/mo</strong></p>
-        <p class="text-sm" style="color:#c9d1d9">No ingress/egress fees</p>
+        <p class="text-sm" style="color:#c9d1d9">No <span title="Ingress = data uploaded to the cloud. Egress = data downloaded from the cloud. Many cloud providers charge per-GB fees for data transfer, which can add up. RunPod charges nothing for either.">ingress/egress</span> fees</p>
       </div>
       <div class="card mt-16" data-animate data-delay="6">
-        <p class="label">Serverless (Active Workers)</p>
+        <p class="label" title="Serverless = pay only when your AI model is actively processing requests. The GPU spins up automatically when a user sends a request and shuts down when idle. More expensive per-hour but no cost when nobody is using it.">Serverless (Active Workers)</p>
         <p class="text-sm" style="color:#c9d1d9;margin-top:8px">H100: <strong class="accent">$3.35/hr/GPU</strong> (30% off flex)</p>
         <p class="text-sm" style="color:#c9d1d9">A100: <strong class="accent">$2.17/hr/GPU</strong></p>
         <p class="text-sm" style="color:#c9d1d9">4090: <strong class="accent">$0.77/hr/GPU</strong></p>
@@ -384,7 +384,7 @@
         <table>
           <thead><tr><th>Metric</th><th style="text-align:right">Max throughput</th><th style="text-align:right">Production (16 conn.)</th></tr></thead>
           <tbody>
-            <tr><td>Output tokens/s</td><td class="num">6,624 tok/s</td><td class="num"><strong>919 tok/s</strong></td></tr>
+            <tr><td title="Output tokens per second — how many words the AI can generate each second across all active users combined. A 'token' is roughly ¾ of a word. Higher = more users can be served simultaneously.">Output tokens/s</td><td class="num">6,624 tok/s</td><td class="num"><strong>919 tok/s</strong></td></tr>
             <tr><td title="Time to first token — how long before the user sees the first word">Time to first token</td><td class="num">2,890ms</td><td class="num"><strong>57ms</strong></td></tr>
             <tr><td title="Time between each token — determines perceived typing speed">Inter-token latency</td><td class="num">130ms</td><td class="num"><strong>17ms</strong></td></tr>
           </tbody>
@@ -395,7 +395,7 @@
         <table>
           <thead><tr><th>Workload</th><th style="text-align:right">Input</th><th style="text-align:right">Output</th><th>Example</th></tr></thead>
           <tbody>
-            <tr><td>Sales lead creation</td><td class="num">~500&ndash;1K tok</td><td class="num">~200&ndash;500 tok</td><td>Parse inquiry, create CRM record</td></tr>
+            <tr><td>Sales lead creation</td><td class="num" title="Input tokens = the data sent TO the AI (the user's question, context, system instructions). More input = more processing time.">~500&ndash;1K tok</td><td class="num" title="Output tokens = the AI's response. This is what the user waits for. Generating output is the bottleneck — it's sequential (one token at a time).">~200&ndash;500 tok</td><td>Parse inquiry, create <span title="CRM = Customer Relationship Management system. Software for tracking sales leads, customer interactions, and deals. Examples: Salesforce, HubSpot, or IFCA's own FMX/RentX platforms.">CRM</span> record</td></tr>
             <tr><td>Sales performance query</td><td class="num">~1K&ndash;3K tok</td><td class="num">~500&ndash;1K tok</td><td>Aggregate data, generate summary</td></tr>
             <tr><td>Property booking</td><td class="num">~1K&ndash;2K tok</td><td class="num">~300&ndash;800 tok</td><td>Check availability, confirm booking</td></tr>
           </tbody>
@@ -482,7 +482,7 @@
     </div>
   </div>
   <div class="card mt-16" style="max-width:800px" data-animate data-delay="6">
-    <p class="text-md" style="color:#c9d1d9;text-align:center">Value proposition: <strong class="accent">"Your data never leaves your environment."</strong> Privacy + PDPA compliance + dedicated GPU &mdash; not shared API calls.</p>
+    <p class="text-md" style="color:#c9d1d9;text-align:center">Value proposition: <strong class="accent">"Your data never leaves your environment."</strong> Privacy + <span title="PDPA = Personal Data Protection Act 2010. Malaysia's data privacy law governing how personal data is collected, processed, and stored. Requires data to remain in Malaysia for certain regulated industries (banking, healthcare, government). Non-compliance carries fines up to RM500K and/or imprisonment.">PDPA</span> compliance + dedicated GPU &mdash; not shared API calls.</p>
   </div>
 </div>
 
@@ -496,22 +496,22 @@
   <div class="card-grid cols-2 mt-32" style="max-width:700px">
     <div class="card" data-animate data-delay="3">
       <h3>IP ServerOne NovaGPU</h3>
-      <p class="text-md" style="color:#c9d1d9">RTX 3090 &rarr; H200 NVL on-demand. ISO27017, PCI-DSS compliant. Pay-per-use.</p>
+      <p class="text-md" style="color:#c9d1d9">RTX 3090 &rarr; H200 NVL on-demand. <span title="ISO 27017 — international standard for cloud security controls. PCI-DSS = Payment Card Industry Data Security Standard, required for handling credit card data. Having both certifications means NovaGPU meets banking and financial industry requirements.">ISO27017, PCI-DSS</span> compliant. Pay-per-use.</p>
       <p class="text-sm text-dim" style="margin-top:8px"><a href="https://www.novagpu.com/" target="_blank">novagpu.com</a> &middot; <a href="https://soyacincau.com/2025/06/02/ip-serverone-launches-novagpu-affordable-gpu-cloud-service-smes/" target="_blank">SoyaCincau</a></p>
     </div>
     <div class="card" data-animate data-delay="3">
       <h3>SNS AI Factory</h3>
-      <p class="text-md" style="color:#c9d1d9">64x H100 (Dell XE9680). Bursa-listed. Hosted at TM Cyberjaya DC.</p>
+      <p class="text-md" style="color:#c9d1d9">64x H100 (<span title="Dell PowerEdge XE9680 — Dell's flagship AI server. Holds 8x H100 GPUs with NVLink in a single 6U chassis. One of the most popular GPU server platforms worldwide.">Dell XE9680</span>). <span title="Bursa Malaysia — Malaysia's stock exchange. Being Bursa-listed means SNS is a publicly traded company with audited financials and regulatory oversight.">Bursa-listed</span>. Hosted at <span title="Telekom Malaysia's data centre in Cyberjaya — a purpose-built IT hub south of KL. Tier-III rated (99.982% uptime guarantee).">TM Cyberjaya DC</span>.</p>
       <p class="text-sm text-dim" style="margin-top:8px"><a href="https://vulcanpost.com/885081/sns-ai-factory-malaysia-h100-gpuaas-for-companies/" target="_blank">VulcanPost</a></p>
     </div>
     <div class="card" data-animate data-delay="4">
       <h3>Maxis Business</h3>
-      <p class="text-md" style="color:#c9d1d9">First telco GPUaaS in MY. Enterprise SLAs. Planning GB200.</p>
+      <p class="text-md" style="color:#c9d1d9">First telco <span title="GPUaaS = GPU-as-a-Service. Renting GPU compute by the hour from a cloud provider instead of buying and maintaining your own GPU servers.">GPUaaS</span> in MY. Enterprise <span title="SLA = Service Level Agreement. Contractual guarantees on uptime (e.g. 99.9%), response time, and support. Enterprise SLAs typically include financial penalties if the provider fails to meet targets.">SLAs</span>. Planning <span title="NVIDIA GB200 — next-generation 'Grace Blackwell' superchip combining 2x B200 GPUs with a Grace ARM CPU. Expected to deliver 30x the inference performance of H100. Not yet widely available.">GB200</span>.</p>
       <p class="text-sm text-dim" style="margin-top:8px"><a href="https://www.maxis.com.my/en/business/solutions/cloud/gpu-as-a-service/" target="_blank">maxis.com.my</a></p>
     </div>
     <div class="card" data-animate data-delay="4">
       <h3>Telekom Malaysia</h3>
-      <p class="text-md" style="color:#c9d1d9">NVIDIA-powered GPUaaS. Uptime Tier-III data centres. Sovereign AI stack.</p>
+      <p class="text-md" style="color:#c9d1d9">NVIDIA-powered GPUaaS. Uptime <span title="Tier-III = data centre reliability standard guaranteeing 99.982% uptime (max ~1.6 hours downtime per year). Includes redundant power, cooling, and network paths.">Tier-III</span> data centres. <span title="Sovereign AI = AI infrastructure that keeps data within national borders, under local jurisdiction and data protection laws. Important for government, banking, and healthcare customers.">Sovereign AI</span> stack.</p>
       <p class="text-sm text-dim" style="margin-top:8px"><a href="https://tm.com.my/business/connectivity/cloud/gpu" target="_blank">tm.com.my</a></p>
     </div>
   </div>
@@ -593,7 +593,7 @@
       <li data-animate data-delay="3"><span class="bullet"></span><span><strong class="accent">POC &amp; validation</strong> &mdash; RunPod or Vast.ai ($5K&ndash;8K/mo)</span></li>
       <li data-animate data-delay="4"><span class="bullet"></span><span><strong class="accent">Production (international)</strong> &mdash; RunPod Secure or CoreWeave ($6K&ndash;7K/mo)</span></li>
       <li data-animate data-delay="5"><span class="bullet"></span><span><strong class="accent">Production (MY data sovereignty)</strong> &mdash; SNS AI Factory or NovaGPU (premium)</span></li>
-      <li data-animate data-delay="6"><span class="bullet"></span><span><strong class="accent">Scale</strong> &mdash; buy hardware via NationGate/SNS when 3+ customers commit</span></li>
+      <li data-animate data-delay="6"><span class="bullet"></span><span><strong class="accent">Scale</strong> &mdash; buy hardware via <span title="NationGate Holdings (Bursa: 0270) — NVIDIA's only OEM partner in Southeast Asia. Assembles H100/H200 GPU servers in Penang. Bursa-listed.">NationGate</span>/<span title="SNS Network Technology — Bursa-listed Dell Titanium Partner operating 64x H100 GPUaaS in Malaysia.">SNS</span> when 3+ customers commit</span></li>
     </ul>
     <div class="quote mt-40" data-animate data-delay="7">
       "Don't buy GPUs. Rent them. Don't rent 24/7. Ask the customer what they need."
