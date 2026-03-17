@@ -71,7 +71,7 @@
   /* === Table === */
   .slide .table-wrap { background: #1c2128; border: 1px solid #30363d; border-radius: 8px; padding: 4px 0; }
   .slide table { border-collapse: collapse; width: 100%; }
-  .slide th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #e6edf3 !important; padding: 12px 16px; border-bottom: 1px solid #30363d; }
+  .slide th, .bg-gray table th, .bg-navy table th, .bg-white table th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #c9d1d9 !important; background: #252d38 !important; padding: 12px 16px; border-bottom: 1px solid #30363d; }
   .slide td, .bg-gray table td, .bg-navy table td, .bg-white table td { padding: 12px 16px; border-bottom: 1px solid #30363d; color: #e6edf3 !important; font-size: 14px; }
   .bg-gray table td:first-child, .bg-navy table td:first-child, .bg-white table td:first-child { color: #e6edf3 !important; }
   .bg-gray table td strong, .bg-navy table td strong, .bg-white table td strong { color: #7ee787 !important; }
@@ -197,7 +197,7 @@
       </div>
       <div class="card emphasis mt-16" data-animate data-delay="6">
         <p class="label">Budget option</p>
-        <p class="text-md" style="color:#c9d1d9"><strong class="accent">FP8+INT4 AWQ</strong> variant: only ~92.5GB VRAM &mdash; runs on <strong class="accent">2x L40S 48GB</strong> ($1.58/hr on RunPod)</p>
+        <p class="text-md" style="color:#c9d1d9"><strong class="accent">FP8+INT4 AWQ</strong> variant: only ~92.5GB VRAM &mdash; needs just <strong class="accent">2 GPUs</strong> (L40S 48GB) at $0.79/hr/GPU = <strong class="accent">$1.58/hr total</strong></p>
       </div>
     </div>
   </div>
@@ -207,23 +207,23 @@
 <div class="slide bg-navy" data-title="Per-GPU Pricing" data-slug="per-gpu">
   <div class="pill" data-animate data-delay="0">Per-GPU Pricing</div>
   <div class="slide-head" data-animate data-delay="1">
-    <h2>H100 80GB rental &mdash; <strong class="accent">$1.49 to $6.98/hr</strong><br>depending on provider (March 2026)</h2>
+    <h2>H100 80GB rental &mdash; <strong class="accent">$1.49 to $6.98</strong><br>per 1 GPU per hour (March 2026)</h2>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="table-wrap mt-24" data-animate data-delay="3">
     <table>
-      <thead><tr><th>Provider</th><th style="text-align:right">$/hr per GPU</th><th>Type</th><th>Notes</th></tr></thead>
+      <thead><tr><th>Provider</th><th style="text-align:right">$/hr (1 GPU)</th><th>Type</th><th>Notes</th></tr></thead>
       <tbody>
-        <tr><td><strong>Vast.ai</strong></td><td class="num"><strong>$1.49&ndash;1.87</strong></td><td>Marketplace</td><td>Cheapest. Peer-to-peer, variable availability</td></tr>
-        <tr><td><strong>RunPod Community (PCIe)</strong></td><td class="num"><strong>$1.99</strong></td><td>Cloud</td><td>Per-second billing, no ingress/egress fees</td></tr>
-        <tr><td><strong>CoreWeave</strong></td><td class="num"><strong>$2.06&ndash;2.62</strong></td><td>Bare metal</td><td>Kubernetes-native, GPU specialist</td></tr>
-        <tr><td><strong>RunPod Secure</strong></td><td class="num"><strong>$2.39</strong></td><td>Cloud</td><td>SOC2 compliant, dedicated infrastructure</td></tr>
-        <tr><td><strong>Hyperstack</strong></td><td class="num"><strong>~$2.49</strong></td><td>Cloud</td><td>Competitive mid-tier option</td></tr>
-        <tr><td><strong>RunPod Community (SXM)</strong></td><td class="num"><strong>$2.69</strong></td><td>Cloud</td><td>Faster interconnect than PCIe</td></tr>
-        <tr><td><strong>Lambda Cloud</strong></td><td class="num"><strong>$2.99</strong></td><td>Cloud</td><td>Strong ML focus, good uptime SLAs</td></tr>
-        <tr><td><strong>Jarvislabs</strong></td><td class="num"><strong>$2.99</strong></td><td>Cloud</td><td>ML-focused, A100 from $1.19/hr</td></tr>
-        <tr><td>AWS / GCP / Azure</td><td class="num">$3.00&ndash;6.98</td><td>Hyperscaler</td><td>Enterprise SLAs, most expensive</td></tr>
-        <tr><td>MY providers (SNS, Maxis, NovaGPU)</td><td class="num">Contact</td><td>Local</td><td>Data sovereignty premium</td></tr>
+        <tr><td title="Peer-to-peer GPU marketplace — individual hosts rent spare capacity"><strong>Vast.ai</strong></td><td class="num" title="4 GPUs 24/7: ~$4,300–5,400/mo | Biz hrs: ~$1,550–1,950/mo"><strong>$1.49&ndash;1.87</strong></td><td>Marketplace</td><td>Cheapest. Peer-to-peer, variable availability</td></tr>
+        <tr><td title="RunPod's shared cloud — cheaper, community-hosted GPUs via PCIe slot"><strong>RunPod Community (PCIe)</strong></td><td class="num" title="4 GPUs 24/7: ~$5,731/mo | Biz hrs: ~$2,070/mo"><strong>$1.99</strong></td><td>Cloud</td><td>Per-second billing, no ingress/egress fees</td></tr>
+        <tr><td title="Bare-metal GPU cloud with Kubernetes-native orchestration"><strong>CoreWeave</strong></td><td class="num" title="4 GPUs 24/7: ~$5,933–7,546/mo | Biz hrs: ~$2,142–2,725/mo"><strong>$2.06&ndash;2.62</strong></td><td>Bare metal</td><td>Kubernetes-native, GPU specialist</td></tr>
+        <tr><td title="RunPod's enterprise tier — SOC2 certified, dedicated hardware"><strong>RunPod Secure</strong></td><td class="num" title="4 GPUs 24/7: ~$6,883/mo | Biz hrs: ~$2,486/mo"><strong>$2.39</strong></td><td>Cloud</td><td title="SOC2 = Service Organization Control 2 security compliance">SOC2 compliant, dedicated infrastructure</td></tr>
+        <tr><td title="Mid-tier cloud GPU provider"><strong>Hyperstack</strong></td><td class="num" title="4 GPUs 24/7: ~$7,171/mo | Biz hrs: ~$2,590/mo"><strong>~$2.49</strong></td><td>Cloud</td><td>Competitive mid-tier option</td></tr>
+        <tr><td title="RunPod's shared cloud — SXM form factor with faster NVLink GPU-to-GPU interconnect"><strong>RunPod Community (SXM)</strong></td><td class="num" title="4 GPUs 24/7: ~$7,747/mo | Biz hrs: ~$2,797/mo"><strong>$2.69</strong></td><td>Cloud</td><td title="SXM = server form factor with NVLink for faster GPU-to-GPU communication">Faster interconnect than PCIe</td></tr>
+        <tr><td title="ML-focused GPU cloud with strong uptime guarantees"><strong>Lambda Cloud</strong></td><td class="num" title="4 GPUs 24/7: ~$8,611/mo | Biz hrs: ~$3,110/mo"><strong>$2.99</strong></td><td>Cloud</td><td>Strong ML focus, good uptime SLAs</td></tr>
+        <tr><td title="ML-focused cloud provider with affordable A100 options"><strong>Jarvislabs</strong></td><td class="num" title="4 GPUs 24/7: ~$8,611/mo | Biz hrs: ~$3,110/mo"><strong>$2.99</strong></td><td>Cloud</td><td>ML-focused, A100 from $1.19/hr</td></tr>
+        <tr><td title="Major hyperscale cloud providers — most expensive but strongest enterprise SLAs">AWS / GCP / Azure</td><td class="num" title="4 GPUs 24/7: ~$8,640–20,102/mo | Biz hrs: ~$3,120–7,259/mo">$3.00&ndash;6.98</td><td title="Large-scale cloud providers (Amazon, Google, Microsoft)">Hyperscaler</td><td>Enterprise SLAs, most expensive</td></tr>
+        <tr><td title="Malaysian-hosted GPU providers — data stays on Malaysian soil for PDPA compliance">MY providers (SNS, Maxis, NovaGPU)</td><td class="num" title="Contact providers directly for pricing">Contact</td><td>Local</td><td title="PDPA = Personal Data Protection Act 2010 (Malaysia)">Data sovereignty premium</td></tr>
       </tbody>
     </table>
   </div>
@@ -242,18 +242,18 @@
     <div class="col">
       <div class="table-wrap" data-animate data-delay="3">
         <table>
-          <thead><tr><th>GPU</th><th style="text-align:right">VRAM</th><th style="text-align:right">$/hr</th></tr></thead>
+          <thead><tr><th>GPU</th><th style="text-align:right">VRAM</th><th style="text-align:right">$/hr (1 GPU)</th></tr></thead>
           <tbody>
-            <tr><td>RTX 3090</td><td class="num">24GB</td><td class="num">$0.22</td></tr>
-            <tr><td>RTX 4090</td><td class="num">24GB</td><td class="num">$0.34</td></tr>
-            <tr><td>RTX 6000 Ada</td><td class="num">48GB</td><td class="num">$0.74</td></tr>
-            <tr><td>L40S</td><td class="num">48GB</td><td class="num">$0.79</td></tr>
-            <tr><td>A100 PCIe</td><td class="num">80GB</td><td class="num">$1.19</td></tr>
-            <tr><td>A100 SXM</td><td class="num">80GB</td><td class="num">$1.39</td></tr>
-            <tr><td><strong>H100 PCIe</strong></td><td class="num">80GB</td><td class="num"><strong>$1.99</strong></td></tr>
-            <tr><td><strong>H100 SXM</strong></td><td class="num">80GB</td><td class="num"><strong>$2.69</strong></td></tr>
-            <tr><td><strong>H200</strong></td><td class="num">141GB</td><td class="num"><strong>$3.59</strong></td></tr>
-            <tr><td>B200</td><td class="num">180GB</td><td class="num">$5.98</td></tr>
+            <tr><td title="NVIDIA GeForce RTX 3090 — previous-gen consumer GPU, cheapest option">RTX 3090</td><td class="num">24GB</td><td class="num" title="4 GPUs 24/7: ~$634/mo | Biz hrs: ~$229/mo">$0.22</td></tr>
+            <tr><td title="NVIDIA GeForce RTX 4090 — current-gen consumer GPU, good for small models">RTX 4090</td><td class="num">24GB</td><td class="num" title="4 GPUs 24/7: ~$979/mo | Biz hrs: ~$354/mo">$0.34</td></tr>
+            <tr><td title="NVIDIA RTX 6000 Ada — professional workstation GPU with 48GB VRAM">RTX 6000 Ada</td><td class="num">48GB</td><td class="num" title="4 GPUs 24/7: ~$2,131/mo | Biz hrs: ~$770/mo">$0.74</td></tr>
+            <tr><td title="NVIDIA L40S — data centre GPU designed for AI inference, 48GB VRAM">L40S</td><td class="num">48GB</td><td class="num" title="4 GPUs 24/7: ~$2,275/mo | Biz hrs: ~$821/mo">$0.79</td></tr>
+            <tr><td title="NVIDIA A100 PCIe — previous-gen data centre GPU, standard PCIe slot">A100 PCIe</td><td class="num">80GB</td><td class="num" title="4 GPUs 24/7: ~$3,427/mo | Biz hrs: ~$1,237/mo">$1.19</td></tr>
+            <tr><td title="NVIDIA A100 SXM — same GPU but with faster NVLink GPU-to-GPU interconnect">A100 SXM</td><td class="num">80GB</td><td class="num" title="4 GPUs 24/7: ~$4,003/mo | Biz hrs: ~$1,445/mo">$1.39</td></tr>
+            <tr><td title="NVIDIA H100 PCIe — current-gen data centre GPU, standard PCIe slot"><strong>H100 PCIe</strong></td><td class="num">80GB</td><td class="num" title="4 GPUs 24/7: ~$5,731/mo | Biz hrs: ~$2,070/mo"><strong>$1.99</strong></td></tr>
+            <tr><td title="NVIDIA H100 SXM — same GPU but with faster NVLink interconnect. Recommended for multi-GPU inference"><strong>H100 SXM</strong></td><td class="num">80GB</td><td class="num" title="4 GPUs 24/7: ~$7,747/mo | Biz hrs: ~$2,797/mo"><strong>$2.69</strong></td></tr>
+            <tr><td title="NVIDIA H200 — successor to H100 with 141GB HBM3e memory. More headroom for large models"><strong>H200</strong></td><td class="num">141GB</td><td class="num" title="4 GPUs 24/7: ~$10,339/mo | Biz hrs: ~$3,734/mo"><strong>$3.59</strong></td></tr>
+            <tr><td title="NVIDIA B200 — next-gen Blackwell architecture. Highest performance, newest GPU available">B200</td><td class="num">180GB</td><td class="num" title="4 GPUs 24/7: ~$17,222/mo | Biz hrs: ~$6,219/mo">$5.98</td></tr>
           </tbody>
         </table>
       </div>
@@ -263,9 +263,9 @@
         <p class="label">Secure Cloud (SOC2)</p>
         <p class="text-md" style="color:#c9d1d9;margin-top:8px">Adds $0.10&ndash;0.40/hr for dedicated infra</p>
         <div style="margin-top:12px">
-          <p class="text-sm text-dim">A100 PCIe 80GB &mdash; <strong class="accent">$1.39/hr</strong></p>
-          <p class="text-sm text-dim">A100 SXM 80GB &mdash; <strong class="accent">$1.49/hr</strong></p>
-          <p class="text-sm text-dim">H100 PCIe 80GB &mdash; <strong class="accent">$2.39/hr</strong></p>
+          <p class="text-sm text-dim">A100 PCIe 80GB &mdash; <strong class="accent">$1.39/hr/GPU</strong></p>
+          <p class="text-sm text-dim">A100 SXM 80GB &mdash; <strong class="accent">$1.49/hr/GPU</strong></p>
+          <p class="text-sm text-dim">H100 PCIe 80GB &mdash; <strong class="accent">$2.39/hr/GPU</strong></p>
         </div>
       </div>
       <div class="card mt-16" data-animate data-delay="5">
@@ -276,9 +276,9 @@
       </div>
       <div class="card mt-16" data-animate data-delay="6">
         <p class="label">Serverless (Active Workers)</p>
-        <p class="text-sm" style="color:#c9d1d9;margin-top:8px">H100: <strong class="accent">$3.35/hr</strong> (30% off flex)</p>
-        <p class="text-sm" style="color:#c9d1d9">A100: <strong class="accent">$2.17/hr</strong></p>
-        <p class="text-sm" style="color:#c9d1d9">4090: <strong class="accent">$0.77/hr</strong></p>
+        <p class="text-sm" style="color:#c9d1d9;margin-top:8px">H100: <strong class="accent">$3.35/hr/GPU</strong> (30% off flex)</p>
+        <p class="text-sm" style="color:#c9d1d9">A100: <strong class="accent">$2.17/hr/GPU</strong></p>
+        <p class="text-sm" style="color:#c9d1d9">4090: <strong class="accent">$0.77/hr/GPU</strong></p>
       </div>
     </div>
   </div>
@@ -288,15 +288,15 @@
 <div class="slide bg-navy" data-title="24/7 Monthly Cost" data-slug="monthly-247">
   <div class="pill" data-animate data-delay="0">Always-On Cost</div>
   <div class="slide-head" data-animate data-delay="1">
-    <h2>MiniMax M2.5 &mdash; <strong class="accent">24/7</strong> monthly cost<br>by provider and GPU config</h2>
+    <h2>MiniMax M2.5 needs <strong class="accent">4 GPUs</strong> (minimum)<br>24/7 monthly cost by provider</h2>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="row gap-60 mt-24">
     <div class="col">
-      <p class="text-sm text-dim mb-12" data-animate data-delay="3"><strong style="color:#e6edf3">4x H100 SXM 80GB</strong> &mdash; minimum config (320GB total)</p>
+      <p class="text-sm text-dim mb-12" data-animate data-delay="3"><strong style="color:#e6edf3">4 GPUs needed</strong> (min) &mdash; 4x H100 SXM 80GB = 320GB total VRAM</p>
       <div class="table-wrap" data-animate data-delay="3">
         <table>
-          <thead><tr><th>Provider</th><th style="text-align:right">$/hr per GPU</th><th style="text-align:right">$/hr (4x)</th><th style="text-align:right">$/month</th></tr></thead>
+          <thead><tr><th>Provider</th><th style="text-align:right">$/hr (1 GPU)</th><th style="text-align:right">$/hr (4 GPUs)</th><th style="text-align:right">$/month (24/7)</th></tr></thead>
           <tbody>
             <tr><td><strong>Vast.ai</strong></td><td class="num">$1.49&ndash;1.87</td><td class="num">$5.96&ndash;7.48</td><td class="num"><strong>$4,300&ndash;5,400</strong></td></tr>
             <tr><td><strong>RunPod Community (PCIe)</strong></td><td class="num">$1.99</td><td class="num">$7.96</td><td class="num"><strong>~$5,730</strong></td></tr>
@@ -309,14 +309,14 @@
       </div>
     </div>
     <div class="col">
-      <p class="text-sm text-dim mb-12" data-animate data-delay="4"><strong style="color:#e6edf3">Alternative configs</strong> &mdash; more KV cache headroom</p>
+      <p class="text-sm text-dim mb-12" data-animate data-delay="4"><strong style="color:#e6edf3">Alternative configs</strong> &mdash; more GPUs = more KV cache headroom</p>
       <div class="table-wrap" data-animate data-delay="4">
         <table>
-          <thead><tr><th>Config</th><th>Provider</th><th style="text-align:right">$/hr</th><th style="text-align:right">$/month</th></tr></thead>
+          <thead><tr><th>Config (GPUs needed)</th><th>Provider</th><th style="text-align:right">$/hr (total)</th><th style="text-align:right">$/month (24/7)</th></tr></thead>
           <tbody>
-            <tr><td>4x H200 141GB</td><td><strong>RunPod</strong></td><td class="num">$14.36</td><td class="num"><strong>~$10,340</strong></td></tr>
-            <tr><td>8x A100 SXM 80GB</td><td><strong>Vast.ai</strong></td><td class="num">~$8.80</td><td class="num"><strong>~$6,340</strong></td></tr>
-            <tr><td>8x A100 SXM 80GB</td><td><strong>RunPod</strong></td><td class="num">$11.12</td><td class="num"><strong>~$8,010</strong></td></tr>
+            <tr><td>4 GPUs &mdash; H200 141GB</td><td><strong>RunPod</strong></td><td class="num">$14.36</td><td class="num"><strong>~$10,340</strong></td></tr>
+            <tr><td>8 GPUs &mdash; A100 SXM 80GB</td><td><strong>Vast.ai</strong></td><td class="num">~$8.80</td><td class="num"><strong>~$6,340</strong></td></tr>
+            <tr><td>8 GPUs &mdash; A100 SXM 80GB</td><td><strong>RunPod</strong></td><td class="num">$11.12</td><td class="num"><strong>~$8,010</strong></td></tr>
           </tbody>
         </table>
       </div>
@@ -338,16 +338,16 @@
   <div class="divider" data-animate data-delay="2"></div>
   <div class="row gap-60 mt-32">
     <div class="col">
-      <p class="text-sm text-dim mb-12" data-animate data-delay="3">12 hrs/day &times; weekdays only = <strong style="color:#e6edf3">~260 hrs/month</strong></p>
+      <p class="text-sm text-dim mb-12" data-animate data-delay="3">12 hrs/day &times; weekdays = <strong style="color:#e6edf3">~260 hrs/month</strong> &middot; All configs use <strong style="color:#e6edf3">4 GPUs</strong></p>
       <div class="table-wrap" data-animate data-delay="3">
         <table>
-          <thead><tr><th>Config</th><th>Provider</th><th style="text-align:right">$/month</th><th style="text-align:right">vs 24/7</th></tr></thead>
+          <thead><tr><th>4 GPUs</th><th>Provider</th><th style="text-align:right">$/month (biz hrs)</th><th style="text-align:right">vs 24/7</th></tr></thead>
           <tbody>
-            <tr><td>4x H100 SXM</td><td><strong>Vast.ai</strong></td><td class="num"><strong>~$1,550&ndash;1,950</strong></td><td class="num">save ~$3K</td></tr>
-            <tr><td>4x H100 PCIe</td><td><strong>RunPod Community</strong></td><td class="num"><strong>~$2,070</strong></td><td class="num">save ~$3.7K</td></tr>
-            <tr><td>4x H100 SXM</td><td><strong>RunPod Secure</strong></td><td class="num"><strong>~$2,490</strong></td><td class="num">save ~$4.4K</td></tr>
-            <tr><td>4x H100 SXM</td><td><strong>RunPod Community</strong></td><td class="num"><strong>~$2,800</strong></td><td class="num">save ~$5K</td></tr>
-            <tr><td>4x H100 SXM</td><td><strong>Lambda Cloud</strong></td><td class="num"><strong>~$3,110</strong></td><td class="num">save ~$5.5K</td></tr>
+            <tr><td>H100 SXM 80GB</td><td><strong>Vast.ai</strong></td><td class="num"><strong>~$1,550&ndash;1,950</strong></td><td class="num">save ~$3K</td></tr>
+            <tr><td>H100 PCIe 80GB</td><td><strong>RunPod Community</strong></td><td class="num"><strong>~$2,070</strong></td><td class="num">save ~$3.7K</td></tr>
+            <tr><td>H100 SXM 80GB</td><td><strong>RunPod Secure</strong></td><td class="num"><strong>~$2,490</strong></td><td class="num">save ~$4.4K</td></tr>
+            <tr><td>H100 SXM 80GB</td><td><strong>RunPod Community</strong></td><td class="num"><strong>~$2,800</strong></td><td class="num">save ~$5K</td></tr>
+            <tr><td>H100 SXM 80GB</td><td><strong>Lambda Cloud</strong></td><td class="num"><strong>~$3,110</strong></td><td class="num">save ~$5.5K</td></tr>
           </tbody>
         </table>
       </div>
