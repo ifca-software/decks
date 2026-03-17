@@ -651,6 +651,7 @@
             <tr><td>License</td><td title="Apache 2.0 — most permissive open-source license. No branding, attribution, or royalty requirements. Can white-label freely."><strong class="accent">Apache 2.0</strong></td><td title="Modified MIT — commercial use allowed but must prominently display 'MiniMax M2.5' in the product UI">Modified MIT (branding req.)</td></tr>
             <tr><td>Languages</td><td title="Supports 201 languages and dialects natively, including Malay, Chinese, Tamil, and English — all relevant for Malaysian market"><strong class="accent">201 languages</strong></td><td>~10 languages</td></tr>
             <tr><td>Context</td><td title="262K tokens native, extensible to over 1 million tokens"><strong class="accent">262K</strong> (1M+ ext.)</td><td>196K</td></tr>
+            <tr><td title="Multimodal = the model can process images, documents, and audio natively — not just text. No need for separate OCR, speech-to-text, or vision pipelines.">Multimodal</td><td title="Qwen 3.5 has dedicated vision-language (VL) variants that process images, scanned documents, and screenshots natively. No OCR or separate vision pipeline needed."><strong class="accent">Native (vision + audio)</strong></td><td title="MiniMax M2.5 is text-only. Processing images, scanned documents, or voice requires separate OCR/STT services piped into the model.">Text only</td></tr>
             <tr><td title="VRAM needed at FP8 (8-bit) precision">VRAM (FP8)</td><td>~400GB (8x H100)</td><td title="MiniMax needs less VRAM because fewer total parameters"><strong class="accent">~280GB (4x H100)</strong></td></tr>
             <tr><td title="Software engineering benchmark — real-world bug fixing on GitHub repos">SWE-bench</td><td>~77%</td><td><strong class="accent">80.2%</strong></td></tr>
             <tr><td title="Graduate-level reasoning questions across science disciplines">GPQA Diamond</td><td><strong class="accent">87.4%</strong></td><td>Not reported</td></tr>
@@ -665,6 +666,7 @@
         <p class="label">Why Qwen 3.5 matters for IFCA</p>
         <p class="text-md" style="color:#c9d1d9;margin-top:8px"><strong class="accent">Apache 2.0</strong> &mdash; no "MiniMax" branding on our products. White-label freely.</p>
         <p class="text-md" style="color:#c9d1d9;margin-top:4px"><strong class="accent">201 languages</strong> &mdash; Malay, Chinese, Tamil, English natively. Perfect for MY market.</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:4px"><strong class="accent">Multimodal</strong> &mdash; vision + audio built in. No separate OCR or speech-to-text pipeline. One model does it all.</p>
         <p class="text-md" style="color:#c9d1d9;margin-top:4px"><strong class="accent">Model range</strong> &mdash; 0.8B to 397B. Use the 27B for simple tasks on 1 GPU ($0.79/hr), flagship for complex ones.</p>
       </div>
       <div class="card mt-16" data-animate data-delay="6">
