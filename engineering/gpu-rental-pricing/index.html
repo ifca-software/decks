@@ -634,7 +634,53 @@
   </div>
 </div>
 
-<!-- ===== 10. RECOMMENDATION ===== -->
+<!-- ===== 10. QWEN ALTERNATIVE ===== -->
+<div class="slide bg-navy" data-title="Qwen 3.5 Alternative" data-slug="qwen">
+  <div class="pill" data-animate data-delay="0">Model Alternative</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Consider <strong class="accent">Qwen 3.5</strong> alongside MiniMax<br>&mdash; or instead of it</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-24">
+    <div class="col">
+      <div class="table-wrap" data-animate data-delay="3">
+        <table>
+          <thead><tr><th></th><th title="Alibaba's open-source AI model family. Released Feb 2026.">Qwen 3.5</th><th>MiniMax M2.5</th></tr></thead>
+          <tbody>
+            <tr><td>Architecture</td><td title="Mixture of Experts — 397 billion total parameters, only 17 billion active per token"><strong>397B MoE</strong> (17B active)</td><td>230B MoE (10B active)</td></tr>
+            <tr><td>License</td><td title="Apache 2.0 — most permissive open-source license. No branding, attribution, or royalty requirements. Can white-label freely."><strong class="accent">Apache 2.0</strong></td><td title="Modified MIT — commercial use allowed but must prominently display 'MiniMax M2.5' in the product UI">Modified MIT (branding req.)</td></tr>
+            <tr><td>Languages</td><td title="Supports 201 languages and dialects natively, including Malay, Chinese, Tamil, and English — all relevant for Malaysian market"><strong class="accent">201 languages</strong></td><td>~10 languages</td></tr>
+            <tr><td>Context</td><td title="262K tokens native, extensible to over 1 million tokens"><strong class="accent">262K</strong> (1M+ ext.)</td><td>196K</td></tr>
+            <tr><td title="VRAM needed at FP8 (8-bit) precision">VRAM (FP8)</td><td>~400GB (8x H100)</td><td title="MiniMax needs less VRAM because fewer total parameters"><strong class="accent">~280GB (4x H100)</strong></td></tr>
+            <tr><td title="Software engineering benchmark — real-world bug fixing on GitHub repos">SWE-bench</td><td>~77%</td><td><strong class="accent">80.2%</strong></td></tr>
+            <tr><td title="Graduate-level reasoning questions across science disciplines">GPQA Diamond</td><td><strong class="accent">87.4%</strong></td><td>Not reported</td></tr>
+            <tr><td title="LiveCodeBench — competitive programming benchmark">LiveCodeBench</td><td><strong class="accent">83.6%</strong></td><td>Not reported</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-dim mt-8" data-animate data-delay="4">Sources: <a href="https://qwen.ai/blog?id=qwen3.5" target="_blank">Qwen blog</a> &middot; <a href="https://www.minimax.io/news/minimax-m25" target="_blank">MiniMax blog</a></p>
+    </div>
+    <div class="col">
+      <div class="card emphasis" data-animate data-delay="5">
+        <p class="label">Why Qwen 3.5 matters for IFCA</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px"><strong class="accent">Apache 2.0</strong> &mdash; no "MiniMax" branding on our products. White-label freely.</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:4px"><strong class="accent">201 languages</strong> &mdash; Malay, Chinese, Tamil, English natively. Perfect for MY market.</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:4px"><strong class="accent">Model range</strong> &mdash; 0.8B to 397B. Use the 27B for simple tasks on 1 GPU ($0.79/hr), flagship for complex ones.</p>
+      </div>
+      <div class="card mt-16" data-animate data-delay="6">
+        <p class="label">Recommended setup</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px"><strong class="accent">Qwen 3.5-27B</strong> (dense, FP8) &mdash; fits on <strong class="accent">1x L40S</strong> (48GB). $0.79/hr = <strong class="accent">~$569/mo</strong> 24/7. Good for standard ERP queries.</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:4px"><strong class="accent">Qwen 3.5-122B-A10B</strong> (MoE) &mdash; same 10B active as MiniMax. Fits on <strong class="accent">4x H100</strong>. For complex agentic work.</p>
+      </div>
+      <div class="card mt-16" data-animate data-delay="7">
+        <p class="label">The play</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px">Run <strong class="accent">Qwen 27B for routine tasks</strong> (cheap) and <strong class="accent">MiniMax M2.5 for agentic coding</strong> (best SWE-bench). Route by workload. Best of both worlds.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 11. RECOMMENDATION ===== -->
 <div class="slide bg-gradient" data-title="Recommendation" data-slug="close" style="justify-content:center">
   <div class="max-w">
     <div class="pill" data-animate data-delay="0">Recommendation</div>
