@@ -79,18 +79,49 @@
   .slide td strong { color: #7ee787 !important; }
   .slide tr:last-child td { border-bottom: none; }
 
-  /* Tooltip indicator — dotted underline + help cursor on titled elements */
-  .slide span[title], .slide p[title], .slide strong[title], .slide td[title], .slide th[title] {
+  /* Tooltip indicator — dotted underline + help cursor */
+  .slide [data-tip] {
     cursor: help;
     text-decoration: underline dotted rgba(126, 231, 135, 0.45);
     text-underline-offset: 3px;
     text-decoration-thickness: 1.5px;
+    position: relative;
   }
-  .slide span[title]:hover, .slide p[title]:hover, .slide strong[title]:hover, .slide td[title]:hover, .slide th[title]:hover {
+  .slide [data-tip]:hover {
     text-decoration-color: rgba(126, 231, 135, 0.8);
   }
-  /* Links already have their own underline */
-  .slide a[title] { cursor: pointer; }
+  /* Custom tooltip popup — instant on hover */
+  .slide [data-tip]::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    background: #1c2128;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 360px;
+    min-width: 200px;
+    width: max-content;
+    white-space: normal;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+  .slide [data-tip]:hover::after {
+    opacity: 1;
+  }
+  /* Links keep their own underline style */
+  .slide a[data-tip] { cursor: pointer; text-decoration: underline !important; text-decoration-color: rgba(126, 231, 135, 0.3) !important; }
 </style>
 
 <!-- ===== 1. TITLE ===== -->
@@ -101,7 +132,7 @@
     <p class="subtitle text-dim">Cloud <span title="GPU = Graphics Processing Unit. The hardware that runs AI models. Made by NVIDIA. Renting GPUs from cloud providers is cheaper than buying servers.">GPU</span> cost comparison for hosting <span title="MiniMax M2.5 — a 229-billion parameter open-source AI model by MiniMax (Chinese AI lab). Uses Mixture of Experts architecture. MIT licensed = fully commercial, no royalties. Comparable to GPT-4 class models but self-hostable.">MiniMax M2.5</span> <span title="Inference = running a trained AI model to generate responses. This is the production workload — what happens when a user asks a question and the AI answers.">inference</span></p>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
-  <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad &middot; March 2026 &middot; Internal &middot; <span style="border-bottom:1px dotted rgba(126,231,135,0.35);cursor:help" title="Like this! Dotted underlines indicate a term has a tooltip. Hover to learn more.">Hover dotted terms for definitions</span></p>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad &middot; March 2026 &middot; Internal &middot; <span title="Like this! Dotted underlines indicate a term has a tooltip. Hover to learn more.">Hover dotted terms for definitions</span></p>
 </div>
 
 <!-- ===== 2. WHY RENT ===== -->
@@ -622,6 +653,14 @@
   </div>
 </div>
 
+<script>
+  // Convert all title attributes to data-tip to suppress native tooltips
+  // and use our custom CSS tooltips instead (instant, styled, dark theme)
+  document.querySelectorAll('.slide [title]').forEach(el => {
+    el.setAttribute('data-tip', el.getAttribute('title'));
+    el.removeAttribute('title');
+  });
+</script>
 <script src="../../shared/js/deck-init.js"></script>
 <script>
   DeckInit({
