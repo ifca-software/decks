@@ -157,7 +157,7 @@
 .testimonial .role { font-size: 13px; color: var(--gray-500); }
 
 /* === TABLE === */
-.table-wrap { width: 100%; overflow: hidden; border-radius: 8px; }
+.table-wrap { width: 100%; overflow: visible; border-radius: 8px; }
 table {
   width: 100%;
   border-collapse: collapse;

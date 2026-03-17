@@ -142,6 +142,8 @@
   }
 
   function bindClick() {
+    var isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
     document.addEventListener('click', function(e) {
       if (e.target.closest('.slide-menu') || e.target.closest('.menu-btn')) return;
       if (e.target.closest('a')) return;
@@ -150,7 +152,10 @@
 
       if (menuOpen) { toggleMenu(); return; }
 
-      if (e.clientX > window.innerWidth * 0.3) {
+      // Disable click-to-navigate on touch devices — use swipe only
+      if (isTouchDevice) return;
+
+      if (e.clientX > window.innerWidth * 0.5) {
         showSlide(current + 1);
       } else {
         showSlide(current - 1);
@@ -159,18 +164,21 @@
   }
 
   function bindTouch() {
-    var touchStartX = 0, touchStartY = 0;
+    var touchStartX = 0, touchStartY = 0, touchStartTime = 0;
     document.addEventListener('touchstart', function(e) {
       if (e.target.closest('.slide-menu') || e.target.closest('.menu-btn')) return;
       touchStartX = e.touches[0].clientX;
       touchStartY = e.touches[0].clientY;
+      touchStartTime = Date.now();
     });
     document.addEventListener('touchend', function(e) {
       if (e.target.closest('.slide-menu') || e.target.closest('.menu-btn')) return;
       if (e.target.closest('.jargon') && e.target.closest('.jargon')._tooltipShown) return;
       var diffX = touchStartX - e.changedTouches[0].clientX;
       var diffY = touchStartY - e.changedTouches[0].clientY;
-      if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY)) {
+      var elapsed = Date.now() - touchStartTime;
+      // Require: 80px min swipe, horizontal ≥ 2× vertical, completed within 600ms
+      if (Math.abs(diffX) > 80 && Math.abs(diffX) > Math.abs(diffY) * 2 && elapsed < 600) {
         if (menuOpen) { toggleMenu(); return; }
         diffX > 0 ? showSlide(current + 1) : showSlide(current - 1);
       }
