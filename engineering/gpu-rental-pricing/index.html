@@ -64,8 +64,8 @@
     background: #1c2128; color: #7ee787; padding: 2px 8px; border-radius: 4px; border: 1px solid #30363d; font-size: 0.85em;
   }
 
-  .slide a { color: #7ee787 !important; }
-  .slide a:hover { color: #56d364 !important; }
+  .slide a { color: #7ee787 !important; text-decoration: underline !important; text-decoration-color: rgba(126, 231, 135, 0.3) !important; text-underline-offset: 3px; }
+  .slide a:hover { color: #56d364 !important; text-decoration-color: rgba(86, 211, 100, 0.6) !important; }
   .slide .quote { color: #8b949e !important; border-left-color: #7ee787 !important; }
 
   /* === Table === */
@@ -151,10 +151,12 @@
       <div class="card emphasis" data-animate data-delay="5">
         <p class="label">FP8 (8-bit) &mdash; official open-source release</p>
         <p class="text-md" style="color:#c9d1d9;margin-top:8px">Only 8-bit quantised weights are open-sourced by MiniMax.</p>
+        <p class="text-sm text-dim" style="margin-top:8px">Source: <a href="https://huggingface.co/MiniMaxAI/MiniMax-M1-80k-FP8" target="_blank">HuggingFace</a> &middot; <a href="https://minimaxi.com/en/news/minimax-text-01-open-weight" target="_blank">MiniMax blog</a></p>
       </div>
       <div class="card mt-16" data-animate data-delay="6">
         <p class="label">Also available (community)</p>
         <p class="text-md" style="color:#c9d1d9;margin-top:8px"><strong class="accent">FP8+INT4 AWQ</strong> &mdash; ~92.5GB VRAM. Runs on 2x 48GB GPUs. Dramatically cheaper if quality holds.</p>
+        <p class="text-sm text-dim" style="margin-top:8px">Source: <a href="https://huggingface.co/casperhansen/MiniMax-M1-80k-AWQ" target="_blank">HuggingFace (AWQ)</a></p>
       </div>
     </div>
   </div>
@@ -179,7 +181,7 @@
           </tbody>
         </table>
       </div>
-      <p class="text-sm text-dim mt-16" data-animate data-delay="4">Max context per sequence: <strong style="color:#e6edf3">196K tokens</strong> regardless of total KV cache capacity</p>
+      <p class="text-sm text-dim mt-16" data-animate data-delay="4">Max context per sequence: <strong style="color:#e6edf3">196K tokens</strong> &middot; Source: <a href="https://huggingface.co/MiniMaxAI/MiniMax-M1-80k-FP8" target="_blank">HuggingFace model card</a></p>
     </div>
     <div class="col">
       <p class="text-sm text-dim mb-12" data-animate data-delay="5"><strong style="color:#e6edf3">GPU configs &mdash; what fits</strong></p>
@@ -227,7 +229,7 @@
       </tbody>
     </table>
   </div>
-  <p class="text-sm text-dim mt-16" data-animate data-delay="4">H100 prices trending sub-$2/hr by mid-2026 as H200/Blackwell supply increases</p>
+  <p class="text-sm text-dim mt-16" data-animate data-delay="4">H100 prices trending sub-$2/hr by mid-2026 as H200/Blackwell supply increases &middot; Sources: <a href="https://www.runpod.io/pricing" target="_blank">RunPod</a> &middot; <a href="https://vast.ai/pricing" target="_blank">Vast.ai</a> &middot; <a href="https://www.coreweave.com/pricing" target="_blank">CoreWeave</a> &middot; <a href="https://lambdalabs.com/service/gpu-cloud/pricing" target="_blank">Lambda</a></p>
 </div>
 
 <!-- ===== 5. RUNPOD FULL MENU ===== -->
@@ -235,7 +237,7 @@
   <div class="pill" data-animate data-delay="0">RunPod &mdash; Full GPU Menu</div>
   <div class="slide-head" data-animate data-delay="1">
     <h2 class="text-navy">RunPod pricing across all GPU tiers</h2>
-    <p class="subline">Community Cloud rates &middot; per-second billing &middot; no egress fees</p>
+    <p class="subline">Community Cloud rates &middot; per-second billing &middot; no egress fees &middot; <a href="https://www.runpod.io/pricing" target="_blank">runpod.io/pricing</a></p>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="row gap-60 mt-24">
@@ -367,7 +369,64 @@
   </div>
 </div>
 
-<!-- ===== 8. CUSTOMER PRICING ===== -->
+<!-- ===== 8. CONCURRENT USERS ===== -->
+<div class="slide bg-navy" data-title="Concurrent Users" data-slug="concurrency">
+  <div class="pill" data-animate data-delay="0">How Many Users Can It Handle?</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>MiniMax M2.5 on 4x H100 &mdash;<br>how many <strong class="accent">concurrent agentic workloads</strong>?</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-24">
+    <div class="col">
+      <p class="text-sm text-dim mb-12" data-animate data-delay="3"><strong style="color:#e6edf3">Benchmark data</strong> &mdash; MiniMax M2.1 on 4x H200 via vLLM (<a href="https://docs.jarvislabs.ai/blog/minimax-m21-vllm-deployment-guide" target="_blank" style="color:#7ee787">Jarvislabs</a>)</p>
+      <div class="table-wrap" data-animate data-delay="3">
+        <table>
+          <thead><tr><th>Metric</th><th style="text-align:right">Max throughput</th><th style="text-align:right">Production (16 conn.)</th></tr></thead>
+          <tbody>
+            <tr><td>Output tokens/s</td><td class="num">6,624 tok/s</td><td class="num"><strong>919 tok/s</strong></td></tr>
+            <tr><td title="Time to first token — how long before the user sees the first word">Time to first token</td><td class="num">2,890ms</td><td class="num"><strong>57ms</strong></td></tr>
+            <tr><td title="Time between each token — determines perceived typing speed">Inter-token latency</td><td class="num">130ms</td><td class="num"><strong>17ms</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-dim mt-16" data-animate data-delay="4"><strong style="color:#e6edf3">Typical agentic request</strong></p>
+      <div class="table-wrap" data-animate data-delay="4">
+        <table>
+          <thead><tr><th>Workload</th><th style="text-align:right">Input</th><th style="text-align:right">Output</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Sales lead creation</td><td class="num">~500&ndash;1K tok</td><td class="num">~200&ndash;500 tok</td><td>Parse inquiry, create CRM record</td></tr>
+            <tr><td>Sales performance query</td><td class="num">~1K&ndash;3K tok</td><td class="num">~500&ndash;1K tok</td><td>Aggregate data, generate summary</td></tr>
+            <tr><td>Property booking</td><td class="num">~1K&ndash;2K tok</td><td class="num">~300&ndash;800 tok</td><td>Check availability, confirm booking</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col">
+      <p class="text-sm text-dim mb-12" data-animate data-delay="5"><strong style="color:#e6edf3">Estimated throughput &amp; concurrent capacity</strong></p>
+      <div class="table-wrap" data-animate data-delay="5">
+        <table>
+          <thead><tr><th>Config</th><th style="text-align:right" title="Total output tokens per second across all concurrent streams">Throughput</th><th style="text-align:right" title="Tokens per second experienced by each individual user">Per-user</th><th style="text-align:right" title="Users actively waiting for AI response at the same time">Active gen.</th><th style="text-align:right" title="Total users in a day assuming 10-20% are generating at any moment">Total users</th></tr></thead>
+          <tbody>
+            <tr><td><strong title="NVIDIA H100 80GB SXM — minimum viable config, tight KV cache">4x H100 80GB</strong></td><td class="num" title="Estimated ~30% lower than 4x H200 due to tighter VRAM limiting batch size">~500&ndash;700 tok/s</td><td class="num" title="Each user sees ~40-50 tok/s — fast enough for streaming responses">~40&ndash;50</td><td class="num">10&ndash;20</td><td class="num"><strong>~50&ndash;100</strong></td></tr>
+            <tr><td><strong title="NVIDIA H200 141GB — more VRAM headroom for larger KV cache batches">4x H200 141GB</strong></td><td class="num" title="Benchmarked: 919 tok/s at 16 concurrent connections (Jarvislabs, M2.1)"><strong>~919 tok/s</strong></td><td class="num" title="Each user sees ~50-60 tok/s at typical concurrency">~50&ndash;60</td><td class="num">15&ndash;25</td><td class="num"><strong>~75&ndash;150</strong></td></tr>
+            <tr><td><strong title="NVIDIA H100 80GB SXM x8 — double KV headroom, supports more parallel batches">8x H100 80GB</strong></td><td class="num" title="Estimated based on doubled KV cache headroom enabling more parallel batches">~1,200&ndash;1,500 tok/s</td><td class="num" title="Each user sees ~50-60 tok/s with more headroom for bursts">~50&ndash;60</td><td class="num">20&ndash;40</td><td class="num"><strong>~100&ndash;200</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-dim mt-8" data-animate data-delay="5">4x H200 throughput: <a href="https://docs.jarvislabs.ai/blog/minimax-m21-vllm-deployment-guide" target="_blank">Jarvislabs benchmark</a> &middot; Per-user: <a href="https://minimaxi.com/en/news/minimax-text-01-open-weight" target="_blank">MiniMax ~50 tok/s (M2.5)</a></p>
+      <div class="card emphasis mt-16" data-animate data-delay="6">
+        <p class="label">Why total users &gt; active generations</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px">In practice, users spend <strong class="accent">80&ndash;90% of time reading, thinking, or working</strong> &mdash; not waiting for AI. Only 10&ndash;20% are actively generating at any moment.</p>
+      </div>
+      <div class="card mt-16" data-animate data-delay="7">
+        <p class="label">4x H100 = enough for</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px"><strong class="accent">~15&ndash;30 sales agents</strong> creating leads, querying performance, and booking properties throughout the workday.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. CUSTOMER PRICING ===== -->
 <div class="slide bg-navy" data-title="Customer Pricing" data-slug="customer-pricing">
   <div class="pill" data-animate data-delay="0">What We Charge</div>
   <div class="slide-head" data-animate data-delay="1">
@@ -406,18 +465,22 @@
     <div class="card" data-animate data-delay="3">
       <h3>IP ServerOne NovaGPU</h3>
       <p class="text-md" style="color:#c9d1d9">RTX 3090 &rarr; H200 NVL on-demand. ISO27017, PCI-DSS compliant. Pay-per-use.</p>
+      <p class="text-sm text-dim" style="margin-top:8px"><a href="https://www.novagpu.com/" target="_blank">novagpu.com</a> &middot; <a href="https://soyacincau.com/2025/06/02/ip-serverone-launches-novagpu-affordable-gpu-cloud-service-smes/" target="_blank">SoyaCincau</a></p>
     </div>
     <div class="card" data-animate data-delay="3">
       <h3>SNS AI Factory</h3>
       <p class="text-md" style="color:#c9d1d9">64x H100 (Dell XE9680). Bursa-listed. Hosted at TM Cyberjaya DC.</p>
+      <p class="text-sm text-dim" style="margin-top:8px"><a href="https://vulcanpost.com/885081/sns-ai-factory-malaysia-h100-gpuaas-for-companies/" target="_blank">VulcanPost</a></p>
     </div>
     <div class="card" data-animate data-delay="4">
       <h3>Maxis Business</h3>
       <p class="text-md" style="color:#c9d1d9">First telco GPUaaS in MY. Enterprise SLAs. Planning GB200.</p>
+      <p class="text-sm text-dim" style="margin-top:8px"><a href="https://www.maxis.com.my/en/business/solutions/cloud/gpu-as-a-service/" target="_blank">maxis.com.my</a></p>
     </div>
     <div class="card" data-animate data-delay="4">
       <h3>Telekom Malaysia</h3>
       <p class="text-md" style="color:#c9d1d9">NVIDIA-powered GPUaaS. Uptime Tier-III data centres. Sovereign AI stack.</p>
+      <p class="text-sm text-dim" style="margin-top:8px"><a href="https://tm.com.my/business/connectivity/cloud/gpu" target="_blank">tm.com.my</a></p>
     </div>
   </div>
 </div>
