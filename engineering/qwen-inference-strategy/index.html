@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qwen 3.5 Inference Strategy — IFCA AIX</title>
+<meta property="og:title" content="Qwen 3.5 Inference Strategy — IFCA AIX">
+<meta property="og:description" content="Self-hosted Qwen 3.5 inference — model tiers, GPU costs, and deployment strategy.">
+<meta property="og:type" content="website">
+<meta name="deck-base" content="../../">
+<meta name="deck-sibling" data-href="../gpu-rental-pricing/" data-label="GPU Rental Pricing">
+<meta name="deck-sibling" data-href="../gpu-infrastructure-strategy/" data-label="GPU Infrastructure Strategy">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230d1117'/><text x='16' y='21' text-anchor='middle' font-family='monospace' font-weight='800' font-size='12' fill='%237ee787'>&gt;_</text></svg>">
+<link rel="stylesheet" href="../../shared/css/deck.css">
+<meta name="robots" content="noindex, nofollow">
+<script src="../../shared/js/auth-gate.js"></script>
+</head>
+<body>
+
+<!-- ===== TERMINAL THEME ===== -->
+<style>
+  .slide { background: #0d1117 !important; }
+  .slide.bg-navy { background: #010409 !important; }
+  .slide.bg-white { background: #0d1117 !important; }
+  .slide.bg-gray { background: #161b22 !important; }
+  .slide.bg-gradient { background: linear-gradient(160deg, #0d1117 0%, #161b22 50%, #1c2128 100%) !important; }
+
+  .slide h1, .slide h2 { color: #e6edf3 !important; }
+  .slide h3 { color: #e6edf3 !important; }
+  .slide .text-navy { color: #e6edf3 !important; }
+  .slide .text-dim { color: #8b949e !important; }
+  .slide .text-gray-600, .slide .subline { color: #9ca3af !important; }
+  .slide .text-gray-500 { color: #6b7280 !important; }
+  .slide .text-cream { color: #e6edf3 !important; }
+  .slide p, .slide li, .slide span { color: inherit; }
+  .slide ul.clean li > span { color: #c9d1d9; }
+
+  .slide .accent, .slide strong.accent { color: #7ee787 !important; }
+  .slide .bold { font-weight: 700; }
+
+  .slide .pill { border-color: #48535f !important; color: #c9d1d9 !important; background: transparent !important; }
+  .slide .divider { background: #30363d !important; }
+  .slide .bullet { background: #7ee787 !important; }
+
+  .slide .card { background: #161b22 !important; border: 1px solid #30363d !important; color: #c9d1d9 !important; }
+  .slide .card h3 { color: #e6edf3 !important; }
+  .slide .card .label { color: #8b949e !important; }
+  .slide .card .value { color: #e6edf3 !important; }
+  .slide .card .value.accent { color: #7ee787 !important; }
+  .slide .card .text-md { color: #8b949e !important; }
+  .slide .card .text-sm { color: #6b7280 !important; }
+  .slide .card strong { color: #e6edf3; }
+
+  .slide .card.emphasis { background: #1c2128 !important; border-color: #7ee787 !important; }
+
+  .slide .big-number { color: #e6edf3 !important; }
+  .slide .big-number.accent { color: #7ee787 !important; }
+  .slide .big-number.sm { color: #e6edf3 !important; }
+  .slide .big-number.sm.accent { color: #7ee787 !important; }
+
+  .slide code {
+    font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', monospace;
+    background: #1c2128; color: #7ee787; padding: 2px 8px; border-radius: 4px; border: 1px solid #30363d; font-size: 0.85em;
+  }
+
+  .slide a { color: #7ee787 !important; text-decoration: underline !important; text-decoration-color: rgba(126, 231, 135, 0.3) !important; text-underline-offset: 3px; }
+  .slide a:hover { color: #56d364 !important; text-decoration-color: rgba(86, 211, 100, 0.6) !important; }
+  .slide .quote { color: #8b949e !important; border-left-color: #7ee787 !important; }
+
+  /* === Table === */
+  .slide .table-wrap { background: #1c2128; border: 1px solid #30363d; border-radius: 8px; padding: 4px 0; }
+  .slide table { border-collapse: collapse; width: 100%; }
+  .slide th, .bg-gray table th, .bg-navy table th, .bg-white table th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #c9d1d9 !important; background: #252d38 !important; padding: 12px 16px; border-bottom: 1px solid #30363d; }
+  .slide td, .bg-gray table td, .bg-navy table td, .bg-white table td { padding: 12px 16px; border-bottom: 1px solid #30363d; color: #e6edf3 !important; font-size: 14px; }
+  .bg-gray table td:first-child, .bg-navy table td:first-child, .bg-white table td:first-child { color: #e6edf3 !important; }
+  .bg-gray table td strong, .bg-navy table td strong, .bg-white table td strong { color: #7ee787 !important; }
+  .slide td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .slide td strong { color: #7ee787 !important; }
+  .slide tr:last-child td { border-bottom: none; }
+
+  /* Tooltip indicator — dotted underline + help cursor */
+  .slide [data-tip] {
+    cursor: help;
+    text-decoration: underline dotted rgba(126, 231, 135, 0.45);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+    position: relative;
+  }
+  .slide [data-tip]:hover {
+    text-decoration-color: rgba(126, 231, 135, 0.8);
+  }
+  /* Custom tooltip popup — instant on hover */
+  .slide [data-tip]::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    background: #1c2128;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 360px;
+    min-width: 200px;
+    width: max-content;
+    white-space: normal;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+  .slide [data-tip]:hover::after {
+    opacity: 1;
+  }
+  /* Links keep their own underline style */
+  .slide a[data-tip] { cursor: pointer; text-decoration: underline !important; text-decoration-color: rgba(126, 231, 135, 0.3) !important; }
+</style>
+
+<!-- ===== 1. TITLE ===== -->
+<div class="slide bg-gradient active" data-title="Qwen 3.5 Inference Strategy" data-slug="title">
+  <div class="pill" data-animate data-delay="0">IFCA AIX</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h1>Qwen 3.5<br>Inference Strategy</h1>
+    <p class="subtitle text-dim">Self-hosted <span title="Alibaba Cloud's open-source AI model family. Qwen (通义千问) is developed by Alibaba's DAMO Academy. One of the most capable open-source model families, backed by a $200B+ company.">Qwen 3.5</span> for private <span title="Inference = running a trained AI model to generate responses. This is the production workload — what happens when a user asks a question and the AI answers.">inference</span> across IFCA products</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad &middot; March 2026 &middot; Internal &middot; <span title="Like this! Dotted underlines indicate a term has a tooltip. Hover to learn more.">Hover dotted terms for definitions</span></p>
+</div>
+
+<!-- ===== 2. WHY QWEN ===== -->
+<div class="slide bg-navy" data-title="Why Qwen 3.5" data-slug="why-qwen">
+  <div class="pill" data-animate data-delay="0">Why Qwen</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2><strong class="accent">Alibaba-backed</strong>, Apache 2.0,<br>201 languages. Open source done right.</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3">
+      <p class="big-number sm accent mb-12" title="Alibaba Group — one of the world's largest tech companies. Market cap ~$200B+. Qwen is developed by their DAMO Academy AI research division.">Alibaba</p>
+      <h3>Big Name Backing</h3>
+      <p class="text-md" style="color:#c9d1d9">Developed by <span title="DAMO Academy — Alibaba's global research initiative. 1,000+ researchers across AI, quantum computing, and chip design.">DAMO Academy</span>. Alibaba Cloud runs it at scale. Long-term commitment to open source.</p>
+    </div>
+    <div class="card" data-animate data-delay="4">
+      <p class="big-number sm accent mb-12" title="Apache 2.0 — most permissive open-source license. No branding, attribution, or royalty requirements. Can white-label freely. No strings attached.">Apache 2.0</p>
+      <h3>No Strings Attached</h3>
+      <p class="text-md" style="color:#c9d1d9">Fully commercial. No branding requirements. White-label it as IFCA's own AI. No royalties, ever.</p>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="big-number sm accent mb-12">201</p>
+      <h3>Languages &amp; Dialects</h3>
+      <p class="text-md" style="color:#c9d1d9">Malay, Chinese (Simplified + Traditional), Tamil, English &mdash; all natively supported. Perfect for <span title="Malaysia's four main languages: Bahasa Melayu, English, Mandarin/Cantonese, and Tamil. All are relevant for IFCA's ERP customer base.">Malaysian market</span>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3. MODEL FAMILY ===== -->
+<div class="slide bg-gray" data-title="Model Family" data-slug="models">
+  <div class="pill" data-animate data-delay="0">The Model Family</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">Qwen 3.5 &mdash; <strong class="accent">8 models</strong><br>from edge to enterprise</h2>
+    <p class="subline">All released Feb&ndash;Mar 2026 &middot; <a href="https://qwen.ai/blog?id=qwen3.5" target="_blank">qwen.ai</a></p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-24">
+    <div class="col">
+      <div class="table-wrap" data-animate data-delay="3">
+        <table>
+          <thead><tr><th>Model</th><th style="text-align:right" title="Total number of parameters in the model. More parameters = more knowledge and capability, but more memory needed.">Params</th><th style="text-align:right" title="How many parameters actually activate per token. In MoE models, only a fraction runs per word — the rest stays idle. Lower = faster and cheaper to run.">Active</th><th title="Dense = all parameters active every time. MoE (Mixture of Experts) = only a subset active per token, making it faster.">Type</th></tr></thead>
+          <tbody>
+            <tr><td><strong>397B-A17B</strong></td><td class="num">397B</td><td class="num"><strong>17B</strong></td><td title="Mixture of Experts with hybrid Gated DeltaNet + standard attention layers. 512 experts total, 10 routed + 1 shared per token.">MoE</td></tr>
+            <tr><td><strong>122B-A10B</strong></td><td class="num">122B</td><td class="num"><strong>10B</strong></td><td>MoE</td></tr>
+            <tr><td><strong>35B-A3B</strong></td><td class="num">35B</td><td class="num"><strong>3B</strong></td><td>MoE</td></tr>
+            <tr><td><strong>27B</strong></td><td class="num">27B</td><td class="num">27B</td><td title="Dense = every parameter is used for every token. Simpler to deploy but uses more compute per token than MoE.">Dense</td></tr>
+            <tr><td>9B</td><td class="num">9B</td><td class="num">9B</td><td>Dense</td></tr>
+            <tr><td>4B</td><td class="num">4B</td><td class="num">4B</td><td>Dense</td></tr>
+            <tr><td>2B</td><td class="num">2B</td><td class="num">2B</td><td>Dense</td></tr>
+            <tr><td>0.8B</td><td class="num">0.8B</td><td class="num">0.8B</td><td>Dense</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card emphasis" data-animate data-delay="4">
+        <p class="label">Why this matters for IFCA</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px"><strong class="accent">Match model to workload.</strong> Simple ERP query? Use the 27B on 1 GPU. Complex multi-step agent? Use the 122B. No need to pay for the flagship on every request.</p>
+      </div>
+      <div class="card mt-16" data-animate data-delay="5">
+        <p class="label">Architecture</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px">Hybrid <span title="Gated DeltaNet — a linear attention mechanism that processes long contexts much faster than standard transformer attention. Gives Qwen 3.5 an 8–19x speed advantage over previous Qwen models at long contexts.">Gated DeltaNet</span> + sparse <span title="MoE = Mixture of Experts. The model has 512 specialist sub-networks. For each word generated, it picks the 10 most relevant + 1 shared expert. This is why it's fast despite having 397B total parameters.">MoE</span>.</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:4px"><strong class="accent">262K context</strong> native, extensible to <strong class="accent">1M+ tokens</strong>.</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:4px"><strong class="accent">8&ndash;19x faster</strong> decoding than previous Qwen at long contexts.</p>
+      </div>
+      <div class="card mt-16" data-animate data-delay="6">
+        <p class="label">Deploy via</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px"><span title="vLLM — open-source high-throughput inference engine for large language models. Industry standard for serving AI models in production.">vLLM</span>, <span title="SGLang — fast LLM serving framework with structured generation support. Alternative to vLLM.">SGLang</span>, <span title="NVIDIA TensorRT-LLM — NVIDIA's optimised inference engine. Best performance on NVIDIA GPUs but more complex to set up than vLLM.">TensorRT-LLM</span>, <span title="Ollama — simple tool for running AI models locally on a laptop or desktop. One-command install. Good for testing.">Ollama</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 4. BENCHMARKS ===== -->
+<div class="slide bg-navy" data-title="Benchmarks" data-slug="benchmarks">
+  <div class="pill" data-animate data-delay="0">Benchmarks</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Qwen 3.5 &mdash; competing with the<br><strong class="accent">best closed-source models</strong></h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-24">
+    <div class="col">
+      <div class="table-wrap" data-animate data-delay="3">
+        <table>
+          <thead><tr><th>Benchmark</th><th style="text-align:right">Qwen 3.5 (397B)</th><th>What it measures</th></tr></thead>
+          <tbody>
+            <tr><td title="MMLU-Pro — Massive Multitask Language Understanding. Tests knowledge across 57 academic subjects (science, math, history, law, medicine, etc.)"><strong>MMLU-Pro</strong></td><td class="num"><strong>87.2%</strong></td><td>General knowledge across 57 subjects</td></tr>
+            <tr><td title="GPQA Diamond — Graduate-level science questions written by PhD domain experts. Very difficult — many humans score below 50%."><strong>GPQA Diamond</strong></td><td class="num"><strong>87.4%</strong></td><td>PhD-level science reasoning</td></tr>
+            <tr><td title="LiveCodeBench v6 — competitive programming problems published after model training. Tests genuine coding ability, not memorisation."><strong>LiveCodeBench v6</strong></td><td class="num"><strong>83.6%</strong></td><td>Real-world coding ability</td></tr>
+            <tr><td title="SWE-bench Verified — automated bug fixing on real GitHub repositories. The model reads code, diagnoses the bug, and writes a fix."><strong>SWE-bench</strong></td><td class="num"><strong>~77%</strong></td><td>Real-world bug fixing</td></tr>
+            <tr><td title="BFCL-V4 — Berkeley Function Calling Leaderboard. Tests the model's ability to correctly use APIs and tools."><strong>BFCL-V4</strong></td><td class="num"><strong>72.2%</strong></td><td>Tool use &amp; API calling</td></tr>
+            <tr><td title="Terminal-Bench 2 — tests ability to use command-line tools and terminal workflows autonomously."><strong>Terminal-Bench 2</strong></td><td class="num"><strong>49.4%</strong></td><td>Terminal &amp; CLI automation</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-dim mt-8" data-animate data-delay="4">Source: <a href="https://qwen.ai/blog?id=qwen3.5" target="_blank">Qwen 3.5 blog</a> &middot; <a href="https://huggingface.co/Qwen/Qwen3.5-397B-A17B" target="_blank">HuggingFace</a></p>
+    </div>
+    <div class="col">
+      <div class="card emphasis" data-animate data-delay="5">
+        <p class="label">Where it stands</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px">Qwen 3.5 (397B) trades blows with <strong class="accent">Claude Opus and GPT-4</strong> on most benchmarks. It's the strongest open-source model available today.</p>
+        <p class="text-sm text-dim" style="margin-top:8px">Best-in-class among open-weight models on MMLU-Pro, GPQA, and LiveCodeBench.</p>
+      </div>
+      <div class="card mt-16" data-animate data-delay="6">
+        <p class="label">Smaller models still strong</p>
+        <div class="table-wrap" style="margin-top:8px">
+          <table>
+            <thead><tr><th>Model</th><th style="text-align:right">MMLU-Pro</th><th style="text-align:right">GPQA</th></tr></thead>
+            <tbody>
+              <tr><td><strong>122B-A10B</strong></td><td class="num">~82%</td><td class="num">~80%</td></tr>
+              <tr><td><strong>27B</strong></td><td class="num">~72%</td><td class="num">~65%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-dim" style="margin-top:8px">The 27B model on 1 GPU still outperforms GPT-3.5 on most tasks.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 5. VRAM & GPU REQUIREMENTS ===== -->
+<div class="slide bg-gray" data-title="VRAM Requirements" data-slug="vram">
+  <div class="pill" data-animate data-delay="0">What Hardware Do You Need?</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">GPU requirements per model &mdash;<br>from <strong class="accent">1 GPU</strong> to <strong class="accent">8 GPUs</strong></h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-24">
+    <div class="col">
+      <div class="table-wrap" data-animate data-delay="3">
+        <table>
+          <thead><tr><th>Model</th><th style="text-align:right" title="VRAM needed at FP8 (8-bit) precision — the standard for production inference">VRAM (FP8)</th><th style="text-align:right" title="Minimum GPU configuration to run this model">GPUs needed</th><th style="text-align:right" title="Monthly cost running 24/7 on RunPod Community Cloud">$/mo (24/7)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>397B-A17B</strong></td><td class="num">~400GB</td><td class="num" title="8x NVIDIA H100 80GB SXM (Mar 2023, Hopper). 640GB total VRAM. Server cost: $200K–400K to buy.">8x H100 80GB</td><td class="num"><strong>~$15,500</strong></td></tr>
+            <tr><td><strong>122B-A10B</strong></td><td class="num">~130GB</td><td class="num" title="2x NVIDIA H100 80GB — 160GB total. Or 4x NVIDIA L40S 48GB (192GB total) for more KV cache headroom.">2x H100 80GB</td><td class="num"><strong>~$3,870</strong></td></tr>
+            <tr><td><strong>35B-A3B</strong></td><td class="num">~40GB</td><td class="num" title="NVIDIA L40S (Oct 2023). Data centre inference GPU, 48GB GDDR6. ~$7K–8K to buy. Designed for AI inference.">1x L40S 48GB</td><td class="num"><strong>~$569</strong></td></tr>
+            <tr><td><strong>27B</strong></td><td class="num">~27GB</td><td class="num" title="Fits on a single L40S with 21GB spare for KV cache. Can also run on an RTX 4090 (24GB) at 4-bit quantisation.">1x L40S 48GB</td><td class="num"><strong>~$569</strong></td></tr>
+            <tr><td>9B</td><td class="num">~9GB</td><td class="num" title="NVIDIA GeForce RTX 4090 (Oct 2022). Consumer GPU, 24GB GDDR6X. MSRP $1,599. Can run several small models.">1x RTX 4090</td><td class="num"><strong>~$245</strong></td></tr>
+            <tr><td>4B</td><td class="num">~4GB</td><td class="num">1x RTX 4090</td><td class="num"><strong>~$245</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-dim mt-8" data-animate data-delay="4">Prices: <a href="https://www.runpod.io/pricing" target="_blank">RunPod Community Cloud</a>. FP8 VRAM: <a href="https://apxml.com/posts/qwen-3-5-system-requirement-vram-guide" target="_blank">apxml.com</a></p>
+    </div>
+    <div class="col">
+      <div class="card emphasis" data-animate data-delay="5">
+        <p class="label">The sweet spot</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px"><strong class="accent">Qwen 3.5-27B on 1x L40S</strong> at <strong class="accent">$569/mo</strong> handles standard ERP queries, summaries, and translations. One GPU. That's it.</p>
+      </div>
+      <div class="card mt-16" data-animate data-delay="6">
+        <p class="label">Business hours pricing</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px">12hrs/day &times; weekdays = <strong class="accent">~260 hrs/mo</strong></p>
+        <div class="table-wrap" style="margin-top:8px">
+          <table>
+            <thead><tr><th>Model</th><th style="text-align:right">Biz hrs/mo</th></tr></thead>
+            <tbody>
+              <tr><td><strong>397B</strong> (8x H100)</td><td class="num"><strong>~$5,600</strong></td></tr>
+              <tr><td><strong>122B</strong> (2x H100)</td><td class="num"><strong>~$1,035</strong></td></tr>
+              <tr><td><strong>27B</strong> (1x L40S)</td><td class="num"><strong>~$205</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 6. CONCURRENT USERS ===== -->
+<div class="slide bg-navy" data-title="Concurrent Users" data-slug="concurrency">
+  <div class="pill" data-animate data-delay="0">How Many Users?</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Estimated <strong class="accent">concurrent capacity</strong><br>per model tier</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-24">
+    <div class="col">
+      <p class="text-sm text-dim mb-12" data-animate data-delay="3"><strong style="color:#e6edf3">Typical agentic request</strong> for IFCA products</p>
+      <div class="table-wrap" data-animate data-delay="3">
+        <table>
+          <thead><tr><th>Workload</th><th style="text-align:right">Input</th><th style="text-align:right">Output</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Sales lead creation</td><td class="num">~500&ndash;1K tok</td><td class="num">~200&ndash;500 tok</td><td>Parse inquiry, create record</td></tr>
+            <tr><td>Sales performance query</td><td class="num">~1K&ndash;3K tok</td><td class="num">~500&ndash;1K tok</td><td>Aggregate data, generate summary</td></tr>
+            <tr><td>Property booking</td><td class="num">~1K&ndash;2K tok</td><td class="num">~300&ndash;800 tok</td><td>Check availability, confirm booking</td></tr>
+            <tr><td>ERP data lookup</td><td class="num">~200&ndash;500 tok</td><td class="num">~100&ndash;300 tok</td><td>Tenant balance, invoice status</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card mt-16" data-animate data-delay="4">
+        <p class="label">Why total users &gt; active generations</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px">Users spend <strong class="accent">80&ndash;90% of time reading/working</strong>, not waiting for AI. Only 10&ndash;20% generate at any moment.</p>
+      </div>
+    </div>
+    <div class="col">
+      <p class="text-sm text-dim mb-12" data-animate data-delay="5"><strong style="color:#e6edf3">Estimated capacity per setup</strong></p>
+      <div class="table-wrap" data-animate data-delay="5">
+        <table>
+          <thead><tr><th>Model &amp; Config</th><th style="text-align:right" title="Total output tokens per second across all concurrent streams">Total tok/s</th><th style="text-align:right" title="Users actively waiting for AI response at the same time">Active gen.</th><th style="text-align:right" title="Total users supported throughout the day">Total users</th></tr></thead>
+          <tbody>
+            <tr><td><strong>27B</strong> (1x L40S)</td><td class="num">~200&ndash;400</td><td class="num">5&ndash;10</td><td class="num"><strong>~25&ndash;50</strong></td></tr>
+            <tr><td><strong>122B</strong> (2x H100)</td><td class="num">~400&ndash;700</td><td class="num">8&ndash;15</td><td class="num"><strong>~40&ndash;75</strong></td></tr>
+            <tr><td><strong>122B</strong> (4x H100)</td><td class="num">~700&ndash;1,000</td><td class="num">12&ndash;20</td><td class="num"><strong>~60&ndash;100</strong></td></tr>
+            <tr><td><strong>397B</strong> (8x H100)</td><td class="num">~1,000&ndash;1,500</td><td class="num">15&ndash;30</td><td class="num"><strong>~75&ndash;150</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card emphasis mt-16" data-animate data-delay="6">
+        <p class="label">Sizing guide</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px"><strong class="accent">27B (1 GPU)</strong> &mdash; ~10&ndash;20 agents &middot; small customer</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:4px"><strong class="accent">122B (2&ndash;4 GPUs)</strong> &mdash; ~15&ndash;40 agents &middot; mid customer</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:4px"><strong class="accent">397B (8 GPUs)</strong> &mdash; ~30&ndash;60 agents &middot; enterprise</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7. CUSTOMER PRICING ===== -->
+<div class="slide bg-gray" data-title="Customer Pricing" data-slug="customer-pricing">
+  <div class="pill" data-animate data-delay="0">What We Charge</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy"><strong class="accent">"Your data never leaves your environment."</strong><br>Three tiers at 2&ndash;3x markup.</h2>
+    <p class="subline">Dedicated GPUs, <span title="PDPA = Personal Data Protection Act 2010. Malaysia's data privacy law. Non-compliance carries fines up to RM500K and/or imprisonment.">PDPA</span> compliance, no shared API calls</p>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="card-grid cols-3 mt-32">
+    <div class="card" data-animate data-delay="3">
+      <p class="label">Standard &mdash; Qwen 27B</p>
+      <p class="text-sm text-dim">1x L40S &middot; ~10&ndash;20 agents</p>
+      <div style="margin-top:16px">
+        <p class="text-sm" style="color:#8b949e">24/7</p>
+        <p class="big-number sm accent">$1.1K&ndash;1.7K</p>
+        <p class="text-sm text-dim">Our cost: $569</p>
+      </div>
+      <div style="margin-top:16px">
+        <p class="text-sm" style="color:#8b949e">Biz hours</p>
+        <p class="big-number sm accent">$410&ndash;615</p>
+        <p class="text-sm text-dim">Our cost: $205</p>
+      </div>
+      <div style="margin-top:16px;padding-top:12px;border-top:1px solid #30363d">
+        <p class="text-sm" style="color:#7ee787">Margin: $500&ndash;1.1K/mo</p>
+      </div>
+    </div>
+    <div class="card emphasis" data-animate data-delay="4">
+      <p class="label">Premium &mdash; Qwen 122B</p>
+      <p class="text-sm text-dim">2&ndash;4x H100 &middot; ~15&ndash;40 agents</p>
+      <div style="margin-top:16px">
+        <p class="text-sm" style="color:#8b949e">24/7</p>
+        <p class="big-number sm accent">$8K&ndash;17K</p>
+        <p class="text-sm text-dim">Our cost: $3.9K&ndash;5.7K</p>
+      </div>
+      <div style="margin-top:16px">
+        <p class="text-sm" style="color:#8b949e">Biz hours</p>
+        <p class="big-number sm accent">$2K&ndash;5K</p>
+        <p class="text-sm text-dim">Our cost: $1K&ndash;2.1K</p>
+      </div>
+      <div style="margin-top:16px;padding-top:12px;border-top:1px solid #7ee787">
+        <p class="text-sm" style="color:#7ee787">Margin: $4K&ndash;11K/mo</p>
+      </div>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="label">Enterprise &mdash; Qwen 397B</p>
+      <p class="text-sm text-dim">8x H100 &middot; ~30&ndash;60 agents</p>
+      <div style="margin-top:16px">
+        <p class="text-sm" style="color:#8b949e">24/7</p>
+        <p class="big-number sm accent">$31K&ndash;47K</p>
+        <p class="text-sm text-dim">Our cost: $15.5K</p>
+      </div>
+      <div style="margin-top:16px">
+        <p class="text-sm" style="color:#8b949e">Biz hours</p>
+        <p class="big-number sm accent">$11K&ndash;17K</p>
+        <p class="text-sm text-dim">Our cost: $5.6K</p>
+      </div>
+      <div style="margin-top:16px;padding-top:12px;border-top:1px solid #30363d">
+        <p class="text-sm" style="color:#7ee787">Margin: $16K&ndash;31K/mo</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 8. MULTILINGUAL ADVANTAGE ===== -->
+<div class="slide bg-navy" data-title="Multilingual Advantage" data-slug="multilingual">
+  <div class="pill" data-animate data-delay="0">Malaysian Market Fit</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>201 languages &mdash; built for markets<br>like <strong class="accent">Malaysia</strong></h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-32">
+    <div class="col">
+      <div class="card-grid cols-2">
+        <div class="card" data-animate data-delay="3">
+          <p class="big-number sm accent">BM</p>
+          <p class="text-md" style="color:#c9d1d9">Bahasa Melayu &mdash; native support for <span title="GLC = Government-Linked Company. Malaysian companies with significant government shareholding. Examples: Petronas, Tenaga Nasional, Maybank.">GLC</span> and government customers</p>
+        </div>
+        <div class="card" data-animate data-delay="3">
+          <p class="big-number sm accent">中文</p>
+          <p class="text-md" style="color:#c9d1d9">Chinese (Simplified + Traditional) &mdash; property developer market</p>
+        </div>
+        <div class="card" data-animate data-delay="4">
+          <p class="big-number sm accent">EN</p>
+          <p class="text-md" style="color:#c9d1d9">English &mdash; international clients and internal teams</p>
+        </div>
+        <div class="card" data-animate data-delay="4">
+          <p class="big-number sm accent">தமிழ்</p>
+          <p class="text-md" style="color:#c9d1d9">Tamil &mdash; healthcare and plantation sector customers</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card emphasis" data-animate data-delay="5">
+        <p class="label">Cross-language agents</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px">A property developer's sales team speaks Mandarin. Their tenants speak Malay. The finance team uses English. <strong class="accent">One model handles all three</strong> &mdash; no language-specific fine-tuning needed.</p>
+      </div>
+      <div class="card mt-16" data-animate data-delay="6">
+        <p class="label">Competitive edge</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px">Most competitors (ChatGPT, Claude) are English-first with bolted-on multilingual support. <strong class="accent">Qwen was trained multilingually from the ground up</strong> &mdash; Alibaba's own market demanded it.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. RECOMMENDATION ===== -->
+<div class="slide bg-gradient" data-title="Recommendation" data-slug="close" style="justify-content:center">
+  <div class="max-w">
+    <div class="pill" data-animate data-delay="0">Recommendation</div>
+    <h2 data-animate data-delay="1">Start with <strong class="accent">Qwen 27B on 1 GPU</strong>.<br>Scale up by workload complexity.</h2>
+    <div class="divider" data-animate data-delay="2"></div>
+    <ul class="clean mt-32">
+      <li data-animate data-delay="3"><span class="bullet"></span><span><strong class="accent">Phase 1 — POC</strong> &mdash; Qwen 27B on RunPod (1x L40S, $569/mo). Prove it works with FMX, RentX, HotelX.</span></li>
+      <li data-animate data-delay="4"><span class="bullet"></span><span><strong class="accent">Phase 2 — Production</strong> &mdash; Qwen 122B on 2&ndash;4x H100 ($3.9K&ndash;5.7K/mo). Complex agents for mid-tier customers.</span></li>
+      <li data-animate data-delay="5"><span class="bullet"></span><span><strong class="accent">Phase 3 — Enterprise</strong> &mdash; Qwen 397B on 8x H100 ($15.5K/mo). Flagship for large customers or MY-hosted sovereign AI.</span></li>
+      <li data-animate data-delay="6"><span class="bullet"></span><span><strong class="accent">Route by workload</strong> &mdash; simple ERP queries → 27B. Complex multi-step agents → 122B/397B. One cheap GPU handles 80% of requests.</span></li>
+    </ul>
+    <div class="quote mt-40" data-animate data-delay="7">
+      "Alibaba-backed. Apache 2.0. 201 languages. From $569/mo."
+    </div>
+    <p class="text-sm text-dim mt-auto" style="padding-left:32px" data-animate data-delay="8">Questions? <a href="mailto:georgeyws@ifca.com.my">georgeyws@ifca.com.my</a></p>
+  </div>
+</div>
+
+<script>
+  // Convert all title attributes to data-tip to suppress native tooltips
+  document.querySelectorAll('.slide [title]').forEach(el => {
+    el.setAttribute('data-tip', el.getAttribute('title'));
+    el.removeAttribute('title');
+  });
+</script>
+<script src="../../shared/js/deck-init.js"></script>
+<script>
+  DeckInit({
+    glossary: {
+      'Qwen': { def: 'Qwen (通义千问) — Alibaba\'s open-source AI model family. Developed by DAMO Academy. Apache 2.0 licensed.' },
+      'H100': { def: 'NVIDIA H100 80GB (Mar 2023, Hopper). AI workhorse. MSRP $25K–40K, prices crashed 50–85% from 2023 peak — now $12K–18K used.' },
+      'H200': { def: 'NVIDIA H200 141GB (Nov 2024, Hopper refresh). 141GB HBM3e — 1.8x more VRAM than H100. ~$25K–35K new.' },
+      'L40S': { def: 'NVIDIA L40S (Oct 2023). Data centre inference GPU, 48GB GDDR6. ~$7K–8K. Designed for AI inference.' },
+      'A100': { def: 'NVIDIA A100 80GB (Jun 2020, Ampere). Previous gen. Was $10K–20K, now ~$5K–10K used.' },
+      'SXM': { def: 'Server form factor with NVLink interconnect. Faster GPU-to-GPU communication than PCIe.' },
+      'PCIe': { def: 'Standard server expansion slot. Cheaper than SXM but slower GPU-to-GPU bandwidth.' },
+      'GPUaaS': { def: 'GPU-as-a-Service — renting GPU compute by the hour from a cloud provider instead of buying hardware.' },
+      'MoE': { def: 'Mixture of Experts — architecture where only a subset of parameters are active per token, reducing compute cost.' },
+      'vLLM': { def: 'High-throughput LLM inference engine. Open source. Industry standard for serving large models.' },
+      'FP8': { def: '8-bit floating point — half the memory of FP16/BF16 with minimal quality loss. Standard for inference.' },
+      'KV Cache': { def: 'Key-Value cache — memory used to store conversation state during inference. Scales with context length.' },
+      'PDPA': { def: 'Personal Data Protection Act 2010 — Malaysia\'s data privacy law governing processing of personal data.' },
+      'GLC': { def: 'Government-Linked Company — Malaysian companies with significant government shareholding.' },
+    }
+  });
+</script>
+</body>
+</html>
