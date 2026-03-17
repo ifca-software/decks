@@ -246,16 +246,16 @@
         <table>
           <thead><tr><th>GPU</th><th style="text-align:right">VRAM</th><th style="text-align:right">$/hr (1 GPU)</th></tr></thead>
           <tbody>
-            <tr><td title="NVIDIA GeForce RTX 3090 — previous-gen consumer GPU, cheapest option">RTX 3090</td><td class="num">24GB</td><td class="num" title="4 GPUs 24/7: ~$634/mo | Biz hrs: ~$229/mo">$0.22</td></tr>
-            <tr><td title="NVIDIA GeForce RTX 4090 — current-gen consumer GPU, good for small models">RTX 4090</td><td class="num">24GB</td><td class="num" title="4 GPUs 24/7: ~$979/mo | Biz hrs: ~$354/mo">$0.34</td></tr>
-            <tr><td title="NVIDIA RTX 6000 Ada — professional workstation GPU with 48GB VRAM">RTX 6000 Ada</td><td class="num">48GB</td><td class="num" title="4 GPUs 24/7: ~$2,131/mo | Biz hrs: ~$770/mo">$0.74</td></tr>
-            <tr><td title="NVIDIA L40S — data centre GPU designed for AI inference, 48GB VRAM">L40S</td><td class="num">48GB</td><td class="num" title="4 GPUs 24/7: ~$2,275/mo | Biz hrs: ~$821/mo">$0.79</td></tr>
-            <tr><td title="NVIDIA A100 PCIe — previous-gen data centre GPU, standard PCIe slot">A100 PCIe</td><td class="num">80GB</td><td class="num" title="4 GPUs 24/7: ~$3,427/mo | Biz hrs: ~$1,237/mo">$1.19</td></tr>
-            <tr><td title="NVIDIA A100 SXM — same GPU but with faster NVLink GPU-to-GPU interconnect">A100 SXM</td><td class="num">80GB</td><td class="num" title="4 GPUs 24/7: ~$4,003/mo | Biz hrs: ~$1,445/mo">$1.39</td></tr>
-            <tr><td title="NVIDIA H100 PCIe — current-gen data centre GPU, standard PCIe slot"><strong>H100 PCIe</strong></td><td class="num">80GB</td><td class="num" title="4 GPUs 24/7: ~$5,731/mo | Biz hrs: ~$2,070/mo"><strong>$1.99</strong></td></tr>
-            <tr><td title="NVIDIA H100 SXM — same GPU but with faster NVLink interconnect. Recommended for multi-GPU inference"><strong>H100 SXM</strong></td><td class="num">80GB</td><td class="num" title="4 GPUs 24/7: ~$7,747/mo | Biz hrs: ~$2,797/mo"><strong>$2.69</strong></td></tr>
-            <tr><td title="NVIDIA H200 — successor to H100 with 141GB HBM3e memory. More headroom for large models"><strong>H200</strong></td><td class="num">141GB</td><td class="num" title="4 GPUs 24/7: ~$10,339/mo | Biz hrs: ~$3,734/mo"><strong>$3.59</strong></td></tr>
-            <tr><td title="NVIDIA B200 — next-gen Blackwell architecture. Highest performance, newest GPU available">B200</td><td class="num">180GB</td><td class="num" title="4 GPUs 24/7: ~$17,222/mo | Biz hrs: ~$6,219/mo">$5.98</td></tr>
+            <tr><td title="NVIDIA GeForce RTX 3090 (Sep 2020). Consumer GPU, 24GB GDDR6X. MSRP $1,499 at launch, now ~$600–800 used. Ampere architecture.">RTX 3090</td><td class="num">24GB</td><td class="num" title="4 GPUs 24/7: ~$634/mo | Biz hrs: ~$229/mo">$0.22</td></tr>
+            <tr><td title="NVIDIA GeForce RTX 4090 (Oct 2022). Consumer GPU, 24GB GDDR6X. MSRP $1,599, street ~$1,800–2,200. Ada Lovelace architecture. Best consumer GPU for AI.">RTX 4090</td><td class="num">24GB</td><td class="num" title="4 GPUs 24/7: ~$979/mo | Biz hrs: ~$354/mo">$0.34</td></tr>
+            <tr><td title="NVIDIA RTX 6000 Ada (Dec 2022). Professional workstation GPU, 48GB GDDR6. MSRP $6,800. Ada Lovelace architecture. Popular for inference due to large VRAM.">RTX 6000 Ada</td><td class="num">48GB</td><td class="num" title="4 GPUs 24/7: ~$2,131/mo | Biz hrs: ~$770/mo">$0.74</td></tr>
+            <tr><td title="NVIDIA L40S (Oct 2023). Data centre inference GPU, 48GB GDDR6. ~$7,000–8,000. Ada Lovelace architecture. Designed specifically for AI inference, not training.">L40S</td><td class="num">48GB</td><td class="num" title="4 GPUs 24/7: ~$2,275/mo | Biz hrs: ~$821/mo">$0.79</td></tr>
+            <tr><td title="NVIDIA A100 80GB PCIe (Jun 2020). Data centre GPU, 80GB HBM2e. Was $10K–15K, now ~$5K–8K used (prices crashed ~50%). Ampere architecture. Still widely deployed.">A100 PCIe</td><td class="num">80GB</td><td class="num" title="4 GPUs 24/7: ~$3,427/mo | Biz hrs: ~$1,237/mo">$1.19</td></tr>
+            <tr><td title="NVIDIA A100 80GB SXM (Jun 2020). Same chip as PCIe but with NVLink for faster GPU-to-GPU comms. Was $15K–20K, now ~$7K–10K used. Preferred for multi-GPU workloads.">A100 SXM</td><td class="num">80GB</td><td class="num" title="4 GPUs 24/7: ~$4,003/mo | Biz hrs: ~$1,445/mo">$1.39</td></tr>
+            <tr><td title="NVIDIA H100 80GB PCIe (Mar 2023). Data centre GPU, 80GB HBM3. MSRP ~$25K–30K, peaked at $40K+ in 2023 shortage, now ~$18K–25K new. Hopper architecture. AI industry workhorse."><strong>H100 PCIe</strong></td><td class="num">80GB</td><td class="num" title="4 GPUs 24/7: ~$5,731/mo | Biz hrs: ~$2,070/mo"><strong>$1.99</strong></td></tr>
+            <tr><td title="NVIDIA H100 80GB SXM (Mar 2023). Same chip with NVLink 4.0 (900 GB/s). MSRP ~$35K–40K, peaked at $45K+ during shortage, now ~$25K–35K new, ~$12K–18K used. Prices crashed ~50–85% from peak. Recommended for multi-GPU inference."><strong>H100 SXM</strong></td><td class="num">80GB</td><td class="num" title="4 GPUs 24/7: ~$7,747/mo | Biz hrs: ~$2,797/mo"><strong>$2.69</strong></td></tr>
+            <tr><td title="NVIDIA H200 141GB (Nov 2024). Successor to H100 with 141GB HBM3e (vs 80GB HBM3). ~$25K–35K new. Hopper architecture refresh. 1.8x more memory than H100 = much more KV cache headroom for large models."><strong>H200</strong></td><td class="num">141GB</td><td class="num" title="4 GPUs 24/7: ~$10,339/mo | Biz hrs: ~$3,734/mo"><strong>$3.59</strong></td></tr>
+            <tr><td title="NVIDIA B200 180GB (Q1 2025). Next-gen Blackwell architecture, 180GB HBM3e. Estimated ~$30K–40K. Successor to H200 with ~2.5x inference perf. Just entering cloud availability.">B200</td><td class="num">180GB</td><td class="num" title="4 GPUs 24/7: ~$17,222/mo | Biz hrs: ~$6,219/mo">$5.98</td></tr>
           </tbody>
         </table>
       </div>
@@ -311,21 +311,22 @@
       </div>
     </div>
     <div class="col">
-      <p class="text-sm text-dim mb-12" data-animate data-delay="4"><strong style="color:#e6edf3">Alternative configs</strong> &mdash; more GPUs = more KV cache headroom</p>
+      <p class="text-sm text-dim mb-12" data-animate data-delay="4"><strong style="color:#e6edf3">Premium &amp; Enterprise configs</strong></p>
       <div class="table-wrap" data-animate data-delay="4">
         <table>
-          <thead><tr><th>Config (GPUs needed)</th><th>Provider</th><th style="text-align:right">$/hr (total)</th><th style="text-align:right">$/month (24/7)</th></tr></thead>
+          <thead><tr><th>Config</th><th>Provider</th><th style="text-align:right">$/hr (total)</th><th style="text-align:right">$/month (24/7)</th></tr></thead>
           <tbody>
-            <tr><td>4 GPUs &mdash; H200 141GB</td><td><strong>RunPod</strong></td><td class="num">$14.36</td><td class="num"><strong>~$10,340</strong></td></tr>
-            <tr><td>8 GPUs &mdash; A100 SXM 80GB</td><td><strong>Vast.ai</strong></td><td class="num">~$8.80</td><td class="num"><strong>~$6,340</strong></td></tr>
-            <tr><td>8 GPUs &mdash; A100 SXM 80GB</td><td><strong>RunPod</strong></td><td class="num">$11.12</td><td class="num"><strong>~$8,010</strong></td></tr>
+            <tr><td><strong>4x H200 141GB</strong></td><td><strong>RunPod</strong></td><td class="num">$14.36</td><td class="num"><strong>~$10,340</strong></td></tr>
+            <tr><td>8x A100 SXM 80GB</td><td><strong>Vast.ai</strong></td><td class="num">~$8.80</td><td class="num"><strong>~$6,340</strong></td></tr>
+            <tr><td>8x H100 80GB</td><td><strong>RunPod</strong></td><td class="num">$21.52</td><td class="num"><strong>~$15,500</strong></td></tr>
+            <tr><td><strong>8x H200 141GB</strong></td><td><strong>RunPod</strong></td><td class="num">$28.72</td><td class="num"><strong>~$20,680</strong></td></tr>
           </tbody>
         </table>
       </div>
       <div class="card emphasis mt-16" data-animate data-delay="5">
         <p class="label">Our cost range (24/7)</p>
-        <p class="big-number sm accent" style="margin-top:8px">$4,300&ndash;10,300</p>
-        <p class="text-sm text-dim">/month depending on provider &amp; config</p>
+        <p class="big-number sm accent" style="margin-top:8px">$4,300&ndash;20,700</p>
+        <p class="text-sm text-dim">/month &mdash; Standard to Enterprise</p>
       </div>
     </div>
   </div>
@@ -373,7 +374,7 @@
 <div class="slide bg-navy" data-title="Concurrent Users" data-slug="concurrency">
   <div class="pill" data-animate data-delay="0">How Many Users Can It Handle?</div>
   <div class="slide-head" data-animate data-delay="1">
-    <h2>MiniMax M2.5 on 4x H100 &mdash;<br>how many <strong class="accent">concurrent agentic workloads</strong>?</h2>
+    <h2>How many <strong class="accent">concurrent agentic workloads</strong><br>can each setup handle?</h2>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
   <div class="row gap-60 mt-24">
@@ -405,22 +406,25 @@
       <p class="text-sm text-dim mb-12" data-animate data-delay="5"><strong style="color:#e6edf3">Estimated throughput &amp; concurrent capacity</strong></p>
       <div class="table-wrap" data-animate data-delay="5">
         <table>
-          <thead><tr><th>Config</th><th style="text-align:right" title="Total output tokens per second across all concurrent streams">Throughput</th><th style="text-align:right" title="Tokens per second experienced by each individual user">Per-user</th><th style="text-align:right" title="Users actively waiting for AI response at the same time">Active gen.</th><th style="text-align:right" title="Total users in a day assuming 10-20% are generating at any moment">Total users</th></tr></thead>
+          <thead><tr><th>Config</th><th style="text-align:right" title="Total output tokens per second across all concurrent streams">Total tok/s</th><th style="text-align:right" title="Tokens per second experienced by each individual user">Per-user tok/s</th><th style="text-align:right" title="Users actively waiting for AI response at the same time">Active gen.</th><th style="text-align:right" title="Total users in a day assuming 10-20% are generating at any moment">Total users</th></tr></thead>
           <tbody>
-            <tr><td><strong title="NVIDIA H100 80GB SXM — minimum viable config, tight KV cache">4x H100 80GB</strong></td><td class="num" title="Estimated ~30% lower than 4x H200 due to tighter VRAM limiting batch size">~500&ndash;700 tok/s</td><td class="num" title="Each user sees ~40-50 tok/s — fast enough for streaming responses">~40&ndash;50</td><td class="num">10&ndash;20</td><td class="num"><strong>~50&ndash;100</strong></td></tr>
-            <tr><td><strong title="NVIDIA H200 141GB — more VRAM headroom for larger KV cache batches">4x H200 141GB</strong></td><td class="num" title="Benchmarked: 919 tok/s at 16 concurrent connections (Jarvislabs, M2.1)"><strong>~919 tok/s</strong></td><td class="num" title="Each user sees ~50-60 tok/s at typical concurrency">~50&ndash;60</td><td class="num">15&ndash;25</td><td class="num"><strong>~75&ndash;150</strong></td></tr>
-            <tr><td><strong title="NVIDIA H100 80GB SXM x8 — double KV headroom, supports more parallel batches">8x H100 80GB</strong></td><td class="num" title="Estimated based on doubled KV cache headroom enabling more parallel batches">~1,200&ndash;1,500 tok/s</td><td class="num" title="Each user sees ~50-60 tok/s with more headroom for bursts">~50&ndash;60</td><td class="num">20&ndash;40</td><td class="num"><strong>~100&ndash;200</strong></td></tr>
+            <tr><td><strong title="NVIDIA H100 80GB SXM (Mar 2023, Hopper). 4 GPUs = 320GB total. Tight KV cache but cheapest viable config. New: ~$35K/GPU, used: ~$12K–18K. Prices crashed 50–85% from 2023 peak.">4x H100 80GB</strong></td><td class="num" title="Estimated ~30% lower than 4x H200 due to tighter VRAM limiting batch size">~500&ndash;700</td><td class="num" title="Each user sees ~40-50 tok/s — fast enough for streaming responses">~40&ndash;50</td><td class="num">10&ndash;20</td><td class="num"><strong>~50&ndash;100</strong></td></tr>
+            <tr><td><strong title="NVIDIA H200 141GB (Nov 2024, Hopper refresh). 4 GPUs = 564GB total. 1.8x more VRAM than H100 = much more concurrent users. ~$25K–35K/GPU new. Premium tier.">4x H200 141GB</strong></td><td class="num" title="Benchmarked: 919 tok/s at 16 concurrent connections (Jarvislabs, M2.1)"><strong>~919</strong></td><td class="num" title="Each user sees ~50-60 tok/s at typical concurrency">~50&ndash;60</td><td class="num">15&ndash;25</td><td class="num"><strong>~75&ndash;150</strong></td></tr>
+            <tr><td><strong title="8x NVIDIA H100 80GB SXM (Mar 2023, Hopper). 640GB total. Double the KV cache headroom of 4x H100 = double the concurrent users. Server cost: $200K–400K new (e.g. Dell XE9680, NationGate NH8230).">8x H100 80GB</strong></td><td class="num" title="Estimated based on doubled KV cache headroom enabling more parallel batches">~1,200&ndash;1,500</td><td class="num" title="Each user sees ~50-60 tok/s with more headroom for bursts">~50&ndash;60</td><td class="num">20&ndash;40</td><td class="num"><strong>~100&ndash;200</strong></td></tr>
+            <tr><td><strong title="8x NVIDIA H200 141GB (Nov 2024, Hopper refresh). 1,128GB total VRAM. Maximum throughput and concurrency. Server cost: ~$300K–500K+ new. Enterprise tier for 50–100+ concurrent agents.">8x H200 141GB</strong></td><td class="num" title="Estimated ~2x the 4x H200 throughput with double the batch capacity">~1,800&ndash;2,200</td><td class="num" title="Each user sees ~50-60 tok/s even under heavy load">~50&ndash;60</td><td class="num">30&ndash;50</td><td class="num"><strong>~150&ndash;300</strong></td></tr>
           </tbody>
         </table>
       </div>
       <p class="text-sm text-dim mt-8" data-animate data-delay="5">4x H200 throughput: <a href="https://docs.jarvislabs.ai/blog/minimax-m21-vllm-deployment-guide" target="_blank">Jarvislabs benchmark</a> &middot; Per-user: <a href="https://minimaxi.com/en/news/minimax-text-01-open-weight" target="_blank">MiniMax ~50 tok/s (M2.5)</a></p>
       <div class="card emphasis mt-16" data-animate data-delay="6">
-        <p class="label">Why total users &gt; active generations</p>
-        <p class="text-md" style="color:#c9d1d9;margin-top:8px">In practice, users spend <strong class="accent">80&ndash;90% of time reading, thinking, or working</strong> &mdash; not waiting for AI. Only 10&ndash;20% are actively generating at any moment.</p>
+        <p class="label">Sizing guide</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px"><strong class="accent">4x H100</strong> &mdash; ~15&ndash;30 agents &middot; small&ndash;mid customer</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:4px"><strong class="accent">4x H200</strong> &mdash; ~25&ndash;50 agents &middot; mid&ndash;large customer</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:4px"><strong class="accent">8x H200</strong> &mdash; ~50&ndash;100 agents &middot; enterprise / multi-dept</p>
       </div>
       <div class="card mt-16" data-animate data-delay="7">
-        <p class="label">4x H100 = enough for</p>
-        <p class="text-md" style="color:#c9d1d9;margin-top:8px"><strong class="accent">~15&ndash;30 sales agents</strong> creating leads, querying performance, and booking properties throughout the workday.</p>
+        <p class="label">Why total users &gt; active agents</p>
+        <p class="text-md" style="color:#c9d1d9;margin-top:8px">Users spend <strong class="accent">80&ndash;90% of time reading/working</strong>, not waiting for AI. Only 10&ndash;20% generate at any moment.</p>
       </div>
     </div>
   </div>
@@ -430,27 +434,55 @@
 <div class="slide bg-navy" data-title="Customer Pricing" data-slug="customer-pricing">
   <div class="pill" data-animate data-delay="0">What We Charge</div>
   <div class="slide-head" data-animate data-delay="1">
-    <h2>At <strong class="accent">2&ndash;3x markup</strong> &mdash;<br>managed private inference pricing</h2>
+    <h2>At <strong class="accent">2&ndash;3x markup</strong> &mdash; three tiers<br>of managed private inference</h2>
   </div>
   <div class="divider" data-animate data-delay="2"></div>
-  <div class="card-grid cols-2 mt-32" style="max-width:700px">
-    <div class="card emphasis" data-animate data-delay="3">
-      <p class="label">24/7 Always-On</p>
-      <p class="big-number accent" style="margin-top:12px">$15K&ndash;23K</p>
-      <p class="text-sm text-dim">/month per customer</p>
-      <p class="text-md" style="color:#c9d1d9;margin-top:16px">Our cost: $4.3K&ndash;8.6K</p>
-      <p class="text-md" style="color:#c9d1d9"><strong class="accent">Margin: $7K&ndash;17K/mo</strong></p>
+  <div class="card-grid cols-3 mt-24">
+    <div class="card" data-animate data-delay="3">
+      <p class="label">Standard &mdash; 4x H100 80GB</p>
+      <p class="text-sm text-dim">~15&ndash;30 agents &middot; ~500&ndash;700 tok/s</p>
+      <div style="margin-top:12px">
+        <p class="text-sm" style="color:#8b949e">24/7</p>
+        <p class="big-number sm accent">$13K&ndash;23K</p>
+        <p class="text-sm text-dim">Our cost: $4.3K&ndash;7.7K</p>
+      </div>
+      <div style="margin-top:12px">
+        <p class="text-sm" style="color:#8b949e">Biz hours</p>
+        <p class="big-number sm accent">$5K&ndash;8K</p>
+        <p class="text-sm text-dim">Our cost: $1.6K&ndash;2.8K</p>
+      </div>
     </div>
     <div class="card emphasis" data-animate data-delay="4">
-      <p class="label">Business Hours Only</p>
-      <p class="big-number accent" style="margin-top:12px">$5K&ndash;8K</p>
-      <p class="text-sm text-dim">/month per customer</p>
-      <p class="text-md" style="color:#c9d1d9;margin-top:16px">Our cost: $1.5K&ndash;3.1K</p>
-      <p class="text-md" style="color:#c9d1d9"><strong class="accent">Margin: $2K&ndash;5K/mo</strong></p>
+      <p class="label">Premium &mdash; 4x H200 141GB</p>
+      <p class="text-sm text-dim">~25&ndash;50 agents &middot; ~919 tok/s</p>
+      <div style="margin-top:12px">
+        <p class="text-sm" style="color:#8b949e">24/7</p>
+        <p class="big-number sm accent">$21K&ndash;31K</p>
+        <p class="text-sm text-dim">Our cost: $10.3K</p>
+      </div>
+      <div style="margin-top:12px">
+        <p class="text-sm" style="color:#8b949e">Biz hours</p>
+        <p class="big-number sm accent">$7.5K&ndash;11K</p>
+        <p class="text-sm text-dim">Our cost: $3.7K</p>
+      </div>
+    </div>
+    <div class="card" data-animate data-delay="5">
+      <p class="label">Enterprise &mdash; 8x H200 141GB</p>
+      <p class="text-sm text-dim">~50&ndash;100 agents &middot; ~2,000 tok/s</p>
+      <div style="margin-top:12px">
+        <p class="text-sm" style="color:#8b949e">24/7</p>
+        <p class="big-number sm accent">$41K&ndash;62K</p>
+        <p class="text-sm text-dim">Our cost: $20.7K</p>
+      </div>
+      <div style="margin-top:12px">
+        <p class="text-sm" style="color:#8b949e">Biz hours</p>
+        <p class="big-number sm accent">$15K&ndash;22K</p>
+        <p class="text-sm text-dim">Our cost: $7.5K</p>
+      </div>
     </div>
   </div>
-  <div class="card mt-24" style="max-width:700px" data-animate data-delay="5">
-    <p class="text-md" style="color:#c9d1d9;text-align:center">Value proposition: <strong class="accent">"Your data never leaves your environment."</strong><br>Privacy + PDPA compliance + dedicated GPU &mdash; not shared API calls.</p>
+  <div class="card mt-16" style="max-width:800px" data-animate data-delay="6">
+    <p class="text-md" style="color:#c9d1d9;text-align:center">Value proposition: <strong class="accent">"Your data never leaves your environment."</strong> Privacy + PDPA compliance + dedicated GPU &mdash; not shared API calls.</p>
   </div>
 </div>
 
@@ -528,9 +560,9 @@
         <table>
           <thead><tr><th>GPU</th><th style="text-align:right">NovaGPU (MY)</th><th style="text-align:right">RunPod (US)</th><th style="text-align:right">Premium</th></tr></thead>
           <tbody>
-            <tr><td title="NVIDIA GeForce RTX 3090 — previous-gen consumer GPU">RTX 3090</td><td class="num">~$0.45/hr</td><td class="num">$0.22/hr</td><td class="num"><strong>2.0x</strong></td></tr>
-            <tr><td title="NVIDIA GeForce RTX 4090 — current-gen consumer GPU">RTX 4090</td><td class="num">~$0.61/hr</td><td class="num">$0.34/hr</td><td class="num"><strong>1.8x</strong></td></tr>
-            <tr><td title="NVIDIA H200 NVL — current-gen data centre GPU with 141GB HBM3e">H200 NVL</td><td class="num">~$4.39/hr</td><td class="num">$3.59/hr</td><td class="num"><strong>1.2x</strong></td></tr>
+            <tr><td title="NVIDIA GeForce RTX 3090 (Sep 2020, Ampere). Consumer GPU, 24GB GDDR6X. Was $1,499 MSRP, now ~$600–800 used.">RTX 3090</td><td class="num">~$0.45/hr</td><td class="num">$0.22/hr</td><td class="num"><strong>2.0x</strong></td></tr>
+            <tr><td title="NVIDIA GeForce RTX 4090 (Oct 2022, Ada Lovelace). Consumer GPU, 24GB GDDR6X. MSRP $1,599, street ~$1,800–2,200.">RTX 4090</td><td class="num">~$0.61/hr</td><td class="num">$0.34/hr</td><td class="num"><strong>1.8x</strong></td></tr>
+            <tr><td title="NVIDIA H200 NVL 141GB (Nov 2024, Hopper refresh). Data centre GPU with 141GB HBM3e. ~$25K–35K new. 1.8x more memory than H100.">H200 NVL</td><td class="num">~$4.39/hr</td><td class="num">$3.59/hr</td><td class="num"><strong>1.2x</strong></td></tr>
           </tbody>
         </table>
       </div>
@@ -574,10 +606,10 @@
 <script>
   DeckInit({
     glossary: {
-      'H100': { def: 'NVIDIA H100 Tensor Core GPU — the current workhorse for AI training and inference in data centres.' },
-      'H200': { def: 'NVIDIA H200 — successor to H100 with more HBM3e memory. Current generation.' },
-      'A100': { def: 'NVIDIA A100 — previous generation GPU. Still widely available and cost-effective for inference.' },
-      'B200': { def: 'NVIDIA B200 — Blackwell architecture. Next generation, highest performance.' },
+      'H100': { def: 'NVIDIA H100 80GB (Mar 2023, Hopper). AI workhorse. 80GB HBM3. MSRP $25K–40K, prices crashed 50–85% from 2023 peak — now $12K–18K used.' },
+      'H200': { def: 'NVIDIA H200 141GB (Nov 2024, Hopper refresh). 141GB HBM3e — 1.8x more VRAM than H100. ~$25K–35K new. Premium inference tier.' },
+      'A100': { def: 'NVIDIA A100 80GB (Jun 2020, Ampere). Previous gen. Was $10K–20K, now ~$5K–10K used. Still widely deployed and cost-effective.' },
+      'B200': { def: 'NVIDIA B200 180GB (Q1 2025, Blackwell). Next gen, 180GB HBM3e. ~$30K–40K est. ~2.5x inference perf over H100. Just entering availability.' },
       'SXM': { def: 'Server form factor with NVLink interconnect. Faster GPU-to-GPU communication than PCIe.' },
       'PCIe': { def: 'Standard server expansion slot. Cheaper than SXM but slower GPU-to-GPU bandwidth.' },
       'GPUaaS': { def: 'GPU-as-a-Service — renting GPU compute by the hour from a cloud provider instead of buying hardware.' },
