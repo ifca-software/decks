@@ -79,12 +79,18 @@
   .slide td strong { color: #7ee787 !important; }
   .slide tr:last-child td { border-bottom: none; }
 
-  /* Tooltip indicator — dotted underline + help cursor on all titled elements */
-  .slide [title] { cursor: help; border-bottom: 1px dotted rgba(126, 231, 135, 0.35); }
-  .slide [title]:hover { border-bottom-color: rgba(126, 231, 135, 0.7); }
-  /* Exclude structural elements that shouldn't show the indicator */
-  .slide th[title], .slide td[title], .slide tr[title], .slide a[title], .slide .card[title], .slide img[title] { border-bottom: none; cursor: default; }
-  .slide td[title], .slide th[title] { cursor: help; }
+  /* Tooltip indicator — dotted underline + help cursor on titled elements */
+  .slide span[title], .slide p[title], .slide strong[title], .slide td[title], .slide th[title] {
+    cursor: help;
+    text-decoration: underline dotted rgba(126, 231, 135, 0.45);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+  }
+  .slide span[title]:hover, .slide p[title]:hover, .slide strong[title]:hover, .slide td[title]:hover, .slide th[title]:hover {
+    text-decoration-color: rgba(126, 231, 135, 0.8);
+  }
+  /* Links already have their own underline */
+  .slide a[title] { cursor: pointer; }
 </style>
 
 <!-- ===== 1. TITLE ===== -->
