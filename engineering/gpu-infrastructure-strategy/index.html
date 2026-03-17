@@ -258,7 +258,123 @@
   </div>
 </div>
 
-<!-- ===== 8. KEY RISKS ===== -->
+<!-- ===== 8. CLOUD GPU RENTAL COMPARISON ===== -->
+<div class="slide bg-navy" data-title="Cloud GPU Pricing" data-slug="cloud-pricing">
+  <div class="pill" data-animate data-delay="0">Cloud GPU Pricing</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Renting GPUs &mdash; who charges what<br>for <strong class="accent">H100 80GB</strong> (March 2026)</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="table-wrap mt-24" data-animate data-delay="3">
+    <table>
+      <thead><tr><th>Provider</th><th style="text-align:right">$/hr per GPU</th><th>Type</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Vast.ai</strong></td><td class="num">$1.49&ndash;1.87</td><td>Marketplace</td><td>Cheapest. Peer-to-peer, variable availability</td></tr>
+        <tr><td><strong>RunPod Community</strong></td><td class="num">$1.99 (PCIe)<br>$2.69 (SXM)</td><td>Cloud</td><td>Per-second billing, no ingress/egress fees</td></tr>
+        <tr><td><strong>RunPod Secure</strong></td><td class="num">$2.39</td><td>Cloud</td><td>SOC2 compliant, dedicated infrastructure</td></tr>
+        <tr><td><strong>Lambda Cloud</strong></td><td class="num">$2.99</td><td>Cloud</td><td>Strong ML focus, good uptime SLAs</td></tr>
+        <tr><td><strong>Hyperstack</strong></td><td class="num">~$2.49</td><td>Cloud</td><td>Competitive mid-tier option</td></tr>
+        <tr><td><strong>CoreWeave</strong></td><td class="num">$2.06&ndash;2.62</td><td>Bare metal</td><td>Kubernetes-native, GPU specialist</td></tr>
+        <tr><td><strong>Jarvislabs</strong></td><td class="num">$2.99</td><td>Cloud</td><td>ML-focused, A100 from $1.19/hr</td></tr>
+        <tr><td><strong>AWS / GCP / Azure</strong></td><td class="num">$3.00&ndash;6.98</td><td>Hyperscaler</td><td>Enterprise SLAs, most expensive</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="text-sm text-dim mt-16" data-animate data-delay="4">H100 prices trending sub-$2/hr by mid-2026 as H200/Blackwell supply increases</p>
+</div>
+
+<!-- ===== 9. MINIMAX COST — 24/7 ===== -->
+<div class="slide bg-gray" data-title="MiniMax Cost (24/7)" data-slug="minimax-cost-247">
+  <div class="pill" data-animate data-delay="0">Running MiniMax &mdash; Always On</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2 class="text-navy">MiniMax M2.5 requires <strong class="accent">~280GB VRAM</strong><br>24/7 monthly cost by provider</h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-32">
+    <div class="col">
+      <p class="text-sm text-dim mb-12" data-animate data-delay="3"><strong style="color:#e6edf3">4x H100 SXM 80GB</strong> &mdash; minimum config (320GB total)</p>
+      <div class="table-wrap" data-animate data-delay="3">
+        <table>
+          <thead><tr><th>Provider</th><th style="text-align:right">$/hr per GPU</th><th style="text-align:right">$/hr (4x)</th><th style="text-align:right">$/month</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Vast.ai</strong></td><td class="num">$1.49&ndash;1.87</td><td class="num">$5.96&ndash;7.48</td><td class="num"><strong>$4,300&ndash;5,400</strong></td></tr>
+            <tr><td><strong>CoreWeave</strong></td><td class="num">~$2.06</td><td class="num">$8.24</td><td class="num"><strong>~$5,930</strong></td></tr>
+            <tr><td><strong>RunPod Community (PCIe)</strong></td><td class="num">$1.99</td><td class="num">$7.96</td><td class="num"><strong>~$5,730</strong></td></tr>
+            <tr><td><strong>RunPod Community (SXM)</strong></td><td class="num">$2.69</td><td class="num">$10.76</td><td class="num"><strong>~$7,750</strong></td></tr>
+            <tr><td><strong>RunPod Secure</strong></td><td class="num">$2.39</td><td class="num">$9.56</td><td class="num"><strong>~$6,900</strong></td></tr>
+            <tr><td><strong>Lambda Cloud</strong></td><td class="num">$2.99</td><td class="num">$11.96</td><td class="num"><strong>~$8,610</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-dim mt-16" data-animate data-delay="4"><strong style="color:#e6edf3">Alternative configs</strong> (more KV cache headroom)</p>
+      <div class="table-wrap" data-animate data-delay="4">
+        <table>
+          <thead><tr><th>Config</th><th>Provider</th><th style="text-align:right">$/hr</th><th style="text-align:right">$/month</th></tr></thead>
+          <tbody>
+            <tr><td>4x H200 141GB</td><td><strong>RunPod</strong></td><td class="num">$14.36</td><td class="num"><strong>~$10,340</strong></td></tr>
+            <tr><td>8x A100 SXM 80GB</td><td><strong>RunPod</strong></td><td class="num">$11.12</td><td class="num"><strong>~$8,010</strong></td></tr>
+            <tr><td>8x A100 SXM 80GB</td><td><strong>Vast.ai</strong></td><td class="num">~$8.80</td><td class="num"><strong>~$6,340</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card emphasis" data-animate data-delay="5">
+        <p class="label">MiniMax M2.5</p>
+        <p class="big-number sm accent">229B</p>
+        <p class="text-sm text-dim">parameters (MoE) &mdash; 10B active per token</p>
+        <p class="big-number sm accent" style="margin-top:12px">~280GB</p>
+        <p class="text-sm text-dim">VRAM needed (FP8 weights + vLLM overhead)</p>
+        <p class="text-sm" style="color:#c9d1d9;margin-top:16px">MIT licensed &mdash; fully commercial, no royalties. Deploy via vLLM or SGLang.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 10. MINIMAX COST — BUSINESS HOURS ===== -->
+<div class="slide bg-navy" data-title="MiniMax Cost (Business Hours)" data-slug="minimax-cost-biz">
+  <div class="pill" data-animate data-delay="0">Running MiniMax &mdash; Business Hours Only</div>
+  <div class="slide-head" data-animate data-delay="1">
+    <h2>Not every customer needs 24/7.<br><strong class="accent">Business hours = 60&ndash;70% savings.</strong></h2>
+  </div>
+  <div class="divider" data-animate data-delay="2"></div>
+  <div class="row gap-60 mt-32">
+    <div class="col">
+      <p class="text-sm text-dim mb-12" data-animate data-delay="3">12 hrs/day &times; weekdays only = <strong style="color:#e6edf3">~260 hrs/month</strong></p>
+      <div class="table-wrap" data-animate data-delay="3">
+        <table>
+          <thead><tr><th>Config</th><th>Provider</th><th style="text-align:right">$/month (biz hrs)</th><th style="text-align:right">vs 24/7</th></tr></thead>
+          <tbody>
+            <tr><td>4x H100 SXM</td><td><strong>Vast.ai</strong></td><td class="num"><strong>~$1,550&ndash;1,950</strong></td><td class="num">save ~$3K</td></tr>
+            <tr><td>4x H100 PCIe</td><td><strong>RunPod Community</strong></td><td class="num"><strong>~$2,070</strong></td><td class="num">save ~$3.7K</td></tr>
+            <tr><td>4x H100 SXM</td><td><strong>RunPod Community</strong></td><td class="num"><strong>~$2,800</strong></td><td class="num">save ~$5K</td></tr>
+            <tr><td>4x H100 SXM</td><td><strong>RunPod Secure</strong></td><td class="num"><strong>~$2,490</strong></td><td class="num">save ~$4.4K</td></tr>
+            <tr><td>4x H100 SXM</td><td><strong>Lambda Cloud</strong></td><td class="num"><strong>~$3,110</strong></td><td class="num">save ~$5.5K</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card emphasis" data-animate data-delay="4">
+        <p class="label">Customer pricing (2&ndash;3x markup)</p>
+        <div style="margin-top:12px">
+          <p class="text-sm text-dim">24/7 always-on</p>
+          <p class="big-number sm accent">$15K&ndash;23K<span class="text-sm text-dim">/mo</span></p>
+        </div>
+        <div style="margin-top:16px">
+          <p class="text-sm text-dim">Business hours only</p>
+          <p class="big-number sm accent">$5K&ndash;8K<span class="text-sm text-dim">/mo</span></p>
+        </div>
+      </div>
+      <div class="card mt-16" data-animate data-delay="5">
+        <p class="label">Key insight</p>
+        <p class="text-md" style="color:#c9d1d9">Ask the customer upfront: <strong class="accent">always-on or business hours?</strong> This 3x cost difference changes the entire deal structure.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 11. KEY RISKS ===== -->
 <div class="slide bg-navy" data-title="Key Risks" data-slug="risks">
   <div class="pill" data-animate data-delay="0">Watch Out</div>
   <div class="slide-head" data-animate data-delay="1">
@@ -315,7 +431,7 @@
     <div class="quote mt-40" data-animate data-delay="3">
       "Don't buy hardware upfront. Prove the workload. Sign the client. Then deploy."
     </div>
-    <p class="text-sm text-dim mt-auto" data-animate data-delay="4">IFCA MSC Berhad &middot; Kuala Lumpur &middot; ifca.asia</p>
+    <p class="text-sm text-dim mt-auto" style="padding-left:32px" data-animate data-delay="4">IFCA MSC Berhad &middot; Kuala Lumpur &middot; ifca.asia</p>
   </div>
 </div>
 
